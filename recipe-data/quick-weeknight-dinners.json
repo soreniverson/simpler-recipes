@@ -1,0 +1,481 @@
+{
+  "theme": {
+    "slug": "quick-weeknight-dinners",
+    "name": "Quick Weeknight Dinners",
+    "description": "Fast, easy meals ready in 30 minutes or less with simple ingredients"
+  },
+  "metadata": {
+    "recipeCount": 10,
+    "lastUpdated": "2026-01-17T23:40:27.693872Z"
+  },
+  "recipes": [
+    {
+      "id": "chicken-stir-fry",
+      "slug": "chicken-stir-fry",
+      "title": "Chicken Stir Fry",
+      "image": "https://www.allrecipes.com/thmb/xvlRRhK5ldXuGcXad8XDM5tTAfE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/223382_chicken-stir-fry_Rita-1x1-1-b6b835ccfc714bb6a8391a7c47a06a84.jpg",
+      "prepTime": "20 min",
+      "cookTime": "20 min",
+      "totalTime": "40 min",
+      "servings": "6",
+      "ingredients": [
+        "4 cups water",
+        "2 cups white rice",
+        "0.66666668653488 cup soy sauce",
+        "0.25 cup brown sugar",
+        "1 tablespoon cornstarch",
+        "1 tablespoon minced fresh ginger",
+        "1 tablespoon minced garlic",
+        "0.25 teaspoon red pepper flakes",
+        "3 skinless, boneless chicken breast halves, thinly sliced",
+        "2 tablespoons sesame oil, divided",
+        "1 head broccoli, broken into florets",
+        "1 onion, cut into large chunks",
+        "1 cup sliced carrots",
+        "1 (8 ounce) can sliced water chestnuts, drained",
+        "1 green bell pepper, cut into matchsticks"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Bring water and rice to a boil in a saucepan over high heat. Reduce heat to medium-low, cover, and simmer until rice is tender, and liquid has been absorbed, 20 to 25 minutes.",
+        "Meanwhile, combine soy sauce, brown sugar, and cornstarch in a medium glass or ceramic bowl; stir until smooth.",
+        "Stir in ginger, garlic, and red pepper flakes; add chicken and stir to coat. Cover and marinate in the refrigerator for at least 15 minutes.",
+        "Heat 1 tablespoon sesame oil in a wok or large skillet over medium-high heat. Add broccoli, onion, carrots, water chestnuts, and bell pepper; cook and stir until just tender, about 5 minutes.",
+        "Transfer vegetables into a dish; set aside.",
+        "Heat remaining 1 tablespoon sesame oil in the same wok or skillet over medium-high heat. Add chicken, reserving marinade, and cook until just browned, about 2 minutes per side.",
+        "Stir in vegetables and reserved marinade. Bring to a boil; cook and stir until chicken is no longer pink in the center and vegetables are tender, 5 to 7 minutes.",
+        "Serve over rice."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "poultry"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/223382/chicken-stir-fry/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:39:40.132548Z"
+    },
+    {
+      "id": "spaghetti-aglio-e-olio",
+      "slug": "spaghetti-aglio-e-olio",
+      "title": "Spaghetti Aglio e Olio",
+      "image": "https://www.allrecipes.com/thmb/aVmHyG9n06k09hi6_PC7dM6tfWM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-222000-spaghetti-aglio-e-olio-DDMFS-beauty-3x4-8d8d06ed371c4c17a29f2aa7eb500e9e.jpg",
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "totalTime": "25 min",
+      "servings": "4",
+      "ingredients": [
+        "1 pound uncooked spaghetti",
+        "0.5 cup olive oil",
+        "6 cloves garlic, thinly sliced",
+        "0.25 teaspoon red pepper flakes, or to taste",
+        "salt and freshly ground black pepper to taste",
+        "0.25 cup chopped fresh Italian parsley",
+        "1 cup finely grated Parmigiano-Reggiano cheese"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Bring a large pot of lightly salted water to a boil. Cook spaghetti in the boiling water, stirring occasionally until cooked through but firm to the bite, about 10 to 12 minutes. Drain and transfer to a pasta bowl.",
+        "While the pasta is cooking, combine olive oil and garlic in a cold skillet.",
+        "Cook over medium heat to slowly toast garlic, about 10 minutes. Reduce heat to medium-low when olive oil begins to bubble. Cook and stir until garlic is golden brown, about another 5 minutes. Remove from heat.",
+        "Stir red pepper flakes, salt, and black pepper into pasta.",
+        "Pour in hot olive oil and garlic, and sprinkle on Italian parsley and half of the Parmigiano-Reggiano cheese; toss until combined.",
+        "Serve pasta topped with the remaining Parmigiano-Reggiano cheese."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "vegetarian",
+        "pasta"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/222000/spaghetti-aglio-e-olio/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:39:43.501554Z"
+    },
+    {
+      "id": "easy-fried-rice",
+      "slug": "easy-fried-rice",
+      "title": "Easy Fried Rice",
+      "image": "https://www.allrecipes.com/thmb/eKu_vXTbZJMdFsd5JdbY7kvDy80=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/79543-fried-rice-restaurant-style-DDMFS-4x3-b79a6ea27e0344399257ca1df67ca1cd.jpg",
+      "prepTime": "5 min",
+      "cookTime": "15 min",
+      "totalTime": "20 min",
+      "servings": "8",
+      "ingredients": [
+        "0.66666668653488 cup chopped baby carrots",
+        "0.5 cup frozen green peas",
+        "2 tablespoons vegetable oil",
+        "1 clove garlic, minced, or to taste",
+        "2 large eggs",
+        "3 cups leftover cooked white rice",
+        "1 tablespoon soy sauce, or more to taste",
+        "2 teaspoons sesame oil, or to taste"
+      ],
+      "instructions": [
+        "Assemble ingredients.",
+        "Place carrots in a small saucepan and cover with water. Bring to a low boil and cook for 3 to 5 minutes. Stir in peas, then immediately drain in a colander.",
+        "Heat a wok over high heat. Pour in vegetable oil, then stir in carrots, peas, and garlic; cook for about 30 seconds. Add eggs; stir quickly to scramble eggs with vegetables.",
+        "Stir in cooked rice. Add soy sauce and toss rice to coat. Drizzle with sesame oil and toss again.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/79543/fried-rice-restaurant-style/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:39:46.882478Z"
+    },
+    {
+      "id": "pad-thai",
+      "slug": "pad-thai",
+      "title": "Pad Thai",
+      "image": "https://www.allrecipes.com/thmb/11HVKKh8OrlLC3RlS3Ikh5dN_lo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/42968-pad-thai-DDMFS-4x3-f46b490ef89b4694b8bf4c5ac54a486b.jpg",
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "totalTime": "45 min",
+      "servings": "6",
+      "ingredients": [
+        "1 (12 ounce) package rice noodles",
+        "2 tablespoons butter",
+        "1 pound boneless, skinless chicken breast halves, cut into bite-sized pieces",
+        "0.25 cup vegetable oil",
+        "4 eggs",
+        "3 tablespoons white sugar",
+        "2 tablespoons fish sauce",
+        "1 tablespoon white wine vinegar",
+        "0.125 tablespoon crushed red pepper",
+        "2 cups bean sprouts",
+        "3 green onions, chopped",
+        "0.25 cup crushed peanuts",
+        "1 lemon, cut into wedges"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Soak rice noodles in cold water until soft, 30 to 50 minutes. Drain and set aside.",
+        "Meanwhile, heat butter in a wok; add chicken and sauté until browned. Remove chicken and set aside.",
+        "Heat oil in the wok over medium-high heat. Crack eggs into hot oil and cook until firm. Stir in chicken and cook for 5 minutes.",
+        "Add softened noodles, sugar, fish sauce, vinegar, and red pepper; mix well until noodles are tender. Adjust seasonings to taste.",
+        "Stir bean sprouts into wok and cook for 3 minutes.",
+        "Serve topped with green onions, crushed peanuts, and a wedge of lemon."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/42968/pad-thai/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:39:50.290735Z"
+    },
+    {
+      "id": "chicken-tikka-masala",
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "image": "https://www.allrecipes.com/thmb/OQfUU56F1sFqjPcetJBGGH_UQAs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/45736-chicken-tikka-masala-VAT-001-Beauty-4x3-0e74094106c74671b66b4906327a1e17.jpg",
+      "prepTime": "30 min",
+      "cookTime": "50 min",
+      "totalTime": "140 min",
+      "servings": "4",
+      "ingredients": [
+        "1 cup yogurt",
+        "1 tablespoon lemon juice",
+        "4 teaspoons ground cumin, divided",
+        "1 teaspoon ground cinnamon",
+        "2 teaspoons cayenne pepper",
+        "2 teaspoons freshly ground black pepper",
+        "1 tablespoon minced fresh ginger",
+        "2 teaspoons salt, divided, or more to taste",
+        "3 boneless skinless chicken breasts, cut into bite-size pieces",
+        "4 long skewers",
+        "1 tablespoon butter",
+        "1 clove garlic, minced",
+        "1 jalapeno pepper, finely chopped",
+        "2 teaspoons paprika",
+        "1 (8 ounce) can tomato sauce",
+        "1 cup heavy cream",
+        "0.25 cup chopped fresh cilantro"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Combine yogurt, lemon juice, 2 teaspoons cumin, cinnamon, cayenne, black pepper, ginger, and 1 teaspoon salt in a large bowl.",
+        "Stir in chicken, cover, and refrigerate for 1 hour.",
+        "Preheat a grill for high heat. Lightly oil the grill grate. Thread chicken onto skewers, and discard marinade.",
+        "Grill until juices run clear, about 5 minutes on each side.",
+        "Melt butter in a large heavy skillet over medium heat. Sauté garlic and jalapeño for 1 minute. Season with remaining 2 teaspoons cumin, paprika, and remaining 1 teaspoon salt. Stir in tomato sauce and cream. Simmer on low heat until sauce thickens, about 20 minutes.",
+        "Add grilled chicken, and simmer for 10 minutes.",
+        "Transfer to a serving platter, and garnish with fresh cilantro. Serve over rice."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "poultry"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/45736/chicken-tikka-masala/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-17T23:39:53.680650Z"
+    },
+    {
+      "id": "shrimp-scampi-with-pasta",
+      "slug": "shrimp-scampi-with-pasta",
+      "title": "Shrimp Scampi with Pasta",
+      "image": "https://www.allrecipes.com/thmb/jiV_4f8vXFle1RdFLgd8-_31J3M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/229960-shrimp-scampi-with-pasta-DDMFS-4x3-e065ddef4e6d44479d37b4523808cc23.jpg",
+      "prepTime": "20 min",
+      "cookTime": "20 min",
+      "totalTime": "40 min",
+      "servings": "6",
+      "ingredients": [
+        "1 (16 ounce) package linguine pasta",
+        "2 tablespoons butter",
+        "2 tablespoons extra-virgin olive oil",
+        "2 shallots, finely diced",
+        "2 cloves garlic, minced",
+        "1 pinch red pepper flakes",
+        "1 pound shrimp, peeled and deveined",
+        "1 pinch kosher salt and freshly ground pepper",
+        "0.5 cup dry white wine",
+        "1 lemon, juiced",
+        "2 tablespoons butter",
+        "2 tablespoons extra-virgin olive oil",
+        "0.25 cup finely chopped fresh parsley leaves",
+        "1 teaspoon extra-virgin olive oil, or to taste"
+      ],
+      "instructions": [
+        "Gather ingredients.",
+        "Bring a large pot of salted water to a boil; cook linguine in boiling water until nearly tender, 6 to 8 minutes. Drain.",
+        "Melt 2 tablespoons butter with 2 tablespoons olive oil in a large skillet over medium heat.",
+        "Cook and stir shallots, garlic, and red pepper flakes in the hot butter and oil until shallots are translucent, 3 to 4 minutes.",
+        "Season shrimp with kosher salt and black pepper; add to the skillet and cook until pink, stirring occasionally, 2 to 3 minutes. Remove shrimp from skillet and keep warm.",
+        "Pour white wine and lemon juice into skillet and bring to a boil while scraping the browned bits of food off of the bottom of the skillet with a wooden spoon.",
+        "Melt 2 tablespoons butter in skillet, stir 2 tablespoons olive oil into butter mixture, and bring to a simmer.",
+        "Toss linguine, shrimp, and parsley in the butter mixture until coated; season with salt and black pepper. Drizzle with 1 teaspoon olive oil to serve.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "seafood",
+        "pasta"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/229960/shrimp-scampi-with-pasta/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:03.947322Z"
+    },
+    {
+      "id": "fish-tacos",
+      "slug": "fish-tacos",
+      "title": "Fish Tacos",
+      "image": "https://www.allrecipes.com/thmb/_emMPu4gpcuCOoC0kfjRWIdHlmc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/53729-fish-tacos-DDMFS-4x3-b5547c67c6f0432da06ad8f905e82c1e.jpg",
+      "prepTime": "40 min",
+      "cookTime": "20 min",
+      "totalTime": "60 min",
+      "servings": "8",
+      "ingredients": [
+        "1 cup all-purpose flour",
+        "2 tablespoons cornstarch",
+        "1 teaspoon baking powder",
+        "0.5 teaspoon salt",
+        "1 cup beer",
+        "1 egg",
+        "0.5 cup plain yogurt",
+        "0.5 cup mayonnaise",
+        "1 lime, juiced",
+        "1 jalapeno pepper, minced",
+        "1 teaspoon minced capers",
+        "1 teaspoon ground cayenne pepper",
+        "0.5 teaspoon dried oregano",
+        "0.5 teaspoon ground cumin",
+        "0.5 teaspoon dried dill weed",
+        "1 quart oil for frying",
+        "1 pound cod fillets, cut into 2 to 3 ounce portions",
+        "2 tablespoons all-purpose flour, or more as needed",
+        "1 (12 ounce) package corn tortillas",
+        "0.5 medium head cabbage, finely shredded"
+      ],
+      "instructions": [
+        "To make the beer batter: Combine flour, cornstarch, baking powder, and salt in a large bowl. Blend beer and egg in a separate bowl, then quickly stir into flour mixture until combined with a few lumps remaining.",
+        "To make the sauce: Mix yogurt and mayonnaise together in a medium bowl; gradually stir in fresh lime juice until consistency is slightly runny. Season with jalapeño, capers, cayenne, oregano, cumin, and dill.",
+        "To make the fish tacos: Heat oil in a deep-fryer to 375 degrees F (190 degrees C).",
+        "Dust fish pieces lightly with flour. Set aside.",
+        "Dip floured fish pieces into beer batter. Set aside.",
+        "Fry battered fish in hot oil until crisp and golden brown. Drain on paper towels. Lightly fry tortillas in hot oil until just crisped, but not too crisp. Drain on paper towels.",
+        "Place fried fish in tortillas; top with shredded cabbage and sauce."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "seafood",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/53729/fish-tacos/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:07.387578Z"
+    },
+    {
+      "id": "chicken-parmesan",
+      "slug": "chicken-parmesan",
+      "title": "Chicken Parmesan",
+      "image": "https://www.allrecipes.com/thmb/J0U0wHxsY1r-I1JUJ5jXcwCnzRI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/223042-Chicken-Parmesan-mfs_001-7ab952346edc4b2da36f3c0259b78543.jpg",
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "totalTime": "45 min",
+      "servings": "4",
+      "ingredients": [
+        "4 skinless, boneless chicken breast halves",
+        "salt and freshly ground black pepper to taste",
+        "2 large eggs",
+        "1 cup panko bread crumbs, or more as needed",
+        "0.75 cup grated Parmesan cheese, divided",
+        "2 tablespoons all-purpose flour, or more if needed",
+        "0.5 cup olive oil for frying, or as needed",
+        "0.5 cup prepared tomato sauce",
+        "0.25 cup fresh mozzarella, cut into small cubes",
+        "0.25 cup chopped fresh basil",
+        "0.5 cup grated provolone cheese",
+        "2 teaspoons olive oil"
+      ],
+      "instructions": [
+        "Gather the ingredients. Preheat the oven to 450 degrees F (230 degrees C).",
+        "Place chicken breasts between two sheets of heavy plastic (resealable freezer bags work well) on a solid, level surface. Firmly pound chicken with the smooth side of a meat mallet to a thickness of 1/2-inch.",
+        "Season chicken thoroughly with salt and pepper. Using a sifter or strainer, sprinkle flour over chicken breasts, evenly coating both sides.",
+        "Beat eggs in a shallow bowl and set aside. Mix bread crumbs and 1/2 cup Parmesan cheese in a separate bowl, set aside. Dip a flour-coated chicken breast in beaten eggs. Transfer breast to the bread crumb mixture, pressing crumbs into both sides. Repeat for each breast. Let chicken rest for 10 to 15 minutes.",
+        "Heat 1/2 inch of olive oil in a large skillet over medium-high heat until it begins to shimmer. Cook chicken in batches, so you do not overcrowd the pan, until golden, about 2 minutes per side. The chicken will finish cooking in the oven.",
+        "Transfer chicken to a baking dish. Top each breast with 2 tablespoons tomato sauce. Layer each chicken breast with equal amounts of mozzarella cheese, fresh basil, and provolone cheese. Sprinkle remaining Parmesan over top and drizzle each with 1/2 teaspoon olive oil.",
+        "Bake in the preheated oven until cheese is browned and bubbly and chicken breasts are no longer pink in the center, 15 to 20 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C). Let chicken rest briefly before serving."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "poultry"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/223042/chicken-parmesan/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:14.108461Z"
+    },
+    {
+      "id": "spaghetti-carbonara",
+      "slug": "spaghetti-carbonara",
+      "title": "Spaghetti Carbonara",
+      "image": "https://www.allrecipes.com/thmb/Vg2cRidr2zcYhWGvPD8M18xM_WY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/11973-spaghetti-carbonara-ii-DDMFS-4x3-6edea51e421e4457ac0c3269f3be5157.jpg",
+      "prepTime": "20 min",
+      "cookTime": "20 min",
+      "totalTime": "40 min",
+      "servings": "8",
+      "ingredients": [
+        "1 pound spaghetti",
+        "2 tablespoons olive oil, divided, or as needed",
+        "8 slices bacon, diced",
+        "1 onion, chopped",
+        "1 clove garlic, minced",
+        "0.25 cup dry white wine",
+        "4 large eggs, beaten",
+        "0.5 cup grated Parmesan cheese",
+        "salt and black pepper to taste",
+        "2 tablespoons chopped fresh parsley",
+        "2 tablespoons grated Parmesan cheese"
+      ],
+      "instructions": [
+        "Bring a large pot of lightly salted water to a boil. Cook spaghetti in boiling water, stirring occasionally, until tender yet firm to the bite, about 12 minutes. Drain, toss spaghetti with 1 tablespoon olive oil, and set aside.",
+        "Place diced bacon in a large skillet over medium heat; cook and stir until evenly browned, about 10 minutes. Drain bacon on paper towels, reserving 2 tablespoons bacon fat in the skillet.",
+        "Add 1 tablespoon olive oil to bacon fat in the skillet. Add chopped onion and cook over medium heat until onion is translucent. Add minced garlic and cook until fragrant, about 1 minute. Add wine and cook 1 minute more.",
+        "Return cooked bacon to the skillet; add cooked spaghetti. Toss to coat and heat through, adding more olive oil if it seems dry or sticks together. Add beaten eggs and cook, tossing constantly with tongs or a large fork, until eggs are barely set. Quickly add 1/2 cup Parmesan cheese and toss again. Season with salt and pepper (remember that bacon and Parmesan are very salty).",
+        "Serve warm with chopped parsley sprinkled on top and extra Parmesan cheese at the table."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "pasta"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/11973/spaghetti-carbonara-ii/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:24.323916Z"
+    },
+    {
+      "id": "baked-teriyaki-chicken",
+      "slug": "baked-teriyaki-chicken",
+      "title": "Baked Teriyaki Chicken",
+      "image": "https://www.allrecipes.com/thmb/LLnvqnBTEErWK95wDd2amICoVHY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/9023-baked-teriyaki-chicken-DDMFS-4x3-8fc9cd3743714eedad57edb8bda8e59b.jpg",
+      "prepTime": "10 min",
+      "cookTime": "55 min",
+      "totalTime": "65 min",
+      "servings": "6",
+      "ingredients": [
+        "0.5 cup white sugar",
+        "0.5 cup soy sauce",
+        "0.25 cup cider vinegar",
+        "1 tablespoon cornstarch",
+        "1 tablespoon cold water",
+        "1 clove garlic, minced",
+        "0.5 teaspoon ground ginger",
+        "0.25 teaspoon ground black pepper",
+        "12 boneless, skinless chicken thighs"
+      ],
+      "instructions": [
+        "Preheat the oven to 425 degrees F (220 degrees C). Lightly grease a 9x13-inch baking dish.",
+        "Combine sugar, soy sauce, cider vinegar, cornstarch, cold water, garlic, ginger, and pepper in a small saucepan over low heat. Simmer, stirring frequently, until teriyaki sauce thickens and bubbles, 3 to 5 minutes. Remove from the heat.",
+        "Place chicken thighs in the prepared baking dish. Brush both sides of each thigh with the sauce. Reserve any extra sauce for basting.",
+        "Bake in the preheated oven for 30 minutes.",
+        "Flip chicken and brush with sauce. Continue to bake, basting with remaining sauce every 10 minutes, until no longer pink and juices run clear, 20 to 30 more minutes.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "poultry"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/9023/baked-teriyaki-chicken/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:27.693273Z"
+    }
+  ]
+}

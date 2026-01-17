@@ -1,0 +1,1979 @@
+{
+  "metadata": {
+    "totalRecipes": 42,
+    "collectionCount": 5,
+    "lastUpdated": "2026-01-17T23:42:45.334860Z"
+  },
+  "collections": [
+    {
+      "slug": "quick-weeknight-dinners",
+      "name": "Quick Weeknight Dinners",
+      "description": "Fast, easy meals ready in 30 minutes or less with simple ingredients",
+      "recipeCount": 10,
+      "recipes": [
+        "chicken-stir-fry",
+        "spaghetti-aglio-e-olio",
+        "easy-fried-rice",
+        "pad-thai",
+        "chicken-tikka-masala",
+        "shrimp-scampi-with-pasta",
+        "fish-tacos",
+        "chicken-parmesan",
+        "spaghetti-carbonara",
+        "baked-teriyaki-chicken"
+      ]
+    },
+    {
+      "slug": "baking-basics",
+      "name": "Baking Basics",
+      "description": "Foundational baking recipes and classic favorites everyone should know",
+      "recipeCount": 11,
+      "recipes": [
+        "best-chocolate-chip-cookies",
+        "banana-banana-bread",
+        "simple-white-cake",
+        "best-brownies",
+        "to-die-for-blueberry-muffins",
+        "apple-pie-by-grandma-ople",
+        "easy-sugar-cookies",
+        "downeast-maine-pumpkin-bread",
+        "the-best-lemon-bars",
+        "clone-of-a-cinnabon",
+        "moms-zucchini-bread"
+      ]
+    },
+    {
+      "slug": "one-pot-meals",
+      "name": "One-Pot Meals",
+      "description": "Complete meals with minimal cleanup - everything cooks in one pot or pan",
+      "recipeCount": 6,
+      "recipes": [
+        "slow-cooker-beef-stew",
+        "boilermaker-tailgate-chili",
+        "quick-and-easy-chicken-noodle-soup",
+        "rich-and-simple-french-onion-soup",
+        "butternut-squash-soup",
+        "fresh-tomato-soup"
+      ]
+    },
+    {
+      "slug": "healthy-lunches",
+      "name": "Healthy Lunches",
+      "description": "Balanced, nutritious meals perfect for meal prep and midday eating",
+      "recipeCount": 7,
+      "recipes": [
+        "lentil-soup",
+        "strawberry-spinach-salad",
+        "best-chicken-salad",
+        "delicious-egg-salad",
+        "pasta-salad",
+        "perfect-summer-fruit-salad",
+        "guacamole"
+      ]
+    },
+    {
+      "slug": "comfort-food-classics",
+      "name": "Comfort Food Classics",
+      "description": "Hearty, satisfying recipes that bring warmth and nostalgia",
+      "recipeCount": 8,
+      "recipes": [
+        "homemade-mac-and-cheese",
+        "easy-meatloaf",
+        "chicken-pot-pie",
+        "simple-beef-stroganoff",
+        "worlds-best-lasagna",
+        "crispy-fried-chicken",
+        "grilled-cheese-sandwich",
+        "italian-spaghetti-sauce-with-meatballs"
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "id": "chicken-stir-fry",
+      "slug": "chicken-stir-fry",
+      "title": "Chicken Stir Fry",
+      "image": "https://www.allrecipes.com/thmb/xvlRRhK5ldXuGcXad8XDM5tTAfE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/223382_chicken-stir-fry_Rita-1x1-1-b6b835ccfc714bb6a8391a7c47a06a84.jpg",
+      "prepTime": "20 min",
+      "cookTime": "20 min",
+      "totalTime": "40 min",
+      "servings": "6",
+      "ingredients": [
+        "4 cups water",
+        "2 cups white rice",
+        "0.66666668653488 cup soy sauce",
+        "0.25 cup brown sugar",
+        "1 tablespoon cornstarch",
+        "1 tablespoon minced fresh ginger",
+        "1 tablespoon minced garlic",
+        "0.25 teaspoon red pepper flakes",
+        "3 skinless, boneless chicken breast halves, thinly sliced",
+        "2 tablespoons sesame oil, divided",
+        "1 head broccoli, broken into florets",
+        "1 onion, cut into large chunks",
+        "1 cup sliced carrots",
+        "1 (8 ounce) can sliced water chestnuts, drained",
+        "1 green bell pepper, cut into matchsticks"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Bring water and rice to a boil in a saucepan over high heat. Reduce heat to medium-low, cover, and simmer until rice is tender, and liquid has been absorbed, 20 to 25 minutes.",
+        "Meanwhile, combine soy sauce, brown sugar, and cornstarch in a medium glass or ceramic bowl; stir until smooth.",
+        "Stir in ginger, garlic, and red pepper flakes; add chicken and stir to coat. Cover and marinate in the refrigerator for at least 15 minutes.",
+        "Heat 1 tablespoon sesame oil in a wok or large skillet over medium-high heat. Add broccoli, onion, carrots, water chestnuts, and bell pepper; cook and stir until just tender, about 5 minutes.",
+        "Transfer vegetables into a dish; set aside.",
+        "Heat remaining 1 tablespoon sesame oil in the same wok or skillet over medium-high heat. Add chicken, reserving marinade, and cook until just browned, about 2 minutes per side.",
+        "Stir in vegetables and reserved marinade. Bring to a boil; cook and stir until chicken is no longer pink in the center and vegetables are tender, 5 to 7 minutes.",
+        "Serve over rice."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "poultry"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/223382/chicken-stir-fry/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:39:40.132548Z"
+    },
+    {
+      "id": "spaghetti-aglio-e-olio",
+      "slug": "spaghetti-aglio-e-olio",
+      "title": "Spaghetti Aglio e Olio",
+      "image": "https://www.allrecipes.com/thmb/aVmHyG9n06k09hi6_PC7dM6tfWM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-222000-spaghetti-aglio-e-olio-DDMFS-beauty-3x4-8d8d06ed371c4c17a29f2aa7eb500e9e.jpg",
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "totalTime": "25 min",
+      "servings": "4",
+      "ingredients": [
+        "1 pound uncooked spaghetti",
+        "0.5 cup olive oil",
+        "6 cloves garlic, thinly sliced",
+        "0.25 teaspoon red pepper flakes, or to taste",
+        "salt and freshly ground black pepper to taste",
+        "0.25 cup chopped fresh Italian parsley",
+        "1 cup finely grated Parmigiano-Reggiano cheese"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Bring a large pot of lightly salted water to a boil. Cook spaghetti in the boiling water, stirring occasionally until cooked through but firm to the bite, about 10 to 12 minutes. Drain and transfer to a pasta bowl.",
+        "While the pasta is cooking, combine olive oil and garlic in a cold skillet.",
+        "Cook over medium heat to slowly toast garlic, about 10 minutes. Reduce heat to medium-low when olive oil begins to bubble. Cook and stir until garlic is golden brown, about another 5 minutes. Remove from heat.",
+        "Stir red pepper flakes, salt, and black pepper into pasta.",
+        "Pour in hot olive oil and garlic, and sprinkle on Italian parsley and half of the Parmigiano-Reggiano cheese; toss until combined.",
+        "Serve pasta topped with the remaining Parmigiano-Reggiano cheese."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "vegetarian",
+        "pasta"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/222000/spaghetti-aglio-e-olio/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:39:43.501554Z"
+    },
+    {
+      "id": "easy-fried-rice",
+      "slug": "easy-fried-rice",
+      "title": "Easy Fried Rice",
+      "image": "https://www.allrecipes.com/thmb/eKu_vXTbZJMdFsd5JdbY7kvDy80=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/79543-fried-rice-restaurant-style-DDMFS-4x3-b79a6ea27e0344399257ca1df67ca1cd.jpg",
+      "prepTime": "5 min",
+      "cookTime": "15 min",
+      "totalTime": "20 min",
+      "servings": "8",
+      "ingredients": [
+        "0.66666668653488 cup chopped baby carrots",
+        "0.5 cup frozen green peas",
+        "2 tablespoons vegetable oil",
+        "1 clove garlic, minced, or to taste",
+        "2 large eggs",
+        "3 cups leftover cooked white rice",
+        "1 tablespoon soy sauce, or more to taste",
+        "2 teaspoons sesame oil, or to taste"
+      ],
+      "instructions": [
+        "Assemble ingredients.",
+        "Place carrots in a small saucepan and cover with water. Bring to a low boil and cook for 3 to 5 minutes. Stir in peas, then immediately drain in a colander.",
+        "Heat a wok over high heat. Pour in vegetable oil, then stir in carrots, peas, and garlic; cook for about 30 seconds. Add eggs; stir quickly to scramble eggs with vegetables.",
+        "Stir in cooked rice. Add soy sauce and toss rice to coat. Drizzle with sesame oil and toss again.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/79543/fried-rice-restaurant-style/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:39:46.882478Z"
+    },
+    {
+      "id": "pad-thai",
+      "slug": "pad-thai",
+      "title": "Pad Thai",
+      "image": "https://www.allrecipes.com/thmb/11HVKKh8OrlLC3RlS3Ikh5dN_lo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/42968-pad-thai-DDMFS-4x3-f46b490ef89b4694b8bf4c5ac54a486b.jpg",
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "totalTime": "45 min",
+      "servings": "6",
+      "ingredients": [
+        "1 (12 ounce) package rice noodles",
+        "2 tablespoons butter",
+        "1 pound boneless, skinless chicken breast halves, cut into bite-sized pieces",
+        "0.25 cup vegetable oil",
+        "4 eggs",
+        "3 tablespoons white sugar",
+        "2 tablespoons fish sauce",
+        "1 tablespoon white wine vinegar",
+        "0.125 tablespoon crushed red pepper",
+        "2 cups bean sprouts",
+        "3 green onions, chopped",
+        "0.25 cup crushed peanuts",
+        "1 lemon, cut into wedges"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Soak rice noodles in cold water until soft, 30 to 50 minutes. Drain and set aside.",
+        "Meanwhile, heat butter in a wok; add chicken and sauté until browned. Remove chicken and set aside.",
+        "Heat oil in the wok over medium-high heat. Crack eggs into hot oil and cook until firm. Stir in chicken and cook for 5 minutes.",
+        "Add softened noodles, sugar, fish sauce, vinegar, and red pepper; mix well until noodles are tender. Adjust seasonings to taste.",
+        "Stir bean sprouts into wok and cook for 3 minutes.",
+        "Serve topped with green onions, crushed peanuts, and a wedge of lemon."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/42968/pad-thai/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:39:50.290735Z"
+    },
+    {
+      "id": "chicken-tikka-masala",
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "image": "https://www.allrecipes.com/thmb/OQfUU56F1sFqjPcetJBGGH_UQAs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/45736-chicken-tikka-masala-VAT-001-Beauty-4x3-0e74094106c74671b66b4906327a1e17.jpg",
+      "prepTime": "30 min",
+      "cookTime": "50 min",
+      "totalTime": "140 min",
+      "servings": "4",
+      "ingredients": [
+        "1 cup yogurt",
+        "1 tablespoon lemon juice",
+        "4 teaspoons ground cumin, divided",
+        "1 teaspoon ground cinnamon",
+        "2 teaspoons cayenne pepper",
+        "2 teaspoons freshly ground black pepper",
+        "1 tablespoon minced fresh ginger",
+        "2 teaspoons salt, divided, or more to taste",
+        "3 boneless skinless chicken breasts, cut into bite-size pieces",
+        "4 long skewers",
+        "1 tablespoon butter",
+        "1 clove garlic, minced",
+        "1 jalapeno pepper, finely chopped",
+        "2 teaspoons paprika",
+        "1 (8 ounce) can tomato sauce",
+        "1 cup heavy cream",
+        "0.25 cup chopped fresh cilantro"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Combine yogurt, lemon juice, 2 teaspoons cumin, cinnamon, cayenne, black pepper, ginger, and 1 teaspoon salt in a large bowl.",
+        "Stir in chicken, cover, and refrigerate for 1 hour.",
+        "Preheat a grill for high heat. Lightly oil the grill grate. Thread chicken onto skewers, and discard marinade.",
+        "Grill until juices run clear, about 5 minutes on each side.",
+        "Melt butter in a large heavy skillet over medium heat. Sauté garlic and jalapeño for 1 minute. Season with remaining 2 teaspoons cumin, paprika, and remaining 1 teaspoon salt. Stir in tomato sauce and cream. Simmer on low heat until sauce thickens, about 20 minutes.",
+        "Add grilled chicken, and simmer for 10 minutes.",
+        "Transfer to a serving platter, and garnish with fresh cilantro. Serve over rice."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "poultry"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/45736/chicken-tikka-masala/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-17T23:39:53.680650Z"
+    },
+    {
+      "id": "shrimp-scampi-with-pasta",
+      "slug": "shrimp-scampi-with-pasta",
+      "title": "Shrimp Scampi with Pasta",
+      "image": "https://www.allrecipes.com/thmb/jiV_4f8vXFle1RdFLgd8-_31J3M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/229960-shrimp-scampi-with-pasta-DDMFS-4x3-e065ddef4e6d44479d37b4523808cc23.jpg",
+      "prepTime": "20 min",
+      "cookTime": "20 min",
+      "totalTime": "40 min",
+      "servings": "6",
+      "ingredients": [
+        "1 (16 ounce) package linguine pasta",
+        "2 tablespoons butter",
+        "2 tablespoons extra-virgin olive oil",
+        "2 shallots, finely diced",
+        "2 cloves garlic, minced",
+        "1 pinch red pepper flakes",
+        "1 pound shrimp, peeled and deveined",
+        "1 pinch kosher salt and freshly ground pepper",
+        "0.5 cup dry white wine",
+        "1 lemon, juiced",
+        "2 tablespoons butter",
+        "2 tablespoons extra-virgin olive oil",
+        "0.25 cup finely chopped fresh parsley leaves",
+        "1 teaspoon extra-virgin olive oil, or to taste"
+      ],
+      "instructions": [
+        "Gather ingredients.",
+        "Bring a large pot of salted water to a boil; cook linguine in boiling water until nearly tender, 6 to 8 minutes. Drain.",
+        "Melt 2 tablespoons butter with 2 tablespoons olive oil in a large skillet over medium heat.",
+        "Cook and stir shallots, garlic, and red pepper flakes in the hot butter and oil until shallots are translucent, 3 to 4 minutes.",
+        "Season shrimp with kosher salt and black pepper; add to the skillet and cook until pink, stirring occasionally, 2 to 3 minutes. Remove shrimp from skillet and keep warm.",
+        "Pour white wine and lemon juice into skillet and bring to a boil while scraping the browned bits of food off of the bottom of the skillet with a wooden spoon.",
+        "Melt 2 tablespoons butter in skillet, stir 2 tablespoons olive oil into butter mixture, and bring to a simmer.",
+        "Toss linguine, shrimp, and parsley in the butter mixture until coated; season with salt and black pepper. Drizzle with 1 teaspoon olive oil to serve.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "seafood",
+        "pasta"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/229960/shrimp-scampi-with-pasta/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:03.947322Z"
+    },
+    {
+      "id": "fish-tacos",
+      "slug": "fish-tacos",
+      "title": "Fish Tacos",
+      "image": "https://www.allrecipes.com/thmb/_emMPu4gpcuCOoC0kfjRWIdHlmc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/53729-fish-tacos-DDMFS-4x3-b5547c67c6f0432da06ad8f905e82c1e.jpg",
+      "prepTime": "40 min",
+      "cookTime": "20 min",
+      "totalTime": "60 min",
+      "servings": "8",
+      "ingredients": [
+        "1 cup all-purpose flour",
+        "2 tablespoons cornstarch",
+        "1 teaspoon baking powder",
+        "0.5 teaspoon salt",
+        "1 cup beer",
+        "1 egg",
+        "0.5 cup plain yogurt",
+        "0.5 cup mayonnaise",
+        "1 lime, juiced",
+        "1 jalapeno pepper, minced",
+        "1 teaspoon minced capers",
+        "1 teaspoon ground cayenne pepper",
+        "0.5 teaspoon dried oregano",
+        "0.5 teaspoon ground cumin",
+        "0.5 teaspoon dried dill weed",
+        "1 quart oil for frying",
+        "1 pound cod fillets, cut into 2 to 3 ounce portions",
+        "2 tablespoons all-purpose flour, or more as needed",
+        "1 (12 ounce) package corn tortillas",
+        "0.5 medium head cabbage, finely shredded"
+      ],
+      "instructions": [
+        "To make the beer batter: Combine flour, cornstarch, baking powder, and salt in a large bowl. Blend beer and egg in a separate bowl, then quickly stir into flour mixture until combined with a few lumps remaining.",
+        "To make the sauce: Mix yogurt and mayonnaise together in a medium bowl; gradually stir in fresh lime juice until consistency is slightly runny. Season with jalapeño, capers, cayenne, oregano, cumin, and dill.",
+        "To make the fish tacos: Heat oil in a deep-fryer to 375 degrees F (190 degrees C).",
+        "Dust fish pieces lightly with flour. Set aside.",
+        "Dip floured fish pieces into beer batter. Set aside.",
+        "Fry battered fish in hot oil until crisp and golden brown. Drain on paper towels. Lightly fry tortillas in hot oil until just crisped, but not too crisp. Drain on paper towels.",
+        "Place fried fish in tortillas; top with shredded cabbage and sauce."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "seafood",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/53729/fish-tacos/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:07.387578Z"
+    },
+    {
+      "id": "chicken-parmesan",
+      "slug": "chicken-parmesan",
+      "title": "Chicken Parmesan",
+      "image": "https://www.allrecipes.com/thmb/J0U0wHxsY1r-I1JUJ5jXcwCnzRI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/223042-Chicken-Parmesan-mfs_001-7ab952346edc4b2da36f3c0259b78543.jpg",
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "totalTime": "45 min",
+      "servings": "4",
+      "ingredients": [
+        "4 skinless, boneless chicken breast halves",
+        "salt and freshly ground black pepper to taste",
+        "2 large eggs",
+        "1 cup panko bread crumbs, or more as needed",
+        "0.75 cup grated Parmesan cheese, divided",
+        "2 tablespoons all-purpose flour, or more if needed",
+        "0.5 cup olive oil for frying, or as needed",
+        "0.5 cup prepared tomato sauce",
+        "0.25 cup fresh mozzarella, cut into small cubes",
+        "0.25 cup chopped fresh basil",
+        "0.5 cup grated provolone cheese",
+        "2 teaspoons olive oil"
+      ],
+      "instructions": [
+        "Gather the ingredients. Preheat the oven to 450 degrees F (230 degrees C).",
+        "Place chicken breasts between two sheets of heavy plastic (resealable freezer bags work well) on a solid, level surface. Firmly pound chicken with the smooth side of a meat mallet to a thickness of 1/2-inch.",
+        "Season chicken thoroughly with salt and pepper. Using a sifter or strainer, sprinkle flour over chicken breasts, evenly coating both sides.",
+        "Beat eggs in a shallow bowl and set aside. Mix bread crumbs and 1/2 cup Parmesan cheese in a separate bowl, set aside. Dip a flour-coated chicken breast in beaten eggs. Transfer breast to the bread crumb mixture, pressing crumbs into both sides. Repeat for each breast. Let chicken rest for 10 to 15 minutes.",
+        "Heat 1/2 inch of olive oil in a large skillet over medium-high heat until it begins to shimmer. Cook chicken in batches, so you do not overcrowd the pan, until golden, about 2 minutes per side. The chicken will finish cooking in the oven.",
+        "Transfer chicken to a baking dish. Top each breast with 2 tablespoons tomato sauce. Layer each chicken breast with equal amounts of mozzarella cheese, fresh basil, and provolone cheese. Sprinkle remaining Parmesan over top and drizzle each with 1/2 teaspoon olive oil.",
+        "Bake in the preheated oven until cheese is browned and bubbly and chicken breasts are no longer pink in the center, 15 to 20 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C). Let chicken rest briefly before serving."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "poultry"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/223042/chicken-parmesan/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:14.108461Z"
+    },
+    {
+      "id": "spaghetti-carbonara",
+      "slug": "spaghetti-carbonara",
+      "title": "Spaghetti Carbonara",
+      "image": "https://www.allrecipes.com/thmb/Vg2cRidr2zcYhWGvPD8M18xM_WY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/11973-spaghetti-carbonara-ii-DDMFS-4x3-6edea51e421e4457ac0c3269f3be5157.jpg",
+      "prepTime": "20 min",
+      "cookTime": "20 min",
+      "totalTime": "40 min",
+      "servings": "8",
+      "ingredients": [
+        "1 pound spaghetti",
+        "2 tablespoons olive oil, divided, or as needed",
+        "8 slices bacon, diced",
+        "1 onion, chopped",
+        "1 clove garlic, minced",
+        "0.25 cup dry white wine",
+        "4 large eggs, beaten",
+        "0.5 cup grated Parmesan cheese",
+        "salt and black pepper to taste",
+        "2 tablespoons chopped fresh parsley",
+        "2 tablespoons grated Parmesan cheese"
+      ],
+      "instructions": [
+        "Bring a large pot of lightly salted water to a boil. Cook spaghetti in boiling water, stirring occasionally, until tender yet firm to the bite, about 12 minutes. Drain, toss spaghetti with 1 tablespoon olive oil, and set aside.",
+        "Place diced bacon in a large skillet over medium heat; cook and stir until evenly browned, about 10 minutes. Drain bacon on paper towels, reserving 2 tablespoons bacon fat in the skillet.",
+        "Add 1 tablespoon olive oil to bacon fat in the skillet. Add chopped onion and cook over medium heat until onion is translucent. Add minced garlic and cook until fragrant, about 1 minute. Add wine and cook 1 minute more.",
+        "Return cooked bacon to the skillet; add cooked spaghetti. Toss to coat and heat through, adding more olive oil if it seems dry or sticks together. Add beaten eggs and cook, tossing constantly with tongs or a large fork, until eggs are barely set. Quickly add 1/2 cup Parmesan cheese and toss again. Season with salt and pepper (remember that bacon and Parmesan are very salty).",
+        "Serve warm with chopped parsley sprinkled on top and extra Parmesan cheese at the table."
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "pasta"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/11973/spaghetti-carbonara-ii/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:24.323916Z"
+    },
+    {
+      "id": "baked-teriyaki-chicken",
+      "slug": "baked-teriyaki-chicken",
+      "title": "Baked Teriyaki Chicken",
+      "image": "https://www.allrecipes.com/thmb/LLnvqnBTEErWK95wDd2amICoVHY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/9023-baked-teriyaki-chicken-DDMFS-4x3-8fc9cd3743714eedad57edb8bda8e59b.jpg",
+      "prepTime": "10 min",
+      "cookTime": "55 min",
+      "totalTime": "65 min",
+      "servings": "6",
+      "ingredients": [
+        "0.5 cup white sugar",
+        "0.5 cup soy sauce",
+        "0.25 cup cider vinegar",
+        "1 tablespoon cornstarch",
+        "1 tablespoon cold water",
+        "1 clove garlic, minced",
+        "0.5 teaspoon ground ginger",
+        "0.25 teaspoon ground black pepper",
+        "12 boneless, skinless chicken thighs"
+      ],
+      "instructions": [
+        "Preheat the oven to 425 degrees F (220 degrees C). Lightly grease a 9x13-inch baking dish.",
+        "Combine sugar, soy sauce, cider vinegar, cornstarch, cold water, garlic, ginger, and pepper in a small saucepan over low heat. Simmer, stirring frequently, until teriyaki sauce thickens and bubbles, 3 to 5 minutes. Remove from the heat.",
+        "Place chicken thighs in the prepared baking dish. Brush both sides of each thigh with the sauce. Reserve any extra sauce for basting.",
+        "Bake in the preheated oven for 30 minutes.",
+        "Flip chicken and brush with sauce. Continue to bake, basting with remaining sauce every 10 minutes, until no longer pink and juices run clear, 20 to 30 more minutes.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "easy",
+        "poultry"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/9023/baked-teriyaki-chicken/"
+      },
+      "theme": "Quick Weeknight Dinners",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:27.693273Z"
+    },
+    {
+      "id": "best-chocolate-chip-cookies",
+      "slug": "best-chocolate-chip-cookies",
+      "title": "Best Chocolate Chip Cookies",
+      "image": "https://www.allrecipes.com/thmb/8xwaWAHtl_QLij6D-G0Z4B1HDVA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/10813-best-chocolate-chip-cookies-mfs-146-4x3-b108aceffa6043a1ac81c3c5a9b034c8.jpg",
+      "prepTime": "20 min",
+      "cookTime": "10 min",
+      "totalTime": "30 min",
+      "servings": "48",
+      "ingredients": [
+        "1 cup butter, softened",
+        "1 cup white sugar",
+        "1 cup packed brown sugar",
+        "2 eggs",
+        "2 teaspoons vanilla extract",
+        "1 teaspoon baking soda",
+        "2 teaspoons hot water",
+        "0.5 teaspoon salt",
+        "3 cups all-purpose flour",
+        "2 cups semisweet chocolate chips",
+        "1 cup chopped walnuts"
+      ],
+      "instructions": [
+        "Gather your ingredients, making sure your butter is softened, and your eggs are room temperature.",
+        "Preheat the oven to 350 degrees F (175 degrees C). Beat butter, white sugar, and brown sugar in a large bowl with an electric mixer until smooth and creamy.",
+        "Beat in eggs, one at a time, then stir in vanilla.",
+        "Dissolve baking soda in hot water; add to batter along with salt and mix until combined.",
+        "Stir in flour, chocolate chips, and walnuts until a soft dough forms.",
+        "Drop rounded spoonfuls of cookie dough 2 inches apart onto ungreased baking sheets.",
+        "Bake in the preheated oven until edges are lightly browned, about 10 minutes.",
+        "Cool on the baking sheets briefly before removing to a wire rack to cool completely.",
+        "Store in an airtight container or serve immediately and enjoy!"
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/10813/best-chocolate-chip-cookies/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:28.110401Z"
+    },
+    {
+      "id": "banana-banana-bread",
+      "slug": "banana-banana-bread",
+      "title": "Banana Banana Bread",
+      "image": "https://www.allrecipes.com/thmb/fAkQn-FhjF89oTJ5JXpgwvwNf34=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20144-banana-banana-bread-VAT-009-4x3-B-78f1cfc64bfa451e8a0fead814719b9f.jpg",
+      "prepTime": "15 min",
+      "cookTime": "60 min",
+      "totalTime": "75 min",
+      "servings": "12",
+      "ingredients": [
+        "2 cups all-purpose flour",
+        "1 teaspoon baking soda",
+        "0.25 teaspoon salt",
+        "0.75 cup brown sugar",
+        "0.5 cup butter",
+        "2 eggs, beaten",
+        "2.3333332538605 cups mashed overripe bananas"
+      ],
+      "instructions": [
+        "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Lightly grease a 9x5-inch loaf pan.",
+        "Combine flour, baking soda, and salt in a large bowl. Beat brown sugar and butter with an electric mixer in a separate large bowl until smooth. Stir in eggs and mashed bananas until well blended. Stir banana mixture into flour mixture until just combined.",
+        "Pour batter into the prepared loaf pan.",
+        "Bake in the preheated oven until a toothpick inserted into the center comes out clean, about 60 minutes.",
+        "Let bread cool in pan for 10 minutes, then turn out onto a wire rack to cool completely.",
+        "Enjoy!"
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/20144/banana-banana-bread/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:31.523126Z"
+    },
+    {
+      "id": "simple-white-cake",
+      "slug": "simple-white-cake",
+      "title": "Simple White Cake",
+      "image": "https://www.allrecipes.com/thmb/rceSb4HUcHI64nQj_8o6jnvAN-0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/17481-simple-white-cake-DDMFS-4x3-89bf9ff32d0c40179a3d752d4d25f22a.jpg",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "totalTime": "40 min",
+      "servings": "12",
+      "ingredients": [
+        "1 cup white sugar",
+        "0.5 cup unsalted butter",
+        "2 large eggs",
+        "2 teaspoons vanilla extract",
+        "1.5 cups all-purpose flour",
+        "1.75 teaspoons baking powder",
+        "1/4 teaspoon table salt",
+        "0.5 cup milk"
+      ],
+      "instructions": [
+        "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Grease and flour a 9-inch square cake pan.",
+        "Beat sugar and butter together in a mixing bowl with an electric mixer until lighter in color and fluffy, 3 to 4 minutes. Add eggs, one at a time, beating briefly after each addition, 30 seconds total. Mix in vanilla, about 15 seconds.",
+        "Whisk flour, baking powder, and salt in a separate bowl. With mixer on low speed, add flour mixture to butter mixture in 3 batches, alternating with milk, beginning and ending with flour. Mix just until combined stopping to scrape down sides if needed, about 2 minutes.",
+        "Spread cake batter into the prepared pan.",
+        "Bake cake in the preheated oven until a toothpick inserted into the center comes out clean, about 30 minutes.",
+        "Remove cake from the oven and let cool in pan on a wire rack for 10 minutes. Invert cake onto wire rack; remove pan and let cake cool completely before frosting. Enjoy!"
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/17481/simple-white-cake/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-17T23:40:34.875962Z"
+    },
+    {
+      "id": "best-brownies",
+      "slug": "best-brownies",
+      "title": "Best Brownies",
+      "image": "https://www.allrecipes.com/thmb/xRXidY0DdIPsZdMyTC48ZGQePWo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/10549best-browniesKimvideo4x3-fc60972f21104322a02b4347b657daed.jpg",
+      "prepTime": "15 min",
+      "cookTime": "30 min",
+      "totalTime": "45 min",
+      "servings": "16",
+      "ingredients": [
+        "0.5 cup butter",
+        "1 cup white sugar",
+        "2 eggs",
+        "1 teaspoon vanilla extract",
+        "0.33333334326744 cup unsweetened cocoa powder",
+        "0.5 cup all-purpose flour",
+        "0.25 teaspoon salt",
+        "0.25 teaspoon baking powder",
+        "3 tablespoons butter, softened",
+        "3 tablespoons unsweetened cocoa powder",
+        "1 tablespoon honey",
+        "1 teaspoon vanilla extract",
+        "1 cup confectioners' sugar"
+      ],
+      "instructions": [
+        "Preheat the oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square baking pan.",
+        "Melt 1/2 cup butter in a large saucepan. Remove from heat, and stir in sugar, eggs, and 1 teaspoon vanilla. Beat in 1/3 cup cocoa, flour, salt, and baking powder. Spread batter into prepared pan.",
+        "Bake in the preheated oven until top is dry and edges have started to pull away from the sides of the pan, about 25 to 30 minutes. Let cool briefly before frosting.",
+        "To make the chocolate frosting: Combine softened butter, confectioners' sugar, 3 tablespoons cocoa, honey, and 1 teaspoon vanilla extract in a bowl. Stir until smooth. Frost brownies while they are still slightly warm."
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/10549/best-brownies/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:38.264250Z"
+    },
+    {
+      "id": "to-die-for-blueberry-muffins",
+      "slug": "to-die-for-blueberry-muffins",
+      "title": "To Die For Blueberry Muffins",
+      "image": "https://www.allrecipes.com/thmb/w4mqXHWaUQtNhz_NDLHmGfmy3lI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6865-to-die-for-blueberry-muffins-VAT-019-4x3-dfe4a5ca62eb49559c3431b00c266f37.jpg",
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "totalTime": "35 min",
+      "servings": "8",
+      "ingredients": [
+        "1.5 cups all-purpose flour",
+        "0.75 cup white sugar",
+        "2 teaspoons baking powder",
+        "0.5 teaspoon salt",
+        "0.33333334326744 cup vegetable oil",
+        "1 egg",
+        "0.33333334326744 cup milk, or more as needed",
+        "1 cup fresh blueberries",
+        "0.5 cup white sugar",
+        "0.33333334326744 cup all-purpose flour",
+        "0.25 cup butter, cubed",
+        "1.5 teaspoons ground cinnamon"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Preheat the oven to 400 degrees F (200 degrees C). Grease 8 muffin cups or line with paper liners.",
+        "To make the muffins: Whisk flour, sugar, baking powder, and salt together in a large bowl.",
+        "Pour oil into a small liquid measuring cup. Add egg and enough milk to reach the 1-cup mark; stir until combined.",
+        "Pour into flour mixture and mix just until batter is combined. Fold in blueberries; set batter aside.",
+        "To make the crumb topping: Combine sugar, flour, butter, and cinnamon in a small bowl. Mix with a fork until crumbly.",
+        "Spoon batter into the prepared muffin cups, filling right to the top. Sprinkle with crumb topping.",
+        "Bake in the preheated oven until a toothpick inserted in the center of a muffin comes out clean, 20 to 25 minutes. Enjoy!"
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/6865/to-die-for-blueberry-muffins/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:41.698397Z"
+    },
+    {
+      "id": "apple-pie-by-grandma-ople",
+      "slug": "apple-pie-by-grandma-ople",
+      "title": "Apple Pie by Grandma Ople",
+      "image": "https://www.allrecipes.com/thmb/9qLdYfie0xmoqYq_Z-agY1iA1oc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ar-12682-apple-pie-by-grandma-ople-ddmfs-beauty-1-3-d9f3f4e8bdab4997908fe8fa867935d5.jpg",
+      "prepTime": "30 min",
+      "cookTime": "60 min",
+      "totalTime": "90 min",
+      "servings": "8",
+      "ingredients": [
+        "8 small Granny Smith apples, or as needed",
+        "0.5 cup unsalted butter",
+        "3 tablespoons all-purpose flour",
+        "0.5 cup white sugar",
+        "0.5 cup packed brown sugar",
+        "0.25 cup water",
+        "1 (9 inch) double-crust pie pastry, thawed"
+      ],
+      "instructions": [
+        "Gather the ingredients. Preheat the oven to 425 degrees F (220 degrees C). Peel and core apples, then thinly slice. Set aside.",
+        "Melt butter in a saucepan over medium heat. Add flour and stir to form a paste; cook until fragrant, about 1 to 2 minutes. Add both sugars and water; bring to a boil. Reduce the heat to low and simmer for 3 to 5 minutes. Remove from the heat.",
+        "Press one pastry into the bottom and up the sides of a 9-inch pie pan. Roll out remaining pastry so it will overhang the pie by about 1/2 inch. Cut pastry into eight 1-inch strips.",
+        "Place sliced apples into the bottom crust, forming a slight mound. Lay four pastry strips vertically and evenly spaced over apples, using longer strips in the center and shorter strips at the edges.",
+        "Make a lattice crust: Fold the first and third strips all the way back so they're almost falling off the pie. Lay one of the unused strips perpendicularly over the second and fourth strips, then unfold the first and third strips back into their original position.",
+        "Fold the second and fourth vertical strips back. Lay one of the three unused strips perpendicularly over top. Unfold the second and fourth strips back into their original position. Repeat Steps 6 and 7 to weave in the last two strips of pastry. Fold and trim excess dough at the edges as necessary, and pinch to secure.",
+        "Slowly and gently pour sugar-butter mixture over lattice crust, making sure it seeps over sliced apples. Brush some onto lattice, but make sure it doesn't run off the sides.",
+        "Bake in the preheated oven for 15 minutes. Reduce the temperature to 350 degrees F (175 degrees C) and continue baking until apples are soft, 35 to 45 minutes.",
+        "Serve and enjoy!"
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/12682/apple-pie-by-grandma-ople/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-17T23:40:45.123418Z"
+    },
+    {
+      "id": "easy-sugar-cookies",
+      "slug": "easy-sugar-cookies",
+      "title": "Easy Sugar Cookies",
+      "image": "https://www.allrecipes.com/thmb/XSJoH98eVnTCnaE6lTcDpYHbalw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/9870-easy-sugar-cookies-mfs356-1-8c317695c5b645a48f6b20d1b97d3c93.jpg",
+      "prepTime": "20 min",
+      "cookTime": "10 min",
+      "totalTime": "30 min",
+      "servings": "48",
+      "ingredients": [
+        "2.75 cups all-purpose flour",
+        "1 teaspoon baking soda",
+        "0.5 teaspoon baking powder",
+        "1 cup butter, softened",
+        "1.5 cups white sugar",
+        "1 egg",
+        "1 teaspoon vanilla extract"
+      ],
+      "instructions": [
+        "Gather all ingredients. Preheat the oven to 375 degrees F (190 degrees C).",
+        "Stir flour, baking soda, and baking powder together in a small bowl.",
+        "Beat sugar and butter together in a large bowl with an electric mixer until smooth.",
+        "Beat in egg and vanilla.",
+        "Gradually blend in flour mixture.",
+        "Roll dough into walnut-sized balls and place 2 inches apart onto ungreased baking sheets.",
+        "Bake in the preheated oven until edges are just golden, 8 to 10 minutes. Cool on the baking sheets briefly before removing to a wire rack to cool completely."
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/9870/easy-sugar-cookies/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:48.538028Z"
+    },
+    {
+      "id": "downeast-maine-pumpkin-bread",
+      "slug": "downeast-maine-pumpkin-bread",
+      "title": "Downeast Maine Pumpkin Bread",
+      "image": "https://www.allrecipes.com/thmb/vVUhf_w_m23BtkSq1XFgpQtKGDY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6820-downeast-maine-pumpkin-bread-VAT-014-4x3-C-fbd7df01cfdd4194be059527ddf0ea15.jpg",
+      "prepTime": "10 min",
+      "cookTime": "50 min",
+      "totalTime": "60 min",
+      "servings": "24",
+      "ingredients": [
+        "1 (15 ounce) can pumpkin puree",
+        "4 eggs",
+        "1 cup vegetable oil",
+        "0.66666668653488 cup water",
+        "3 cups white sugar",
+        "3.5 cups all-purpose flour",
+        "2 teaspoons baking soda",
+        "1.5 teaspoons salt",
+        "1 teaspoon ground cinnamon",
+        "1 teaspoon ground nutmeg",
+        "0.5 teaspoon ground cloves",
+        "0.25 teaspoon ground ginger"
+      ],
+      "instructions": [
+        "Gather the ingredients. Preheat the oven to 350 degrees F (175 degrees C). Grease and flour two 9x5-inch loaf pans.",
+        "Whisk flour, baking soda, salt, cinnamon, nutmeg, cloves, and ginger together in a large bowl.",
+        "Mix pumpkin puree, eggs, oil, water, and sugar in a separate bowl until well blended.",
+        "Stir flour mixture into pumpkin mixture until just blended.",
+        "Pour batter into the prepared pans.",
+        "Bake in the preheated oven until a toothpick inserted in center comes out clean, about 50 minutes.",
+        "Enjoy!"
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/6820/downeast-maine-pumpkin-bread/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:51.896821Z"
+    },
+    {
+      "id": "the-best-lemon-bars",
+      "slug": "the-best-lemon-bars",
+      "title": "The Best Lemon Bars",
+      "image": "https://www.allrecipes.com/thmb/Gg0DQ2lUeFy-k9U62AXuz7Bm_4o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/10294-the-best-lemon-bars-DDMFS-beauty-3x4-01350219-c15c4827648f476cbe0ab9bfd36859b9.jpg",
+      "prepTime": "15 min",
+      "cookTime": "35 min",
+      "totalTime": "50 min",
+      "servings": "24",
+      "ingredients": [
+        "2 cups all-purpose flour",
+        "1 cup butter, softened",
+        "0.5 cup white sugar",
+        "1.5 cups white sugar",
+        "0.25 cup all-purpose flour",
+        "4 eggs",
+        "2 lemons, juiced"
+      ],
+      "instructions": [
+        "Gather the ingredients.",
+        "Preheat the oven to 350 degrees F (175 degrees C).",
+        "To make the crust: Blend 2 cups flour, softened butter, and 1/2 cup sugar in a medium bowl until well combined.",
+        "Press crust into the bottom of an ungreased 9x13-inch pan.",
+        "Bake crust in the preheated oven until firm and golden, about 15 minutes.",
+        "Meanwhile, make the filling: Whisk remaining 1 1/2 cups sugar and 1/4 cup flour in a medium bowl. Whisk in eggs, then lemon juice until smooth.",
+        "Pour filling over the baked crust.",
+        "Bake in the preheated oven for 20 minutes. Set the pan aside to cool completely; the bars will firm up as they cool.",
+        "When cooled, cut bars into uniform squares."
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/10294/the-best-lemon-bars/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:55.281036Z"
+    },
+    {
+      "id": "clone-of-a-cinnabon",
+      "slug": "clone-of-a-cinnabon",
+      "title": "Clone of a Cinnabon",
+      "image": "https://www.allrecipes.com/thmb/mIq2ipupe_bL3SndLAUxmjk0F8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20156-Clone-Of-A-Cinnabon-mfs_001-1-85726e057afa44779369ef2ae75cfe94.jpg",
+      "prepTime": "20 min",
+      "cookTime": "15 min",
+      "totalTime": "180 min",
+      "servings": "12",
+      "ingredients": [
+        "1 cup warm milk (110 degrees F/45 degrees C)",
+        "2 eggs, room temperature",
+        "0.33333334326744 cup margarine, melted",
+        "4.5 cups bread flour",
+        "1 teaspoon salt",
+        "0.5 cup white sugar",
+        "2.5 teaspoons bread machine yeast",
+        "1 cup brown sugar, packed",
+        "2.5 tablespoons ground cinnamon",
+        "0.33333334326744 cup butter, softened",
+        "1.5 cups confectioners' sugar",
+        "0.25 cup butter, softened",
+        "1 (3 ounce) package cream cheese, softened",
+        "0.5 teaspoon vanilla extract",
+        "0.125 teaspoon salt"
+      ],
+      "instructions": [
+        "To make the dough: Place milk, eggs, margarine, flour, salt, white sugar, and yeast in the pan of a bread machine in the order recommended by the manufacturer. Select dough cycle; press Start.",
+        "When dough has doubled in size, turn it out onto a lightly floured surface. Cover it with a kitchen towel or plastic wrap and let it rest for 10 minutes.",
+        "Roll dough on a lightly floured surface to a 16x21-inch rectangle.",
+        "To make the filling: Combine brown sugar and cinnamon in a small bowl. Spread softened butter over the dough, then sprinkle cinnamon-sugar mixture evenly over top.",
+        "Starting at the longer end, roll up the dough; cut into 12 rolls. Place rolls in a lightly greased 9x13-inch baking pan. Cover and let rise until nearly doubled, about 30 minutes.",
+        "Meanwhile, preheat the oven to 400 degrees F (200 degrees C).",
+        "Bake rolls in the preheated oven until golden brown, about 15 minutes.",
+        "While rolls are baking, prepare icing: Beat confectioners' sugar, butter, cream cheese, vanilla, and salt until creamy.",
+        "Spread icing on warm rolls before serving."
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/20156/clone-of-a-cinnabon/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-17T23:40:58.683664Z"
+    },
+    {
+      "id": "moms-zucchini-bread",
+      "slug": "moms-zucchini-bread",
+      "title": "Mom's Zucchini Bread",
+      "image": "https://www.allrecipes.com/thmb/SuFyebthQYoEoz1-rSYGvVagnuk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-6698-moms-zucchini-bread-DDMFS-4x3-72c63ca7ff82453d8c353aa73715374f.jpg",
+      "prepTime": "15 min",
+      "cookTime": "40 min",
+      "totalTime": "75 min",
+      "servings": "24",
+      "ingredients": [
+        "3 cups all-purpose flour",
+        "1 teaspoon salt",
+        "1 teaspoon baking powder",
+        "1 teaspoon baking soda",
+        "1 tablespoon ground cinnamon",
+        "3 large eggs",
+        "1 cup vegetable oil",
+        "2.25 cups white sugar",
+        "3 teaspoons vanilla extract",
+        "2 cups grated zucchini",
+        "1 cup chopped walnuts"
+      ],
+      "instructions": [
+        "Gather all ingredients. Preheat the oven to 325 degrees F (165 degrees C). Grease and flour two 8x4-inch loaf pans.",
+        "Sift flour, salt, baking powder, baking soda, and cinnamon together in a large bowl.",
+        "Beat eggs, oil, sugar, and vanilla together in a separate large bowl with an electric mixer until combined; add flour mixture and beat well.",
+        "Stir in shredded zucchini and chopped walnuts until well combined.",
+        "Pour batter into the prepared pans.",
+        "Bake in the preheated oven until a toothpick inserted into the center comes out clean, about 40 to 60 minutes. Cool in the pans on a wire rack for 20 minutes.",
+        "Run a table knife around the edges to loosen. Invert carefully onto a wire rack and let cool completely."
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/6698/moms-zucchini-bread/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:02.088046Z"
+    },
+    {
+      "id": "slow-cooker-beef-stew",
+      "slug": "slow-cooker-beef-stew",
+      "title": "Slow Cooker Beef Stew",
+      "image": "https://www.allrecipes.com/thmb/K8WfLq0Eqi7vSPXyzAXUC_Karfo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/14685-slow-cooker-beef-stew-i-DDMFS-4x3-6f0208563f4c43d6a80fdb077c19fe4e.jpg",
+      "prepTime": "20 min",
+      "cookTime": "240 min",
+      "totalTime": "260 min",
+      "servings": "6",
+      "ingredients": [
+        "2 pounds beef stew meat, cut into 1-inch pieces",
+        "0.25 cup all-purpose flour",
+        "0.5 teaspoon salt",
+        "0.5 teaspoon ground black pepper",
+        "1.5 cups beef broth",
+        "4 medium carrots, sliced",
+        "3 medium potatoes, diced",
+        "1 medium onion, chopped",
+        "1 stalk celery, chopped",
+        "1 teaspoon Worcestershire sauce",
+        "1 teaspoon ground paprika",
+        "1 clove garlic, minced",
+        "1 large bay leaf"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Place beef in the slow cooker.",
+        "Mix flour, salt, and pepper together in a small bowl; pour over beef and stir until coated.",
+        "Add beef broth, carrots, potatoes, onion, celery, Worcestershire sauce, paprika, garlic, and bay leave; stir to combine.",
+        "Cover, and cook until beef is tender enough to cut with a spoon, on Low for 8 to 12 hours, or on High for 4 to 6 hours.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "meat",
+        "soup"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/14685/slow-cooker-beef-stew-i/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:05.902346Z"
+    },
+    {
+      "id": "boilermaker-tailgate-chili",
+      "slug": "boilermaker-tailgate-chili",
+      "title": "Boilermaker Tailgate Chili",
+      "image": "https://www.allrecipes.com/thmb/9k2-h_-0wukNxOIFuIkn2GauRjk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/78299-boilermaker-tailgate-chili-ddmfs-hero-3x4-1195-670ba950f0e14209aa304c1dbf2b874f.jpg",
+      "prepTime": "30 min",
+      "cookTime": "120 min",
+      "totalTime": "150 min",
+      "servings": "12",
+      "ingredients": [
+        "2 pounds ground beef chuck",
+        "1 pound bulk Italian sausage",
+        "3 (15 ounce) cans chili beans, drained",
+        "1 (15 ounce) can chili beans in spicy sauce",
+        "2 (28 ounce) cans diced tomatoes with juice",
+        "1 (6 ounce) can tomato paste",
+        "3 stalks celery, chopped",
+        "1 large yellow onion, chopped",
+        "1 green bell pepper, seeded and chopped",
+        "1 red bell pepper, seeded and chopped",
+        "2 green chile peppers, seeded and chopped",
+        "1 tablespoon bacon bits",
+        "4 cubes beef bouillon",
+        "0.5 cup beer",
+        "0.25 cup chili powder, or more to taste",
+        "1 tablespoon minced garlic",
+        "1 tablespoon Worcestershire sauce",
+        "1 tablespoon dried oregano",
+        "2 teaspoons ground cumin",
+        "2 teaspoons hot pepper sauce (such as Tabasco®)",
+        "1 teaspoon dried basil",
+        "1 teaspoon cayenne pepper",
+        "1 teaspoon paprika",
+        "1 teaspoon white sugar",
+        "1 teaspoon salt, or more to taste",
+        "1 teaspoon ground black pepper, or more to taste",
+        "1 (10.5 ounce) bag corn chips (such as Fritos®)",
+        "1 (8 ounce) package shredded Cheddar cheese"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Heat a large stock pot over medium-high heat. Crumble ground chuck and sausage into the hot pan. Cook, stirring frequently, until meat is evenly browned. Drain off excess grease.",
+        "Pour in chili beans, spicy chili beans, diced tomatoes, and tomato paste. Add celery, onion, bell peppers, chile peppers, bacon bits, bouillon, beer, 1/4 cup chili powder, garlic, Worcestershire sauce, oregano, cumin, hot pepper sauce, basil, cayenne, paprika, sugar, 1 teaspoon salt, and 1 teaspoon black pepper. Stir to blend, then cover and simmer over low heat for at least 2 hours, stirring occasionally.",
+        "Taste and season with more salt, pepper, and chili powder if necessary. The longer the chili simmers, the better it will taste. Remove from the heat and serve, or cool, refrigerate, and reheat the next day.",
+        "To serve, ladle hot chili into bowls and top with corn chips and Cheddar cheese. Enjoy!"
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/78299/boilermaker-tailgate-chili/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:09.296412Z"
+    },
+    {
+      "id": "quick-and-easy-chicken-noodle-soup",
+      "slug": "quick-and-easy-chicken-noodle-soup",
+      "title": "Quick and Easy Chicken Noodle Soup",
+      "image": "https://www.allrecipes.com/thmb/pTGS0SZsSQK85sV_RQE_K6ZfoN4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/26460-quick-and-easy-chicken-noodle-soup-allrecipes-1x1-1-b88125437574471db3e114c40bc6928e.jpg",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "totalTime": "40 min",
+      "servings": "6",
+      "ingredients": [
+        "1 tablespoon butter",
+        "0.5 cup chopped onion",
+        "0.5 cup chopped celery",
+        "4 (14.5 ounce) cans chicken broth",
+        "1 (14.5 ounce) can vegetable broth",
+        "0.5 pound chopped cooked chicken breast",
+        "1.5 cups egg noodles",
+        "1 cup sliced carrots",
+        "0.5 teaspoon dried basil",
+        "0.5 teaspoon dried oregano",
+        "salt and ground black pepper to taste"
+      ],
+      "instructions": [
+        "Melt butter in a large pot over medium heat. Add onion and celery and cook until just tender, about 5 minutes.",
+        "Add chicken broth, vegetable broth, chicken, egg noodles, carrots, basil, oregano, salt, and pepper. Stir to combine and bring to a boil.",
+        "Reduce heat and simmer for 20 minutes."
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "poultry",
+        "soup"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/26460/quick-and-easy-chicken-noodle-soup/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:12.717323Z"
+    },
+    {
+      "id": "rich-and-simple-french-onion-soup",
+      "slug": "rich-and-simple-french-onion-soup",
+      "title": "Rich and Simple French Onion Soup",
+      "image": "https://www.allrecipes.com/thmb/wWn2fBl9C-OjhcyZj9Av-i8Alfc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/13309-rich-and-simple-french-onion-soup-DDMFS-4x3-31ad7eaa56234d20ae35c3940fd03f36.jpg",
+      "prepTime": "15 min",
+      "cookTime": "40 min",
+      "totalTime": "55 min",
+      "servings": "4",
+      "ingredients": [
+        "0.5 cup unsalted butter",
+        "2 tablespoons olive oil",
+        "4 cups sliced onions",
+        "5 cups beef broth",
+        "2 tablespoons dry sherry",
+        "1 teaspoon dried thyme",
+        "1 pinch salt and pepper to taste",
+        "4 slices French bread",
+        "4 slices provolone cheese",
+        "2 slices Swiss cheese, diced",
+        "0.25 cup grated Parmesan cheese"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Melt butter with olive oil in an 8-quart stock pot over medium heat. Add onions to butter and continually stir until tender and translucent. Do not brown the onions.",
+        "Add beef broth, sherry, and thyme. Season with salt and pepper. Let simmer for 30 minutes. Meanwhile, preheat the oven's broiler.",
+        "Ladle soup into oven-safe serving bowls and place one slice of bread on top of each (bread may be broken into pieces if you prefer). Layer each slice of bread with a slice of provolone, 1/2 slice diced Swiss and 1 tablespoon Parmesan cheese. Place bowls on a rimmed sheet pan.",
+        "Broil in the preheated oven until cheese bubbles and browns slightly, 2 to 3 minutes.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "soup"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/13309/rich-and-simple-french-onion-soup/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:16.127834Z"
+    },
+    {
+      "id": "butternut-squash-soup",
+      "slug": "butternut-squash-soup",
+      "title": "Butternut Squash Soup",
+      "image": "https://www.allrecipes.com/thmb/EPaxxTzlDs9iy6si2K6cfuYuY4c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/77981-butternut-squash-soup-VAT-Beauty-4x3-4eeb7a73250a4dbcb91ee77e2faaba7a.jpg",
+      "prepTime": "15 min",
+      "cookTime": "45 min",
+      "totalTime": "60 min",
+      "servings": "4",
+      "ingredients": [
+        "2 tablespoons butter",
+        "1 small onion, chopped",
+        "1 stalk celery, chopped",
+        "1 medium carrot, chopped",
+        "2 medium potatoes, cubed",
+        "1 medium butternut squash - peeled, seeded, and cubed",
+        "1 (32 fluid ounce) container chicken stock",
+        "salt and freshly ground black pepper to taste"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Melt butter in a large pot over medium heat, and cook onion, celery, carrot, potatoes, and squash until lightly browned, about 5 minutes. Pour in enough chicken stock to cover vegetables.",
+        "Bring to a boil over medium-high heat. Reduce heat to low, cover pot, and simmer until all vegetables are tender, about 40 minutes.",
+        "Transfer soup to a blender and process until smooth. Return to the pot and mix in any remaining stock to reach desired consistency. Season with salt and pepper.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "soup"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/77981/butternut-squash-soup-ii/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:33.196779Z"
+    },
+    {
+      "id": "fresh-tomato-soup",
+      "slug": "fresh-tomato-soup",
+      "title": "Fresh Tomato Soup",
+      "image": "https://www.allrecipes.com/thmb/1TSSrSTHo-oAxzedT9_K7Jyjcj8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/39544-Garden-Fresh-Tomato-Soup-DDMFS-4x3-b8e94cf7ab8e42f4b79042fc0df55546.jpg",
+      "prepTime": "5 min",
+      "cookTime": "25 min",
+      "totalTime": "30 min",
+      "servings": "6",
+      "ingredients": [
+        "4 cups chopped fresh tomatoes",
+        "2 cups chicken broth",
+        "4 cloves garlic",
+        "1 slice onion",
+        "2 tablespoons butter",
+        "2 tablespoons all-purpose flour",
+        "2 teaspoons white sugar, or to taste",
+        "1 teaspoon salt"
+      ],
+      "instructions": [
+        "Gather the ingredients.",
+        "Combine tomatoes, chicken broth, garlic cloves, and a large slice of onion in a stockpot over medium heat. Bring to a boil, and gently simmer for about 15 to 20 minutes to blend flavors.",
+        "Remove from heat and run the mixture through a food mill into a large bowl, or pan. Discard any stuff left over in the food mill.",
+        "Melt butter over medium heat in the now empty stockpot. Stir in flour to make a roux by cooking, whisking constantly, until mixture turns medium brown.",
+        "Gradually whisk in a bit of the tomato mixture to prevent lumps from forming, then stir in the rest.",
+        "Season with sugar and salt to taste.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "soup"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/39544/garden-fresh-tomato-soup/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:36.659738Z"
+    },
+    {
+      "id": "lentil-soup",
+      "slug": "lentil-soup",
+      "title": "Lentil Soup",
+      "image": "https://www.allrecipes.com/thmb/UeFtapHyGFBo4Lx-72GxgjrOGnk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/13978-lentil-soup-DDMFS-4x3-edfa47fc6b234e6b8add24d44c036d43.jpg",
+      "prepTime": "10 min",
+      "cookTime": "50 min",
+      "totalTime": "60 min",
+      "servings": "8",
+      "ingredients": [
+        "0.25 cup olive oil",
+        "1 onion, chopped",
+        "2 carrots, diced",
+        "2 stalks celery, chopped",
+        "2 cloves garlic, minced",
+        "1 bay leaf",
+        "1 teaspoon dried oregano",
+        "1 teaspoon dried basil",
+        "2 cups dry lentils",
+        "8 cups water",
+        "1 (14.5 ounce) can crushed tomatoes",
+        "0.5 cup spinach, rinsed and thinly sliced",
+        "2 tablespoons vinegar",
+        "salt to taste",
+        "ground black pepper to taste"
+      ],
+      "instructions": [
+        "Gather the ingredients.",
+        "Heat oil in a large soup pot over medium heat. Add onions, carrots, and celery; cook and stir until onion is tender, 3 to 5 minutes.",
+        "Stir in garlic, bay leaf, oregano, and basil; cook for 2 minutes.",
+        "Stir in lentils, and add water and tomatoes. Bring to a boil. Reduce heat and let simmer until lentils are tender, about 40 minutes.",
+        "When ready to serve, stir in spinach and cook until it wilts.",
+        "Stir in vinegar and season with salt and pepper; taste and adjust as needed.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "vegetarian",
+        "soup"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/13978/lentil-soup/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:37.038673Z"
+    },
+    {
+      "id": "strawberry-spinach-salad",
+      "slug": "strawberry-spinach-salad",
+      "title": "Strawberry Spinach Salad",
+      "image": "https://www.allrecipes.com/thmb/hI5hYn1sJB2mJar0h0lechfe1PU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-14276-Strawberry-Spinach-Salad-4x3-135a121dc0b24ad693289e221dcd3477.jpg",
+      "prepTime": "10 min",
+      "cookTime": null,
+      "totalTime": "80 min",
+      "servings": "4",
+      "ingredients": [
+        "0.5 cup white sugar",
+        "0.5 cup olive oil",
+        "0.25 cup distilled white vinegar",
+        "2 tablespoons sesame seeds",
+        "1 tablespoon poppy seeds",
+        "1 tablespoon minced onion",
+        "0.25 teaspoon paprika",
+        "0.25 teaspoon Worcestershire sauce",
+        "1 quart strawberries - cleaned, hulled and sliced",
+        "10 ounces fresh spinach - rinsed, dried and torn into bite-size pieces",
+        "0.25 cup almonds, blanched and slivered"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "To make the dressing: Whisk sugar, oil, vinegar, sesame seeds, poppy seeds, onion, paprika, and Worcestershire sauce together in a medium bowl until well combined. Cover the dressing and chill it in the refrigerator for 1 hour.",
+        "To make the spinach salad: Combine sliced strawberries, torn spinach leaves, and almonds in a large bowl.",
+        "Pour dressing over salad; toss to coat.",
+        "Refrigerate for 10 to 15 minutes before serving."
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "vegetarian",
+        "salad"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/14276/strawberry-spinach-salad-i/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:40.434413Z"
+    },
+    {
+      "id": "best-chicken-salad",
+      "slug": "best-chicken-salad",
+      "title": "Best Chicken Salad",
+      "image": "https://www.allrecipes.com/thmb/aPy_MqN4GgyO27vh98ns1pXaIWg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8499-Best-Chicken-Salad-DDMFS-3X4-11915-d36a5b98b1e041b3b48b62ecdfa6029e.jpg",
+      "prepTime": "5 min",
+      "cookTime": "5 min",
+      "totalTime": "10 min",
+      "servings": "2",
+      "ingredients": [
+        "0.5 cup blanched slivered almonds",
+        "0.5 cup mayonnaise",
+        "1 tablespoon lemon juice",
+        "0.25 teaspoon ground black pepper",
+        "2 cups chopped, cooked chicken meat",
+        "1 stalk celery, chopped"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Place almonds in a skillet over medium-low heat. Cook until golden brown and toasted, shaking frequently and watching carefully, as they burn easily.",
+        "Mix mayonnaise, lemon juice, and pepper together in a medium bowl until combined.",
+        "Add chicken, toasted almonds, and celery; toss until just combined.",
+        "Enjoy!"
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "poultry",
+        "salad"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/8499/basic-chicken-salad/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:43.814012Z"
+    },
+    {
+      "id": "delicious-egg-salad",
+      "slug": "delicious-egg-salad",
+      "title": "Delicious Egg Salad",
+      "image": "https://www.allrecipes.com/thmb/qI_4AEaIErnrnjInLNVA-vurWpA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-147103-delicious-egg-salad-for-sandwiches-DDMFS-4x3-ab3abdebb3c44c4fa45f64377002c990.jpg",
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "totalTime": "35 min",
+      "servings": "4",
+      "ingredients": [
+        "8 eggs",
+        "0.5 cup mayonnaise",
+        "0.25 cup chopped green onion",
+        "1 teaspoon prepared yellow mustard",
+        "0.25 teaspoon paprika",
+        "salt and pepper to taste"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Place eggs in a saucepan and cover with cold water. Bring water to a boil and immediately remove from heat. Cover and let eggs stand in hot water for 10 to 12 minutes.",
+        "Remove eggs from hot water; cool, peel, and chop.",
+        "Place chopped eggs in a bowl; stir in mayonnaise, green onion, and mustard. Season with paprika, salt, and pepper.",
+        "Stir and serve on your favorite bread, crackers, or salad greens."
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "vegetarian",
+        "salad"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/147103/delicious-egg-salad-for-sandwiches/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:47.192301Z"
+    },
+    {
+      "id": "pasta-salad",
+      "slug": "pasta-salad",
+      "title": "Pasta Salad",
+      "image": "https://www.allrecipes.com/thmb/b0JoulfOsZDw7VHEFxQjPCrpus4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/14385-pasta-salad-DDMFS-4x3-28eb5dbe00624780b36cabfef15ca183.jpg",
+      "prepTime": "20 min",
+      "cookTime": "10 min",
+      "totalTime": "30 min",
+      "servings": "6",
+      "ingredients": [
+        "1 pound tri-colored spiral pasta",
+        "1 (16 ounce) bottle Italian-style salad dressing",
+        "6 tablespoons salad seasoning mix",
+        "2 cups cherry tomatoes, diced",
+        "1 green bell pepper, chopped",
+        "1 red bell pepper, diced",
+        "0.5 yellow bell pepper, chopped",
+        "1 (2.25 ounce) can black olives, chopped"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Bring a large pot of lightly salted water to a boil. Cook pasta in the boiling water, stirring occasionally, until tender yet firm to the bite, about 10 to 12 minutes; rinse under cold water and drain.",
+        "Whisk Italian dressing and salad spice mix together until smooth. Combine pasta, tomatoes, bell peppers, and olives in a salad bowl.",
+        "Pour dressing over salad and toss to coat.",
+        "For the best flavor, refrigerate the pasta salad for 8 hours to overnight.",
+        "Enjoy!"
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "vegetarian",
+        "salad",
+        "pasta"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/14385/pasta-salad/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:50.627367Z"
+    },
+    {
+      "id": "perfect-summer-fruit-salad",
+      "slug": "perfect-summer-fruit-salad",
+      "title": "Perfect Summer Fruit Salad",
+      "image": "https://www.allrecipes.com/thmb/PsRAJfPQZrmdoVjmE0bL9WNxC9c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/214947-perfect-summer-fruit-salad-ddmfs-3x4-0663-30f68a9db5a442b9a860d88ba5ec6f78.jpg",
+      "prepTime": "25 min",
+      "cookTime": "5 min",
+      "totalTime": "210 min",
+      "servings": "10",
+      "ingredients": [
+        "0.66666668653488 cup fresh orange juice",
+        "0.33333334326744 cup fresh lemon juice",
+        "0.33333334326744 cup packed brown sugar",
+        "0.5 teaspoon grated orange zest",
+        "0.5 teaspoon grated lemon zest",
+        "1 teaspoon vanilla extract",
+        "2 cups cubed fresh pineapple",
+        "2 cups strawberries, hulled and sliced",
+        "3 kiwi fruit, peeled and sliced",
+        "3 bananas, sliced",
+        "2 oranges, peeled and sectioned",
+        "1 cup seedless grapes",
+        "2 cups blueberries"
+      ],
+      "instructions": [
+        "Gather the ingredients.",
+        "To make the sauce: Bring orange juice, lemon juice, brown sugar, orange zest, and lemon zest to a boil in a saucepan over medium-high heat. Reduce heat to medium-low and simmer until slightly thickened, about 5 minutes.",
+        "Remove from heat and stir in vanilla extract. Set aside to cool.",
+        "Layer fruit in a large, clear glass bowl in this order: pineapple, strawberries, kiwi fruit, bananas, oranges, grapes, and blueberries. Pour cooled sauce over fruit; cover and refrigerate for 3 to 4 hours before serving."
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "vegetarian",
+        "salad"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/214947/perfect-summer-fruit-salad/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:42:00.842980Z"
+    },
+    {
+      "id": "guacamole",
+      "slug": "guacamole",
+      "title": "Guacamole",
+      "image": "https://www.allrecipes.com/thmb/6RyFPH5N4KKmZhNY0Giob_Jj3wc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-14231-guacamole-4x3-f7a3b5752c7f4f3fb934d03a8b548826.jpg",
+      "prepTime": "15 min",
+      "cookTime": null,
+      "totalTime": "15 min",
+      "servings": "4",
+      "ingredients": [
+        "3 avocados - peeled, pitted, and mashed",
+        "1 lime, juiced",
+        "1 teaspoon salt",
+        "2 roma (plum) tomatoes, diced",
+        "0.5 cup diced onion",
+        "3 tablespoons chopped fresh cilantro",
+        "1 teaspoon minced garlic",
+        "1 pinch ground cayenne pepper"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Mash avocados, lime juice, and salt together in a medium bowl; mix in tomatoes, onion, cilantro, and garlic.",
+        "Stir in cayenne pepper. Serve immediately, or cover and refrigerate for 1 hour for improved flavor."
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/14231/guacamole/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:42:14.379009Z"
+    },
+    {
+      "id": "homemade-mac-and-cheese",
+      "slug": "homemade-mac-and-cheese",
+      "title": "Homemade Mac and Cheese",
+      "image": "https://www.allrecipes.com/thmb/Blsz58_MhPOcp5QMiuGg_UTHovM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/11679-homemade-mac-and-cheese-VAT-022-4x3-4b84cfe8a2234cfda3d936a5333fe292.jpg",
+      "prepTime": "10 min",
+      "cookTime": "45 min",
+      "totalTime": "55 min",
+      "servings": "4",
+      "ingredients": [
+        "8 ounces uncooked elbow macaroni",
+        "0.25 cup salted butter",
+        "3 tablespoons all-purpose flour",
+        "2.5 cups milk, or more as needed",
+        "2 cups shredded sharp Cheddar cheese",
+        "0.5 cup finely grated Parmesan cheese",
+        "salt and ground black pepper to taste",
+        "2 tablespoons salted butter",
+        "0.5 cup dry bread crumbs",
+        "1 pinch ground paprika"
+      ],
+      "instructions": [
+        "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Grease an 8-inch square baking dish.",
+        "To make the macaroni and cheese: Bring a large pot of lightly salted water to a boil. Add macaroni and simmer, stirring occasionally, until tender yet firm to the bite, about 8 minutes; it will finish cooking in the oven. Drain and transfer to the prepared baking dish.",
+        "While the macaroni is cooking, melt 1/4 cup butter in a medium skillet over low heat. Whisk in flour and stir until the mixture becomes paste-like and light golden brown, 3 to 5 minutes.",
+        "Gradually whisk 2 ½ cups milk into the flour mixture, and bring to a simmer.",
+        "Stir in shredded Cheddar and finely grated Parmesan cheeses; season with salt and pepper. Cook and stir over low heat until cheese is melted and sauce has thickened, 3 to 5 minutes, adding up to 1/2 cup more milk if needed.",
+        "Pour cheese sauce over macaroni and stir until well combined.",
+        "Make the bread crumb topping: Melt 2 tablespoons butter in a skillet over medium heat. Add bread crumbs; cook and stir until well coated and browned.",
+        "Spread bread crumbs over macaroni and cheese, then sprinkle with paprika.",
+        "Bake in the preheated oven until topping is golden brown and macaroni and cheese is bubbling, about 30 minutes."
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/11679/homemade-mac-and-cheese/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:42:14.778364Z"
+    },
+    {
+      "id": "easy-meatloaf",
+      "slug": "easy-meatloaf",
+      "title": "Easy Meatloaf",
+      "image": "https://www.allrecipes.com/thmb/q2i_L11qt7QzJ7gl66atPJmKuU0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/16354-easy-meatloaf-DDMFS-0034-5186-hero-4x3-30547610d0f64d2fb3c25c0cab909af6.jpg",
+      "prepTime": "15 min",
+      "cookTime": "60 min",
+      "totalTime": "75 min",
+      "servings": "8",
+      "ingredients": [
+        "1.5 pounds ground beef",
+        "1 egg",
+        "1 onion, chopped",
+        "1 cup milk",
+        "1 cup dried bread crumbs",
+        "salt and pepper to taste",
+        "0.333 cup ketchup",
+        "2 tablespoons brown sugar",
+        "2 tablespoons prepared mustard"
+      ],
+      "instructions": [
+        "Gather the ingredients. Preheat the oven to 350 degrees F (175 degrees C). Lightly grease a 9x5-inch loaf pan.",
+        "Combine ground beef, onion, milk, bread crumbs, and egg in a large bowl, and season with salt and pepper. Press mixture evenly into the prepared loaf pan.",
+        "Stir ketchup, brown sugar, and mustard together in a small bowl until smooth, and spread evenly over the meatloaf.",
+        "Bake in the preheated oven until no longer pink in the center, about 1 hour. An instant-read thermometer inserted into the middle reads at least 160 degrees F (70 degrees C).",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/16354/easy-meatloaf/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:42:18.153385Z"
+    },
+    {
+      "id": "chicken-pot-pie",
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "image": "https://www.allrecipes.com/thmb/FoWxveKFkL2_cQIzGmsEWSnf7ec=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/26317-chicken-pot-pie-VAT-Beauty-4x3-ab621b52d3c44a3ca4eac45b1a8e3585.jpg",
+      "prepTime": "20 min",
+      "cookTime": "50 min",
+      "totalTime": "80 min",
+      "servings": "8",
+      "ingredients": [
+        "1 pound skinless, boneless chicken breast halves - cubed",
+        "1 cup sliced carrots",
+        "1 cup frozen green peas",
+        "0.5 cup sliced celery",
+        "0.33333334326744 cup butter",
+        "0.33333334326744 cup chopped onion",
+        "0.33333334326744 cup all-purpose flour",
+        "0.5 teaspoon salt",
+        "0.25 teaspoon black pepper",
+        "0.25 teaspoon celery seed",
+        "1.75 cups chicken broth",
+        "0.66666668653488 cup milk",
+        "2 (9 inch) unbaked pie crusts"
+      ],
+      "instructions": [
+        "Gather all ingredients and preheat the oven to 425 degrees F (220 degrees C.)",
+        "Combine chicken, carrots, peas, and celery in a saucepan; add water to cover and bring to a boil. Boil for 15 minutes, then remove from the heat and drain.",
+        "While chicken is cooking, melt butter in another saucepan over medium heat. Add onion and cook until soft and translucent, 5 to 7 minutes. Stir in flour, salt, pepper, and celery seed.",
+        "Slowly stir in chicken broth and milk.",
+        "Reduce heat to medium-low and simmer until thick, 5 to 10 minutes. Remove from heat and set aside.",
+        "Place chicken and vegetables in the bottom pie crust. Pour hot broth mixture over top.",
+        "Cover with top crust, seal the edges, and cut away any excess dough. Make several small slits in the top crust to allow steam to escape.",
+        "Bake in the preheated oven until pastry is golden brown and filling is bubbly, 30 to 35 minutes. Cool for 10 minutes before serving.",
+        "Enjoy!"
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "poultry"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/26317/chicken-pot-pie-ix/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-17T23:42:21.536170Z"
+    },
+    {
+      "id": "simple-beef-stroganoff",
+      "slug": "simple-beef-stroganoff",
+      "title": "Simple Beef Stroganoff",
+      "image": "https://www.allrecipes.com/thmb/Rh2NialypvMY-ory6lY4_6cFPvE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/16311-simple-beef-stroganoff-DDMFS-4x3-1e966286eef54c0f96c882e569926eb3.jpg",
+      "prepTime": "5 min",
+      "cookTime": "15 min",
+      "totalTime": "20 min",
+      "servings": "4",
+      "ingredients": [
+        "1 (8 ounce) package egg noodles",
+        "1 pound ground beef",
+        "1 (10.5 ounce) can fat-free condensed cream of mushroom soup",
+        "1 tablespoon garlic powder",
+        "0.5 cup sour cream",
+        "salt and ground black pepper to taste"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Sauté ground beef in a large skillet over medium heat until browned and crumbly; 5 to 10 minutes.",
+        "Meanwhile, fill a large pot with lightly salted water and bring to a rapid boil. Cook egg noodles at a boil until tender yet firm to the bite, 7 to 9 minutes. Drain and set aside.",
+        "Drain and discard any fat from the cooked beef. Stir condensed soup and garlic powder into the beef. Simmer for 10 minutes, stirring occasionally.",
+        "Remove beef from the heat. Add egg noodles and stir to combine. Stir in sour cream and season with salt and pepper.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "meat"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/16311/simple-beef-stroganoff/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:42:24.907703Z"
+    },
+    {
+      "id": "worlds-best-lasagna",
+      "slug": "worlds-best-lasagna",
+      "title": "World's Best Lasagna",
+      "image": "https://www.allrecipes.com/thmb/htylprTl3RuTsFquG9YtbU1pzy0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/23600-worlds-best-lasagna-DDMFS-4x3-1196-24c5401652934ffb96d3d94bc9fbe2d7.jpg",
+      "prepTime": "30 min",
+      "cookTime": "150 min",
+      "totalTime": "195 min",
+      "servings": "12",
+      "ingredients": [
+        "1 pound sweet Italian sausage",
+        "0.75 pound lean ground beef",
+        "0.5 cup minced onion",
+        "2 cloves garlic, crushed",
+        "1 (28 ounce) can crushed tomatoes",
+        "2 (6.5 ounce) cans canned tomato sauce",
+        "2 (6 ounce) cans tomato paste",
+        "0.5 cup water",
+        "2 tablespoons white sugar",
+        "4 tablespoons chopped fresh parsley, divided",
+        "1.5 teaspoons dried basil leaves",
+        "1.5 teaspoons salt, divided, or to taste",
+        "1 teaspoon Italian seasoning",
+        "0.5 teaspoon fennel seeds",
+        "0.25 teaspoon ground black pepper",
+        "12 lasagna noodles",
+        "16 ounces ricotta cheese",
+        "1 egg",
+        "0.75 pound mozzarella cheese, sliced",
+        "0.75 cup grated Parmesan cheese"
+      ],
+      "instructions": [
+        "Gather all your ingredients.",
+        "Cook sausage, ground beef, onion, and garlic in a Dutch oven over medium heat until well browned.",
+        "Stir in crushed tomatoes, tomato sauce, tomato paste, and water. Season with sugar, 2 tablespoons parsley, basil, 1 teaspoon salt, Italian seasoning, fennel seeds, and pepper. Simmer, covered, for about 1 ½ hours, stirring occasionally.",
+        "Bring a large pot of lightly salted water to a boil. Cook lasagna noodles in boiling water for 8 to 10 minutes. Drain noodles, and rinse with cold water.",
+        "In a mixing bowl, combine ricotta cheese with egg, remaining 2 tablespoons parsley, and 1/2 teaspoon salt.",
+        "Preheat the oven to 375 degrees F (190 degrees C).",
+        "To assemble, spread 1 ½ cups of meat sauce in the bottom of a 9x13-inch baking dish. Arrange 6 noodles lengthwise over meat sauce, overlapping slightly. Spread with 1/2 of the ricotta cheese mixture. Top with 1/3 of the mozzarella cheese slices. Spoon 1 ½ cups meat sauce over mozzarella, and sprinkle with 1/4 cup Parmesan cheese.",
+        "Repeat layers, and top with remaining mozzarella and Parmesan cheese. Cover with foil: to prevent sticking, either spray foil with cooking spray or make sure the foil does not touch the cheese.",
+        "Bake in the preheated oven for 25 minutes. Remove the foil and bake for an additional 25 minutes.",
+        "Rest lasagna for 15 minutes before serving."
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "pasta"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-17T23:42:28.417881Z"
+    },
+    {
+      "id": "crispy-fried-chicken",
+      "slug": "crispy-fried-chicken",
+      "title": "Crispy Fried Chicken",
+      "image": "https://www.allrecipes.com/thmb/Pei8NVpHz5aJ06dY-We2QfHsoDM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8805-Crispy-Fried-Chicken-PICS-Beauty-4x3-240055e7b52840ff90d1c05d556db2e8.jpg",
+      "prepTime": "15 min",
+      "cookTime": "35 min",
+      "totalTime": "80 min",
+      "servings": "8",
+      "ingredients": [
+        "1 (4 pound) chicken, cut into pieces",
+        "1 cup buttermilk",
+        "2 cups all-purpose flour for coating",
+        "1 teaspoon paprika",
+        "salt and pepper to taste",
+        "2 quarts vegetable oil for frying"
+      ],
+      "instructions": [
+        "Take your cut up chicken pieces and skin them if you prefer.",
+        "Place flour in a large plastic bag (let the amount of chicken you are cooking dictate the amount of flour you use). Season flour with paprika (which helps to brown the chicken), salt and pepper.",
+        "Dip chicken pieces in buttermilk then, a few at a time, transfer them into the bag with flour; seal the bag and shake to coat well.",
+        "Place the coated chicken on a cookie sheet or tray, and cover with a clean dish towel or waxed paper. LET SIT UNTIL THE FLOUR IS OF A PASTE-LIKE CONSISTENCY. THIS IS CRUCIAL!",
+        "Fill a large skillet (cast iron is best) about 1/3 to 1/2 full with vegetable oil. Heat until VERY hot.",
+        "Put in as many chicken pieces as the skillet can hold. Brown the chicken in HOT oil on both sides.",
+        "When browned, reduce heat and cover skillet; let cook for 30 minutes (the chicken will be cooked through but not crispy). Remove cover, raise heat again, and continue to fry until crispy.",
+        "Drain fried chicken on paper towels. Depending on how much chicken you have, you may have to fry in a few shifts. Keep the finished chicken in a slightly warm oven while preparing the rest."
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "poultry"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/8805/crispy-fried-chicken/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-17T23:42:31.788849Z"
+    },
+    {
+      "id": "grilled-cheese-sandwich",
+      "slug": "grilled-cheese-sandwich",
+      "title": "Grilled Cheese Sandwich",
+      "image": "https://www.allrecipes.com/thmb/pnEUcAXDg5GUJ77fUDzZp41NWkE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-238891-Grilled-Cheese-Sandwich-beauty-4x3-362f705972e64a948b7ec547f7b2a831.jpg",
+      "prepTime": "5 min",
+      "cookTime": "10 min",
+      "totalTime": "15 min",
+      "servings": "2",
+      "ingredients": [
+        "4 slices white bread",
+        "3 tablespoons butter, divided",
+        "2 slices Cheddar cheese"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Preheat a nonstick skillet over medium heat. Generously butter one side of a slice of bread.",
+        "Place bread butter-side down in the hot skillet; add 1 slice of cheese.",
+        "Butter a second slice of bread on one side and place butter-side up on top of cheese.",
+        "Cook until lightly browned on one side; flip over and continue cooking until cheese is melted.",
+        "Repeat with remaining 2 slices of bread, butter, and slice of cheese. Serve and enjoy!"
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/23891/grilled-cheese-sandwich/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:42:35.193449Z"
+    },
+    {
+      "id": "italian-spaghetti-sauce-with-meatballs",
+      "slug": "italian-spaghetti-sauce-with-meatballs",
+      "title": "Italian Spaghetti Sauce with Meatballs",
+      "image": "https://www.allrecipes.com/thmb/ZO5edyo6JhS1ZFELyDepR0Y170w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/21353-italian-spaghetti-sauce-with-meatballs-DDMFS-4x3-a9a1528b4f06483dbec38d0c2945c378.jpg",
+      "prepTime": "20 min",
+      "cookTime": "120 min",
+      "totalTime": "140 min",
+      "servings": "6",
+      "ingredients": [
+        "1 pound lean ground beef",
+        "1 cup fresh bread crumbs",
+        "1 tablespoon dried parsley",
+        "1 tablespoon grated Parmesan cheese",
+        "0.25 teaspoon ground black pepper",
+        "0.125 teaspoon garlic powder",
+        "1 egg, beaten",
+        "0.75 cup chopped onion",
+        "5 cloves garlic, minced",
+        "0.25 cup olive oil",
+        "2 (28 ounce) cans whole peeled tomatoes",
+        "2 teaspoons salt",
+        "1 teaspoon white sugar",
+        "1 bay leaf",
+        "1 (6 ounce) can tomato paste",
+        "0.75 teaspoon dried basil",
+        "0.5 teaspoon ground black pepper"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "In a large bowl, combine ground beef, bread crumbs, parsley, Parmesan, 1/4 teaspoon black pepper, garlic powder and beaten egg. Mix well and form into 12 balls. Store, covered, in refrigerator until needed.",
+        "In a large saucepan over medium heat, saute onion and garlic in olive oil until onion is translucent.",
+        "Stir in tomatoes, salt, sugar and bay leaf. Cover, reduce heat to low, and simmer 90 minutes.",
+        "Stir in tomato paste, basil, 1/2 teaspoon pepper and meatballs and simmer 30 minutes more.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "pasta"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/21353/italian-spaghetti-sauce-with-meatballs/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:42:38.560338Z"
+    }
+  ]
+}

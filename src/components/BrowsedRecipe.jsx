@@ -2,28 +2,24 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import LoadingState from './LoadingState'
 import ErrorState from './ErrorState'
-import ActionButtons from './ActionButtons'
 import { formatFraction } from '../utils/formatFraction'
 
-function SharedRecipe() {
-  const { id } = useParams()
+function BrowsedRecipe() {
+  const { slug } = useParams()
   const [recipe, setRecipe] = useState(null)
-  const [sourceUrl, setSourceUrl] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [copied, setCopied] = useState(false)
 
   useEffect(() => {
-    const fetchRecipe = async () => {
+    async function fetchRecipe() {
       try {
-        const response = await fetch(`/api/share/${id}`)
-        const data = await response.json()
-
+        const response = await fetch(`/api/recipes/${slug}`)
         if (!response.ok) {
-          throw new Error(data.error || 'Recipe not found')
+          throw new Error('Recipe not found')
         }
-
-        setRecipe(data.recipe)
-        setSourceUrl(data.sourceUrl)
+        const data = await response.json()
+        setRecipe(data)
       } catch (err) {
         setError(err.message)
       } finally {
@@ -32,10 +28,27 @@ function SharedRecipe() {
     }
 
     fetchRecipe()
-  }, [id])
+  }, [slug])
+
+  const handlePrint = () => {
+    window.print()
+  }
+
+  const handleCopyIngredients = async () => {
+    if (!recipe) return
+
+    const ingredientText = recipe.ingredients.map(i => formatFraction(i)).join('\n')
+    try {
+      await navigator.clipboard.writeText(ingredientText)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy:', err)
+    }
+  }
 
   if (loading) {
-    return <LoadingState message="Loading shared recipe..." />
+    return <LoadingState message="Loading recipe..." />
   }
 
   if (error) {
@@ -45,17 +58,38 @@ function SharedRecipe() {
   return (
     <main id="main-content" className="min-h-screen bg-background">
       <div className="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
-        <nav className="mb-6 print:hidden">
+        <nav className="mb-6 flex items-center justify-between print:hidden">
           <Link
             to="/"
             className="inline-flex items-center text-sand-600 hover:text-sand-900 transition-colors text-sm"
           >
             <BackIcon />
-            <span className="ml-1">Extract your own recipe</span>
+            <span className="ml-1">Back</span>
           </Link>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleCopyIngredients}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-sand-600 hover:text-sand-900 hover:bg-sand-100 rounded-lg transition-colors"
+              aria-label="Copy ingredients to clipboard"
+            >
+              {copied ? <CheckIcon /> : <CopyIcon />}
+              <span>{copied ? 'Copied!' : 'Copy'}</span>
+            </button>
+
+            <button
+              onClick={handlePrint}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-sand-600 hover:text-sand-900 hover:bg-sand-100 rounded-lg transition-colors"
+              aria-label="Print recipe"
+            >
+              <PrintIcon />
+              <span>Print</span>
+            </button>
+          </div>
         </nav>
 
         <article className="bg-sand-50 rounded-2xl overflow-hidden shadow-sm print:shadow-none print:rounded-none">
+          {/* Hero Image */}
           {recipe.image && (
             <div className="aspect-[21/9] overflow-hidden bg-sand-200 print:hidden">
               <img
@@ -72,18 +106,37 @@ function SharedRecipe() {
                 {recipe.title}
               </h1>
 
-              <MetadataRow recipe={recipe} />
+              <div className="flex flex-wrap items-center gap-2">
+                {recipe.prepTime && (
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sand-200/60 text-sand-700 text-xs">
+                    <ClockIcon />
+                    Prep: {recipe.prepTime}
+                  </span>
+                )}
+                {recipe.cookTime && (
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sand-200/60 text-sand-700 text-xs">
+                    <ClockIcon />
+                    Cook: {recipe.cookTime}
+                  </span>
+                )}
+                {recipe.servings && (
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sand-200/60 text-sand-700 text-xs">
+                    <ServingsIcon />
+                    {recipe.servings} servings
+                  </span>
+                )}
+              </div>
 
-              {sourceUrl && (
-                <p className="mt-4 text-xs text-sand-500 print:hidden">
+              {recipe.source && (
+                <p className="mt-4 text-xs text-sand-500">
                   Originally from{' '}
                   <a
-                    href={sourceUrl}
+                    href={recipe.source.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sand-600 hover:text-sand-800 underline underline-offset-2"
                   >
-                    {new URL(sourceUrl).hostname}
+                    {recipe.source.name}
                   </a>
                 </p>
               )}
@@ -133,42 +186,24 @@ function SharedRecipe() {
               </section>
             </div>
 
-            <ActionButtons recipe={recipe} sourceUrl={sourceUrl} />
+            {recipe.tags && recipe.tags.length > 0 && (
+              <footer className="mt-8 pt-6 border-t border-sand-200 print:hidden">
+                <div className="flex flex-wrap gap-2">
+                  {recipe.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-0.5 text-xs text-sand-500 bg-sand-100 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </footer>
+            )}
           </div>
         </article>
       </div>
     </main>
-  )
-}
-
-function MetadataRow({ recipe }) {
-  const { prepTime, cookTime, servings } = recipe
-
-  if (!prepTime && !cookTime && !servings) {
-    return null
-  }
-
-  return (
-    <div className="flex flex-wrap items-center gap-2">
-      {prepTime && (
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sand-200/60 text-sand-700 text-xs">
-          <ClockIcon />
-          Prep: {prepTime}
-        </span>
-      )}
-      {cookTime && (
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sand-200/60 text-sand-700 text-xs">
-          <ClockIcon />
-          Cook: {cookTime}
-        </span>
-      )}
-      {servings && (
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sand-200/60 text-sand-700 text-xs">
-          <ServingsIcon />
-          {servings} servings
-        </span>
-      )}
-    </div>
   )
 }
 
@@ -196,4 +231,28 @@ function ServingsIcon() {
   )
 }
 
-export default SharedRecipe
+function CopyIcon() {
+  return (
+    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+    </svg>
+  )
+}
+
+function CheckIcon() {
+  return (
+    <svg className="w-3.5 h-3.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+    </svg>
+  )
+}
+
+function PrintIcon() {
+  return (
+    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+    </svg>
+  )
+}
+
+export default BrowsedRecipe

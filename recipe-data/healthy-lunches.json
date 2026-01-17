@@ -1,0 +1,311 @@
+{
+  "theme": {
+    "slug": "healthy-lunches",
+    "name": "Healthy Lunches",
+    "description": "Balanced, nutritious meals perfect for meal prep and midday eating"
+  },
+  "metadata": {
+    "recipeCount": 7,
+    "lastUpdated": "2026-01-17T23:42:14.379619Z"
+  },
+  "recipes": [
+    {
+      "id": "lentil-soup",
+      "slug": "lentil-soup",
+      "title": "Lentil Soup",
+      "image": "https://www.allrecipes.com/thmb/UeFtapHyGFBo4Lx-72GxgjrOGnk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/13978-lentil-soup-DDMFS-4x3-edfa47fc6b234e6b8add24d44c036d43.jpg",
+      "prepTime": "10 min",
+      "cookTime": "50 min",
+      "totalTime": "60 min",
+      "servings": "8",
+      "ingredients": [
+        "0.25 cup olive oil",
+        "1 onion, chopped",
+        "2 carrots, diced",
+        "2 stalks celery, chopped",
+        "2 cloves garlic, minced",
+        "1 bay leaf",
+        "1 teaspoon dried oregano",
+        "1 teaspoon dried basil",
+        "2 cups dry lentils",
+        "8 cups water",
+        "1 (14.5 ounce) can crushed tomatoes",
+        "0.5 cup spinach, rinsed and thinly sliced",
+        "2 tablespoons vinegar",
+        "salt to taste",
+        "ground black pepper to taste"
+      ],
+      "instructions": [
+        "Gather the ingredients.",
+        "Heat oil in a large soup pot over medium heat. Add onions, carrots, and celery; cook and stir until onion is tender, 3 to 5 minutes.",
+        "Stir in garlic, bay leaf, oregano, and basil; cook for 2 minutes.",
+        "Stir in lentils, and add water and tomatoes. Bring to a boil. Reduce heat and let simmer until lentils are tender, about 40 minutes.",
+        "When ready to serve, stir in spinach and cook until it wilts.",
+        "Stir in vinegar and season with salt and pepper; taste and adjust as needed.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "vegetarian",
+        "soup"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/13978/lentil-soup/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:37.038673Z"
+    },
+    {
+      "id": "strawberry-spinach-salad",
+      "slug": "strawberry-spinach-salad",
+      "title": "Strawberry Spinach Salad",
+      "image": "https://www.allrecipes.com/thmb/hI5hYn1sJB2mJar0h0lechfe1PU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-14276-Strawberry-Spinach-Salad-4x3-135a121dc0b24ad693289e221dcd3477.jpg",
+      "prepTime": "10 min",
+      "cookTime": null,
+      "totalTime": "80 min",
+      "servings": "4",
+      "ingredients": [
+        "0.5 cup white sugar",
+        "0.5 cup olive oil",
+        "0.25 cup distilled white vinegar",
+        "2 tablespoons sesame seeds",
+        "1 tablespoon poppy seeds",
+        "1 tablespoon minced onion",
+        "0.25 teaspoon paprika",
+        "0.25 teaspoon Worcestershire sauce",
+        "1 quart strawberries - cleaned, hulled and sliced",
+        "10 ounces fresh spinach - rinsed, dried and torn into bite-size pieces",
+        "0.25 cup almonds, blanched and slivered"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "To make the dressing: Whisk sugar, oil, vinegar, sesame seeds, poppy seeds, onion, paprika, and Worcestershire sauce together in a medium bowl until well combined. Cover the dressing and chill it in the refrigerator for 1 hour.",
+        "To make the spinach salad: Combine sliced strawberries, torn spinach leaves, and almonds in a large bowl.",
+        "Pour dressing over salad; toss to coat.",
+        "Refrigerate for 10 to 15 minutes before serving."
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "vegetarian",
+        "salad"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/14276/strawberry-spinach-salad-i/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:40.434413Z"
+    },
+    {
+      "id": "best-chicken-salad",
+      "slug": "best-chicken-salad",
+      "title": "Best Chicken Salad",
+      "image": "https://www.allrecipes.com/thmb/aPy_MqN4GgyO27vh98ns1pXaIWg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8499-Best-Chicken-Salad-DDMFS-3X4-11915-d36a5b98b1e041b3b48b62ecdfa6029e.jpg",
+      "prepTime": "5 min",
+      "cookTime": "5 min",
+      "totalTime": "10 min",
+      "servings": "2",
+      "ingredients": [
+        "0.5 cup blanched slivered almonds",
+        "0.5 cup mayonnaise",
+        "1 tablespoon lemon juice",
+        "0.25 teaspoon ground black pepper",
+        "2 cups chopped, cooked chicken meat",
+        "1 stalk celery, chopped"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Place almonds in a skillet over medium-low heat. Cook until golden brown and toasted, shaking frequently and watching carefully, as they burn easily.",
+        "Mix mayonnaise, lemon juice, and pepper together in a medium bowl until combined.",
+        "Add chicken, toasted almonds, and celery; toss until just combined.",
+        "Enjoy!"
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "poultry",
+        "salad"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/8499/basic-chicken-salad/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:43.814012Z"
+    },
+    {
+      "id": "delicious-egg-salad",
+      "slug": "delicious-egg-salad",
+      "title": "Delicious Egg Salad",
+      "image": "https://www.allrecipes.com/thmb/qI_4AEaIErnrnjInLNVA-vurWpA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-147103-delicious-egg-salad-for-sandwiches-DDMFS-4x3-ab3abdebb3c44c4fa45f64377002c990.jpg",
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "totalTime": "35 min",
+      "servings": "4",
+      "ingredients": [
+        "8 eggs",
+        "0.5 cup mayonnaise",
+        "0.25 cup chopped green onion",
+        "1 teaspoon prepared yellow mustard",
+        "0.25 teaspoon paprika",
+        "salt and pepper to taste"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Place eggs in a saucepan and cover with cold water. Bring water to a boil and immediately remove from heat. Cover and let eggs stand in hot water for 10 to 12 minutes.",
+        "Remove eggs from hot water; cool, peel, and chop.",
+        "Place chopped eggs in a bowl; stir in mayonnaise, green onion, and mustard. Season with paprika, salt, and pepper.",
+        "Stir and serve on your favorite bread, crackers, or salad greens."
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "vegetarian",
+        "salad"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/147103/delicious-egg-salad-for-sandwiches/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:47.192301Z"
+    },
+    {
+      "id": "pasta-salad",
+      "slug": "pasta-salad",
+      "title": "Pasta Salad",
+      "image": "https://www.allrecipes.com/thmb/b0JoulfOsZDw7VHEFxQjPCrpus4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/14385-pasta-salad-DDMFS-4x3-28eb5dbe00624780b36cabfef15ca183.jpg",
+      "prepTime": "20 min",
+      "cookTime": "10 min",
+      "totalTime": "30 min",
+      "servings": "6",
+      "ingredients": [
+        "1 pound tri-colored spiral pasta",
+        "1 (16 ounce) bottle Italian-style salad dressing",
+        "6 tablespoons salad seasoning mix",
+        "2 cups cherry tomatoes, diced",
+        "1 green bell pepper, chopped",
+        "1 red bell pepper, diced",
+        "0.5 yellow bell pepper, chopped",
+        "1 (2.25 ounce) can black olives, chopped"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Bring a large pot of lightly salted water to a boil. Cook pasta in the boiling water, stirring occasionally, until tender yet firm to the bite, about 10 to 12 minutes; rinse under cold water and drain.",
+        "Whisk Italian dressing and salad spice mix together until smooth. Combine pasta, tomatoes, bell peppers, and olives in a salad bowl.",
+        "Pour dressing over salad and toss to coat.",
+        "For the best flavor, refrigerate the pasta salad for 8 hours to overnight.",
+        "Enjoy!"
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "vegetarian",
+        "salad",
+        "pasta"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/14385/pasta-salad/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:50.627367Z"
+    },
+    {
+      "id": "perfect-summer-fruit-salad",
+      "slug": "perfect-summer-fruit-salad",
+      "title": "Perfect Summer Fruit Salad",
+      "image": "https://www.allrecipes.com/thmb/PsRAJfPQZrmdoVjmE0bL9WNxC9c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/214947-perfect-summer-fruit-salad-ddmfs-3x4-0663-30f68a9db5a442b9a860d88ba5ec6f78.jpg",
+      "prepTime": "25 min",
+      "cookTime": "5 min",
+      "totalTime": "210 min",
+      "servings": "10",
+      "ingredients": [
+        "0.66666668653488 cup fresh orange juice",
+        "0.33333334326744 cup fresh lemon juice",
+        "0.33333334326744 cup packed brown sugar",
+        "0.5 teaspoon grated orange zest",
+        "0.5 teaspoon grated lemon zest",
+        "1 teaspoon vanilla extract",
+        "2 cups cubed fresh pineapple",
+        "2 cups strawberries, hulled and sliced",
+        "3 kiwi fruit, peeled and sliced",
+        "3 bananas, sliced",
+        "2 oranges, peeled and sectioned",
+        "1 cup seedless grapes",
+        "2 cups blueberries"
+      ],
+      "instructions": [
+        "Gather the ingredients.",
+        "To make the sauce: Bring orange juice, lemon juice, brown sugar, orange zest, and lemon zest to a boil in a saucepan over medium-high heat. Reduce heat to medium-low and simmer until slightly thickened, about 5 minutes.",
+        "Remove from heat and stir in vanilla extract. Set aside to cool.",
+        "Layer fruit in a large, clear glass bowl in this order: pineapple, strawberries, kiwi fruit, bananas, oranges, grapes, and blueberries. Pour cooled sauce over fruit; cover and refrigerate for 3 to 4 hours before serving."
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "vegetarian",
+        "salad"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/214947/perfect-summer-fruit-salad/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:42:00.842980Z"
+    },
+    {
+      "id": "guacamole",
+      "slug": "guacamole",
+      "title": "Guacamole",
+      "image": "https://www.allrecipes.com/thmb/6RyFPH5N4KKmZhNY0Giob_Jj3wc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-14231-guacamole-4x3-f7a3b5752c7f4f3fb934d03a8b548826.jpg",
+      "prepTime": "15 min",
+      "cookTime": null,
+      "totalTime": "15 min",
+      "servings": "4",
+      "ingredients": [
+        "3 avocados - peeled, pitted, and mashed",
+        "1 lime, juiced",
+        "1 teaspoon salt",
+        "2 roma (plum) tomatoes, diced",
+        "0.5 cup diced onion",
+        "3 tablespoons chopped fresh cilantro",
+        "1 teaspoon minced garlic",
+        "1 pinch ground cayenne pepper"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Mash avocados, lime juice, and salt together in a medium bowl; mix in tomatoes, onion, cilantro, and garlic.",
+        "Stir in cayenne pepper. Serve immediately, or cover and refrigerate for 1 hour for improved flavor."
+      ],
+      "tags": [
+        "healthy",
+        "lunch",
+        "meal-prep",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/14231/guacamole/"
+      },
+      "theme": "Healthy Lunches",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:42:14.379009Z"
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "theme": {
+    "slug": "one-pot-meals",
+    "name": "One-Pot Meals",
+    "description": "Complete meals with minimal cleanup - everything cooks in one pot or pan"
+  },
+  "metadata": {
+    "recipeCount": 6,
+    "lastUpdated": "2026-01-17T23:41:36.660504Z"
+  },
+  "recipes": [
+    {
+      "id": "slow-cooker-beef-stew",
+      "slug": "slow-cooker-beef-stew",
+      "title": "Slow Cooker Beef Stew",
+      "image": "https://www.allrecipes.com/thmb/K8WfLq0Eqi7vSPXyzAXUC_Karfo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/14685-slow-cooker-beef-stew-i-DDMFS-4x3-6f0208563f4c43d6a80fdb077c19fe4e.jpg",
+      "prepTime": "20 min",
+      "cookTime": "240 min",
+      "totalTime": "260 min",
+      "servings": "6",
+      "ingredients": [
+        "2 pounds beef stew meat, cut into 1-inch pieces",
+        "0.25 cup all-purpose flour",
+        "0.5 teaspoon salt",
+        "0.5 teaspoon ground black pepper",
+        "1.5 cups beef broth",
+        "4 medium carrots, sliced",
+        "3 medium potatoes, diced",
+        "1 medium onion, chopped",
+        "1 stalk celery, chopped",
+        "1 teaspoon Worcestershire sauce",
+        "1 teaspoon ground paprika",
+        "1 clove garlic, minced",
+        "1 large bay leaf"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Place beef in the slow cooker.",
+        "Mix flour, salt, and pepper together in a small bowl; pour over beef and stir until coated.",
+        "Add beef broth, carrots, potatoes, onion, celery, Worcestershire sauce, paprika, garlic, and bay leave; stir to combine.",
+        "Cover, and cook until beef is tender enough to cut with a spoon, on Low for 8 to 12 hours, or on High for 4 to 6 hours.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "meat",
+        "soup"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/14685/slow-cooker-beef-stew-i/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:05.902346Z"
+    },
+    {
+      "id": "boilermaker-tailgate-chili",
+      "slug": "boilermaker-tailgate-chili",
+      "title": "Boilermaker Tailgate Chili",
+      "image": "https://www.allrecipes.com/thmb/9k2-h_-0wukNxOIFuIkn2GauRjk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/78299-boilermaker-tailgate-chili-ddmfs-hero-3x4-1195-670ba950f0e14209aa304c1dbf2b874f.jpg",
+      "prepTime": "30 min",
+      "cookTime": "120 min",
+      "totalTime": "150 min",
+      "servings": "12",
+      "ingredients": [
+        "2 pounds ground beef chuck",
+        "1 pound bulk Italian sausage",
+        "3 (15 ounce) cans chili beans, drained",
+        "1 (15 ounce) can chili beans in spicy sauce",
+        "2 (28 ounce) cans diced tomatoes with juice",
+        "1 (6 ounce) can tomato paste",
+        "3 stalks celery, chopped",
+        "1 large yellow onion, chopped",
+        "1 green bell pepper, seeded and chopped",
+        "1 red bell pepper, seeded and chopped",
+        "2 green chile peppers, seeded and chopped",
+        "1 tablespoon bacon bits",
+        "4 cubes beef bouillon",
+        "0.5 cup beer",
+        "0.25 cup chili powder, or more to taste",
+        "1 tablespoon minced garlic",
+        "1 tablespoon Worcestershire sauce",
+        "1 tablespoon dried oregano",
+        "2 teaspoons ground cumin",
+        "2 teaspoons hot pepper sauce (such as Tabasco®)",
+        "1 teaspoon dried basil",
+        "1 teaspoon cayenne pepper",
+        "1 teaspoon paprika",
+        "1 teaspoon white sugar",
+        "1 teaspoon salt, or more to taste",
+        "1 teaspoon ground black pepper, or more to taste",
+        "1 (10.5 ounce) bag corn chips (such as Fritos®)",
+        "1 (8 ounce) package shredded Cheddar cheese"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Heat a large stock pot over medium-high heat. Crumble ground chuck and sausage into the hot pan. Cook, stirring frequently, until meat is evenly browned. Drain off excess grease.",
+        "Pour in chili beans, spicy chili beans, diced tomatoes, and tomato paste. Add celery, onion, bell peppers, chile peppers, bacon bits, bouillon, beer, 1/4 cup chili powder, garlic, Worcestershire sauce, oregano, cumin, hot pepper sauce, basil, cayenne, paprika, sugar, 1 teaspoon salt, and 1 teaspoon black pepper. Stir to blend, then cover and simmer over low heat for at least 2 hours, stirring occasionally.",
+        "Taste and season with more salt, pepper, and chili powder if necessary. The longer the chili simmers, the better it will taste. Remove from the heat and serve, or cool, refrigerate, and reheat the next day.",
+        "To serve, ladle hot chili into bowls and top with corn chips and Cheddar cheese. Enjoy!"
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/78299/boilermaker-tailgate-chili/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:09.296412Z"
+    },
+    {
+      "id": "quick-and-easy-chicken-noodle-soup",
+      "slug": "quick-and-easy-chicken-noodle-soup",
+      "title": "Quick and Easy Chicken Noodle Soup",
+      "image": "https://www.allrecipes.com/thmb/pTGS0SZsSQK85sV_RQE_K6ZfoN4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/26460-quick-and-easy-chicken-noodle-soup-allrecipes-1x1-1-b88125437574471db3e114c40bc6928e.jpg",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "totalTime": "40 min",
+      "servings": "6",
+      "ingredients": [
+        "1 tablespoon butter",
+        "0.5 cup chopped onion",
+        "0.5 cup chopped celery",
+        "4 (14.5 ounce) cans chicken broth",
+        "1 (14.5 ounce) can vegetable broth",
+        "0.5 pound chopped cooked chicken breast",
+        "1.5 cups egg noodles",
+        "1 cup sliced carrots",
+        "0.5 teaspoon dried basil",
+        "0.5 teaspoon dried oregano",
+        "salt and ground black pepper to taste"
+      ],
+      "instructions": [
+        "Melt butter in a large pot over medium heat. Add onion and celery and cook until just tender, about 5 minutes.",
+        "Add chicken broth, vegetable broth, chicken, egg noodles, carrots, basil, oregano, salt, and pepper. Stir to combine and bring to a boil.",
+        "Reduce heat and simmer for 20 minutes."
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "poultry",
+        "soup"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/26460/quick-and-easy-chicken-noodle-soup/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:12.717323Z"
+    },
+    {
+      "id": "rich-and-simple-french-onion-soup",
+      "slug": "rich-and-simple-french-onion-soup",
+      "title": "Rich and Simple French Onion Soup",
+      "image": "https://www.allrecipes.com/thmb/wWn2fBl9C-OjhcyZj9Av-i8Alfc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/13309-rich-and-simple-french-onion-soup-DDMFS-4x3-31ad7eaa56234d20ae35c3940fd03f36.jpg",
+      "prepTime": "15 min",
+      "cookTime": "40 min",
+      "totalTime": "55 min",
+      "servings": "4",
+      "ingredients": [
+        "0.5 cup unsalted butter",
+        "2 tablespoons olive oil",
+        "4 cups sliced onions",
+        "5 cups beef broth",
+        "2 tablespoons dry sherry",
+        "1 teaspoon dried thyme",
+        "1 pinch salt and pepper to taste",
+        "4 slices French bread",
+        "4 slices provolone cheese",
+        "2 slices Swiss cheese, diced",
+        "0.25 cup grated Parmesan cheese"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Melt butter with olive oil in an 8-quart stock pot over medium heat. Add onions to butter and continually stir until tender and translucent. Do not brown the onions.",
+        "Add beef broth, sherry, and thyme. Season with salt and pepper. Let simmer for 30 minutes. Meanwhile, preheat the oven's broiler.",
+        "Ladle soup into oven-safe serving bowls and place one slice of bread on top of each (bread may be broken into pieces if you prefer). Layer each slice of bread with a slice of provolone, 1/2 slice diced Swiss and 1 tablespoon Parmesan cheese. Place bowls on a rimmed sheet pan.",
+        "Broil in the preheated oven until cheese bubbles and browns slightly, 2 to 3 minutes.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "soup"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/13309/rich-and-simple-french-onion-soup/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:16.127834Z"
+    },
+    {
+      "id": "butternut-squash-soup",
+      "slug": "butternut-squash-soup",
+      "title": "Butternut Squash Soup",
+      "image": "https://www.allrecipes.com/thmb/EPaxxTzlDs9iy6si2K6cfuYuY4c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/77981-butternut-squash-soup-VAT-Beauty-4x3-4eeb7a73250a4dbcb91ee77e2faaba7a.jpg",
+      "prepTime": "15 min",
+      "cookTime": "45 min",
+      "totalTime": "60 min",
+      "servings": "4",
+      "ingredients": [
+        "2 tablespoons butter",
+        "1 small onion, chopped",
+        "1 stalk celery, chopped",
+        "1 medium carrot, chopped",
+        "2 medium potatoes, cubed",
+        "1 medium butternut squash - peeled, seeded, and cubed",
+        "1 (32 fluid ounce) container chicken stock",
+        "salt and freshly ground black pepper to taste"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Melt butter in a large pot over medium heat, and cook onion, celery, carrot, potatoes, and squash until lightly browned, about 5 minutes. Pour in enough chicken stock to cover vegetables.",
+        "Bring to a boil over medium-high heat. Reduce heat to low, cover pot, and simmer until all vegetables are tender, about 40 minutes.",
+        "Transfer soup to a blender and process until smooth. Return to the pot and mix in any remaining stock to reach desired consistency. Season with salt and pepper.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "soup"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/77981/butternut-squash-soup-ii/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:33.196779Z"
+    },
+    {
+      "id": "fresh-tomato-soup",
+      "slug": "fresh-tomato-soup",
+      "title": "Fresh Tomato Soup",
+      "image": "https://www.allrecipes.com/thmb/1TSSrSTHo-oAxzedT9_K7Jyjcj8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/39544-Garden-Fresh-Tomato-Soup-DDMFS-4x3-b8e94cf7ab8e42f4b79042fc0df55546.jpg",
+      "prepTime": "5 min",
+      "cookTime": "25 min",
+      "totalTime": "30 min",
+      "servings": "6",
+      "ingredients": [
+        "4 cups chopped fresh tomatoes",
+        "2 cups chicken broth",
+        "4 cloves garlic",
+        "1 slice onion",
+        "2 tablespoons butter",
+        "2 tablespoons all-purpose flour",
+        "2 teaspoons white sugar, or to taste",
+        "1 teaspoon salt"
+      ],
+      "instructions": [
+        "Gather the ingredients.",
+        "Combine tomatoes, chicken broth, garlic cloves, and a large slice of onion in a stockpot over medium heat. Bring to a boil, and gently simmer for about 15 to 20 minutes to blend flavors.",
+        "Remove from heat and run the mixture through a food mill into a large bowl, or pan. Discard any stuff left over in the food mill.",
+        "Melt butter over medium heat in the now empty stockpot. Stir in flour to make a roux by cooking, whisking constantly, until mixture turns medium brown.",
+        "Gradually whisk in a bit of the tomato mixture to prevent lumps from forming, then stir in the rest.",
+        "Season with sugar and salt to taste.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "soup"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/39544/garden-fresh-tomato-soup/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:36.659738Z"
+    }
+  ]
+}

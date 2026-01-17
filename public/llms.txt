@@ -1,0 +1,87 @@
+# Simpler Recipes
+
+> A clean, ad-free recipe extraction and browsing service.
+
+## What This Site Does
+
+Simpler Recipes extracts recipes from cluttered food blogs and presents them in a clean, readable format. Users can paste any recipe URL to get just the essential information: ingredients, instructions, prep time, cook time, and servings.
+
+## Curated Recipe Collections
+
+We maintain curated collections of popular recipes, organized by theme:
+
+### Quick Weeknight Dinners
+Fast, easy meals ready in 30 minutes or less.
+URL: https://simpler.recipes/collection/quick-weeknight-dinners
+
+Includes: Chicken Stir Fry, Pad Thai, Chicken Tikka Masala, Fish Tacos, Pasta Carbonara, and more.
+
+### Baking Basics
+Foundational baking recipes everyone should know.
+URL: https://simpler.recipes/collection/baking-basics
+
+Includes: Chocolate Chip Cookies, Banana Bread, Brownies, Apple Pie, Blueberry Muffins, Cinnamon Rolls, and more.
+
+### One-Pot Meals
+Complete meals with minimal cleanup.
+URL: https://simpler.recipes/collection/one-pot-meals
+
+Includes: Beef Stew, Chili, Chicken Noodle Soup, French Onion Soup, and more.
+
+### Healthy Lunches
+Balanced, nutritious meals perfect for meal prep.
+URL: https://simpler.recipes/collection/healthy-lunches
+
+Includes: Lentil Soup, various salads (Chicken, Egg, Pasta, Spinach Strawberry), Guacamole, and more.
+
+### Comfort Food Classics
+Hearty, satisfying recipes that bring warmth.
+URL: https://simpler.recipes/collection/comfort-food-classics
+
+Includes: Mac and Cheese, Meatloaf, Lasagna, Chicken Pot Pie, Fried Chicken, Beef Stroganoff, and more.
+
+## Individual Recipe URLs
+
+Each recipe has a permanent URL:
+- Pattern: https://simpler.recipes/recipes/{recipe-slug}
+- Example: https://simpler.recipes/recipes/best-chocolate-chip-cookies
+- Example: https://simpler.recipes/recipes/worlds-best-lasagna
+- Example: https://simpler.recipes/recipes/pad-thai
+
+## API Endpoints
+
+### List All Collections
+GET https://simpler.recipes/api/recipes
+Returns metadata and recipe lists for all collections.
+
+### Get Collection Details
+GET https://simpler.recipes/api/recipes/collection/{collection-slug}
+Returns full recipe data for a specific collection.
+
+Example: https://simpler.recipes/api/recipes/collection/baking-basics
+
+### Get Individual Recipe
+GET https://simpler.recipes/api/recipes/{recipe-slug}
+Returns complete recipe data including ingredients, instructions, times, and source.
+
+Example: https://simpler.recipes/api/recipes/best-chocolate-chip-cookies
+
+## Recipe Data Structure
+
+Each recipe includes:
+- title: Recipe name
+- ingredients: Array of ingredient strings with quantities
+- instructions: Array of step-by-step instructions
+- prepTime: Preparation time (e.g., "20 min")
+- cookTime: Cooking time (e.g., "10 min")
+- totalTime: Total time required
+- servings: Number of servings
+- source: Original source with name and URL
+- tags: Categorization tags (e.g., "vegetarian", "pasta", "quick")
+
+## Usage Notes
+
+- All recipes are sourced from popular cooking websites with proper attribution
+- Recipe data is refreshed periodically
+- The site works best with AllRecipes, Food Network, Serious Eats, and most sites using Schema.org recipe markup
+- No account required, no tracking beyond basic analytics

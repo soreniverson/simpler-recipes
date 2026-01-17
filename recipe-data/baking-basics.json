@@ -1,0 +1,501 @@
+{
+  "theme": {
+    "slug": "baking-basics",
+    "name": "Baking Basics",
+    "description": "Foundational baking recipes and classic favorites everyone should know"
+  },
+  "metadata": {
+    "recipeCount": 11,
+    "lastUpdated": "2026-01-17T23:41:05.521394Z"
+  },
+  "recipes": [
+    {
+      "id": "best-chocolate-chip-cookies",
+      "slug": "best-chocolate-chip-cookies",
+      "title": "Best Chocolate Chip Cookies",
+      "image": "https://www.allrecipes.com/thmb/8xwaWAHtl_QLij6D-G0Z4B1HDVA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/10813-best-chocolate-chip-cookies-mfs-146-4x3-b108aceffa6043a1ac81c3c5a9b034c8.jpg",
+      "prepTime": "20 min",
+      "cookTime": "10 min",
+      "totalTime": "30 min",
+      "servings": "48",
+      "ingredients": [
+        "1 cup butter, softened",
+        "1 cup white sugar",
+        "1 cup packed brown sugar",
+        "2 eggs",
+        "2 teaspoons vanilla extract",
+        "1 teaspoon baking soda",
+        "2 teaspoons hot water",
+        "0.5 teaspoon salt",
+        "3 cups all-purpose flour",
+        "2 cups semisweet chocolate chips",
+        "1 cup chopped walnuts"
+      ],
+      "instructions": [
+        "Gather your ingredients, making sure your butter is softened, and your eggs are room temperature.",
+        "Preheat the oven to 350 degrees F (175 degrees C). Beat butter, white sugar, and brown sugar in a large bowl with an electric mixer until smooth and creamy.",
+        "Beat in eggs, one at a time, then stir in vanilla.",
+        "Dissolve baking soda in hot water; add to batter along with salt and mix until combined.",
+        "Stir in flour, chocolate chips, and walnuts until a soft dough forms.",
+        "Drop rounded spoonfuls of cookie dough 2 inches apart onto ungreased baking sheets.",
+        "Bake in the preheated oven until edges are lightly browned, about 10 minutes.",
+        "Cool on the baking sheets briefly before removing to a wire rack to cool completely.",
+        "Store in an airtight container or serve immediately and enjoy!"
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/10813/best-chocolate-chip-cookies/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:28.110401Z"
+    },
+    {
+      "id": "banana-banana-bread",
+      "slug": "banana-banana-bread",
+      "title": "Banana Banana Bread",
+      "image": "https://www.allrecipes.com/thmb/fAkQn-FhjF89oTJ5JXpgwvwNf34=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20144-banana-banana-bread-VAT-009-4x3-B-78f1cfc64bfa451e8a0fead814719b9f.jpg",
+      "prepTime": "15 min",
+      "cookTime": "60 min",
+      "totalTime": "75 min",
+      "servings": "12",
+      "ingredients": [
+        "2 cups all-purpose flour",
+        "1 teaspoon baking soda",
+        "0.25 teaspoon salt",
+        "0.75 cup brown sugar",
+        "0.5 cup butter",
+        "2 eggs, beaten",
+        "2.3333332538605 cups mashed overripe bananas"
+      ],
+      "instructions": [
+        "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Lightly grease a 9x5-inch loaf pan.",
+        "Combine flour, baking soda, and salt in a large bowl. Beat brown sugar and butter with an electric mixer in a separate large bowl until smooth. Stir in eggs and mashed bananas until well blended. Stir banana mixture into flour mixture until just combined.",
+        "Pour batter into the prepared loaf pan.",
+        "Bake in the preheated oven until a toothpick inserted into the center comes out clean, about 60 minutes.",
+        "Let bread cool in pan for 10 minutes, then turn out onto a wire rack to cool completely.",
+        "Enjoy!"
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/20144/banana-banana-bread/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:31.523126Z"
+    },
+    {
+      "id": "simple-white-cake",
+      "slug": "simple-white-cake",
+      "title": "Simple White Cake",
+      "image": "https://www.allrecipes.com/thmb/rceSb4HUcHI64nQj_8o6jnvAN-0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/17481-simple-white-cake-DDMFS-4x3-89bf9ff32d0c40179a3d752d4d25f22a.jpg",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "totalTime": "40 min",
+      "servings": "12",
+      "ingredients": [
+        "1 cup white sugar",
+        "0.5 cup unsalted butter",
+        "2 large eggs",
+        "2 teaspoons vanilla extract",
+        "1.5 cups all-purpose flour",
+        "1.75 teaspoons baking powder",
+        "1/4 teaspoon table salt",
+        "0.5 cup milk"
+      ],
+      "instructions": [
+        "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Grease and flour a 9-inch square cake pan.",
+        "Beat sugar and butter together in a mixing bowl with an electric mixer until lighter in color and fluffy, 3 to 4 minutes. Add eggs, one at a time, beating briefly after each addition, 30 seconds total. Mix in vanilla, about 15 seconds.",
+        "Whisk flour, baking powder, and salt in a separate bowl. With mixer on low speed, add flour mixture to butter mixture in 3 batches, alternating with milk, beginning and ending with flour. Mix just until combined stopping to scrape down sides if needed, about 2 minutes.",
+        "Spread cake batter into the prepared pan.",
+        "Bake cake in the preheated oven until a toothpick inserted into the center comes out clean, about 30 minutes.",
+        "Remove cake from the oven and let cool in pan on a wire rack for 10 minutes. Invert cake onto wire rack; remove pan and let cake cool completely before frosting. Enjoy!"
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/17481/simple-white-cake/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-17T23:40:34.875962Z"
+    },
+    {
+      "id": "best-brownies",
+      "slug": "best-brownies",
+      "title": "Best Brownies",
+      "image": "https://www.allrecipes.com/thmb/xRXidY0DdIPsZdMyTC48ZGQePWo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/10549best-browniesKimvideo4x3-fc60972f21104322a02b4347b657daed.jpg",
+      "prepTime": "15 min",
+      "cookTime": "30 min",
+      "totalTime": "45 min",
+      "servings": "16",
+      "ingredients": [
+        "0.5 cup butter",
+        "1 cup white sugar",
+        "2 eggs",
+        "1 teaspoon vanilla extract",
+        "0.33333334326744 cup unsweetened cocoa powder",
+        "0.5 cup all-purpose flour",
+        "0.25 teaspoon salt",
+        "0.25 teaspoon baking powder",
+        "3 tablespoons butter, softened",
+        "3 tablespoons unsweetened cocoa powder",
+        "1 tablespoon honey",
+        "1 teaspoon vanilla extract",
+        "1 cup confectioners' sugar"
+      ],
+      "instructions": [
+        "Preheat the oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square baking pan.",
+        "Melt 1/2 cup butter in a large saucepan. Remove from heat, and stir in sugar, eggs, and 1 teaspoon vanilla. Beat in 1/3 cup cocoa, flour, salt, and baking powder. Spread batter into prepared pan.",
+        "Bake in the preheated oven until top is dry and edges have started to pull away from the sides of the pan, about 25 to 30 minutes. Let cool briefly before frosting.",
+        "To make the chocolate frosting: Combine softened butter, confectioners' sugar, 3 tablespoons cocoa, honey, and 1 teaspoon vanilla extract in a bowl. Stir until smooth. Frost brownies while they are still slightly warm."
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/10549/best-brownies/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:38.264250Z"
+    },
+    {
+      "id": "to-die-for-blueberry-muffins",
+      "slug": "to-die-for-blueberry-muffins",
+      "title": "To Die For Blueberry Muffins",
+      "image": "https://www.allrecipes.com/thmb/w4mqXHWaUQtNhz_NDLHmGfmy3lI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6865-to-die-for-blueberry-muffins-VAT-019-4x3-dfe4a5ca62eb49559c3431b00c266f37.jpg",
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "totalTime": "35 min",
+      "servings": "8",
+      "ingredients": [
+        "1.5 cups all-purpose flour",
+        "0.75 cup white sugar",
+        "2 teaspoons baking powder",
+        "0.5 teaspoon salt",
+        "0.33333334326744 cup vegetable oil",
+        "1 egg",
+        "0.33333334326744 cup milk, or more as needed",
+        "1 cup fresh blueberries",
+        "0.5 cup white sugar",
+        "0.33333334326744 cup all-purpose flour",
+        "0.25 cup butter, cubed",
+        "1.5 teaspoons ground cinnamon"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Preheat the oven to 400 degrees F (200 degrees C). Grease 8 muffin cups or line with paper liners.",
+        "To make the muffins: Whisk flour, sugar, baking powder, and salt together in a large bowl.",
+        "Pour oil into a small liquid measuring cup. Add egg and enough milk to reach the 1-cup mark; stir until combined.",
+        "Pour into flour mixture and mix just until batter is combined. Fold in blueberries; set batter aside.",
+        "To make the crumb topping: Combine sugar, flour, butter, and cinnamon in a small bowl. Mix with a fork until crumbly.",
+        "Spoon batter into the prepared muffin cups, filling right to the top. Sprinkle with crumb topping.",
+        "Bake in the preheated oven until a toothpick inserted in the center of a muffin comes out clean, 20 to 25 minutes. Enjoy!"
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/6865/to-die-for-blueberry-muffins/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:41.698397Z"
+    },
+    {
+      "id": "apple-pie-by-grandma-ople",
+      "slug": "apple-pie-by-grandma-ople",
+      "title": "Apple Pie by Grandma Ople",
+      "image": "https://www.allrecipes.com/thmb/9qLdYfie0xmoqYq_Z-agY1iA1oc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ar-12682-apple-pie-by-grandma-ople-ddmfs-beauty-1-3-d9f3f4e8bdab4997908fe8fa867935d5.jpg",
+      "prepTime": "30 min",
+      "cookTime": "60 min",
+      "totalTime": "90 min",
+      "servings": "8",
+      "ingredients": [
+        "8 small Granny Smith apples, or as needed",
+        "0.5 cup unsalted butter",
+        "3 tablespoons all-purpose flour",
+        "0.5 cup white sugar",
+        "0.5 cup packed brown sugar",
+        "0.25 cup water",
+        "1 (9 inch) double-crust pie pastry, thawed"
+      ],
+      "instructions": [
+        "Gather the ingredients. Preheat the oven to 425 degrees F (220 degrees C). Peel and core apples, then thinly slice. Set aside.",
+        "Melt butter in a saucepan over medium heat. Add flour and stir to form a paste; cook until fragrant, about 1 to 2 minutes. Add both sugars and water; bring to a boil. Reduce the heat to low and simmer for 3 to 5 minutes. Remove from the heat.",
+        "Press one pastry into the bottom and up the sides of a 9-inch pie pan. Roll out remaining pastry so it will overhang the pie by about 1/2 inch. Cut pastry into eight 1-inch strips.",
+        "Place sliced apples into the bottom crust, forming a slight mound. Lay four pastry strips vertically and evenly spaced over apples, using longer strips in the center and shorter strips at the edges.",
+        "Make a lattice crust: Fold the first and third strips all the way back so they're almost falling off the pie. Lay one of the unused strips perpendicularly over the second and fourth strips, then unfold the first and third strips back into their original position.",
+        "Fold the second and fourth vertical strips back. Lay one of the three unused strips perpendicularly over top. Unfold the second and fourth strips back into their original position. Repeat Steps 6 and 7 to weave in the last two strips of pastry. Fold and trim excess dough at the edges as necessary, and pinch to secure.",
+        "Slowly and gently pour sugar-butter mixture over lattice crust, making sure it seeps over sliced apples. Brush some onto lattice, but make sure it doesn't run off the sides.",
+        "Bake in the preheated oven for 15 minutes. Reduce the temperature to 350 degrees F (175 degrees C) and continue baking until apples are soft, 35 to 45 minutes.",
+        "Serve and enjoy!"
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/12682/apple-pie-by-grandma-ople/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-17T23:40:45.123418Z"
+    },
+    {
+      "id": "easy-sugar-cookies",
+      "slug": "easy-sugar-cookies",
+      "title": "Easy Sugar Cookies",
+      "image": "https://www.allrecipes.com/thmb/XSJoH98eVnTCnaE6lTcDpYHbalw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/9870-easy-sugar-cookies-mfs356-1-8c317695c5b645a48f6b20d1b97d3c93.jpg",
+      "prepTime": "20 min",
+      "cookTime": "10 min",
+      "totalTime": "30 min",
+      "servings": "48",
+      "ingredients": [
+        "2.75 cups all-purpose flour",
+        "1 teaspoon baking soda",
+        "0.5 teaspoon baking powder",
+        "1 cup butter, softened",
+        "1.5 cups white sugar",
+        "1 egg",
+        "1 teaspoon vanilla extract"
+      ],
+      "instructions": [
+        "Gather all ingredients. Preheat the oven to 375 degrees F (190 degrees C).",
+        "Stir flour, baking soda, and baking powder together in a small bowl.",
+        "Beat sugar and butter together in a large bowl with an electric mixer until smooth.",
+        "Beat in egg and vanilla.",
+        "Gradually blend in flour mixture.",
+        "Roll dough into walnut-sized balls and place 2 inches apart onto ungreased baking sheets.",
+        "Bake in the preheated oven until edges are just golden, 8 to 10 minutes. Cool on the baking sheets briefly before removing to a wire rack to cool completely."
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/9870/easy-sugar-cookies/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:48.538028Z"
+    },
+    {
+      "id": "downeast-maine-pumpkin-bread",
+      "slug": "downeast-maine-pumpkin-bread",
+      "title": "Downeast Maine Pumpkin Bread",
+      "image": "https://www.allrecipes.com/thmb/vVUhf_w_m23BtkSq1XFgpQtKGDY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6820-downeast-maine-pumpkin-bread-VAT-014-4x3-C-fbd7df01cfdd4194be059527ddf0ea15.jpg",
+      "prepTime": "10 min",
+      "cookTime": "50 min",
+      "totalTime": "60 min",
+      "servings": "24",
+      "ingredients": [
+        "1 (15 ounce) can pumpkin puree",
+        "4 eggs",
+        "1 cup vegetable oil",
+        "0.66666668653488 cup water",
+        "3 cups white sugar",
+        "3.5 cups all-purpose flour",
+        "2 teaspoons baking soda",
+        "1.5 teaspoons salt",
+        "1 teaspoon ground cinnamon",
+        "1 teaspoon ground nutmeg",
+        "0.5 teaspoon ground cloves",
+        "0.25 teaspoon ground ginger"
+      ],
+      "instructions": [
+        "Gather the ingredients. Preheat the oven to 350 degrees F (175 degrees C). Grease and flour two 9x5-inch loaf pans.",
+        "Whisk flour, baking soda, salt, cinnamon, nutmeg, cloves, and ginger together in a large bowl.",
+        "Mix pumpkin puree, eggs, oil, water, and sugar in a separate bowl until well blended.",
+        "Stir flour mixture into pumpkin mixture until just blended.",
+        "Pour batter into the prepared pans.",
+        "Bake in the preheated oven until a toothpick inserted in center comes out clean, about 50 minutes.",
+        "Enjoy!"
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/6820/downeast-maine-pumpkin-bread/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:51.896821Z"
+    },
+    {
+      "id": "the-best-lemon-bars",
+      "slug": "the-best-lemon-bars",
+      "title": "The Best Lemon Bars",
+      "image": "https://www.allrecipes.com/thmb/Gg0DQ2lUeFy-k9U62AXuz7Bm_4o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/10294-the-best-lemon-bars-DDMFS-beauty-3x4-01350219-c15c4827648f476cbe0ab9bfd36859b9.jpg",
+      "prepTime": "15 min",
+      "cookTime": "35 min",
+      "totalTime": "50 min",
+      "servings": "24",
+      "ingredients": [
+        "2 cups all-purpose flour",
+        "1 cup butter, softened",
+        "0.5 cup white sugar",
+        "1.5 cups white sugar",
+        "0.25 cup all-purpose flour",
+        "4 eggs",
+        "2 lemons, juiced"
+      ],
+      "instructions": [
+        "Gather the ingredients.",
+        "Preheat the oven to 350 degrees F (175 degrees C).",
+        "To make the crust: Blend 2 cups flour, softened butter, and 1/2 cup sugar in a medium bowl until well combined.",
+        "Press crust into the bottom of an ungreased 9x13-inch pan.",
+        "Bake crust in the preheated oven until firm and golden, about 15 minutes.",
+        "Meanwhile, make the filling: Whisk remaining 1 1/2 cups sugar and 1/4 cup flour in a medium bowl. Whisk in eggs, then lemon juice until smooth.",
+        "Pour filling over the baked crust.",
+        "Bake in the preheated oven for 20 minutes. Set the pan aside to cool completely; the bars will firm up as they cool.",
+        "When cooled, cut bars into uniform squares."
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/10294/the-best-lemon-bars/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:40:55.281036Z"
+    },
+    {
+      "id": "clone-of-a-cinnabon",
+      "slug": "clone-of-a-cinnabon",
+      "title": "Clone of a Cinnabon",
+      "image": "https://www.allrecipes.com/thmb/mIq2ipupe_bL3SndLAUxmjk0F8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20156-Clone-Of-A-Cinnabon-mfs_001-1-85726e057afa44779369ef2ae75cfe94.jpg",
+      "prepTime": "20 min",
+      "cookTime": "15 min",
+      "totalTime": "180 min",
+      "servings": "12",
+      "ingredients": [
+        "1 cup warm milk (110 degrees F/45 degrees C)",
+        "2 eggs, room temperature",
+        "0.33333334326744 cup margarine, melted",
+        "4.5 cups bread flour",
+        "1 teaspoon salt",
+        "0.5 cup white sugar",
+        "2.5 teaspoons bread machine yeast",
+        "1 cup brown sugar, packed",
+        "2.5 tablespoons ground cinnamon",
+        "0.33333334326744 cup butter, softened",
+        "1.5 cups confectioners' sugar",
+        "0.25 cup butter, softened",
+        "1 (3 ounce) package cream cheese, softened",
+        "0.5 teaspoon vanilla extract",
+        "0.125 teaspoon salt"
+      ],
+      "instructions": [
+        "To make the dough: Place milk, eggs, margarine, flour, salt, white sugar, and yeast in the pan of a bread machine in the order recommended by the manufacturer. Select dough cycle; press Start.",
+        "When dough has doubled in size, turn it out onto a lightly floured surface. Cover it with a kitchen towel or plastic wrap and let it rest for 10 minutes.",
+        "Roll dough on a lightly floured surface to a 16x21-inch rectangle.",
+        "To make the filling: Combine brown sugar and cinnamon in a small bowl. Spread softened butter over the dough, then sprinkle cinnamon-sugar mixture evenly over top.",
+        "Starting at the longer end, roll up the dough; cut into 12 rolls. Place rolls in a lightly greased 9x13-inch baking pan. Cover and let rise until nearly doubled, about 30 minutes.",
+        "Meanwhile, preheat the oven to 400 degrees F (200 degrees C).",
+        "Bake rolls in the preheated oven until golden brown, about 15 minutes.",
+        "While rolls are baking, prepare icing: Beat confectioners' sugar, butter, cream cheese, vanilla, and salt until creamy.",
+        "Spread icing on warm rolls before serving."
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/20156/clone-of-a-cinnabon/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-17T23:40:58.683664Z"
+    },
+    {
+      "id": "moms-zucchini-bread",
+      "slug": "moms-zucchini-bread",
+      "title": "Mom's Zucchini Bread",
+      "image": "https://www.allrecipes.com/thmb/SuFyebthQYoEoz1-rSYGvVagnuk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-6698-moms-zucchini-bread-DDMFS-4x3-72c63ca7ff82453d8c353aa73715374f.jpg",
+      "prepTime": "15 min",
+      "cookTime": "40 min",
+      "totalTime": "75 min",
+      "servings": "24",
+      "ingredients": [
+        "3 cups all-purpose flour",
+        "1 teaspoon salt",
+        "1 teaspoon baking powder",
+        "1 teaspoon baking soda",
+        "1 tablespoon ground cinnamon",
+        "3 large eggs",
+        "1 cup vegetable oil",
+        "2.25 cups white sugar",
+        "3 teaspoons vanilla extract",
+        "2 cups grated zucchini",
+        "1 cup chopped walnuts"
+      ],
+      "instructions": [
+        "Gather all ingredients. Preheat the oven to 325 degrees F (165 degrees C). Grease and flour two 8x4-inch loaf pans.",
+        "Sift flour, salt, baking powder, baking soda, and cinnamon together in a large bowl.",
+        "Beat eggs, oil, sugar, and vanilla together in a separate large bowl with an electric mixer until combined; add flour mixture and beat well.",
+        "Stir in shredded zucchini and chopped walnuts until well combined.",
+        "Pour batter into the prepared pans.",
+        "Bake in the preheated oven until a toothpick inserted into the center comes out clean, about 40 to 60 minutes. Cool in the pans on a wire rack for 20 minutes.",
+        "Run a table knife around the edges to loosen. Invert carefully onto a wire rack and let cool completely."
+      ],
+      "tags": [
+        "baking",
+        "classic",
+        "homemade",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/6698/moms-zucchini-bread/"
+      },
+      "theme": "Baking Basics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-17T23:41:02.088046Z"
+    }
+  ]
+}
