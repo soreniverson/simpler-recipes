@@ -1,0 +1,278 @@
+:root {
+  --sand-50: #fbfaf8;
+  --sand-100: #f8f7f4;
+  --sand-200: #efede8;
+  --sand-300: #e7e4dc;
+  --sand-400: #d8d5ca;
+  --sand-500: #bfbaad;
+  --sand-600: #9a9484;
+  --sand-700: #6e6c63;
+  --sand-800: #504e47;
+  --sand-900: #3a3832;
+  --sand-950: #1a1a18;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--sand-900);
+  background: var(--sand-100);
+  width: 380px;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+#app {
+  padding: 16px;
+}
+
+.state {
+  min-height: 200px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Loading */
+#loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--sand-300);
+  border-top-color: var(--sand-700);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#loading p {
+  color: var(--sand-600);
+}
+
+/* Error */
+#error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.error-icon {
+  font-size: 32px;
+  color: var(--sand-400);
+}
+
+#error h1 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--sand-900);
+}
+
+#error-message {
+  color: var(--sand-600);
+  font-size: 13px;
+}
+
+/* Recipe */
+#recipe header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--sand-200);
+}
+
+#recipe h1 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--sand-900);
+  margin-bottom: 8px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--sand-600);
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.meta-item svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Sections */
+section {
+  margin-bottom: 16px;
+}
+
+section h2 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sand-900);
+  margin-bottom: 8px;
+}
+
+/* Ingredients */
+#ingredients-list {
+  list-style: none;
+}
+
+#ingredients-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 4px 0;
+  color: var(--sand-800);
+  font-size: 13px;
+}
+
+#ingredients-list li::before {
+  content: "–";
+  color: var(--sand-400);
+  flex-shrink: 0;
+}
+
+/* Instructions */
+#instructions-list {
+  list-style: none;
+  counter-reset: step;
+}
+
+#instructions-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 6px 0;
+  color: var(--sand-800);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+#instructions-list li::before {
+  counter-increment: step;
+  content: counter(step);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--sand-300);
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--sand-500);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--sand-200);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-secondary {
+  background: var(--sand-200);
+  color: var(--sand-700);
+}
+
+.btn-secondary:hover {
+  background: var(--sand-300);
+}
+
+.btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Footer */
+footer {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--sand-200);
+}
+
+footer a {
+  font-size: 12px;
+  color: var(--sand-500);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--sand-700);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sand-300);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sand-400);
+}
+
+/* Print styles */
+@media print {
+  body {
+    width: 100%;
+    max-height: none;
+    background: white;
+  }
+
+  .actions, footer {
+    display: none;
+  }
+}

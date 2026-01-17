@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+html {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+body {
+  @apply bg-background text-sand-900 min-h-screen;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  @apply absolute -top-10 left-0 bg-primary text-sand-50 px-4 py-2 z-50;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  @apply top-0;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    font-size: 12pt;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h1 {
+    font-size: 18pt;
+    margin-bottom: 12pt;
+  }
+
+  h2 {
+    font-size: 14pt;
+    margin-top: 16pt;
+    margin-bottom: 8pt;
+  }
+
+  ul, ol {
+    margin-left: 18pt;
+  }
+
+  li {
+    margin-bottom: 4pt;
+  }
+}
+
+/* Custom focus styles for better accessibility */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-sand-950;
+}
+
+/* Ensure buttons have proper touch targets */
+button, a {
+  min-height: 44px;
+  min-width: 44px;
+}
