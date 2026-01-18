@@ -1,18 +1,14 @@
 import type { APIRoute } from 'astro';
 import { nanoid } from 'nanoid';
+import { storeSharedRecipe, isKVConfigured } from '../../../utils/kv';
 
 export const prerender = false;
 
-// In-memory storage for MVP
-// Note: This resets on each deployment/cold start
-// For production, use Vercel KV or another persistent store
-const storage = new Map<string, { recipe: any; sourceUrl: string; expiresAt: number }>();
+// Fallback in-memory storage for local development
+const memoryStorage = new Map<string, { recipe: any; sourceUrl: string; createdAt: number }>();
 
-// TTL for shared recipes: 7 days
-const TTL_MS = 7 * 24 * 60 * 60 * 1000;
-
-// Export storage for the retrieval endpoint
-export { storage };
+// Export for the retrieval endpoint (fallback only)
+export { memoryStorage };
 
 export const POST: APIRoute = async ({ request }) => {
   let body;
@@ -45,25 +41,29 @@ export const POST: APIRoute = async ({ request }) => {
   // Generate unique ID
   const id = nanoid(10);
 
-  // Store with expiration timestamp
-  storage.set(id, {
-    recipe,
-    sourceUrl,
-    expiresAt: Date.now() + TTL_MS,
-  });
-
-  // Clean up expired entries occasionally (simple garbage collection)
-  if (Math.random() < 0.1) {
-    const now = Date.now();
-    for (const [key, value] of storage.entries()) {
-      if (value.expiresAt < now) {
-        storage.delete(key);
-      }
+  try {
+    if (isKVConfigured()) {
+      // Use Vercel KV for persistent storage
+      await storeSharedRecipe(id, { recipe, sourceUrl });
+    } else {
+      // Fallback to in-memory storage for local development
+      console.warn('Vercel KV not configured, using in-memory storage (will not persist)');
+      memoryStorage.set(id, {
+        recipe,
+        sourceUrl,
+        createdAt: Date.now(),
+      });
     }
-  }
 
-  return new Response(JSON.stringify({ id }), {
-    status: 200,
-    headers: { 'Content-Type': 'application/json' },
-  });
+    return new Response(JSON.stringify({ id }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } catch (error) {
+    console.error('Failed to store shared recipe:', error);
+    return new Response(JSON.stringify({ error: 'Failed to create share link' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
 };
