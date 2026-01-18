@@ -4,10 +4,11 @@ import RecipeExtractor from '../components/RecipeExtractor.jsx';
 import fs from 'fs';
 import path from 'path';
 
-// Load collections at build time
+// Load collections and recipes at build time
 const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
 const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 const collections = data.collections;
+const recipes = data.recipes;
 
 // Icon SVGs for collections
 const collectionIcons: Record<string, string> = {
@@ -28,8 +29,8 @@ function getIcon(slug: string): string {
   <main id="main-content" class="min-h-screen">
     <div class="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
       <!-- Hero Card -->
-      <section class="bg-sand-50 rounded-2xl p-6 md:p-10 shadow-sm mb-8">
-        <RecipeExtractor client:load />
+      <section class="bg-sand-50 rounded-2xl p-8 md:p-12 shadow-sm mb-8">
+        <RecipeExtractor client:load recipes={recipes} />
       </section>
 
       <!-- Recipe Collections -->
