@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import ScalableIngredients from './ScalableIngredients'
+import RecipeInstructions from './RecipeInstructions'
 import { addExtractedFavorite, isExtractedFavorite, removeExtractedFavorite } from '../utils/favorites'
 
 function BackIcon() {
@@ -220,27 +221,10 @@ export default function ExtractedRecipeView() {
               </header>
 
               {/* Instructions */}
-              <section aria-labelledby="instructions-heading">
-                <h2
-                  id="instructions-heading"
-                  className="text-sm font-medium text-sand-900 mb-4 uppercase tracking-wide"
-                >
-                  Instructions
-                </h2>
-                <ol className="space-y-4">
-                  {recipe.instructions.map((instruction, index) => (
-                    <li
-                      key={index}
-                      className="flex gap-3 text-sand-700 text-sm leading-relaxed"
-                    >
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-sand-200 text-sand-600 text-xs flex items-center justify-center font-medium">
-                        {index + 1}
-                      </span>
-                      <span className="pt-0.5">{instruction}</span>
-                    </li>
-                  ))}
-                </ol>
-              </section>
+              <RecipeInstructions
+                instructions={recipe.instructions}
+                recipeName={recipe.title}
+              />
 
               {/* Share section */}
               <div className="no-print mt-8 pt-6 border-t border-sand-200">

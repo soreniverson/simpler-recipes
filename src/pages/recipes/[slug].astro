@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ScalableIngredients from '../../components/ScalableIngredients.jsx';
 import FavoriteButton from '../../components/FavoriteButton.jsx';
+import RecipeInstructions from '../../components/RecipeInstructions.jsx';
 import fs from 'fs';
 import path from 'path';
 
@@ -126,24 +127,11 @@ const schemaData = {
             </header>
 
             <!-- Instructions -->
-            <section aria-labelledby="instructions-heading">
-              <h2
-                id="instructions-heading"
-                class="text-sm font-medium text-sand-900 mb-4 uppercase tracking-wide"
-              >
-                Instructions
-              </h2>
-              <ol class="space-y-4">
-                {recipe.instructions.map((instruction: string, index: number) => (
-                  <li class="flex gap-3 text-sand-700 text-sm leading-relaxed">
-                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-sand-200 text-sand-600 text-xs flex items-center justify-center font-medium">
-                      {index + 1}
-                    </span>
-                    <span class="pt-0.5">{instruction}</span>
-                  </li>
-                ))}
-              </ol>
-            </section>
+            <RecipeInstructions
+              client:load
+              instructions={recipe.instructions}
+              recipeName={recipe.title}
+            />
 
             {recipe.tags && recipe.tags.length > 0 && (
               <footer class="mt-8 pt-6 border-t border-sand-200 print:hidden">
