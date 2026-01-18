@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import SmartInput from './SmartInput';
 import { getFavoritesCount } from '../utils/favorites';
+import { isMetric, toggleUnit } from '../utils/settings';
 
 function SearchIcon({ className = "w-5 h-5" }) {
   return (
@@ -21,6 +22,7 @@ function HeartIcon({ className = "w-5 h-5" }) {
 export default function Header({ recipes = [] }) {
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
   const [favoritesCount, setFavoritesCount] = useState(0);
+  const [useMetric, setUseMetric] = useState(false);
   const mobileSearchRef = useRef(null);
 
   // Get initial favorites count and listen for changes
@@ -33,6 +35,22 @@ export default function Header({ recipes = [] }) {
 
     window.addEventListener('favorites-changed', handleChange);
     return () => window.removeEventListener('favorites-changed', handleChange);
+  }, []);
+
+  // Get initial unit preference and listen for changes
+  useEffect(() => {
+    setUseMetric(isMetric());
+
+    const handleSettingsChange = () => {
+      setUseMetric(isMetric());
+    };
+
+    window.addEventListener('settings-changed', handleSettingsChange);
+    return () => window.removeEventListener('settings-changed', handleSettingsChange);
+  }, []);
+
+  const handleUnitToggle = useCallback(() => {
+    toggleUnit();
   }, []);
 
   // Close mobile search when clicking outside
@@ -72,8 +90,16 @@ export default function Header({ recipes = [] }) {
             />
           </div>
 
-          {/* Right side - favorites icon */}
-          <div className="hidden sm:flex items-center gap-1 flex-shrink-0 w-[120px] justify-end">
+          {/* Right side - unit toggle and favorites */}
+          <div className="hidden sm:flex items-center gap-1 flex-shrink-0 justify-end">
+            <button
+              onClick={handleUnitToggle}
+              className="px-2 py-1 text-xs font-medium text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-md transition-colors"
+              aria-label={`Switch to ${useMetric ? 'US' : 'metric'} units`}
+              title={`Currently showing ${useMetric ? 'metric' : 'US'} measurements`}
+            >
+              {useMetric ? 'Metric' : 'US'}
+            </button>
             <a
               href="/favorites"
               className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
@@ -90,6 +116,13 @@ export default function Header({ recipes = [] }) {
 
           {/* Mobile icons */}
           <div className="flex sm:hidden items-center gap-1 ml-auto">
+            <button
+              onClick={handleUnitToggle}
+              className="px-2 py-1 text-xs font-medium text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-md transition-colors"
+              aria-label={`Switch to ${useMetric ? 'US' : 'metric'} units`}
+            >
+              {useMetric ? 'Metric' : 'US'}
+            </button>
             <button
               onClick={handleMobileSearchToggle}
               className="p-2 text-sand-600 hover:text-sand-900 hover:bg-sand-100 rounded-lg transition-colors"

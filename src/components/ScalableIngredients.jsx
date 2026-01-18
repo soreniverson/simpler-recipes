@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import { scaleIngredients, parseServings } from '../utils/scaleIngredient'
 import { formatFraction } from '../utils/formatFraction'
-import { getPreferredUnit, setPreferredUnit, isMetric } from '../utils/settings'
+import { isMetric } from '../utils/settings'
 import { convertIngredients } from '../utils/measurements'
 
 function CopyIcon() {
@@ -85,12 +85,6 @@ export default function ScalableIngredients({
     return result
   }, [ingredients, originalServings, currentServings, isScaled, useMetric])
 
-  const handleToggleUnit = () => {
-    const newMetric = !useMetric
-    setUseMetric(newMetric)
-    setPreferredUnit(newMetric ? 'metric' : 'imperial')
-  }
-
   const handleDecrement = () => {
     if (currentServings > 1) {
       setCurrentServings(prev => prev - 1)
@@ -130,46 +124,33 @@ export default function ScalableIngredients({
         Ingredients
       </h2>
 
-      {/* Servings adjuster and unit toggle */}
-      <div className="flex items-center justify-between mb-4 pb-4 border-b border-sand-200 print:hidden">
-        <div className="flex items-center gap-2">
-          <button
-            onClick={handleDecrement}
-            disabled={currentServings <= 1}
-            className="w-7 h-7 flex items-center justify-center rounded-full bg-sand-100 hover:bg-sand-200 text-sand-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-            aria-label="Decrease servings"
-          >
-            <MinusIcon />
-          </button>
-          <span className="w-8 text-center text-sand-900 font-medium tabular-nums text-sm">
-            {currentServings}
-          </span>
-          <button
-            onClick={handleIncrement}
-            disabled={currentServings >= 99}
-            className="w-7 h-7 flex items-center justify-center rounded-full bg-sand-100 hover:bg-sand-200 text-sand-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-            aria-label="Increase servings"
-          >
-            <PlusIcon />
-          </button>
-          <span className="text-sm text-sand-500 ml-1">servings</span>
-          {isScaled && (
-            <span className="text-xs text-sand-400 ml-1">
-              (from {originalServings})
-            </span>
-          )}
-        </div>
-        {/* Unit toggle */}
+      {/* Servings adjuster */}
+      <div className="flex items-center gap-2 mb-4 pb-4 border-b border-sand-200 print:hidden">
         <button
-          onClick={handleToggleUnit}
-          className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded-md bg-sand-100 hover:bg-sand-200 text-sand-600 transition-colors"
-          aria-label={`Switch to ${useMetric ? 'imperial' : 'metric'} units`}
-          title={`Currently showing ${useMetric ? 'metric' : 'imperial'} units`}
+          onClick={handleDecrement}
+          disabled={currentServings <= 1}
+          className="w-7 h-7 flex items-center justify-center rounded-full bg-sand-100 hover:bg-sand-200 text-sand-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          aria-label="Decrease servings"
         >
-          <span className={useMetric ? 'text-sand-400' : 'font-medium text-sand-700'}>US</span>
-          <span className="text-sand-300">/</span>
-          <span className={useMetric ? 'font-medium text-sand-700' : 'text-sand-400'}>Metric</span>
+          <MinusIcon />
         </button>
+        <span className="w-8 text-center text-sand-900 font-medium tabular-nums text-sm">
+          {currentServings}
+        </span>
+        <button
+          onClick={handleIncrement}
+          disabled={currentServings >= 99}
+          className="w-7 h-7 flex items-center justify-center rounded-full bg-sand-100 hover:bg-sand-200 text-sand-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          aria-label="Increase servings"
+        >
+          <PlusIcon />
+        </button>
+        <span className="text-sm text-sand-500 ml-1">servings</span>
+        {isScaled && (
+          <span className="text-xs text-sand-400 ml-1">
+            (from {originalServings})
+          </span>
+        )}
       </div>
 
       {/* Print-only servings display */}
