@@ -98,7 +98,7 @@ export default function CookMode({ instructions, recipeName, onClose }) {
   }, [isLastStep]);
 
   return (
-    <div className="fixed inset-0 z-50 bg-sand-50 flex flex-col">
+    <div className="fixed inset-0 z-50 bg-background flex flex-col">
       {/* Header */}
       <header className="flex-shrink-0 flex items-center justify-between px-4 py-4">
         <button
@@ -143,8 +143,8 @@ export default function CookMode({ instructions, recipeName, onClose }) {
             className={`
               flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-medium transition-all
               ${isFirstStep
-                ? 'bg-sand-100 text-sand-300 cursor-not-allowed'
-                : 'bg-sand-200 text-sand-700 hover:bg-sand-300 active:scale-[0.98]'
+                ? 'bg-sand-200 dark:bg-sand-400 text-sand-400 dark:text-sand-500 cursor-not-allowed'
+                : 'bg-sand-200 dark:bg-sand-400 text-sand-700 dark:text-sand-900 hover:bg-sand-300 dark:hover:bg-sand-500 active:scale-[0.98]'
               }
             `}
             aria-label="Previous step"
@@ -156,14 +156,14 @@ export default function CookMode({ instructions, recipeName, onClose }) {
           {isLastStep ? (
             <button
               onClick={onClose}
-              className="flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-medium bg-sand-800 text-white hover:bg-sand-700 active:scale-[0.98] transition-all"
+              className="flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-medium bg-sand-800 dark:bg-sand-200 text-sand-50 dark:text-sand-900 hover:bg-sand-700 dark:hover:bg-sand-300 active:scale-[0.98] transition-all"
             >
               <span>Done</span>
             </button>
           ) : (
             <button
               onClick={goToNext}
-              className="flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-medium bg-sand-800 text-white hover:bg-sand-700 active:scale-[0.98] transition-all"
+              className="flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-medium bg-sand-800 dark:bg-sand-200 text-sand-50 dark:text-sand-900 hover:bg-sand-700 dark:hover:bg-sand-300 active:scale-[0.98] transition-all"
               aria-label="Next step"
             >
               <span>Next</span>

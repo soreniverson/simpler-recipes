@@ -106,7 +106,7 @@ function SearchResult({ result, onClick }) {
 function SearchDropdown({ results, query, isSearching, onResultClick, isUrl }) {
   if (isUrl) {
     return (
-      <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-lg border border-sand-200 overflow-hidden z-50 p-4">
+      <div className="absolute top-full left-0 right-0 mt-2 bg-surface rounded-xl shadow-lg border border-sand-400 overflow-hidden z-50 p-4">
         <div className="flex items-center gap-3 text-sand-600">
           <LinkIcon className="w-5 h-5 text-sand-400" />
           <span className="text-sm">Press Enter to extract recipe from this URL</span>
@@ -118,7 +118,7 @@ function SearchDropdown({ results, query, isSearching, onResultClick, isUrl }) {
   if (query.trim().length < 2) return null;
 
   return (
-    <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-lg border border-sand-200 overflow-hidden z-50 max-h-[70vh] overflow-y-auto">
+    <div className="absolute top-full left-0 right-0 mt-2 bg-surface rounded-xl shadow-lg border border-sand-400 overflow-hidden z-50 max-h-[70vh] overflow-y-auto">
       {isSearching ? (
         <div className="text-center py-8">
           <div className="inline-block w-5 h-5 border-2 border-sand-300 border-t-sand-600 rounded-full animate-spin"></div>
@@ -324,8 +324,8 @@ export default function SmartInput({
             className={`
               w-full transition-all
               ${isHeader
-                ? 'pl-10 pr-16 py-2 bg-white border border-sand-300 rounded-lg text-sand-900 text-sm placeholder:text-sand-400 focus:outline-none focus:ring-2 focus:ring-sand-300 focus:border-sand-400'
-                : 'pl-12 pr-10 py-4 bg-white border border-sand-300 rounded-xl text-sand-900 text-base placeholder:text-sand-400 focus:outline-none focus:ring-2 focus:ring-sand-300 focus:border-sand-400'
+                ? 'pl-10 pr-16 py-2 bg-surface border border-sand-400 rounded-lg text-sand-900 text-sm placeholder:text-sand-500 focus:outline-none focus:ring-2 focus:ring-sand-500 focus:border-sand-500'
+                : 'pl-12 pr-10 py-4 bg-surface border border-sand-400 rounded-xl text-sand-900 text-base placeholder:text-sand-500 focus:outline-none focus:ring-2 focus:ring-sand-500 focus:border-sand-500'
               }
             `}
             aria-label="Paste a URL or search recipes"

@@ -74,8 +74,8 @@ export default function FavoriteButton({
         transition-all duration-200
         flex items-center justify-center
         ${favorited
-          ? 'text-sand-700 hover:text-sand-800 bg-sand-200 hover:bg-sand-300'
-          : 'text-sand-400 hover:text-sand-600 hover:bg-sand-100'
+          ? 'text-sand-700 hover:text-sand-800 bg-sand-200 hover:bg-sand-300 dark:text-sand-200 dark:hover:text-sand-100 dark:bg-sand-400 dark:hover:bg-sand-500'
+          : 'text-sand-400 hover:text-sand-600 hover:bg-sand-100 dark:text-sand-600 dark:hover:text-sand-500 dark:hover:bg-sand-400'
         }
         ${isAnimating ? 'scale-125' : 'scale-100'}
         ${className}
