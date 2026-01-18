@@ -1,5 +1,6 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import SmartInput from './SmartInput';
+import { getFavoritesCount } from '../utils/favorites';
 
 function SearchIcon({ className = "w-5 h-5" }) {
   return (
@@ -9,9 +10,30 @@ function SearchIcon({ className = "w-5 h-5" }) {
   );
 }
 
+function HeartIcon({ className = "w-5 h-5" }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+    </svg>
+  );
+}
+
 export default function Header({ recipes = [] }) {
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
+  const [favoritesCount, setFavoritesCount] = useState(0);
   const mobileSearchRef = useRef(null);
+
+  // Get initial favorites count and listen for changes
+  useEffect(() => {
+    setFavoritesCount(getFavoritesCount());
+
+    const handleChange = () => {
+      setFavoritesCount(getFavoritesCount());
+    };
+
+    window.addEventListener('favorites-changed', handleChange);
+    return () => window.removeEventListener('favorites-changed', handleChange);
+  }, []);
 
   // Close mobile search when clicking outside
   useEffect(() => {
@@ -50,13 +72,24 @@ export default function Header({ recipes = [] }) {
             />
           </div>
 
-          {/* Right side spacer for balance + future icons */}
-          <div className="hidden sm:flex items-center gap-2 flex-shrink-0 w-[120px] justify-end">
-            {/* Placeholder for future favorites, meal plan icons */}
+          {/* Right side - favorites icon */}
+          <div className="hidden sm:flex items-center gap-1 flex-shrink-0 w-[120px] justify-end">
+            <a
+              href="/favorites"
+              className="relative p-2 text-sand-500 hover:text-red-500 hover:bg-sand-100 rounded-lg transition-colors"
+              aria-label={`Favorites${favoritesCount > 0 ? ` (${favoritesCount})` : ''}`}
+            >
+              <HeartIcon className="w-5 h-5" />
+              {favoritesCount > 0 && (
+                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] flex items-center justify-center bg-red-500 text-white text-[10px] font-medium rounded-full px-1">
+                  {favoritesCount > 99 ? '99+' : favoritesCount}
+                </span>
+              )}
+            </a>
           </div>
 
-          {/* Mobile search toggle */}
-          <div className="flex sm:hidden items-center gap-2 ml-auto">
+          {/* Mobile icons */}
+          <div className="flex sm:hidden items-center gap-1 ml-auto">
             <button
               onClick={handleMobileSearchToggle}
               className="p-2 text-sand-600 hover:text-sand-900 hover:bg-sand-100 rounded-lg transition-colors"
@@ -64,6 +97,18 @@ export default function Header({ recipes = [] }) {
             >
               <SearchIcon className="w-5 h-5" />
             </button>
+            <a
+              href="/favorites"
+              className="relative p-2 text-sand-500 hover:text-red-500 hover:bg-sand-100 rounded-lg transition-colors"
+              aria-label={`Favorites${favoritesCount > 0 ? ` (${favoritesCount})` : ''}`}
+            >
+              <HeartIcon className="w-5 h-5" />
+              {favoritesCount > 0 && (
+                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] flex items-center justify-center bg-red-500 text-white text-[10px] font-medium rounded-full px-1">
+                  {favoritesCount > 99 ? '99+' : favoritesCount}
+                </span>
+              )}
+            </a>
           </div>
         </div>
 

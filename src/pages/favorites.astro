@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FavoritesPage from '../components/FavoritesPage.jsx';
+import fs from 'fs';
+import path from 'path';
+
+// Load all recipes at build time
+const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
+const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+const recipes = data.recipes;
+---
+
+<BaseLayout title="Favorites - Simpler Recipes">
+  <main id="main-content" class="min-h-screen bg-background">
+    <div class="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
+      <FavoritesPage client:load recipes={recipes} />
+    </div>
+  </main>
+</BaseLayout>
