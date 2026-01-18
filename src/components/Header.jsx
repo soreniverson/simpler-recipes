@@ -44,6 +44,7 @@ export default function Header({ recipes = [] }) {
   const [themePreference, setThemePref] = useState('system');
   const mobileSearchRef = useRef(null);
   const settingsRef = useRef(null);
+  const mobileSettingsRef = useRef(null);
 
   // Get initial favorites count and listen for changes
   useEffect(() => {
@@ -85,7 +86,10 @@ export default function Header({ recipes = [] }) {
       if (mobileSearchRef.current && !mobileSearchRef.current.contains(event.target)) {
         setIsMobileSearchOpen(false);
       }
-      if (settingsRef.current && !settingsRef.current.contains(event.target)) {
+      // Check both desktop and mobile settings refs
+      const isInsideDesktopSettings = settingsRef.current && settingsRef.current.contains(event.target);
+      const isInsideMobileSettings = mobileSettingsRef.current && mobileSettingsRef.current.contains(event.target);
+      if (!isInsideDesktopSettings && !isInsideMobileSettings) {
         setIsSettingsOpen(false);
       }
     }
@@ -199,7 +203,7 @@ export default function Header({ recipes = [] }) {
           {/* Mobile icons */}
           <div className="flex sm:hidden items-center gap-1 ml-auto">
             {/* Settings dropdown (mobile) */}
-            <div className="relative" ref={settingsRef}>
+            <div className="relative" ref={mobileSettingsRef}>
               <button
                 onClick={handleSettingsToggle}
                 className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
