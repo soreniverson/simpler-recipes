@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RecipeExtractor from '../components/RecipeExtractor.jsx';
+import fs from 'fs';
+import path from 'path';
+
+// Load collections at build time
+const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
+const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+const collections = data.collections;
+
+// Icon SVGs for collections
+const collectionIcons: Record<string, string> = {
+  'quick-weeknight-dinners': '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" /></svg>',
+  'baking-basics': '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v4m0 0c-2 0-4 2-4 5s2 5 4 5 4-2 4-5-2-5-4-5zm0 14v4m-3-4h6" /></svg>',
+  'one-pot-meals': '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 10h16v9a2 2 0 01-2 2H6a2 2 0 01-2-2v-9zm0 0V8a2 2 0 012-2h12a2 2 0 012 2v2M8 6V4m8 2V4m-4 2V3" /></svg>',
+  'healthy-lunches': '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 20c0-7 5-13 14-14-1 9-7 14-14 14zm0 0v-4m7-3c-3 0-5 2-7 7" /></svg>',
+  'comfort-food-classics': '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>',
+};
+const defaultIcon = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>';
+
+function getIcon(slug: string): string {
+  return collectionIcons[slug] || defaultIcon;
+}
+---
+
+<BaseLayout title="Simpler Recipes - Clean, Ad-Free Recipe Extraction">
+  <main id="main-content" class="min-h-screen">
+    <div class="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
+      <!-- Hero Card -->
+      <section class="bg-sand-50 rounded-2xl p-6 md:p-10 shadow-sm mb-8">
+        <RecipeExtractor client:load />
+      </section>
+
+      <!-- Recipe Collections -->
+      {collections && collections.length > 0 && (
+        <section aria-labelledby="collections-heading">
+          <header class="mb-6">
+            <h2
+              id="collections-heading"
+              class="text-lg font-medium text-sand-900"
+            >
+              Browse recipes
+            </h2>
+          </header>
+
+          <nav aria-label="Recipe collections">
+            <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {collections.map((collection: any) => (
+                <li>
+                  <a
+                    href={`/collection/${collection.slug}`}
+                    class="flex items-start gap-4 h-full bg-sand-50 rounded-xl p-5 hover:bg-sand-100/80 transition-all group"
+                  >
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-sand-200/60 flex items-center justify-center text-sand-600 group-hover:bg-sand-200 group-hover:text-sand-700 transition-colors">
+                      <Fragment set:html={getIcon(collection.slug)} />
+                    </div>
+                    <article class="flex-1 min-w-0">
+                      <h3 class="font-medium text-sand-900 group-hover:text-sand-950 mb-1 text-sm">
+                        {collection.name}
+                      </h3>
+                      <p class="text-xs text-sand-500 line-clamp-2">
+                        {collection.description}
+                      </p>
+                      <p class="text-xs text-sand-400 mt-2">
+                        {collection.recipeCount} recipes
+                      </p>
+                    </article>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </section>
+      )}
+
+      <!-- Footer -->
+      <footer class="mt-16 pt-8 border-t border-sand-200 text-center">
+        <p class="text-sand-400 text-xs mb-1">
+          Works with AllRecipes, Food Network, Serious Eats, and most recipe sites.
+        </p>
+        <p class="text-sand-400 text-xs">
+          <a href="/privacy" class="hover:text-sand-600 transition-colors">
+            Privacy Policy
+          </a>
+        </p>
+      </footer>
+    </div>
+  </main>
+</BaseLayout>

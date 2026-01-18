@@ -1,0 +1,139 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  canonical?: string;
+}
+
+const {
+  title,
+  description = "Extract clean, ad-free recipes from any URL. No more scrolling through life stories.",
+  image = "/og-default.png",
+  type = "website",
+  canonical
+} = Astro.props;
+
+const siteUrl = "https://simpler.recipes";
+const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+const canonicalUrl = canonical || Astro.url.href;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullImageUrl} />
+    <meta property="og:site_name" content="Simpler Recipes" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullImageUrl} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJR6YF1HVL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RJR6YF1HVL');
+    </script>
+  </head>
+  <body class="bg-background text-sand-900 min-h-screen">
+    <a href="#main-content" class="skip-link">
+      Skip to main content
+    </a>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  html {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .skip-link {
+    @apply absolute -top-10 left-0 bg-primary text-sand-50 px-4 py-2 z-50;
+    transition: top 0.3s;
+  }
+
+  .skip-link:focus {
+    @apply top-0;
+  }
+
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+
+    body {
+      background: white !important;
+      font-size: 12pt;
+    }
+
+    .print-only {
+      display: block !important;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1 {
+      font-size: 18pt;
+      margin-bottom: 12pt;
+    }
+
+    h2 {
+      font-size: 14pt;
+      margin-top: 16pt;
+      margin-bottom: 8pt;
+    }
+
+    ul, ol {
+      margin-left: 18pt;
+    }
+
+    li {
+      margin-bottom: 4pt;
+    }
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-sand-950;
+  }
+
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+</style>

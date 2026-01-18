@@ -101,79 +101,212 @@ THEMES = {
         ],
         "tags_default": ["comfort-food", "hearty", "classic"],
     },
+    "breakfast-brunch": {
+        "name": "Breakfast & Brunch",
+        "description": "Start your day right with these morning favorites and brunch classics",
+        "count": 10,
+        "search_queries": [
+            "fluffy pancakes recipe best",
+            "french toast recipe classic",
+            "eggs benedict recipe easy",
+            "breakfast burrito recipe",
+            "homemade waffles recipe",
+        ],
+        "tags_default": ["breakfast", "brunch", "morning"],
+    },
+    "grilling-bbq": {
+        "name": "Grilling & BBQ",
+        "description": "Fire up the grill with these outdoor cooking favorites and smoky flavors",
+        "count": 10,
+        "search_queries": [
+            "bbq ribs recipe best",
+            "grilled chicken recipe easy",
+            "burger recipe juicy",
+            "grilled steak recipe perfect",
+            "bbq pulled pork recipe",
+        ],
+        "tags_default": ["grilling", "bbq", "outdoor"],
+    },
+    "vegetarian-mains": {
+        "name": "Vegetarian Mains",
+        "description": "Satisfying meatless main dishes packed with flavor and nutrition",
+        "count": 10,
+        "search_queries": [
+            "vegetarian lasagna recipe",
+            "stuffed peppers vegetarian",
+            "vegetable stir fry recipe",
+            "bean burrito recipe",
+            "eggplant parmesan recipe",
+        ],
+        "tags_default": ["vegetarian", "meatless", "plant-based"],
+    },
+    "appetizers-party": {
+        "name": "Appetizers & Party Food",
+        "description": "Crowd-pleasing starters and finger foods perfect for entertaining",
+        "count": 10,
+        "search_queries": [
+            "spinach artichoke dip recipe",
+            "buffalo chicken wings recipe",
+            "bruschetta recipe easy",
+            "deviled eggs recipe best",
+            "meatballs appetizer recipe",
+        ],
+        "tags_default": ["appetizer", "party", "finger-food"],
+    },
 }
 
-# Curated recipe URLs (fallback and primary source)
+# Curated recipe URLs from diverse sources
 # These are known good recipes from reliable sources - verified working URLs
 CURATED_RECIPES = {
     "quick-weeknight-dinners": [
-        ("Chicken Stir Fry", "https://www.allrecipes.com/recipe/223382/chicken-stir-fry/", "AllRecipes", "30 min", "Easy"),
-        ("Spaghetti Aglio e Olio", "https://www.allrecipes.com/recipe/222000/spaghetti-aglio-e-olio/", "AllRecipes", "25 min", "Easy"),
-        ("Vegetable Fried Rice", "https://www.allrecipes.com/recipe/79543/fried-rice-restaurant-style/", "AllRecipes", "20 min", "Easy"),
+        # RecipeTin Eats - verified working URLs
+        ("Fried Rice", "https://www.recipetineats.com/egg-fried-rice/", "RecipeTin Eats", "15 min", "Easy"),
+        ("Chicken Fried Rice", "https://www.recipetineats.com/chicken-fried-rice/", "RecipeTin Eats", "20 min", "Easy"),
+        ("Honey Garlic Chicken", "https://www.recipetineats.com/honey-garlic-chicken/", "RecipeTin Eats", "25 min", "Easy"),
+        ("Teriyaki Chicken", "https://www.recipetineats.com/teriyaki-chicken/", "RecipeTin Eats", "20 min", "Easy"),
+        # Budget Bytes - verified working URLs
+        ("One Pot Pasta", "https://www.budgetbytes.com/one-pot-veggie-pasta/", "Budget Bytes", "25 min", "Easy"),
+        ("Creamy Tomato Spinach Pasta", "https://www.budgetbytes.com/creamy-tomato-spinach-pasta/", "Budget Bytes", "20 min", "Easy"),
+        ("Beef Stroganoff", "https://www.budgetbytes.com/beef-stroganoff/", "Budget Bytes", "30 min", "Easy"),
+        ("Chicken Stir Fry", "https://www.budgetbytes.com/chicken-stir-fry/", "Budget Bytes", "30 min", "Easy"),
+        # AllRecipes - verified working URLs
+        ("Quick Chicken Stir Fry", "https://www.allrecipes.com/recipe/223382/chicken-stir-fry/", "AllRecipes", "30 min", "Easy"),
         ("Pad Thai", "https://www.allrecipes.com/recipe/42968/pad-thai/", "AllRecipes", "30 min", "Easy"),
-        ("Chicken Tikka Masala", "https://www.allrecipes.com/recipe/45736/chicken-tikka-masala/", "AllRecipes", "40 min", "Medium"),
-        ("Easy Baked Chicken", "https://www.allrecipes.com/recipe/72508/worlds-best-honey-garlic-chicken-wings/", "AllRecipes", "45 min", "Easy"),
-        ("Butter Chicken", "https://www.allrecipes.com/recipe/141169/indian-chicken-curry-murgh-kari/", "AllRecipes", "45 min", "Medium"),
         ("Shrimp Scampi", "https://www.allrecipes.com/recipe/229960/shrimp-scampi-with-pasta/", "AllRecipes", "30 min", "Easy"),
-        ("Easy Fish Tacos", "https://www.allrecipes.com/recipe/53729/fish-tacos/", "AllRecipes", "25 min", "Easy"),
-        ("Creamy Garlic Pasta", "https://www.allrecipes.com/recipe/11691/creamy-garlic-penne-pasta/", "AllRecipes", "25 min", "Easy"),
-        ("Quick Chicken Parmesan", "https://www.allrecipes.com/recipe/223042/chicken-parmesan/", "AllRecipes", "30 min", "Easy"),
-        ("Garlic Butter Steak", "https://www.allrecipes.com/recipe/21014/marinated-flank-steak/", "AllRecipes", "25 min", "Easy"),
-        ("Easy Chicken Quesadillas", "https://www.allrecipes.com/recipe/24099/grilled-chicken-quesadillas/", "AllRecipes", "20 min", "Easy"),
-        ("Pasta Carbonara", "https://www.allrecipes.com/recipe/11973/spaghetti-carbonara-ii/", "AllRecipes", "30 min", "Easy"),
-        ("Teriyaki Chicken", "https://www.allrecipes.com/recipe/9023/baked-teriyaki-chicken/", "AllRecipes", "30 min", "Easy"),
+        ("Lemon Garlic Salmon", "https://www.recipetineats.com/lemon-garlic-salmon/", "RecipeTin Eats", "25 min", "Easy"),
     ],
     "baking-basics": [
-        ("Classic Chocolate Chip Cookies", "https://www.allrecipes.com/recipe/10813/best-chocolate-chip-cookies/", "AllRecipes", "25 min", "Easy"),
+        # RecipeTin Eats - verified working URLs
+        ("Chocolate Chip Cookies", "https://www.recipetineats.com/chocolate-chip-cookies/", "RecipeTin Eats", "30 min", "Easy"),
+        ("Blueberry Muffins", "https://www.recipetineats.com/moist-blueberry-muffins/", "RecipeTin Eats", "35 min", "Easy"),
+        ("Cinnamon Bread", "https://www.recipetineats.com/easy-cinnamon-swirl-quick-bread/", "RecipeTin Eats", "60 min", "Easy"),
+        # Sally's Baking Addiction
+        ("Classic Sugar Cookies", "https://sallysbakingaddiction.com/best-sugar-cookies/", "Sally's Baking", "30 min", "Easy"),
+        ("Homemade Cinnamon Rolls", "https://sallysbakingaddiction.com/easy-cinnamon-rolls-from-scratch/", "Sally's Baking", "3 hrs", "Medium"),
+        # Budget Bytes - verified working URLs
+        ("Pumpkin Bread", "https://www.budgetbytes.com/pumpkin-bread/", "Budget Bytes", "75 min", "Easy"),
+        ("Fudgy Brownies", "https://www.budgetbytes.com/super-fudgy-homemade-brownies/", "Budget Bytes", "45 min", "Easy"),
+        # AllRecipes - verified working URLs
+        ("Apple Pie", "https://www.allrecipes.com/recipe/12682/apple-pie-by-grandma-ople/", "AllRecipes", "75 min", "Medium"),
+        ("Vanilla Cake", "https://www.allrecipes.com/recipe/17481/simple-white-cake/", "AllRecipes", "40 min", "Medium"),
         ("Banana Bread", "https://www.allrecipes.com/recipe/20144/banana-banana-bread/", "AllRecipes", "65 min", "Easy"),
-        ("Basic Vanilla Cake", "https://www.allrecipes.com/recipe/17481/simple-white-cake/", "AllRecipes", "40 min", "Medium"),
-        ("Fudgy Brownies", "https://www.allrecipes.com/recipe/10549/best-brownies/", "AllRecipes", "45 min", "Easy"),
-        ("Blueberry Muffins", "https://www.allrecipes.com/recipe/6865/to-die-for-blueberry-muffins/", "AllRecipes", "30 min", "Easy"),
-        ("Classic Apple Pie", "https://www.allrecipes.com/recipe/12682/apple-pie-by-grandma-ople/", "AllRecipes", "75 min", "Medium"),
-        ("Sugar Cookies", "https://www.allrecipes.com/recipe/9870/easy-sugar-cookies/", "AllRecipes", "25 min", "Easy"),
-        ("Pumpkin Bread", "https://www.allrecipes.com/recipe/6820/downeast-maine-pumpkin-bread/", "AllRecipes", "65 min", "Easy"),
-        ("Lemon Bars", "https://www.allrecipes.com/recipe/10294/the-best-lemon-bars/", "AllRecipes", "50 min", "Easy"),
-        ("Cinnamon Rolls", "https://www.allrecipes.com/recipe/20156/clone-of-a-cinnabon/", "AllRecipes", "3 hrs", "Medium"),
         ("Zucchini Bread", "https://www.allrecipes.com/recipe/6698/moms-zucchini-bread/", "AllRecipes", "60 min", "Easy"),
-        ("Peanut Butter Cookies", "https://www.allrecipes.com/recipe/10275/jifs-irresistible-peanut-butter-cookies/", "AllRecipes", "25 min", "Easy"),
+        ("Lemon Bars", "https://www.allrecipes.com/recipe/10294/the-best-lemon-bars/", "AllRecipes", "50 min", "Easy"),
     ],
     "one-pot-meals": [
-        ("Beef Stew", "https://www.allrecipes.com/recipe/14685/slow-cooker-beef-stew-i/", "AllRecipes", "4 hrs", "Easy"),
+        # Budget Bytes - verified working URLs
+        ("Slow Cooker Beef Stew", "https://www.budgetbytes.com/slow-cooker-beef-stew/", "Budget Bytes", "8 hrs", "Easy"),
+        ("Vegetarian Chili", "https://www.budgetbytes.com/vegetarian-chili/", "Budget Bytes", "45 min", "Easy"),
+        ("One Pot Chicken and Rice", "https://www.budgetbytes.com/one-pot-chicken-and-rice/", "Budget Bytes", "45 min", "Easy"),
+        ("Italian Wonderpot", "https://www.budgetbytes.com/italian-wonderpot/", "Budget Bytes", "30 min", "Easy"),
+        ("Cajun Chicken Pasta", "https://www.budgetbytes.com/cajun-chicken-pasta/", "Budget Bytes", "35 min", "Easy"),
+        # RecipeTin Eats - verified working URLs
+        ("Chicken Noodle Soup", "https://www.recipetineats.com/homemade-chicken-noodle-soup-from-scratch/", "RecipeTin Eats", "45 min", "Easy"),
+        ("Minestrone Soup", "https://www.recipetineats.com/minestrone-soup/", "RecipeTin Eats", "45 min", "Easy"),
+        # Cookie and Kate - verified working URLs
+        ("Butternut Squash Soup", "https://cookieandkate.com/roasted-butternut-squash-soup/", "Cookie and Kate", "60 min", "Easy"),
+        ("Tomato Soup", "https://cookieandkate.com/classic-tomato-soup-recipe/", "Cookie and Kate", "45 min", "Easy"),
+        # AllRecipes - verified working URLs
         ("Chili Con Carne", "https://www.allrecipes.com/recipe/78299/boilermaker-tailgate-chili/", "AllRecipes", "2 hrs", "Easy"),
-        ("Chicken Noodle Soup", "https://www.allrecipes.com/recipe/26460/quick-and-easy-chicken-noodle-soup/", "AllRecipes", "45 min", "Easy"),
-        ("French Onion Soup", "https://www.allrecipes.com/recipe/13309/rich-and-simple-french-onion-soup/", "AllRecipes", "60 min", "Easy"),
-        ("White Chicken Chili", "https://www.allrecipes.com/recipe/16700/slow-cooker-white-chili/", "AllRecipes", "6 hrs", "Easy"),
-        ("Split Pea Soup", "https://www.allrecipes.com/recipe/13961/split-pea-soup-i/", "AllRecipes", "90 min", "Easy"),
-        ("Potato Soup", "https://www.allrecipes.com/recipe/16638/ultimate-potato-soup/", "AllRecipes", "45 min", "Easy"),
-        ("Broccoli Cheese Soup", "https://www.allrecipes.com/recipe/22831/broccoli-cheese-soup/", "AllRecipes", "30 min", "Easy"),
-        ("Butternut Squash Soup", "https://www.allrecipes.com/recipe/77981/butternut-squash-soup-ii/", "AllRecipes", "40 min", "Easy"),
-        ("Creamy Tomato Soup", "https://www.allrecipes.com/recipe/39544/garden-fresh-tomato-soup/", "AllRecipes", "45 min", "Easy"),
+        ("Beef Stew", "https://www.allrecipes.com/recipe/14685/slow-cooker-beef-stew-i/", "AllRecipes", "8 hrs", "Easy"),
     ],
     "healthy-lunches": [
-        ("Lentil Soup", "https://www.allrecipes.com/recipe/13978/lentil-soup/", "AllRecipes", "60 min", "Easy"),
-        ("Spinach Strawberry Salad", "https://www.allrecipes.com/recipe/14276/strawberry-spinach-salad-i/", "AllRecipes", "15 min", "Easy"),
-        ("Chicken Salad", "https://www.allrecipes.com/recipe/8499/basic-chicken-salad/", "AllRecipes", "15 min", "Easy"),
-        ("Egg Salad", "https://www.allrecipes.com/recipe/147103/delicious-egg-salad-for-sandwiches/", "AllRecipes", "20 min", "Easy"),
-        ("Pasta Salad", "https://www.allrecipes.com/recipe/14385/pasta-salad/", "AllRecipes", "30 min", "Easy"),
-        ("Cole Slaw", "https://www.allrecipes.com/recipe/51679/best-creamy-coleslaw/", "AllRecipes", "15 min", "Easy"),
-        ("Potato Salad", "https://www.allrecipes.com/recipe/24059/good-old-fashioned-potato-salad/", "AllRecipes", "45 min", "Easy"),
-        ("Fruit Salad", "https://www.allrecipes.com/recipe/214947/perfect-summer-fruit-salad/", "AllRecipes", "15 min", "Easy"),
-        ("Gazpacho", "https://www.allrecipes.com/recipe/24366/authentic-gazpacho/", "AllRecipes", "20 min", "Easy"),
-        ("Corn Salad", "https://www.allrecipes.com/recipe/14169/corn-and-black-bean-salad/", "AllRecipes", "15 min", "Easy"),
-        ("Hummus", "https://www.allrecipes.com/recipe/29093/hummus-iii/", "AllRecipes", "10 min", "Easy"),
+        # Cookie and Kate - verified working URLs
+        ("Quinoa Salad", "https://cookieandkate.com/best-quinoa-salad-recipe/", "Cookie and Kate", "30 min", "Easy"),
+        # Budget Bytes - verified working URLs
+        ("Traditional Chicken Salad", "https://www.budgetbytes.com/chicken-salad-traditional/", "Budget Bytes", "20 min", "Easy"),
+        ("Honey Mustard Chicken Salad", "https://www.budgetbytes.com/honey-mustard-chicken-salad/", "Budget Bytes", "25 min", "Easy"),
+        ("Greek Chicken Pasta Salad", "https://www.budgetbytes.com/greek-chicken-pasta-salad/", "Budget Bytes", "30 min", "Easy"),
+        ("Classic Tuna Salad", "https://www.budgetbytes.com/classic-tuna-salad/", "Budget Bytes", "15 min", "Easy"),
+        ("Mediterranean Tuna Salad", "https://www.budgetbytes.com/mediterranean-tuna-salad/", "Budget Bytes", "20 min", "Easy"),
+        # RecipeTin Eats - verified working URLs
+        ("Coleslaw", "https://www.recipetineats.com/coleslaw/", "RecipeTin Eats", "10 min", "Easy"),
+        ("Caesar Salad", "https://www.recipetineats.com/caesar-salad/", "RecipeTin Eats", "20 min", "Easy"),
+        ("Potato Salad", "https://www.recipetineats.com/potato-salad/", "RecipeTin Eats", "30 min", "Easy"),
+        # AllRecipes - verified working URLs
         ("Guacamole", "https://www.allrecipes.com/recipe/14231/guacamole/", "AllRecipes", "10 min", "Easy"),
+        ("Garden Salad", "https://www.allrecipes.com/recipe/14276/strawberry-spinach-salad-i/", "AllRecipes", "15 min", "Easy"),
     ],
     "comfort-food-classics": [
-        ("Mac and Cheese", "https://www.allrecipes.com/recipe/11679/homemade-mac-and-cheese/", "AllRecipes", "30 min", "Easy"),
-        ("Meatloaf", "https://www.allrecipes.com/recipe/16354/easy-meatloaf/", "AllRecipes", "75 min", "Easy"),
-        ("Chicken Pot Pie", "https://www.allrecipes.com/recipe/26317/chicken-pot-pie-ix/", "AllRecipes", "60 min", "Medium"),
-        ("Beef Stroganoff", "https://www.allrecipes.com/recipe/16311/simple-beef-stroganoff/", "AllRecipes", "30 min", "Easy"),
-        ("Lasagna", "https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/", "AllRecipes", "3 hrs", "Medium"),
+        # RecipeTin Eats - verified working URLs
+        ("Mac and Cheese", "https://www.recipetineats.com/baked-mac-and-cheese/", "RecipeTin Eats", "45 min", "Easy"),
+        ("Lasagna", "https://www.recipetineats.com/lasagna/", "RecipeTin Eats", "90 min", "Medium"),
+        ("Chicken Pot Pie", "https://www.recipetineats.com/chicken-pot-pie/", "RecipeTin Eats", "90 min", "Medium"),
+        # Budget Bytes - verified working URLs
+        ("Meatloaf", "https://www.budgetbytes.com/classic-homemade-meatloaf/", "Budget Bytes", "75 min", "Easy"),
+        ("Beef Stroganoff", "https://www.budgetbytes.com/beef-stroganoff/", "Budget Bytes", "30 min", "Easy"),
+        ("Creamy Garlic Chicken", "https://www.budgetbytes.com/creamy-garlic-chicken/", "Budget Bytes", "30 min", "Easy"),
+        # Cookie and Kate - verified working URLs
+        ("Tomato Soup", "https://cookieandkate.com/classic-tomato-soup-recipe/", "Cookie and Kate", "40 min", "Easy"),
+        # AllRecipes - verified working URLs
+        ("Grilled Cheese", "https://www.allrecipes.com/recipe/23891/grilled-cheese-sandwich/", "AllRecipes", "15 min", "Easy"),
         ("Fried Chicken", "https://www.allrecipes.com/recipe/8805/crispy-fried-chicken/", "AllRecipes", "45 min", "Medium"),
-        ("Grilled Cheese", "https://www.allrecipes.com/recipe/23891/grilled-cheese-sandwich/", "AllRecipes", "10 min", "Easy"),
-        ("Meatballs", "https://www.allrecipes.com/recipe/21353/italian-spaghetti-sauce-with-meatballs/", "AllRecipes", "90 min", "Easy"),
-        ("Tuna Casserole", "https://www.allrecipes.com/recipe/17219/tuna-noodle-casserole/", "AllRecipes", "45 min", "Easy"),
-        ("Chicken Fried Steak", "https://www.allrecipes.com/recipe/8552/chicken-fried-steak/", "AllRecipes", "30 min", "Easy"),
+        ("Spaghetti Meatballs", "https://www.allrecipes.com/recipe/21353/italian-spaghetti-sauce-with-meatballs/", "AllRecipes", "140 min", "Easy"),
+    ],
+    "breakfast-brunch": [
+        # RecipeTin Eats - verified working URLs
+        ("Fluffy Pancakes", "https://www.recipetineats.com/pancake-recipe/", "RecipeTin Eats", "20 min", "Easy"),
+        ("Waffles", "https://www.recipetineats.com/waffles-recipe/", "RecipeTin Eats", "30 min", "Easy"),
+        ("Eggs Benedict", "https://www.recipetineats.com/eggs-benedict/", "RecipeTin Eats", "30 min", "Medium"),
+        ("Scrambled Eggs", "https://www.recipetineats.com/scrambled-eggs/", "RecipeTin Eats", "10 min", "Easy"),
+        # Pinch of Yum
+        ("Sheet Pan Breakfast Burritos", "https://pinchofyum.com/sheet-pan-breakfast-burritos-with-creamy-chipotle-sauce", "Pinch of Yum", "45 min", "Easy"),
+        ("Breakfast Sandwich", "https://pinchofyum.com/breakfast-sandwich", "Pinch of Yum", "20 min", "Easy"),
+        # Budget Bytes - verified working URLs
+        ("French Toast", "https://www.budgetbytes.com/french-toast/", "Budget Bytes", "20 min", "Easy"),
+        # Sally's Baking Addiction
+        ("Cinnamon Rolls", "https://sallysbakingaddiction.com/easy-cinnamon-rolls-from-scratch/", "Sally's Baking", "3 hrs", "Medium"),
+        # AllRecipes - verified working URLs
+        ("Crepes", "https://www.allrecipes.com/recipe/16383/basic-crepes/", "AllRecipes", "30 min", "Easy"),
+        ("Quiche Lorraine", "https://www.allrecipes.com/recipe/17515/quiche-lorraine-i/", "AllRecipes", "60 min", "Medium"),
+    ],
+    "grilling-bbq": [
+        # RecipeTin Eats - verified working URLs
+        ("Sticky Grilled Chicken", "https://www.recipetineats.com/sticky-grilled-chicken/", "RecipeTin Eats", "25 min", "Easy"),
+        ("BBQ Pork Ribs", "https://www.recipetineats.com/oven-baked-barbecue-pork-ribs/", "RecipeTin Eats", "2 hrs", "Medium"),
+        ("Thai Grilled Chicken", "https://www.recipetineats.com/thai-grilled-chicken-gai-yang/", "RecipeTin Eats", "45 min", "Easy"),
+        # Budget Bytes - verified working URLs
+        ("Pulled Pork", "https://www.budgetbytes.com/slow-cooker-pulled-pork/", "Budget Bytes", "8 hrs", "Easy"),
+        ("Grilled Vegetables", "https://www.budgetbytes.com/grilled-vegetables/", "Budget Bytes", "30 min", "Easy"),
+        ("Honey Mustard Chicken Salad", "https://www.budgetbytes.com/honey-mustard-chicken-salad/", "Budget Bytes", "25 min", "Easy"),
+        # AllRecipes - verified working URLs
+        ("Classic Burger", "https://www.allrecipes.com/recipe/25473/the-perfect-basic-burger/", "AllRecipes", "20 min", "Easy"),
+        ("Grilled Shrimp", "https://www.allrecipes.com/recipe/21694/marinated-grilled-shrimp/", "AllRecipes", "50 min", "Easy"),
+        ("Grilled Steak", "https://www.allrecipes.com/recipe/143809/best-steak-marinade-in-existence/", "AllRecipes", "30 min", "Easy"),
+        ("Honey Soy Chicken", "https://www.recipetineats.com/honey-soy-chicken-marinade-sauce-grilled/", "RecipeTin Eats", "30 min", "Easy"),
+    ],
+    "vegetarian-mains": [
+        # Budget Bytes - verified working URLs
+        ("Vegetarian Chili", "https://www.budgetbytes.com/vegetarian-chili/", "Budget Bytes", "45 min", "Easy"),
+        ("Tuscan White Bean Pasta", "https://www.budgetbytes.com/tuscan-white-bean-pasta/", "Budget Bytes", "30 min", "Easy"),
+        ("Quinoa Black Bean Tacos", "https://www.budgetbytes.com/quinoa-black-bean-tacos/", "Budget Bytes", "30 min", "Easy"),
+        ("Easy Vegetable Stir Fry", "https://www.budgetbytes.com/easy-vegetable-stir-fry/", "Budget Bytes", "25 min", "Easy"),
+        ("Spicy Coconut Stir Fry", "https://www.budgetbytes.com/spicy-coconut-vegetable-stir-fry/", "Budget Bytes", "30 min", "Easy"),
+        ("Sweet Potato Tacos", "https://www.budgetbytes.com/sweet-potato-tacos-with-lime-crema/", "Budget Bytes", "35 min", "Easy"),
+        # Cookie and Kate - verified working URLs
+        ("Thai Red Curry", "https://cookieandkate.com/thai-red-curry-recipe/", "Cookie and Kate", "40 min", "Easy"),
+        # RecipeTin Eats - verified working URLs
+        ("Mushroom Risotto", "https://www.recipetineats.com/mushroom-risotto/", "RecipeTin Eats", "50 min", "Medium"),
+        ("Vegetable Fried Rice", "https://www.recipetineats.com/egg-fried-rice/", "RecipeTin Eats", "15 min", "Easy"),
+        # AllRecipes - verified working URLs
+        ("Eggplant Parmesan", "https://www.allrecipes.com/recipe/13981/eggplant-parmesan-i/", "AllRecipes", "75 min", "Medium"),
+        ("Black Bean Burritos", "https://www.allrecipes.com/recipe/13954/black-bean-and-rice-burritos/", "AllRecipes", "45 min", "Easy"),
+    ],
+    "appetizers-party": [
+        # RecipeTin Eats - verified working URLs
+        ("Spinach Artichoke Dip", "https://www.recipetineats.com/spinach-and-artichoke-dip/", "RecipeTin Eats", "10 min", "Easy"),
+        ("Deviled Eggs", "https://www.recipetineats.com/devilled-eggs/", "RecipeTin Eats", "45 min", "Easy"),
+        ("Crispy Chicken Wings", "https://www.recipetineats.com/crispy-oven-baked-chicken-wings/", "RecipeTin Eats", "50 min", "Easy"),
+        # Budget Bytes - verified working URLs
+        ("Spinach Dip", "https://www.budgetbytes.com/double-spinach-artichoke-dip/", "Budget Bytes", "60 min", "Easy"),
+        ("Black Bean Nachos", "https://www.budgetbytes.com/spicy-baked-black-bean-nachos/", "Budget Bytes", "25 min", "Easy"),
+        # Cookie and Kate - verified working URLs
+        ("Hummus", "https://cookieandkate.com/best-hummus-recipe/", "Cookie and Kate", "40 min", "Easy"),
+        # AllRecipes - verified working URLs
+        ("Italian Meatballs", "https://www.allrecipes.com/recipe/21353/italian-spaghetti-sauce-with-meatballs/", "AllRecipes", "140 min", "Easy"),
+        ("Buffalo Chicken Dip", "https://www.allrecipes.com/recipe/68461/buffalo-chicken-dip/", "AllRecipes", "45 min", "Easy"),
+        ("Guacamole", "https://www.allrecipes.com/recipe/14231/guacamole/", "AllRecipes", "10 min", "Easy"),
+        ("Tzatziki Dip", "https://www.recipetineats.com/tzatziki/", "RecipeTin Eats", "10 min", "Easy"),
     ],
 }
 

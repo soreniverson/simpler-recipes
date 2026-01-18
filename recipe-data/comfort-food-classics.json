@@ -5,41 +5,395 @@
     "description": "Hearty, satisfying recipes that bring warmth and nostalgia"
   },
   "metadata": {
-    "recipeCount": 8,
-    "lastUpdated": "2026-01-17T23:42:45.333397Z"
+    "recipeCount": 10,
+    "lastUpdated": "2026-01-18T04:02:23.992801Z"
   },
   "recipes": [
     {
-      "id": "homemade-mac-and-cheese",
-      "slug": "homemade-mac-and-cheese",
-      "title": "Homemade Mac and Cheese",
-      "image": "https://www.allrecipes.com/thmb/Blsz58_MhPOcp5QMiuGg_UTHovM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/11679-homemade-mac-and-cheese-VAT-022-4x3-4b84cfe8a2234cfda3d936a5333fe292.jpg",
+      "id": "baked-mac-and-cheese",
+      "slug": "baked-mac-and-cheese",
+      "title": "Baked Mac and Cheese",
+      "image": "https://www.recipetineats.com/tachyon/2020/11/Baked-Mac-and-Cheese-pull-shot.jpg",
       "prepTime": "10 min",
-      "cookTime": "45 min",
+      "cookTime": "60 min",
+      "totalTime": "70 min",
+      "servings": "6",
+      "ingredients": [
+        "250g / 8 oz  macaroni (elbow pasta)",
+        "1 tbsp (15g)  unsalted butter  ((or 2 tsp oil))",
+        "2/3 cup panko breadcrumbs ((Note 1))",
+        "2 tbsp (30g)  unsalted butter (, melted)",
+        "1/4 tsp salt",
+        "4 tbsp (60g)  unsalted butter",
+        "1/3 cup flour (, plain / all purpose)",
+        "3 cups milk (, warmed (low or full fat))",
+        "2 cups freshly shredded cheese, gruyere best ((followed by cheddar and Colby) (Note 2))",
+        "1 cup freshly shredded mozzarella cheese (, or more other cheese of choice (Note 2))",
+        "3/4 tsp salt",
+        "1 tsp garlic powder",
+        "1/2 tsp onion powder",
+        "1/2 tsp mustard powder"
+      ],
+      "instructions": [
+        "Cook pasta: Bring a large pot of water to the boil. Add macaroni and cook per packet directions MINUS 1 minute.",
+        "Toss in butter: Drain, return pasta to pot, add butter and toss until melted. Set aside to cool while making the Sauce (Optional - Note 3).",
+        "Mix together Topping. Set aside.",
+        "Preheat oven to 180°C/350°F (all oven types).",
+        "Make roux: In a large saucepan or in an ovenproof skillet (I use my 26cm/9\" Lodge cast iron skillet), melt butter over medium heat. Add flour and cook, stirring constantly, for 1 minute.",
+        "Add milk: Add about 1 cup of the milk and mix to dissolve the paste into the milk. Then add remaining milk and mix until lump free (use whisk if required).",
+        "Add Seasonings: Mix in salt and Seasonings if using.",
+        "Thicken sauce: Cook, stirring/whisking regularly, for 5 - 8 minutes until thickened to a cream consistency. When the Sauce coats the back of a wooden spoon, you should be able to draw a path with your finger.",
+        "Add cheese: Remove from stove, add cheese and stir - cheese doesn't need to melt.",
+        "Check salt: Adjust salt to taste (if you use recommended cheeses, you won't need more).",
+        "Assemble: Pour Sauce into pot with Macaroni. Stir quickly, then pour back into the skillet (I did this) or a baking dish (Note 4). Sprinkle with breadcrumb topping.",
+        "Bake for 25 minutes or until top is light golden. Don't bake too long otherwise you'll bake away the Sauce!",
+        "Serve: Serve immediately! I sprinkled mine with a bit of fresh parsley. See notes for best make-ahead method."
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/baked-mac-and-cheese/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:01:54.413309Z"
+    },
+    {
+      "id": "lasagna",
+      "slug": "lasagna",
+      "title": "Lasagna",
+      "image": "https://www.recipetineats.com/tachyon/2017/05/Lasagne-recipe-3-main-square.jpg",
+      "prepTime": "20 min",
+      "cookTime": "240 min",
+      "totalTime": "260 min",
+      "servings": "10",
+      "ingredients": [
+        "1 tbsp olive oil",
+        "1  onion (, finely chopped (white, yellow or brown))",
+        "1  medium carrot (, peeled and very finely diced)",
+        "1  celery stick (, very finely diced)",
+        "2  garlic cloves (, minced)",
+        "1 kg / 2 lb  beef mince ((ground beef) (Note 1))",
+        "800g / 28 oz  canned crushed tomato",
+        "1/4 cup tomato paste",
+        "1 cup pinot noir red wine (, or other dry red wine (Note 2))",
+        "3  beef bouillon cubes (, crumbled)",
+        "2  bay leaves (, dried or fresh)",
+        "1/2 tsp EACH dried thyme and oregano",
+        "2 tsp Worcestershire Sauce",
+        "1 - 2 tsp sugar ((if needed - Note 3))",
+        "1/2 tsp salt and black pepper",
+        "60g / 4 tbsp  butter",
+        "1/2 cup flour",
+        "4 cups milk (, preferably full fat but low fat ok)",
+        "2 cups gruyere or Colby cheese (, shred yourself (or cheddar, Monterey Jack, OR 1 cup / 100g shredded parmesan) (Note 4))",
+        "Pinch of freshly ground nutmeg",
+        "Salt and pepper",
+        "350g/ 12 oz  fresh lasagna sheets ((or 250g/8oz dried) (Note 5))",
+        "1 1/2 cups (tightly packed) mozzarella cheese (, shred yourself (Note 4))",
+        "Finely chopped basil or parsley (, for garnish (optional))"
+      ],
+      "instructions": [
+        "Heat oil in a large heavy based pot over medium heat. Add garlic, onion, celery and carrots. Cook for 10 minutes until softened and sweet - they should not brown (if they do, turn heat down).",
+        "Add beef, turn heat up and cook the beef, breaking it up as you go.",
+        "Once the beef has all turned brown, add the remaining Ragu ingredients EXCEPT the sugar.",
+        "Stir then adjust the heat so it is bubbling very gently. Place the lid on and cook for 1.5 - 2 hours, stirring every now and then, then remove the lid and simmer for 30 minutes.",
+        "The ragu is ready when the meat is really tender and the sauce has thickened and is rich - see video for consistency (Note 6). Adjust salt and pepper to taste, and add sugar if required (Note 3)",
+        "Warm milk up in a saucepan (optional - just makes sauce thicken faster).",
+        "In a large saucepan, melt butter over medium low heat. Add flour and mix constantly for 1 minute.",
+        "Pour about 1 cup of the milk in, mixing as you go to incorporate into the flour mixture. Once mostly lump free, add remaining milk. Use a whisk if needed to make it lump free.",
+        "Turn heat up to medium high. Stir occasionally at first then regularly after a few minutes until sauce thickens - about 5 - 8 minutes. It should coat the back of the wooden spoon.",
+        "Remove from heat, add cheese, nutmeg, salt and pepper. Mix until the cheese is melted. The Sauce should be thick but still easily pourable - the consistency of heavy cream (you need to be able to drizzle it over the Ragu when layering - see video). If it's too thick, add a splash of water or milk.",
+        "Preheat oven to 180°C/350°F.",
+        "Use a 33 x 22 x 7 cm / 13 x 9 x 2.5\" baking dish.",
+        "Smear a bit of Ragu on the base, then cover with lasagna sheets. Tear sheets to fit.",
+        "Spread over 2 1/2 cups of Ragu (enough to cover sheets), then drizzle over 1 cup of Cheese Sauce.",
+        "Top with lasagna sheets (Note 7). Spread with another 2 1/2 cups of Ragu, then 1 cup of Cheese Sauce. Top with lasagna sheets then repeat 1 more time.",
+        "Top with a 4th layer of lasagna sheets, then pour over the remaining Cheese Sauce.",
+        "Sprinkle with Mozzarella, then bake for 25 minutes or until golden and bubbling.",
+        "Stand for 5 to 10 minutes before cutting and serving, garnished with basil or parsley if desired."
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "pasta"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/lasagna/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T04:01:57.777887Z"
+    },
+    {
+      "id": "chicken-pot-pie",
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "image": "https://www.recipetineats.com/tachyon/2018/10/Chicken-Pot-Pie_2.jpg",
+      "prepTime": "15 min",
+      "cookTime": "60 min",
+      "totalTime": "75 min",
+      "servings": "4",
+      "ingredients": [
+        "600 g/1.2lb   chicken breast ((or boneless thighs))",
+        "2 cups milk (, any fat % (Note 1))",
+        "1 cup chicken broth ((stock))",
+        "2 tsp chicken or vegetable stock powder ((Note 2))",
+        "2  sprigs thyme (, optional)",
+        "1  large onion (, chopped)",
+        "2  large carrots ((3 small). chopped)",
+        "3  celery ribs (, chopped)",
+        "2  garlic cloves (, minced)",
+        "50g / 3 tbsp  butter",
+        "1 tsp dried thyme",
+        "1/3 cup white wine ((sub more chicken stock))",
+        "1/3 cup flour",
+        "1/2 cup grated parmesan",
+        "1/2 tsp black pepper",
+        "1 cup frozen peas (, no need to thaw)",
+        "2  sheets puff pastry ((enough to cover pots, with drape))",
+        "1  egg (, lightly whisked)"
+      ],
+      "instructions": [
+        "Place milk, broth and stock powder in a large saucepan. Bring to a very gentle simmer over medium heat, add chicken and thyme.",
+        "Place lid on, simmer gently on medium low for 15 minutes (do not boil, can make milk split).",
+        "Remove chicken, shred or dice (don't worry if inside a bit uncooked). Cover pot and set poaching liquid aside.",
+        "Melt butter in a large pot over medium high heat. Add garlic and onion, cook for 2 minutes. Add thyme, carrot and celery, cook for 3 minutes or until carrot is softened.",
+        "Add wine. Stir, scraping the bottom of the pot, and cook for 1 1/2 minutes or until wine is mostly evaporated.",
+        "Add flour and stir for 1 minute.",
+        "Add about half the reserved poaching liquid and stir until all flour is incorporated - it will be a thick sludge.",
+        "Add remaining milk broth, parmesan, pepper. Stir.",
+        "Add chicken and peas, stir.",
+        "Once mixture is heated (you'll see steam), cook for 3 minutes to thicken the sauce, stirring regularly. (Note 3)",
+        "Remove from heat. Spoon into oven proof pots - 4 large or 6 small (Note 4). Cool in fridge at least 30 minutes. (Note 5)",
+        "Meanwhile, remove puff pastry from freezer to partially thaw. Then use a bowl as a guide to cut rounds from the pastry about 2.5cm / 1\" wider (all the way around) than the pots - be generous!",
+        "Preheat oven to 180C/350F.",
+        "Brush edge of pots with egg. Top with puff pastry, folding down the edges.",
+        "Brush pastry with egg. Cut a 2cm / 2/3\" slide in the middle with a small knife.",
+        "Bake 35 - 40 minutes until deep golden.",
+        "Serve immediately!"
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "poultry"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/chicken-pot-pie/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T04:02:01.107349Z"
+    },
+    {
+      "id": "classic-meatloaf",
+      "slug": "classic-meatloaf",
+      "title": "Classic Meatloaf",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2024/12/classic-meatloaf-slices.jpg",
+      "prepTime": "15 min",
+      "cookTime": "50 min",
+      "totalTime": "65 min",
+      "servings": "7",
+      "ingredients": [
+        "1  large egg ($0.18)",
+        "⅓ cup milk ($0.09)",
+        "1 tsp Worcestershire sauce ($0.02)",
+        "½ cup plain breadcrumbs ($0.16)",
+        "1 tsp Italian seasoning ($0.10)",
+        "½ tsp garlic powder ($0.05)",
+        "1 tsp salt ($0.02)",
+        "¼ tsp black pepper (freshly cracked, $0.05)",
+        "½ cup minced onion ($0.22)",
+        "1½ lbs. ground beef (80/20, $7.95*)",
+        "½ cup ketchup ($0.30)",
+        "1 Tbsp brown sugar ($0.03**)",
+        "1 Tbsp Worcestershire sauce ($0.05)",
+        "1 tsp yellow mustard ($0.01)"
+      ],
+      "instructions": [
+        "Preheat the oven to 350ºF. In a small bowl whisk together the egg, milk, and Worcestershire sauce. In a separate small bowl, stir together the breadcrumbs, Italian seasoning, garlic powder, salt, and pepper. Mince the onion.",
+        "Add the ground beef, egg mixture, breadcrumb mixture, and minced onion to a large bowl. Use your hands to mix the ingredients together until evenly combined. Avoid over mixing.",
+        "Place the meat mixture on a rimmed baking dish and shape it into a loaf that is approximately 4-inches wide, 8-inches long, and 2-inches tall.",
+        "In a separate small bowl, stir together the glaze ingredients (ketchup, brown sugar, Worcestershire sauce, and mustard). Spread the glaze evenly over the top and sides of the meatloaf.",
+        "Bake the meatloaf for 50-55 minutes, or until the internal temperature reaches 165ºF. Allow it to rest for 5-10 minutes after baking, then slice and serve."
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/classic-homemade-meatloaf/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:02:04.289021Z"
+    },
+    {
+      "id": "beef-stroganoff",
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2014/02/One-Pot-Beef-and-Mushroom-Stroganoff-done.jpg",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "totalTime": "30 min",
+      "servings": "4",
+      "ingredients": [
+        "2 cloves garlic ($0.16)",
+        "2 Tbsp butter ($0.22)",
+        "½ lb. ground beef ($2.50*)",
+        "8 oz. mushrooms ($1.49)",
+        "⅛ tsp black pepper (freshly cracked, $0.01)",
+        "2 cups beef broth ($0.26**)",
+        "1 Tbsp Worcestershire sauce ($0.03)",
+        "½ tsp Dijon mustard ($0.02)",
+        "8 oz. wide egg noodles ($0.60)",
+        "⅓ cup sour cream ($0.15***)",
+        "1 Tbsp parsley (chopped (optional), $0.10)"
+      ],
+      "instructions": [
+        "Mince the garlic. Add the garlic and butter to a large pot or skillet and sauté over medium heat for about one minute, or until the garlic is soft and fragrant.",
+        "Add the ground beef and continue to sauté until it is fully browned.",
+        "While the beef is browning, slice the mushrooms. Add the sliced mushrooms and some freshly cracked pepper to the pot with the beef. Continue to sauté until the mushrooms are soft (about five minutes).",
+        "Add the uncooked egg noodles to the pot along with the beef broth, Worcestershire sauce, and Dijon mustard. Stir to combine. The liquid will not fully cover the noodles, but that's okay.",
+        "Place a lid on the pot and allow the liquid to come up to a boil over medium-high heat. As soon as it reaches a boil, give the pot a stir, replace the lid, and reduce the heat to low. Allow the pot to simmer on low heat for about 7-10 minutes, stirring occasionally and replacing the lid every couple of minutes. After 7-10 minutes the pasta should be tender and most of the liquid absorbed.",
+        "Once the noodles are tender, add the sour cream and fold it into the noodles until everything is rich and creamy. Give the noodles a taste and add extra salt or pepper, if needed. Roughly chop a handful of parsley leaves and sprinkle over top. Serve hot."
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "meat"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/beef-stroganoff/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:02:07.493423Z"
+    },
+    {
+      "id": "creamy-garlic-chicken-recipe",
+      "slug": "creamy-garlic-chicken-recipe",
+      "title": "Creamy Garlic Chicken Recipe",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2024/02/Creamy-Garlic-Chicken-Pan.jpg",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "totalTime": "40 min",
+      "servings": "4",
+      "ingredients": [
+        "2  boneless, skinless chicken breasts (about 1.3 lbs. total)* ($6.49)",
+        "1/2 tsp Italian seasoning ($0.05)",
+        "1/2 tsp salt ($0.02)",
+        "1/4 tsp freshly cracked black pepper ($0.02)",
+        "1/4 cup all-purpose flour ($0.06)",
+        "2 Tbsp olive oil ($0.32)",
+        "2 Tbsp butter, divided ($0.27)",
+        "1  whole garlic bulb (about 8-9 garlic cloves)** ($0.64)",
+        "1 cup chicken broth ($0.17)",
+        "3/4 cup heavy cream ($1.08)",
+        "1/2 tsp garlic powder ($0.05)",
+        "Salt and Pepper to taste ($0.04)"
+      ],
+      "instructions": [
+        "Using a sharp knife, carefully fillet each chicken breast into two thinner cutlets (or use thin-cut chicken breasts).",
+        "Season each breast with Italian seasoning, salt, and black pepper. Then sprinkle the flour over both sides of the chicken breasts and rub it in until the chicken is evenly coated.",
+        "Heat a large skillet over medium heat and add the olive oil and 1 Tbsp of butter. Once the skillet is hot, add the chicken and cook on each side until golden brown and cooked through (about 4 minutes per side). Remove the cooked chicken to a clean plate and cover to keep warm.",
+        "While the chicken is cooking, peel the garlic cloves and then carefully smash them with the side of a large chef's knife by pressing down on the side of the knife with the heel of your hand.",
+        "Once the chicken is removed, to the same skillet add the remaining 1 Tbsp of butter, then add the garlic cloves. Turn the heat down to medium-low and sauté the garlic for 3 minutes or until lightly browned and fragrant. Make sure to stir the garlic frequently to prevent it from burning.",
+        "Next pour the chicken broth and heavy cream into the skillet, then add the garlic powder. Stir and scrape up any brown bits from the bottom of the skillet. Allow the sauce to simmer in the skillet for 8-10 minutes, or until it has reduced and thickened by about 50%. Taste the sauce at this point and add salt and pepper if needed (I added about ⅛ tsp of salt and ⅛ tsp of black pepper).",
+        "Finally, return the cooked chicken breasts to the skillet and spoon the creamy sauce over top. Allow the chicken to heat through. Serve with fresh chopped parsley (optional), and enjoy!"
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "poultry"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/creamy-garlic-chicken/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:02:10.711470Z"
+    },
+    {
+      "id": "classic-tomato-soup",
+      "slug": "classic-tomato-soup",
+      "title": "Classic Tomato Soup",
+      "image": "https://cookieandkate.com/images/2019/04/classic-healthy-tomato-soup-recipe-1-225x225.jpg",
+      "prepTime": "15 min",
+      "cookTime": "40 min",
       "totalTime": "55 min",
       "servings": "4",
       "ingredients": [
-        "8 ounces uncooked elbow macaroni",
-        "0.25 cup salted butter",
-        "3 tablespoons all-purpose flour",
-        "2.5 cups milk, or more as needed",
-        "2 cups shredded sharp Cheddar cheese",
-        "0.5 cup finely grated Parmesan cheese",
-        "salt and ground black pepper to taste",
-        "2 tablespoons salted butter",
-        "0.5 cup dry bread crumbs",
-        "1 pinch ground paprika"
+        "2 tablespoons extra-virgin olive oil",
+        "1 medium yellow onion, chopped",
+        "½ teaspoon fine sea salt",
+        "2 tablespoons tomato paste",
+        "1 large can (28 ounces) whole tomatoes, with their liquid",
+        "2 cups vegetable broth",
+        "½ cup cooked Great Northern beans or cannellini beans, rinsed and drained",
+        "2 tablespoons unsalted butter, cut into a few pieces",
+        "1 teaspoon coconut sugar or brown sugar, to taste",
+        "Freshly ground black pepper, to taste",
+        "For the tomato-basil variation (optional): 10 to 15 fresh basil leaves, to taste"
       ],
       "instructions": [
-        "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Grease an 8-inch square baking dish.",
-        "To make the macaroni and cheese: Bring a large pot of lightly salted water to a boil. Add macaroni and simmer, stirring occasionally, until tender yet firm to the bite, about 8 minutes; it will finish cooking in the oven. Drain and transfer to the prepared baking dish.",
-        "While the macaroni is cooking, melt 1/4 cup butter in a medium skillet over low heat. Whisk in flour and stir until the mixture becomes paste-like and light golden brown, 3 to 5 minutes.",
-        "Gradually whisk 2 ½ cups milk into the flour mixture, and bring to a simmer.",
-        "Stir in shredded Cheddar and finely grated Parmesan cheeses; season with salt and pepper. Cook and stir over low heat until cheese is melted and sauce has thickened, 3 to 5 minutes, adding up to 1/2 cup more milk if needed.",
-        "Pour cheese sauce over macaroni and stir until well combined.",
-        "Make the bread crumb topping: Melt 2 tablespoons butter in a skillet over medium heat. Add bread crumbs; cook and stir until well coated and browned.",
-        "Spread bread crumbs over macaroni and cheese, then sprinkle with paprika.",
-        "Bake in the preheated oven until topping is golden brown and macaroni and cheese is bubbling, about 30 minutes."
+        "In a Dutch oven or soup pot, warm the olive oil over medium heat until shimmering. Add the onion and salt and cook, stirring occasionally, until the onions are tender and turning translucent, 7 to 10 minutes. Add the tomato paste and cook, stirring constantly, until fragrant, about 30 seconds.",
+        "Add the tomatoes and vegetable broth and stir to combine. Increase the heat to medium-high, and bring the mixture to a simmer. Cook for 30 minutes, reducing the heat as necessary to maintain a gentle simmer, and stirring occasionally.",
+        "Remove the pot from the heat and let it cool for a few minutes. Carefully transfer the mixture to a blender, being sure not to fill past the maximum fill line (blend in batches if necessary). Add the beans, butter, sugar, and several twists of black pepper. Securely fasten the lid and blend the soup until smooth, being careful to avoid hot steam escaping from the lid.",
+        "Since canned tomatoes vary in flavor, I always end up tinkering with this soup a bit at the end. Taste and, if necessary, add a little more sugar (to balance out the acidity of the tomatoes), pepper, and salt (I usually add another ¼ to ½ teaspoon).",
+        "If you’re adding basil, add it now. Briefly blend again, and serve hot. This soup keeps well for up to four days or so. You can freeze leftovers for up to 3 months."
+      ],
+      "tags": [
+        "comfort-food",
+        "hearty",
+        "classic",
+        "vegetarian",
+        "soup"
+      ],
+      "source": {
+        "name": "Cookieandkate",
+        "url": "https://cookieandkate.com/classic-tomato-soup-recipe/"
+      },
+      "theme": "Comfort Food Classics",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:02:13.873816Z"
+    },
+    {
+      "id": "grilled-cheese-sandwich",
+      "slug": "grilled-cheese-sandwich",
+      "title": "Grilled Cheese Sandwich",
+      "image": "https://www.allrecipes.com/thmb/pnEUcAXDg5GUJ77fUDzZp41NWkE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-238891-Grilled-Cheese-Sandwich-beauty-4x3-362f705972e64a948b7ec547f7b2a831.jpg",
+      "prepTime": "5 min",
+      "cookTime": "10 min",
+      "totalTime": "15 min",
+      "servings": "2",
+      "ingredients": [
+        "4 slices white bread",
+        "3 tablespoons butter, divided",
+        "2 slices Cheddar cheese"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Preheat a nonstick skillet over medium heat. Generously butter one side of a slice of bread.",
+        "Place bread butter-side down in the hot skillet; add 1 slice of cheese.",
+        "Butter a second slice of bread on one side and place butter-side up on top of cheese.",
+        "Cook until lightly browned on one side; flip over and continue cooking until cheese is melted.",
+        "Repeat with remaining 2 slices of bread, butter, and slice of cheese. Serve and enjoy!"
       ],
       "tags": [
         "comfort-food",
@@ -49,196 +403,11 @@
       ],
       "source": {
         "name": "Allrecipes",
-        "url": "https://www.allrecipes.com/recipe/11679/homemade-mac-and-cheese/"
+        "url": "https://www.allrecipes.com/recipe/23891/grilled-cheese-sandwich/"
       },
       "theme": "Comfort Food Classics",
       "difficulty": "Easy",
-      "addedDate": "2026-01-17T23:42:14.778364Z"
-    },
-    {
-      "id": "easy-meatloaf",
-      "slug": "easy-meatloaf",
-      "title": "Easy Meatloaf",
-      "image": "https://www.allrecipes.com/thmb/q2i_L11qt7QzJ7gl66atPJmKuU0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/16354-easy-meatloaf-DDMFS-0034-5186-hero-4x3-30547610d0f64d2fb3c25c0cab909af6.jpg",
-      "prepTime": "15 min",
-      "cookTime": "60 min",
-      "totalTime": "75 min",
-      "servings": "8",
-      "ingredients": [
-        "1.5 pounds ground beef",
-        "1 egg",
-        "1 onion, chopped",
-        "1 cup milk",
-        "1 cup dried bread crumbs",
-        "salt and pepper to taste",
-        "0.333 cup ketchup",
-        "2 tablespoons brown sugar",
-        "2 tablespoons prepared mustard"
-      ],
-      "instructions": [
-        "Gather the ingredients. Preheat the oven to 350 degrees F (175 degrees C). Lightly grease a 9x5-inch loaf pan.",
-        "Combine ground beef, onion, milk, bread crumbs, and egg in a large bowl, and season with salt and pepper. Press mixture evenly into the prepared loaf pan.",
-        "Stir ketchup, brown sugar, and mustard together in a small bowl until smooth, and spread evenly over the meatloaf.",
-        "Bake in the preheated oven until no longer pink in the center, about 1 hour. An instant-read thermometer inserted into the middle reads at least 160 degrees F (70 degrees C).",
-        "Serve hot and enjoy!"
-      ],
-      "tags": [
-        "comfort-food",
-        "hearty",
-        "classic"
-      ],
-      "source": {
-        "name": "Allrecipes",
-        "url": "https://www.allrecipes.com/recipe/16354/easy-meatloaf/"
-      },
-      "theme": "Comfort Food Classics",
-      "difficulty": "Easy",
-      "addedDate": "2026-01-17T23:42:18.153385Z"
-    },
-    {
-      "id": "chicken-pot-pie",
-      "slug": "chicken-pot-pie",
-      "title": "Chicken Pot Pie",
-      "image": "https://www.allrecipes.com/thmb/FoWxveKFkL2_cQIzGmsEWSnf7ec=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/26317-chicken-pot-pie-VAT-Beauty-4x3-ab621b52d3c44a3ca4eac45b1a8e3585.jpg",
-      "prepTime": "20 min",
-      "cookTime": "50 min",
-      "totalTime": "80 min",
-      "servings": "8",
-      "ingredients": [
-        "1 pound skinless, boneless chicken breast halves - cubed",
-        "1 cup sliced carrots",
-        "1 cup frozen green peas",
-        "0.5 cup sliced celery",
-        "0.33333334326744 cup butter",
-        "0.33333334326744 cup chopped onion",
-        "0.33333334326744 cup all-purpose flour",
-        "0.5 teaspoon salt",
-        "0.25 teaspoon black pepper",
-        "0.25 teaspoon celery seed",
-        "1.75 cups chicken broth",
-        "0.66666668653488 cup milk",
-        "2 (9 inch) unbaked pie crusts"
-      ],
-      "instructions": [
-        "Gather all ingredients and preheat the oven to 425 degrees F (220 degrees C.)",
-        "Combine chicken, carrots, peas, and celery in a saucepan; add water to cover and bring to a boil. Boil for 15 minutes, then remove from the heat and drain.",
-        "While chicken is cooking, melt butter in another saucepan over medium heat. Add onion and cook until soft and translucent, 5 to 7 minutes. Stir in flour, salt, pepper, and celery seed.",
-        "Slowly stir in chicken broth and milk.",
-        "Reduce heat to medium-low and simmer until thick, 5 to 10 minutes. Remove from heat and set aside.",
-        "Place chicken and vegetables in the bottom pie crust. Pour hot broth mixture over top.",
-        "Cover with top crust, seal the edges, and cut away any excess dough. Make several small slits in the top crust to allow steam to escape.",
-        "Bake in the preheated oven until pastry is golden brown and filling is bubbly, 30 to 35 minutes. Cool for 10 minutes before serving.",
-        "Enjoy!"
-      ],
-      "tags": [
-        "comfort-food",
-        "hearty",
-        "classic",
-        "poultry"
-      ],
-      "source": {
-        "name": "Allrecipes",
-        "url": "https://www.allrecipes.com/recipe/26317/chicken-pot-pie-ix/"
-      },
-      "theme": "Comfort Food Classics",
-      "difficulty": "Medium",
-      "addedDate": "2026-01-17T23:42:21.536170Z"
-    },
-    {
-      "id": "simple-beef-stroganoff",
-      "slug": "simple-beef-stroganoff",
-      "title": "Simple Beef Stroganoff",
-      "image": "https://www.allrecipes.com/thmb/Rh2NialypvMY-ory6lY4_6cFPvE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/16311-simple-beef-stroganoff-DDMFS-4x3-1e966286eef54c0f96c882e569926eb3.jpg",
-      "prepTime": "5 min",
-      "cookTime": "15 min",
-      "totalTime": "20 min",
-      "servings": "4",
-      "ingredients": [
-        "1 (8 ounce) package egg noodles",
-        "1 pound ground beef",
-        "1 (10.5 ounce) can fat-free condensed cream of mushroom soup",
-        "1 tablespoon garlic powder",
-        "0.5 cup sour cream",
-        "salt and ground black pepper to taste"
-      ],
-      "instructions": [
-        "Gather all ingredients.",
-        "Sauté ground beef in a large skillet over medium heat until browned and crumbly; 5 to 10 minutes.",
-        "Meanwhile, fill a large pot with lightly salted water and bring to a rapid boil. Cook egg noodles at a boil until tender yet firm to the bite, 7 to 9 minutes. Drain and set aside.",
-        "Drain and discard any fat from the cooked beef. Stir condensed soup and garlic powder into the beef. Simmer for 10 minutes, stirring occasionally.",
-        "Remove beef from the heat. Add egg noodles and stir to combine. Stir in sour cream and season with salt and pepper.",
-        "Serve hot and enjoy!"
-      ],
-      "tags": [
-        "comfort-food",
-        "hearty",
-        "classic",
-        "meat"
-      ],
-      "source": {
-        "name": "Allrecipes",
-        "url": "https://www.allrecipes.com/recipe/16311/simple-beef-stroganoff/"
-      },
-      "theme": "Comfort Food Classics",
-      "difficulty": "Easy",
-      "addedDate": "2026-01-17T23:42:24.907703Z"
-    },
-    {
-      "id": "worlds-best-lasagna",
-      "slug": "worlds-best-lasagna",
-      "title": "World's Best Lasagna",
-      "image": "https://www.allrecipes.com/thmb/htylprTl3RuTsFquG9YtbU1pzy0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/23600-worlds-best-lasagna-DDMFS-4x3-1196-24c5401652934ffb96d3d94bc9fbe2d7.jpg",
-      "prepTime": "30 min",
-      "cookTime": "150 min",
-      "totalTime": "195 min",
-      "servings": "12",
-      "ingredients": [
-        "1 pound sweet Italian sausage",
-        "0.75 pound lean ground beef",
-        "0.5 cup minced onion",
-        "2 cloves garlic, crushed",
-        "1 (28 ounce) can crushed tomatoes",
-        "2 (6.5 ounce) cans canned tomato sauce",
-        "2 (6 ounce) cans tomato paste",
-        "0.5 cup water",
-        "2 tablespoons white sugar",
-        "4 tablespoons chopped fresh parsley, divided",
-        "1.5 teaspoons dried basil leaves",
-        "1.5 teaspoons salt, divided, or to taste",
-        "1 teaspoon Italian seasoning",
-        "0.5 teaspoon fennel seeds",
-        "0.25 teaspoon ground black pepper",
-        "12 lasagna noodles",
-        "16 ounces ricotta cheese",
-        "1 egg",
-        "0.75 pound mozzarella cheese, sliced",
-        "0.75 cup grated Parmesan cheese"
-      ],
-      "instructions": [
-        "Gather all your ingredients.",
-        "Cook sausage, ground beef, onion, and garlic in a Dutch oven over medium heat until well browned.",
-        "Stir in crushed tomatoes, tomato sauce, tomato paste, and water. Season with sugar, 2 tablespoons parsley, basil, 1 teaspoon salt, Italian seasoning, fennel seeds, and pepper. Simmer, covered, for about 1 ½ hours, stirring occasionally.",
-        "Bring a large pot of lightly salted water to a boil. Cook lasagna noodles in boiling water for 8 to 10 minutes. Drain noodles, and rinse with cold water.",
-        "In a mixing bowl, combine ricotta cheese with egg, remaining 2 tablespoons parsley, and 1/2 teaspoon salt.",
-        "Preheat the oven to 375 degrees F (190 degrees C).",
-        "To assemble, spread 1 ½ cups of meat sauce in the bottom of a 9x13-inch baking dish. Arrange 6 noodles lengthwise over meat sauce, overlapping slightly. Spread with 1/2 of the ricotta cheese mixture. Top with 1/3 of the mozzarella cheese slices. Spoon 1 ½ cups meat sauce over mozzarella, and sprinkle with 1/4 cup Parmesan cheese.",
-        "Repeat layers, and top with remaining mozzarella and Parmesan cheese. Cover with foil: to prevent sticking, either spray foil with cooking spray or make sure the foil does not touch the cheese.",
-        "Bake in the preheated oven for 25 minutes. Remove the foil and bake for an additional 25 minutes.",
-        "Rest lasagna for 15 minutes before serving."
-      ],
-      "tags": [
-        "comfort-food",
-        "hearty",
-        "classic",
-        "pasta"
-      ],
-      "source": {
-        "name": "Allrecipes",
-        "url": "https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/"
-      },
-      "theme": "Comfort Food Classics",
-      "difficulty": "Medium",
-      "addedDate": "2026-01-17T23:42:28.417881Z"
+      "addedDate": "2026-01-18T04:02:17.202675Z"
     },
     {
       "id": "crispy-fried-chicken",
@@ -279,43 +448,7 @@
       },
       "theme": "Comfort Food Classics",
       "difficulty": "Medium",
-      "addedDate": "2026-01-17T23:42:31.788849Z"
-    },
-    {
-      "id": "grilled-cheese-sandwich",
-      "slug": "grilled-cheese-sandwich",
-      "title": "Grilled Cheese Sandwich",
-      "image": "https://www.allrecipes.com/thmb/pnEUcAXDg5GUJ77fUDzZp41NWkE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-238891-Grilled-Cheese-Sandwich-beauty-4x3-362f705972e64a948b7ec547f7b2a831.jpg",
-      "prepTime": "5 min",
-      "cookTime": "10 min",
-      "totalTime": "15 min",
-      "servings": "2",
-      "ingredients": [
-        "4 slices white bread",
-        "3 tablespoons butter, divided",
-        "2 slices Cheddar cheese"
-      ],
-      "instructions": [
-        "Gather all ingredients.",
-        "Preheat a nonstick skillet over medium heat. Generously butter one side of a slice of bread.",
-        "Place bread butter-side down in the hot skillet; add 1 slice of cheese.",
-        "Butter a second slice of bread on one side and place butter-side up on top of cheese.",
-        "Cook until lightly browned on one side; flip over and continue cooking until cheese is melted.",
-        "Repeat with remaining 2 slices of bread, butter, and slice of cheese. Serve and enjoy!"
-      ],
-      "tags": [
-        "comfort-food",
-        "hearty",
-        "classic",
-        "vegetarian"
-      ],
-      "source": {
-        "name": "Allrecipes",
-        "url": "https://www.allrecipes.com/recipe/23891/grilled-cheese-sandwich/"
-      },
-      "theme": "Comfort Food Classics",
-      "difficulty": "Easy",
-      "addedDate": "2026-01-17T23:42:35.193449Z"
+      "addedDate": "2026-01-18T04:02:20.582347Z"
     },
     {
       "id": "italian-spaghetti-sauce-with-meatballs",
@@ -365,7 +498,7 @@
       },
       "theme": "Comfort Food Classics",
       "difficulty": "Easy",
-      "addedDate": "2026-01-17T23:42:38.560338Z"
+      "addedDate": "2026-01-18T04:02:23.987681Z"
     }
   ]
 }

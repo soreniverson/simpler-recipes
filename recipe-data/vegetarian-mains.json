@@ -1,0 +1,480 @@
+{
+  "theme": {
+    "slug": "vegetarian-mains",
+    "name": "Vegetarian Mains",
+    "description": "Satisfying meatless main dishes packed with flavor and nutrition"
+  },
+  "metadata": {
+    "recipeCount": 10,
+    "lastUpdated": "2026-01-18T04:03:58.053971Z"
+  },
+  "recipes": [
+    {
+      "id": "vegetarian-chili",
+      "slug": "vegetarian-chili",
+      "title": "Vegetarian Chili",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2025/10/Overhead-in-Bowl-With-Spoon-Vegetarian-Chili.jpg",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "totalTime": "40 min",
+      "servings": "6",
+      "ingredients": [
+        "2 Tbsp olive oil ($0.38)",
+        "1  onion (diced, $0.99)",
+        "3  garlic cloves (minced, $0.18)",
+        "1   green bell pepper (diced small, $0.78)",
+        "6 oz. tomato paste ($0.86)",
+        "28 oz. can diced tomatoes (in juices, $1.48)",
+        "4 oz. can fire roasted green chiles (with juices, $0.88)",
+        "2 Tbsp molasses ($0.32*)",
+        "1 cup water ($0.00)",
+        "15 oz. can dark kidney beans (drained and rinsed, $0.92)",
+        "15 oz. can black beans (drained and rinsed, $0.92)",
+        "15 oz. can pinto beans (drained and rinsed, $0.92)",
+        "15 oz. can whole kernel corn (strained, $0.76)",
+        "1 Tbsp chili powder ($0.20)",
+        "2 tsp ground cumin ($0.18)",
+        "¼ tsp cayenne pepper ($0.04)",
+        "¼ tsp garlic powder ($0.02)",
+        "½ tsp onion powder ($0.04)",
+        "½ tsp black pepper (freshly cracked, $0.04)",
+        "1 tsp salt ($0.02)"
+      ],
+      "instructions": [
+        "Dice the onion and bell pepper. Mince the garlic.",
+        "Toast chili powder, cumin, cayenne, garlic powder, onion powder, and black pepper in your chili pot over medium-low heat until fragrant, about 2-4 minutes.",
+        "Add the olive oil, onion, garlic, bell pepper, and salt to your pot.",
+        "Stir together and cook until peppers and onions have softened, about 4-6 minutes.",
+        "Add the tomato paste, diced tomatoes with juices, diced green chiles with juices, molasses, and water. Stir and simmer for about 5 minutes.",
+        "Add kidney beans, black beans, pinto beans, and strained can of corn. Stir together and simmer the chili for about 20-25 minutes, covered. Your chili is done when all of the vegetables are tender."
+      ],
+      "tags": [
+        "vegetarian",
+        "meatless",
+        "plant-based"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/vegetarian-chili/"
+      },
+      "theme": "Vegetarian Mains",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:25.737860Z"
+    },
+    {
+      "id": "tuscan-white-bean-pasta",
+      "slug": "tuscan-white-bean-pasta",
+      "title": "Tuscan White Bean Pasta",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2010/06/Tuscan-White-Bean-Pasta-bowl.jpg",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "totalTime": "30 min",
+      "servings": "4",
+      "ingredients": [
+        "8 oz. linguine or fettuccine ($0.63)",
+        "1 Tbsp olive oil  ($0.13)",
+        "1 Tbsp butter ($0.13)",
+        "3 cloves garlic, minced ($0.24)",
+        "1 pint grape or cherry tomatoes  ($1.99)",
+        "10  cranks freshly ground pepper  ($0.03)",
+        "1/2 tsp salt  ($0.02)",
+        "1/2 tsp dried basil  ($0.05)",
+        "1 15oz. can cannellini beans ($0.69)",
+        "4 oz. baby spinach ($0.65)",
+        "3 oz. shredded parmesan ($1.89)"
+      ],
+      "instructions": [
+        "Fill a large pot with water and place over high heat to bring it to a boil. Once boiling, add the pasta and cook according to the package directions (boil for 7-10 minutes). Drain the pasta in a colander.",
+        "While you’re waiting for the water to boil, mince the garlic. Heat the olive oil and butter in a large skillet over medium-low heat. Add the garlic and sauté for about a minute, or until it has softened and become very fragrant.",
+        "Add the tomatoes, salt, pepper and basil. Sauté the tomatoes until the skins burst and the tomatoes begin to release their juices. It's important to not have the heat under the skillet too high here or the garlic may burn before the tomatoes break down. You want the garlic to brown and caramelize a bit, but not burn.",
+        "Once the tomatoes begin to break down, add the spinach and stir it into the tomatoes until it is about half way wilted. ",
+        "Rinse and drain the can of cannellini beans. Add the beans to the skillet and stir until they are heated through. The tomato juices will have created a thick sauce-like mixture on the bottom of the skillet at this point. Taste the mixture and add a bit more salt if needed. It should be slightly on the salty side in order to properly flavor the pasta.",
+        "Add the cooked and drained pasta to the skillet. Toss until the pasta is coated in the sticky sauce and everything is combined. Top with shredded parmesan, plus add a bit of Parmesan to the top of each bowl."
+      ],
+      "tags": [
+        "vegetarian",
+        "meatless",
+        "plant-based",
+        "pasta"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/tuscan-white-bean-pasta/"
+      },
+      "theme": "Vegetarian Mains",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:28.943471Z"
+    },
+    {
+      "id": "quinoa-black-bean-tacos",
+      "slug": "quinoa-black-bean-tacos",
+      "title": "Quinoa Black Bean Tacos",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2013/01/QuinoaBlackBeanTacosclose.jpg",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "totalTime": "30 min",
+      "servings": "8",
+      "ingredients": [
+        "1 cup uncooked quinoa  ($2.00)",
+        "1 clove garlic  ($0.08)",
+        "1/2 tsp salt  ($0.03)",
+        "1/2 Tbsp chili powder  ($0.07)",
+        "1/4 tsp ground cumin  ($0.02)",
+        "1/4 tsp dried oregano  ($0.02)",
+        "1/4 tsp smoked paprika  ($0.02)",
+        "2 cups cooked black beans (* , $0.42)",
+        "1  recipe pico de gallo  ($1.91)",
+        "1  avocado ($1.00)",
+        "16  small corn tortillas  ($1.94)",
+        "1/4 bunch fresh cilantro  ($0.20)"
+      ],
+      "instructions": [
+        "Use a wire mesh sieve to rinse the quinoa very, very well (this removes the bitter taste). If you don’t have a wire mesh sieve, you can put the quinoa in a bowl with water, swish it around and carefully pour off the water. Repeat this process until the water is fairly clear.",
+        "Put the rinsed quinoa in a medium pot along with the clove of garlic (minced), salt, chili powder, cumin, oregano, smoked paprika, and 1.5 cups of water. Stir to combine. Put a lid on the pot, turn the heat on to high, and bring it up to a boil. As soon as it reaches a boil, turn the heat down to low and let simmer for 15 minutes. After 15 minutes, turn the heat off and let it sit (with the lid in place) for an additional 10 minutes.",
+        "While the quinoa is cooking, prepare the pico de gallo according to these directions (it’s as easy as chop and stir). Rinse the black beans well in a colander and allow the excess water to drain off.",
+        "When the quinoa has finished cooking, remove the lid and fluff with a fork. Add the drained black beans and stir to combine.",
+        "Lightly toast the tortillas in a skillet over medium heat until each side is just slightly golden brown (tortillas should still be pliable). To make each taco, place about 1/4 cup of the quinoa/black bean mixture in the center of a tortilla. Add about 1-2 tablespoons of pico de gallo, one slice of avocado, and a few sprigs of cilantro. Fold and eat!"
+      ],
+      "tags": [
+        "vegetarian",
+        "meatless",
+        "plant-based"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/quinoa-black-bean-tacos/"
+      },
+      "theme": "Vegetarian Mains",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:32.164906Z"
+    },
+    {
+      "id": "easy-vegetable-stir-fry",
+      "slug": "easy-vegetable-stir-fry",
+      "title": "Easy Vegetable Stir Fry",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2022/03/Easy-Vegetable-Stir-Fry-close.jpg",
+      "prepTime": "15 min",
+      "cookTime": "10 min",
+      "totalTime": "25 min",
+      "servings": "4",
+      "ingredients": [
+        "1/4 cup soy sauce ($0.24)",
+        "1/4 cup water ($0.00)",
+        "2 Tbsp brown sugar ($0.08)",
+        "1 tsp toasted sesame oil ($0.10)",
+        "2 cloves garlic, minced ($0.16)",
+        "1 tsp grated fresh ginger ($0.10)",
+        "1 Tbsp cornstarch ($0.03)",
+        "3/4 lb. broccoli ($1.34)",
+        "2  carrots ($0.33)",
+        "8 oz. mushrooms ($1.69)",
+        "8 oz. sugar snap peas ($2.99)",
+        "1 small onion ($0.28)",
+        "1  red bell pepper ($1.50)",
+        "2 Tbsp cooking oil ($0.16)",
+        "1 tsp sesame seeds ($0.06)"
+      ],
+      "instructions": [
+        "Make the stir fry sauce first. Combine the soy sauce, water, brown sugar, sesame oil, garlic, ginger, and cornstarch in a small bowl. Set the sauce aside.",
+        "Chop the vegetables into similar-sized pieces. It's up to you whether you slice, dice, or cut into any other shape you prefer.",
+        "Add the cooking oil to a very large skillet or wok. Heat over medium-high. When the pan and oil are very hot (but not smoking), add the hardest vegetables first: carrots and broccoli. Cook and stir for about a minute, or just until the broccoli begins to turn bright green.",
+        "Next, add the mushrooms and sugar snap peas. Continue to cook and stir for a minute or two more, or just until the mushrooms begin to soften.",
+        "Finally, add the softest vegetables, bell pepper and onion. Continue to cook and stir just until the onion begins to soften.",
+        "Give the stir fry sauce another brief stir, then pour it over the vegetables. Continue to cook and stir until the sauce begins to simmer, at which point it will thicken and turn glossy. Remove the vegetables from the heat, or continue to cook until they are to your desired doneness.",
+        "Top the stir fry with sesame seeds and serve!"
+      ],
+      "tags": [
+        "vegetarian",
+        "meatless",
+        "plant-based"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/easy-vegetable-stir-fry/"
+      },
+      "theme": "Vegetarian Mains",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:35.384381Z"
+    },
+    {
+      "id": "spicy-coconut-vegetable-stir-fry",
+      "slug": "spicy-coconut-vegetable-stir-fry",
+      "title": "Spicy Coconut Vegetable Stir Fry",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2018/12/Spicy-Coconut-Vegetable-Stir-Fry-over-rice.jpg",
+      "prepTime": "15 min",
+      "cookTime": "10 min",
+      "totalTime": "25 min",
+      "servings": "4",
+      "ingredients": [
+        "1 13.5oz. can full-fat coconut milk ($1.79)",
+        "1/4 cup natural style peanut butter ($0.28)",
+        "2 Tbsp sriracha ($0.18)",
+        "1 tsp brown sugar ($0.01)",
+        "1 Tbsp soy sauce ($0.06)",
+        "2 Tbsp lime juice (about one lime) ($0.22)",
+        "1 clove garlic, minced ($0.08)",
+        "1 tsp grated fresh ginger ($0.10)",
+        "4-6 cups mixed vegetables ($1.93)",
+        "1 Tbsp high heat cooking oil of choice ($0.04)",
+        "4 cups cooked rice (or 8oz. noodles) ($0.70)",
+        "1/4 cup chopped peanuts ($0.12)",
+        "1/4 cup chopped cilantro ($0.22)",
+        "1  lime (cut into wedges) ($0.22)"
+      ],
+      "instructions": [
+        "In a medium bowl, whisk together the coconut milk, peanut butter, sriracha, brown sugar, soy sauce, lime juice, minced garlic, and grated ginger. If needed, gently heat the sauce in the microwave or in a sauce pot to help the peanut butter melt into the coconut milk. Taste the sauce and adjust the heat (sriracha), salt (soy sauce), sweetness (brown sugar), or tartness (lime juice) to your liking.",
+        "Chop your vegetables, if not pre-chopped. Heat the cooking oil in a large skillet over medium high heat. Once hot, add the vegetables to the skillet in order of hardest to softest to allow harder vegetables, like carrots, more time to cook and to avoid over cooking softer vegetables. Stir fry the vegetables only for about 1-2 minutes, or just until they begin to soften on the edges because they will cook further once the sauce is added. If using a tender green, like spinach, wait to add it to the skillet until after the sauce has been added.",
+        "Pour the prepared spicy coconut sauce over the vegetables, stir to combine, and allow the sauce to heat through (about 2 minutes). If you are using a tender green, like spinach, stir it into the hot sauce and stir just until it has wilted.",
+        "To serve, spoon the vegetables and sauce over a bowl of hot rice, or add pre-cooked noodles to the skillet and toss with the vegetables and sauce until combined. Top with chopped peanuts, cilantro, and serve with a wedge of lime to squeeze over top."
+      ],
+      "tags": [
+        "vegetarian",
+        "meatless",
+        "plant-based"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/spicy-coconut-vegetable-stir-fry/"
+      },
+      "theme": "Vegetarian Mains",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:38.572292Z"
+    },
+    {
+      "id": "vegetarian-sweet-potato-tacos-with-lime-crema",
+      "slug": "vegetarian-sweet-potato-tacos-with-lime-crema",
+      "title": "Vegetarian Sweet Potato Tacos with Lime Crema",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2015/07/Sweet-Potato-Tacos-H1.jpg",
+      "prepTime": "20 min",
+      "cookTime": "20 min",
+      "totalTime": "40 min",
+      "servings": "4",
+      "ingredients": [
+        "8 oz. sour cream ($0.83)",
+        "1  fresh lime  ($0.69)",
+        "1/4 tsp salt  ($0.02)",
+        "1 clove garlic  ($0.08)",
+        "1 Tbsp olive oil  ($0.13)",
+        "2 cloves garlic  ($0.32)",
+        "1.25 lbs. sweet potato  ($1.22)",
+        "1 15oz. can black beans  ($0.59)",
+        "1 tsp ground cumin  ($0.10)",
+        "Salt and Pepper to taste  ($0.05)",
+        "2  green onions  ($0.19)",
+        "1/4 bunch fresh cilantro (optional) ($0.17)",
+        "8  small (taco sized) tortillas ($0.75)"
+      ],
+      "instructions": [
+        "Prepare the crema first to allow the flavors time to blend. Mince one clove of garlic and use a zester or small holed cheese grater to scrape the thin layer of green zest from the lime. Add the minced garlic, 1 tsp of the zest, about 1 tsp of the lime juice, and 1/4 tsp salt to the sour cream. Stir the ingredients to combine then refrigerate until ready to use.",
+        "Peel the sweet potatoes, then cut them into small cubes (about 1/4 to 1/2 inch square). Heat a large skillet over medium flame, then add the olive oil and two cloves of minced garlic. Sauté the garlic for about a minute or just until it becomes fragrant. Add the diced sweet potato and a couple tablespoons of water. Sauté the sweet potato until they become soft and just begin to fall apart. Add another couple tablespoons of water during cooking if the skillet becomes dry before the sweet potatoes are soft.",
+        "Meanwhile, drain and rinse the can of black beans. Once the sweet potatoes are soft, add the black beans to the skillet. Season with the cumin, and salt and pepper to taste. Sauté just until the beans are heated through.",
+        "Slice the green onions and pull the cilantro leaves from the stems. Roughly chop the cilantro. Stir the sliced green onions into the skillet. Add the cilantro to the skillet if desired, or use it to top each taco.",
+        "Prior to filling each tortilla, heat them in a dry skillet until slightly browned and crisp on each side, or carefully toast them over an open flame. Smear a small amount of the lime crema down the center of the tortilla, then top with a scoop of the sweet potato and black bean hash. Add fresh cilantro if desired."
+      ],
+      "tags": [
+        "vegetarian",
+        "meatless",
+        "plant-based"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/sweet-potato-tacos-with-lime-crema/"
+      },
+      "theme": "Vegetarian Mains",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:41.757681Z"
+    },
+    {
+      "id": "thai-red-curry-with-vegetables",
+      "slug": "thai-red-curry-with-vegetables",
+      "title": "Thai Red Curry with Vegetables",
+      "image": "https://cookieandkate.com/images/2015/10/thai-red-curry-with-vegetables-1-225x225.jpg",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "totalTime": "40 min",
+      "servings": "4",
+      "ingredients": [
+        "1 ¼ cups brown jasmine rice or long-grain brown rice, rinsed",
+        "1 tablespoon coconut oil or olive oil",
+        "1 small white onion, chopped (about 1 cup)",
+        "Pinch of salt, more to taste",
+        "1 tablespoon finely grated fresh ginger (about a 1-inch nub of ginger)",
+        "2 cloves garlic, pressed or minced",
+        "1 red bell pepper, sliced into thin 2-inch long strips",
+        "1 yellow, orange or green bell pepper, sliced into thin 2-inch long strips",
+        "3 carrots, peeled and sliced on the diagonal into ¼-inch thick rounds (about 1 cup)",
+        "2 tablespoons Thai red curry paste*",
+        "1 can (14 ounces) regular coconut milk**",
+        "½ cup water",
+        "1 ½ cups packed thinly sliced kale (tough ribs removed first), preferably the Tuscan/lacinato/dinosaur variety",
+        "1 ½ teaspoons coconut sugar or turbinado (raw) sugar or brown sugar",
+        "1 tablespoon tamari or soy sauce***",
+        "2 teaspoons rice vinegar or fresh lime juice",
+        "Garnishes/sides: handful of chopped fresh basil or cilantro, optional red pepper flakes, optional sriracha or chili garlic sauce"
+      ],
+      "instructions": [
+        "To cook the rice, bring a large pot of water to boil. Add the rinsed rice and continue boiling for 30 minutes, reducing heat as necessary to prevent overflow. Remove from heat, drain the rice and return the rice to pot. Cover and let the rice rest for 10 minutes or longer, until you’re ready to serve. Just before serving, season the rice to taste with salt and fluff it with a fork.",
+        "To make the curry, warm a large skillet with deep sides over medium heat. Once it’s hot, add the oil. Add the onion and a sprinkle of salt and cook, stirring often, until the onion has softened and is turning translucent, about 5 minutes. Add the ginger and garlic and cook until fragrant, about 30 seconds, while stirring continuously.",
+        "Add the bell peppers and carrots. Cook until the bell peppers are fork-tender, 3 to 5 more minutes, stirring occasionally. Then add the curry paste and cook, stirring often, for 2 minutes.",
+        "Add the coconut milk, water, kale and sugar, and stir to combine. Bring the mixture to a simmer over medium heat. Reduce heat as necessary to maintain a gentle simmer and cook until the peppers, carrots and kale have softened to your liking, about 5 to 10 minutes, stirring occasionally.",
+        "Remove the pot from the heat and season with tamari and rice vinegar. Add salt (I added ¼ teaspoon for optimal flavor), to taste. If the curry needs a little more punch, add ½ teaspoon more tamari, or for more acidity, add ½ teaspoon more rice vinegar. Divide rice and curry into bowls and garnish with chopped cilantro and a sprinkle of red pepper flakes, if you’d like. If you love spicy curries, serve with sriracha or chili garlic sauce on the side."
+      ],
+      "tags": [
+        "vegetarian",
+        "meatless",
+        "plant-based"
+      ],
+      "source": {
+        "name": "Cookieandkate",
+        "url": "https://cookieandkate.com/thai-red-curry-recipe/"
+      },
+      "theme": "Vegetarian Mains",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:44.957444Z"
+    },
+    {
+      "id": "mushroom-risotto",
+      "slug": "mushroom-risotto",
+      "title": "Mushroom Risotto",
+      "image": "https://www.recipetineats.com/tachyon/2019/10/Mushroom-Risotto_7.jpg",
+      "prepTime": "15 min",
+      "cookTime": "35 min",
+      "totalTime": "50 min",
+      "servings": "4",
+      "ingredients": [
+        "500g (1 lb)  mushrooms (, sliced 3 mm / 1/8\" thick (Note 1))",
+        "250g (1/2 lb)  mushrooms (, quartered (Note 1))",
+        "3 tbsp butter",
+        "2 tbsp olive oil",
+        "2  garlic cloves (, minced)",
+        "1/2 tsp salt and pepper (, each)",
+        "1 tbsp butter",
+        "1  garlic clove (, minced)",
+        "2  eschallots / French onions (, finely chopped (or 1/2 onion))",
+        "1/4 cup dry white wine ((Note 2))",
+        "1 1/4 cups arborio rice (, uncooked)",
+        "5 cups chicken broth/stock (, low sodium, warm (Note 3))",
+        "1/2 cup cream (, optional but recommended(Note 4))",
+        "2 tbsp (30g)  butter (, optional (Note 4))",
+        "1/2 cup parmesan cheese (, finely grated)",
+        "1/2 tsp salt and pepper (, each)",
+        "Finely chopped parsley or chives",
+        "Parmesan (, freshly grated)"
+      ],
+      "instructions": [
+        "Add 1 tbsp oil and half the butter in a large heavy based pot over high heat (Note 5). Once melted, add half the mushrooms and cook until pretty golden brown (~4 min).",
+        "Add 1/2 the garlic, 1/4 tsp each salt and pepper, then continue to cook until golden brown (~1.5 min). Then remove into bowl.",
+        "Repeat with remaining mushrooms, then remove.",
+        "Turn heat down to medium. In the same pot, melt butter then add garlic and onion.",
+        "Cook 2 minutes until onion is translucent but not golden.",
+        "Add wine and allow to simmer rapidly for 2 minutes, scraping the base of the pot, until mostly evaporated.",
+        "Add rice and stir for 1 minute until semi translucent.",
+        "Add about 1.5 cups of stock. Stir, then leave for 3 minutes, stirring just a few times, until mostly absorbed (~3 min).",
+        "Add about 1.5 cups stock, stir every now and then until mostly absorbed (~3 min) - no need to stir constantly. Repeat twice more until all stock used up, rice is just cooked but risotto still creamy and sloppy (~10 min, Note 6).",
+        "Add cream and butter, stir vigorously to make creamy.",
+        "Stir in parmesan, salt and pepper.",
+        "Stir through half the mushrooms, then taste and add more salt and pepper if needed. Consistency should be creamy, not stodgy (Note 7).",
+        "Reheat remaining mushrooms (I microwave).",
+        "Spoon risotto into bowls, then top with reserved mushrooms (including a drizzle of buttery juices pooled in bowl!)",
+        "Garnish with parsley if using, and extra parmesan. Serve immediately!"
+      ],
+      "tags": [
+        "vegetarian",
+        "meatless",
+        "plant-based"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/mushroom-risotto/"
+      },
+      "theme": "Vegetarian Mains",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T04:03:48.319816Z"
+    },
+    {
+      "id": "fried-rice",
+      "slug": "fried-rice",
+      "title": "Fried Rice",
+      "image": "https://www.recipetineats.com/tachyon/2018/03/Egg-Fried-Rice_5-1.jpg",
+      "prepTime": "5 min",
+      "cookTime": "10 min",
+      "totalTime": "15 min",
+      "servings": "2",
+      "ingredients": [
+        "2 tbsp oil",
+        "1/2  onion (, finely chopped)",
+        "2  garlic cloves (, minced)",
+        "120 g/4 oz   bacon (, chopped (optional, or use ham))",
+        "1 - 1 1/2 cups diced vegetables (, frozen or fresh (Note 1))",
+        "2 cups (packed) cooked day old white rice  ((refrigerated or frozen defrosted, Note 2))",
+        "3  eggs, whisked",
+        "3/4 cup green onions (, (shallots / scallions) sliced)",
+        "1 tbsp Chinese cooking wine  ((sub Mirin, cooking sake or dry sherry) (Note 4))",
+        "1 tbsp Oyster Sauce",
+        "1 tbsp light soy sauce ((or all purpose) (Note 5))",
+        "1 tsp sesame oil (, optional)",
+        "1/4 tsp white pepper"
+      ],
+      "instructions": [
+        "Heat oil - Heat about 1 1/2 tbsp oil in a wok or 2 tbsp oil in a skillet over high heat until smoking.",
+        "Add onion, garlic and bacon. Cook until bacon is light golden - about 1 1/2 minutes.",
+        "Add vegetables (still frozen is fine). Cook for 2 minutes so they defrost and water evaporates.",
+        "Add rice and Sauce ingredients. Cook for 1 1/2 minutes until liquid evaporates.",
+        "Scramble egg - Shove rice to the side of the wok / skillet. Add 1/2 tbsp oil into the cleared space, shift wok so the heat is centred over the cleared space. Pour in egg then scramble - cook it through properly, don't \"soft scramble\".",
+        "Serve - Add green onion then stir the egg into the rice. Remove from heat and serve immediately!"
+      ],
+      "tags": [
+        "vegetarian",
+        "meatless",
+        "plant-based"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/egg-fried-rice/"
+      },
+      "theme": "Vegetarian Mains",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:51.687774Z"
+    },
+    {
+      "id": "eggplant-parmesan-i",
+      "slug": "eggplant-parmesan-i",
+      "title": "Eggplant Parmesan I",
+      "image": "https://www.allrecipes.com/thmb/xcK-8pfY0YMXMQhwKzmM58ELC3g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/5773742-c9058d5df0f14551b91360940d3c2366.jpg",
+      "prepTime": "25 min",
+      "cookTime": "45 min",
+      "totalTime": "100 min",
+      "servings": "8",
+      "ingredients": [
+        "1 eggplant, cut into 3/4 inch slices",
+        "1.5 tablespoons salt",
+        "8 tablespoons olive oil",
+        "8 ounces ricotta cheese",
+        "6 ounces shredded mozzarella cheese",
+        "0.5 cup grated Parmesan cheese",
+        "1 egg, beaten",
+        "0.5 cup chopped fresh basil",
+        "4 cups pasta sauce"
+      ],
+      "instructions": [
+        "Sprinkle both sides of the eggplant slices with salt. Place slices in a colander, and place a dish underneath the colander to capture liquid that will sweat out of the eggplant. Allow to sit for 30 minutes.",
+        "Preheat oven to 350 degrees F (175 degrees C). In a medium bowl, mix the ricotta, mozzarella cheese and 1/4 cup Parmesan cheese. Mix in egg and basil.",
+        "Rinse the eggplant in cold water until all salt is removed. In a large skillet, heat 4 tablespoons olive oil over medium heat. Place one layer of eggplant in the pan, brown each side. Repeat with remaining eggplant slices, using additional oil if necessary.",
+        "In a 9x13 inch baking dish, evenly spread 1 1/2 cups of spaghetti sauce. Arrange a single layer of eggplant slices on top of the sauce. Top the eggplant with 1/2 of the cheese mixture. Repeat layering process until all the eggplant and cheese mixture is used. Pour remaining sauce on top of layers, and sprinkle with remaining Parmesan cheese.",
+        "Bake 30 to 45 minutes in the preheated oven, until sauce is bubbly."
+      ],
+      "tags": [
+        "vegetarian",
+        "meatless",
+        "plant-based"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/13981/eggplant-parmesan-i/"
+      },
+      "theme": "Vegetarian Mains",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T04:03:55.052239Z"
+    }
+  ]
+}

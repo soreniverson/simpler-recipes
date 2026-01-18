@@ -1,0 +1,449 @@
+{
+  "theme": {
+    "slug": "breakfast-brunch",
+    "name": "Breakfast & Brunch",
+    "description": "Start your day right with these morning favorites and brunch classics"
+  },
+  "metadata": {
+    "recipeCount": 10,
+    "lastUpdated": "2026-01-18T04:02:54.302517Z"
+  },
+  "recipes": [
+    {
+      "id": "simple-fluffy-pancakes",
+      "slug": "simple-fluffy-pancakes",
+      "title": "Simple, Fluffy Pancakes",
+      "image": "https://www.recipetineats.com/tachyon/2017/06/Pancakes-SQ.jpg",
+      "prepTime": "5 min",
+      "cookTime": "15 min",
+      "totalTime": "20 min",
+      "servings": "13",
+      "ingredients": [
+        "2 cups plain / all purpose flour ((Note 1))",
+        "4 tsp baking powder (NOT baking soda / bi-carb (Note 1))",
+        "1/4 cup white sugar ((caster / super fine is best but not essential))",
+        "Pinch of salt",
+        "1  large egg ((~50g / 2oz in shell))",
+        "1 3/4 cups cups milk ((any type, any fat %))",
+        "1 tsp vanilla extract or essence",
+        "4 tsp butter (, for cooking)"
+      ],
+      "instructions": [
+        "Whisk dry - Place flour, baking powder, sugar and salt in a bowl, whisk to combine.",
+        "Add wet ingredients - Add egg, milk and vanilla. Whisk until lump free - no longer than 30 seconds.",
+        "Melt then wipe off most butter - Heat a non-stick pan - use medium heat if you have a strong stove, medium high if you have a weak one. Add a tiny bit of butter (about 1/2 tsp) and swirl to melt. Use paper towel to mostly wipe the butter off (this is the trick to avoid a dodgy 1st pancake).",
+        "Pour 1/4 cup batter into the middle of the fry pan (I use a slightly heaped ice cream scoop with lever, standard is 1/4 cup).",
+        "Cook - Swirl pan lightly to spread or use the ice cream scoop edge to spread into 11cm / 4.5\" circle (ruler is a must) (joking!). When bubbles rise to the surface (see video), flip and cook the other side until golden.",
+        "Keep warm and repeat - Remove the pancake and keep warm in a low oven. Use more butter every 2 to 3 pancakes - depends how good your non stick coating is.",
+        "Serve with toppings of choice!"
+      ],
+      "tags": [
+        "breakfast",
+        "brunch",
+        "morning",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/pancake-recipe/"
+      },
+      "theme": "Breakfast & Brunch",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:02:24.176523Z"
+    },
+    {
+      "id": "really-great-waffles",
+      "slug": "really-great-waffles",
+      "title": "Really great waffles",
+      "image": "https://www.recipetineats.com/tachyon/2023/08/Waffles_7.jpg",
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "totalTime": "145 min",
+      "servings": "10",
+      "ingredients": [
+        "2 1/4 cup flour (, plain / all purpose)",
+        "2 1/2 tbsp caster sugar / superfine sugar ((sub granulated / ordinary sugar))",
+        "Pinch cooking / kosher salt",
+        "4 tsp baking powder",
+        "1 1/3 cup milk (, full fat, slightly warmed (not piping hot))",
+        "1/2 tsp vanilla essence",
+        "4  large eggs",
+        "150g / 11 tbsp   unsalted butter (, melted and slightly cooled (not piping hot))",
+        "Butter (, softened (strongly recommended!))",
+        "Maple syrup ((strongly recommended!), or honey)",
+        "Icing sugar / powdered sugar (, for dusting)",
+        "Strawberries, other fruit"
+      ],
+      "instructions": [
+        "Whisk dry - Place the flour, sugar, baking powder and salt in a large mixing bowl. Whisk to mix.",
+        "Whisk in wet - Add milk, eggs and vanilla. Whisk to combine. Add melted butter then whisk until lump free. The batter should be pourable but thick - slightly thinner than pancakes.",
+        "Recommended resting (Note 1) - Cover then refrigerate overnight, or for at least 2 hours. Softer insides, better flavour. Else, proceed immediately with cooking.",
+        "Preheat a waffle maker (Note 2, inc setting options). A non stick one will not need oil, plus there is butter in the batter.",
+        "Cooking - Use a ladle to pour batter in to just cover the iron. Don't get greedy - it will leak out the sides! Cook until golden and crisp - my good waffle iron takes 3 1/2 minutes, my Kmart one takes 6 minutes.",
+        "Serving - Transfer onto plates and serve as you go, with desired toppings. Or, put on a rack and keep warm in a preheated 70°C/150°F oven while you continue cooking!"
+      ],
+      "tags": [
+        "breakfast",
+        "brunch",
+        "morning",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/waffles-recipe/"
+      },
+      "theme": "Breakfast & Brunch",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:02:27.534961Z"
+    },
+    {
+      "id": "eggs-benedict",
+      "slug": "eggs-benedict",
+      "title": "Eggs Benedict",
+      "image": "https://www.recipetineats.com/tachyon/2020/10/Smoked-Salmon-Eggs-Benedict__1-SQjpg.jpg",
+      "prepTime": "5 min",
+      "cookTime": "20 min",
+      "totalTime": "5 min 20 min",
+      "servings": "4",
+      "ingredients": [
+        "3  egg yolks  (, from large eggs (55-60g / 2 oz each, Note 1))",
+        "1/4 tsp cayenne pepper ( or white pepper)",
+        "1/4 tsp salt",
+        "1 1/2 tbsp  lemon juice (, plus more to taste)",
+        "1 1/2 tbsp water (, plus more as needed)",
+        "175g/ 1 1/2 sticks  unsalted butter (, cut into 1.5 cm / 1/2\" cubes (Note 2))",
+        "8  large eggs (, fridge cold (Note 3))",
+        "8  slices bacon ( - streaky, Canadian (traditional) or other)",
+        "200g / 7oz  shaved or sliced ham ((16 slices, ie. 2 slices per muffin half))",
+        "250g / 8oz  smoked salmon slices (, at room temp)",
+        "4  English Muffins, split ((or 8 slices other bread, or 4 brioche or other rolls))",
+        "1 tbsp each Chives and parlsey (, roughly chopped, for garnish)"
+      ],
+      "instructions": [
+        "Preheat oven to 50°C/120°F.",
+        "Cook bacon in a little oil or butter to your liking. Transfer to small baking pan, cover with foil then place in oven.",
+        "Ham - if using ham, cover and place in oven to warm slightly.",
+        "Lightly toast English muffins then keep warm on rack on tray.",
+        "Place egg yolks in a tall narrow jug that the blender stick fits in, all the way to the base.",
+        "Add water, lemon juice, cayanne pepper and salt. Blitz briefly to combine.",
+        "Melt butter in a heatproof jug until hot (be very careful to ensure it doesn't explode if using microwave!). If you use a stove, pour into a jug. Let it stand for just 15 seconds until the milky whites settles at the bottom of the jug. (Note 2)",
+        "With the blender stick going on high, slowly pour the butter in a thin stream into the eggs over around 45 seconds. Leave behind most of the milky whites in the butter - about 1 1/2 tbsp. (Note 2) Once all the butter is in, the sauce should be thick, creamy, smooth and pale yellow. Now blitz for a further 10 seconds, moving the stick up and down.",
+        "Thickness - If too thick, mix in warm tap water 1 teaspoon at a time. It should be thick but pourable so it will coat and stick to the eggs but not be transparent.",
+        "Keep warm - Transfer to a bowl, cover and keep warm - it will stay warm for 15 min but even room temp is fine (will heat up when in contact with hot eggs).",
+        "Strain eggs - Crack an egg into a small strainer set over a bowl or glass. Leave for 30 seconds and jiggle around a bit so watery whites strain through. Transfer to teacup. Repeat for another 3 eggs - separate teacup for each",
+        "Heat water - Fill a large pot with 7.5 cm / 3\" water. (Note 4) Bring water to the boil over high heat, then turn the heat down so there are tiny bubbles from the base of the pot but big bubbles are not breaking water surface. (Note 5)",
+        "Roll eggs into water - Submerge a teacup into the water so you can gently roll the egg out onto the base of the pot - minimise the drop distance for neatest shape. Repeat with remaining eggs - don't take longer than 15 seconds to put them all in.",
+        "Turn eggs - 20 seconds after the first egg has gone in, eggs should be starting but are not fully set. Use a slotted spoon and tablespoon/dessert spoon to gently turn the eggs upside down - start with the first egg that went in, end with the last.",
+        "Poach 1 1/2 minutes - Leave for 1 minute, then turn again. Leave for another 30 seconds then using a slotted spoon, lift one out to check for doneness - whites should be soft but set, yolks should be runny.",
+        "Drain - Transfer to paper towel to drain and for top to dry with residual heat - 15 seconds. (Don't leave for too long or it can get stuck to the paper towel.)",
+        "Place 2 English muffins halves on a plate. Pile on ham, bacon or smoked salmon. Top with poached egg, spoon over Hollandaise Sauce, sprinkle with parsley and chives. Serve immediately!"
+      ],
+      "tags": [
+        "breakfast",
+        "brunch",
+        "morning"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/eggs-benedict/"
+      },
+      "theme": "Breakfast & Brunch",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T04:02:31.486811Z"
+    },
+    {
+      "id": "scrambled-eggs-soft-and-creamy-just-as-they-should-be",
+      "slug": "scrambled-eggs-soft-and-creamy-just-as-they-should-be",
+      "title": "Scrambled eggs - soft and creamy, just as they should be!",
+      "image": "https://www.recipetineats.com/tachyon/2020/07/Scrambled-Eggs_5-SQ.jpg",
+      "prepTime": "1 min",
+      "cookTime": "1 min",
+      "totalTime": "1 min 1 min",
+      "servings": "2",
+      "ingredients": [
+        "4  eggs",
+        "2 tbsp milk (, any fat % (optional, Note 1))",
+        "1/4 tsp salt",
+        "2  grinds black pepper",
+        "1 tbsp / 15g  butter ((or margarine or oil))",
+        "4 slices bread (, toasted & slathered with butter)"
+      ],
+      "instructions": [
+        "Use a non stick skillet or well seasoned cast iron pan (about 25cm / 10\") and a rubber spatular (or flat edge wooden spoon).",
+        "Whisk together eggs, milk, salt and pepper.",
+        "Melt butter over medium heat (Note 1), then pour egg in.",
+        "Wait 5 seconds, then start leisurely pushing the rubber spatula back and forth in long strokes, and all around the skillet edges, to push the set egg out of the way and let raw egg run onto the skillet to cook. After 30 seconds or so, start adding some folding action too.",
+        "Cook for 60 seconds in total until you have a pile of soft, custardy scrambled egg folds (\"curds\") and no raw egg leaking on the edges of the pile.",
+        "Take it off the stove when it's still a bit undercooked for your taste.",
+        "Gently push /fold the eggs for another 10 seconds - it will finish cooking with residual pan heat - then slide onto hot toasted crusty bread slathered with butter.",
+        "Sprinkle with extra pepper then devour immediately! For a touch of garnish, look no further than an 80's style sprig of curly parsley. 👌🏻"
+      ],
+      "tags": [
+        "breakfast",
+        "brunch",
+        "morning",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/scrambled-eggs/"
+      },
+      "theme": "Breakfast & Brunch",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:02:34.842549Z"
+    },
+    {
+      "id": "sheet-pan-breakfast-burritos-with-creamy-chipotle-sauce",
+      "slug": "sheet-pan-breakfast-burritos-with-creamy-chipotle-sauce",
+      "title": "Sheet Pan Breakfast Burritos with Creamy Chipotle Sauce",
+      "image": "https://pinchofyum.com/wp-content/uploads/Sheet-Pan-Breakfast-Burritos-225x225.jpg",
+      "prepTime": "10 min",
+      "cookTime": "50 min",
+      "totalTime": "1 hr",
+      "servings": "6",
+      "ingredients": [
+        "1 large russet potato, peeled and cubed (about 2 heaping cups – see notes for using hasbrowns)",
+        "2 bell peppers, sliced",
+        "half of a yellow onion, thinly sliced",
+        "2 tablespoons olive oil",
+        "1/2 teaspoon coarse kosher salt",
+        "1/2 tablespoon Better Than Bouillon Roasted Garlic Base (optional, but great for flavor)",
+        "12 eggs",
+        "1/2 teaspoon coarse kosher salt",
+        "1/2 tablespoon Better Than Bouillon Roasted Garlic Base (optional, but great for flavor)",
+        "6 large tortillas (more or less depending on size of your tortilla)",
+        "1 14-ounce can refried black beans",
+        "7 ounces smoked gouda cheese, shredded",
+        "1/2 cup cilantro, chopped (optional)",
+        "salsa, or chipotle sauce for dipping (ingredients in notes!)"
+      ],
+      "instructions": [
+        "Preheat the oven to 425 degrees. Place potatoes, peppers, and onions on a half sheet pan. Toss with olive oil, salt, and Better Than Bouillon Roasted Garlic Base.",
+        "Roast veggies for 20 minutes; stir, and roast for another 15-20 minutes until potatoes are done and peppers and onions are a little browned.",
+        "Turn oven temperature to 350 degrees. Whisk egg mixture; pour directly onto the sheet pan with the veggies. Bake for 7 minutes.",
+        "Push the eggs gently around on the pan until “scrambled” a bit (they should still be a bit wet). Return to oven for 3-6 minutes until they’re set.",
+        "Fill tortillas with the egg mixture, refried beans, smoked gouda cheese, and cilantro. Wrap snugly in the tortilla, and roll it up in foil.",
+        "From here, you can freeze them for up to 3 months, or keep them in the fridge for 3-4 days. See notes for reheating methods! Serve with salsa and/or chipotle sauce.",
+        "Unwrap burrito (frozen or thawed) and place on a microwave safe plate. Microwave for 2-3 minutes. I flip it over halfway through to get it heated more evenly. ",
+        "Bake the foil-wrapped burrito at 425 for 30 minutes (25-30 for thawed, 35-40 if still frozen). As long as it’s in the foil, you can just put it directly on an oven rack. I do this while I’m getting ready and then it’s steamy and warmed for me to eat just before I leave! ",
+        "Spritz the outside of the burrito with oil and air fry at 350 for 4 minutes. For a skillet, pan fry in a skillet over medium heat with some butter for 2 minutes per side until golden. This can be done with a warmed OR frozen burrito – in either case, it will make the exterior crispy. If you do it with a frozen burrito, you might need to give it an additional 1-2 minutes in the microwave to ensure it’s heated through after crisping."
+      ],
+      "tags": [
+        "breakfast",
+        "brunch",
+        "morning",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Pinchofyum",
+        "url": "https://pinchofyum.com/sheet-pan-breakfast-burritos-with-creamy-chipotle-sauce"
+      },
+      "theme": "Breakfast & Brunch",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:02:38.032107Z"
+    },
+    {
+      "id": "the-ultimate-breakfast-sandwich",
+      "slug": "the-ultimate-breakfast-sandwich",
+      "title": "The Ultimate Breakfast Sandwich",
+      "image": "https://pinchofyum.com/wp-content/uploads/Breakfast-Sandwich-Recipe-225x225.jpg",
+      "prepTime": "5 min",
+      "cookTime": "10 min",
+      "totalTime": "15 min",
+      "servings": "4",
+      "ingredients": [
+        "8 eggs",
+        "4 slices cooked bacon",
+        "4 croissants",
+        "1/2 cup guacamole",
+        "4 slices pepperjack cheese",
+        "1/2 cup basic garlic butter tomato sauce"
+      ],
+      "instructions": [
+        "Toast your croissants for a few minutes in a 350 degree oven, cut side down on a cooking sheet. You can also do this in the toaster if your croissants fit in there.",
+        "When croissants are toasted and all other ingredients are out and ready, cook up your eggs. SOFT SCRAMBLED, remember?",
+        "Assemble sandwiches immediately, while eggs are at their best – a layer of tomato sauce, eggs, cheese, bacon, and guac on top. Holy wow."
+      ],
+      "tags": [
+        "breakfast",
+        "brunch",
+        "morning"
+      ],
+      "source": {
+        "name": "Pinchofyum",
+        "url": "https://pinchofyum.com/breakfast-sandwich"
+      },
+      "theme": "Breakfast & Brunch",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:02:41.187091Z"
+    },
+    {
+      "id": "french-toast-recipe",
+      "slug": "french-toast-recipe",
+      "title": "French Toast Recipe",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2023/01/French-Toast-syrup.jpg",
+      "prepTime": "5 min",
+      "cookTime": "10 min",
+      "totalTime": "15 min",
+      "servings": "4",
+      "ingredients": [
+        "3 large eggs* ($0.72)",
+        "1 cup milk ($0.21)",
+        "1 tsp vanilla extract ($0.59)",
+        "1/2 tsp cinnamon ($0.05)",
+        "1 pinch salt ($0.01)",
+        "5 Tbsp butter, divided ($0.70)",
+        "1 Tbsp cooking oil, divided ($0.04)",
+        "8 slices stale bread ($1.88)",
+        "1 tsp sugar, divided ($0.01)"
+      ],
+      "instructions": [
+        "Whisk the eggs, milk, vanilla, cinnamon, and a pinch of salt until they run in an uninterrupted line through the tines of a fork.",
+        "Warm a non-stick pan over medium-low heat. Add 3 tablespoons of butter and a 1/2 tablespoon of cooking oil. Heat until the butter foams.",
+        "Dip the slices of bread in the batter, covering both sides, allowing them to soak briefly. The slice should feel heavy, like a wet sponge, but shouldn't drip like a soaking wet sponge.",
+        "Place the slices in the pan and sprinkle the tops with a pinch of sugar. Cook until the slice has browned on the bottom. Flip and sprinkle the browned tops with a second pinch of sugar.",
+        "When you press your finger in the slice's center and it springs back, turn it over again and cook briefly to caramelize the last sprinkle of sugar. Repeat for all slices, adding more oil and butter as needed. Slice and serve warm."
+      ],
+      "tags": [
+        "breakfast",
+        "brunch",
+        "morning",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/french-toast/"
+      },
+      "theme": "Breakfast & Brunch",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:02:44.390973Z"
+    },
+    {
+      "id": "easy-cinnamon-rolls-from-scratch",
+      "slug": "easy-cinnamon-rolls-from-scratch",
+      "title": "Easy Cinnamon Rolls (from scratch)",
+      "image": "https://sallysbakingaddiction.com/wp-content/uploads/2013/05/easy-soft-cinnamon-rolls-2-225x225.jpg",
+      "prepTime": "1 hr 40 min",
+      "cookTime": "25 min",
+      "totalTime": "2 hrs 5 min",
+      "servings": "10",
+      "ingredients": [
+        "2 and 3/4 cups (344g) all-purpose flour (spooned & leveled), plus more as needed",
+        "1/4 cup (50g) granulated sugar",
+        "1/2 teaspoon salt",
+        "3/4 cup (180ml) whole milk",
+        "3 Tablespoons (43g) unsalted butter",
+        "2 and 1/4 teaspoons Platinum Yeast from Red Star or any instant yeast (1 standard packet)",
+        "1 large egg, at room temperature",
+        "3 Tablespoons (43g) unsalted butter, extra softened",
+        "1/3 cup (67g) packed light or dark brown sugar",
+        "1 Tablespoon ground cinnamon",
+        "4 ounces (113g) full-fat block cream cheese, softened to room temperature",
+        "2 Tablespoons (28g) unsalted butter, softened to room temperature",
+        "2/3 cup (80g) confectioners’ sugar",
+        "1 teaspoon pure vanilla extract"
+      ],
+      "instructions": [
+        "Whisk the flour, sugar, and salt together in a large bowl. Set aside.",
+        "Combine the milk and butter together in a heatproof bowl. Microwave or use the stove and heat until the butter has melted and the mixture is warm to the touch (about 110°F/43°C, no higher). Whisk in the yeast until it has dissolved. Pour mixture into the dry ingredients, add the egg, and stir with a sturdy rubber spatula or wooden spoon OR use a stand mixer with a paddle attachment on medium speed. Mix until a soft dough forms.",
+        "Transfer dough to a lightly floured surface. Using floured hands, knead the dough for 3-5 minutes. You should have a smooth ball of dough. If the dough is super soft or sticky, you can add a little more flour. Place in a lightly greased bowl (I use non-stick spray), cover loosely, and let the dough rest for about 10 minutes as you get the filling ingredients ready.",
+        "After 10 minutes, roll the dough out in a 14×8-inch (36×20-cm) rectangle. Spread the softened butter on top. Mix together the cinnamon and brown sugar. Sprinkle it all over the dough. Roll up the dough to make a 14-inch log. Cut into 10–12 even rolls and arrange in a lightly greased 9- or 10-inch round cake pan, pie dish, or square baking pan.",
+        "Cover the pan with aluminum foil, plastic wrap, or a clean kitchen towel. Allow the rolls to rise in a relatively warm environment for 60–90 minutes or until double in size. (For a tiny reduction in rise time, see my answer to Where Should Dough Rise? in my Baking with Yeast Guide.)",
+        "After the rolls have doubled in size, preheat the oven to 375°F (190°C). Bake for 24–27 minutes, or until lightly browned. If you notice the tops are getting too brown too quickly, loosely tent the pan with aluminum foil and continue baking. If you want to be precise about their doneness, their internal temperature taken with an instant read thermometer should be around 195–200°F (91–93°C) when done. Remove pan from the oven and place pan on a wire rack as you make the icing. (You can also make the icing as the rolls bake.)",
+        "In a medium bowl using a handheld or stand mixer fitted with a paddle or whisk attachment, beat the cream cheese on high speed until smooth and creamy. Add the butter and beat until smooth and combined, then beat in the confectioners’ sugar and vanilla until combined. Using a knife or icing spatula, spread the icing over the warm rolls and serve immediately. ",
+        "Cover leftover frosted or unfrosted rolls tightly and store at room temperature for a day or in the refrigerator for up to 5 days."
+      ],
+      "tags": [
+        "breakfast",
+        "brunch",
+        "morning",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Sallysbakingaddiction",
+        "url": "https://sallysbakingaddiction.com/easy-cinnamon-rolls-from-scratch/"
+      },
+      "theme": "Breakfast & Brunch",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T04:02:47.563327Z"
+    },
+    {
+      "id": "basic-crêpes",
+      "slug": "basic-crêpes",
+      "title": "Basic Crêpes",
+      "image": "https://www.allrecipes.com/thmb/hMjcfpc4E2VBN5wmwqgtHtDj_Gc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/16383-basic-crepes-VAT-009-4x3-b7893c79888c41dabc8c699d60e7534f.jpg",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "totalTime": "30 min",
+      "servings": "4",
+      "ingredients": [
+        "2 large eggs",
+        "0.5 cup milk",
+        "0.5 cup water",
+        "0.25 teaspoon salt",
+        "1 cup all-purpose flour",
+        "2 tablespoons butter, melted"
+      ],
+      "instructions": [
+        "Whisk eggs, milk, water, and salt together in a large mixing bowl. Add flour and melted butter; whisk vigorously until batter is smooth and pourable.",
+        "Heat a lightly oiled griddle or frying pan over medium-high heat. Pour or scoop the batter onto the pan, using approximately 1/4 cup for each crêpe. Tilt the pan with a circular motion so that the batter coats the surface evenly.",
+        "Cook until the top of the crêpe is no longer wet and the bottom has turned light brown, 1 to 2 minutes. Run a spatula around the edge of the skillet to loosen the crêpe; flip and cook until the other side has turned light brown, about 1 minute more.",
+        "Serve hot. Enjoy!"
+      ],
+      "tags": [
+        "breakfast",
+        "brunch",
+        "morning",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/16383/basic-crepes/"
+      },
+      "theme": "Breakfast & Brunch",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:02:50.882285Z"
+    },
+    {
+      "id": "quiche-lorraine",
+      "slug": "quiche-lorraine",
+      "title": "Quiche Lorraine",
+      "image": "https://www.allrecipes.com/thmb/plG7UKAQvPQdn04AA_SBfj88ki0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/17515-quiche-lorraine-i-DDMFS-4x3-efda035d462a4242b7a18f39e21df047.jpg",
+      "prepTime": "15 min",
+      "cookTime": "55 min",
+      "totalTime": "80 min",
+      "servings": "6",
+      "ingredients": [
+        "12 slices bacon",
+        "1 cup shredded Swiss cheese",
+        "0.33333334326744 cup minced onion",
+        "1 (9 inch) prepared pie crust",
+        "2 cups light cream",
+        "4 large eggs, beaten",
+        "0.75 teaspoon salt",
+        "0.25 teaspoon white sugar",
+        "0.125 teaspoon cayenne pepper"
+      ],
+      "instructions": [
+        "Preheat the oven to 425 degrees F (220 degrees C).",
+        "Place bacon in a large skillet and cook over medium-high heat, turning occasionally, until evenly browned, about 10 minutes. Drain bacon slices on paper towels, then chop coarsely.",
+        "Sprinkle bacon, Swiss cheese, and onion into prepared pastry crust.",
+        "Whisk cream, eggs, salt, sugar, and cayenne pepper in a medium bowl; pour mixture into pastry shell.",
+        "Bake in the preheated oven for 15 minutes. Reduce heat to 300 degrees F (150 degrees C) and continue baking until a knife inserted 1 inch from the edge comes out clean, about 30 minutes.",
+        "Allow quiche to sit 10 minutes before cutting into wedges and serving."
+      ],
+      "tags": [
+        "breakfast",
+        "brunch",
+        "morning"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/17515/quiche-lorraine-i/"
+      },
+      "theme": "Breakfast & Brunch",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T04:02:54.301964Z"
+    }
+  ]
+}

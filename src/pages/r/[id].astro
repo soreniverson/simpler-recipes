@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SharedRecipeView from '../../components/SharedRecipeView.jsx';
+
+// Disable prerendering - this is a dynamic route
+export const prerender = false;
+
+const { id } = Astro.params;
+---
+
+<BaseLayout
+  title="Shared Recipe - Simpler Recipes"
+  description="A recipe shared via Simpler Recipes."
+>
+  <SharedRecipeView client:only="react" recipeId={id} />
+</BaseLayout>

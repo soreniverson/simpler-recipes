@@ -1,0 +1,444 @@
+{
+  "theme": {
+    "slug": "appetizers-party",
+    "name": "Appetizers & Party Food",
+    "description": "Crowd-pleasing starters and finger foods perfect for entertaining"
+  },
+  "metadata": {
+    "recipeCount": 10,
+    "lastUpdated": "2026-01-18T04:04:30.318326Z"
+  },
+  "recipes": [
+    {
+      "id": "spinach-artichoke-dip",
+      "slug": "spinach-artichoke-dip",
+      "title": "Spinach Artichoke Dip",
+      "image": "https://www.recipetineats.com/tachyon/2017/05/Spinach-Artichoke-Dip-7.jpg",
+      "prepTime": "10 min",
+      "cookTime": null,
+      "totalTime": "10 min",
+      "servings": "10",
+      "ingredients": [
+        "400 g / 14 oz   artichoke hearts in brine (, drained (Note 1))",
+        "250 g / 8 oz   frozen chopped spinach (, thawed (Note 2))",
+        "250 g / 8 oz   Philadelphia cream cheese ((Note 3))",
+        "1 tsp garlic powder ((or 2 garlic cloves, minced))",
+        "1/3 cup mayonnaise ((Note 4))",
+        "½ cup sour cream or yoghurt ((full fat recommended))",
+        "1 cup grated cheese (, any with flavour like Cheddar, Colby, Tasty Cheese (Australian) (Note 5))",
+        "½ cup grated parmesan cheese",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "Roughly chop the artichokes.",
+        "Squeeze excess liquid out of spinach. Either use paper towels or a clean dishtowel, or my method is to use a colander and press liquid out using a wooden spoon.",
+        "Place cream cheese in a large heatproof bowl. Microwave in 2 x 30 second bursts or until softened. Mix until smooth.",
+        "Add remaining ingredients. Mix until just combined (don’t overmix vigorously, otherwise you’ll smush the artichokes and spinach).",
+        "Warm in microwave to your taste. Adjust salt and pepper to taste.",
+        "Best served warm but terrific served at room temperature too! Serve with your favourite crackers, vegetable sticks and chips."
+      ],
+      "tags": [
+        "appetizer",
+        "party",
+        "finger-food",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/spinach-and-artichoke-dip/"
+      },
+      "theme": "Appetizers & Party Food",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:59.015736Z"
+    },
+    {
+      "id": "devilled-eggs",
+      "slug": "devilled-eggs",
+      "title": "Devilled eggs",
+      "image": "https://www.recipetineats.com/tachyon/2025/02/Devilled-eggs_8.jpg",
+      "prepTime": "20 min",
+      "cookTime": "10 min",
+      "totalTime": "43 min",
+      "servings": "18",
+      "ingredients": [
+        "12  large eggs ((50-55g / 2 oz each in shell, fridge cold (Note 1))",
+        "2 tsp Dijon mustard",
+        "2 tsp Tabasco or other hot sauce",
+        "1 tsp white wine vinegar",
+        "2 tsp mayonnaise (, whole egg mayo preferred, or kewpie)",
+        "1/4 heaped teaspoon cooking salt / kosher sale ((Note 3))",
+        "50 g/ 3 tbsp   cold unsalted butter (, cut into 1 cm / 0.2\" cubes)",
+        "Paprika (, regular/sweet, or smoked)",
+        "1 tbsp chives (, finely chopped)"
+      ],
+      "instructions": [
+        "Hard boil eggs, halve, blitz yolks with Filling ingredients except butter, then blitz in butter. Pipe (18 - 20 pieces), garnish, serve!",
+        "Large pot - Bring a large pot with 15cm / 6 water to the boil. Lower eggs in gently using a spider or slotted spoon. Lower heat a tiny bit if needed to stop the eggs from jostling around so much they crack.",
+        "Boil and swirl -  Boil eggs for 10 minutes. Swirl the water every minute for the first 6 minutes, using the handle of a wooden spoon. Give the water 4 or 5 fast stirs in one direction to make the water and eggs swirl in the water. The centrifugal force will make the yolks cook centred in the egg white (ie no thin broken egg white walls) (Note 4).",
+        "Peel - Fill a sink with cold tap water. Remove eggs from the boiling water using a slotted spoon or spider. Leave for 5 minutes until cool enough to handle. Tap the base then peel under water (it's easier).",
+        "Remove yolks - Cut eggs in half and remove the yolks using a teaspoon.",
+        "Filling - Place the yolks and all filling ingredients EXCEPT butter in a small food processor (Note 5). Blitz until yolks are broken up. Add butter and blitz, scraping down the sides as needed, until the butter is blended through. The filling should be creamy (smear with back of spoon to check).",
+        "Choose the best 18 to 20 egg white halves. (Note 6) Brush yolk crumbs off the cut surface.",
+        "Pipe - Transfer filling into a piping bag fitted with a nozzle of your choice (I use a star). Fill so it's mounded - I do about the same amount as a whole yolk.",
+        "Sprinkle with paprika and chives. Serve! (Best enjoyed at room temperature rather than fridge cold as the filling is creamier.)"
+      ],
+      "tags": [
+        "appetizer",
+        "party",
+        "finger-food",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/devilled-eggs/"
+      },
+      "theme": "Appetizers & Party Food",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:04:03.073584Z"
+    },
+    {
+      "id": "truly-crispy-oven-baked-chicken-wings",
+      "slug": "truly-crispy-oven-baked-chicken-wings",
+      "title": "Truly Crispy Oven Baked Chicken Wings",
+      "image": "https://www.recipetineats.com/tachyon/2014/11/Crispy-Baked-Wings_6.jpg",
+      "prepTime": "10 min",
+      "cookTime": "70 min",
+      "totalTime": "80 min",
+      "servings": "6",
+      "ingredients": [
+        "4 lb / 2 kg  chicken wings (, cut into wingettes and drumettes (Note 1))",
+        "5 teaspoons baking powder (NOT BAKING SODA / BI-CARB SODA!!)",
+        "3/4 teaspoon salt",
+        "Oil spray"
+      ],
+      "instructions": [
+        "If you are organised enough, uncover the chicken wings and leave them in the fridge for a few hours to dry out. Otherwise, use a paper towel to pat the wings dry.",
+        "Adjust oven racks to upper-middle and lower-middle positions.",
+        "Preheat oven to 250F/120C (all oven types - standard/convection/fan).",
+        "Line a baking tray with foil, then place a rack (like a cooling rack) on the foil. Spray the rack with oil spray.",
+        "Place wings in a large bowl or in a ziplock bag. Add the baking powder and salt, then toss to coat evenly.",
+        "Place the wings on the baking tray in a single layer with the skin side up. They should just fit snugly. They will shrink when they cook because the fat renders out so don't worry if they look too snug.",
+        "Place wings on the lower middle oven rack and bake for 30 minutes.",
+        "Move wings up to the upper middle rack and increase the oven temperature to 425F/220C. Bake for 40 - 50 minutes, rotating the tray halfway through.",
+        "Remove baking tray from the oven and let it stand for 5 minutes.",
+        "Toss wings in sauce of choice or serve it on the side to dip / drizzle on the wings, then serve."
+      ],
+      "tags": [
+        "appetizer",
+        "party",
+        "finger-food",
+        "poultry"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/crispy-oven-baked-chicken-wings/"
+      },
+      "theme": "Appetizers & Party Food",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:04:06.822725Z"
+    },
+    {
+      "id": "spinach-artichoke-dip",
+      "slug": "spinach-artichoke-dip",
+      "title": "Spinach Artichoke Dip",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2023/10/Spinach-Artichoke-Dip-party.jpg",
+      "prepTime": "15 min",
+      "cookTime": "45 min",
+      "totalTime": "60 min",
+      "servings": "6",
+      "ingredients": [
+        "10 oz. frozen chopped spinach, thawed* ($1.79)",
+        "1 14oz. can quartered artichoke hearts** ($2.99)",
+        "1.5 cups shredded mozzarella, divided ($1.87)",
+        "1/4 cup grated Parmesan ($0.38)",
+        "1 pinch crushed red pepper ($0.02)",
+        "2 Tbsp butter ($0.26)",
+        "2 cloves garlic, minced ($0.16)",
+        "8 oz. cream cheese ($1.25)",
+        "1/2 cup sour cream ($0.63)",
+        "1/4 cup mayonnaise ($0.33)",
+        "2 dashes hot sauce  ($0.05)"
+      ],
+      "instructions": [
+        "Preheat the oven to 375ºF. Make sure the spinach is fully thawed, then squeeze out as much of the excess water as possible. Once squeezed, break the spinach up so there are no large clumps. Place the squeeze dried spinach in a large bowl.",
+        "Drain and roughly chop the artichoke hearts. Place the artichoke hearts in the bowl with the spinach, 1 cup of the mozzarella, grated Parmesan, and crushed red pepper. Stir these ingredients together to combine, then set them aside.",
+        "Add the butter and minced garlic to a small sauce pot. Sauté the garlic in the butter over medium-low heat for about two minutes, or just until the garlic becomes very fragrant.",
+        "Cut the cream cheese into chunks and add it to the sauce pot along with the sour cream and mayonnaise. Heat and whisk these ingredients together for about five minutes, or until they melt together into a smooth sauce. Finally, stir in a couple dashes of hot sauce.",
+        "Pour the creamy garlic sauce over the spinach artichoke mixture, then stir until everything is evenly combined and coated in sauce. Transfer the mixture to a 2-quart casserole dish, then top with the remaining ½ cup shredded mozzarella.",
+        "Bake the dip for about 30 minutes, or until it is bubbling around the edges and the cheese on top is turning golden brown. Serve while hot."
+      ],
+      "tags": [
+        "appetizer",
+        "party",
+        "finger-food",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/double-spinach-artichoke-dip/"
+      },
+      "theme": "Appetizers & Party Food",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:04:10.040207Z"
+    },
+    {
+      "id": "spicy-baked-black-bean-nachos",
+      "slug": "spicy-baked-black-bean-nachos",
+      "title": "Spicy Baked Black Bean Nachos",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2017/04/Spicy-Baked-Black-Bean-Nachos-finished.jpg",
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "totalTime": "35 min",
+      "servings": "4",
+      "ingredients": [
+        "1 Tbsp olive oil ($0.13)",
+        "1  small onion  ($0.32)",
+        "1 10oz. can diced tomatoes with green chiles ($0.99)",
+        "1 15oz. can black beans ($1.00)",
+        "1/2 tsp chipotle powder  ($0.05)",
+        "1/2 tsp ground cumin  ($0.05)",
+        "1/4 tsp garlic powder  ($0.02)",
+        "1/4 tsp salt  ($0.02)",
+        "8 oz. sturdy corn tortilla chips  ($1.50)",
+        "4 oz. cheddar, shredded* ($1.00)",
+        "1  Roma tomato ($0.32)",
+        "1  jalapeño ($0.12)",
+        "1/3 cup pickled red onions  ($0.24)",
+        "1 handful fresh cilantro ($0.25)",
+        "1/4 cup sour cream ($0.37)"
+      ],
+      "instructions": [
+        "Finely dice the onion. Add the olive oil and onion to a large skillet and sauté over medium heat until the onion is soft and transparent (about 5 minutes). Drain, but do not rinse the black beans, allowing some of the starchy liquid to remain coating the beans. Add the beans and diced tomatoes with chiles (not drained) to the skillet, along with the chipotle powder, cumin, garlic powder, and salt. Stir and simmer the mixture until it thickens and liquid no longer pools on the bottom of the skillet (about 10 minutes).",
+        "Begin preheating the oven to 350ºF. Shred the cheddar cheese, finely dice the Roma tomato, thinly slice the jalapeño, and chop the cilantro.",
+        "Line a baking sheet with parchment or foil. Spread a layer of tortilla chips over the baking sheet in a single layer, trying not to overlap the chips. Spoon about half of the black bean mixture over the chips, then sprinkle half of the shredded cheese over top. Repeat with one more layer of chips, black beans, and cheese.",
+        "Bake the chips, beans, and cheese for 5-7 minutes, or until the cheese is fully melted and the chips are just beginning to turn golden brown on the edges. Remove the nachos from the oven and add a drizzles or dollops of sour cream over top. Sprinkle the diced tomato, sliced jalapeño, pickled red onions, and chopped cilantro over top."
+      ],
+      "tags": [
+        "appetizer",
+        "party",
+        "finger-food",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/spicy-baked-black-bean-nachos/"
+      },
+      "theme": "Appetizers & Party Food",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:04:13.268099Z"
+    },
+    {
+      "id": "best-hummus",
+      "slug": "best-hummus",
+      "title": "Best Hummus",
+      "image": "https://cookieandkate.com/images/2018/05/best-hummus-225x225.jpg",
+      "prepTime": "20 min",
+      "cookTime": "20 min",
+      "totalTime": "40 min",
+      "servings": "2",
+      "ingredients": [
+        "1 can (15 ounces) chickpeas, rinsed and drained, or 1 ½ cups cooked chickpeas",
+        "½ teaspoon baking soda (if you’re using canned chickpeas)",
+        "¼ cup lemon juice (from 1 ½ to 2 lemons), more to taste",
+        "1 medium-to-large clove garlic, roughly chopped",
+        "½ teaspoon fine sea salt, to taste",
+        "½ cup tahini",
+        "2 to 4 tablespoons ice water, more as needed",
+        "½ teaspoon ground cumin",
+        "1 tablespoon extra-virgin olive oil",
+        "Any of the following garnishes:  drizzle of olive oil or zhoug sauce, sprinkle of ground sumac or paprika, chopped fresh parsley"
+      ],
+      "instructions": [
+        "Place the chickpeas in a medium saucepan and add the baking soda. Cover the chickpeas by several inches of water, then bring the mixture to a boil over high heat. Continue boiling, reducing heat if necessary to prevent overflow, for about 20 minutes, or until the chickpeas look bloated, their skins are falling off, and they’re quite soft. In a fine-mesh strainer, drain the chickpeas and run cool water over them for about 30 seconds. Set aside (no need to peel the chickpeas for this recipe!).",
+        "Meanwhile, in a food processor or high-powered blender, combine the lemon juice, garlic and salt. Process until the garlic is very finely chopped, then let the mixture rest so the garlic flavor can mellow, ideally 10 minutes or longer.",
+        "Add the tahini to the food processor and blend until the mixture is thick and creamy, stopping to scrape down any tahini stuck to the sides and bottom of the processor as necessary.",
+        "While running the food processor, drizzle in 2 tablespoons ice water. Scrape down the food processor, and blend until the mixture is ultra smooth, pale and creamy. (If your tahini was extra-thick to begin with, you might need to add 1 to 2 tablespoons more ice water.)",
+        "Add the cumin and the drained, over-cooked chickpeas to the food processor. While blending, drizzle in the olive oil. Blend until the mixture is super smooth, scraping down the sides of the processor as necessary, about 2 minutes. Add more ice water by the tablespoon if necessary to achieve a super creamy texture.",
+        "Taste, and adjust as necessary—I almost always add another ¼ teaspoon salt for more overall flavor and another tablespoon of lemon juice for extra zing.",
+        "Scrape the hummus into a serving bowl or platter, and use a spoon to create nice swooshes on top. Top with garnishes of your choice, and serve. Leftover hummus keeps well in the refrigerator, covered, for up to 1 week."
+      ],
+      "tags": [
+        "appetizer",
+        "party",
+        "finger-food",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Cookieandkate",
+        "url": "https://cookieandkate.com/best-hummus-recipe/"
+      },
+      "theme": "Appetizers & Party Food",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:04:16.416447Z"
+    },
+    {
+      "id": "italian-spaghetti-sauce-with-meatballs",
+      "slug": "italian-spaghetti-sauce-with-meatballs",
+      "title": "Italian Spaghetti Sauce with Meatballs",
+      "image": "https://www.allrecipes.com/thmb/ZO5edyo6JhS1ZFELyDepR0Y170w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/21353-italian-spaghetti-sauce-with-meatballs-DDMFS-4x3-a9a1528b4f06483dbec38d0c2945c378.jpg",
+      "prepTime": "20 min",
+      "cookTime": "120 min",
+      "totalTime": "140 min",
+      "servings": "6",
+      "ingredients": [
+        "1 pound lean ground beef",
+        "1 cup fresh bread crumbs",
+        "1 tablespoon dried parsley",
+        "1 tablespoon grated Parmesan cheese",
+        "0.25 teaspoon ground black pepper",
+        "0.125 teaspoon garlic powder",
+        "1 egg, beaten",
+        "0.75 cup chopped onion",
+        "5 cloves garlic, minced",
+        "0.25 cup olive oil",
+        "2 (28 ounce) cans whole peeled tomatoes",
+        "2 teaspoons salt",
+        "1 teaspoon white sugar",
+        "1 bay leaf",
+        "1 (6 ounce) can tomato paste",
+        "0.75 teaspoon dried basil",
+        "0.5 teaspoon ground black pepper"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "In a large bowl, combine ground beef, bread crumbs, parsley, Parmesan, 1/4 teaspoon black pepper, garlic powder and beaten egg. Mix well and form into 12 balls. Store, covered, in refrigerator until needed.",
+        "In a large saucepan over medium heat, saute onion and garlic in olive oil until onion is translucent.",
+        "Stir in tomatoes, salt, sugar and bay leaf. Cover, reduce heat to low, and simmer 90 minutes.",
+        "Stir in tomato paste, basil, 1/2 teaspoon pepper and meatballs and simmer 30 minutes more.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "appetizer",
+        "party",
+        "finger-food",
+        "pasta"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/21353/italian-spaghetti-sauce-with-meatballs/"
+      },
+      "theme": "Appetizers & Party Food",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:04:19.764185Z"
+    },
+    {
+      "id": "buffalo-chicken-dip",
+      "slug": "buffalo-chicken-dip",
+      "title": "Buffalo Chicken Dip",
+      "image": "https://www.allrecipes.com/thmb/DbLlQZDpY-UceLHHAtMupsSBuak=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/68461-buffalo-chicken-dip--DDMFS-4x3-1007-51d829de02274d55bf3c5ac2ed246917.jpg",
+      "prepTime": "15 min",
+      "cookTime": "40 min",
+      "totalTime": "55 min",
+      "servings": "20",
+      "ingredients": [
+        "2 (10 ounce) cans chunk chicken, drained",
+        "0.75 cup hot pepper sauce (such as Frank's RedHot®)",
+        "2 (8 ounce) packages cream cheese, softened",
+        "1 cup ranch dressing",
+        "1.5 cups shredded Cheddar cheese",
+        "1 bunch celery, cut into 4-inch pieces",
+        "1 (8 ounce) box chicken-flavored crackers"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Heat chicken and hot pepper sauce in a skillet over medium heat until heated through, 3 to 5 minutes. Stir in cream cheese and ranch dressing. Cook and stir until well blended and warm, 3 to 5 minutes.",
+        "Mix in 1/2 of the Cheddar cheese, and transfer the mixture to a slow cooker. Sprinkle the remaining cheese over top.",
+        "Cover and cook on Low until dip is hot and bubbly, about 35 minutes.",
+        "Serve warm with celery sticks and crackers for dipping."
+      ],
+      "tags": [
+        "appetizer",
+        "party",
+        "finger-food",
+        "poultry"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/68461/buffalo-chicken-dip/"
+      },
+      "theme": "Appetizers & Party Food",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:04:23.105745Z"
+    },
+    {
+      "id": "guacamole",
+      "slug": "guacamole",
+      "title": "Guacamole",
+      "image": "https://www.allrecipes.com/thmb/6RyFPH5N4KKmZhNY0Giob_Jj3wc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-14231-guacamole-4x3-f7a3b5752c7f4f3fb934d03a8b548826.jpg",
+      "prepTime": "15 min",
+      "cookTime": null,
+      "totalTime": "15 min",
+      "servings": "4",
+      "ingredients": [
+        "3 avocados - peeled, pitted, and mashed",
+        "1 lime, juiced",
+        "1 teaspoon salt",
+        "2 roma (plum) tomatoes, diced",
+        "0.5 cup diced onion",
+        "3 tablespoons chopped fresh cilantro",
+        "1 teaspoon minced garlic",
+        "1 pinch ground cayenne pepper"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Mash avocados, lime juice, and salt together in a medium bowl; mix in tomatoes, onion, cilantro, and garlic.",
+        "Stir in cayenne pepper. Serve immediately, or cover and refrigerate for 1 hour for improved flavor."
+      ],
+      "tags": [
+        "appetizer",
+        "party",
+        "finger-food",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/14231/guacamole/"
+      },
+      "theme": "Appetizers & Party Food",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:04:26.451039Z"
+    },
+    {
+      "id": "tzatziki-chickpea-salad",
+      "slug": "tzatziki-chickpea-salad",
+      "title": "Tzatziki Chickpea Salad",
+      "image": "https://www.recipetineats.com/tachyon/2024/09/Tzatziki-chickpea-salad_0.jpg",
+      "prepTime": "12 min",
+      "cookTime": null,
+      "totalTime": "72 min",
+      "servings": "4",
+      "ingredients": [
+        "2  cucumbers (, grated using a box grater, excess water squeezed out very well (3/4 cup once squeezed))",
+        "1 1/4 cups Greek yogurt ((or thick plain yogurt))",
+        "1 tbsp lemon juice",
+        "2 1/2 tbsp extra virgin olive oil (, plus extra for drizzling)",
+        "1/4 cup roughly chopped fresh dill (, plus extra for sprinkling, or half the quantity chopped fresh mint (Note 1))",
+        "1  large garlic clove (, crushed using garlic press , finely grate or very finely minced using a knife)",
+        "1/2 tsp cooking salt / kosher salt",
+        "2 x 400g / 14 oz cans   chickpeas (, well drained (Note 2 for dried))",
+        "3/4 cup finely sliced celery ((1 - 2 stems))",
+        "2 tbsp chopped capers ((sub cornichons or dill pickles))"
+      ],
+      "instructions": [
+        "Mix - Put the Tzatziki ingredients in a big bowl and mix. Add the chickpeas, celery and capers, mix again.",
+        "Wait 1 hour - You can eat it straight away but it's better if you can set aside for at least 1 hour to let the flavours meld (especially salt from capers & the garlic). It's even better the next day. Give it a taste and add a pinch of extra salt if needed (capers saltiness can differ).",
+        "Serve drizzled with extra olive oil and extra dill. Dive in!",
+        "As a side salad or salad meal, stuffed into sandwiches/wraps (+ avocado, good \"glue\"), add chicken or canned tuna for protein-boost salad meal."
+      ],
+      "tags": [
+        "appetizer",
+        "party",
+        "finger-food",
+        "vegetarian",
+        "salad"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/tzatziki/"
+      },
+      "theme": "Appetizers & Party Food",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:04:30.316716Z"
+    }
+  ]
+}

@@ -1,0 +1,467 @@
+{
+  "theme": {
+    "slug": "grilling-bbq",
+    "name": "Grilling & BBQ",
+    "description": "Fire up the grill with these outdoor cooking favorites and smoky flavors"
+  },
+  "metadata": {
+    "recipeCount": 10,
+    "lastUpdated": "2026-01-18T04:03:25.581429Z"
+  },
+  "recipes": [
+    {
+      "id": "sticky-grilled-chicken",
+      "slug": "sticky-grilled-chicken",
+      "title": "Sticky Grilled Chicken",
+      "image": "https://www.recipetineats.com/tachyon/2020/06/Sticky-Grilled-Chicken_7-SQ.jpg",
+      "prepTime": "10 min",
+      "cookTime": "10 min",
+      "totalTime": "1460 min",
+      "servings": "4",
+      "ingredients": [
+        "700g/ 1.4lb   chicken thighs (, skinless boneless (Note 1))",
+        "1/2 cup ketchup",
+        "1/3 cup brown sugar (, packed)",
+        "1/4 cup soy sauce (, all purpose or light (NOT dark))",
+        "2 tbsp apple cider vinegar",
+        "2 tbsp olive oil",
+        "4 tsp Worcestershire Sauce",
+        "4  garlic cloves (, minced)"
+      ],
+      "instructions": [
+        "Mix Marinade in a large bowl.",
+        "Scoop out 1/2 cup and reserve for basting (\"Glaze\").",
+        "Add chicken, turn to coat. Marinade overnight (minimum 3 hours, up to 48 hours, or freeze).",
+        "Brush BBQ with vegetable or canola oil, then preheat to medium.",
+        "Pick up chicken, allowing excess Marinade to drip off.",
+        "Place on BBQ, cook 4 minutes until nicely caramelised.",
+        "Turn chicken, then brush generously with Glaze. Cook 4 minutes.",
+        "Flip, brush with more Glaze, flip again and brush with Glaze.",
+        "Remove chicken onto plate, cover loosely with foil.",
+        "Rest 3 minutes before serving, sprinkled with parsley if using. Pictured in post with Macaroni Salad!",
+        "Stove - follow up steps in a non stick pan, heated to medium high with 1 tbsp oil (cook in batches if needed).",
+        "Oven - use this recipe: Sticky Baked Chicken"
+      ],
+      "tags": [
+        "grilling",
+        "bbq",
+        "outdoor",
+        "poultry"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/sticky-grilled-chicken/"
+      },
+      "theme": "Grilling & BBQ",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:02:55.917629Z"
+    },
+    {
+      "id": "oven-pork-ribs-with-barbecue-sauce",
+      "slug": "oven-pork-ribs-with-barbecue-sauce",
+      "title": "Oven Pork Ribs with Barbecue Sauce",
+      "image": "https://www.recipetineats.com/tachyon/2019/08/Oven-Pork-Ribs-with-Barbecue-Sauce-SQ.jpg",
+      "prepTime": "15 min",
+      "cookTime": "135 min",
+      "totalTime": "150 min",
+      "servings": "6",
+      "ingredients": [
+        "2.5 tsp paprika powder",
+        "2 tsp garlic powder ((sub with onion powder))",
+        "1.5 tsp onion powder ((sub with garlic powder))",
+        "1 tsp cayenne pepper ((omit for not spicy))",
+        "1.5 tsp dried thyme",
+        "1.5 tsp dried oregano",
+        "1.5 tsp salt",
+        "0.5 tsp black pepper",
+        "2 - 2.5kg / 4 - 5lb  pork ribs (2 racks)",
+        "3/4 cup sweet alcoholic apple cider (hard cider) (, or apple juice (Note 2))",
+        "1 tbsp olive oil",
+        "1/2 cup apple cider vinegar ((Note 3))",
+        "1 1/2 cups tomato ketchup ((or Aussie tomato sauce))",
+        "1/2 cup water ((or use remaining apple cider!))",
+        "1 1/2 tbsp molasses (, orginal (not blackstrap, Note 4))",
+        "1/3 cup brown sugar",
+        "2 tsp mustard powder",
+        "1 1/2 tsp garlic powder",
+        "2 tsp Worcestershire sauce",
+        "1 tsp salt",
+        "1 tsp black pepper",
+        "1 tsp Tabasco or cayenne pepper ((optional, for spiciness))"
+      ],
+      "instructions": [
+        "Combine the Rub ingredients and rub onto both sides of the ribs (most on meaty side). Set aside to marinate for 20 minutes (or overnight).",
+        "Preheat oven to 160°C/320°F (all oven types).",
+        "Place ribs on a tray in a single layer. Pour apple cider underneath the ribs, cover with foil then bake for 1 hour 30 minutes or until the meat is pretty tender (Note 5).",
+        "Remove from oven, turn up to 180°C/350°F. Remove foil, drizzle with olive oil, then return ribs to oven for 15 minutes or until rub becomes nice and crusty.",
+        "Line a new tray with foil then baking / parchment paper (you'll thank me later).",
+        "Remove ribs from oven, transfer to lined tray. Pour any juices from tray over the ribs.",
+        "Flip ribs so the bonier side is up. Slather with Barbecue Sauce, then bake 10 minutes.",
+        "Remove from oven, then turn ribs over so the meaty side is up. Slather with Barbecue Sauce, bake 5 minutes. Repeat 2 or 3 more times until you've got a thick glaze on the ribs.",
+        "Cut ribs into individual or multiple rib portions and serve with remaining Barbcue Sauce!",
+        "Place all ingredients in a saucepan and simmer over medium heat, stirring occasionally, for 45 minutes or until thickened.",
+        "Adjust to taste: sweetness with brown sugar / honey, salt and sour with vinegar. Use for glazing ribs and as a sauce for serving."
+      ],
+      "tags": [
+        "grilling",
+        "bbq",
+        "outdoor",
+        "meat"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/oven-baked-barbecue-pork-ribs/"
+      },
+      "theme": "Grilling & BBQ",
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T04:02:59.281526Z"
+    },
+    {
+      "id": "thai-grilled-chicken-gai-yang",
+      "slug": "thai-grilled-chicken-gai-yang",
+      "title": "Thai Grilled Chicken (Gai Yang)",
+      "image": "https://www.recipetineats.com/tachyon/2015/06/Thai-chicken-marinated-Gai-Yang_0.jpg",
+      "prepTime": "8 min",
+      "cookTime": "12 min",
+      "totalTime": "20 min",
+      "servings": "5",
+      "ingredients": [
+        "2 lb / 1 kg  chicken thigh fillets ((skinless, boneless) (Note 1))",
+        "1  large lemongrass stalk (, white part only, reedy outer layers removed, sliced 5mm / 1/5\" thick (Note 2 tube paste sub))",
+        "4 cloves garlic (, peeled (whole))",
+        "2 1/2 tbsp fish sauce",
+        "1 tbsp light soy sauce (, or any all-purpose soy or tamari (Note 3))",
+        "2 tsp dark soy sauce ((Note 3))",
+        "3 tbsp (tightly packed) brown sugar or palm sugar",
+        "2 tbsp oil (, vegetable, canola, or any other neutral flavoured oil)",
+        "Nam Jim Jaew (- traditional Thai Dipping Sauce for meat *RECOMMENDED*)",
+        "Lime Sweet Chilli Sauce",
+        "Bottle of sweet chilli sauce",
+        "Lime wedges",
+        "Red chili (, finely sliced (optional))",
+        "Cilantro / coriander leaves ((optional))",
+        "Coconut rice"
+      ],
+      "instructions": [
+        "Blitz - Place Marinade ingredients EXCEPT oil in a jug just large enough to fit the head of a stick blender. Blitz until lemongrass and garlic is fully pureed. (No stick blender? Finely grate lemongrass and garlic, then mix)",
+        "Marinate - Pour in a bowl. Add oil, stir. Add chicken, toss to thoroughly coat. Cover and marinate overnight (my bare minimum is 3 hours). No marinating time? Finely slice, toss in marinade then cook like a stir-fry.",
+        "Heat the outdoor BBQ grill on high or a non stick pan over high heat on the stove.",
+        "Cook - Remove chicken from the Marinade and discard the Marinade (unless baking in the oven - refer Note 3). Put chicken on the BBQ or in the pan, then turn heat down to medium (sweet marinade = prone to burning). Cook the chicken until golden brown - around 5 to 6 minutes on each side. (If it burns, flip straight away. You can flip repeatedly, as needed.)",
+        "Rest and serve - Rest for 3 minutes. Serve alongside a mound of steamy coconut rice with lime wedges, garnished with fresh chilies and coriander/cilantro, and your chosen sauce."
+      ],
+      "tags": [
+        "grilling",
+        "bbq",
+        "outdoor",
+        "poultry"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/thai-grilled-chicken-gai-yang/"
+      },
+      "theme": "Grilling & BBQ",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:02.601545Z"
+    },
+    {
+      "id": "slow-cooker-pulled-pork",
+      "slug": "slow-cooker-pulled-pork",
+      "title": "Slow Cooker Pulled Pork",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2022/09/Slow-Cooker-Pulled-Pork-sandwich-blank.jpg",
+      "prepTime": "15 min",
+      "cookTime": "240 min",
+      "totalTime": "255 min",
+      "servings": "8",
+      "ingredients": [
+        "3 lbs. pork butt ($8.07)",
+        "1  yellow onion, cut into chunks ($0.37)",
+        "4 cloves garlic, roughly chopped ($0.32)",
+        "2 tsp paprika ($0.20)",
+        "1 tsp smoked paprika ($0.10)",
+        "2 Tbsp brown sugar ($0.08)",
+        "1 tsp garlic powder ($0.10)",
+        "1 tsp onion powder ($0.10)",
+        "2 tsp salt ($0.10)",
+        "1/2 tsp freshly cracked black pepper ($0.04)"
+      ],
+      "instructions": [
+        "Combine the spices for the spice rub in a bowl.",
+        "Cut the pork butt into large chunks. If the pork butt has a bone you can either remove it before cooking or wait until you are shredding the cooked meat to remove it. Keep in mind the pork will require extra cooking time if cooking with the bone in.",
+        "Add the pork pieces to a large bowl and sprinkle the spice rub over top. Toss until the pork is evenly coated in spices.",
+        "Dice the yellow onion and add it to the bottom of the slow cooker. Place the seasoned pork on top of the onion, then add the roughly chopped garlic on top.",
+        "Place the lid on the slow cooker and cook on high for four hours or low for eight hours. Test the pork with a fork to make sure the meat is tender. It should shred easily with a fork. If not, cook for one hour longer. The total cooking time will depend on the size of your pork butt.",
+        "Once the pork is tender, use two forks to shred the meat.",
+        "If you prefer crispy edges on your pork, place some of the pork on a sheet pan and broil for a few minutes, or just until the edges are browned and crispy. Keep a close eye on the pork as it broils!",
+        "Serve the pulled pork on sandwiches, tacos, bowl meals, and more!"
+      ],
+      "tags": [
+        "grilling",
+        "bbq",
+        "outdoor",
+        "meat"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/slow-cooker-pulled-pork/"
+      },
+      "theme": "Grilling & BBQ",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:05.802113Z"
+    },
+    {
+      "id": "grilled-vegetables",
+      "slug": "grilled-vegetables",
+      "title": "Grilled Vegetables",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2024/07/Grilled-Vegetables-Overhead.jpg",
+      "prepTime": "10 min",
+      "cookTime": "8 min",
+      "totalTime": "18 min",
+      "servings": "8",
+      "ingredients": [
+        "1  zucchini ($1.02)",
+        "1  red onion ($0.99)",
+        "8  mushrooms ($1.04 *)",
+        "1  yellow squash ($1.10)",
+        "8  mini bell peppers (or 2 large bell peppers cut into ¼s, $1.44)",
+        "6-8  cherry tomatoes (whole on vine, $1.66**)",
+        "1 ½ Tbsp olive oil ($0.33)",
+        "1  garlic clove (minced, $0.04)",
+        "1 tsp steak seasoning (divided, $0.12)",
+        "½ tsp sugar ($0.01 ***)",
+        "chimichurri sauce (optional, for serving)"
+      ],
+      "instructions": [
+        "Slice zucchini lengthwise, about ¼ inch thick, using a mandoline on the thickest setting or a knife. Cut red onion into thick rings, destem mushrooms, and cut yellow squash into thick discs, about ¼ inch thick. Rinse bell peppers and cherry tomatoes.",
+        "Whisk together olive oil, minced garlic, ½ tsp steak seasoning, and sugar in a bowl.",
+        "Brush olive oil mixture over the veggies.",
+        "Add onions to the grill while preheating to 400 degrees. Add all other veggies to the grill and grill for 4 minutes, until you get distinct grill marks.",
+        "Flip and grill for an additional 3-4 minutes or until veggies are done to your liking. I like my grilled vegetables to still have some bite to them, so I am careful to not overcook them! Onions can cook a bit longer and become nice and sweet when they cook down a bit (and help flavor the grill for the other veggies as well!)",
+        "Sprinkle on the remaining ½ tsp steak seasoning and (optional) serve with our chimichurri."
+      ],
+      "tags": [
+        "grilling",
+        "bbq",
+        "outdoor",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/grilled-vegetables/"
+      },
+      "theme": "Grilling & BBQ",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:09.017210Z"
+    },
+    {
+      "id": "honey-mustard-chicken-salad",
+      "slug": "honey-mustard-chicken-salad",
+      "title": "Honey Mustard Chicken Salad",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2013/02/HoneyMustardChixSaladabove.jpg",
+      "prepTime": "15 min",
+      "cookTime": "10 min",
+      "totalTime": "25 min",
+      "servings": "2",
+      "ingredients": [
+        "1  large chicken breast  ( about 3/4 lb., $1.49*)",
+        "2  stalks celery  ($0.32)",
+        "1/4 cup dried cranberries  ($0.28)",
+        "1/4 cup mayonnaise  ($0.33)",
+        "1 1/2 Tbsp honey  ($0.17)",
+        "1 Tbsp dijon mustard  ($0.06)",
+        "1/2 tsp apple cider vinegar  ($0.01)",
+        "1/4 tsp salt  ($0.02)",
+        "1/8 tsp garlic powder  ($0.02)",
+        "1/8 tsp paprika  ($0.02)"
+      ],
+      "instructions": [
+        "Prepare the dressing by combining the mayonnaise, honey, dijon mustard, apple cider vinegar, salt, garlic powder, and paprika. Refrigerate until ready to use.",
+        "Cut the chicken breast into 1 to 2 inch pieces. Coat a small skillet with non-stick spray and cook the chicken over medium heat until the outside is golden brown and the largest pieces are no longer pink inside (7-10 min.). Allow the chicken to cool slightly.",
+        "While the chicken is cooling, roughly chop the cranberries and cut the celery into small pieces. Place the cranberries and celery in a large bowl. Once the chicken is cool enough to handle, roughly chop it into very small pieces. Add the chopped chicken to the bowl, along with the dressing. Stir until everything is combined and coated in dressing. Serve immediately or refrigerate until ready to eat."
+      ],
+      "tags": [
+        "grilling",
+        "bbq",
+        "outdoor",
+        "poultry",
+        "salad"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/honey-mustard-chicken-salad/"
+      },
+      "theme": "Grilling & BBQ",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:12.222922Z"
+    },
+    {
+      "id": "the-perfect-basic-burger",
+      "slug": "the-perfect-basic-burger",
+      "title": "The Perfect Basic Burger",
+      "image": "https://www.allrecipes.com/thmb/5JVfA7MxfTUPfRerQMdF-nGKsLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/25473-the-perfect-basic-burger-DDMFS-4x3-56eaba3833fd4a26a82755bcd0be0c54.jpg",
+      "prepTime": "5 min",
+      "cookTime": "15 min",
+      "totalTime": "20 min",
+      "servings": "4",
+      "ingredients": [
+        "1 large egg",
+        "0.5 teaspoon salt",
+        "0.5 teaspoon ground black pepper",
+        "1 pound ground beef",
+        "0.5 cup fine dry bread crumbs"
+      ],
+      "instructions": [
+        "Preheat an outdoor grill for high heat and lightly oil grate.",
+        "Whisk egg, salt, and pepper together in a medium bowl.",
+        "Add ground beef and bread crumbs; mix with your hands or a fork until well blended.",
+        "Form into four 3/4-inch-thick patties.",
+        "Place patties on the preheated grill. Cover and cook 6 to 8 minutes per side, or to desired doneness. An instant-read thermometer inserted into the center should read at least 160 degrees F (70 degrees C).",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "grilling",
+        "bbq",
+        "outdoor"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/25473/the-perfect-basic-burger/"
+      },
+      "theme": "Grilling & BBQ",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:15.583341Z"
+    },
+    {
+      "id": "marinated-grilled-shrimp",
+      "slug": "marinated-grilled-shrimp",
+      "title": "Marinated Grilled Shrimp",
+      "image": "https://www.allrecipes.com/thmb/dsiZmnEGDAcB6yN8aaaseWzU31s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/21694-marinated-grilled-shrimp-DDMFS-4x3-d1cf7208788644deb94b21b067d8e79e.jpg",
+      "prepTime": "15 min",
+      "cookTime": "5 min",
+      "totalTime": "50 min",
+      "servings": "6",
+      "ingredients": [
+        "0.33333334326744 cup olive oil",
+        "0.25 cup tomato sauce",
+        "3 cloves garlic, minced",
+        "2 tablespoons red wine vinegar",
+        "2 tablespoons chopped fresh basil",
+        "0.5 teaspoon salt",
+        "0.25 teaspoon cayenne pepper",
+        "2 pounds fresh shrimp, peeled and deveined",
+        "6 skewers"
+      ],
+      "instructions": [
+        "Stir together olive oil, tomato sauce, garlic, and red wine vinegar in a large bowl. Season with basil, salt, and cayenne pepper.",
+        "Add shrimp to the bowl; stir until evenly coated. Cover and refrigerate for 30 minutes to 1 hour, stirring once or twice.",
+        "Preheat the grill to medium heat. Lightly oil the grate.",
+        "Thread shrimp onto skewers, piercing once near the tail and once near the head. Discard marinade.",
+        "Cook shrimp on the preheated grill until opaque, 2 to 3 minutes per side.",
+        "Serve hot and enjoy!"
+      ],
+      "tags": [
+        "grilling",
+        "bbq",
+        "outdoor",
+        "seafood"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/21694/marinated-grilled-shrimp/"
+      },
+      "theme": "Grilling & BBQ",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:18.903738Z"
+    },
+    {
+      "id": "best-steak-marinade-in-existence",
+      "slug": "best-steak-marinade-in-existence",
+      "title": "Best Steak Marinade in Existence",
+      "image": "https://www.allrecipes.com/thmb/PvrKG3hBEUw2EzkQEDogK0QohCc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/143809-best-steak-marinade-in-existence-VAT-Beauty-4x3-4dd35d73f0294223aa14039a2a8369bc.jpg",
+      "prepTime": "15 min",
+      "cookTime": null,
+      "totalTime": "15 min",
+      "servings": "8",
+      "ingredients": [
+        "0.5 cup olive oil",
+        "0.33333334326744 cup soy sauce",
+        "0.33333334326744 cup fresh lemon juice",
+        "0.25 cup Worcestershire sauce",
+        "3 tablespoons dried basil",
+        "1.5 tablespoons garlic powder",
+        "1.5 tablespoons dried parsley flakes",
+        "1 teaspoon ground white pepper",
+        "1 teaspoon dried minced garlic",
+        "0.25 teaspoon hot pepper sauce"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Place olive oil, soy sauce, lemon juice, Worcestershire sauce, basil, garlic powder, parsley, white pepper, minced garlic, and hot pepper sauce in a blender; blend on high speed until thoroughly combined, about 30 seconds.",
+        "Use to marinate steak before cooking, or store in an airtight container in the refrigerator for up to 5 days"
+      ],
+      "tags": [
+        "grilling",
+        "bbq",
+        "outdoor",
+        "meat",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Allrecipes",
+        "url": "https://www.allrecipes.com/recipe/143809/best-steak-marinade-in-existence/"
+      },
+      "theme": "Grilling & BBQ",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:22.255455Z"
+    },
+    {
+      "id": "honey-soy-chicken-marinade-and-sauce-excellent-grilled",
+      "slug": "honey-soy-chicken-marinade-and-sauce-excellent-grilled",
+      "title": "Honey Soy Chicken - Marinade and Sauce (excellent grilled!)",
+      "image": "https://www.recipetineats.com/tachyon/2020/06/Honey-Soy-Chicken_4-Square.jpg",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "totalTime": "10 min 20 min",
+      "servings": "5",
+      "ingredients": [
+        "1.25 - 1.5 kg/ 2.5 - 3 lb  skinless boneless chicken thighs OR breast ((Note 1))",
+        "1 tbsp vegetable oil (, for cooking)",
+        "1/2 cup soy sauce (, all purpose or light (not dark, Note 2))",
+        "2/3 cup honey ((sub maple syrup))",
+        "1/3 cup cider vinegar ((or rice vinegar))",
+        "1/4 cup Chinese cooking wine or dry sherry ((key ingredient, Note 3))",
+        "1 tbsp sesame oil (, toasted (Note 4))",
+        "1 1/2 tbsp garlic (, finely minced)",
+        "1/3 cup water",
+        "1 1/2 tsp cornflour/cornstarch",
+        "Green onion (, finely sliced)",
+        "Sesame seeds"
+      ],
+      "instructions": [
+        "Place ingredients in a jug and mix well until honey is completely dissolved.",
+        "Reserve 1/4 cup for Basting, refrigerate. (Note 5)",
+        "Reserve 2/3 cup for Serving Sauce, refrigerate.",
+        "Marinade Chicken: Pour remaining marinade over chicken in a container. Coat chicken thoroughly. Cover, refrigerate 24 to 48 hours (minimum 3 hrs).",
+        "Place reserved sauce in a small saucepan. Mix cornflour and water, then add into saucepan.",
+        "Simmer over medium for 5 minutes, stirring regularly, until it thickens to a syrupy consistency. Set aside and keep warm. (If it gets too thick, just add a bit more water)",
+        "Brush BBQ plate or grills with oil and heat to medium high. Or heat oil in a large skillet over medium high heat.",
+        "THIGHS: Place chicken on BBQ. Cook the first side for 2 minutes, then flip and dab with reserved Basting Sauce. Cook for 2 minutes, flip and baste. Then flip/baste every 1 minute for total cook time of ~ 10 minutes or until a thermometer reads 75°C/165°F.",
+        "BREAST: Cook first side 2 minutes, flip, baste. Cook 2 minutes, then flip and baste every 45 sec or so for total cook time of ~8 minutes (internal temp 66°C / 151°F).",
+        "REST: Transfer to serving plate, cover loosely with foil and rest for 5 minutes.",
+        "SERVE chicken garnished with sesame seeds and green onion, with sauce on the side so people can help themselves."
+      ],
+      "tags": [
+        "grilling",
+        "bbq",
+        "outdoor",
+        "poultry"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/honey-soy-chicken-marinade-sauce-grilled/"
+      },
+      "theme": "Grilling & BBQ",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:03:25.580874Z"
+    }
+  ]
+}

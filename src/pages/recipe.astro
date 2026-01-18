@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ExtractedRecipeView from '../components/ExtractedRecipeView.jsx';
+---
+
+<BaseLayout
+  title="Recipe - Simpler Recipes"
+  description="Clean, ad-free recipe extracted from the web."
+>
+  <ExtractedRecipeView client:only="react" />
+</BaseLayout>

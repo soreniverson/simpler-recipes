@@ -5,41 +5,46 @@
     "description": "Complete meals with minimal cleanup - everything cooks in one pot or pan"
   },
   "metadata": {
-    "recipeCount": 6,
-    "lastUpdated": "2026-01-17T23:41:36.660504Z"
+    "recipeCount": 10,
+    "lastUpdated": "2026-01-18T04:01:20.179332Z"
   },
   "recipes": [
     {
-      "id": "slow-cooker-beef-stew",
-      "slug": "slow-cooker-beef-stew",
-      "title": "Slow Cooker Beef Stew",
-      "image": "https://www.allrecipes.com/thmb/K8WfLq0Eqi7vSPXyzAXUC_Karfo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/14685-slow-cooker-beef-stew-i-DDMFS-4x3-6f0208563f4c43d6a80fdb077c19fe4e.jpg",
-      "prepTime": "20 min",
-      "cookTime": "240 min",
-      "totalTime": "260 min",
-      "servings": "6",
+      "id": "crockpot-beef-stew-recipe",
+      "slug": "crockpot-beef-stew-recipe",
+      "title": "Crockpot Beef Stew Recipe",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2023/02/Slow-Cooker-Beef-Stew-inbowl.jpeg",
+      "prepTime": "15 min",
+      "cookTime": "255 min",
+      "totalTime": "270 min",
+      "servings": "8",
       "ingredients": [
-        "2 pounds beef stew meat, cut into 1-inch pieces",
-        "0.25 cup all-purpose flour",
-        "0.5 teaspoon salt",
-        "0.5 teaspoon ground black pepper",
-        "1.5 cups beef broth",
-        "4 medium carrots, sliced",
-        "3 medium potatoes, diced",
-        "1 medium onion, chopped",
-        "1 stalk celery, chopped",
-        "1 teaspoon Worcestershire sauce",
-        "1 teaspoon ground paprika",
-        "1 clove garlic, minced",
-        "1 large bay leaf"
+        "2 lbs. red potatoes ($2.40)",
+        "1  yellow onion ($0.37)",
+        "3  carrots ($0.44)",
+        "4 stalks celery ($0.44)",
+        "4 cloves garlic ($0.32)",
+        "1.5 lbs. beef stew meat ($11.24)",
+        "2 Tbsp all-purpose flour ($0.03)",
+        "1/4 tsp salt ($0.02)",
+        "1/4 tsp Freshly cracked black pepper ($0.02)",
+        "2 Tbsp cooking oil ($0.08)",
+        "2 cups beef broth ($0.27)",
+        "2 Tbsp Dijon mustard ($0.13)",
+        "1 Tbsp Worcestershire sauce ($0.06)",
+        "1 Tbsp soy sauce ($0.06)",
+        "1.5 tsp brown sugar ($0.02)",
+        "1.5 tsp dried rosemary ($0.15)",
+        "1.5 tsp dried thyme ($0.15)"
       ],
       "instructions": [
-        "Gather all ingredients.",
-        "Place beef in the slow cooker.",
-        "Mix flour, salt, and pepper together in a small bowl; pour over beef and stir until coated.",
-        "Add beef broth, carrots, potatoes, onion, celery, Worcestershire sauce, paprika, garlic, and bay leave; stir to combine.",
-        "Cover, and cook until beef is tender enough to cut with a spoon, on Low for 8 to 12 hours, or on High for 4 to 6 hours.",
-        "Serve hot and enjoy!"
+        "Dice the onion and red potatoes. Slice the carrots and celery. Mince the garlic. Place the prepared vegetables in a four or five quart slow cooker.",
+        "Place the stew meat in a bowl and sprinkle the flour, salt, and pepper over top. Toss the meat until it's evenly coated in flour.",
+        "Heat a large skillet over medium-high. Once very hot, add the cooking oil and swirl to coat the surface of the skillet. Add the stew meat and cook, without stirring, until browned on the bottom. Stir and then allow the beef to brown on a second side. Transfer the meat to the slow cooker.",
+        "Turn the heat under the skillet down to medium-low. Add the broth, Dijon, Worcestershire sauce, soy sauce, brown sugar, rosemary, and thyme to the skillet. Stir and cook over medium-low until all the browned bits have dissolved off the bottom of the skillet.",
+        "Pour the broth over the ingredients in the slow cooker and everything a good stir.",
+        "Place the lid on the slow cooker and cook on high for four hours or low for eight hours.",
+        "After cooking the meat and vegetables should both be tender. Stir the stew well to allow the potatoes to slightly break down and thicken the gravy. Taste the stew and adjust the salt or other seasonings to your liking. Serve hot!"
       ],
       "tags": [
         "one-pot",
@@ -49,12 +54,418 @@
         "soup"
       ],
       "source": {
-        "name": "Allrecipes",
-        "url": "https://www.allrecipes.com/recipe/14685/slow-cooker-beef-stew-i/"
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/slow-cooker-beef-stew/"
       },
       "theme": "One-Pot Meals",
       "difficulty": "Easy",
-      "addedDate": "2026-01-17T23:41:05.902346Z"
+      "addedDate": "2026-01-18T04:00:47.952321Z"
+    },
+    {
+      "id": "vegetarian-chili",
+      "slug": "vegetarian-chili",
+      "title": "Vegetarian Chili",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2025/10/Overhead-in-Bowl-With-Spoon-Vegetarian-Chili.jpg",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "totalTime": "40 min",
+      "servings": "6",
+      "ingredients": [
+        "2 Tbsp olive oil ($0.38)",
+        "1  onion (diced, $0.99)",
+        "3  garlic cloves (minced, $0.18)",
+        "1   green bell pepper (diced small, $0.78)",
+        "6 oz. tomato paste ($0.86)",
+        "28 oz. can diced tomatoes (in juices, $1.48)",
+        "4 oz. can fire roasted green chiles (with juices, $0.88)",
+        "2 Tbsp molasses ($0.32*)",
+        "1 cup water ($0.00)",
+        "15 oz. can dark kidney beans (drained and rinsed, $0.92)",
+        "15 oz. can black beans (drained and rinsed, $0.92)",
+        "15 oz. can pinto beans (drained and rinsed, $0.92)",
+        "15 oz. can whole kernel corn (strained, $0.76)",
+        "1 Tbsp chili powder ($0.20)",
+        "2 tsp ground cumin ($0.18)",
+        "¼ tsp cayenne pepper ($0.04)",
+        "¼ tsp garlic powder ($0.02)",
+        "½ tsp onion powder ($0.04)",
+        "½ tsp black pepper (freshly cracked, $0.04)",
+        "1 tsp salt ($0.02)"
+      ],
+      "instructions": [
+        "Dice the onion and bell pepper. Mince the garlic.",
+        "Toast chili powder, cumin, cayenne, garlic powder, onion powder, and black pepper in your chili pot over medium-low heat until fragrant, about 2-4 minutes.",
+        "Add the olive oil, onion, garlic, bell pepper, and salt to your pot.",
+        "Stir together and cook until peppers and onions have softened, about 4-6 minutes.",
+        "Add the tomato paste, diced tomatoes with juices, diced green chiles with juices, molasses, and water. Stir and simmer for about 5 minutes.",
+        "Add kidney beans, black beans, pinto beans, and strained can of corn. Stir together and simmer the chili for about 20-25 minutes, covered. Your chili is done when all of the vegetables are tender."
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "vegetarian"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/vegetarian-chili/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:00:51.137413Z"
+    },
+    {
+      "id": "one-pot-chicken-and-rice",
+      "slug": "one-pot-chicken-and-rice",
+      "title": "One Pot Chicken and Rice",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2022/05/Chicken-and-Rice-close.jpg",
+      "prepTime": "10 min",
+      "cookTime": "40 min",
+      "totalTime": "10 min 40 min",
+      "servings": "4",
+      "ingredients": [
+        "2 tsp paprika ($0.20)",
+        "1 tsp dried oregano ($0.10)",
+        "1 tsp dried thyme ($0.10)",
+        "1/2 tsp garlic powder ($0.05)",
+        "1/2 tsp onion powder ($0.05)",
+        "1/4 tsp salt ($0.02)",
+        "1/4 tsp pepper ($0.02)",
+        "1.25 lbs. boneless, skinless chicken thighs (4-5 thighs) ($4.59)",
+        "2 Tbsp cooking oil, divided ($0.08)",
+        "1  yellow onion, diced ($0.32)",
+        "1 cup long-grain white rice (uncooked) ($0.32)",
+        "1.75 cups vegetable broth ($0.23)",
+        "1 Tbsp chopped parsley (optional garnish) ($0.10)"
+      ],
+      "instructions": [
+        "Combine the paprika, oregano, thyme, garlic powder, onion powder, salt, and pepper in a small bowl. Coat both sides of the chicken thighs in the seasoning mix.",
+        "Add 1 Tbsp cooking oil to a deep skillet and heat over medium. Once hot, swirl to coat the surface of the skillet, then add the chicken thighs. Cook the thighs for a few minutes on each side, or until well browned. The chicken does not need to be cooked through at this point.",
+        "Remove the browned chicken to a clean plate. Reduce the heat to medium-low, add an additional 1 Tbsp cooking oil to the skillet, then add the diced onion. Sauté the onion for about 5 minutes, or until softened. Allow the moisture from the onion to dissolve the browned bits from the skillet as you stir.",
+        "Add the uncooked rice to the skillet and continue to sauté for 1-2 minutes more to toast the rice.",
+        "Add the vegetable broth to the skillet and briefly stir to dissolve any remaining brown bits from the bottom of the skillet.",
+        "Return the chicken to the skillet, setting it on top of the rice. Place a lid on the skillet, turn the heat up to medium-high, and allow the broth to come up to a full boil.",
+        "Once boiling, turn the heat down to low and let the chicken and rice continue to simmer over low, without lifting the lid or stirring, for 20 minutes. After 20 minutes, turn off the heat and let it rest, without lifting the lid, for an additional 5 minutes.",
+        "Finally, remove the lid and fluff the rice around the chicken. Garnish with chopped parsley, if desired, then serve and enjoy!"
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "poultry"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/one-pot-chicken-and-rice/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:00:54.357895Z"
+    },
+    {
+      "id": "tomato-spinach-one-pot-pasta",
+      "slug": "tomato-spinach-one-pot-pasta",
+      "title": "Tomato Spinach One Pot Pasta",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2013/05/Italian-Wonderpot-close-1.jpg",
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "totalTime": "25 min",
+      "servings": "6",
+      "ingredients": [
+        "4 cups vegetable broth ($0.52)",
+        "2 Tbsp olive oil ($0.22)",
+        "12 oz. fettuccine ($0.75)",
+        "8 oz. frozen chopped spinach ($0.72)",
+        "1 28oz. can diced tomatoes ($1.68)",
+        "1  yellow onion, sliced ($0.42)",
+        "4 cloves garlic, sliced ($0.32)",
+        "1/2 Tbsp dried basil ($0.15)",
+        "1/2 Tbsp dried oregano ($0.15)",
+        "1/4 tsp crushed red pepper ($0.03)",
+        "freshly cracked black pepper to taste ($0.05)",
+        "2 oz. shaved Parmesan ($1.25)"
+      ],
+      "instructions": [
+        "Add four cups of vegetable broth to a large pot. Break the fettuccine in half and add it to the pot along with the canned tomatoes (with juices), olive oil, frozen spinach, onion, garlic, basil, oregano, red pepper, and some freshly cracked black pepper.",
+        "Make sure the ingredients are submerged under the liquid, place a lid on top of the pot, and then turn the heat on to high. Allow the pot to come up to a full boil over high heat, then remove the lid and turn the heat down to medium.",
+        "Allow the pot to continue to boil over medium heat, without a lid, for 10-15 minutes, or until the pasta is cooked and most of the liquid has been absorbed. Stir the pot every few minutes as it cooks to prevent the pasta from sticking to the bottom, but avoid over stirring which can cause the pasta to become sticky.",
+        "Sprinkle with shaved Parmesan just before serving."
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "vegetarian",
+        "pasta"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/italian-wonderpot/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:00:57.543568Z"
+    },
+    {
+      "id": "one-pot-creamy-cajun-chicken-pasta",
+      "slug": "one-pot-creamy-cajun-chicken-pasta",
+      "title": "One Pot Creamy Cajun Chicken Pasta",
+      "image": "https://www.budgetbytes.com/wp-content/uploads/2018/10/One-Pot-Creamy-Cajun-Chicken-Pasta-pan.jpg",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "totalTime": "30 min",
+      "servings": "4",
+      "ingredients": [
+        "2  tsp smoked paprika ($0.20)",
+        "1 tsp oregano ($0.10)",
+        "1 tsp  thyme ($0.10)",
+        "1/2 tsp garlic powder ($0.05)",
+        "1/2 tsp onion powder ($0.05)",
+        "1/4 tsp cayenne pepper ($0.03)",
+        "1/4 tsp black pepper ($0.02)",
+        "1/4 tsp salt ($0.02)",
+        "1 Tbsp olive oil ($0.16)",
+        "1 Tbsp butter ($0.13)",
+        "1 lb. boneless, skinless chicken breast ($5.47)",
+        "1  yellow onion, diced ($0.32)",
+        "1/2 lb. penne pasta (uncooked) ($0.75)",
+        "15 oz. fire roasted diced tomatoes ($1.00)",
+        "2 cups chicken broth ($0.26)",
+        "2 oz. cream cheese ($0.50)",
+        "3  green onions, sliced ($0.25)"
+      ],
+      "instructions": [
+        "Combine the ingredients for the Cajun seasoning in a small bowl. Cut the chicken into 1/2 to 3/4-inch cubes. Place the cubed chicken in a bowl, pour the Cajun seasoning over top, and stir to coat the chicken in spices.",
+        "Add the olive oil and butter to a large deep skillet. Heat the oil and butter over medium-high until the skillet is very hot and the butter is melted and foamy. Add the seasoned chicken to the skillet and cook for a couple minutes on each side, or just until the outside gets some color. The chicken does not need to be cooked through at this point.",
+        "Add the diced yellow onion to the skillet and continue to sauté for about 2 minutes more, or just until the onion begins to soften. Allow the moisture from the onion to dissolve any browned bits from the bottom of the skillet.",
+        "Next, add the pasta, fire roasted diced tomatoes (with the juices), and chicken broth to the skillet. Stir just until everything is evenly combined, then place a lid on top and allow the broth to come up to a boil.",
+        "Once boiling, turn the heat down to medium-low and let the pasta simmer for about ten minutes, stirring every couple of minutes, until the pasta is tender and the liquid is thick and saucy.",
+        "Add the cream cheese to the skillet in chunks, then stir until it has melted into the sauce. Top the pasta with sliced green onions and serve."
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "poultry",
+        "pasta"
+      ],
+      "source": {
+        "name": "Budgetbytes",
+        "url": "https://www.budgetbytes.com/cajun-chicken-pasta/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:01:00.787438Z"
+    },
+    {
+      "id": "homemade-chicken-noodle-soup-from-scratch",
+      "slug": "homemade-chicken-noodle-soup-from-scratch",
+      "title": "Homemade Chicken Noodle Soup (from scratch!)",
+      "image": "https://www.recipetineats.com/tachyon/2017/05/Chicken-Noodle-Soup-from-scratch_3.jpg",
+      "prepTime": "20 min",
+      "cookTime": "100 min",
+      "totalTime": "120 min",
+      "servings": "6",
+      "ingredients": [
+        "1.8 kg / 3.5 lb  whole chicken (, rinsed and cleaned, the best quality you can afford (Note 1))",
+        "1  head of garlic (, cut in half horiztonally)",
+        "2  carrots (, cut into chunks)",
+        "2  celery ribs (, cut into chunks)",
+        "2  onions (, peeled and cut into quarters)",
+        "1 tbsp black peppercorns",
+        "2  bay leaves (, fresh or dried)",
+        "4  thyme sprigs ((or 1 1/2 tsp dried thyme leaves))",
+        "9 - 10 cups water ((enough to just cover chicken))",
+        "1 tbsp olive oil",
+        "1  large onion (, diced)",
+        "3  garlic cloves (, minced)",
+        "2  medium carrots (, cut in quarters lengthwise then chopped)",
+        "2  celery ribs (, cut into 1 cm/ 1/2\" thick pieces)",
+        "2 cups shredded chicken ((from homemade broth))",
+        "2 litres / 2 quarts  homemade chicken broth ((above))",
+        "200 g/ 6 oz  egg noodles or pasta of choice ((Note 3))",
+        "2 - 3 tsp Vegeta  or other stock powder ((Note 4))",
+        "1/2 tsp black pepper",
+        "4  thyme sprigs (, optional)",
+        "1  bay leaf (, optional)",
+        "Finely chopped parsley (, for garnish (optional))"
+      ],
+      "instructions": [
+        "Place the chicken in a large pot. Add remaining Broth ingredients, then add enough water so the chicken is just covered (too much water = weak broth). ",
+        "Cover with lid, bring the water to a gentle simmer over medium heat. Then adjust heat so it's simmering GENTLY with the lid on. Simmer 1.5 hours until chicken is tender and easily comes off the bone. (Or 8 hours on low in a slow cooker)",
+        "Scoop scum off surface once or twice during first 30 minutes.",
+        "Transfer chicken to pan. Shred meat and discard bones. You'll only need half the chicken meat, save the rest for another purpose.",
+        "Remove carrots, celery etc from broth, and discard. Optional: Chop carrot and celery, add back into soup with chicken. (Note 5)",
+        "Optional: Refrigerate soup for a few hours until the fat sets, then scoop the fat off the surface (I do this, healthier & makes soup clearer).",
+        "Heat oil in a large pot over medium meat. Add onion and garlic, cook for 2 minutes. Add celery and carrots, cook for 5 minutes until softened and a bit sweet, don't let them brown.",
+        "Turn heat up to medium high. Gently pour 8 cups broth in (top up with water if necessary), leaving behind residue settled in the bottom of the broth pot. ",
+        "Add Vegeta (stock powder), thyme, bay leaf and pepper. Stir.",
+        "When it starts bubbling, add noodles/pasta. Cook for time per packet MINUS 2 minutes. Stir gently only once or twice (Note 6).",
+        "Add half the chicken, stir (it warms quickly), then season with salt and pepper to taste - season well!",
+        "Serve soup immediately, garnished with fresh parsley."
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "poultry",
+        "soup"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/homemade-chicken-noodle-soup-from-scratch/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:01:04.171339Z"
+    },
+    {
+      "id": "minestrone-soup",
+      "slug": "minestrone-soup",
+      "title": "Minestrone Soup",
+      "image": "https://www.recipetineats.com/tachyon/2020/07/Minestrone-Soup_8-SQ.jpg",
+      "prepTime": "20 min",
+      "cookTime": "45 min",
+      "totalTime": "20 min 45 min",
+      "servings": "5",
+      "ingredients": [
+        "1 tbsp olive oil",
+        "150g / 5oz  bacon (, finely chopped)",
+        "1  onion (, chopped)",
+        "2  garlic cloves (, minced)",
+        "800g/ 28oz  crushed tomato ((or 700g passata))",
+        "2 cups chicken stock/broth (, low sodium)",
+        "2 cups water",
+        "3 tbsp tomato paste",
+        "2 tsp Worcestershire sauce",
+        "400g/ 14oz  canned kidney beans (, drained)",
+        "1 tsp EACH salt and pepper",
+        "1 cup small pasta (, like ditalini, tiny shells, risoni/orzo, baby macaroni, alphabet or star pasta)",
+        "1/4 cup parmesan (, grated)",
+        "1  celery rib* (, chopped 1.5cm / 1/2\" pieces)",
+        "1  large carrot* (, peeled and diced 1.5cm / 1/2\" pieces)",
+        "1  zucchini* (, chopped 1.5cm / 1/2\" pieces)",
+        "1  potato* (, cut into 1.5cm / 1/2\" pieces (peel if needed))",
+        "100g / 3oz  green beans* (, trimmed then cut into 2cm / 3/5\" lengths)",
+        "2oz/ 60g  baby spinach ((or frozen spinach, kale or similar - can leave out))",
+        "More parmesan",
+        "Chopped parsley",
+        "Crusty bread for dunking!"
+      ],
+      "instructions": [
+        "Heat oil over high heat in a very large pot.",
+        "Add bacon, cook until starting to turn golden (~2 min) then add garlic and onion.",
+        "Cook until onion is translucent and bacon is light golden ~ 2minutes.",
+        "Add carrot, celery and zucchini. Stir for 1 minute to coat in flavour.",
+        "Add crushed tomato, chicken stock, water, tomato paste, Worcestershire sauce, kidney beans, salt and pepper.",
+        "Stir, bring to simmer, then place lid on and adjust heat so it's simmering gently.",
+        "Simmer 20 minutes, then add potato and beans.",
+        "Simmer 5 minutes, then add pasta. Cook for time per pasta packet MINUS 1 1/2 minutes.",
+        "Remove from stove, stir through parmesan and baby spinach. Taste and adjust for salt and pepper.",
+        "Serve, garnished with extra parmesan and a sprinkle of parsley if desired. Warm crusty bread on the side would certainly be the cherry on top!"
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "soup"
+      ],
+      "source": {
+        "name": "Recipetineats",
+        "url": "https://www.recipetineats.com/minestrone-soup/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:01:07.518038Z"
+    },
+    {
+      "id": "roasted-butternut-squash-soup",
+      "slug": "roasted-butternut-squash-soup",
+      "title": "Roasted Butternut Squash Soup",
+      "image": "https://cookieandkate.com/images/2019/10/roasted-butternut-squash-soup-recipe-0-225x225.jpg",
+      "prepTime": "10 min",
+      "cookTime": "55 min",
+      "totalTime": "1 hr 5 min",
+      "servings": "4",
+      "ingredients": [
+        "1 large butternut squash (about 3 pounds), halved vertically* and seeds removed",
+        "1 tablespoon olive oil, plus more for drizzling",
+        "½ cup chopped shallot (about 1 large shallot bulb)",
+        "1 teaspoon salt",
+        "4 garlic cloves, pressed or minced",
+        "1 teaspoon maple syrup",
+        "⅛ teaspoon ground nutmeg",
+        "Freshly ground black pepper, to taste",
+        "3 to 4 cups (24 to 32 ounces) vegetable broth, as needed",
+        "1 to 2 tablespoons butter, to taste"
+      ],
+      "instructions": [
+        "Preheat the oven to 425 degrees Fahrenheit and line a rimmed baking sheet with parchment paper. Place the butternut squash on the pan and drizzle each half with just enough olive oil to lightly coat the squash on the inside (about ½ teaspoon each). Rub the oil over the inside of the squash and sprinkle it with salt and pepper.",
+        "Turn the squash face down and roast until it is tender and completely cooked through, about 40 to 50 minutes (don’t worry if the skin or flesh browns—that’s good for flavor). Set the squash aside until it’s cool enough to handle, about 10 minutes.",
+        "Meanwhile, in a large soup pot, warm 1 tablespoon olive oil over medium heat until shimmering (if your blender has a soup preset, use a medium skillet to minimize dishes.) Add the chopped shallot and 1 teaspoon salt. Cook, stirring often, until the shallot has softened and is starting to turn golden on the edges, about 3 to 4 minutes. Add the garlic and cook until fragrant, about 1 minute, stirring frequently. Transfer the contents to your stand blender (see notes on how to use an immersion blender instead).",
+        "Use a large spoon to scoop the butternut squash flesh into your blender. Discard the tough skin. Add the maple syrup, nutmeg and a few twists of freshly ground black pepper to the blender. Pour in 3 cups vegetable broth, being careful not to fill the container past the maximum fill line (you can work in batches if necessary, and stir in any remaining broth later).",
+        "Securely fasten the lid. Blend on high (or select the soup preset, if available), being careful to avoid hot steam escaping from the lid. Stop once your soup is ultra creamy and warmed through.",
+        "If you would like to thin out your soup a bit more, stir in the remaining cup of broth. Add 1 to 2 tablespoons butter or olive oil, to taste, and blend well. Taste and stir in more salt and pepper, if necessary.",
+        "If your soup is piping hot from the blending process, you can pour it into serving bowls. If not, pour it back into your soup pot and warm the soup over medium heat, stirring often, until it’s nice and steamy. I like to top individual bowls with some extra black pepper."
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "vegetarian",
+        "soup"
+      ],
+      "source": {
+        "name": "Cookieandkate",
+        "url": "https://cookieandkate.com/roasted-butternut-squash-soup/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:01:10.707145Z"
+    },
+    {
+      "id": "classic-tomato-soup",
+      "slug": "classic-tomato-soup",
+      "title": "Classic Tomato Soup",
+      "image": "https://cookieandkate.com/images/2019/04/classic-healthy-tomato-soup-recipe-1-225x225.jpg",
+      "prepTime": "15 min",
+      "cookTime": "40 min",
+      "totalTime": "55 min",
+      "servings": "4",
+      "ingredients": [
+        "2 tablespoons extra-virgin olive oil",
+        "1 medium yellow onion, chopped",
+        "½ teaspoon fine sea salt",
+        "2 tablespoons tomato paste",
+        "1 large can (28 ounces) whole tomatoes, with their liquid",
+        "2 cups vegetable broth",
+        "½ cup cooked Great Northern beans or cannellini beans, rinsed and drained",
+        "2 tablespoons unsalted butter, cut into a few pieces",
+        "1 teaspoon coconut sugar or brown sugar, to taste",
+        "Freshly ground black pepper, to taste",
+        "For the tomato-basil variation (optional): 10 to 15 fresh basil leaves, to taste"
+      ],
+      "instructions": [
+        "In a Dutch oven or soup pot, warm the olive oil over medium heat until shimmering. Add the onion and salt and cook, stirring occasionally, until the onions are tender and turning translucent, 7 to 10 minutes. Add the tomato paste and cook, stirring constantly, until fragrant, about 30 seconds.",
+        "Add the tomatoes and vegetable broth and stir to combine. Increase the heat to medium-high, and bring the mixture to a simmer. Cook for 30 minutes, reducing the heat as necessary to maintain a gentle simmer, and stirring occasionally.",
+        "Remove the pot from the heat and let it cool for a few minutes. Carefully transfer the mixture to a blender, being sure not to fill past the maximum fill line (blend in batches if necessary). Add the beans, butter, sugar, and several twists of black pepper. Securely fasten the lid and blend the soup until smooth, being careful to avoid hot steam escaping from the lid.",
+        "Since canned tomatoes vary in flavor, I always end up tinkering with this soup a bit at the end. Taste and, if necessary, add a little more sugar (to balance out the acidity of the tomatoes), pepper, and salt (I usually add another ¼ to ½ teaspoon).",
+        "If you’re adding basil, add it now. Briefly blend again, and serve hot. This soup keeps well for up to four days or so. You can freeze leftovers for up to 3 months."
+      ],
+      "tags": [
+        "one-pot",
+        "easy-cleanup",
+        "complete-meal",
+        "vegetarian",
+        "soup"
+      ],
+      "source": {
+        "name": "Cookieandkate",
+        "url": "https://cookieandkate.com/classic-tomato-soup-recipe/"
+      },
+      "theme": "One-Pot Meals",
+      "difficulty": "Easy",
+      "addedDate": "2026-01-18T04:01:13.855902Z"
     },
     {
       "id": "boilermaker-tailgate-chili",
@@ -113,175 +524,7 @@
       },
       "theme": "One-Pot Meals",
       "difficulty": "Easy",
-      "addedDate": "2026-01-17T23:41:09.296412Z"
-    },
-    {
-      "id": "quick-and-easy-chicken-noodle-soup",
-      "slug": "quick-and-easy-chicken-noodle-soup",
-      "title": "Quick and Easy Chicken Noodle Soup",
-      "image": "https://www.allrecipes.com/thmb/pTGS0SZsSQK85sV_RQE_K6ZfoN4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/26460-quick-and-easy-chicken-noodle-soup-allrecipes-1x1-1-b88125437574471db3e114c40bc6928e.jpg",
-      "prepTime": "10 min",
-      "cookTime": "30 min",
-      "totalTime": "40 min",
-      "servings": "6",
-      "ingredients": [
-        "1 tablespoon butter",
-        "0.5 cup chopped onion",
-        "0.5 cup chopped celery",
-        "4 (14.5 ounce) cans chicken broth",
-        "1 (14.5 ounce) can vegetable broth",
-        "0.5 pound chopped cooked chicken breast",
-        "1.5 cups egg noodles",
-        "1 cup sliced carrots",
-        "0.5 teaspoon dried basil",
-        "0.5 teaspoon dried oregano",
-        "salt and ground black pepper to taste"
-      ],
-      "instructions": [
-        "Melt butter in a large pot over medium heat. Add onion and celery and cook until just tender, about 5 minutes.",
-        "Add chicken broth, vegetable broth, chicken, egg noodles, carrots, basil, oregano, salt, and pepper. Stir to combine and bring to a boil.",
-        "Reduce heat and simmer for 20 minutes."
-      ],
-      "tags": [
-        "one-pot",
-        "easy-cleanup",
-        "complete-meal",
-        "poultry",
-        "soup"
-      ],
-      "source": {
-        "name": "Allrecipes",
-        "url": "https://www.allrecipes.com/recipe/26460/quick-and-easy-chicken-noodle-soup/"
-      },
-      "theme": "One-Pot Meals",
-      "difficulty": "Easy",
-      "addedDate": "2026-01-17T23:41:12.717323Z"
-    },
-    {
-      "id": "rich-and-simple-french-onion-soup",
-      "slug": "rich-and-simple-french-onion-soup",
-      "title": "Rich and Simple French Onion Soup",
-      "image": "https://www.allrecipes.com/thmb/wWn2fBl9C-OjhcyZj9Av-i8Alfc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/13309-rich-and-simple-french-onion-soup-DDMFS-4x3-31ad7eaa56234d20ae35c3940fd03f36.jpg",
-      "prepTime": "15 min",
-      "cookTime": "40 min",
-      "totalTime": "55 min",
-      "servings": "4",
-      "ingredients": [
-        "0.5 cup unsalted butter",
-        "2 tablespoons olive oil",
-        "4 cups sliced onions",
-        "5 cups beef broth",
-        "2 tablespoons dry sherry",
-        "1 teaspoon dried thyme",
-        "1 pinch salt and pepper to taste",
-        "4 slices French bread",
-        "4 slices provolone cheese",
-        "2 slices Swiss cheese, diced",
-        "0.25 cup grated Parmesan cheese"
-      ],
-      "instructions": [
-        "Gather all ingredients.",
-        "Melt butter with olive oil in an 8-quart stock pot over medium heat. Add onions to butter and continually stir until tender and translucent. Do not brown the onions.",
-        "Add beef broth, sherry, and thyme. Season with salt and pepper. Let simmer for 30 minutes. Meanwhile, preheat the oven's broiler.",
-        "Ladle soup into oven-safe serving bowls and place one slice of bread on top of each (bread may be broken into pieces if you prefer). Layer each slice of bread with a slice of provolone, 1/2 slice diced Swiss and 1 tablespoon Parmesan cheese. Place bowls on a rimmed sheet pan.",
-        "Broil in the preheated oven until cheese bubbles and browns slightly, 2 to 3 minutes.",
-        "Serve hot and enjoy!"
-      ],
-      "tags": [
-        "one-pot",
-        "easy-cleanup",
-        "complete-meal",
-        "soup"
-      ],
-      "source": {
-        "name": "Allrecipes",
-        "url": "https://www.allrecipes.com/recipe/13309/rich-and-simple-french-onion-soup/"
-      },
-      "theme": "One-Pot Meals",
-      "difficulty": "Easy",
-      "addedDate": "2026-01-17T23:41:16.127834Z"
-    },
-    {
-      "id": "butternut-squash-soup",
-      "slug": "butternut-squash-soup",
-      "title": "Butternut Squash Soup",
-      "image": "https://www.allrecipes.com/thmb/EPaxxTzlDs9iy6si2K6cfuYuY4c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/77981-butternut-squash-soup-VAT-Beauty-4x3-4eeb7a73250a4dbcb91ee77e2faaba7a.jpg",
-      "prepTime": "15 min",
-      "cookTime": "45 min",
-      "totalTime": "60 min",
-      "servings": "4",
-      "ingredients": [
-        "2 tablespoons butter",
-        "1 small onion, chopped",
-        "1 stalk celery, chopped",
-        "1 medium carrot, chopped",
-        "2 medium potatoes, cubed",
-        "1 medium butternut squash - peeled, seeded, and cubed",
-        "1 (32 fluid ounce) container chicken stock",
-        "salt and freshly ground black pepper to taste"
-      ],
-      "instructions": [
-        "Gather all ingredients.",
-        "Melt butter in a large pot over medium heat, and cook onion, celery, carrot, potatoes, and squash until lightly browned, about 5 minutes. Pour in enough chicken stock to cover vegetables.",
-        "Bring to a boil over medium-high heat. Reduce heat to low, cover pot, and simmer until all vegetables are tender, about 40 minutes.",
-        "Transfer soup to a blender and process until smooth. Return to the pot and mix in any remaining stock to reach desired consistency. Season with salt and pepper.",
-        "Serve hot and enjoy!"
-      ],
-      "tags": [
-        "one-pot",
-        "easy-cleanup",
-        "complete-meal",
-        "soup"
-      ],
-      "source": {
-        "name": "Allrecipes",
-        "url": "https://www.allrecipes.com/recipe/77981/butternut-squash-soup-ii/"
-      },
-      "theme": "One-Pot Meals",
-      "difficulty": "Easy",
-      "addedDate": "2026-01-17T23:41:33.196779Z"
-    },
-    {
-      "id": "fresh-tomato-soup",
-      "slug": "fresh-tomato-soup",
-      "title": "Fresh Tomato Soup",
-      "image": "https://www.allrecipes.com/thmb/1TSSrSTHo-oAxzedT9_K7Jyjcj8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/39544-Garden-Fresh-Tomato-Soup-DDMFS-4x3-b8e94cf7ab8e42f4b79042fc0df55546.jpg",
-      "prepTime": "5 min",
-      "cookTime": "25 min",
-      "totalTime": "30 min",
-      "servings": "6",
-      "ingredients": [
-        "4 cups chopped fresh tomatoes",
-        "2 cups chicken broth",
-        "4 cloves garlic",
-        "1 slice onion",
-        "2 tablespoons butter",
-        "2 tablespoons all-purpose flour",
-        "2 teaspoons white sugar, or to taste",
-        "1 teaspoon salt"
-      ],
-      "instructions": [
-        "Gather the ingredients.",
-        "Combine tomatoes, chicken broth, garlic cloves, and a large slice of onion in a stockpot over medium heat. Bring to a boil, and gently simmer for about 15 to 20 minutes to blend flavors.",
-        "Remove from heat and run the mixture through a food mill into a large bowl, or pan. Discard any stuff left over in the food mill.",
-        "Melt butter over medium heat in the now empty stockpot. Stir in flour to make a roux by cooking, whisking constantly, until mixture turns medium brown.",
-        "Gradually whisk in a bit of the tomato mixture to prevent lumps from forming, then stir in the rest.",
-        "Season with sugar and salt to taste.",
-        "Serve hot and enjoy!"
-      ],
-      "tags": [
-        "one-pot",
-        "easy-cleanup",
-        "complete-meal",
-        "soup"
-      ],
-      "source": {
-        "name": "Allrecipes",
-        "url": "https://www.allrecipes.com/recipe/39544/garden-fresh-tomato-soup/"
-      },
-      "theme": "One-Pot Meals",
-      "difficulty": "Easy",
-      "addedDate": "2026-01-17T23:41:36.659738Z"
+      "addedDate": "2026-01-18T04:01:17.167355Z"
     }
   ]
 }
