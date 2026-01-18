@@ -105,7 +105,7 @@ export default function SharedRecipeView({ recipeId: propRecipeId }) {
 
   return (
     <main id="main-content" className="min-h-screen bg-background">
-      <div className="max-w-[1200px] mx-auto px-4 py-8 md:py-12">
+      <div className="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
         <nav className="mb-6 print:hidden">
           <a
             href="/"

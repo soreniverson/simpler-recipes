@@ -34,6 +34,17 @@ function PlusIcon() {
   )
 }
 
+// Clean up common formatting issues in ingredient text
+function cleanIngredient(text) {
+  return text
+    // Fix double parentheses: ((text)) -> (text)
+    .replace(/\(\(([^)]+)\)\)/g, '($1)')
+    // Fix spaced parentheses: ( , text) -> (text)
+    .replace(/\(\s*,\s*/g, '(')
+    // Trim whitespace
+    .trim()
+}
+
 export default function ScalableIngredients({
   ingredients,
   servings,
@@ -87,63 +98,41 @@ export default function ScalableIngredients({
   }
 
   return (
-    <div className="bg-sand-50 rounded-2xl shadow-sm p-6 print:shadow-none print:rounded-none">
-      {/* Header with title and actions */}
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-sm font-medium text-sand-900 uppercase tracking-wide">
-          Ingredients
-        </h2>
-        <div className="flex items-center gap-1 print:hidden">
-          <button
-            onClick={handleCopy}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs text-sand-600 hover:text-sand-900 hover:bg-sand-100 rounded-lg transition-colors"
-            aria-label="Copy ingredients to clipboard"
-          >
-            <CopyIcon />
-            <span>{copyStatus || 'Copy'}</span>
-          </button>
-          <button
-            onClick={handlePrint}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs text-sand-600 hover:text-sand-900 hover:bg-sand-100 rounded-lg transition-colors"
-            aria-label="Print recipe"
-          >
-            <PrintIcon />
-            <span>Print</span>
-          </button>
-        </div>
-      </div>
+    <div className="bg-sand-50 rounded-2xl shadow-sm p-5 print:shadow-none print:rounded-none">
+      {/* Header */}
+      <h2 className="text-sm font-medium text-sand-900 uppercase tracking-wide mb-4">
+        Ingredients
+      </h2>
 
       {/* Servings adjuster */}
-      <div className="flex items-center gap-3 mb-5 pb-4 border-b border-sand-200 print:hidden">
-        <div className="flex items-center">
+      <div className="flex items-center justify-between mb-4 pb-4 border-b border-sand-200 print:hidden">
+        <div className="flex items-center gap-2">
           <button
             onClick={handleDecrement}
             disabled={currentServings <= 1}
-            className="w-7 h-7 flex items-center justify-center rounded-full bg-sand-100 hover:bg-sand-200 text-sand-700 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            className="w-7 h-7 flex items-center justify-center rounded-full bg-sand-100 hover:bg-sand-200 text-sand-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             aria-label="Decrease servings"
           >
             <MinusIcon />
           </button>
-          <span className="w-10 text-center text-sand-900 font-medium tabular-nums">
+          <span className="w-8 text-center text-sand-900 font-medium tabular-nums text-sm">
             {currentServings}
           </span>
           <button
             onClick={handleIncrement}
             disabled={currentServings >= 99}
-            className="w-7 h-7 flex items-center justify-center rounded-full bg-sand-100 hover:bg-sand-200 text-sand-700 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            className="w-7 h-7 flex items-center justify-center rounded-full bg-sand-100 hover:bg-sand-200 text-sand-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             aria-label="Increase servings"
           >
             <PlusIcon />
           </button>
+          <span className="text-sm text-sand-500 ml-1">servings</span>
         </div>
-        <span className="text-sm text-sand-600">
-          servings
-          {isScaled && (
-            <span className="text-sand-400 ml-1">
-              (from {originalServings})
-            </span>
-          )}
-        </span>
+        {isScaled && (
+          <span className="text-xs text-sand-400">
+            from {originalServings}
+          </span>
+        )}
       </div>
 
       {/* Print-only servings display */}
@@ -162,10 +151,30 @@ export default function ScalableIngredients({
             className="flex items-start gap-2.5 text-sand-700 text-sm leading-relaxed"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-sand-400 mt-1.5 flex-shrink-0" aria-hidden="true" />
-            <span>{ingredient}</span>
+            <span>{cleanIngredient(ingredient)}</span>
           </li>
         ))}
       </ul>
+
+      {/* Actions */}
+      <div className="flex items-center gap-2 mt-4 pt-4 border-t border-sand-200 print:hidden">
+        <button
+          onClick={handleCopy}
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+          aria-label="Copy ingredients to clipboard"
+        >
+          <CopyIcon />
+          <span>{copyStatus || 'Copy'}</span>
+        </button>
+        <button
+          onClick={handlePrint}
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+          aria-label="Print recipe"
+        >
+          <PrintIcon />
+          <span>Print</span>
+        </button>
+      </div>
     </div>
   )
 }

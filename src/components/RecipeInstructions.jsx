@@ -36,10 +36,10 @@ export default function RecipeInstructions({ instructions, recipeName }) {
               key={index}
               className="flex gap-3 text-sand-700 text-sm leading-relaxed"
             >
-              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-sand-200 text-sand-600 text-xs flex items-center justify-center font-medium">
+              <span className="flex-shrink-0 w-5 h-5 rounded-full bg-sand-200 text-sand-500 text-[10px] flex items-center justify-center font-medium">
                 {index + 1}
               </span>
-              <span className="pt-0.5">{instruction}</span>
+              <span>{instruction}</span>
             </li>
           ))}
         </ol>
