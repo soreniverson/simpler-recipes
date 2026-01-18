@@ -73,8 +73,8 @@ export default function FavoriteButton({
         rounded-full
         transition-all duration-200
         ${favorited
-          ? 'text-red-500 hover:text-red-600 bg-red-50 hover:bg-red-100'
-          : 'text-sand-400 hover:text-red-400 hover:bg-sand-100'
+          ? 'text-sand-700 hover:text-sand-800 bg-sand-200 hover:bg-sand-300'
+          : 'text-sand-400 hover:text-sand-600 hover:bg-sand-100'
         }
         ${isAnimating ? 'scale-125' : 'scale-100'}
         ${className}

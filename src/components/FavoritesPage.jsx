@@ -40,15 +40,12 @@ export default function FavoritesPage({ recipes }) {
   return (
     <div>
       <header className="mb-8">
-        <h1 className="text-xl md:text-2xl font-medium tracking-tight text-sand-900 mb-2">
-          Your Favorites
+        <h1 className="text-lg font-medium text-sand-900 flex items-center gap-2">
+          Favorites
+          {favoriteRecipes.length > 0 && (
+            <span className="text-sand-500 font-normal">({favoriteRecipes.length})</span>
+          )}
         </h1>
-        <p className="text-sand-600 text-sm">
-          {favoriteRecipes.length === 0
-            ? 'Save recipes by clicking the heart icon'
-            : `${favoriteRecipes.length} saved recipe${favoriteRecipes.length === 1 ? '' : 's'}`
-          }
-        </p>
       </header>
 
       {favoriteRecipes.length === 0 ? (

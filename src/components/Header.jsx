@@ -76,12 +76,12 @@ export default function Header({ recipes = [] }) {
           <div className="hidden sm:flex items-center gap-1 flex-shrink-0 w-[120px] justify-end">
             <a
               href="/favorites"
-              className="relative p-2 text-sand-500 hover:text-red-500 hover:bg-sand-100 rounded-lg transition-colors"
+              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
               aria-label={`Favorites${favoritesCount > 0 ? ` (${favoritesCount})` : ''}`}
             >
               <HeartIcon className="w-5 h-5" />
               {favoritesCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] flex items-center justify-center bg-red-500 text-white text-[10px] font-medium rounded-full px-1">
+                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] flex items-center justify-center bg-sand-600 text-white text-[10px] font-medium rounded-full px-1">
                   {favoritesCount > 99 ? '99+' : favoritesCount}
                 </span>
               )}
@@ -99,12 +99,12 @@ export default function Header({ recipes = [] }) {
             </button>
             <a
               href="/favorites"
-              className="relative p-2 text-sand-500 hover:text-red-500 hover:bg-sand-100 rounded-lg transition-colors"
+              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
               aria-label={`Favorites${favoritesCount > 0 ? ` (${favoritesCount})` : ''}`}
             >
               <HeartIcon className="w-5 h-5" />
               {favoritesCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] flex items-center justify-center bg-red-500 text-white text-[10px] font-medium rounded-full px-1">
+                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] flex items-center justify-center bg-sand-600 text-white text-[10px] font-medium rounded-full px-1">
                   {favoritesCount > 99 ? '99+' : favoritesCount}
                 </span>
               )}
