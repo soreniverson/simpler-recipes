@@ -105,8 +105,8 @@ const canonicalUrl = canonical || Astro.url.href;
 
   /* Light mode (default) - WCAG AA compliant */
   :root {
-    --sand-25: #FDFCFB;
-    --sand-50: #FAF9F7;
+    --sand-25: #FEFEFE;
+    --sand-50: #FCFBFA;  /* Cards - closer to white for contrast */
     --sand-100: #F5F4F1;
     --sand-200: #EBEAE6;
     --sand-300: #DDDCD7;
@@ -119,9 +119,9 @@ const canonicalUrl = canonical || Astro.url.href;
     --sand-950: #0F0E0D;
     --primary: #4a4946;
     --primary-light: #5e5d59;
-    --surface: #FAF9F7;
-    --background: #FDFCFB;
-    --shadow-color: rgba(58, 56, 50, 0.04);
+    --surface: #FCFBFA;  /* Match sand-50 for cards */
+    --background: #F6F5F3;  /* Slightly darker for contrast */
+    --shadow-color: rgba(58, 56, 50, 0.06);
   }
 
   /* Dark mode - WCAG AA compliant contrast ratios */
