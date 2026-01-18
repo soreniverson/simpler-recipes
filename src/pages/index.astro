@@ -29,7 +29,7 @@ function getIcon(slug: string): string {
   <main id="main-content" class="min-h-screen">
     <div class="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
       <!-- Hero Card -->
-      <section class="bg-sand-100/70 border border-sand-200 rounded-2xl p-8 md:p-12 mb-8">
+      <section class="bg-sand-50 rounded-2xl p-8 md:p-12 shadow-sm mb-8">
         <RecipeExtractor client:load recipes={recipes} />
       </section>
 
@@ -51,7 +51,7 @@ function getIcon(slug: string): string {
                 <li>
                   <a
                     href={`/collection/${collection.slug}`}
-                    class="flex items-start gap-4 h-full bg-sand-100/70 border border-sand-200 rounded-xl p-5 hover:bg-sand-100 hover:border-sand-300 transition-all group"
+                    class="flex items-start gap-4 h-full bg-sand-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:bg-sand-100/50 transition-all group"
                   >
                     <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-sand-200/60 flex items-center justify-center text-sand-600 group-hover:bg-sand-200 group-hover:text-sand-700 transition-colors">
                       <Fragment set:html={getIcon(collection.slug)} />
