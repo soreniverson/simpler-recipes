@@ -61,7 +61,7 @@ function ExtractedRecipeCard({ item, onRemove }) {
       <div className="absolute top-2 right-2 z-10">
         <button
           onClick={handleRemove}
-          className="p-1.5 rounded-full transition-all duration-200 text-sand-700 hover:text-sand-800 bg-sand-200 hover:bg-sand-300"
+          className="p-1.5 rounded-full transition-all duration-200 text-sand-700 hover:text-sand-800 bg-sand-200 hover:bg-sand-300 flex items-center justify-center"
           aria-label="Remove from favorites"
         >
           <HeartIcon filled className="w-4 h-4" />
