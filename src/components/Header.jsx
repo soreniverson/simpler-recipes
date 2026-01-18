@@ -35,13 +35,13 @@ export default function Header({ recipes = [] }) {
           {/* Logo */}
           <a
             href="/"
-            className="flex-shrink-0 text-sand-900 font-medium text-base leading-none hover:text-sand-700 transition-colors"
+            className="flex-shrink-0 flex items-center text-sand-900 font-medium text-base hover:text-sand-700 transition-colors"
           >
             Simpler Recipes
           </a>
 
           {/* Desktop Search - using SmartInput */}
-          <div className="hidden sm:flex flex-1 justify-center">
+          <div className="hidden sm:flex flex-1 justify-center items-center">
             <SmartInput
               recipes={recipes}
               variant="header"
