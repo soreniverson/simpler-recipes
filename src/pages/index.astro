@@ -1,15 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import RecipeExtractor from '../components/RecipeExtractor.jsx';
-import RecipeSearch from '../components/RecipeSearch.jsx';
 import fs from 'fs';
 import path from 'path';
 
-// Load collections and recipes at build time
+// Load collections at build time
 const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
 const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 const collections = data.collections;
-const recipes = data.recipes;
 
 // Icon SVGs for collections
 const collectionIcons: Record<string, string> = {
@@ -32,19 +30,6 @@ function getIcon(slug: string): string {
       <!-- Hero Card -->
       <section class="bg-sand-50 rounded-2xl p-6 md:p-10 shadow-sm mb-8">
         <RecipeExtractor client:load />
-      </section>
-
-      <!-- Recipe Search -->
-      <section class="mb-10" aria-labelledby="search-heading">
-        <header class="mb-4">
-          <h2 id="search-heading" class="text-lg font-medium text-sand-900">
-            Search our recipes
-          </h2>
-          <p class="text-sm text-sand-500 mt-1">
-            Find recipes by name, ingredient, or tag
-          </p>
-        </header>
-        <RecipeSearch client:load recipes={recipes} />
       </section>
 
       <!-- Recipe Collections -->
