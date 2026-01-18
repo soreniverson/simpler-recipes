@@ -1,0 +1,30 @@
+{
+  "name": "@simpler-recipes/mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Simpler Recipes - exposes recipe tools to AI assistants",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "simpler-recipes-mcp": "build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node build/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "recipes",
+    "ai",
+    "claude"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
