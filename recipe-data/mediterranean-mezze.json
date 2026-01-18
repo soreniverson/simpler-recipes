@@ -1,0 +1,512 @@
+{
+  "theme": {
+    "slug": "mediterranean-mezze",
+    "name": "Mediterranean & Mezze",
+    "description": "Fresh, healthy dishes from Greece, Lebanon, and the Mediterranean"
+  },
+  "metadata": {
+    "recipeCount": 12,
+    "lastUpdated": "2026-01-18T06:49:07.310Z"
+  },
+  "recipes": [
+    {
+      "id": "easy-homemade-hummus",
+      "slug": "easy-homemade-hummus",
+      "title": "Easy Homemade Hummus",
+      "image": "https://www.simplyrecipes.com/thmb/fyhMTFvxniOslSsG5l4mEm-QxtY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__12__easy-hummus-horiz-a-1800-91d5a42ac99c4be0b1ba021846ff52b7.jpg",
+      "prepTime": "10 min",
+      "cookTime": null,
+      "totalTime": "10 min",
+      "servings": "12",
+      "ingredients": [
+        "1/2 cup of tahini (roasted, not raw)",
+        "1/4 cup extra virgin olive oil (plus more for garnishing)",
+        "2 garlic cloves, mashed and roughly chopped",
+        "2 (15 ounce) cans of chickpeas (garbanzo beans), drained",
+        "1/4 cup lemon juice, freshly squeezed",
+        "1/2 cup water",
+        "1/2 teaspoon of salt",
+        "Garnishes: A sprinkling of paprika, a swirl of olive oil, toasted pine nuts, and/or chopped parsley"
+      ],
+      "instructions": [
+        "In a food processor, combine the tahini and olive oil and pulse until smooth.",
+        "Add the garlic, garbanzo beans, lemon juice, water, and salt. Process until smooth. The longer you process in the food processor, the smoother the hummus will be. Add more salt or lemon juice to taste.",
+        "Spoon into serving dish, swirl a little olive oil over the top and sprinkle with garnishes—a little paprika, toasted pine nuts, or chopped fresh parsley. Serve with crackers, raw dip vegetables such as carrots or celery, or with toasted pita bread.",
+        "Once prepared, store hummus in an airtight container in the fridge for up to 5 days or in the freezer for up to 1 month. Did you love the recipe? Give us some stars and leave a comment below!"
+      ],
+      "tags": [
+        "mediterranean",
+        "healthy"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/hummus/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:28.204Z",
+      "theme": "Mediterranean & Mezze"
+    },
+    {
+      "id": "easy-tabbouleh",
+      "slug": "easy-tabbouleh",
+      "title": "Easy Tabbouleh",
+      "image": "https://www.simplyrecipes.com/thmb/laMFfIFVVibT6OObKITh0RbyUhQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Tabbouleh-LEAD-05-5de7c8e3ec4b4f7eaacb3c343aef8bb1.jpg",
+      "prepTime": "20 min",
+      "cookTime": "10 min",
+      "totalTime": "90 min",
+      "servings": "8",
+      "ingredients": [
+        "2 cups vegetable stock, chicken stock, or water",
+        "1 teaspoon kosher salt",
+        "2 cups bulgur wheat",
+        "1/2 cup extra virgin olive oil",
+        "Juice and finely grated zest of 2 lemons",
+        "5-6 Roma or plum tomatoes, seeded and chopped",
+        "2 scallions, chopped, including the greens",
+        "2 to 3 cups parsley, chopped",
+        "1 cup fresh mint leaves, chopped"
+      ],
+      "instructions": [
+        "Place the bulgur in a medium heatproof bowl. Bring the stock or water and the teaspoon of salt to a boil, and then pour it over the bulgur. Let sit for 30 minutes to an hour, until it has absorbed all the liquid.",
+        "In a large bowl, add the olive oil, lemon juice and zest, and bulgur. Mix well.",
+        "Add the tomatoes, scallions, and herbs to the bulgar mixture. Stir till well combined.",
+        "Taste the tabbouleh, and add more salt, olive oil, or more lemon juice to taste. Let marinate for at least 30 minutes before serving. Will keep chilled for several days. Did you love the recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "mediterranean",
+        "healthy"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/tabbouleh/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:33.294Z",
+      "theme": "Mediterranean & Mezze"
+    },
+    {
+      "id": "lamb-koftas-with-yoghurt-dressing",
+      "slug": "lamb-koftas-with-yoghurt-dressing",
+      "title": "Lamb Koftas with Yoghurt Dressing",
+      "image": "https://www.recipetineats.com/tachyon/2014/11/Lamb-Koftas_7.jpg",
+      "prepTime": "15 min",
+      "cookTime": "15 min",
+      "totalTime": "30 min",
+      "servings": "8",
+      "ingredients": [
+        "1 lb / 500 g lamb mince (ground lamb)",
+        "1/2 onion (grated)",
+        "1/4 cup breadcrumbs (preferably panko)",
+        "2 cloves garlic (crushed)",
+        "2 tbsp chopped fresh coriander",
+        "2 tsp cumin",
+        "2 tsp coriander",
+        "2 tsp paprika",
+        "1.5 tsp ground cinnamon",
+        "3/4 tsp cayenne pepper (this is a bit spicy, reduce to taste or leave out)",
+        "1 tsp cooking / kosher salt",
+        "1/2 black pepper",
+        "1 cup yogurt (Greek or other thick plain)",
+        "1 tbsp extra virgin olive oil",
+        "1 clove garlic (crushed)",
+        "1 tsp cumin",
+        "1 tbsp lemon juice",
+        "1/4 tsp salt and pepper (each)",
+        "8 skewers (Note 1)",
+        "8 flatbreads (small)",
+        "Shredded Red Cabbage, Carrot and Mint Salad (Note 3)",
+        "OR shredded lettuce, tomato and onion slices (Note 3)"
+      ],
+      "instructions": [
+        "Yogurt Sauce: Combine the yogurt sauce ingredients and leave in fridge for at least 20 mninutes for the flavor to develop (overnight even better!).",
+        "Koftas: Grate the onion into the bowl using a standard box grater. Add remaining Kofta ingredients and mix well with your hands.",
+        "With damp hands, divide the meat into 8 equal pieces and push and shape the meat onto 8 skewers. Make them smooth (looks nicer, pictured!) or a bit nubbly (more surface area to brown!).",
+        "Stove: Preheat 1/2 tbsp oil in a large skillet over medium high heat. Cook in batches for 5 minutes in total, turning to brown evenly all over.",
+        "BBQ: BBQ on medium high for about 6 minutes, rotating to brown all over.",
+        "Broiler/oven grill: preheat and cook koftas 30cm/10\" from heat source for 12 minutes, rotating as needed until lightly browned (you won't get as good a browning as stove/BBQ).",
+        "Do a DIY spread - pile everything onto a platter a make everyone serve themselves.",
+        "Get a flatbread, smear with Yogurt Sauce, top with Red Cabbage Mint Salad (more options Note 3) then Kofta, drizzle over more Yoghurt Sauce. Devour and be happy!"
+      ],
+      "tags": [
+        "mediterranean",
+        "healthy"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/lamb-kofta/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:39.385Z",
+      "theme": "Mediterranean & Mezze"
+    },
+    {
+      "id": "moussaka",
+      "slug": "moussaka",
+      "title": "Moussaka",
+      "image": "https://www.simplyrecipes.com/thmb/9uxlUExl519ptV_ibSjTyXm3pqU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Moussaka-LEAD-9-cdbaeab921e343c6aeb1a95e0a4fdbce.jpg",
+      "prepTime": "30 min",
+      "cookTime": "120 min",
+      "totalTime": "150 min",
+      "servings": "8",
+      "ingredients": [
+        "2 pounds ground lamb or beef",
+        "2 tablespoons extra virgin olive oil",
+        "1 onion, chopped",
+        "4 garlic cloves, chopped",
+        "1 teaspoon allspice",
+        "1 teaspoon cinnamon",
+        "1 teaspoon black pepper",
+        "1 tablespoon dried oregano",
+        "2 tablespoons tomato paste",
+        "1/2 cup red wine",
+        "Zest of 1 lemon",
+        "2 tablespoons lemon juice, or more to taste",
+        "Salt to taste",
+        "1 stick unsalted butter",
+        "1/2 cup flour",
+        "1 teaspoon salt",
+        "4 cups whole milk",
+        "4 egg yolks",
+        "1/2 teaspoon ground nutmeg",
+        "3 large globe eggplants",
+        "1/2 cup salt",
+        "8 cups water",
+        "2 to 3 Yukon gold or other yellow potatoes",
+        "1 cup grated mizithra (or pecorino or Parmesan) cheese",
+        "Extra virgin olive oil"
+      ],
+      "instructions": [
+        "Heat the olive oil in a large sauté pan over medium-high heat and brown the ground meat. By the way, the meat will brown best if you don't stir it. Add the onions about halfway into the browning process. Sprinkle salt over the meat and onions.",
+        "Once the meat is browned and the onions have softened, add the garlic, allspice, cinnamon, black pepper, oregano and tomato paste. Mix well and cook for 2-3 minutes.",
+        "Add the red wine and mix well. Bring the sauce to a simmer, reduce the heat, and continue to simmer gently, uncovered, for 20 minutes. Turn off the heat. Season with salt to taste.",
+        "Mix well and taste. If the sauce needs more acidity, add more lemon juice. Set the sauce aside.",
+        "Mix the 1/2 cup salt with the 8 cups of water in a large pot or container. This will be the brine for the eggplants.",
+        "Slice the top and bottom off the eggplants. Cut thick strips of the skin off the eggplants to give them a striped appearance. A little skin on the eggplant is good for texture, but leaving it all on makes the moussaka hard to cut later, and can add bitterness, which you don’t want. (Some moussaka recipes leave the skin on and have you slice the eggplants lengthwise, which is an option if you prefer.) Slice the eggplant into 1/4 inch rounds and drop them into the brine.",
+        "Let the eggplants sit in the brine 15-20 minutes, then remove them to a series of paper towels to dry. Place a paper towel on the counter, layer some eggplant on it, then cover with more paper towels and repeat.",
+        "As the eggplants are brining, peel and slice the potatoes into 1/4 inch rounds. Boil them in salted water for 5-8 minutes – you want them undercooked, but no longer crunchy. Drain and set aside.",
+        "To cook the eggplant, broil or grill the rounds. You could also fry the eggplant rounds but they tend to absorb a lot of oil that way. To grill the eggplant rounds, get a grill very hot and close the lid. Paint one side of the eggplant rounds with olive oil and grill 2-3 minutes. When they are done on one side, paint the other side with oil and flip. When the eggplants are nicely grilled, set aside. To broil, line a broiling pan or roasting pan with aluminum foil. Paint with olive oil. Place the eggplant rounds on the foil and brush with olive oil. Broil for 3-4 minutes until lightly browned on one side, then flip them over and broil for a few minutes more. Set aside."
+      ],
+      "tags": [
+        "mediterranean",
+        "healthy"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/moussaka/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:42.911Z",
+      "theme": "Mediterranean & Mezze"
+    },
+    {
+      "id": "spanakopita",
+      "slug": "spanakopita",
+      "title": "Spanakopita",
+      "image": "https://www.simplyrecipes.com/thmb/kCP4KPQWbDzotxEhhHK4210HDEQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__11__Spanakopita-Spinach-Pie-Lead-2-5853e3a0834d406c9cf2b906fecf0dd4.jpg",
+      "prepTime": "30 min",
+      "cookTime": "40 min",
+      "totalTime": "70 min",
+      "servings": "6",
+      "ingredients": [
+        "2 (16-ounce) packages frozen chopped spinach, thawed",
+        "1 tablespoon olive oil",
+        "1 bunch scallions, thinly sliced, including some of the green part",
+        "3 large eggs, lightly beaten",
+        "8 ounces (about 1 1/2 cups) crumbled feta",
+        "8 ounces (1 cup) whole milk ricotta",
+        "3 tablespoons chopped fresh dill",
+        "1/3 cup chopped fresh parsley",
+        "1/2 teaspoon kosher salt",
+        "8 ounces (2 sticks) unsalted butter, melted",
+        "1 pound phyllo (filo) dough (about 18 sheets), defrosted in the refrigerator"
+      ],
+      "instructions": [
+        "Center a rack in the middle of the oven and preheat the oven to 375oF.",
+        "Squeeze the excess moisture from the spinach in a towel or with your hands. Just make sure you get as much liquid out of the spinach as possible. Set aside.",
+        "In a small saucepan over medium heat, heat the oil. Add the scallions and cook, stirring, for 2 minutes, or until soft but not brown. Cool briefly.",
+        "In a large bowl, lightly beat the eggs. Add the scallions, feta, ricotta, dill, parsley, salt, and squeezed spinach. Stir to combine.",
+        "Brush the bottom and sides of a 9x13-inch baking dish with melted butter. Unwrap the phyllo and set the stack of sheets next to the pan. Working quickly, brush the top sheet of the phyllo stack with butter and set it in the pan. Repeat buttering and layering the phyllo with 8 more sheets. Don’t worry if the sheets hang over the edges of the pan. You will trim them later. Spread the filling evenly over the phyllo. Butter a phyllo sheet and place it on top of the filling. Repeat with 8 more sheets, as before.",
+        "With a sharp knife, trim the excess phyllo so the edges of the dough are flush with the inside edges of the pan. Position the baking dish with the long edge parallel to the counter. Without cutting too deeply into the filling, make 4 vertical cuts and 3 horizontal cuts through the top phyllo sheets to form 12 squares.",
+        "Bake for 35 to 40 minutes, or until the phyllo is golden brown."
+      ],
+      "tags": [
+        "mediterranean",
+        "healthy"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/spanakopita/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:44.594Z",
+      "theme": "Mediterranean & Mezze"
+    },
+    {
+      "id": "chicken-souvlaki-with-tzatziki",
+      "slug": "chicken-souvlaki-with-tzatziki",
+      "title": "Chicken Souvlaki with Tzatziki",
+      "image": "https://www.recipetineats.com/tachyon/2016/07/Chicken-Souvlaki_1.jpg",
+      "prepTime": "15 min",
+      "cookTime": "10 min",
+      "totalTime": "25 min",
+      "servings": "4",
+      "ingredients": [
+        "1.5 lb / 750 g chicken thigh fillets ((or breast), cut into 1\"/2.5cm pieces)",
+        "2 tbsp olive oil",
+        "1/4 cup lemon juice",
+        "3 garlic cloves (minced)",
+        "2 tbsp dried oregano",
+        "1/2 - 3/4 tsp salt",
+        "Black pepper",
+        "1 tbsp olive oil",
+        "Flatbreads / wraps / pita bread",
+        "Lettuce",
+        "Tomato slices",
+        "2 Lebanese cucumbers (to make about ½ cup grated cucumber after squeezing out juice)",
+        "1 1/4 cups / 300 g plain Greek yoghurt",
+        "2 tsp white wine vinegar (or red wine or apple cider vinegar)",
+        "1 tbsp lemon juice",
+        "1/2 garlic clove (minced)",
+        "1 tbsp extra virgin olive oil (or more if you want richer)",
+        "1/2 tsp salt",
+        "Black pepper"
+      ],
+      "instructions": [
+        "Place chicken and Marinade into a bowl and set aside to marinate for at least 3 hours to overnight.",
+        "Thread chicken onto 8 skewers.",
+        "Heat oil in a large skillet over high heat (or BBQ). Cook skewers for 3 minutes on each side, or until cooked through.",
+        "Serve Chicken Souvlaki with tzatziki, flatbreads (make your own!), lettuce and tomato slices.",
+        "Cut the cucumber in half lengthwise. Use a teaspoon to scrape the watery seeds out. Coarsely grate the cucumber using a box grater. Then wrap in paper towels or a tea towel and squeeze to remove excess liquid.",
+        "Place cucumber in a bowl. Add remaining ingredients then mix to combine. Set aside for at least 20 minutes for the flavours to meld."
+      ],
+      "tags": [
+        "mediterranean",
+        "healthy"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/chicken-souvlaki/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:48.596Z",
+      "theme": "Mediterranean & Mezze"
+    },
+    {
+      "id": "baklava",
+      "slug": "baklava",
+      "title": "Baklava",
+      "image": "https://www.simplyrecipes.com/thmb/3S8HtOSKvpoQmw4wgo5yCW2qjVE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Baklava-LEAD-11-b2a228e6db9f43d697ae3aed378d0b2a.jpg",
+      "prepTime": "35 min",
+      "cookTime": "30 min",
+      "totalTime": "65 min",
+      "servings": "24",
+      "ingredients": [
+        "1 pound of chopped nuts (almonds, walnuts, or pistachios are best, or use a combination of them)",
+        "1 pound of phyllo dough",
+        "1 cup of butter, melted",
+        "1/3 cup of sugar",
+        "1 teaspoon of ground cinnamon",
+        "1/3 teaspoon of ground cloves",
+        "1 cup of water",
+        "1 cup of sugar",
+        "1/2 cup of honey",
+        "2 tablespoons of lemon juice",
+        "1 cinnamon stick",
+        "Finely ground pistachios for garnish (optional)"
+      ],
+      "instructions": [
+        "Thaw the phyllo dough according to manufacturer's directions (this may take overnight).",
+        "Preheat the oven to 350°F. Lightly grease a 9x13-inch pan.",
+        "In a food processor, pulse the nuts until they are finely chopped. Combine with the sugar, cinnamon, and cloves. In a separate bowl, melt the butter in the microwave. Roll out the phyllo sheets and cut in half so the sheets will fit in the pan.",
+        "Place a sheet of phyllo dough into the pan. Using a pastry brush, brush the phyllo sheet with melted butter. Repeat 7 more times until it is 8 sheets thick, each sheet being \"painted\" with the butter.",
+        "Spoon on a thin layer of the nut mixture. Cover with two more sheets of phyllo, brushing each one with butter. Continue to repeat the nut mixture and two buttered sheets of phyllo until the nut mixture is all used up. The top layer should be 8 phyllo sheets thick, each sheet being individually buttered. Do not worry if the sheets crinkle up a bit, it will just add more texture.",
+        "Score into 24 equal sized squares using a sharp knife. Bake at 350°F for 30 to 35 minutes or until lightly golden brown, and edges appear slightly crisp.",
+        "While baking, make the syrup. Combine the cinnamon stick, sugar, lemon juice, honey, and water in a saucepan. Bring to a boil, then reduce to medium low heat and let simmer for 7 minutes and slightly thickened. Remove the cinnamon stick and allow to cool.",
+        "Spoon the cooled syrup over the hot baklava and let cool, uncovered, for at least 4 hours. Garnish with some finely crushed pistachios of desired. Did you love the recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "mediterranean",
+        "healthy"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/baklava/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:51.975Z",
+      "theme": "Mediterranean & Mezze"
+    },
+    {
+      "id": "lemon-chicken",
+      "slug": "lemon-chicken",
+      "title": "Lemon Chicken",
+      "image": "https://www.simplyrecipes.com/thmb/QMYd7a-qCxzivOS_CYUZEjuVRbk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2010__03__lemon-chicken-horiz-a-1600-c2d39b9c29654638b1d9c6fd98b64991.jpg",
+      "prepTime": "10 min",
+      "cookTime": "45 min",
+      "totalTime": "115 min",
+      "servings": "6",
+      "ingredients": [
+        "3 to 4 pounds chicken parts (thighs and legs recommended), skin-on, bone-in, trimmed of excess fat",
+        "4 teaspoons lemon zest (about zest from 2 lemons)",
+        "1/3 cup lemon juice",
+        "2 cloves garlic, crushed",
+        "2 tablespoons fresh chopped thyme (or 2 teaspoons dried)",
+        "2 teaspoons fresh chopped rosemary (or 1/2 teaspoon dried)",
+        "1 teaspoon Kosher salt",
+        "1 teaspoon black pepper",
+        "2 tablespoons melted butter",
+        "Lemon slices for garnish"
+      ],
+      "instructions": [
+        "Place lemon juice, lemon zest, garlic, thyme, rosemary, salt, and pepper in a large, non-reactive bowl, whisk to combine. With the tip of a sharp knife, cut into the underside (skinless) of each chicken piece one or two times by about 1/2 an inch. (This will help the marinade penetrate.) Place the chicken pieces in the bowl and turn to coat with the marinade. Place in the refrigerator and marinate for 1 to 2 hours.",
+        "Preheat the oven to 425°F. Remove chicken from marinade and place in a single layer in a large baking dish, skin side up. Reserve the marinade. Use a pastry brush to brush melted butter on each piece of chicken.",
+        "Bake for 20 minutes and baste the chicken pieces generously with the reserved marinade. Continue baking for another 15 to 25 minutes (a total of 35 to 45 minutes), until the skins are crispy brown, and the chicken is cooked through, juices running clear (internal temperature of 165°F). Depending on the size of the breasts, they may be ready before the thighs, so if you are cooking a mix of chicken parts, keep that in mind, you may have to take them out of the oven before the thighs.",
+        "Remove from the oven and let the chicken rest, covered in foil, for 10 minutes before serving.",
+        "Pour the juices from the pan into a serving bowl. Use a tablespoon to skim the fat off the top (save the fat for cooking with later, or discard, but do not discard down the drain or it will solidify and clog your drain). Serve the chicken with the juices on the side or a little poured over the top of the chicken. Serve alone, or with steamed rice , buttered noodles , angel hair pasta , or mashed potatoes . Did you love the recipe? Give us some stars and leave a comment below!"
+      ],
+      "tags": [
+        "mediterranean",
+        "healthy"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/lemon_chicken/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:53.661Z",
+      "theme": "Mediterranean & Mezze"
+    },
+    {
+      "id": "mediterranean-greek-salad",
+      "slug": "mediterranean-greek-salad",
+      "title": "Mediterranean Greek Salad",
+      "image": "https://www.allrecipes.com/thmb/HOtpoU9v_6zJsTam7z7BhggwyY4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8187761-fde3b76b1fd548bd8d63debfe19517fb.jpg",
+      "prepTime": "10 min",
+      "cookTime": null,
+      "totalTime": "10 min",
+      "servings": "8",
+      "ingredients": [
+        "3 cucumbers, seeded and sliced",
+        "1.5 cups crumbled feta cheese",
+        "1 cup black olives, pitted and sliced",
+        "3 cups diced roma tomatoes",
+        "0.33333334326744 cup diced oil packed sun-dried tomatoes, drained, oil reserved",
+        "0.5 red onion, sliced"
+      ],
+      "instructions": [
+        "In a large salad bowl, toss together the cucumbers, feta cheese, olives, roma tomatoes, sun-dried tomatoes, 2 tablespoons reserved sun-dried tomato oil, and red onion. Chill until serving."
+      ],
+      "tags": [
+        "mediterranean",
+        "healthy"
+      ],
+      "source": {
+        "name": "allrecipes.com",
+        "url": "https://www.allrecipes.com/recipe/14403/mediterranean-greek-salad/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:40:09.041Z",
+      "theme": "Mediterranean & Mezze"
+    },
+    {
+      "id": "easy-tzatziki",
+      "slug": "easy-tzatziki",
+      "title": "Easy tzatziki",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2021/07/Tzatziki-93ef952.jpg?resize=768,713",
+      "prepTime": "15 min",
+      "cookTime": null,
+      "totalTime": "15 min",
+      "servings": "8",
+      "ingredients": [
+        "1 large cucumber peeled, halved and deseeded",
+        "500g Greek yogurt",
+        "1 small garlic clove crushed or finely chopped",
+        "3 tbsp white wine vinegar",
+        "2 tbsp olive oil",
+        "small handful of mint leaves or dill sprigs, finely chopped"
+      ],
+      "instructions": [
+        "Coarsely grate the cucumber along the length to create long strands, tip into a sieve set over the sink or a bowl, mix in a large pinch of salt and set aside for 10 mins. Tip the yogurt, garlic, vinegar and olive oil into a bowl and season with black pepper.",
+        "Squeeze as much liquid out of the cucumber as you can using your hands, then stir through the yogurt mixture along with the mint, taste for seasoning and serve. Can be made a day ahead and chilled – just give it a good stir before serving."
+      ],
+      "tags": [
+        "mediterranean",
+        "healthy"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/easy-tzatziki"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:43:12.616Z",
+      "theme": "Mediterranean & Mezze"
+    },
+    {
+      "id": "shakshuka",
+      "slug": "shakshuka",
+      "title": "Shakshuka",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-12141_11-fd804a3.jpg?resize=440,400",
+      "prepTime": "5 min",
+      "cookTime": "20 min",
+      "totalTime": "25 min",
+      "servings": "2",
+      "ingredients": [
+        "1 tbsp olive oil",
+        "2 red onions chopped",
+        "1 red chilli deseeded and finely chopped",
+        "1 garlic clove sliced",
+        "small bunch coriander stalks and leaves chopped separately",
+        "2 cans cherry tomatoes",
+        "1 tsp caster sugar",
+        "4 eggs"
+      ],
+      "instructions": [
+        "Heat the oil in a frying pan that has a lid, then soften the onions, chilli, garlic and coriander stalks for 5 mins until soft. Stir in the tomatoes and sugar, then bubble for 8-10 mins until thick. Can be frozen for 1 month.",
+        "Using the back of a large spoon, make 4 dips in the sauce, then crack an egg into each one. Put a lid on the pan, then cook over a low heat for 6-8 mins, until the eggs are done to your liking. Scatter with the coriander leaves and serve with crusty bread."
+      ],
+      "tags": [
+        "mediterranean"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/shakshuka"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:45:46.832Z",
+      "theme": "Mediterranean & Mezze"
+    },
+    {
+      "id": "greek-salad",
+      "slug": "greek-salad",
+      "title": "Greek salad",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1201727_11-4026b8d.jpg?resize=440,400",
+      "prepTime": "15 min",
+      "cookTime": null,
+      "totalTime": "15 min",
+      "servings": "4",
+      "ingredients": [
+        "4 large vine tomatoes cut into irregular wedges",
+        "1 cucumber peeled, deseeded, then roughly chopped",
+        "½ a red onion thinly sliced",
+        "16 Kalamata olives",
+        "1 tsp dried oregano",
+        "85g feta cheese cut into chunks (barrel matured feta is the best)",
+        "4 tbsp Greek extra virgin olive oil"
+      ],
+      "instructions": [
+        "Place 4 large vine tomatoes, cut into wedges, 1 peeled, deseeded and chopped cucumber, ½ a thinly sliced red onion, 16 Kalamata olives, 1 tsp dried oregano, 85g feta cheese chunks and 4 tbsp Greek extra virgin olive oil in a large bowl.",
+        "Lightly season, then serve with crusty bread to mop up all of the juices."
+      ],
+      "tags": [
+        "mediterranean"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/greek-salad"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:45:48.531Z",
+      "theme": "Mediterranean & Mezze"
+    }
+  ]
+}

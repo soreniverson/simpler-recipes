@@ -1,0 +1,614 @@
+{
+  "theme": {
+    "slug": "italian-classics",
+    "name": "Italian Classics",
+    "description": "Pasta, risotto, and timeless dishes from Italy"
+  },
+  "metadata": {
+    "recipeCount": 13,
+    "lastUpdated": "2026-01-18T06:49:07.309Z"
+  },
+  "recipes": [
+    {
+      "id": "carbonara-real",
+      "slug": "carbonara-real",
+      "title": "Carbonara (real)",
+      "image": "https://www.recipetineats.com/tachyon/2023/01/Carbonara_6a.jpg",
+      "prepTime": "5 min",
+      "cookTime": "15 min",
+      "totalTime": null,
+      "servings": "4",
+      "ingredients": [
+        "175g/6 oz guanciale (pancetta or block bacon), (weight after skin removed (Note 1))",
+        "2 large eggs (Note 2)",
+        "2 egg yolks (Note 2)",
+        "100g/3.5 oz parmigiano reggiano (finely shredded (or pecorino romano, sub parmesan, Note 3))",
+        "1/4 tsp black pepper",
+        "400g/14 oz spaghetti",
+        "1 tbsp cooking/kosher salt (for cooking pasta)",
+        "1/2 cup pasta cooking water",
+        "1 garlic clove (finely minced (optional, Note 4))",
+        "Parsley (finely chopped)",
+        "Parmigiano reggiano"
+      ],
+      "instructions": [
+        "Guanciale - Cut into 0.5cm / 1/5\" thick slices then into batons.",
+        "Carbonara sauce - Place eggs and yolks in a large bowl. Whisk to combine. Then stir in the parmesan and pepper.",
+        "Cook pasta - Bring 4 litres (4 quarts) of water to the boil with the salt. Add pasta and cook per the packet directions.",
+        "Reserve pasta water - Just before draining, scoop out 1 cup of pasta cooking water, then drain the pasta.",
+        "Cook guanciale - While the pasta is cooking, place guanciale in a non stick pan over medium high heat. Cook for 4 to 5 minutes until golden. No oil needed - as the guanciale heats up, the fat will melt so it fries in its own fat. If using garlic, add it in the last minute.",
+        "Pasta in pan - Tip the hot pasta into the pan and toss to coat in guanciale fat.",
+        "Mix pasta in sauce - Transfer the pasta and any residual fat in the pan into the bowl with the egg. Add 1/2 cup (125 ml) pasta cooking water. Stir vigorously using the handle of a wooden spoon for 1 minute and watch as the sauce transforms from watery to creamy and clings to the pasta strands!",
+        "Serve - Transfer into warm bowls. Serve immediately, garnished with a little extra parmigiana reggiano if desired, and a pinch of black pepper and finely chopped parsley."
+      ],
+      "tags": [
+        "italian",
+        "pasta"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/carbonara/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:29:55.958Z",
+      "theme": "Italian Classics"
+    },
+    {
+      "id": "fettuccine-alfredo",
+      "slug": "fettuccine-alfredo",
+      "title": "Fettuccine Alfredo",
+      "image": "https://www.simplyrecipes.com/thmb/GlBwfMzMH26uvDsjAfijTHxr-B0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Fettuccine-Alfredo-LEAD-1-dad672bf635b4060ab57c1a83b646834.jpg",
+      "prepTime": "15 min",
+      "cookTime": "15 min",
+      "totalTime": "30 min",
+      "servings": "4",
+      "ingredients": [
+        "1/2 pound dry fettuccine pasta",
+        "3 to 4 tablespoons unsalted butter",
+        "2/3 cup finely grated Parmesan cheese",
+        "Black pepper",
+        "1/2 cup heavy cream",
+        "Ground nutmeg"
+      ],
+      "instructions": [
+        "Bring a large pot of salty water to a boil and drop in your fettuccine.",
+        "For the classic version: Melt the butter in a large sauté pan set over low heat. Once the butter has melted, turn the heat off. For the creamy version: Melt the butter in a large sauté pan set over low heat. Add the cream to the butter as it melts. Stir often to combine the two, keeping the heat at its lowest setting while the pasta cooks.",
+        "When the fettuccine is al dente (cooked, but still a little firm) lift it out of the pot with tongs and move the pasta to the sauté pan. Do not drain the pasta. You want it dripping wet with the cooking water. Save the pasta water. You may need it to create the sauce. Turn on the heat under the sauté pan to medium and swirl the pasta and butter together to combine.",
+        "Add half the cheese, then swirl and toss the pasta until it has incorporated into the sauce. If needed, add a few spoonfuls more of the pasta cooking water. Add the rest of the cheese and repeat.",
+        "For the classic version: Serve at once sprinkled with a little black pepper. For the creamy version: Serve at once with either a little black pepper and/or ground nutmeg over the pasta. Leftovers keep for 3 to 5 days in the fridge, covered. Did you love the recipe? Give us some stars and leave a comment below!"
+      ],
+      "tags": [
+        "italian",
+        "pasta"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/fettuccine_alfredo/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:29:57.657Z",
+      "theme": "Italian Classics"
+    },
+    {
+      "id": "easy-chicken-parmesan",
+      "slug": "easy-chicken-parmesan",
+      "title": "Easy Chicken Parmesan",
+      "image": "https://www.simplyrecipes.com/thmb/xRNzDmme7sfVXxDV0Chki_sK12A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Cheesy-Chicken-Parmesan-LEAD-1-ceabb63a49c44a1da51d730760e372ab.jpg",
+      "prepTime": "10 min",
+      "cookTime": "40 min",
+      "totalTime": "50 min",
+      "servings": "4",
+      "ingredients": [
+        "1/2 large yellow onion, grated (don't cut onion in half, just grate half of a whole onion), about 3/4 cup of grated onion",
+        "1/4 cup extra virgin olive oil",
+        "2 medium garlic cloves, minced",
+        "1 (28-ounce) can crushed tomatoes",
+        "1 teaspoon dried oregano",
+        "Pinch red pepper flakes",
+        "Pinch sugar",
+        "4 chicken breast cutlets (1 1/4 to 1 1/2 pounds)",
+        "Salt",
+        "2 large eggs",
+        "1 cup breadcrumbs, Panko or homemade",
+        "1 cup freshly grated Parmesan cheese",
+        "1/4 cup extra virgin olive oil",
+        "2 tablespoons fresh basil leaves, thinly sliced",
+        "8 ounces mozzarella cheese, sliced",
+        "Cooked spaghetti, or sub rolls"
+      ],
+      "instructions": [
+        "Heat the olive oil in a saucepan on medium-high heat. Add the onions and sauté for 2 to 3 minutes. Add the minced garlic. Cook until fragrant, about a minute more. Then add the crushed tomatoes, oregano, red pepper flakes, and sugar. Bring to a simmer; reduce the heat to maintain the simmer. Cook, uncovered while you prepare the chicken (about 10 to 12 minutes).",
+        "Preheat oven to 400°F",
+        "Place the chicken cutlets one at a time between two layers of plastic wrap or wax paper. Use a meat hammer, mallet, rolling pin, or even a heavy empty wine bottle to pound or roll the chicken pieces to an even thickness of 1/4 to 1/2-inch. Sprinkle salt on both sides of the cutlets.",
+        "In a shallow bowl (large enough to dredge the cutlets), mix together the breadcrumbs, 1/2 cup Parmesan, and pinch of salt. In separate shallow bowl, whisk together the eggs.",
+        "Heat 1/4 cup olive oil in a large sauté pan on medium-high heat until the oil is shimmering (not smoking) and a piece of breading dropped into it sizzles. Working one cutlet at a time, dip the chicken cutlet into the egg mixture and then into the breadcrumbs. Working in batches as to not crowd the pan, place the dredged cutlets into the pan. Lower the heat to medium and gently fry the chicken cutlets until they are golden brown on each side, about 3 to 4 minutes per side.",
+        "Spread enough tomato sauce to thickly coat the bottom of a 9x13 casserole pan or baking dish. Once the cutlets are browned on both sides, arrange them on top of the tomato sauce in the baking dish. Spoon tomato sauce over each of the cutlets. Sprinkle the tops with sliced basil. Then lay slices of mozzarella over each cutlet and sprinkle with the remaining 1/2 cup of Parmesan cheese.",
+        "Bake in the oven at 400°F for 10 to 12 minutes, or until the mozzarella begins to brown.",
+        "Serve with pasta and the remaining sauce, or in a large roll."
+      ],
+      "tags": [
+        "italian",
+        "pasta"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/chicken_parmesan/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:30:02.766Z",
+      "theme": "Italian Classics"
+    },
+    {
+      "id": "eggplant-parmesan",
+      "slug": "eggplant-parmesan",
+      "title": "Eggplant Parmesan",
+      "image": "https://www.simplyrecipes.com/thmb/gyUEQFCmGW92Bxdsdq_I9Wf2kEU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Eggplant-Parm-METHOD-16-4f53b15f0f844b31850ee71b9f700846.jpg",
+      "prepTime": "60 min",
+      "cookTime": "70 min",
+      "totalTime": "190 min",
+      "servings": "8",
+      "ingredients": [
+        "2 1/4 pounds (about 2 large) eggplants",
+        "1 teaspoon kosher salt",
+        "1/4 cup extra virgin olive oil (plus more to oil the sheet pans)",
+        "2 cloves minced garlic (about 2 teaspoons)",
+        "2 28-oz cans whole peeled tomatoes (preferably San Marzano) that have been diced, reserving the juices, or crushed tomatoes",
+        "1/2 cup finely chopped fresh basil, packed",
+        "Kosher salt",
+        "Freshly ground black pepper",
+        "2 cups breadcrumbs",
+        "1 1/4 cups shredded Parmesan cheese, divided",
+        "1 cup all-purpose flour",
+        "4 large eggs, beaten (more if needed)",
+        "1 1/2 pounds fresh mozzarella, sliced into 1/4-inch slices"
+      ],
+      "instructions": [
+        "Slice the eggplants into 1/4 to 1/2-inch thick rounds. Lay the eggplant slices out on a rack over a rimmed sheet pan (or on several layers of paper towels). Sprinkle both sides of the eggplant rounds lightly with salt. Let the eggplant rounds sit and release moisture for at least 1 hour and up to 2 hours.",
+        "Heat 1 tablespoon olive oil in a 4-quart saucepan on medium heat. Add the minced garlic and gently cook for 1 minute or until fragrant. Add the tomatoes and their juices, breaking up the tomatoes as you add them to the pot. Increase the heat to bring to a simmer, then lower the heat to maintain a very low simmer for 15 minutes, uncovered. Add salt and pepper to taste. Add the minced basil and remove from heat.",
+        "Place the oven rack in the middle.",
+        "Combine 1 1/2 cups of the breadcrumbs with 1/4 cup of the Parmesan cheese, and place in a shallow bowl or rimmed dish. Set up your station so that you have flour in one shallow bowl, beaten eggs in another bowl, and the breadcrumb cheese mixture in another, in that order.",
+        "Set out two rimmed sheet pans. Spread 1 tablespoon of olive oil on the bottom of each pan. The eggplant rounds should be wet from releasing moisture after salting them. Pat the eggplant slices dry with paper towels. Working one at a time, dredge the eggplant slices first in the flour, then dip in the beaten eggs, and then dredge in the breadcrumb Parmesan cheese mixture. Add more breadcrumbs, if needed. Place on the oiled sheet pans in a single layer. Drizzle a little oil over the top of each breaded eggplant round.",
+        "Place breaded prepared eggplant slices in the oven. Cook for 18 to 20 minutes at 425°F, turning the slices over at the halfway point, until they are nicely browned and fork-tender. Remove from oven, and let cool to touch.",
+        "Spread 1 cup of the tomato sauce over the bottom of a 9 x 13-inch casserole dish. Place a third of the eggplant rounds in a single layer, covering the sauce on the bottom of the pan. Layer half of the sliced mozzarella on top of the eggplant rounds. Sprinkle with 1/3 cup of the Parmesan cheese. Place another third of the eggplant rounds over the cheese. Spread 1 cup of the sauce over the eggplant rounds. Layer the rest of the sliced mozzarella over the sauce. Sprinkle with 1/3 cup of shredded Parm. Add the remaining eggplant in a single layer on top of the cheese. Top with the remaining sauce and the remaining Parmesan.",
+        "Reduce the oven to 350°F and bake, uncovered, until the cheese is melted and the casserole is bubbly around the edges, about 35 minutes. Remove from the oven and let sit for 10 minutes before cutting into to serve. Did you enjoy this recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "italian",
+        "pasta"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/eggplant_parmesan/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:30:04.543Z",
+      "theme": "Italian Classics"
+    },
+    {
+      "id": "classic-minestrone-soup",
+      "slug": "classic-minestrone-soup",
+      "title": "Classic Minestrone Soup",
+      "image": "https://www.simplyrecipes.com/thmb/PrHrMhD2gAmxbYoS719oej1pUp0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Minestrone-Soup-LEAD-2-e588767908ff46f697c5396f74120d75.jpg",
+      "prepTime": "20 min",
+      "cookTime": "45 min",
+      "totalTime": "65 min",
+      "servings": "6",
+      "ingredients": [
+        "1/4 cup extra virgin olive oil",
+        "3/4 cup chopped onion",
+        "3/4 cup chopped carrot",
+        "3/4 cup chopped celery",
+        "1 tablespoon minced garlic",
+        "1 bay leaf",
+        "2 sprigs fresh thyme or a teaspoon of dried thyme",
+        "1/4 teaspoon fennel seeds, crushed",
+        "1 Yukon gold potato, peeled and cut into 3/4-inch chunks",
+        "2 cups sliced savoy or curly cabbage",
+        "1 zucchini, cut into 3/4-inch chunks",
+        "2 medium fresh ripe tomatoes (romas if available), cored, peeled, chopped",
+        "6 cups chicken stock (or vegetable stock for vegetarian version)",
+        "1 15-ounce can cannellini or great northern white beans, drained (about 1 1/2 cups cooked white beans)",
+        "1/4 cup chopped fresh parsley",
+        "Salt",
+        "Freshly ground black pepper",
+        "Parmesan cheese, grated for garnish"
+      ],
+      "instructions": [
+        "Heat oil in a 4- to 5-quart thick-bottomed pot on medium-high heat. Add the onion, carrot, and celery. Cook until lightly browned, about 8 minutes. Add the garlic and cook a minute more. Add the bay leaf, thyme, fennel seeds. Add the potato, cabbage, zucchini, and tomatoes. Add the chicken stock.",
+        "Bring to a boil and reduce heat to a simmer. Partially cover and simmer for 20 minutes, until the vegetables are tender and cooked through.",
+        "Add the beans and parsley to the soup. Season to taste with salt and pepper. Bring to a simmer and cook for 5 more minutes. Remove bay leaf and thyme sprigs. Serve with a sprinkle of grated Parmesan cheese. Did you enjoy this recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "italian",
+        "pasta"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/minestrone_soup/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:30:09.537Z",
+      "theme": "Italian Classics"
+    },
+    {
+      "id": "pasta-alla-norma-eggplant-pasta",
+      "slug": "pasta-alla-norma-eggplant-pasta",
+      "title": "Pasta alla Norma (Eggplant pasta)",
+      "image": "https://www.recipetineats.com/tachyon/2020/11/Pasta-alla-norma-eggplant-pasta_6-SQ.jpg",
+      "prepTime": "10 min",
+      "cookTime": "45 min",
+      "totalTime": null,
+      "servings": "4",
+      "ingredients": [
+        "800g / 1.6 lb eggplant (cut into 2.5cm/1\" cubes (2 medium/large ones))",
+        "2 tbsp extra virgin olive oil",
+        "1/2 tsp each salt and pepper",
+        "2 tbsp extra virgin olive oil",
+        "2 garlic cloves (finely minced)",
+        "1/2 small onion (very finely chopped (or 2 eschallots))",
+        "1/4 cup dry white wine (anything not too sweet or woody (Note 1))",
+        "700g / 24 oz tomato passata (aka tomato puree, Note 2)",
+        "1/4 cup water",
+        "1 tsp dried Italian herbs (or oregano)",
+        "1/2 tsp red pepper flakes (optional (for a hint of heat))",
+        "1/2 tsp each salt and pepper",
+        "300g / 10 oz spaghetti or other pasta, long or short (macaroni, rigatoni, penne, ziti, fettucini, bucatini)",
+        "1/2 cup basil leaves (roughly chopped (Note 3))",
+        "Parmesan cheese (grated (or ricotta salata if you have it - more traditional))"
+      ],
+      "instructions": [
+        "Preheat oven to 240°C / 450°F (220°C fan). Line a tray with baking / parchment paper.",
+        "Toss eggplant with oil, salt and pepper. Spread on the tray and roast for 20 minutes.",
+        "Flip, then roast for a further 5 minutes. Cool on tray (this helps the eggplant hold its shape when tossing).",
+        "Bring a large pot of salted water to the boil. Start cooking the pasta a couple of minutes after you start making the sauce (next section), until al dente or to your liking.",
+        "Heat oil in a very large skillet over medium heat. Add garlic, cook for 20 seconds until golden, then add onion and cook for 2 to 3 minutes until translucent and cooked through.",
+        "Increase heat to medium-high and add wine, if using. Let it simmer, scraping the base of the pan to deglaze, until the wine mostly evaporates.",
+        "Add tomato passata. Now pour the water into the passata bottle, screw on the lid, shake, and pour that in too (waste nothing!)",
+        "Add dried herbs, red pepper flakes, salt and pepper. Stir and simmer 5 minutes.",
+        "Stir in eggplant, then add cooked and drained pasta. GENTLY toss until pasta is coated in the sauce (so the eggplant doesn't turn into complete mush!).",
+        "Serve immediately, garnished with a good pinch of fresh basil and parmesan."
+      ],
+      "tags": [
+        "italian",
+        "pasta"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/pasta-alla-norma/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:36:03.270Z",
+      "theme": "Italian Classics"
+    },
+    {
+      "id": "juicy-pesto-pasta",
+      "slug": "juicy-pesto-pasta",
+      "title": "JUICY Pesto Pasta!",
+      "image": "https://www.recipetineats.com/tachyon/2019/02/Pesto-Pasta_3.jpg",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": "3",
+      "ingredients": [
+        "1 quantity homemade pesto (Note 1)",
+        "300 - 350 g / 10 - 12 oz pasta of choice (ziti, penne and spaghetti are my favourites, Note 2)",
+        "2 tsp salt",
+        "3/4 cup pasta cooking water",
+        "Parmesan, for serving"
+      ],
+      "instructions": [
+        "Bring a large pot of water to the boil with the salt.",
+        "Add pasta and cook for the length of time per the packet.",
+        "Just before draining, scoop out 1 cup of of the pasta cooking water.",
+        "Drain pasta in a colander, leave it for a minute.",
+        "Transfer pasta to a bowl (do not use pasta cooking pot, too hot).",
+        "Add pesto and 1/4 cup of pasta water. Toss to coat pasta in pesto, adding more water if required to make pasta silky and saucy, rather than dry and sticky.",
+        "Taste, add more salt and pepper if desired.",
+        "Serve immediately, garnished with fresh parmesan."
+      ],
+      "tags": [
+        "italian",
+        "pasta"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/pesto-pasta/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:36:08.202Z",
+      "theme": "Italian Classics"
+    },
+    {
+      "id": "chicken-piccata-lemon-chicken-with-capers",
+      "slug": "chicken-piccata-lemon-chicken-with-capers",
+      "title": "Chicken Piccata (Lemon Chicken with Capers)",
+      "image": "https://www.recipetineats.com/tachyon/2021/05/Chicken-Piccata_0-SQ.jpg",
+      "prepTime": "10 min",
+      "cookTime": null,
+      "totalTime": null,
+      "servings": "3",
+      "ingredients": [
+        "450g / 16oz chicken breast ((2 large pieces), skinless boneless (Note 1))",
+        "4 tbsp flour (sub cornflour/cornstarch for GF)",
+        "2 1/2 tbsp parmesan (finely grated (Note 2))",
+        "1/2 tsp salt",
+        "1/4 tsp pepper",
+        "2 1/2 tbsp olive oil",
+        "1 tbsp / 15g unsalted butter",
+        "2 tbsp / 30g unsalted butter (cut into 1.5cm / 1/2\" cubes)",
+        "2/3 cup dry white wine (Note 3)",
+        "2 tbsp lemon juice (fresh)",
+        "3 tbsp capers in brine (drained (Note 4))",
+        "1 1/2 tsp parsley (finely chopped, plus more for garnish)"
+      ],
+      "instructions": [
+        "Cut each breast into 3 pieces. Then place between 2 pieces of cling wrap or paper and pound to 1/2 cm / 0.2\" thickness.",
+        "Drizzle chicken with 1/2 tbsp olive oil and spread with your fingers on both sides.",
+        "Mix flour, parmesan, salt and pepper in a shallow dish. Coat chicken, pressing to adhere, then shaking off excess.",
+        "Heat olive oil in a large skillet over medium high heat. Then add butter and let it melt.",
+        "Place 3 pieces of chicken in the skillet. Cook 3 - 4 minutes until golden, then turn and cook the other side for 1 minute. Remove onto plate, repeat with remaining chicken.",
+        "Pour out and discard excess fat in skillet, then give it a quick wipe with paper towels (no need to clean thoroughly).",
+        "Still on medium high heat, add wine. Let it simmer rapidly until it reduces by half - around 3 minutes.",
+        "Add lemon and simmer 1 minute.",
+        "Reduce heat to low. Add cubed butter and swirl pan to make it melt but not go foamy. Sauce should be glossy, translucent and slightly thickened.",
+        "Stir in capers and parsley. Serve chicken with Sauce, sprinkled with extra parsley if desired!"
+      ],
+      "tags": [
+        "italian",
+        "pasta"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/chicken-piccata/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:36:12.348Z",
+      "theme": "Italian Classics"
+    },
+    {
+      "id": "lasagna",
+      "slug": "lasagna",
+      "title": "Lasagna",
+      "image": "https://www.recipetineats.com/tachyon/2017/05/Lasagne-recipe-3-main-square.jpg",
+      "prepTime": "20 min",
+      "cookTime": "240 min",
+      "totalTime": "260 min",
+      "servings": "10",
+      "ingredients": [
+        "1 tbsp olive oil",
+        "1 onion (finely chopped (white, yellow or brown))",
+        "1 medium carrot (peeled and very finely diced)",
+        "1 celery stick (very finely diced)",
+        "2 garlic cloves (minced)",
+        "1 kg / 2 lb beef mince ((ground beef) (Note 1))",
+        "800g / 28 oz canned crushed tomato",
+        "1/4 cup tomato paste",
+        "1 cup pinot noir red wine (or other dry red wine (Note 2))",
+        "3 beef bouillon cubes (crumbled)",
+        "2 bay leaves (dried or fresh)",
+        "1/2 tsp EACH dried thyme and oregano",
+        "2 tsp Worcestershire Sauce",
+        "1 - 2 tsp sugar (if needed - Note 3)",
+        "1/2 tsp salt and black pepper",
+        "60g / 4 tbsp butter",
+        "1/2 cup flour",
+        "4 cups milk (preferably full fat but low fat ok)",
+        "2 cups gruyere or Colby cheese (shred yourself (or cheddar, Monterey Jack, OR 1 cup / 100g shredded parmesan) (Note 4))",
+        "Pinch of freshly ground nutmeg",
+        "Salt and pepper",
+        "350g/ 12 oz fresh lasagna sheets ((or 250g/8oz dried) (Note 5))",
+        "1 1/2 cups (tightly packed) mozzarella cheese (shred yourself (Note 4))",
+        "Finely chopped basil or parsley (for garnish (optional))"
+      ],
+      "instructions": [
+        "Heat oil in a large heavy based pot over medium heat. Add garlic, onion, celery and carrots. Cook for 10 minutes until softened and sweet - they should not brown (if they do, turn heat down).",
+        "Add beef, turn heat up and cook the beef, breaking it up as you go.",
+        "Once the beef has all turned brown, add the remaining Ragu ingredients EXCEPT the sugar.",
+        "Stir then adjust the heat so it is bubbling very gently. Place the lid on and cook for 1.5 - 2 hours, stirring every now and then, then remove the lid and simmer for 30 minutes.",
+        "The ragu is ready when the meat is really tender and the sauce has thickened and is rich - see video for consistency (Note 6). Adjust salt and pepper to taste, and add sugar if required (Note 3)",
+        "Warm milk up in a saucepan (optional - just makes sauce thicken faster).",
+        "In a large saucepan, melt butter over medium low heat. Add flour and mix constantly for 1 minute.",
+        "Pour about 1 cup of the milk in, mixing as you go to incorporate into the flour mixture. Once mostly lump free, add remaining milk. Use a whisk if needed to make it lump free.",
+        "Turn heat up to medium high. Stir occasionally at first then regularly after a few minutes until sauce thickens - about 5 - 8 minutes. It should coat the back of the wooden spoon.",
+        "Remove from heat, add cheese, nutmeg, salt and pepper. Mix until the cheese is melted. The Sauce should be thick but still easily pourable - the consistency of heavy cream (you need to be able to drizzle it over the Ragu when layering - see video). If it's too thick, add a splash of water or milk.",
+        "Preheat oven to 180°C/350°F.",
+        "Use a 33 x 22 x 7 cm / 13 x 9 x 2.5\" baking dish.",
+        "Smear a bit of Ragu on the base, then cover with lasagna sheets. Tear sheets to fit.",
+        "Spread over 2 1/2 cups of Ragu (enough to cover sheets), then drizzle over 1 cup of Cheese Sauce.",
+        "Top with lasagna sheets (Note 7). Spread with another 2 1/2 cups of Ragu, then 1 cup of Cheese Sauce. Top with lasagna sheets then repeat 1 more time.",
+        "Top with a 4th layer of lasagna sheets, then pour over the remaining Cheese Sauce.",
+        "Sprinkle with Mozzarella, then bake for 25 minutes or until golden and bubbling.",
+        "Stand for 5 to 10 minutes before cutting and serving, garnished with basil or parsley if desired."
+      ],
+      "tags": [
+        "italian",
+        "pasta"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/lasagna/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:36:14.099Z",
+      "theme": "Italian Classics"
+    },
+    {
+      "id": "spaghetti-carbonara",
+      "slug": "spaghetti-carbonara",
+      "title": "Spaghetti Carbonara",
+      "image": "https://www.allrecipes.com/thmb/Vg2cRidr2zcYhWGvPD8M18xM_WY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/11973-spaghetti-carbonara-ii-DDMFS-4x3-6edea51e421e4457ac0c3269f3be5157.jpg",
+      "prepTime": "20 min",
+      "cookTime": "20 min",
+      "totalTime": "40 min",
+      "servings": "8",
+      "ingredients": [
+        "1 pound spaghetti",
+        "2 tablespoons olive oil, divided, or as needed",
+        "8 slices bacon, diced",
+        "1 onion, chopped",
+        "1 clove garlic, minced",
+        "0.25 cup dry white wine",
+        "4 large eggs, beaten",
+        "0.5 cup grated Parmesan cheese",
+        "salt and black pepper to taste",
+        "2 tablespoons chopped fresh parsley",
+        "2 tablespoons grated Parmesan cheese"
+      ],
+      "instructions": [
+        "Bring a large pot of lightly salted water to a boil. Cook spaghetti in boiling water, stirring occasionally, until tender yet firm to the bite, about 12 minutes. Drain, toss spaghetti with 1 tablespoon olive oil, and set aside.",
+        "Place diced bacon in a large skillet over medium heat; cook and stir until evenly browned, about 10 minutes. Drain bacon on paper towels, reserving 2 tablespoons bacon fat in the skillet.",
+        "Add 1 tablespoon olive oil to bacon fat in the skillet. Add chopped onion and cook over medium heat until onion is translucent. Add minced garlic and cook until fragrant, about 1 minute. Add wine and cook 1 minute more.",
+        "Return cooked bacon to the skillet; add cooked spaghetti. Toss to coat and heat through, adding more olive oil if it seems dry or sticks together. Add beaten eggs and cook, tossing constantly with tongs or a large fork, until eggs are barely set. Quickly add 1/2 cup Parmesan cheese and toss again. Season with salt and pepper (remember that bacon and Parmesan are very salty).",
+        "Serve warm with chopped parsley sprinkled on top and extra Parmesan cheese at the table."
+      ],
+      "tags": [
+        "italian",
+        "pasta"
+      ],
+      "source": {
+        "name": "allrecipes.com",
+        "url": "https://www.allrecipes.com/recipe/11973/spaghetti-carbonara-ii/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:39:34.589Z",
+      "theme": "Italian Classics"
+    },
+    {
+      "id": "gourmet-mushroom-risotto",
+      "slug": "gourmet-mushroom-risotto",
+      "title": "Gourmet Mushroom Risotto",
+      "image": "https://www.allrecipes.com/thmb/854efwMYEwilYjKr0FiF4FkwBvM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/85389-gourmet-mushroom-risotto-DDMFS-4x3-a8a80a8deb064c6a8f15452b808a0258.jpg",
+      "prepTime": "20 min",
+      "cookTime": "25 min",
+      "totalTime": "45 min",
+      "servings": "6",
+      "ingredients": [
+        "6 cups chicken broth, or as needed",
+        "3 tablespoons olive oil, divided",
+        "1 pound portobello mushrooms, thinly sliced",
+        "1 pound white mushrooms, thinly sliced",
+        "2 medium shallots, diced",
+        "1.5 cups Arborio rice",
+        "0.5 cup dry white wine",
+        "4 tablespoons butter",
+        "3 tablespoons finely chopped chives",
+        "0.33333334326744 cup freshly grated Parmesan cheese",
+        "sea salt and freshly ground black pepper to taste"
+      ],
+      "instructions": [
+        "Gather all ingredients.",
+        "Warm broth in a saucepan over low heat. Meanwhile, warm 2 tablespoons olive oil in a deep-sided large saucepan over medium-high heat. Add sliced portobello and white mushrooms; cook and stir until soft, about 3 minutes. Remove mushrooms and their liquid to a bowl; set aside.",
+        "Add remaining 1 tablespoon olive oil to the saucepan. Stir in shallots and cook for 1 minute. Add rice; cook and stir until rice is coated with oil and pale, golden in color, about 2 minutes.",
+        "Pour in wine, stirring constantly until wine is fully absorbed. Add 1/2 cup warm broth to the rice, and stir until the broth is absorbed.",
+        "Continue adding broth, 1/2 cup at a time, stirring constantly, until the liquid is absorbed and the rice is tender, yet firm to the bite, about 15 to 20 minutes.",
+        "Remove from heat. Stir in reserved mushrooms and their liquid, butter, chives, and Parmesan cheese.",
+        "Season with salt and pepper and serve immediately."
+      ],
+      "tags": [
+        "italian",
+        "pasta"
+      ],
+      "source": {
+        "name": "allrecipes.com",
+        "url": "https://www.allrecipes.com/recipe/85389/gourmet-mushroom-risotto/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:39:38.125Z",
+      "theme": "Italian Classics"
+    },
+    {
+      "id": "the-best-spaghetti-bolognese-recipe",
+      "slug": "the-best-spaghetti-bolognese-recipe",
+      "title": "The best spaghetti bolognese recipe",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/the-best-spaghetti-bolognese-7e83155.jpg?resize=440,400",
+      "prepTime": "25 min",
+      "cookTime": "1 hr 50 min",
+      "totalTime": "2 hrs 15 min",
+      "servings": "6",
+      "ingredients": [
+        "1 tbsp olive oil",
+        "4 rashers smoked streaky bacon finely chopped",
+        "2 medium onions finely chopped",
+        "2 carrots trimmed and finely chopped",
+        "2 celery sticks finely chopped",
+        "2 garlic cloves finely chopped",
+        "2-3 sprigs rosemary leaves picked and finely chopped",
+        "500g beef mince",
+        "2 x 400g tins plum tomatoes",
+        "small pack basil leaves picked, ¾ finely chopped and the rest left whole for garnish",
+        "1 tsp dried oregano",
+        "2 fresh bay leaves",
+        "2 tbsp tomato purée",
+        "1 beef stock",
+        "1 red chilli deseeded and finely chopped (optional)",
+        "125ml red wine",
+        "6 cherry tomatoes sliced in half",
+        "75g parmesan grated, plus extra to serve",
+        "400g spaghetti",
+        "crusty bread to serve (optional)"
+      ],
+      "instructions": [
+        "Put a large saucepan on a medium heat and add 1 tbsp olive oil.",
+        "Add 4 finely chopped bacon rashers and fry for 10 mins until golden and crisp.",
+        "Reduce the heat and add the 2 onions, 2 carrots, 2 celery sticks, 2 garlic cloves and the leaves from 2-3 sprigs rosemary, all finely chopped, then fry for 10 mins. Stir the veg often until it softens.",
+        "Increase the heat to medium-high, add 500g beef mince and cook stirring for 3-4 mins until the meat is browned all over.",
+        "Add 2 tins plum tomatoes, the finely chopped leaves from ¾ small pack basil, 1 tsp dried oregano, 2 bay leaves, 2 tbsp tomato purée, 1 beef stock, 1 deseeded and finely chopped red chilli (if using), 125ml red wine and 6 halved cherry tomatoes. Stir with a wooden spoon, breaking up the plum tomatoes.",
+        "Bring to the boil, reduce to a gentle simmer and cover with a lid. Cook for 1 hr 15 mins stirring occasionally, until you have a rich, thick sauce.",
+        "Add the 75g grated parmesan, check the seasoning and stir.",
+        "When the bolognese is nearly finished, cook 400g spaghetti following the pack instructions.",
+        "Drain the spaghetti and either stir into the bolognese sauce, or serve the sauce on top. Serve with more grated parmesan, the remaining basil leaves and crusty bread, if you like."
+      ],
+      "tags": [
+        "italian",
+        "pasta"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/spaghetti-bolognese"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:43:19.698Z",
+      "theme": "Italian Classics"
+    },
+    {
+      "id": "creamy-mushroom-pasta",
+      "slug": "creamy-mushroom-pasta",
+      "title": "Creamy mushroom pasta",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/creamy_mushroom_pasta-fc7ab67.jpg?resize=440,400",
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "totalTime": "40 min",
+      "servings": "4",
+      "ingredients": [
+        "2 tbsp olive oil",
+        "1 tbsp butter",
+        "1 onion finely chopped",
+        "250g button chestnut mushroom sliced",
+        "1 garlic clove finely grated",
+        "100ml dry white wine",
+        "200ml double cream",
+        "1 lemon zest only",
+        "200g parmesan (or vegetarian alternative), grated, plus extra to serve",
+        "300g tagliatelle or linguini",
+        "½ small bunch parsley finely chopped"
+      ],
+      "instructions": [
+        "Heat the oil and butter in a medium saucepan. Fry the onion over a low heat for 10 mins or until softened and translucent.",
+        "Add the mushrooms and cook for 10 mins over a medium heat. Add the garlic and cook for 2 mins. Add the wine and bring to a simmer, reduce the liquid by half.",
+        "Add the double cream and bring to a simmer, then add the lemon zest and parmesan. Season with salt and plenty of black pepper.",
+        "Meanwhile, cook the pasta following pack instructions. Reserve 100ml of the pasta water. Toss the pasta in the pan with the creamy sauce and enough of the reserved water to loosen. Stir through the parsley, divide into bowls and top with extra cheese, if you like.",
+        "Good Food deserves great wine, so we've partnered with Laithwaites Wine to help you discover the perfect wine and food pairings. Pair your creamy mushroom pasta with Alessandro Galici Pinot Grigio from the Good Food Wine Subscription Case at just £5.59 a bottle for new customers with code 30OFF."
+      ],
+      "tags": [
+        "italian"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/creamy-mushroom-pasta"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:46:06.257Z",
+      "theme": "Italian Classics"
+    }
+  ]
+}

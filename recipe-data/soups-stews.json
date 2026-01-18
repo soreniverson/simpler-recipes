@@ -1,0 +1,798 @@
+{
+  "theme": {
+    "slug": "soups-stews",
+    "name": "Soups & Stews",
+    "description": "Warming bowls for cozy days and easy meals"
+  },
+  "metadata": {
+    "recipeCount": 17,
+    "lastUpdated": "2026-01-18T06:49:07.314Z"
+  },
+  "recipes": [
+    {
+      "id": "french-onion-soup",
+      "slug": "french-onion-soup",
+      "title": "French Onion Soup",
+      "image": "https://www.simplyrecipes.com/thmb/SY2lL2neXpYOvkxhYvoUcl6pXLQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-French-Onion-Soup-LEAD-2-757941da129647dc90e490ed72b3807c.jpg",
+      "prepTime": "20 min",
+      "cookTime": "60 min",
+      "totalTime": "80 min",
+      "servings": "6",
+      "ingredients": [
+        "6 large red or yellow onions (about 3 pounds), peeled and thinly sliced root to stem (see How to Slice an Onion), about 10 cups of sliced onions total",
+        "4 tablespoons extra virgin olive oil",
+        "2 tablespoons butter",
+        "1 teaspoon of sugar",
+        "Salt",
+        "2 cloves garlic, minced",
+        "8 cups of beef stock, chicken stock, or a combination of the two (traditionally the soup is made with beef stock)",
+        "1/2 cup of dry vermouth or dry white wine",
+        "2 bay leaves",
+        "1 tablespoon (loose) of fresh thyme (can also use a few sprigs of fresh thyme) OR 1/2 teaspoon dried thyme (more to taste)",
+        "1/2 teaspoon freshly ground black pepper",
+        "2 tablespoons brandy (optional)",
+        "8 slices French bread or baguette cut 1-inch thick",
+        "1 1/2 cups of grated Swiss Gruyere and a sprinkling of Parmesan",
+        "Sprinkling of Parmesan"
+      ],
+      "instructions": [
+        "Peel and thinly slice the onions from root to stem. There should be about 10 cups of sliced onions in total.",
+        "In a 5 to 6 quart thick-bottomed pot, heat 3 tablespoons of olive oil on medium heat. Add the onions and toss to coat with the olive oil. Cook the onions, stirring often, until they have softened, about 15 to 20 minutes. Increase the heat to medium high. Add the remaining tablespoon of olive oil and the butter and cook, stirring often, until the onions start to brown, about 20 to 40 minutes. The amount of time will vary depending on your pot, stove, and onions.",
+        "Sprinkle with sugar (to help with the caramelization) and 1 teaspoon of salt. Continue to cook until the onions are well browned, about 10 to 15 more minutes. Add the minced garlic and cook for a minute more.",
+        "Add the wine or vermouth to the pot and scrape up the browned bits on the bottom and sides of the pot, deglazing the pot as you go.",
+        "Add the stock, bay leaves, and thyme. Bring to a simmer, cover the pot and lower the heat to maintain a low simmer. Cook for about 30 minutes.",
+        "Season to taste with more salt and add freshly ground black pepper. Discard the bay leaves. Add brandy if using.",
+        "While the soup is simmering, line a sheet pan with parchment paper or foil and preheat the oven to 450°F with a rack in the upper third of the oven. Brush both sides of the French bread or baguette slices lightly with olive oil (you'll end up using about a tablespoon and a half of olive oil for this). Put in the oven and toast until lightly browned, about 5 to 7 minutes. Remove from oven. Turn the toasts over and sprinkle with the grated Gruyere cheese and Parmesan. Return to oven when it's close to serving time and bake until the cheese is bubbly and lightly browned.",
+        "To serve, ladle soup into a bowl and transfer one cheesy toast onto the top of each bowl of soup. Alternatively, you can use individual oven-proof bowls or one large casserole dish. Ladle the soup into the bowls or casserole dish. Cover with the toast and sprinkle with cheese. Put into the broiler for 10 minutes at 350° F, or until the cheese bubbles and is slightly browned. Did you enjoy this recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "soup",
+        "stew",
+        "comfort"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/french_onion_soup/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:55.357Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "clam-chowder-with-corn",
+      "slug": "clam-chowder-with-corn",
+      "title": "Clam Chowder with Corn",
+      "image": "https://www.simplyrecipes.com/thmb/hakAzjzI1LOZv1sf7Tm1OoIpxNA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2012__11__Clam-Chowder-LEAD-01-f33df0b8b6d34c82916980ee0948fec5.jpg",
+      "prepTime": "30 min",
+      "cookTime": "30 min",
+      "totalTime": "60 min",
+      "servings": "8",
+      "ingredients": [
+        "About 6 pounds of quahog or cherrystone clams",
+        "1 tablespoon unsalted butter or extra virgin olive oil",
+        "4 ounces salt pork, cubed (or chopped bacon or pancetta, cubed)",
+        "2 cups chopped onion",
+        "1 tablespoon all-purpose flour (less or more, depending on how thick you want the soup)",
+        "1 cup dry white wine, like a Sauvignon Blanc (or 2 tablespoons white or cider vinegar, or lemon juice)",
+        "2 pounds potatoes (russets or Yukon gold), peeled and diced",
+        "1 to 2 cups water",
+        "1 bay leaf",
+        "2 sprigs thyme",
+        "1/2 teaspoon freshly ground black pepper",
+        "1 teaspoon Old Bay seasoning (or paprika with a dash of cayenne)",
+        "1 1/2 cups corn (frozen is fine)",
+        "1 cup heavy whipping cream",
+        "2 tablespoons chopped fresh parsley"
+      ],
+      "instructions": [
+        "Rinse and scrub the clams to remove any dirt. Place clams in a bowl, cover with cold, well salted water and refrigerate for 30 minutes to an hour. This will allow the clams to expel some of their grit into the water. Discard any broken clams or clams that are open and do not close when you touch them.",
+        "Place the clams in a large pot and add about a half inch of water to the pot. Cover the pot and bring the water to a boil. Let the clams steam until they all open up, 5 to 10 minutes. The steaming water may foam up a bit; just watch so it doesn't overflow. Use a slotted spoon to remove the clams from the pot to a bowl. Strain the remaining clam steaming liquid through a fine mesh sieve to catch any grit and reserve. You should have 2 to 3 cups of clam liquid. Separate the clams from the clam shells. Discard the shells. Roughly chop the cooked clams. You should have 1 1/2 to 2 cups of chopped clams.",
+        "Place the salt pork and butter or oil in the bottom of a large, thick-bottomed pot. Heat on medium and brown the salt pork. (Note that if you are using salt pork that is mostly fat, you won't need any additional fat from butter or oil, but you might want to put a little water in the pan to help render the fat from the salt pork.)",
+        "Add the chopped onion to the pan, and cook, stirring occasionally, until the onions are translucent, about 5 minutes.",
+        "Sprinkle flour over the onions and stir until everything is coated with the flour. Let the flour cook for a minute or two. Slowly add the white wine to the pot, stirring after each addition.",
+        "Add potatoes to the pot. Add 2 to 3 cups of the strained clam steaming liquid and a cup of water. The liquid should cover the potatoes. If not, add a little more water or clam cooking liquid. Add the bay leaf, thyme, black pepper, and Old Bay. Heat to a boil and reduce to a simmer. Cover and cook for 10 minutes, then add the corn (if using) and cook for 5 minutes more, or until the potatoes are cooked through.",
+        "While the potatoes are cooking, heat a cup of cream in a small saucepan until steamy.",
+        "When the potatoes are tender, add the chopped clams and turn off the heat under the soup. Slowly stir in the heated cream. Adjust seasonings. Stir in the fresh parsley. Note that if you simmer the soup after the cream has been added, the soup may curdle. This is why we turn off the heat before adding the hot cream. Serve with oyster crackers or rustic bread. Did you love the recipe? Give us some stars and leave a comment below!"
+      ],
+      "tags": [
+        "soup",
+        "stew",
+        "comfort"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/clam_chowder/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:57.068Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "split-pea-soup",
+      "slug": "split-pea-soup",
+      "title": "Split Pea Soup",
+      "image": "https://www.simplyrecipes.com/thmb/yzN1l7BTPHbGawT4yprFm3TFqw8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2010__01__split-pea-soup-800-3b3443c0543e4b5681026175de24b393.jpg",
+      "prepTime": "10 min",
+      "cookTime": "110 min",
+      "totalTime": "120 min",
+      "servings": "6",
+      "ingredients": [
+        "1 pound (2 1/4 cups) green split peas",
+        "2 tablespoon extra virgin olive oil",
+        "1 large onion, peeled and chopped",
+        "2 celery stalks, chopped",
+        "1 large leek, chopped",
+        "1 large carrot, chopped",
+        "1 large clove of garlic, halved",
+        "1 herb bouquet (see Recipe Note)",
+        "2 ham hocks, well-rinsed",
+        "Salt",
+        "Pepper",
+        "Small toasted croutons (avoid for gluten-free version), to garnish",
+        "Chopped parsley or chives, to garnish"
+      ],
+      "instructions": [
+        "Rinse and drain the peas.",
+        "Heat the olive oil in a large (4-quart) thick bottomed pot on medium high heat. Add the chopped onion, celery, carrot, and leek. Cook until the onion is translucent, about 5 to 7 minutes. Add the garlic and cook a minute more.",
+        "Place peas in the pot with the vegetables, herb bouquet, ham hocks and 2 1/2 quarts of water. Bring to a simmer. Skim the scum off the top of the soup for several minutes, until the scum ceases to rise. Partially cover and simmer about 1 1/2 hours, or until peas are tender, stirring occasionally in case they stick to the bottom of the pan.",
+        "Put the ham hocks aside if you want to add the meat to the soup. Discard the herb bouquet.",
+        "Purée the soup with a blender. An immersion blender works great for this; if you are using a regular blender, take care to work in batches and only fill the blender halfway if the soup is still hot, and hold down the lid while blending. If you want an exceptionally smooth soup, pass the purée through a sieve.",
+        "If you'd like cut away the outer skin from the ham hocks and remove the meat from the bones. Dice the meat and stir it into the pureed soup.",
+        "Return the puréed soup to the pot and heat until once again steaming. Add salt and pepper to taste.",
+        "Ladle into warm bowls and garnish with croutons and parsley or chives. Did you love this recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "soup",
+        "stew",
+        "comfort"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/split_pea_soup/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:58.748Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "potato-leek-soup",
+      "slug": "potato-leek-soup",
+      "title": "Potato Leek Soup",
+      "image": "https://www.simplyrecipes.com/thmb/p8wEzfmMhBt_gfXksQd-74xVs8M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2015__01__Potato-Leek-Soup-LEAD-2-47eedf5b7393488187019ca85e13604f.jpg",
+      "prepTime": "20 min",
+      "cookTime": "40 min",
+      "totalTime": "60 min",
+      "servings": "6",
+      "ingredients": [
+        "3 leeks",
+        "2 tablespoons butter",
+        "4 cups chicken broth (or vegetable broth for vegetarian option)",
+        "2 pounds potatoes (Yukon gold or Russet), peeled, diced into 1/2-inch pieces",
+        "1 teaspoon sea salt, less or more to taste",
+        "Pinch of dried marjoram",
+        "1 or 2 sprigs fresh thyme, or 1/2 teaspoon dried thyme",
+        "1 bay leaf",
+        "1/4 cup chopped fresh parsley",
+        "Sprinkle of Tabasco sauce or other red chili sauce",
+        "White or black pepper to taste"
+      ],
+      "instructions": [
+        "Cut off the roots of the leeks. Cut the leeks lengthwise, fan them open under running water to dislodge any dirt or mud hiding inside. Cut off the tough dark green tops and discard (either compost or freeze for making stock). Slice the white and light green parts of the leeks crosswise into 1/4-inch thick slices. Place the slices in a bowl of cold water and agitate them with your hands to dislodge any remaining dirt. Then scoop out the leeks with a sieve or slotted spoon. (See How to Clean Leeks )",
+        "Melt butter on medium heat in a 3 to 4 quart thick-bottomed pot. Add the chopped leeks, stir to coat with the butter. Cover the pot and reduce the heat to low, cook for 10 minutes until the leeks are softened. Check to make sure the leeks are not browning.",
+        "Add the broth, diced potatoes, bay leaf, marjoram, thyme, and a teaspoon of salt to the pot. Increase the heat to high to bring to a simmer, then lower the heat to maintain a low simmer, and cook for 20 minutes, until the potatoes are cooked through.",
+        "Remove and discard the bay leaf and thyme sprig. Use an immersion blender or standing blender to blend about half of the soup if you want a chunky soup, or all of it if you would like your soup to be more smooth. Note: if you're using a standing blender, purée the soup in batches, don't fill the blender more than a third full at a time, and remember to hold down the lid while the blender is going.",
+        "Add the parsley, and cook a few minutes more. Add a few dashes of Tabasco to taste. Add freshly ground pepper and more salt to taste. (Potatoes soak up salt, so you may need to add more salt than you expect.) Did you enjoy this recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "soup",
+        "stew",
+        "comfort"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/potato_leek_soup/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:02.207Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "broccoli-cheddar-soup",
+      "slug": "broccoli-cheddar-soup",
+      "title": "Broccoli Cheddar Soup",
+      "image": "https://www.simplyrecipes.com/thmb/JoM_zuLW3iNLjZA_UfMl9e9mb2g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2018__02__Broccoli-Cheddar-Soup-LEAD-1-969953dc154d4ff18dfa60e85a364dad.jpg",
+      "prepTime": "15 min",
+      "cookTime": "30 min",
+      "totalTime": "45 min",
+      "servings": "6",
+      "ingredients": [
+        "1 large head or two small heads broccoli (a little more than 1 pound), chopped into florets and stems",
+        "1/4 cup unsalted butter",
+        "1/2 white onion, chopped",
+        "1 small carrot, peeled and grated",
+        "1/4 cup all-purpose flour",
+        "1 quart vegetable stock",
+        "2 cups whole milk",
+        "8 ounces cheddar cheese, grated",
+        "1 teaspoon salt",
+        "1/8 teaspoon fresh black pepper",
+        "Bread, for serving"
+      ],
+      "instructions": [
+        "Bring a large pot of water to a boil and add a few big pinches of salt. Add broccoli stalks and blanch for 2 to 3 minutes until they are bright green and fork tender, but still slightly crispy. Drain broccoli. Scoop out and set aside about 1 cup of the florets for the topping.",
+        "Wipe out the pot, place over medium heat, and melt the butter. Once melted, add the onions and carrots, and cook until veggies soften, 4 to 5 minutes, stirring regularly.",
+        "Stir in the all-purpose flour. The flour will form a paste with the veggies. Cook for a minute or two to coat the vegetables, and then start to slowly pour in vegetable stock. Stir constantly as you pour in the stock to avoid lumps. Once all the stock is added, bring soup up to a low simmer. Add milk and the blanched broccoli (except what you're saving for the topping). Simmer for about 10 minutes over low heat.",
+        "Blend with an immersion blender, or let the soup cool until no longer steaming and blend in batches in a blender. (If using a standing blender, be careful to let the soup cool a bit and do not overfill the blender to avoid splattered hot soup!)",
+        "Add the grated cheese, salt, and pepper to the pureed soup and stir over low heat until the cheese has melted. Taste the soup and season with additional salt and pepper to your liking. Ladle the soup into bowls and garnish with some reserved broccoli and extra cheese on top. Serve with bread. Did you love the recipe? Give us some stars and leave a comment below!"
+      ],
+      "tags": [
+        "soup",
+        "stew",
+        "comfort"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/broccoli_cheddar_soup/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:03.929Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "chicken-tortilla-soup",
+      "slug": "chicken-tortilla-soup",
+      "title": "Chicken Tortilla Soup",
+      "image": "https://www.simplyrecipes.com/thmb/Q4oPGGCv0nYL7MC3iSURx0y7jj4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Chicken-Tortilla-Soup-LEAD-4-1024x682-cbf4e26eef3b4375806e396332b63f88.jpg",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "totalTime": "30 min",
+      "servings": "4",
+      "ingredients": [
+        "6 (6-inch) corn tortillas, preferably a little old and dried out",
+        "1/4 cup corn oil, peanut oil, or extra virgin olive oil",
+        "1/2 cup chopped onion",
+        "2 cloves garlic, minced",
+        "1 medium Anaheim, poblano or jalapeño chile, seeded, veins removed, chopped (Depending on the hotness and flavor desired. You can also mix chiles - 1 Anaheim and a half jalapeño.)",
+        "4 cups chicken broth or homemade chicken stock",
+        "1 can (14.5 oz) crushed tomatoes (preferably fire-roasted)",
+        "1/2 teaspoon coarse salt (kosher or sea salt)",
+        "1 1/2 cups shredded cooked chicken",
+        "1 ripe avocado",
+        "1/2 cup (2 oz) shredded Monterey Jack cheese (or mild cheddar)",
+        "Chopped fresh cilantro",
+        "1 lime, cut into wedges"
+      ],
+      "instructions": [
+        "If you are starting with somewhat old, dried-out tortillas, great. If not and you are starting with relatively fresh tortillas, put them on a baking sheet and put them in the oven at 200°F for 10 to 15 minutes to dry them out a bit. It is best to start with tortillas that don't have a lot of moisture in them. Cut the tortillas in half, and then cut the halves into 1/4-inch wide strips. Heat the oil over medium-high heat in a 3-quart pot. Working in three batches, fry the tortilla strips in the oil, until lightly browned and crisp. Remove the tortilla strips from the pan and let drain on a paper-towel-lined plate.",
+        "Add the chopped onions to the pan, cook for 2 minutes, stirring frequently. Add the chopped chile and cook for 2 to 3 minutes more, until the onions and chiles have softened. Add the garlic and cook for 30 seconds more.",
+        "Add the broth, tomatoes, and salt. Increase the heat to high, heat until the soup begins to boil, then reduce the heat to a low simmer, cover and simmer for 15 minutes. Add the shredded chicken and cook until heated through.",
+        "To serve, pit, peel, and cut the avocado into 1-inch pieces . Divide half of the tortilla strips among 4 individual serving bowls; ladle in soup. Top with avocado and cheese; garnish with remaining tortilla strips and cilantro. Serve with lime wedges. Did you love this recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "soup",
+        "stew",
+        "comfort"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/tortilla_soup/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:05.626Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "chicken-and-dumplings",
+      "slug": "chicken-and-dumplings",
+      "title": "Chicken and Dumplings",
+      "image": "https://www.simplyrecipes.com/thmb/yQQ85j5LgHdWJJpoxgyUYDN-xJQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__02__Chicken-Pot-Pie-LEAD-2-7061fefdb7ad48c19885deebbe142eb2.jpg",
+      "prepTime": "20 min",
+      "cookTime": "70 min",
+      "totalTime": "90 min",
+      "servings": "8",
+      "ingredients": [
+        "1 quart chicken stock, homemade or store-bought",
+        "3 to 3 1/2 pounds chicken thighs and breasts, skin-on, bone-in, trimmed of excess fat",
+        "2 teaspoons butter or extra virgin olive oil, or a combination of both",
+        "Salt",
+        "1 large onion, roughly chopped (about 2 cups)",
+        "2 to 3 celery stalks, trimmed and cut into 1/2-inch pieces (about 2 cups)",
+        "3 medium carrots, peeled and cut into 1/2-inch pieces (about 2 cups)",
+        "1 teaspoon dried thyme",
+        "1/3 cup all-purpose flour",
+        "1/4 cup dry sherry or vermouth (optional)",
+        "3/4 cup frozen peas, thawed",
+        "1/4 cup minced fresh parsley leaves",
+        "1 tablespoon heavy cream (optional)",
+        "Ground black or white pepper",
+        "2 cups (250 g) cake flour (can sub all-purpose flour, but use cake flour if you have it, your dumplings will be fluffier)",
+        "2 teaspoons baking powder",
+        "3/4 teaspoon salt",
+        "1/4 cup minced fresh herb leaves such as parsley, chives, and tarragon (optional)",
+        "2 tablespoons butter, melted",
+        "3/4 cup milk"
+      ],
+      "instructions": [
+        "Add the chicken stock to a medium pot and bring it up to a gentle simmer.",
+        "In a large (8-quart or larger) thick-bottomed pot, heat the butter or olive oil over medium-high heat. Pat dry the chicken pieces and sprinkle with salt. Working in batches, brown the chicken pieces, placing the pieces skin-side down first; this will render out fat you will use to build the stew later.",
+        "Once the chicken pieces are browned on all sides, remove them from the large pot, and turn off the heat. Remove and discard the skin from the chicken pieces and put the chicken pieces into the pot of simmering stock. Poach the chicken in the stock until cooked through, about 20 minutes or so. Remove the chicken pieces and set on a tray to cool for a few minutes. When the chicken pieces are cool to touch, pull the meat off the bones and cut into 2-inch chunks. Set aside.",
+        "Return the heat on the large pot to medium-high. When the pot is hot, add the onion, celery, carrot and thyme and sauté until soft, but not browned, about 4 to 5 minutes.",
+        "Add the flour and stir well. The flour will absorb the fat in the pot and will stick a little to the bottom. Reduce the heat to medium-low and stir the flour vegetable mixture constantly for 2 to 3 minutes. Do not let it burn.",
+        "Get a ladle ready and have the pot of simmering chicken stock nearby. Add the sherry to the flour vegetable mixture. It will sputter and seize up. Add a ladle of hot chicken stock and stir well. It will be goopy. Add another ladle, then another, stirring all the while, until the broth comes together. Add the rest of the chicken stock and the reserved chicken meat. Increase the heat and bring to a simmer, then reduce the heat to maintain a gentle simmer while you make the dumplings.",
+        "Whisk together flour, baking powder, and salt in a medium bowl. Add (optional) chopped fresh herbs. Add melted butter and milk to the dry ingredients. Gently mix with a wooden spoon until mixture just comes together. (Note: do not over-mix or your dumplings will turn out too dense.)",
+        "Drop dumpling batter into the simmering stew by heaping teaspoonfuls, over the surface of the stew. (Note that the dumplings will easily double in size as they cook.) Cover and simmer until dumplings are cooked through, about 15 minutes. Once you have covered the pan, do not uncover and peek while the dumplings are cooking! In order for the dumplings to be light and fluffy, they must steam, not boil. Uncovering the pan releases the steam. If after 15 minutes the dumplings are still not cooked through (use a toothpick or skewer to test), then cover pan again and cook for another 5 to 10 minutes.",
+        "Gently stir in peas, parsley, and cream, if using. Add salt and pepper to taste. Ladle portions of meat, sauce, vegetables, and dumplings into soup plates and serve. Note that the stew will continue to thicken the longer it sits. Did you love the recipe? Give us some stars and leave a comment below!"
+      ],
+      "tags": [
+        "soup",
+        "stew",
+        "comfort"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/chicken_and_dumplings/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:16.646Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "gazpacho",
+      "slug": "gazpacho",
+      "title": "Gazpacho",
+      "image": "https://www.simplyrecipes.com/thmb/wJaSQPoH_Z7iDF2V2Ec39YxwErw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2015__08__gazpacho-horiz-c-1600-a02c09a83c6245af989c9b07b30e1b3a.jpg",
+      "prepTime": "25 min",
+      "cookTime": null,
+      "totalTime": "25 min",
+      "servings": "8",
+      "ingredients": [
+        "6 ripe tomatoes (about 3 pounds), peeled and chopped (about 6 cups)",
+        "1 red onion, finely chopped",
+        "1 cucumber, peeled, seeded, chopped",
+        "1 red or green bell pepper, chopped",
+        "2 stalks celery, chopped",
+        "1 to 2 tablespoons chopped fresh parsley",
+        "2 tablespoons chopped fresh chives",
+        "1 clove garlic, minced",
+        "2 cups tomato juice, or 1 (15-ounce) can crushed tomatoes",
+        "1/4 cup red wine vinegar",
+        "1/4 cup extra virgin olive oil",
+        "1 tablespoon freshly squeezed lemon juice",
+        "1 teaspoon Worcestershire sauce (omit for vegan or vegetarian option)",
+        "2 teaspoons sugar, or more to taste",
+        "Salt and freshly ground pepper to taste",
+        "6 or more drops Tabasco sauce to taste"
+      ],
+      "instructions": [
+        "Place all ingredients in a large bowl. Use an immersion blender or blend in batches in a blender to desired smoothness. We prefer our gazpacho somewhat chunky, so only pulse a few times in the blender.",
+        "Adjust the seasonings to taste with more salt, pepper, sugar, or Tabasco. Place in a non-reactive container (tomatoes are acidic) to store. Chill several hours or overnight to allow the flavors to blend. Did you love this recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "soup",
+        "stew",
+        "comfort"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/gazpacho/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:21.425Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "cioppino",
+      "slug": "cioppino",
+      "title": "Cioppino",
+      "image": "https://www.simplyrecipes.com/thmb/3Vc83AvXY8YaBQYfxMRmBWtt-I0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2014__12__cioppino-horiz-a-1600-2beb215a6cd74d5b941f57cad91af7ed.jpg",
+      "prepTime": "30 min",
+      "cookTime": "45 min",
+      "totalTime": "75 min",
+      "servings": "8",
+      "ingredients": [
+        "3 pounds halibut, sea bass, or other firm white fish, cut into inch-long cubes",
+        "1 large (2 lb or more) cooked Dungeness crab (hard shell)",
+        "1 pound (or more) of large shrimp",
+        "2 pounds little neck clams and/or mussels (mussels should be scrubbed clean and beards removed right before cooking)",
+        "1/2 cup extra virgin olive oil",
+        "1 1/2 cups chopped onion (1 large onion)",
+        "1 cup chopped bell pepper (1 large bell pepper)",
+        "3 cloves garlic, minced",
+        "1 teaspoon salt",
+        "1 28-ounce can tomatoes",
+        "Broth from the mollusks",
+        "2 cups red wine",
+        "2 cups tomato juice",
+        "2 cups fish or shellfish stock",
+        "An herb bouquet of bay leaf, parsley, and basil wrapped in a layer of cheesecloth and secured with kitchen string",
+        "Salt and pepper to taste",
+        "1/2 cup minced parsley for garnish"
+      ],
+      "instructions": [
+        "Steam mollusks (clams and mussels) in a small amount of water (about two cups) until they just open. Strain and set aside.",
+        "Remove the crab legs from the body and use a nutcracker to crack the shells so the meat can be easily removed when eating. Break the body in half, and then cut each half again into either halves or thirds. You can opt to keep the crab meat in the body segments and serve it that way (more work for the eater) or you can pick out the crab meat from the body segments. If you pick out the crab meat, try to keep it in big chunks.",
+        "Split the shrimp shells down the back and remove the black vein. The easiest way to do this without removing the shell, is to lay the shrimp on its side and insert a small knife into the large end of the shrimp, with the blade pointing outward from the back (away from the shrimp and your hands). Once you have split the shrimp shells, you can turn the knife toward the shrimp, and cut in a little to find the black vein. Pull out the vein as much as you can. You can probably also use a pair of kitchen scissors to cut the backs of the shrimp.",
+        "In a deep, 8-quart pot, sauté onions and bell pepper on medium heat in olive oil until soft. Add the garlic, and sauté a minute more. Shred (squish) tomatoes with your hands and add to the pot along with the juice from the can. Add broth from the mollusks, red wine, tomato juice, fish or shellfish stock, the herb bouquet, and salt and pepper to taste. Bring to a simmer and cook, uncovered, for 20 minutes. Remove herb bouquet. Taste and adjust seasoning to suit your tastes.",
+        "Add the fish and cook, covered, until the fish is just cooked through, about 3 to 5 minutes. Add the steamed mollusks, crab meat, and shrimp. Heat just until shrimp are cooked (just 2 to 3 minutes, until they are bright pink). Do not overcook.",
+        "Ladle into large bowls, shells included. Sprinkle with minced fresh parsley. Serve with crusty French or Italian bread and a robust red wine like Zinfandel or Montepulciano d’Abruzzo. Have plenty of napkins available, a few extra bowls for the shells, and nut crackers. If you left the shells on, have some tiny forks, too. Did you love this recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "soup",
+        "stew",
+        "comfort"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/cioppino/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:23.119Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "minestrone-soup",
+      "slug": "minestrone-soup",
+      "title": "Minestrone Soup",
+      "image": "https://www.recipetineats.com/tachyon/2020/07/Minestrone-Soup_8-SQ.jpg",
+      "prepTime": "20 min",
+      "cookTime": "45 min",
+      "totalTime": null,
+      "servings": "5",
+      "ingredients": [
+        "1 tbsp olive oil",
+        "150g / 5oz bacon (finely chopped)",
+        "1 onion (chopped)",
+        "2 garlic cloves (minced)",
+        "800g/ 28oz crushed tomato (or 700g passata)",
+        "2 cups chicken stock/broth (low sodium)",
+        "2 cups water",
+        "3 tbsp tomato paste",
+        "2 tsp Worcestershire sauce",
+        "400g/ 14oz canned kidney beans (drained)",
+        "1 tsp EACH salt and pepper",
+        "1 cup small pasta (like ditalini, tiny shells, risoni/orzo, baby macaroni, alphabet or star pasta)",
+        "1/4 cup parmesan (grated)",
+        "1 celery rib* (chopped 1.5cm / 1/2\" pieces)",
+        "1 large carrot* (peeled and diced 1.5cm / 1/2\" pieces)",
+        "1 zucchini* (chopped 1.5cm / 1/2\" pieces)",
+        "1 potato* (cut into 1.5cm / 1/2\" pieces (peel if needed))",
+        "100g / 3oz green beans* (trimmed then cut into 2cm / 3/5\" lengths)",
+        "2oz/ 60g baby spinach (or frozen spinach, kale or similar - can leave out)",
+        "More parmesan",
+        "Chopped parsley",
+        "Crusty bread for dunking!"
+      ],
+      "instructions": [
+        "Heat oil over high heat in a very large pot.",
+        "Add bacon, cook until starting to turn golden (~2 min) then add garlic and onion.",
+        "Cook until onion is translucent and bacon is light golden ~ 2minutes.",
+        "Add carrot, celery and zucchini. Stir for 1 minute to coat in flavour.",
+        "Add crushed tomato, chicken stock, water, tomato paste, Worcestershire sauce, kidney beans, salt and pepper.",
+        "Stir, bring to simmer, then place lid on and adjust heat so it's simmering gently.",
+        "Simmer 20 minutes, then add potato and beans.",
+        "Simmer 5 minutes, then add pasta. Cook for time per pasta packet MINUS 1 1/2 minutes.",
+        "Remove from stove, stir through parmesan and baby spinach. Taste and adjust for salt and pepper.",
+        "Serve, garnished with extra parmesan and a sprinkle of parsley if desired. Warm crusty bread on the side would certainly be the cherry on top!"
+      ],
+      "tags": [
+        "soup",
+        "comfort"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/minestrone-soup/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:36:36.828Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "laksa-noodle-soup",
+      "slug": "laksa-noodle-soup",
+      "title": "Laksa Noodle Soup",
+      "image": "https://www.recipetineats.com/tachyon/2020/07/Laksa_1-SQ.jpg",
+      "prepTime": "15 min",
+      "cookTime": "45 min",
+      "totalTime": "60 min",
+      "servings": "2",
+      "ingredients": [
+        "2 cups (500 ml) chicken stock / broth",
+        "1 cup (250 ml) water",
+        "3 chicken drumsticks (Note 1)",
+        "1 1/2 tbsp oil",
+        "2 garlic cloves (minced)",
+        "2 cm / 4/5\" piece of ginger (finely grated)",
+        "1 lemongrass (white part grated, (Note 2))",
+        "2 birds eye chillis (finely chopped (Note 3))",
+        "1/2 cup (135g) laksa paste (Note 4)",
+        "400ml can coconut milk (Note 5)",
+        "2 tsp fish sauce (sub soy)",
+        "50g / 1.5 oz vermicelli noodles (dried)",
+        "100g / 3.5oz hokkien noodles (optional, Note 6)",
+        "80g / 2.5 oz bean sprouts",
+        "80g / 2.5 oz tofu puffs (cut in half (Note 7))",
+        "1/2 tsp sugar (white)",
+        "1 1/2 tsp soy sauce (light or all purpose)",
+        "1/2 garlic clove (minced)",
+        "1 1/2 tsp Laksa paste (Note 4)",
+        "1 tbsp Sriracha sauce (or other chilli sauce)",
+        "1 tbsp chilli paste from jar (or more Sriracha)",
+        "1 tbsp vegetable oil (any plain oil)",
+        "Fresh coriander / cilantro (recommended)",
+        "Lime wedges (recommended)",
+        "Crispy fried shallots (optional (Note 8))",
+        "Finely sliced red chilli (optional)"
+      ],
+      "instructions": [
+        "Place Chicken Stock ingredients in a medium saucepan over high heat. Bring to simmer, then reduce to medium high.",
+        "Cook for 25 minutes or until chicken flesh is falling off the bone and liquid reduces by about 1/3.",
+        "Discard skin, pull flesh off the bone and place in bowl, discard bone. Set broth aside.",
+        "Mix ingredients together in a small bowl. Set aside for 20 minutes.",
+        "Heat oil in a large saucepan or small pot over medium low heat. Add garlic and ginger, sauté for 20 seconds, then add lemongrass and chillis. Cook for 1 minute.",
+        "Add laksa paste. Turn heat up to medium and cook for 2 minutes, stirring constantly, or until fragrant.",
+        "Add chicken stock, coconut milk, fish sauce and 2 tsp of Laksa Chilli Sauce. Place lid on and simmer on for 10 minutes.",
+        "Adjust to taste using lime juice (for sour) and fish sauce (for saltiness). Add tofu puffs. Leave on turned off stove with lid on for 5 minutes.",
+        "Prepare noodles per packet directions.",
+        "Divide noodles between 2 bowls. Top with shredded chicken.",
+        "Pour broth over chicken. Top with beansprouts. Sprinkle with Garnishes you choose to use. Serve with Laksa Chilli Sauce on the side."
+      ],
+      "tags": [
+        "soup",
+        "comfort"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/laksa/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:36:39.338Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "emergency-corn-chowder-soup",
+      "slug": "emergency-corn-chowder-soup",
+      "title": "Emergency Corn Chowder Soup",
+      "image": "https://www.recipetineats.com/tachyon/2019/09/Emergency-Corn-Chowder__1.jpg",
+      "prepTime": "3 min",
+      "cookTime": "12 min",
+      "totalTime": null,
+      "servings": "3",
+      "ingredients": [
+        "1 tsp oil (or butter)",
+        "2 slices bacon (streaky!)",
+        "2 garlic cloves (minced)",
+        "400g/14oz can creamed corn (1 can)",
+        "400g/14oz can corn kernels (drained (1 can))",
+        "1 2/3 cups (400ml) chicken stock (/ broth (1 empty can*))",
+        "3/4 cup (200ml) milk (any fat % (1/2 empty can*))",
+        "1 potato (diced into 1.5 cm/ 1/2\" small cubes)",
+        "1/2 tsp each salt and pepper",
+        "1 green onion (finely sliced)",
+        "1/2 cup (125 ml) milk (any fat % (1/4 empty can*))",
+        "1 1/2 tbsp cornflour / corn starch"
+      ],
+      "instructions": [
+        "Place oil then bacon in pot. Turn stove onto medium high heat then cook until bacon is golden on both sides.",
+        "Remove bacon and chop once cooled.",
+        "If there's loads of excess fat in the pot, drain some.",
+        "Add garlic and stir for 20 seconds. Add creamed corn, kernels, chicken stock, milk, potato, salt and pepper.",
+        "Stir, bring to simmer then adjust to medium. Simmer 5 minutes until potato is just tender.",
+        "Soup Thickener: Mix together milk and cornflour, then pour into soup.",
+        "Stir and simmer for 1 minute until it thickens into a creamy soup (see video for thickness).",
+        "Add more salt if needed.",
+        "Ladle into bowls, top with green onion and bacon. Devour!"
+      ],
+      "tags": [
+        "soup",
+        "comfort"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/corn-chowder/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:36:41.500Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "quick-and-easy-chicken-noodle-soup",
+      "slug": "quick-and-easy-chicken-noodle-soup",
+      "title": "Quick and Easy Chicken Noodle Soup",
+      "image": "https://www.allrecipes.com/thmb/pTGS0SZsSQK85sV_RQE_K6ZfoN4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/26460-quick-and-easy-chicken-noodle-soup-allrecipes-1x1-1-b88125437574471db3e114c40bc6928e.jpg",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "totalTime": "40 min",
+      "servings": "6",
+      "ingredients": [
+        "1 tablespoon butter",
+        "0.5 cup chopped onion",
+        "0.5 cup chopped celery",
+        "4 (14.5 ounce) cans chicken broth",
+        "1 (14.5 ounce) can vegetable broth",
+        "0.5 pound chopped cooked chicken breast",
+        "1.5 cups egg noodles",
+        "1 cup sliced carrots",
+        "0.5 teaspoon dried basil",
+        "0.5 teaspoon dried oregano",
+        "salt and ground black pepper to taste"
+      ],
+      "instructions": [
+        "Melt butter in a large pot over medium heat. Add onion and celery and cook until just tender, about 5 minutes.",
+        "Add chicken broth, vegetable broth, chicken, egg noodles, carrots, basil, oregano, salt, and pepper. Stir to combine and bring to a boil.",
+        "Reduce heat and simmer for 20 minutes."
+      ],
+      "tags": [
+        "soup",
+        "comfort"
+      ],
+      "source": {
+        "name": "allrecipes.com",
+        "url": "https://www.allrecipes.com/recipe/26460/quick-and-easy-chicken-noodle-soup/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:40:10.845Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "thai-chicken-soup",
+      "slug": "thai-chicken-soup",
+      "title": "Thai chicken soup",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-780463_11-d88dd8f.jpg?resize=440,400",
+      "prepTime": "10 min",
+      "cookTime": "1 hr 30 min",
+      "totalTime": "1 hr 40 min",
+      "servings": "4",
+      "ingredients": [
+        "140g soba or wholewheat noodles",
+        "100g beansprouts",
+        "2 pak choi leaves separated",
+        "1 red chilli deseeded and sliced",
+        "1 tbsp soy sauce",
+        "2 tbsp honey",
+        "juice 1 lime plus wedges to serve",
+        "4 spring onions sliced",
+        "&frac12; small bunch mint roughly chopped",
+        "1 roast chicken carcass and wings",
+        "thumb-sized piece ginger bashed and sliced",
+        "1 garlic clove crushed",
+        "2 spring onions sliced",
+        "5 peppercorns"
+      ],
+      "instructions": [
+        "To make the broth, place the chicken carcass and wings in a large pan. Cover with cold water, then add the rest of the ingredients and simmer for 1 hr.",
+        "Strain the chicken broth into a clean pan. Carefully pick out any pieces of chicken and return to the broth. Put the broth back on the heat and bring back to the boil.",
+        "Add the noodles and cook for 3 mins until tender, then stir in the beansprouts, pak choi, red chilli, soy sauce, honey and lime juice, adding the squeezed lime halves to the pot, too. Can be frozen at this point. Cook for 2 mins more. Ladle the soup into bowls, scatter over the spring onions and mint leaves, and serve with the lime wedges for squeezing over."
+      ],
+      "tags": [
+        "soup",
+        "comfort"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/thai-chicken-soup"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:43:52.790Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "chicken-noodle-soup",
+      "slug": "chicken-noodle-soup",
+      "title": "Chicken noodle soup",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1035613_10-0e544b7.jpg?resize=500,454",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "totalTime": "40 min",
+      "servings": "2",
+      "ingredients": [
+        "900ml chicken or vegetable stock (or Miso soup mix)",
+        "1 boneless, skinless chicken breast (about 175g)",
+        "1 tsp chopped fresh ginger",
+        "1 garlic clove finely chopped",
+        "50g rice or wheat noodles",
+        "2 tbsp sweetcorn canned or frozen",
+        "2-3 mushrooms thinly sliced",
+        "2 spring onions shredded",
+        "2 tsp soy sauce plus extra for serving",
+        "mint or basil leaves and a little shredded chilli (optional), to serve"
+      ],
+      "instructions": [
+        "Pour the stock into a pan and add the chicken breast, ginger and garlic. Bring to the boil, then reduce the heat, partly cover and simmer for 20 mins, until the chicken is tender.",
+        "Put the chicken on a board and shred into bite-size pieces using a couple of forks. Return the chicken to the stock with the noodles, sweetcorn, mushrooms, spring onion and soy sauce. Simmer for 3-4 mins until the noodles are tender.",
+        "Ladle into two bowls and scatter over the remaining spring onion, mint or basil leaves and chilli, if using. Serve with extra soy sauce."
+      ],
+      "tags": [
+        "soup"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/chicken-noodle-soup"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:46:15.941Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "slow-cooker-beef-stew",
+      "slug": "slow-cooker-beef-stew",
+      "title": "Slow-cooker beef stew",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/slow-cooker-beef-stew-8ade07f.jpg?resize=440,400",
+      "prepTime": "20 min",
+      "cookTime": "4 hrs",
+      "totalTime": "4 hrs 20 min",
+      "servings": "4",
+      "ingredients": [
+        "1 onion chopped",
+        "2 celery sticks finely chopped",
+        "2 tbsp rapeseed oil",
+        "3 carrots halved and cut into chunks",
+        "2 bay leaves",
+        "½ pack thyme",
+        "2 tbsp tomato purée",
+        "2 tbsp Worcestershire sauce",
+        "2 beef stock cubes or stock pots",
+        "900g beef for braising such as skirt, buy a whole piece and cut it yourself for bigger chunks or buy ready-diced",
+        "2 tsp cornflour (optional)",
+        "½ small bunch parsley chopped",
+        "buttery mash to serve (optional)"
+      ],
+      "instructions": [
+        "Fry the onion and celery in 1 tbsp oil over a low heat until they start to soften – about 5 mins. Add the carrots, bay and thyme, fry for 2 mins, stir in the purée and Worcestershire sauce, add 600ml boiling water, stir and tip everything into a slow cooker. Crumble over the stock cubes or add the stock pots and stir, then season with pepper (don’t add salt as the stock may be salty).",
+        "Clean out the frying pan and fry the beef in the remaining oil in batches until it is well browned, then tip each batch into the slow cooker. Cook on low for 8-10 hrs, or on high for 4 hrs.",
+        "If you want to thicken the gravy, mix the cornflour with a splash of cold water to make a paste, then stir in 2 tbsp of the liquid from the slow cooker. Tip back into the slow cooker, stir and cook for a further 30 mins on high. Stir in the parsley and season again to taste. Serve with mash, if you like. Leave to cool before freezing."
+      ],
+      "tags": [
+        "soup"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/slow-cooker-beef-stew"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:48:48.874Z",
+      "theme": "Soups & Stews"
+    },
+    {
+      "id": "chunky-vegetable-soup",
+      "slug": "chunky-vegetable-soup",
+      "title": "Chunky vegetable soup",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2023/05/Chunky-Veg-Soup-With-Dumplings440x400-9e489cc.jpg?resize=440,400",
+      "prepTime": "30 min",
+      "cookTime": "40 min",
+      "totalTime": "1 hr 10 min",
+      "servings": "4",
+      "ingredients": [
+        "2 tbsp rapeseed oil",
+        "2 leeks (350g), sliced",
+        "3 garlic cloves finely grated",
+        "300g baby potatoes sliced",
+        "1l vegetable stock made with 2 tsp bouillon powder (gluten-free, if needed)",
+        "250g asparagus stems cut into chunks, tips separated",
+        "160g baby frozen broad beans or soya beans",
+        "400g can borlotti beans drained",
+        "4 tomatoes chopped",
+        "30g pack of basil stems and leaves separated and finely chopped",
+        "300g tub cottage cheese",
+        "75g gram (chickpea) flour sifted",
+        "1 egg beaten",
+        "3 tbsp basil stems and leaves (taken from the 30g in the soup ingredients above)"
+      ],
+      "instructions": [
+        "First, make the dumplings. Tip the cottage cheese into a bowl and mash to smooth slightly. Mix in the flour, egg and basil, then set aside for about 10 mins for the flour to absorb the moisture.",
+        "Meanwhile, heat the oil in a large pan over a medium heat and fry the leeks, garlic and potatoes for 10-15 mins, or until softened. Pour over the bouillon, then add the asparagus stems, all of the beans, the tomatoes and and remaining basil stems. Bring to the boil, then reduce the heat to a simmer, cover and cook over a medium heat for 10 mins until the veg is tender. Stir in the asparagus tips and remaining basil leaves, and cook a few minutes more. Set aside.",
+        "Heat a deep frying pan filled with water to a gentle simmer, then use an ice-cream scoop to scoop eight dumplings into the simmering water. Cook for 5 mins, or until the dumplings rise to the surface.",
+        "To serve, divide two portions of soup between bowls and top each with two dumplings. Keep the rest for another day. Will keep chilled in an airtight container for four days. Reheat in a pan for 10 mins over a low heat until piping hot."
+      ],
+      "tags": [
+        "soup"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/chunky-vegetable-soup"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:48:50.409Z",
+      "theme": "Soups & Stews"
+    }
+  ]
+}

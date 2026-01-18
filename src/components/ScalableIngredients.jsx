@@ -1,6 +1,8 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { scaleIngredients, parseServings } from '../utils/scaleIngredient'
 import { formatFraction } from '../utils/formatFraction'
+import { getPreferredUnit, setPreferredUnit, isMetric } from '../utils/settings'
+import { convertIngredients } from '../utils/measurements'
 
 function CopyIcon() {
   return (
@@ -53,17 +55,41 @@ export default function ScalableIngredients({
   const originalServings = parseServings(servings) || 4
   const [currentServings, setCurrentServings] = useState(originalServings)
   const [copyStatus, setCopyStatus] = useState('')
+  const [useMetric, setUseMetric] = useState(() => isMetric())
 
   const isScaled = currentServings !== originalServings
 
+  // Listen for settings changes from other components
+  useEffect(() => {
+    const handleSettingsChange = () => {
+      setUseMetric(isMetric())
+    }
+
+    window.addEventListener('settings-changed', handleSettingsChange)
+    return () => window.removeEventListener('settings-changed', handleSettingsChange)
+  }, [])
+
   // Scale ingredients when servings change
   const scaledIngredients = useMemo(() => {
+    let result
     if (!isScaled) {
-      return ingredients.map(formatFraction)
+      result = ingredients.map(formatFraction)
+    } else {
+      const scaled = scaleIngredients(ingredients, originalServings, currentServings)
+      result = scaled.map(formatFraction)
     }
-    const scaled = scaleIngredients(ingredients, originalServings, currentServings)
-    return scaled.map(formatFraction)
-  }, [ingredients, originalServings, currentServings, isScaled])
+    // Convert to metric if preferred
+    if (useMetric) {
+      result = convertIngredients(result, true)
+    }
+    return result
+  }, [ingredients, originalServings, currentServings, isScaled, useMetric])
+
+  const handleToggleUnit = () => {
+    const newMetric = !useMetric
+    setUseMetric(newMetric)
+    setPreferredUnit(newMetric ? 'metric' : 'imperial')
+  }
 
   const handleDecrement = () => {
     if (currentServings > 1) {
@@ -104,7 +130,7 @@ export default function ScalableIngredients({
         Ingredients
       </h2>
 
-      {/* Servings adjuster */}
+      {/* Servings adjuster and unit toggle */}
       <div className="flex items-center justify-between mb-4 pb-4 border-b border-sand-200 print:hidden">
         <div className="flex items-center gap-2">
           <button
@@ -127,12 +153,23 @@ export default function ScalableIngredients({
             <PlusIcon />
           </button>
           <span className="text-sm text-sand-500 ml-1">servings</span>
+          {isScaled && (
+            <span className="text-xs text-sand-400 ml-1">
+              (from {originalServings})
+            </span>
+          )}
         </div>
-        {isScaled && (
-          <span className="text-xs text-sand-400">
-            from {originalServings}
-          </span>
-        )}
+        {/* Unit toggle */}
+        <button
+          onClick={handleToggleUnit}
+          className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded-md bg-sand-100 hover:bg-sand-200 text-sand-600 transition-colors"
+          aria-label={`Switch to ${useMetric ? 'imperial' : 'metric'} units`}
+          title={`Currently showing ${useMetric ? 'metric' : 'imperial'} units`}
+        >
+          <span className={useMetric ? 'text-sand-400' : 'font-medium text-sand-700'}>US</span>
+          <span className="text-sand-300">/</span>
+          <span className={useMetric ? 'font-medium text-sand-700' : 'text-sand-400'}>Metric</span>
+        </button>
       </div>
 
       {/* Print-only servings display */}
@@ -140,6 +177,7 @@ export default function ScalableIngredients({
         <span className="text-sm text-sand-700">
           {currentServings} servings
           {isScaled && ` (scaled from ${originalServings})`}
+          {useMetric && ' - Metric'}
         </span>
       </div>
 

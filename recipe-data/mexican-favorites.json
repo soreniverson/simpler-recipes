@@ -1,0 +1,434 @@
+{
+  "theme": {
+    "slug": "mexican-favorites",
+    "name": "Mexican Favorites",
+    "description": "Authentic tacos, enchiladas, and vibrant Latin flavors"
+  },
+  "metadata": {
+    "recipeCount": 10,
+    "lastUpdated": "2026-01-18T06:49:07.310Z"
+  },
+  "recipes": [
+    {
+      "id": "easy-carnitas",
+      "slug": "easy-carnitas",
+      "title": "Easy Carnitas",
+      "image": "https://www.simplyrecipes.com/thmb/ORK-NJwxvSm6XryGq3WwkLFL7bo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2006__12__carnitas-1600-88571a16a33443419a770e4e73f210d0.jpg",
+      "prepTime": "10 min",
+      "cookTime": "200 min",
+      "totalTime": "210 min",
+      "servings": "8",
+      "ingredients": [
+        "4 pounds boned pork shoulder, cut into large cubes (remove any large chunks of excess fat, but do not remove all the fat or you'll have dry, unflavorful carnitas)",
+        "1 quart beef broth",
+        "2 cups chunky tomato salsa either prepared or homemade",
+        "Kosher salt",
+        "2 cups fresh tomato salsa (pico de gallo)",
+        "16-24 corn tortillas"
+      ],
+      "instructions": [
+        "In a large, heavy saucepan over medium-high heat, combine pork, broth, and salsa. Add enough water to barely cover the pork. Cover and bring to a boil. Reduce heat to low and simmer, covered for 3 to 4 hours (or longer) until meat pulls apart easily. Add salt to taste if needed.",
+        "Preheat the oven to 400°F.",
+        "Remove meat from liquid in pot (discard the liquid) and spread the meat out in a roasting pan. Break the meat into small chunks. Roast meat for 15 to 20 minutes until brown and crispy.",
+        "If you are using store-bought tortillas, heat the tortillas one-by-one either in a microwave or on a hot skillet. If you heat them on a skillet you may need to use a little butter or oil to help soften them. When air pockets form in the tortillas they are ready. To heat them in a microwave, place a paper towel on the floor of the microwave. Lay one or two tortillas on the paper towel (whatever will fit so there is only one layer). Microwave on high heat for 10 seconds per tortilla (some brands of tortillas require 20 seconds each). Keep warm tortillas wrapped in a clean cloth towel for serving.",
+        "To serve, double up the tortillas and place a few spoonfuls of the carnitas on them. Top with salsa. To eat, remove half of the carnitas from one tortilla to another. Take one tortilla at a time with the carnitas and salsa, fold it over and enjoy. Or, keep them doubled up. Your choice."
+      ],
+      "tags": [
+        "mexican",
+        "latin"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/carnitas/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:29:28.353Z",
+      "theme": "Mexican Favorites"
+    },
+    {
+      "id": "refried-beans",
+      "slug": "refried-beans",
+      "title": "Refried Beans",
+      "image": "https://www.simplyrecipes.com/thmb/s37yxlDdew5lIh_dz2kJ1irega0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2005__12__refried-beans-horiz-a-1600-c8301ded0ff949b1b61f509dd4ff28c7.jpg",
+      "prepTime": "10 min",
+      "cookTime": "160 min",
+      "totalTime": "170 min",
+      "servings": "6",
+      "ingredients": [
+        "2 1/2 cups dry pinto beans (about 1 pound or 450g)",
+        "Water",
+        "2 teaspoons salt (less or more to taste)",
+        "2 teaspoons dried oregano, or a large sprig fresh oregano",
+        "1 onion, halved",
+        "2 tablespoons (or more to taste) bacon fat or extra virgin olive oil",
+        "1/2 cup bean cooking liquid or water",
+        "1/2 teaspoon chipotle powder, optional",
+        "Crumbled cotija cheese or grated cheddar cheese, optional"
+      ],
+      "instructions": [
+        "Rinse the beans in water and check for and remove any small stones, pieces of dirt, or bad beans. Remove any beans that float in water.",
+        "Stove Top Method Put beans into a pot and cover with at least 3 inches of water—about 3 quarts total for 2 1/2 cups of dry beans. Add half an onion, salt, and oregano. Bring to a boil and then lower heat to simmer, covered, for about 2 1/2 hours. The cooking time will vary depending on the batch of beans you have. The beans are done when they are soft and the skin is just beginning to break open. If the beans are still hard after 2 1/2 hours, add 1/8 teaspoon of baking soda to the pot and cook a half hour or more longer. Pressure Cooker Method Put beans into a 4 quart or larger Instant Pot or pressure cooker with a 15 pound weight. Add 8 cups (2 quarts) of water. (Make sure you never fill a pressure cooker with water more than 2/3 of the way up the pot.) Add half an onion, the salt, and oregano. Cook for 30 to 35 minutes on high pressure, then let the beans cool naturally for 10 minutes before releasing the pressure valve. The beans should be soft and the skins barely breaking open. If the beans are still quite hard, add 1/8 teaspoon of baking soda and bring to pressure again for 10 minutes. Note: If you are using a standard pressure cooker (not an Instant Pot), allow the pressure cooker to cool completely before opening. If there is resistance when attempting to open the cooker, do not open it, allow it to cool further. Follow the directions for your brand of pressure cooker. (See How to Make Fast No Soak Beans in a Pressure Cooker .) Either method: Strain the beans from the cooking water, reserving about a cup of the cooking water. Remove the remnants of onion or oregano sprig if using.",
+        "Chop the remaining half an onion. Heat the bacon fat or oil in a wide, sturdy frying pan (not a flimsy nonstick) on medium high heat. Add the chopped onion and cook until translucent. (You can do this while the beans are cooking.)",
+        "Add the strained beans and about a 1/4 cup of the bean cooking water or plain water to the pan. Using a potato masher, mash the beans in the pan, while you are cooking them, until they are a rough purée.",
+        "Add more bean water or plain water to desired level of creaminess and to keep the fried beans from getting too dried out. Add more salt to taste. Stir in 1/2 teaspoon of chipotle chili powder, if using. When the beans are heated through, top with crumbled cotija cheese or shredded cheddar cheese (1/2 cup) to serve (optional). (You can also stir in slices of cheddar to melt into the hot beans.) Did you enjoy this recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "mexican",
+        "latin"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/refried_beans/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:29:40.469Z",
+      "theme": "Mexican Favorites"
+    },
+    {
+      "id": "easy-fish-tacos",
+      "slug": "easy-fish-tacos",
+      "title": "Easy Fish Tacos",
+      "image": "https://www.simplyrecipes.com/thmb/XpUMSKx0QRLLJqJqPkYcmNNpTaM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2004__06__Fish-Tacos-LEAD-6-321ec7a914744339941b6e184ee11fb8.jpg",
+      "prepTime": "15 min",
+      "cookTime": "6 min",
+      "totalTime": "21 min",
+      "servings": "4",
+      "ingredients": [
+        "1 pound cod, tilapia, halibut, or other white fish filets",
+        "2-3 teaspoons chili powder, enough to coat the fish",
+        "1 teaspoon salt",
+        "1/2 cup sour cream",
+        "1/4 cup mayonnaise",
+        "3-4 tablespoons lime juice (from 2 limes)",
+        "1 teaspoon hot sauce, optional",
+        "1/2 small head red cabbage, shredded (about 4 cups)",
+        "12 taco-sized corn or flour tortillas",
+        "1 avocado, sliced",
+        "4 radishes, thinly sliced",
+        "4 spring onions, thinly sliced",
+        "1/3 cup roughly chopped cilantro"
+      ],
+      "instructions": [
+        "In a small bowl, combine the sour cream, mayonnaise, lime juice, and hot sauce (if using) for the taco sauce. Stir until combined.",
+        "In a medium bowl, combine the shredded cabbage with 3 tablespoons of the taco sauce. Stir to coat and add more taco sauce if you like. (The cabbage shouldn't be dripping with sauce; aim for a very thin coating.)",
+        "In a dry skillet over medium-high heat, warm the tortillas one at a time for about 30 seconds on both sides. Alternatively, wrap 1 to 3 tortillas in a damp paper towel and microwave for 30 seconds, until warm. Keep warmed tortillas wrapped in a clean dish towel while you make the fish.",
+        "Sprinkle the fish on both sides with chili powder and salt. Gently rub in the seasonings with your fingers to make sure the fish is entirely coated.",
+        "Warm a large cast iron or nonstick skillet on the stovetop over medium-high heat. When hot, add one tablespoon of olive oil and tilt the pan to entirely coat the bottom. Add the fish to the pan and cook for 2 minutes. Flip the fish and cook another 2 minutes. Flip and cook 1 to 2 minutes longer if needed; the fish is done when it is opaque all the way through and breaks apart easily. If any smaller, thinner pieces of the fish start to break off as you flip, just scoop them out and transfer them to a serving platter.",
+        "Transfer the cooked fillets to a platter and use a fork or a knife to gently break the fish into large chunks. Assemble the tacos with a few pieces of fish, some cabbage slaw, toppings of your choice, and a drizzle of taco sauce. Did you love the recipe? Give us some stars and leave a comment below!"
+      ],
+      "tags": [
+        "mexican",
+        "latin"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/fish_tacos/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:29:49.123Z",
+      "theme": "Mexican Favorites"
+    },
+    {
+      "id": "tres-leches-cake",
+      "slug": "tres-leches-cake",
+      "title": "Tres Leches Cake",
+      "image": "https://www.simplyrecipes.com/thmb/MLNdDwplVRSoLeoWRhv1vd7AOFU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__04__Tres-Leches-LEAD-4-69afecd9626d49119d174df1a3d3f922.jpg",
+      "prepTime": "30 min",
+      "cookTime": "15 min",
+      "totalTime": "225 min",
+      "servings": "12",
+      "ingredients": [
+        "1 tablespoon melted unsalted butter, for brushing the cake pan",
+        "3/4 cup + 1 tablespoon (178g) granulated sugar",
+        "6 large eggs, whites and yolks separated",
+        "1 teaspoon vanilla extract",
+        "1/2 teaspoon kosher salt",
+        "1 1/2 cups (173g) cake flour, sifted",
+        "1 1/2 cups whole milk",
+        "1 (12-ounce) can evaporated milk",
+        "1 (14-ounce) can sweetened condensed milk",
+        "1 tablespoon brandy (optional)",
+        "1 teaspoon vanilla extract",
+        "3 cups heavy cream",
+        "1/2 teaspoon vanilla extract",
+        "1 cup powdered sugar",
+        "Ground cinnamon"
+      ],
+      "instructions": [
+        "Preheat the oven. Brush the inside of a 9x13x3-inch cake pan with a thin layer of the melted butter.",
+        "Place 1/2 cup of the granulated sugar into an oven-safe container and let the sugar warm in the oven as it’s heating up. Warm sugar helps give the egg yolks more volume when you whip them.",
+        "Using a hand or stand mixer, whip the egg yolks, the warmed sugar, and the vanilla extract together on medium-high speed until the egg yolks have doubled in volume and are a very pale yellow color. This should take about 5 minutes. Set the bowl aside.",
+        "In a separate, very clean bowl with clean beaters, whip together the egg whites and the salt on medium-high speed until the whites are foamy. Once the whites look foamy, gradually add the remaining 1/4 cup plus 1 tablespoon of sugar to the egg whites. Continue whipping until the whites are stiff and glossy, about 4 1/2 minutes. The whites should stand up with a peak that folds over just slightly when the beaters are pulled from their surface.",
+        "Working quickly to prevent the eggs from deflating, sift half of the cake flour into the bowl with the yolks. Use a wide rubber spatula to gently fold the flour into the yolks. Once the flour has been incorporated, fold in half of the egg whites gently so as not to deflate the eggs. Repeat again with the remaining flour and whites.",
+        "Fill the prepared cake pan with the cake batter and use an offset spatula to spread the batter evenly into the pan. Gently tap the pan against the countertop a couple of times to release any air bubbles that may be trapped in the batter.",
+        "Bake until the top is golden brown and springs back quickly when pressed with your fingertip, about 15 minutes. Allow the cake to cool completely in the pan, or turn it out onto a deep, rimmed serving platter.",
+        "In a large pitcher or bowl, combine the 3 milks, the brandy (if using), and the vanilla extract. Whisk together until combined.",
+        "Once the cake has cooled, use a toothpick or the tines of a fork to poke small holes all over the cake. Pour the milk mixture over the cake, covering it entirely. Don’t worry if it seems to be a lot; the cake will soak up virtually all of the milk as it sits. Cover the cake with plastic wrap and refrigerate for 3 hours or up to 24 hours.",
+        "In a large mixing bowl, whip the heavy cream with an electric hand mixer on medium-high speed. Once the beaters begin to leave ribbons in the cream, stop the mixer and then add the vanilla extract and the powdered sugar. Increase the speed to high, and whip until the cream is thick and holds its shape when the beaters are removed, roughly 5 to 7 minutes.",
+        "Spread the whipped cream in an even layer over the top of the cake using an offset spatula. Sprinkle with a liberal dusting of ground cinnamon.",
+        "Refrigerate the cake up to three hours until ready to serve. Cut into 12 squares. Enjoy up to 3 days after preparation—keep it refrigerated."
+      ],
+      "tags": [
+        "mexican",
+        "latin"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/tres_leches_cake/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:29:52.550Z",
+      "theme": "Mexican Favorites"
+    },
+    {
+      "id": "chicken-quesadillas",
+      "slug": "chicken-quesadillas",
+      "title": "Chicken quesadillas",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2009/02/Chicken-quesadilla-4b5a699.jpg?resize=768,845",
+      "prepTime": "10 min",
+      "cookTime": "6 min",
+      "totalTime": "16 min",
+      "servings": "2",
+      "ingredients": [
+        "4 tbsp hot salsa from a jar",
+        "2 large flour tortillas seeded or plain",
+        "215g can kidney beans drained and roughly mashed",
+        "1 spring onion chopped",
+        "50g leftover roast chicken shredded (use the last of the meat on the carcass)",
+        "85g grated mature cheddar",
+        "½ a 20g pack coriander leaves chopped (optional)",
+        "oil for brushing"
+      ],
+      "instructions": [
+        "Spread 2 tbsp salsa onto each tortilla, then evenly top one of them with the beans, spring onion, chicken and cheddar. Scatter with coriander, if you have it. Sandwich with the other tortilla, then brush with oil.",
+        "Heat a large non-stick frying pan, then cook the tortilla, oil-side down, for 4 mins. Carefully turn over with a palette knife (or by turning it out onto a plate, sliding it back into the pan), then cook for 2 mins on the other side until golden. Serve cut into wedges."
+      ],
+      "tags": [
+        "mexican",
+        "latin"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/chicken-quesadillas"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:42:48.780Z",
+      "theme": "Mexican Favorites"
+    },
+    {
+      "id": "easy-chicken-fajitas",
+      "slug": "easy-chicken-fajitas",
+      "title": "Easy chicken fajitas",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-fajitas-2-d7172f8.jpg?resize=440,400",
+      "prepTime": "15 min",
+      "cookTime": "10 min",
+      "totalTime": "25 min",
+      "servings": "4",
+      "ingredients": [
+        "2 chicken breasts finely sliced",
+        "1 red onion finely sliced",
+        "1 red pepper sliced",
+        "1 red chilli finely sliced (optional)",
+        "1 tbsp smoked paprika",
+        "1 tbsp ground coriander",
+        "ground cumin",
+        "2 garlic cloves crushed",
+        "4 tbsp olive oil",
+        "1 lime juiced",
+        "Tabasco",
+        "8 tortillas",
+        "mixed salad",
+        "230g fresh salsa"
+      ],
+      "instructions": [
+        "Heat oven to 200C/180C fan/gas 6 and wrap 8 medium tortillas in foil.",
+        "Mix 1 heaped tbsp smoked paprika, 1 tbsp ground coriander, a pinch of ground cumin, 2 crushed garlic cloves, 4 tbsp olive oil, the juice of 1 lime and 4-5 drops Tabasco together in a bowl with a big pinch each of salt and pepper.",
+        "Stir 2 finely sliced chicken breasts, 1 finely sliced red onion, 1 sliced red pepper and 1 finely sliced red chilli, if using, into the marinade.",
+        "Heat a griddle pan until smoking hot and add the chicken and marinade to the pan.",
+        "Keep everything moving over a high heat for about 5 mins using tongs until you get a nice charred effect. If your griddle pan is small you may need to do this in two batches.",
+        "To check the chicken is cooked, find the thickest part and tear in half – if any part is still raw cook until done.",
+        "Put the tortillas in the oven to heat up and serve with the cooked chicken, a bag of mixed salad and one 230g tub of fresh salsa."
+      ],
+      "tags": [
+        "mexican",
+        "latin"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/easy-chicken-fajitas"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:42:50.614Z",
+      "theme": "Mexican Favorites"
+    },
+    {
+      "id": "mexican-chicken-burger",
+      "slug": "mexican-chicken-burger",
+      "title": "Mexican chicken burger",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/mexican-chicken-burger-092a6e0.jpg?resize=440,400",
+      "prepTime": "10 min",
+      "cookTime": "8 min",
+      "totalTime": "18 min",
+      "servings": "1",
+      "ingredients": [
+        "1 chicken breast",
+        "1 tsp chipotle paste",
+        "1 lime juiced",
+        "1-2 slices cheese",
+        "1 brioche bun split",
+        "½ avocado",
+        "2 cherry tomatoes chopped",
+        "3-4 pickled jalapeño slices, chopped",
+        "½ small garlic clove finely grated"
+      ],
+      "instructions": [
+        "Put the chicken breast between two pieces of cling film and bash with a rolling pin or pan to about 1cm thick. Mix the chipotle paste with half the lime juice and spread over the chicken.",
+        "Heat a griddle pan over a high heat. Once hot, cook the chicken for 3 mins each side until cooked through, adding the cheese for the final 2 mins of cooking. Add the bun, cut-side down, to the griddle pan to toast lightly. Season the chicken.",
+        "Meanwhile, mash the avocado with the remaining lime juice. Stir in the cherry tomatoes, jalapeño and garlic, and season with a little salt. Spread over the base of the bun, then add the chicken followed by the top of the bun."
+      ],
+      "tags": [
+        "mexican",
+        "latin"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/mexican-chicken-burger"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:42:55.179Z",
+      "theme": "Mexican Favorites"
+    },
+    {
+      "id": "huevos-rancheros",
+      "slug": "huevos-rancheros",
+      "title": "Huevos rancheros",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/huevos-rancheros-72f825a.jpg?resize=440,400",
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "totalTime": "25 min",
+      "servings": "4",
+      "ingredients": [
+        "2 tbsp olive oil",
+        "1 small onion diced",
+        "2 garlic cloves crushed",
+        "400g can red kidney beans drained and rinsed",
+        "1 tsp ground cumin",
+        "¼ tsp chilli powder",
+        "½ tsp dried oregano",
+        "4 eggs",
+        "4 small flour tortillas warmed",
+        "1 large tomato diced",
+        "handful pickled jalapeño peppers roughly chopped",
+        "30g cheddar grated",
+        "1 avocado peeled, de-stoned and diced",
+        "1 lime half juiced, half cut into wedges, to serve",
+        "chopped coriander to serve"
+      ],
+      "instructions": [
+        "Heat 1 tbsp oil in a large pan. Add the onions with a pinch of salt, and cook until translucent, around 3-4 mins. Add the garlic and cook for a minute more.",
+        "Stir in the beans, cumin, chilli powder, oregano, some seasoning and 100ml water. Cook for 5-7 mins, stirring occasionally, or until the beans have softened, then remove from the heat, mash and set aside.",
+        "Heat the remaining oil in a large frying pan over a medium-high heat. Crack in the eggs, then reduce the heat to low and cook slowly until the whites are completely firm.",
+        "To assemble, spread the beans onto the tortillas, add the tomatoes and jalapeños and sprinkle with cheese. Top with some avocado, a squeeze of lime juice and a fried egg, then scatter with coriander. Serve with the lime wedges on the side."
+      ],
+      "tags": [
+        "mexican",
+        "latin"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/huevos-rancheros"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:43:02.005Z",
+      "theme": "Mexican Favorites"
+    },
+    {
+      "id": "taco-salad",
+      "slug": "taco-salad",
+      "title": "Taco salad",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2021/07/Taco-salad-462c67b.jpg?resize=768,713",
+      "prepTime": "20 min",
+      "cookTime": "30 min",
+      "totalTime": "50 min",
+      "servings": "4",
+      "ingredients": [
+        "1 red onion sliced",
+        "1 lime juiced",
+        "1 tbsp sunflower oil",
+        "400g lean beef mince",
+        "½ pack taco or fajita seasoning",
+        "1 tbsp tomato purée",
+        "400g can black beans drained but not rinsed",
+        "200g tortilla chips",
+        "1 small iceberg lettuce shredded",
+        "2 avocados peeled and sliced",
+        "2 tomatoes chopped into chunks",
+        "100g feta crumbled",
+        "small bunch of coriander chopped or leaves picked",
+        "½ lime juiced",
+        "5 tbsp soured cream",
+        "chilli sauce (optional), plus extra to serve"
+      ],
+      "instructions": [
+        "Mix the red onion with half the lime juice and a pinch of salt in a small bowl, then set aside.",
+        "Heat the oil in a frying pan over a medium-low heat, and crumble in the mince. Cook for 15-20 mins – the mince will release some liquid, but once this has bubbled away, it will sizzle in its own fat. At this point, stir or toss with a wooden spoon so the mince browns and caramelises all over. If the pan becomes too dry, add a drizzle more oil. When the mince is well toasted, sprinkle over the taco seasoning and cook for 2 mins, then stir through the tomato purée and pour over the rest of the lime juice and let it sizzle for another minute. Stir through the black beans and turn up the heat to medium, continuing to cook until everything is hot. Taste for seasoning, then set aside.",
+        "To make the dressing, mix the lime juice with the soured cream and chilli sauce, if using, season, then set aside.",
+        "Scatter a handful of tortilla chips into a bowl, then add a layer of lettuce, then the mince and black beans. Top with the avocado slices, chopped tomato, pickled red onions, along with any juices, and the feta. Drizzle with the dressing, then finally scatter over the coriander. Tuck more tortilla chips around the sides of the bowl, then serve."
+      ],
+      "tags": [
+        "mexican",
+        "latin"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/taco-salad"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:43:06.580Z",
+      "theme": "Mexican Favorites"
+    },
+    {
+      "id": "chicken-burrito-bowl",
+      "slug": "chicken-burrito-bowl",
+      "title": "Chicken burrito bowl",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/buddha-bowls-2358192.jpg?resize=440,400",
+      "prepTime": "15 min",
+      "cookTime": "30 min",
+      "totalTime": "45 min",
+      "servings": "2",
+      "ingredients": [
+        "1 small sweet potato cut into wedges",
+        "2 tbsp oil",
+        "1 garlic clove chopped",
+        "1small red onion finely chopped",
+        "1 skinless chicken breast sliced into strips",
+        "1 tbsp cider vinegar",
+        "1 tsp honey",
+        "400g can black beans drained and rinsed",
+        "250g pouch Mexican-style rice",
+        "1 medium tomato chopped",
+        "1 lime zested and juiced",
+        "handful coriander leaves chopped",
+        "1 avocado stoned and sliced",
+        "1 small tortilla sliced into strips and grilled until crisp",
+        "hot sauce and lime wedges, to serve (optional)"
+      ],
+      "instructions": [
+        "Heat the oven to 200C/180C fan/gas 6. Rub the sweet potato wedges with 1 tbsp oil, season and bake for 20 mins, or until tender but slightly crisp at the edges. Cover to keep warm.",
+        "Meanwhile, heat the remaining oil in a frying pan, then briefly fry the garlic and most of the onion. Add the chicken and fry for another 7-10 mins, or until the chicken is cooked through. Add the vinegar, honey and black beans and stir to combine, then cook for 2 mins. Add the rice from the pouch, breaking it up as you stir, and warm everything through for 5 mins.",
+        "Divide the rice mixture between two shallow bowls. Combine the tomato, remaining onion, the lime juice and zest and the coriander. Arrange half of the avocado over each bowl along with half of the sweet potato wedges. Spoon on some of the salsa and top with some tortilla strips. Serve with hot sauce and lime wedges, if you like."
+      ],
+      "tags": [
+        "mexican",
+        "latin"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/chicken-burrito-bowl"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:45:37.639Z",
+      "theme": "Mexican Favorites"
+    }
+  ]
+}

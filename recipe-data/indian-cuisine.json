@@ -1,0 +1,599 @@
+{
+  "theme": {
+    "slug": "indian-cuisine",
+    "name": "Indian Cuisine",
+    "description": "Curries, biryanis, and aromatic spice-filled dishes"
+  },
+  "metadata": {
+    "recipeCount": 12,
+    "lastUpdated": "2026-01-18T06:49:07.307Z"
+  },
+  "recipes": [
+    {
+      "id": "chicken-tikka-masala",
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "image": "https://www.recipetineats.com/tachyon/2018/04/Chicken-Tikka-Masala_0-SQ.jpg",
+      "prepTime": "15 min",
+      "cookTime": "45 min",
+      "totalTime": "60 min",
+      "servings": "4",
+      "ingredients": [
+        "600g/ 1.2lb chicken thigh ((boneless, skinless), cut into 3cm / 2.2\" cubes (Note 1))",
+        "1/2 cup plain yoghurt, (full fat best (Greek is fine))",
+        "6 cloves garlic (minced (~1.5 tbsp))",
+        "1 tbsp fresh ginger (grated)",
+        "1 tsp garam masala (Note 2)",
+        "1 tsp each salt, cumin, ground coriander, paprika (sweet, normal or smokey)",
+        "1 tbsp vegetable oil",
+        "1/8 tsp cayenne pepper (optional)",
+        "Pinch black pepper",
+        "2 tsp lemon juice",
+        "1 - 2 tbsp oil (Note 3)",
+        "2 tsp turmeric",
+        "1 tbsp garam masala (Note 2)",
+        "2 tsp coriander",
+        "1 tsp cumin",
+        "1/8 tsp cardamom powder",
+        "1/8 tsp cayenne pepper",
+        "3 tbsp (65ml) vegetable oil (Note 3)",
+        "30g / 2 tbsp unsalted butter OR ghee",
+        "1 onion, finely chopped (brown, white or yellow)",
+        "1 tsp salt",
+        "2 tbsp fresh ginger (grated)",
+        "6 cloves garlic (crushed or grated)",
+        "1 tbsp paprika (not smoked)",
+        "1 2/3 cups (400ml) tomato passata (tomato puree)",
+        "1 2/3 cups (400ml) water",
+        "100 ml (1/3 cup + 1 tbsp) cream (thickened or pure is fine)",
+        "1 tsp sugar",
+        "50g / 3 tbsp unsalted butter OR ghee",
+        "Basmati rice"
+      ],
+      "instructions": [
+        "Combine all ingredients except chicken in a bowl and mix. Add chicken and turn well to coat.",
+        "Cover with cling wrap and leave in fridge to marinate overnight (3 hours minimum).",
+        "Heat 1 tbsp oil in a non stick pan over high heat until smoking. Add half the chicken and spread out. Leave for 2 minutes or until charred. Turn each piece and cook the other side until charred - don't worry if not cooked inside. (Note 4, also Video helpful here) Remove into bowl.",
+        "Scrape out charred bits left in pan and discard. Add more oil if required and cook remaining chicken.",
+        "Wipe skillet with paper towels (or do this part in a pot as you need a lid). Turn heat down to medium high.",
+        "Add oil and butter. When butter is melted, add onions, ginger and salt.",
+        "Cook, stirring constantly to ensure it doesn't burn, until the ginger is starting to turn golden and the onions smell sweet, about 5 - 7 minutes.",
+        "Reduce the heat to medium. Add the garlic and paprika, and cook for 2 minutes.",
+        "Add the Curry Sauce Spices, and cook a further 2 minutes, stirring.",
+        "Add tomato passata and water, and mix. Bring to a simmer, then cover and reduce heat to low.",
+        "Simmer for 15 minutes, stirring occasionally.",
+        "Pour curry into a bowl, then use a stick blender to puree until smooth (Note 5).",
+        "Return sauce to skillet. Add cream, sugar and butter. Stir to melt the butter.",
+        "Add chicken, stir. Simmer for a few minutes until the chicken is cooked through.",
+        "Optional: Sprinkle with a pinch of extra garam masala at the end.",
+        "Serve over basmati rice, sprinkled with coriander/cilantro if desired. Try this No Yeast Flatbread as a quick naan!"
+      ],
+      "tags": [
+        "indian",
+        "curry"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/chicken-tikka-masala/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:30:54.736Z",
+      "theme": "Indian Cuisine"
+    },
+    {
+      "id": "butter-chicken",
+      "slug": "butter-chicken",
+      "title": "Butter Chicken",
+      "image": "https://www.recipetineats.com/tachyon/2019/01/Butter-Chicken_5-SQ.jpg",
+      "prepTime": "10 min",
+      "cookTime": "25 min",
+      "totalTime": "35 min",
+      "servings": "3",
+      "ingredients": [
+        "1/2 cup plain yoghurt (full fat)",
+        "1 tbsp lemon juice",
+        "1 tsp tumeric powder",
+        "2 tsp garam masala (Note 1)",
+        "1/2 tsp chilli powder or cayenne pepper powder (Note 2)",
+        "1 tsp ground cumin",
+        "1 tbsp ginger, freshly grated",
+        "2 cloves garlic, crushed",
+        "1.5 lb / 750 g chicken thigh fillets, cut into bite size pieces",
+        "2 tbsp (30 g) ghee or butter, (OR 1 tbsp vegetable oil (Note 3))",
+        "1 cup tomato passata (aka tomato puree) (Note 4)",
+        "1 cup heavy / thickened cream (Note 5)",
+        "1 tbsp sugar",
+        "1 1/4 tsp salt",
+        "Basmati rice",
+        "White rice",
+        "Coriander/cilantro (optional)"
+      ],
+      "instructions": [
+        "Optional blitz: for an extra smooth sauce, combine the Marinade ingredients (except the chicken) in a food processor and blend until smooth. (I do not do this)",
+        "Marinade: Combine the Marinade ingredients with the chicken in a bowl. Cover and refrigerate overnight, or up to 24 hours (minimum 3 hrs).",
+        "Cook chicken: Heat the ghee (butter or oil) over high heat in a large fry pan. Take the chicken out of the Marinade but do not wipe or shake off the marinade from the chicken (but don't pour the Marinade left in the bowl into the fry pan).",
+        "Place chicken in the fry pan and cook for around 3 minutes, or until the chicken is white all over (it doesn't really brown because of the Marinade).",
+        "Sauce: Add the tomato passata, cream, sugar and salt. Also add any remaining marinade left in the bowl. Turn down to low and simmer for 20 minutes. Do a taste test to see if it needs more salt.",
+        "Garnish with coriander/cilantro leaves if using. Serve with basmati rice.",
+        "The Butter Chicken is pictured with my very easy No Yeast Flatbread and no-fry papadums (Note 5)."
+      ],
+      "tags": [
+        "indian",
+        "curry"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/butter-chicken/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:30:56.446Z",
+      "theme": "Indian Cuisine"
+    },
+    {
+      "id": "palak-paneer-indian-spinach-curry-with-homemade-fresh-cheese",
+      "slug": "palak-paneer-indian-spinach-curry-with-homemade-fresh-cheese",
+      "title": "Palak Paneer – Indian Spinach Curry with Homemade Fresh Cheese",
+      "image": "https://www.recipetineats.com/tachyon/2021/02/Indian-Palak-Paneer_4-SQ.jpg",
+      "prepTime": "45 min",
+      "cookTime": "25 min",
+      "totalTime": null,
+      "servings": "6",
+      "ingredients": [
+        "1 batch homemade Paneer (Indian fresh cheese; recipe linked below)",
+        "30g / 2 tbsp ghee or unsalted butter (for pan frying, Note 2)",
+        "30g/2 tbsp ghee or unsalted butter (Note 2)",
+        "1 1/2 onions (finely chopped (brown or yellow))",
+        "1 tsp fenugreek seeds (whole) (Note 3)",
+        "1 tsp ground cumin",
+        "1 tsp ground coriander",
+        "3/4 tsp salt (kosher/cooking salt (if using table salt, reduce by 1/4 tsp))",
+        "1/4 tsp black pepper",
+        "2 garlic cloves (finely chopped)",
+        "2 tsp ginger (finely grated (20g))",
+        "2 tomatoes (peeled, seeded and diced (Note 4))",
+        "1 green chilli (finely sliced (cayenne, Note 5))",
+        "700g/ 1.4lb fresh spinach leaves (English spinach) (thoroughly washed and roughly chopped (~9 cups very tightly packed) (Note 6))",
+        "1/4 cup water",
+        "1/3 cup + 1 tbsp cream (pure, heavy or thickened)",
+        "1 tbsp lemon juice"
+      ],
+      "instructions": [
+        "Saute onion & spices: Melt butter in a large pot over medium heat. Add onion, fenugreek, cumin, coriander, salt and pepper. Cook for 3 minutes until onion is softened but not golden.",
+        "Add garlic and ginger, cook for 2 minutes.",
+        "Add the tomato and chilli, cook for 3 minutes on a medium heat.",
+        "Add spinach: Add about 1/3 of the spinach – or as much as you can handle in the pot (!) – and stir until wilted. Then add more spinach along with the water, cook again until wilted. Repeat until all the spinach is wilted.",
+        "Cook 10 minutes: Cook, stirring every now and then, for 10 minutes still on a medium heat.",
+        "Cream & lemon: Add the cream and lemon juice. Cook, stirring gently, for 3 minutes.",
+        "Puree half spinach: Remove half the spinach into a tall container and blend it to a puree using a stick blender. Pour pureed spinach back into the pot, and stir to combine.",
+        "Add Pan Fried Paneer: Gently stir in golden pan-fried paneer (see below). Stir gently to mix through.",
+        "Serve over basmati rice with fluffy, chewy homemade naan on the side!",
+        "Cut paneer into 1.25cm / ½\" thick slices. Then cut each slice into 2.5cm x 2 x 1.25cm thick pieces / 1 x ⅘\" x ½\" pieces – approximately!",
+        "Melt half the ghee or butter in a non-stick pan over medium-high heat.",
+        "Place half the paneer in the pan and cook for 1 - 1 1/2 minutes until light golden - I tend to make it deep golden because colour = more flavour, but traditional is just a hint of gold Turn, then cook the other side until light golden.",
+        "Remove onto paper towel-lined plate. Repeat with remaining butter and paneer. Use per recipe."
+      ],
+      "tags": [
+        "indian",
+        "curry"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/palak-paneer/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:03.534Z",
+      "theme": "Indian Cuisine"
+    },
+    {
+      "id": "chana-masala",
+      "slug": "chana-masala",
+      "title": "Chana Masala",
+      "image": "https://www.simplyrecipes.com/thmb/6y1v6f7NW25qC9E2mwnODgq6w3U=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__05__Chana-Masala-LEAD-5-a47652d4002945a7ae63d24e682f2a54.jpg",
+      "prepTime": "15 min",
+      "cookTime": "30 min",
+      "totalTime": "45 min",
+      "servings": "6",
+      "ingredients": [
+        "1 1/2 cups dry chickpeas (soaked overnight), or a 28-oz can low sodium chickpeas",
+        "2 tablespoons vegetable oil",
+        "4 whole cloves",
+        "1/2 teaspoon cumin seeds",
+        "1-inch piece cinnamon",
+        "4 green cardamom pods",
+        "1/2 cup minced red onion",
+        "1 1/2 tablespoons ground coriander",
+        "1 tablespoon ginger-garlic paste",
+        "1/2 teaspoon salt",
+        "1/2 teaspoon ground turmeric",
+        "3/4 cup chopped tomatoes",
+        "1 1/2 teaspoons garam masala",
+        "1/4 cup chopped fresh cilantro (garnish)"
+      ],
+      "instructions": [
+        "If starting with dry chickpeas, rinse the chickpeas with water, transfer them to a bowl, and cover them with water. Soak them overnight or for 6 to 8 hours. The next day, add 3 cups water to the soaked chickpeas, and pressure cook them until tender. Set aside for later. If you prefer, skip this step and just use canned chickpeas. Strain and rinse the chickpeas, and move to the next step.",
+        "In a Dutch oven set over medium-high heat, add the oil. Once the oil shimmers, add the cloves, cumin seeds, cinnamon stick, and green cardamom pods. Once the oil sputters, add the red onion. Turn the heat to medium and cook onion for 5 to 8 minutes until it begins to turn golden. Once the onions take on color, add the coriander, ginger-garlic paste, salt, and turmeric. Stir well. Cook for another 15 to 20 seconds until the spices are fragrant.",
+        "Add the chopped tomato and stir well. Cook, stirring occasionally, until the tomato cooks down and turns the masala into a loose paste. This should take about 5 to 8 minutes. If you cooked your own chickpeas, add them along with the cooking liquid. If you’re using canned chickpeas, add them along with 1 1/2 cups of water. Add the garam masala and stir everything together.",
+        "Cover and cook: Cover and cook the ingredients on medium-high heat to let all the spices and sauce marry well and season the chickpeas, 5 to 8 minutes.",
+        "Turn the heat off. Uncover the pot and stir in the cilantro. Serve warm with a side of rice or bread."
+      ],
+      "tags": [
+        "indian",
+        "curry"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/chana_masala/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:31:05.295Z",
+      "theme": "Indian Cuisine"
+    },
+    {
+      "id": "easy-chicken-curry",
+      "slug": "easy-chicken-curry",
+      "title": "Easy chicken curry",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/easy-chicken-curry-aa22a0b.jpg?resize=440,400",
+      "prepTime": "5 min",
+      "cookTime": "45 min",
+      "totalTime": "50 min",
+      "servings": "4",
+      "ingredients": [
+        "2 tbsp sunflower oil",
+        "1 onion thinly sliced",
+        "2 garlic cloves crushed",
+        "thumb-sized piece of ginger grated",
+        "6 chicken thighs boneless and skinless",
+        "3 tbsp medium spice paste (tikka works well)",
+        "400g can chopped tomatoes",
+        "100g Greek yogurt",
+        "1 small bunch of coriander leaves chopped",
+        "50g ground almonds",
+        "naan breads or cooked basmati rice, to serve"
+      ],
+      "instructions": [
+        "Heat the oil in a flameproof casserole dish or large frying pan over a medium heat. Add the onion and a generous pinch of salt and fry for 8-10 mins, or until the onion has turned golden brown and sticky. Add the garlic and ginger, cooking for a further minute.",
+        "Chop the chicken into chunky 3cm pieces, add to the pan and fry for 5 mins before stirring through the spice paste and tomatoes, along with 250ml water. Bring to the boil, lower to a simmer and cook on a gentle heat uncovered for 25-30 mins or until rich and slightly reduced. Stir though the yogurt, coriander and ground almonds, season and serve with warm naan or fluffy basmati rice."
+      ],
+      "tags": [
+        "indian",
+        "curry"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/easy-chicken-curry"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:42:21.882Z",
+      "theme": "Indian Cuisine"
+    },
+    {
+      "id": "lamb-biryani",
+      "slug": "lamb-biryani",
+      "title": "Lamb biryani",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/lamb-biryani-83e5c3d.jpg?resize=440,400",
+      "prepTime": "10 min",
+      "cookTime": "50 min",
+      "totalTime": "1 hr",
+      "servings": "6",
+      "ingredients": [
+        "400g lamb neck cut into small cubes",
+        "4 garlic cloves grated",
+        "1 tbsp finely grated ginger",
+        "1 tbsp sunflower oil",
+        "1 large onion chopped",
+        "1 tbsp cumin seeds",
+        "1 tbsp nigella seeds",
+        "1 tbsp Madras spice paste",
+        "200g basmati rice rinsed well",
+        "8 curry leaves",
+        "400ml good-quality lamb or chicken stock",
+        "100g paneer chopped",
+        "200g spinach cooked and water squeezed out",
+        "chopped coriander",
+        "sliced green chillies",
+        "plain yogurt"
+      ],
+      "instructions": [
+        "Toss the lamb in a bowl with the garlic, ginger and a large pinch of salt. Marinate in the fridge overnight or for at least a couple of hours.",
+        "Heat the oil in a casserole. Fry the lamb for 5-10 mins until starting to brown. Add the onion, cumin seeds and nigella seeds, and cook for 5 mins until starting to soften. Stir in the curry paste, then cook for 1 min more. Scatter in the rice and curry leaves, then pour over the stock and bring to the boil. Meanwhile, heat oven to 180C/160C fan/gas 4.",
+        "Stir in the paneer, spinach and some seasoning. Cover the dish with a tight lid of foil, then put the lid on to ensure it’s well sealed. Cook in the oven for 20 mins, then leave to stand, covered, for 10 mins. Bring the dish to the table, remove the lid and foil, scatter with the coriander and chillies and serve with yogurt on the side."
+      ],
+      "tags": [
+        "indian",
+        "curry"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/lamb-biryani"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:42:23.604Z",
+      "theme": "Indian Cuisine"
+    },
+    {
+      "id": "vegetable-samosas",
+      "slug": "vegetable-samosas",
+      "title": "Vegetable samosas",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/vegetable-samosas-b9b74f9.jpg?resize=440,400",
+      "prepTime": "30 min",
+      "cookTime": "1 hr 10 min",
+      "totalTime": "1 hr 40 min",
+      "servings": "24",
+      "ingredients": [
+        "1 tbsp vegetable oil",
+        "1 onion finely chopped",
+        "2 garlic cloves crushed",
+        "1 potato (about 150g) finely diced",
+        "1 carrot (about 100g) finely diced",
+        "100g frozen peas",
+        "2 tsp curry powder or your own spices according to taste",
+        "100ml vegetable stock",
+        "225g plain flour",
+        "2 tsp sea salt",
+        "2 tbsp vegetable oil",
+        "2l vegetable oil to deep fry"
+      ],
+      "instructions": [
+        "To make the filling, heat the oil in a frying pan, add the onion and garlic, mix in the spices and fry for 10 mins until soft. Add the vegetables, seasoning and stir well until coated. Add the stock, cover and simmer for 30 mins until cooked. Leave to cool.",
+        "To make the pastry, mix flour and salt into a bowl. Make a well in the centre, add the oil and 100ml water to make a firm dough. Knead the dough on a floured surface for 5-10 mins until smooth and roll into a ball. Cover in cling film and set aside at room temperature for 30 mins.",
+        "Divide the pastry into 12 equal pieces. Roll each piece into a ball and roll out into a circle of 15cm. Divide this circle into two equal pieces with a knife.",
+        "Brush each edge with a little water and form a cone shape around your fingers, sealing the dampened edge. Fill with 1 tbsp mixture and press the two dampened edges together to seal the top of the cone. Repeat with the remaining pastry.",
+        "Heat the oil in a large deep saucepan to 180C. The oil should come 1/3rd of the way up the pan. Deep fry the samosas in batches for 8-10 mins until crisp and brown. Take out and drain on kitchen paper."
+      ],
+      "tags": [
+        "indian",
+        "curry"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/vegetable-samosas"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:42:32.981Z",
+      "theme": "Indian Cuisine"
+    },
+    {
+      "id": "chicken-dopiaza",
+      "slug": "chicken-dopiaza",
+      "title": "Chicken dopiaza",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2024/04/ChickenDopiaza-a8c2cab.jpg?resize=768,713",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "totalTime": "40 min",
+      "servings": "6",
+      "ingredients": [
+        "3 chicken legs bone-in, skin removed",
+        "3 chicken thighs bone-in, skin removed",
+        "3 ginger half grated, half cut into strips to serve",
+        "4 garlic cloves finely grated",
+        "2 star anise",
+        "1 black cardamom pod",
+        "1 tsp cumin seeds",
+        "1 tsp coriander seeds crushed using a pestle and mortar",
+        "3 green cardamom pods",
+        "½ tsp black peppercorns",
+        "2 dried red chillies",
+        "1 bay leaf",
+        "3 cinnamon stick",
+        "6 red onions roughly chopped",
+        "1 tbsp full-fat yogurt",
+        "2 tbsp ghee (or 1 tbsp vegetable oil and 1 tbsp unsalted butter)",
+        "½ tsp turmeric",
+        "½ tsp freshly ground pepper",
+        "fresh coriander leaves chopped",
+        "1 green chilli finely chopped",
+        "½ tsp garam masala",
+        "½ lime"
+      ],
+      "instructions": [
+        "Put the chicken, grated ginger, garlic, star anise, black cardamom, cumin seeds, coriander seeds, green cardamom, black peppercorns, dried red chillies, bay leaf, cinnamon stick and half the chopped onions in a wok or large frying pan over a medium heat. If it becomes too dry, add a little water (no more than 4 tbsp). Reduce the heat to low, cover and cook until the chicken is almost cooked through.",
+        "Add the yogurt and stir-fry on a high heat until the yogurt dries up. Now add the ghee (or oil and butter) and, when hot, add the remaining onions, turmeric, freshly ground black pepper and salt to taste.",
+        "Continue to cook over a high heat until the sauce is dryish and the second half of the onions are nearly soft (although be careful not to overcook).",
+        "Garnish with the ginger strips, fresh coriander, green chilli, garam masala and a squeeze of lime juice. Serve immediately."
+      ],
+      "tags": [
+        "indian",
+        "curry"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/chicken-dopiaza"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:42:35.807Z",
+      "theme": "Indian Cuisine"
+    },
+    {
+      "id": "chicken-jalfrezi",
+      "slug": "chicken-jalfrezi",
+      "title": "Chicken jalfrezi",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-jalfrezi--020ac52.jpg?resize=440,400",
+      "prepTime": "10 min",
+      "cookTime": "1 hr",
+      "totalTime": "1 hr 10 min",
+      "servings": "4",
+      "ingredients": [
+        "½ large onion roughly chopped",
+        "2 garlic cloves chopped",
+        "1 green chilli finely chopped",
+        "vegetable oil for frying",
+        "400g can plum tomatoes",
+        "1 tbsp ground coriander",
+        "1 tbsp ground cumin",
+        "1 tsp turmeric",
+        "2-3 chicken breasts diced",
+        "1 tsp ground cumin",
+        "1 tsp ground coriander",
+        "1 tsp turmeric",
+        "½ large onion sliced",
+        "1 red pepper chopped",
+        "2 red chillies finely chopped (optional)",
+        "2 tsp garam masala",
+        "handful of fresh, chopped coriander leaves",
+        "cooked basmati rice or naan bread to serve"
+      ],
+      "instructions": [
+        "Take 2-3 diced chicken breasts and coat in 1 tsp cumin, 1 tsp coriander and 1 tsp turmeric then leave it to marinate in the fridge while you make the sauce.",
+        "To make the sauce, fry ½ roughly chopped large onion, 2 chopped garlic cloves and 1 finely chopped green chilli in a large pan with a little vegetable oil, for around 5 mins, until browned.",
+        "Add 300ml water to the onion mixture and simmer for around 20 minutes.",
+        "Meanwhile, put a 400g can plum tomatoes in a food processor and give it a good whizz (aim for a smooth consistency).",
+        "Heat another large pan and gently fry 1 tbsp coriander, 1 tbsp cumin and 1 tsp turmeric in a splash of oil for about a minute. Add the tomatoes to this pan and simmer for around 10 minutes.",
+        "Next, whizz your onion mixture in the food processor and add it to the spiced tomato sauce. Season generously, stir, then simmer for 20 minutes. You can make large batches of this sauce and freeze it for later use.",
+        "Fry the marinated chicken in vegetable oil and stir continuously. After a few minutes, turn down the heat and add the remaining ½ sliced onion, 1 chopped red pepper and 2 finely chopped red chillies. Stir until the onions and pepper soften.",
+        "Add the sauce you prepared earlier to the cooked chicken and simmer for around 10-20 minutes, adding a splash of water if it gets too thick.",
+        "Just before you dish it up, stir in 2 tsp garam masala and handful of chopped coriander leaves. Serve with basmati rice or naan bread."
+      ],
+      "tags": [
+        "indian",
+        "curry"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/chicken-jalfrezi"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:42:37.920Z",
+      "theme": "Indian Cuisine"
+    },
+    {
+      "id": "saag-paneer",
+      "slug": "saag-paneer",
+      "title": "Saag paneer",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/saag-paneer-4893170.jpg?resize=440,400",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "totalTime": "30 min",
+      "servings": "6",
+      "ingredients": [
+        "2 tbsp ghee or cooking oil",
+        "1 tsp turmeric",
+        "1 tsp chilli powder or Kashmiri chilli powder",
+        "450g paneer cut into 3cm cubes",
+        "500g spinach mature fresh or frozen",
+        "1 large onion finely chopped",
+        "3 garlic cloves",
+        "thumb-sized piece of ginger",
+        "1 green chilli roughly chopped, (include seeds for extra spice)",
+        "1 tsp garam masala",
+        "½ lemon juiced, to serve"
+      ],
+      "instructions": [
+        "Melt the ghee, whisk in with the turmeric and chilli powder, then add the cubed paneer and toss well. Set aside. If using frozen spinach, microwave for 3-5 mins, then place in a sieve and squeeze out most of the water. If using fresh spinach, place in a colander, pour over boiling water, drain and cool, then put in a tea towel and squeeze out most of the water. Roughly chop.",
+        "Blitz the onion with the garlic, ginger and green chilli. Cook the paneer in a large non-stick frying pan over medium heat for around 8 mins, tossing the pan so they become golden all over. Remove and set aside on a plate, leaving spices behind in the pan. Tip the onion mix into the pan, add a pinch of salt and turn the heat down. Fry until caramel coloured, around 10 mins, adding a splash of water if it looks a little dry. Add the garam masala, stir to coat the onion mix, fry for 2 mins.",
+        "Add the spinach and cook for a further 2-3 mins, adding 100ml water to release all the flavours from the bottom of the pan. Season to taste. Add the paneer and cook for 2-3 mins to heat through. Spoon into bowls and squeeze over a little lemon juice, to serve."
+      ],
+      "tags": [
+        "indian",
+        "curry"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/saag-paneer"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:45:26.385Z",
+      "theme": "Indian Cuisine"
+    },
+    {
+      "id": "chicken-bhuna",
+      "slug": "chicken-bhuna",
+      "title": "Chicken bhuna",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-bhuna-06e1433.jpg?resize=440,400",
+      "prepTime": "15 min",
+      "cookTime": "50 min",
+      "totalTime": "1 hr 5 min",
+      "servings": "6",
+      "ingredients": [
+        "3 medium onions 2 finely chopped, 1 roughly chopped",
+        "100ml vegetable oil",
+        "1 tbsp ginger and garlic purée",
+        "1 tbsp mild curry powder",
+        "1 tsp ground turmeric",
+        "1 tsp chilli powder",
+        "800g chicken thighs diced",
+        "100ml natural yogurt",
+        "4 tbsp tomato purée",
+        "2 tsp garam masala"
+      ],
+      "instructions": [
+        "Heat a large saucepan over medium-high heat and, once hot, drizzle in the oil, reduce the heat to low and cook the finely chopped onions until golden brown. Season.",
+        "Add the ginger and garlic purée, curry powder, turmeric, chilli powder, 1 tsp fine salt and a splash of water, and stir well. Fry for a couple of minutes, then add the diced chicken thighs and stir well again.",
+        "Mix the yogurt, tomato purée and onion purée together in a jug with 300ml water. Pour into the saucepan and mix well. Turn up the heat and bring to the boil, then reduce the heat and simmer for 15-20 mins, stirring occasionally. Sprinkle in the garam masala for the final 2 mins of cooking, stir well and serve.",
+        "Mix the yogurt, tomato purée and onion purée together in a jug with 300ml water. Pour into the saucepan and mix well. Turn up the heat until the sauce begins to boil. Simmer for 15 to 20 mins, stirring occasionally.",
+        "Finally, sprinkle in the garam masala and stir in well for the final 2 mins before serving."
+      ],
+      "tags": [
+        "indian",
+        "curry"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/chicken-bhuna"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:45:28.222Z",
+      "theme": "Indian Cuisine"
+    },
+    {
+      "id": "lighter-lamb-kofta-curry",
+      "slug": "lighter-lamb-kofta-curry",
+      "title": "Lighter lamb kofta curry",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/lamb-kofta-curry-37686d4.jpg?resize=440,400",
+      "prepTime": "40 min",
+      "cookTime": "25 min",
+      "totalTime": "1 hr 5 min",
+      "servings": "4",
+      "ingredients": [
+        "400g can green lentils drained and rinsed",
+        "250g lamb mince (20% Fat)",
+        "1 tbsp ground coriander",
+        "2 tsp ground cumin",
+        "¼ tsp turmeric",
+        "¼ tsp chilli flakes",
+        "¼ tsp medium or hot chilli powder",
+        "1 small onion very finely chopped",
+        "2 garlic cloves finely grated",
+        "2.5cm/1in piece ginger grated",
+        "3 tbsp chopped coriander",
+        "2 tsp rapeseed oil",
+        "1 large onion finely chopped",
+        "1 tsp cumin seeds",
+        "3 garlic cloves finely chopped",
+        "3-4cm/1 ¼-1 ½in piece ginger finely chopped",
+        "2 tsp ground coriander",
+        "¼ tsp turmeric",
+        "¼ tsp medium to hot chilli powder",
+        "8 dried curry leaves",
+        "1 cinnamon stick halved",
+        "1 plump green chilli deseeded and thinly sliced",
+        "2 large tomatoes (about 200g/7oz), roughly chopped",
+        "2 tsp tomato purée",
+        "200ml reduced-fat coconut milk",
+        "1 tbsp chopped coriander plus extra to serve",
+        "garam masala for sprinkling",
+        "200g basmati rice",
+        "200g green beans stems trimmed",
+        "100g frozen peas"
+      ],
+      "instructions": [
+        "Line a baking tray with a sheet of baking parchment. Tip two-thirds of the lentils into a medium bowl and mash them (the mashed lentils will help bind, the whole ones will add texture). Mix in the whole lentils, lamb, the spices, onion, garlic, ginger, coriander, a good grind of black pepper and a pinch of salt, taking care not to overwork the mixture.",
+        "Using slightly damp hands, shape into 18-20 x 4cm meatballs. Lay the meatballs on the prepared tray, cover with cling film and chill while you prepare the sauce. Can be chilled overnight to develop extra flavour, if you like.",
+        "Heat oven to 190C/170C fan/gas 5. To make the sauce, heat the oil in a non-stick frying or sauté pan, and fry the onion and cumin seeds over a medium heat for 6-8 mins until the onion is softened, stirring occasionally. Raise the heat slightly to start to brown the onion and stir in the garlic, ginger, ground coriander, turmeric, chilli powder and curry leaves, stir-frying for a few mins. As the onion browns, stir in the cinnamon stick, green chilli, tomatoes and purée, briefly stirring to soften the tomatoes. Pour in 100ml of the coconut milk, scraping the bottom of the pan to gather up any brown sticky bits, and let it bubble briefly and thicken. Pour in 250ml water, bring to the boil, then lower the heat, cover and gently simmer for 15-20 mins to thicken very slightly – but keep checking so it doesn’t reduce too much (add a splash of water if needed). Season with pepper.",
+        "While the sauce simmers, uncover the meatballs and cook in the oven for 20 mins until cooked through and starting to brown on top – there is no need to turn them. Remove and pat down with kitchen paper to drain off any excess fat. Cook the rice following pack instructions.",
+        "Stir the remaining coconut milk into the sauce over a low heat, then add the chopped coriander. Sit the meatballs in the sauce and cook for 5 mins on a very gentle simmer to warm through and blend the flavours, then remove the cinnamon stick.",
+        "Meanwhile, cook the beans in a little boiling water for 4 mins, tipping in the peas for the final min. Drain and mix with the cooked rice and a grinding of black pepper. Tip the meatballs into a serving dish or divide between bowls, sprinkle over a little garam masala and the coriander, and serve with the veggie rice."
+      ],
+      "tags": [
+        "indian",
+        "curry"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/lamb-kofta-curry"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:45:30.165Z",
+      "theme": "Indian Cuisine"
+    }
+  ]
+}

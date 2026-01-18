@@ -1,0 +1,700 @@
+{
+  "theme": {
+    "slug": "desserts-sweets",
+    "name": "Desserts & Sweets",
+    "description": "Cakes, cookies, and sweet treats for any occasion"
+  },
+  "metadata": {
+    "recipeCount": 16,
+    "lastUpdated": "2026-01-18T06:49:07.302Z"
+  },
+  "recipes": [
+    {
+      "id": "chocolate-mousse",
+      "slug": "chocolate-mousse",
+      "title": "Chocolate Mousse",
+      "image": "https://www.simplyrecipes.com/thmb/p4MzfgbACmXnSRnMgbGyR9KEdI8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2005__10__Chocolate-Mousse-LEAD-7-0a6955606ae74eeea716454b1d51d4dd.jpg",
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "totalTime": "515 min",
+      "servings": "8",
+      "ingredients": [
+        "1 cup cold heavy cream",
+        "4 1/2 ounces (128) bittersweet chocolate, finely chopped",
+        "2 tablespoons (28g) unsalted butter, cubed",
+        "2 tablespoons (30mL) brewed espresso or very strong coffee",
+        "3 large eggs, separated",
+        "1 tablespoon sugar",
+        "Raspberries and extra whipped cream, optional to serve",
+        "Whipped cream to serve, optional"
+      ],
+      "instructions": [
+        "Whip the heavy whipping cream to soft peaks, then chill.",
+        "Put the chocolate, cubed butter, and espresso in the top of a double boiler over hot, steamy water (not simmering), stirring frequently until smooth. Remove the chocolate mixture from the heat and let it cool until the chocolate is just warm to the touch. Don't let the chocolate get tool cool or the mixture will seize when the other ingredients are added.",
+        "Once you've taken the chocolate mixture off the heat and it has started to cool, whip the egg whites until they are foamy and beginning to hold a shape. Sprinkle in the sugar and whip until the egg whites form stiff peaks.",
+        "When the chocolate has cooled until it is just warm to the touch, stir in the egg yolks.",
+        "Gently stir in about one-third of the whipped cream to thin and loosen the chocolate mixture. Then fold in half the egg whites. Fold in the remaining egg whites. Fold in the remaining whipped cream.",
+        "Spoon or pipe the mousse into a serving dishes. If you wish, layer in fresh raspberries and whipped cream. Chill in the refrigerator for 8 to 24 hours. Did you love the recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "dessert",
+        "sweet",
+        "baking"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/chocolate_mousse/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:26.564Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "carrot-cake",
+      "slug": "carrot-cake",
+      "title": "Carrot Cake",
+      "image": "https://www.simplyrecipes.com/thmb/KGjnllq33Hij5UgyLZJL2XRv3U4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Carrot-Cake-LEAD-3-81e1d3700f0241279f9ba4c2b8b6153c.jpg",
+      "prepTime": "25 min",
+      "cookTime": "50 min",
+      "totalTime": "75 min",
+      "servings": "16",
+      "ingredients": [
+        "3 cups unbleached all-purpose flour",
+        "2 cups sugar",
+        "1 teaspoon salt",
+        "1 tablespoon baking soda",
+        "1 tablespoon cinnamon",
+        "1 1/2 cups olive oil",
+        "4 large eggs, lightly beaten",
+        "1 tablespoon vanilla extract",
+        "1 1/2 cups shelled walnuts, chopped",
+        "1 1/2 cups sweetened, shredded coconut",
+        "2 cups carrots, finely grated",
+        "1 cup crushed pineapple, drained",
+        "12 ounces cream cheese, at room temperature",
+        "9 tablespoons unsalted butter, at room temperature",
+        "3 3/4 cups powdered sugar",
+        "1 1/2 teaspoons vanilla extract",
+        "3 tablespoons lemon juice",
+        "Extra whole or chopped walnuts, for topping"
+      ],
+      "instructions": [
+        "Prepare two 9-inch cake pans. Cut out rounds of parchment paper and place in the bottoms of the pans. Butter the rounds and the sides of the pan.",
+        "Sift the dry ingredients into a bowl. Add the oil, eggs, and vanilla. Mix just until the dry ingredients are moistened. Fold in the chopped walnuts, coconut, carrots and pineapple.",
+        "Pour the batter into the prepared pans. Set on the middle rack of the oven and bake at 350°F for 45 to 50 minutes (shift positions of cakes front-to-back if necessary about halfway through), until the edges have pulled away from sides and a toothpick or sharp knife tip inserted into the center of the cakes comes out clean.",
+        "Remove the cakes for the oven and set on wire racks until cooled completely.",
+        "While the cake is cooling, make the frosting. In a stand mixer with a paddle attachment or using a hand mixer, beat together the cream cheese and butter until creamy. Slowly sift in the powdered sugar and beat until the mixture is free of lumps. Stir in the vanilla and lemon juice.",
+        "Once the cakes have cooled, remove from the pans and frost. Sprinkle the top with chopped walnuts or arrange walnut halves in a crown around the top. Serve. Did you love this recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "dessert",
+        "sweet",
+        "baking"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/carrot_cake/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:29.950Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "the-best-pecan-pie",
+      "slug": "the-best-pecan-pie",
+      "title": "The Best Pecan Pie",
+      "image": "https://www.simplyrecipes.com/thmb/g3U_iZ4soo8GZ0cGjeGFOmpXw3A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2014__11__Pecan-Pie-LEAD-2-6ae23ae4363e44e5b7a378fa7f137e44.jpg",
+      "prepTime": "15 min",
+      "cookTime": "75 min",
+      "totalTime": "90 min",
+      "servings": "8",
+      "ingredients": [
+        "1 9-inch pie shell, frozen (freeze for half an hour if freshly made; I recommend our easy, flaky, sour cream pie crust)",
+        "2 cups pecans (210 g), coarsely chopped (save a few whole pecan halves to create a decoration on the surface of the pie if you want)",
+        "3 large eggs, slightly beaten",
+        "1 cup light corn syrup",
+        "1/2 cup brown sugar",
+        "1 tablespoon molasses (unsulphured)",
+        "4 tablespoons unsalted butter, melted",
+        "1/2 teaspoon salt",
+        "2 teaspoon vanilla extract"
+      ],
+      "instructions": [
+        "Preheat the oven and position a rack in the center.",
+        "Preheat oven to 350°F. In a medium bowl vigorously mix together the eggs, brown sugar, corn syrup, molasses, melted butter, vanilla, and salt, until smooth. (No need for a mixer, you can beat by hand using a wooden spoon.)",
+        "Spread the chopped pecans over the bottom of a frozen pie shell. Pour the filling over the pecans. Don't worry about burying the pecans, they will rise to the surface. (If you have reserved a few whole pecan halves, you can arrange them on the surface in a decorative pattern. Just dip them below the wet filling and let them rise again so they get coated with the filling.)",
+        "Bake at 350°F for 30 minutes. After 30 minutes tent the pie loosely with aluminum foil to prevent the crust and pecans from getting too browned. Bake for another 35 to 45 minutes until the filling has set. The pie should be a bit wiggly in the center.",
+        "Note that the pie will be puffed up a bit when you first take it out of the oven. It will settle as it cools. Did you love the recipe? Give us some stars and leave a comment below!"
+      ],
+      "tags": [
+        "dessert",
+        "sweet",
+        "baking"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/pecan_pie/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:33.363Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "the-best-key-lime-pie",
+      "slug": "the-best-key-lime-pie",
+      "title": "The Best Key Lime Pie",
+      "image": "https://www.simplyrecipes.com/thmb/GiARgYhU2OFI5LX7cm3c8EpYFlQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2016__05__key-lime-pie-horiz-a-1600-93386deb8a474628a007d85516c255b4.jpg",
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "totalTime": "100 min",
+      "servings": "8",
+      "ingredients": [
+        "1 1/2 cups finely ground graham crackers (from about 9 crackers, 145 g)",
+        "1/4 cup butter, melted",
+        "3 tablespoons white granulated sugar",
+        "1 tablespoon lime zest for filling plus 1/2 teaspoon for the topping",
+        "3 egg yolks",
+        "1 14-ounce can sweetened condensed milk",
+        "1/2 cup lime juice (from about 20 key limes or 4 to 6 regular limes)",
+        "3/4 cup heavy whipping cream",
+        "1 tablespoon powdered sugar",
+        "1/8 teaspoon vanilla extract"
+      ],
+      "instructions": [
+        "Preheat the oven to 350°F.",
+        "Mix the ground graham crackers, melted butter, and sugar in a bowl. Pour into a 9-inch pie dish and spread the graham cracker mixture with your fingers, all over the inside of the pie dish in an even layer. Use the bottom and sides of a measuring cup or drinking glass to make form a compact, even layer on the bottom and up the sides of the pan. Bake at 350°F for 10 minutes, then remove and set aside.",
+        "Put the egg yolks into a medium bowl. Using an electric mixer or whisking by hand, beat until the yolks thicken and lighten up a bit in color, about 3 minutes. Beat in 1 tablespoon lime zest and the sweetened condensed milk for another 2 minutes. Whisk in the lime juice until smooth.",
+        "Pour filling into the prepared graham cracker crust and bake at 350°F in the middle rack for only 10 minutes, until the filling is just set. It should jiggle slightly in the center like Jell-O.",
+        "Remove from oven and let cool to room temperature. Chill in the refrigerator for an hour to overnight.",
+        "For a good sturdy whipped cream topping, it helps to start with a chilled bowl and very cold heavy whipping cream. Pour the cream into a large chilled bowl. Add the powdered sugar (sifted is best) and vanilla. Using an electric mixer (or whip by hand if your gym membership ran out and you want the exercise), start on low speed and increase the speed to the highest level. Whip for several minutes until firm enough to hold shape, between soft and firm peaks. Don't over-whip or you'll make butter. Spread the whipped cream over the top of the chilled key lime pie. Sprinkle with a little more lime zest. Chill until ready to serve. Did you love the recipe? Give us some stars and leave a comment below!"
+      ],
+      "tags": [
+        "dessert",
+        "sweet",
+        "baking"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/key_lime_pie/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:35.069Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "bread-pudding",
+      "slug": "bread-pudding",
+      "title": "Bread Pudding",
+      "image": "https://www.simplyrecipes.com/thmb/jZy51UKypuqJtB2WzmT9QJKzwHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Bread-Pudding-Lead-3-2-f0f7ea30c35b47038d13d110c597f42f.jpg",
+      "prepTime": "10 min",
+      "cookTime": "45 min",
+      "totalTime": "115 min",
+      "servings": "10",
+      "ingredients": [
+        "1 cup raisins",
+        "1 loaf French bread, at least a day old, cut into 1-inch cubes (about 6-7 cups)",
+        "1 quart milk",
+        "3 large eggs",
+        "2 cups sugar",
+        "2 tablespoons vanilla extract",
+        "1/4 cup Kentucky bourbon whiskey",
+        "1/4 teaspoon allspice",
+        "1/4 to 1/2 teaspoon cinnamon",
+        "3 tablespoons butter, melted",
+        "1/2 cup (1 stick) butter, melted",
+        "1 cup sugar",
+        "1 large egg",
+        "1/2 cup Kentucky bourbon whiskey (less or more to taste)"
+      ],
+      "instructions": [
+        "In a small bowl, combine the raisins with 1/4 cup bourbon. Cover and soak for 1 to 2 hours. The raisins should soak up most of the bourbon in this time (there may be some bourbon left in the bowl when they’re done soaking).",
+        "Preheat the oven to 350°F.",
+        "Place milk in a large mixing bowl and add the cubed bread. Press the bread into the milk with your hands until the bread is completely saturated (the bread may not absorb all the milk).",
+        "In a separate bowl, whisk the eggs, then whisk in the sugar, vanilla, allspice, and cinnamon. Pour over the bread and milk mixture. Add the bourbon-soaked raisins. Stir gently to combine.",
+        "Pour the melted butter into the bottom of a 9x13 baking pan. Coat the bottom and the sides of the pan well with the butter. Pour the bread milk and egg mixture into the baking pan. Bake at 350°F for 35 to 45 minutes, until the liquid has set. The pudding is done when the edges start getting a bit brown and pull away from the edge of the pan.",
+        "While the bread pudding is cooking make the bourbon sauce. Melt the butter in a medium saucepan on low heat. Add the sugar and egg and whisk to blend well. Slowly cook over low heat, stirring constantly, until the mixture thickens enough to coat the back of a spoon, then remove from heat. Do not allow the mixture to simmer or the sauce will curdle. (By the way, if your sauce curdles, just take it off the heat and blend it smooth in a blender.) Whisk in bourbon to taste. Whisk again before serving. The sauce should be soft, creamy, and smooth.",
+        "Serve the bread pudding with bourbon sauce on the side; pour on to taste. Bread pudding is best served right away after it's finished baking. However, leftovers can be kept for up to 5 days refrigerated and can be reheated in the microwave. To reheat , warm individual portions in 1-minute bursts in the microwave until warmed through. The sauce can be drizzled over top and reheated along with the individual slice. We do not recommend freezing bread pudding. Did you love the recipe? Give us some stars and leave a comment below!"
+      ],
+      "tags": [
+        "dessert",
+        "sweet",
+        "baking"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/bread_pudding/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:36.769Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "creamy-rice-pudding",
+      "slug": "creamy-rice-pudding",
+      "title": "Creamy Rice Pudding",
+      "image": "https://www.simplyrecipes.com/thmb/iJwGL9Y57WOEqgpirmjpaiXARPc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Rice-Pudding-LEAD-SEO-6-c5cb3403386940528c930596bed42538.jpg",
+      "prepTime": "5 min",
+      "cookTime": "35 min",
+      "totalTime": "40 min",
+      "servings": "4",
+      "ingredients": [
+        "2 1/2 cups (600 ml) of whole milk",
+        "1/3 cup (66 grams) of uncooked short grain white rice",
+        "Pinch of salt",
+        "1 egg",
+        "1/4 cup (50 grams) dark brown sugar",
+        "1 teaspoon of vanilla extract",
+        "1/4 teaspoon of cinnamon",
+        "1/3 cup (40 grams) raisins"
+      ],
+      "instructions": [
+        "In a medium heavy-bottomed saucepan, bring the milk, rice, and salt to a boil over high heat. Reduce the heat to low and simmer partially covered until the rice is tender, about 20-25 minutes. Stir frequently to prevent the rice from sticking to the bottom of the pan.",
+        "In a small mixing bowl, whisk together egg and brown sugar until well mixed. Add a half cup of the hot rice mixture to the egg mixture, a tablespoon at a time, vigorously whisking to incorporate.",
+        "Add egg mixture back into the saucepan of rice and milk. Reduce the heat to low and stir until thickened, or about 160°F (71°C). Be careful not to have the mixture come to a boil at this point or it will curdle. Remove from heat and stir in the vanilla, raisins, and cinnamon. The pudding will thicken as it cools; when it is warm, it will be a bit on the runny side. Serve warm or cold. Did you enjoy this recipe? Leave us a rating and review!"
+      ],
+      "tags": [
+        "dessert",
+        "sweet",
+        "baking"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/rice_pudding/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:38.477Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "the-hands-down-best-peanut-butter-cookie-recipe",
+      "slug": "the-hands-down-best-peanut-butter-cookie-recipe",
+      "title": "The Hands-Down Best Peanut Butter Cookie Recipe",
+      "image": "https://www.simplyrecipes.com/thmb/n5B_bYXWicM8aM-SAe2trDtkveg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Peanut-Butter-Cookies-LEAD-05-e3caaf60a5624313b15b28d429c41d9c.jpg",
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "totalTime": "215 min",
+      "servings": "24",
+      "ingredients": [
+        "1/2 cup (112 g) butter, unsalted or salted, room temperature",
+        "1/2 cup (100 g) white granulated sugar",
+        "1/2 cup (110 g) packed brown sugar (light or dark)",
+        "1/2 cup (130 g) peanut butter",
+        "1 large egg",
+        "1 1/4 cups (160 g) all-purpose flour",
+        "3/4 teaspoon baking soda",
+        "1/2 teaspoon baking powder",
+        "1/4 teaspoon salt (if using salted butter, omit the salt)"
+      ],
+      "instructions": [
+        "Beat the butter until creamy, 2 minutes. Add the brown sugar and white sugar, beat for 2 more minutes. Mix in the peanut butter and the egg. In a separate bowl, vigorously whisk together the dry ingredients—the flour, baking soda, baking powder and salt. Stir the dry ingredients into the sugar butter mixture.",
+        "Wrap dough in plastic and refrigerate at least 3 hours.",
+        "Preheat the oven to 375°F (190°C).",
+        "Shape the dough into 1 1/4 inch balls. Place the balls of dough about 3 inches apart on ungreased cookie sheets (unlined sheets are fine, though you can use parchment paper to line them, if you like). Flatten in a crisscross pattern with a fork. (It helps to dip the fork in sugar to keep it from sticking to the dough.)",
+        "Bake one sheet at time on the center rack at 375°F (190°C) until light brown, about 9 to 11 minutes. Remove the cookies from the oven and let cool in their baking sheets for a minute. After 1 minute, transfer the cookies to a rack to cool completely. Did you love the recipe? Leave a comment and give us some stars below!"
+      ],
+      "tags": [
+        "dessert",
+        "sweet",
+        "baking"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/peanut_butter_cookies/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:41.940Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "brown-sugar-snickerdoodle-cookies",
+      "slug": "brown-sugar-snickerdoodle-cookies",
+      "title": "Brown Sugar Snickerdoodle Cookies",
+      "image": "https://www.simplyrecipes.com/thmb/kNG_OcKvNR6yQBtf1KOLgspllpE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Brown-Sugar-Snickerdoodle-LEAD-6v2-321858eae1e8418ba29a5b1123edc2ef.jpg",
+      "prepTime": "10 min",
+      "cookTime": "14 min",
+      "totalTime": "24 min",
+      "servings": "12",
+      "ingredients": [
+        "4 tablespoons unsalted butter",
+        "1/3 cup light brown sugar",
+        "1/3 cup white granulated sugar",
+        "1/4 teaspoon kosher salt",
+        "1 large egg",
+        "1 cup all-purpose flour",
+        "1 tablespoon cornstarch",
+        "1/4 teaspoon baking soda",
+        "1/4 cup sugar",
+        "1 1/2 tablespoons ground cinnamon"
+      ],
+      "instructions": [
+        "Preheat your oven to 350°F.",
+        "In the bowl of a stand mixer with a paddle attachment, or with hand mixers, beat the butter until it's soft, smooth, and light. Scrape down the bowl, add both of the sugars to the beaten butter, and mix until they are fully incorporated and lighter in color. Beat in the salt followed by the egg. Mix until the batter looks uniform.",
+        "In a medium bowl, sift together the flour, cornstarch and baking soda. In three additions, beat this slowly into the butter-egg mixture until you see a few dry streaks remaining. Switch to a stiff spatula and gently mix the cookie dough until no more dry flour remains.",
+        "Thoroughly whisk together the cinnamon-sugar mixture. Form balls of dough with a medium-sized cookie scoop or a tablespoon measure and plop them in cinnamon-sugar, swirling to coat.",
+        "On a parchment-lined cookie sheet, place the dough balls 3 inches apart. Flatten the dough slightly (to about 1/2- to 3/4-inch thick) using the bottom of a glass, and sprinkle a little more cinnamon sugar over the flattened surface.",
+        "Put into the 350°F oven. Bake for 7 minutes, rotate the pan, and bake for another 5 to 7 minutes longer (12 to 14 minutes total), until the edges of the cookies look golden and the tops are crackled but still pale.",
+        "Cool on the baking sheet and eat as soon as possible. Snickerdoodles will keep in an airtight container, at room temperature for 3 days."
+      ],
+      "tags": [
+        "dessert",
+        "sweet",
+        "baking"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/snickerdoodles/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:43.636Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "the-best-oatmeal-raisin-cookies",
+      "slug": "the-best-oatmeal-raisin-cookies",
+      "title": "The Best Oatmeal Raisin Cookies",
+      "image": "https://www.simplyrecipes.com/thmb/2g1IOS6TYdG_bmyg0hyf0b6RKGY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Oatmeal-Raisin-Cookies-LEAD-15-2251dafb1a554aafaedf42e797bf2fd0.jpg",
+      "prepTime": "20 min",
+      "cookTime": "24 min",
+      "totalTime": "44 min",
+      "servings": "48",
+      "ingredients": [
+        "1 cup (2 sticks) unsalted butter, softened, OR 1 cup shortening",
+        "1 cup brown sugar (light or dark), packed",
+        "1/2 cup plus 2 tablespoons granulated sugar",
+        "2 large eggs",
+        "1 tablespoon vanilla extract",
+        "1 1/2 cups all-purpose flour",
+        "3/4 teaspoon kosher salt",
+        "1 teaspoon baking soda",
+        "1 teaspoon ground cinnamon",
+        "1/2 teaspoon freshly grated nutmeg",
+        "1 1/2 cups raisins",
+        "1/2 cup chopped walnuts (optional)",
+        "3 cups rolled oats (We use Quaker Old Fashioned or Quick. Do NOT use instant.)"
+      ],
+      "instructions": [
+        "Preheat the oven to 350°F. Grease 2 large cookie sheets or line with Silpat or parchment paper.",
+        "In a large mixing bowl, beat the butter until creamy. Add the brown sugar and white sugar and beat until fluffy, about 3 minutes. Beat in the eggs one at a time. Add the vanilla extract.",
+        "Mix the flour, salt, baking soda, cinnamon, and nutmeg together in medium bowl. Stir the dry ingredients into the butter-sugar mixture. Stir in the raisins and nuts. Stir in the oats.",
+        "Spoon out the dough by large tablespoonfuls onto the prepared cookie sheets, leaving at least 2 inches between each cookie.",
+        "Bake until the edges of the cookies turn golden brown, about 10 to 12 minutes. If baking 2 cookie sheets at once, swap their positions on the racks mid-bake.  Note that the cookies will seem underdone and lightly colored everywhere but the edges. That's okay, they will firm up as they cool. Repeat with the remaining cookie dough.",
+        "Cool 1 minute on the cookie sheets. Then carefully remove them, using a metal spatula, to a wire rack. Cool completely. They will be quite soft until completely cooled. Store tightly covered at room temperature for up to 5 days. Did you love the recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "dessert",
+        "sweet",
+        "baking"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/oatmeal_raisin_cookies/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:45.337Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "strawberry-shortcake",
+      "slug": "strawberry-shortcake",
+      "title": "Strawberry Shortcake",
+      "image": "https://www.simplyrecipes.com/thmb/O0sySiOEsxtB6zc7JrDeOsEOJ8Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Strawberry-Shortcake-LEAD-03-2-190083207a934cc2b061fdc9cbdcfe8f.jpg",
+      "prepTime": "20 min",
+      "cookTime": "25 min",
+      "totalTime": "45 min",
+      "servings": "9",
+      "ingredients": [
+        "3 pint baskets fresh strawberries (about 6 cups)",
+        "1/2 cup (100 g) white granulated sugar for the strawberries",
+        "3 1/4 cups (455g) all purpose flour, divided (3 cups and 1/4 cup)",
+        "3 tablespoons sugar",
+        "1 1/2 tablespoons baking powder",
+        "3/4 teaspoon salt",
+        "12 tablespoons (168g) unsalted butter, cut into small cubes",
+        "1 cup (236 ml) milk",
+        "1/4 (60 ml) cup heavy cream",
+        "1 1/2 teaspoons vanilla extract",
+        "1 cup (236 ml) heavy whipping cream",
+        "2 teaspoons powdered sugar",
+        "2 drops vanilla extract"
+      ],
+      "instructions": [
+        "Cut the stems away from the strawberries and discard. Cut the strawberries in half, and then in either quarters or thick slices.",
+        "Put the cut strawberries into a large bowl and sprinkle with sugar. Start with 1/4 cup of sugar and then add up to another 1/4 cup depending on how sweet your strawberries are. Gently stir the strawberries until they are all coated with some sugar. Let sit at room temperature for about 20 minutes, until the berries soften and begin to release their juices.",
+        "After 20 minutes or so, mash about a quarter of the berries in the bowl with a potato masher and stir to mix. You don't want to mash all the berries, just enough of them for their juices. Let sit while you bake the biscuits.",
+        "In a large bowl, vigorously whisk together 3 cups of the flour, the sugar, baking powder, and salt.",
+        "Cut the butter into the flour mixture, either using your fingers, a pastry cutter, a fork, or a food processor, until the largest pieces of butter are the size of peas.",
+        "Stir together the milk and cream and add the vanilla extract. Make a well in the center of the flour and pour the milk mixture into it. Mix with a fork or wooden spoon until the mixture is just combined. It should look rather shaggy. If it is too wet to work with, sprinkle some of the remaining 1/4 cup of flour over it. Gently knead by hand a few times to form a loose ball of dough, adding more flour if needed. It should be slightly tacky but not wet.",
+        "Place the dough on a lightly floured surface and form it into an 8-inch square, about 3/4-inch to an inch thick. Place it on a parchment or silicone-lined baking sheet, cover with plastic wrap and chill for 20 minutes.",
+        "Preheat the oven to 425ºF.",
+        "Remove the dough from refrigerator. Cut the dough into 9 even squares and space them about 2 inches apart from each other on the baking sheet. Bake until the biscuits are medium golden brown, 18 to 20 minutes. Makes 9 biscuits.",
+        "While the biscuits are baking, whip the cream using an electric mixer, adding a drop or two of vanilla and 2 teaspoons of powdered sugar. Cover with plastic and place in the refrigerator to chill until ready to serve.",
+        "Split the biscuits, if you like, and top with the macerated strawberries and whipped cream. Did you love this recipe? Let us know with a rating and review!"
+      ],
+      "tags": [
+        "dessert",
+        "sweet",
+        "baking"
+      ],
+      "source": {
+        "name": "simplyrecipes.com",
+        "url": "https://www.simplyrecipes.com/recipes/strawberry_shortcake/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:32:48.751Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "lemon-curd",
+      "slug": "lemon-curd",
+      "title": "Lemon Curd",
+      "image": "https://www.recipetineats.com/tachyon/2025/12/Lemon-curd_7.jpg",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": "160",
+      "ingredients": [
+        "3 tbsp caster sugar ((superfine sugar) - or regular / granulated sugar)",
+        "1 tbsp lemon zest",
+        "1/4 cup lemon juice",
+        "3 egg yolks (from the eggs used in the meringue)",
+        "50g (3 1/2 tbsp) unsalted butter (cut into 1 cm / 1/2\" cubes)",
+        "Pinch of salt"
+      ],
+      "instructions": [
+        "Rub the sugar and zest together using your fingers in a small bowl (brings out lemon flavour).",
+        "Whisk – Put the lemon sugar in a small saucepan with the egg yolks and whisk to combine (use a small whisk). Add lemon juice, butter and salt, then mix. Place on the stove over medium heat (or medium low, if your stove is strong).",
+        "Thicken - Whisk every now and then as the butter is melting then constantly (but leisurely) once the butter is melted. When you see the first bubble (~3 to 4 minutes), whisk for 1 minute, then remove off the stove. It should have a custard like consistency - if not, keep cooking.",
+        "Cool – Pour into a small bowl (strain, if you see little egg lumps). Immediately cover with cling wrap touching the surface. Cool on the counter for 30 minutes then refrigerate for 1 hour before using."
+      ],
+      "tags": [
+        "dessert",
+        "sweet"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/lemon-curd/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:36:50.681Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "pavlova-bombs",
+      "slug": "pavlova-bombs",
+      "title": "Pavlova Bombs",
+      "image": "https://www.recipetineats.com/tachyon/2025/12/Pavlova-bombs_6.jpg",
+      "prepTime": "25 min",
+      "cookTime": "90 min",
+      "totalTime": null,
+      "servings": "5",
+      "ingredients": [
+        "80 ml / 1/3 cup egg whites (from 3 large eggs (Note 1))",
+        "2/3 cups caster sugar ((superfine sugar), do not cut down, it will affect result!)",
+        "1 1/4 tsp cornflour / cornstarch (Note 2)",
+        "1/2 tsp white vinegar (Note 2)",
+        "Raspberry Coulis",
+        "Lemon Curd (uses the 3 leftover yolks from the Pav)",
+        "(See in post for other options (- passionfruit pulp, pureed mango, chopped up fruit, chocolate sauce!))",
+        "1 cup heavy/thickened cream ((or any other whipping cream), COLD)",
+        "1 1/2 tbsp caster sugar / superfine sugar",
+        "1/2 tsp vanilla extract",
+        "Option to stabilise (so you can whip cream day before - see here for how (Note 3))",
+        "1 1/2 tbsp unsalted pistachios (finely chopped)",
+        "5 mint sprigs (small)",
+        "20 raspberries",
+        "Icing sugar / powdered sugar (for dusting)"
+      ],
+      "instructions": [
+        "Pipe then shape meringues into 5 domes. Bake 1 1/2 hours at 110°C/225°F (100°C fan), cool 3 hours / overnight in oven. Cut small hole in Pav bomb base, squidge around with chopstick to make room for fillings. Fill with coulis then curd, plug hole with cream. Decorate, SMASH!",
+        "Preheat oven to 150°C / 325°F (all oven types).",
+        "Egg whites - Separate the egg yolks from egg whites while fridge cold (it's easier). Measure out 1/3 cup (80 ml) egg whites then set aside to come to room temperature for 15 minutes (fluffs better at room temp).",
+        "Add sugar - In a stand mixer or using an electric beater, beat the egg whites on high for 1 minute. While still beating, slowly pour the sugar in over 1 minute.",
+        "Beat 5 minutes - Continue to beat for 5 minutes on high until it's fluffy, glossy, and there are no sugar grains remaining when you rub a bit between your fingers. Add vinegar and cornflour then beat for a further 30 seconds.",
+        "Line tray - Dab a bit on the corner of 2 trays then cover with baking paper (parchment).",
+        "Pipe mounds Transfer meringue mixture into a large piping bag. Snip the end to make a large 2cm / 0.8\" hold. Pipe 5 mounds on the tray, then smooth into domes that are taller than they are wide (they flatten slightly when baked). Mine are about 4 cm / 1.6\" wide and 6.5cm /2.6\" tall. Use a small offset spatula or butter knife to smooth into a dome shape (no need to be perfect, it gets decorated later).",
+        "Bake 1 hour 30 minutes - Place both trays in the oven, immediately turn oven DOWN to 110°C/225°F (100°C fan) and bake for 1 hour 30 minutes or until they are dry to touch (check base). Keep baking if still sticky - exact times may vary. (Note 4)",
+        "Cool in oven - Turn oven OFF and leave to fully cool for 3 hours or overnight around 10 hours (I often do this while I sleep so handy!).",
+        "Make the Lemon Curd and Raspberry Coulis while the pavlovas are in the oven. Very easy - simmer to thicken, strain, then chill before using.",
+        "Whipped cream - Beat cream ingredients in a large bowl on high until soft peaks form (45 seconds using a stand mixer, 1 - 1 1/2 minutes with hand held beater). Do this just prior to serving, unless you stabilise the cream (which can be done the day before). Note: if making stabilised whipped cream, follow the steps for your chosen method (there's multiple ways to do it).",
+        "Piping bags - Transfer the raspberry coulis, lemon curd and cream into separate piping bags. Snip a small 5 mm / 1/5\" off the end of the raspberry coulis, and a larger 1cm / 0.4\" off the cream piping bag. (No piping bag? See Note 5)",
+        "Access hole! Place a pavlova bomb upside down in a muffin tin, to hold in place as you work. Carefully cut a 1cm / 0.4\" hole in the middle using a small sharp knife. Stick a chopstick into the hole and squidge around GENTLY to move some pavlova marshmallow centre out of the way to make room for the fillings.",
+        "Pipe some raspberry coulis in (~ 1 1/2 tsp), then lemon curd (~ 2 - 3 tsp). Plug the hole with cream.",
+        "Plate up - Pipe ~2 tbsp cream on a plate, top with pavlova bomb (stops it from sliding). Pipe then spread more cream on the top of the pavlova bomb. Top with a raspberry, mint sprig, sprinkle of pistachio, dust with icing sugar.",
+        "Smash! Serve immediately - pavs don't wait around once assembled! Encourage everyone to smash into their Pavlova Bombs so you get a bit of everything in your first bite - delicate crispy meringue, marshmallow centre, tangy lemon curd, bright raspberry coulis. SWOON!"
+      ],
+      "tags": [
+        "dessert",
+        "sweet"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/pavlova/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:36:54.114Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "chocolate-self-saucing-pudding",
+      "slug": "chocolate-self-saucing-pudding",
+      "title": "Chocolate Self Saucing Pudding",
+      "image": "https://www.recipetineats.com/tachyon/2016/11/Chocolate-Self-Saucing-Pudding-4-SQ.jpg",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "totalTime": "40 min",
+      "servings": "5",
+      "ingredients": [
+        "1 cup (175g) brown sugar (loosely packed (Note 1))",
+        "1/4 cup (30g) cocoa powder (unsweetened (Note 2))",
+        "1 1/4 cups (315ml) boiling water",
+        "1 cup (150g) plain flour (all purpose flour)",
+        "2 1/2 tsp baking powder",
+        "1/3 cup (70g) white sugar (preferably caster/super fine but ordinary ok)",
+        "1/4 cup (30g) cocoa powder (unsweetened (Note 2))",
+        "Pinch of salt",
+        "1/2 cup (125ml) milk",
+        "50 g / 4 1/2 tbsp butter (melted)",
+        "1 egg",
+        "1 tsp vanilla extract"
+      ],
+      "instructions": [
+        "Preheat oven to 170C/335F (standard) / 150C/305F (fan forced / convection).",
+        "Grease a 5 - 6 cup baking dish with butter. (Note 3)",
+        "Topping: Whisk brown sugar and cocoa in a bowl, set aside.",
+        "Whisk flour, baking powder, caster sugar, cocoa powder and salt in a bowl.",
+        "In a separate bowl or jug, whisk together the butter and milk, then whisk in the egg and vanilla.",
+        "Pour the egg mixture into the flour mixture. Mix until combined - it will be a thick batter.",
+        "Spread into baking dish. Sprinkle with sugar / cocoa mixture. Shake gently to spread out thinly.",
+        "Carefully pour the hot water over the back of a dessert spoon all over the top of the pudding - see photo in post or video below recipe. (Note 4)",
+        "Transfer to oven and bake for 30 minutes, or until the top of the cake springs back when poked lightly. The top will be a bit crusty, like the top of brownies.",
+        "Remove from oven, stand for just a few minutes (no more!), then serve immediately. (Note 5)"
+      ],
+      "tags": [
+        "dessert",
+        "sweet"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/chocolate-self-saucing-pudding/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:36:55.910Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "easy-pancakes",
+      "slug": "easy-pancakes",
+      "title": "Easy pancakes",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1273477_8-ad36e3b.jpg?resize=440,400",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "totalTime": "30 min",
+      "servings": "12",
+      "ingredients": [
+        "100g plain flour",
+        "2 large eggs",
+        "300ml milk",
+        "1 tbsp sunflower or vegetable oil plus a little extra for frying",
+        "lemon wedges to serve (optional)",
+        "caster sugar to serve (optional)"
+      ],
+      "instructions": [
+        "Put 100g plain flour, 2 large eggs, 300ml milk, 1 tbsp sunflower or vegetable oil and a pinch of salt into a bowl or large jug, then whisk to a smooth batter. This should be similar in consistency to single cream.",
+        "Set aside for 30 mins to rest if you have time, or start cooking straight away.",
+        "Set a medium frying pan or crêpe pan over a medium heat and carefully wipe it with some oiled kitchen paper.",
+        "When hot, cook your pancakes for 1 min on each side until golden, using around half a ladleful of batter per pancake. Keep them warm in a low oven as you make the rest.",
+        "Serve with lemon wedges and caster sugar, or your favourite filling. Once cold, you can layer the pancakes between baking parchment, then wrap in cling film and freeze for up to two months."
+      ],
+      "tags": [
+        "dessert",
+        "baking"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/easy-pancakes"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:46:23.374Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "lemon-drizzle-cake",
+      "slug": "lemon-drizzle-cake",
+      "title": "Lemon drizzle cake",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1238452_7-35e4911.jpg?resize=440,400",
+      "prepTime": null,
+      "cookTime": "45 min",
+      "totalTime": "45 min",
+      "servings": "10",
+      "ingredients": [
+        "225g unsalted butter softened",
+        "225g caster sugar",
+        "4 eggs",
+        "225g self-raising flour",
+        "1 lemon zested",
+        "1½ lemons juiced",
+        "85g caster sugar"
+      ],
+      "instructions": [
+        "Heat the oven to 180C/160C fan/gas 4.",
+        "Beat together the butter and caster sugar until pale and creamy, then add the eggs, one at a time, slowly mixing through.",
+        "Sift in the self-raising flour, then add the lemon zest and mix until well combined.",
+        "Line a 2 lb (about 14 x 24cm) loaf tin with greaseproof paper, then spoon in the mixture and level the top with a spoon.",
+        "Bake for 45-50 mins until a thin skewer inserted into the centre of the cake comes out clean.",
+        "While the cake is cooling in its tin, mix together the lemon juice and caster sugar to make the drizzle.",
+        "Prick the warm cake all over with a skewer or fork, then pour over the drizzle – the juice will sink in and the sugar will form a lovely, crisp topping.",
+        "Leave in the tin until completely cool, then remove and serve. Will keep in an airtight container for 3-4 days, or freeze for up to 1 month."
+      ],
+      "tags": [
+        "dessert",
+        "baking"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/lemon-drizzle-cake"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:46:27.827Z",
+      "theme": "Desserts & Sweets"
+    },
+    {
+      "id": "easy-chocolate-chip-cookies",
+      "slug": "easy-chocolate-chip-cookies",
+      "title": "Easy chocolate chip cookies",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chocolate-chunk-cookies_0-6f27241.jpg?resize=440,400",
+      "prepTime": "20 min",
+      "cookTime": "12 min",
+      "totalTime": "32 min",
+      "servings": "10",
+      "ingredients": [
+        "120g butter softened",
+        "75g light brown sugar",
+        "75g golden caster sugar",
+        "1 medium egg",
+        "1 tsp vanilla extract",
+        "180g plain flour",
+        "½ tsp bicarbonate of soda",
+        "150g dark chocolate cut into chunks"
+      ],
+      "instructions": [
+        "Heat oven to 180C/160C fan/gas 4 and line two baking sheets with parchment.",
+        "Cream the butter and sugars together until very light and fluffy, then beat in the egg and vanilla.",
+        "Once combined, stir in the flour, bicarb, chocolate and ¼ tsp salt.",
+        "Scoop 10 large tbsps of the mixture onto the trays, leaving enough space between each to allow for spreading.",
+        "Bake for 10-12 mins or until firm at the edges but still soft in the middle – they will harden a little as they cool.",
+        "Leave to cool on the tray for a few mins before eating warm, or transfer to a wire rack to cool completely. Will keep for three days in an airtight container."
+      ],
+      "tags": [
+        "dessert",
+        "baking"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/chocolate-chip-cookies"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:46:30.176Z",
+      "theme": "Desserts & Sweets"
+    }
+  ]
+}

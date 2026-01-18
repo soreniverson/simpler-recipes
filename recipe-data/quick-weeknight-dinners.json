@@ -5,8 +5,8 @@
     "description": "Fast, easy meals ready in 30 minutes or less with simple ingredients"
   },
   "metadata": {
-    "recipeCount": 12,
-    "lastUpdated": "2026-01-18T04:00:09.977009Z"
+    "recipeCount": 18,
+    "lastUpdated": "2026-01-18T06:49:07.312Z"
   },
   "recipes": [
     {
@@ -20,17 +20,17 @@
       "servings": "2",
       "ingredients": [
         "2 tbsp oil",
-        "1/2  onion (, finely chopped)",
-        "2  garlic cloves (, minced)",
-        "120 g/4 oz   bacon (, chopped (optional, or use ham))",
-        "1 - 1 1/2 cups diced vegetables (, frozen or fresh (Note 1))",
-        "2 cups (packed) cooked day old white rice  ((refrigerated or frozen defrosted, Note 2))",
-        "3  eggs, whisked",
-        "3/4 cup green onions (, (shallots / scallions) sliced)",
-        "1 tbsp Chinese cooking wine  ((sub Mirin, cooking sake or dry sherry) (Note 4))",
+        "1/2 onion (finely chopped)",
+        "2 garlic cloves (minced)",
+        "120 g/4 oz bacon (chopped (optional, or use ham))",
+        "1 - 1 1/2 cups diced vegetables (frozen or fresh (Note 1))",
+        "2 cups (packed) cooked day old white rice (refrigerated or frozen defrosted, Note 2)",
+        "3 eggs, whisked",
+        "3/4 cup green onions ((shallots / scallions) sliced)",
+        "1 tbsp Chinese cooking wine ((sub Mirin, cooking sake or dry sherry) (Note 4))",
         "1 tbsp Oyster Sauce",
         "1 tbsp light soy sauce ((or all purpose) (Note 5))",
-        "1 tsp sesame oil (, optional)",
+        "1 tsp sesame oil (optional)",
         "1/4 tsp white pepper"
       ],
       "instructions": [
@@ -64,22 +64,22 @@
       "totalTime": "20 min",
       "servings": "4",
       "ingredients": [
-        "2 tbsp oil (, peanut, vegetable or canola)",
-        "2  eggs (, lightly whisked)",
-        "150g (5oz)  chicken breast (, finely sliced into small pieces)",
-        "2  garlic cloves (, minced)",
-        "1/2  onion (, finely chopped)",
-        "120g (4oz)  bacon (, excess fat trimmed, chopped (Note 1))",
-        "1  small carrot* (, peeled and diced 0.75cm / 1/3\")",
-        "1/2 cup frozen corn* ((or can or fresh))",
+        "2 tbsp oil (peanut, vegetable or canola)",
+        "2 eggs (lightly whisked)",
+        "150g (5oz) chicken breast (finely sliced into small pieces)",
+        "2 garlic cloves (minced)",
+        "1/2 onion (finely chopped)",
+        "120g (4oz) bacon (excess fat trimmed, chopped (Note 1))",
+        "1 small carrot* (peeled and diced 0.75cm / 1/3\")",
+        "1/2 cup frozen corn* (or can or fresh)",
         "1/2 cup frozen peas*",
-        "2 cups (packed) cooked white rice (, day old (Note 2))",
-        "3/4 cup green onions (, finely sliced)",
-        "2.5 tbsp Chinese cooking wine or Mirin ((Note 3))",
-        "1 tbsp oyster sauce ((Note 4))",
-        "3 tbsp light soy sauce ((Note 5))",
-        "1/2 tsp sesame oil (, optional)",
-        "1/4 tsp white pepper (, optional)"
+        "2 cups (packed) cooked white rice (day old (Note 2))",
+        "3/4 cup green onions (finely sliced)",
+        "2.5 tbsp Chinese cooking wine or Mirin (Note 3)",
+        "1 tbsp oyster sauce (Note 4)",
+        "3 tbsp light soy sauce (Note 5)",
+        "1/2 tsp sesame oil (optional)",
+        "1/4 tsp white pepper (optional)"
       ],
       "instructions": [
         "Sauce & chicken: Mix Sauce in a bowl. Pour 2 tsp over chicken, toss to coat, then set aside for 10 minutes.",
@@ -116,14 +116,14 @@
       "totalTime": "12 min",
       "servings": "4",
       "ingredients": [
-        "500g / 1 lb   chicken breast (, boneless and skinless (2 pieces))",
+        "500g / 1 lb chicken breast (boneless and skinless (2 pieces))",
         "Salt and pepper",
-        "1/4 cup flour ((Note 1))",
-        "3 1/2 tbsp  (50g)  unsalted butter ((or 2 1/2 tbsp olive oil))",
-        "2  garlic cloves (, minced)",
-        "1 1/2 tbsp apple cider vinegar ((or white or other clear vinegar))",
-        "1 tbsp soy sauce (, light or all purpose (Note 2))",
-        "1/3 cup honey ((or maple syrup))"
+        "1/4 cup flour (Note 1)",
+        "3 1/2 tbsp (50g) unsalted butter (or 2 1/2 tbsp olive oil)",
+        "2 garlic cloves (minced)",
+        "1 1/2 tbsp apple cider vinegar (or white or other clear vinegar)",
+        "1 tbsp soy sauce (light or all purpose (Note 2))",
+        "1/3 cup honey (or maple syrup)"
       ],
       "instructions": [
         "Cut the breasts in half horizontally to create 4 steaks in total. Sprinkle each side with salt and pepper.",
@@ -161,11 +161,11 @@
       "servings": "4",
       "ingredients": [
         "4 tbsp Teriyaki Sauce Marinade",
-        "4  chicken thigh fillets (, skinless and boneless (about 5oz/150g each))",
+        "4 chicken thigh fillets (skinless and boneless (about 5oz/150g each))",
         "1 tbsp oil",
         "2 tbsp soy sauce",
         "2 tbsp mirin",
-        "2 tbsp Japanese cooking wine ((sake))",
+        "2 tbsp Japanese cooking wine (sake)",
         "2 tbsp water"
       ],
       "instructions": [
@@ -205,12 +205,12 @@
       "servings": "4",
       "ingredients": [
         "2 cloves garlic ($0.16)",
-        "1  yellow onion ($0.28)",
-        "2  carrots ($0.16)",
+        "1 yellow onion ($0.28)",
+        "2 carrots ($0.16)",
         "2 Tbsp olive oil ($0.32)",
         "8 oz. mushrooms ($1.49)",
-        "1  zucchini ($0.90)",
-        "1  red bell pepper ($1.50)",
+        "1 zucchini ($0.90)",
+        "1 red bell pepper ($1.50)",
         "1/2 lb. rotini (not cooked) ($0.50)",
         "1/2 tsp dried basil ($0.05)",
         "1/2 tsp dried oregano ($0.05)",
@@ -253,7 +253,7 @@
       "servings": "4",
       "ingredients": [
         "½ lb penne pasta ($0.49)",
-        "1  yellow onion (small dice, 340g, 1.5 cups, $0.78)",
+        "1 yellow onion (small dice, 340g, 1.5 cups, $0.78)",
         "2 cloves garlic (minced, 1 Tbsp, $0.12)",
         "1 Tbsp olive oil ($0.18)",
         "14.5 oz. diced tomatoes (1 can, $0.96)",
@@ -348,17 +348,17 @@
         "⅓ cup soy sauce ($0.44)",
         "3 Tbsp brown sugar ($0.12)",
         "2 tsp toasted sesame oil ($0.20)",
-        "2  cloves garlic, minced ($0.16)",
+        "2 cloves garlic, minced ($0.16)",
         "2 tsp grated fresh ginger ($0.20)",
         "1 ½ Tbsp cornstarch ($0.08)",
         "⅓ cup water ($0.00)",
         "1 tsp sriracha ($0.05)",
         "¾ lb. broccoli (1.75)",
-        "2  carrots ($0.50)",
-        "1  red bell pepper ($1.39)",
+        "2 carrots ($0.50)",
+        "1 red bell pepper ($1.39)",
         "1 small onion ($0.39)",
-        "2  green onions ($0.22)",
-        "2  boneless, skinless chicken breasts (about 1.5 lb. total) ($6.25)",
+        "2 green onions ($0.22)",
+        "2 boneless, skinless chicken breasts (about 1.5 lb. total) ($6.25)",
         "3 Tbsp cooking oil, divided ($0.12)"
       ],
       "instructions": [
@@ -543,23 +543,23 @@
       "totalTime": "10 min 11 min",
       "servings": "4",
       "ingredients": [
-        "4 x 180g/6 oz  salmon fillets (, skin on or off, doesn't matter (Note 1))",
-        "1 tsp lemon zest ((1 lemon))",
+        "4 x 180g/6 oz salmon fillets (skin on or off, doesn't matter (Note 1))",
+        "1 tsp lemon zest (1 lemon)",
         "1 tbsp lemon juice",
         "2 tbsp extra virgin olive oil",
-        "1 tsp dijon mustard ((Note 2))",
-        "2  garlic cloves (, grated using microplane (Note 3))",
+        "1 tsp dijon mustard (Note 2)",
+        "2 garlic cloves (grated using microplane (Note 3))",
         "1/2 tsp cooking salt / kosher salt",
         "1/4 tsp black pepper",
-        "3  bunches asparagus (, woody ends snapped or trimmed off (Note 4))",
-        "200g/ 7 oz  cherry tomatoes ((or grape tomatoes, 1 Aussie punnet))",
+        "3 bunches asparagus (woody ends snapped or trimmed off (Note 4))",
+        "200g/ 7 oz cherry tomatoes (or grape tomatoes, 1 Aussie punnet)",
         "2 tsp extra virgin olive oil",
         "1/4 tsp each salt and pepper",
         "Olive oil spray",
-        "Parmesan (, finely grated)",
-        "Lemon wedges or slices (, optional)",
-        "Parsley (, finely chopped, optional)",
-        "Crusty bread or toast (, for serving)"
+        "Parmesan (finely grated)",
+        "Lemon wedges or slices (optional)",
+        "Parsley (finely chopped, optional)",
+        "Crusty bread or toast (for serving)"
       ],
       "instructions": [
         "Lemon garlic paste - Mix the marinade ingredients in a small bowl. Slather onto the top and sides of the salmon. If time permits, marinade for 1 hour. Otherwise, proceed with recipe.",
@@ -582,6 +582,288 @@
       "theme": "Quick Weeknight Dinners",
       "difficulty": "Easy",
       "addedDate": "2026-01-18T04:00:09.976264Z"
+    },
+    {
+      "id": "crispy-pan-fried-fish",
+      "slug": "crispy-pan-fried-fish",
+      "title": "Crispy Pan Fried Fish",
+      "image": "https://www.recipetineats.com/tachyon/2017/06/Crispy-Pan-Fried-Fish-3-1.jpg",
+      "prepTime": "3 min",
+      "cookTime": "5 min",
+      "totalTime": "8 min",
+      "servings": "2",
+      "ingredients": [
+        "2 thin fish fillets, around 150g/5 oz each, 1 cm / 2/5\" thick, skin on or off (Note 1)",
+        "Salt and pepper",
+        "1/4 cup / 35g flour (plain/all purpose, wholemeal)",
+        "1 tsp paprika (optional (Note 2))",
+        "2 - 3 tbsp oil, enough to mostly thinly cover base (I use vegetable or canola)",
+        "Lemon wedges",
+        "Finely chopped parsley or dill (for garnish, optional)"
+      ],
+      "instructions": [
+        "Use scrunched up paper towels to pat the fish dry on both sides. This is especially important if you are using thawed frozen fish.",
+        "Season the fish well on both sides with salt and pepper (key!).",
+        "Mix the flour and paprika on a plate.",
+        "Coat fish on both sides with flour, pressing down firmly so it adheres, but shake well to remove excess. (Note 2)",
+        "Heat a heavy based skillet (normal or non stick) over medium high heat until you see wisps of smoke. Add oil and swirl to coat the pan - it will heat within seconds.",
+        "Add fish - it should sizzle straight away. Shake the pan lightly to move the fish. Cook for 2 minutes until golden and crisp, pressing down gently, then flip. Cook the other side for 2 minutes until crisp then remove.",
+        "If it's browning too quickly, just remove pan from the stove briefly.  If it's stuck, don't move - it will release naturally once golden.",
+        "Serve fish immediately with lemon wedges and garnished with dill or parsley, if using. It starts to lose crispiness after 5 minutes."
+      ],
+      "tags": [
+        "quick",
+        "easy"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/crispy-pan-fried-fish/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:36:59.620Z",
+      "theme": "Quick Weeknight Dinners"
+    },
+    {
+      "id": "honey-soy-chicken-marinade-and-sauce-excellent-grilled",
+      "slug": "honey-soy-chicken-marinade-and-sauce-excellent-grilled",
+      "title": "Honey Soy Chicken - Marinade and Sauce (excellent grilled!)",
+      "image": "https://www.recipetineats.com/tachyon/2020/06/Honey-Soy-Chicken_4-Square.jpg",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "totalTime": null,
+      "servings": "5",
+      "ingredients": [
+        "1.25 - 1.5 kg/ 2.5 - 3 lb skinless boneless chicken thighs OR breast (Note 1)",
+        "1 tbsp vegetable oil (for cooking)",
+        "1/2 cup soy sauce (all purpose or light (not dark, Note 2))",
+        "2/3 cup honey (sub maple syrup)",
+        "1/3 cup cider vinegar (or rice vinegar)",
+        "1/4 cup Chinese cooking wine or dry sherry (key ingredient, Note 3)",
+        "1 tbsp sesame oil (toasted (Note 4))",
+        "1 1/2 tbsp garlic (finely minced)",
+        "1/3 cup water",
+        "1 1/2 tsp cornflour/cornstarch",
+        "Green onion (finely sliced)",
+        "Sesame seeds"
+      ],
+      "instructions": [
+        "Place ingredients in a jug and mix well until honey is completely dissolved.",
+        "Reserve 1/4 cup for Basting, refrigerate. (Note 5)",
+        "Reserve 2/3 cup for Serving Sauce, refrigerate.",
+        "Marinade Chicken: Pour remaining marinade over chicken in a container. Coat chicken thoroughly. Cover, refrigerate 24 to 48 hours (minimum 3 hrs).",
+        "Place reserved sauce in a small saucepan. Mix cornflour and water, then add into saucepan.",
+        "Simmer over medium for 5 minutes, stirring regularly, until it thickens to a syrupy consistency. Set aside and keep warm. (If it gets too thick, just add a bit more water)",
+        "Brush BBQ plate or grills with oil and heat to medium high. Or heat oil in a large skillet over medium high heat.",
+        "THIGHS: Place chicken on BBQ. Cook the first side for 2 minutes, then flip and dab with reserved Basting Sauce. Cook for 2 minutes, flip and baste. Then flip/baste every 1 minute for total cook time of ~ 10 minutes or until a thermometer reads 75°C/165°F.",
+        "BREAST: Cook first side 2 minutes, flip, baste. Cook 2 minutes, then flip and baste every 45 sec or so for total cook time of ~8 minutes (internal temp 66°C / 151°F).",
+        "REST: Transfer to serving plate, cover loosely with foil and rest for 5 minutes.",
+        "SERVE chicken garnished with sesame seeds and green onion, with sauce on the side so people can help themselves."
+      ],
+      "tags": [
+        "quick",
+        "easy"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/honey-soy-chicken/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:37:01.773Z",
+      "theme": "Quick Weeknight Dinners"
+    },
+    {
+      "id": "creamy-garlic-prawns-shrimp",
+      "slug": "creamy-garlic-prawns-shrimp",
+      "title": "Creamy Garlic Prawns (Shrimp)",
+      "image": "https://www.recipetineats.com/tachyon/2020/09/Creamy-Garlic-Prawns_8-SQ.jpg",
+      "prepTime": "5 min",
+      "cookTime": "12 min",
+      "totalTime": null,
+      "servings": "4",
+      "ingredients": [
+        "500g / 1lb peeled prawns/shrimp (large/jumbo best (Note 1))",
+        "1 garlic cloves (finely minced)",
+        "1 tbsp olive oil",
+        "1/2 tsp black pepper",
+        "1/2 tsp salt",
+        "15g / 1 tbsp unsalted butter",
+        "2 garlic clove (finely minced)",
+        "15g / 1 tbsp unsalted butter",
+        "1/4 cup dry white wine ((or more chicken stock) (Note 2))",
+        "1/2 cup chicken or vegetable stock/broth (low sodium)",
+        "1 cup heavy/thickened cream",
+        "1/2 cup parmesan (finely grated (grate your own, Note 3))",
+        "2 tbsp parsley (finely chopped)"
+      ],
+      "instructions": [
+        "Place prawns, garlic, oil and pepper in a bowl. Toss to coat, set aside 20 minutes if time permits (no longer).",
+        "Stir through salt just prior to cooking.",
+        "Melt 15g / 1 tbsp butter in a large skillet over medium high heat. Add half the prawns and cook for 1 minute on each side, then remove.",
+        "Repeat with remaining prawns (you shouldn't need more butter), then remove. Scrape out excess remaining garlic from pan and add to cooked prawns.",
+        "Add butter into skillet and let it melt. Add garlic and stir for 30 seconds or until light golden.",
+        "Add white wine, turn up heat to high. Bring to simmer while stirring base of the pan to dissolve all the golden bits into the sauce. Cook 1 minute or until it most evaporates and the winey smell is gone.",
+        "Add chicken stock and reduce until mostly gone and just a thin layer remains on base of skillet.",
+        "Add cream, then simmer on medium heat for 2 minutes until reduced and slightly thickened.",
+        "Stir through parmesan, then add the prawns back in. Taste sauce and see if more salt and pepper is needed.",
+        "Serve sprinkled with parsley, over mashed potato or something to soak up that fabulous sauce!"
+      ],
+      "tags": [
+        "quick",
+        "easy"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/creamy-garlic-prawns/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:37:03.847Z",
+      "theme": "Quick Weeknight Dinners"
+    },
+    {
+      "id": "lemon-chicken-salad",
+      "slug": "lemon-chicken-salad",
+      "title": "Lemon Chicken Salad",
+      "image": "https://www.recipetineats.com/tachyon/2018/07/Lemon-Chicken-Salad-1a.jpg",
+      "prepTime": "15 min",
+      "cookTime": "8 min",
+      "totalTime": "23 min",
+      "servings": "2",
+      "ingredients": [
+        "2 tsp lemon zest",
+        "2 tbsp lemon juice",
+        "1 tbsp honey",
+        "1 tsp Dijon mustard",
+        "3 tbsp extra virgin olive oil",
+        "1 large garlic clove (minced)",
+        "1/2 tsp salt + 1/4 tsp black pepper",
+        "1 large chicken breast (halved horizontally* OR 2 boneless skinless chicken thighs)",
+        "1 tbsp lemon juice (extra)",
+        "Salt and pepper",
+        "1/2 tbsp olive oil",
+        "2 tbsp finely chopped dill",
+        "8 cups cos/romaine lettuce (chopped (or other lettuce of choice, Note 2))",
+        "1 cup cherry tomatoes (halved)",
+        "1 medium avocado (quartered and sliced thickly)",
+        "1/2 red onion (small, finely sliced)",
+        "3/4 cup corn kernels (fresh or canned drained)",
+        "120g/ 4 oz bacon (cooked then chopped (optional))"
+      ],
+      "instructions": [
+        "Place Dressing ingredients in a jar. Shake well.",
+        "Place chicken in a bowl. Add 2 tbsp Dressing, 1 tbsp extra lemon juice, plus a pinch of salt and pepper. Mix well. Marinate minimum 20 minutes up to 24 hours.",
+        "Heat oil in a non stick skillet over medium high heat (or use bacon fat if you use bacon in this!). Add chicken and cook. Halved breasts: 2 minutes each side. Thigh: 4 minutes each side.",
+        "Transfer to plate, cover loosely with foil for 3 minutes. Slice.",
+        "Add dill into remaining dressing. Shake.",
+        "Place remaining salad ingredients in a bowl. Top with chicken.",
+        "Drizzle dressing all over. Crumble over bacon if using. Serve immediately!"
+      ],
+      "tags": [
+        "quick",
+        "easy"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/lemon-chicken/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:43:58.934Z",
+      "theme": "Quick Weeknight Dinners"
+    },
+    {
+      "id": "chicken-stroganoff",
+      "slug": "chicken-stroganoff",
+      "title": "Chicken Stroganoff",
+      "image": "https://www.recipetineats.com/tachyon/2018/11/Chicken-Stroganoff_8.jpg",
+      "prepTime": "5 min",
+      "cookTime": "15 min",
+      "totalTime": "20 min",
+      "servings": "4",
+      "ingredients": [
+        "600g / 1.2 lb chicken thighs (4 - 5) (boneless skinless (or breast or tenderloin, Note 1))",
+        "1 tsp garlic powder",
+        "Salt and pepper",
+        "1 tbsp olive oil",
+        "1 large onion (chopped)",
+        "300g / 10oz mushrooms (sliced (not too thin))",
+        "40g / 3 tbsp butter",
+        "2 tbsp flour (Note 2)",
+        "2 cups / 500 ml beef broth/stock (salt reduced)",
+        "1 tbsp Dijon mustard",
+        "2/3 cup (150g) sour cream (or yogurt)",
+        "250 - 300 g / 8 - 10 oz pasta or egg noodles of choice (Note 3)",
+        "Chopped parsley or chives (for garnish (optional))"
+      ],
+      "instructions": [
+        "Sprinkle chicken with garlic powder, salt and pepper on both sides.",
+        "Heat oil in a large skillet over medium heat. Place chicken in skillet smooth side down.",
+        "Press down lightly with with spatula. Cook for 4 minutes until golden.",
+        "Turn and press lightly with spatula. Cook for 2 minutes.",
+        "Remove chicken onto a plate.",
+        "Turn heat up to medium high. Add butter, melt. Then add onions, cook for 1 minute, then add mushrooms.",
+        "Cook mushrooms until golden. Scrape bottom of fry pan to get all the golden bits off (this is flavour!).",
+        "Add flour, cook, stirring, for 1 minute.",
+        "Add half the broth while stirring. Once incorporated, add remaining broth.",
+        "Stir, then add sour cream and mustard. Stir until incorporated (don't worry if it looks split, sour cream will \"melt\" as it heats).",
+        "Bring to simmer ,then reduce heat to medium low. Once it thickens to the consistency of pouring cream (3 minutes), adjust salt and pepper to taste.",
+        "Add chicken back in (including plate juices). Simmer for 1 minute, then remove from stove.",
+        "Serve over pasta or egg noodles, sprinkled with parsley or chives if desired."
+      ],
+      "tags": [
+        "quick",
+        "easy"
+      ],
+      "source": {
+        "name": "recipetineats.com",
+        "url": "https://www.recipetineats.com/chicken-stroganoff/"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:44:00.735Z",
+      "theme": "Quick Weeknight Dinners"
+    },
+    {
+      "id": "beef-ginger-stir-fry",
+      "slug": "beef-ginger-stir-fry",
+      "title": "Beef & ginger stir-fry",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-516670_12-d60c5f8.jpg?resize=440,400",
+      "prepTime": "20 min",
+      "cookTime": "10 min",
+      "totalTime": "30 min",
+      "servings": "4",
+      "ingredients": [
+        "500g beef rump, trimmed and cut into thin strips",
+        "1 tsp Chinese five-spice powder",
+        "300g pack ready-cooked rice noodle",
+        "1 large red chilli",
+        "1 fat garlic clove chopped",
+        "4cm piece ginger peeled and cut into matchsticks",
+        "1 stick lemongrass trimmed and sliced",
+        "2 tbsp sunflower oil",
+        "100g sugar snap peas cut into thin strips",
+        "8 baby corn sliced diagonally",
+        "6 spring onions trimmed and sliced diagonally",
+        "&frac12; lime",
+        "2 tbsp soy sauce",
+        "1 tbsp fish sauce",
+        "2 tbsp roasted peanut",
+        "roughly chopped coriander to serve"
+      ],
+      "instructions": [
+        "Mix the beef and five-spice in a bowl, then set aside to marinate. Soften the noodles in boiling water following pack instructions, drain then set aside. Thinly slice the red chilli, leaving the seeds if you prefer a little extra heat. Mix with the garlic, ginger and lemongrass in a small bowl. Heat half the oil in a wok, add the chilli mixture and stir-fry for 1 min until softened but not coloured. Remove with a slotted spoon and set aside while you cook the beef.",
+        "Heat the remaining oil, add the beef and stir-fry over a high heat for 1 min until browned and just cooked through.",
+        "Return the chilli mixture to the pan with the sugar snaps, baby corn and half the spring onions. Stir-fry for 1 min more before adding the drained noodles. Mix to thoroughly combine, take off the heat and add a squeeze of lime juice, the soy sauce and fish sauce.",
+        "Divide between four plates. Scatter with the peanuts, garnish with remaining spring onions and chopped coriander."
+      ],
+      "tags": [
+        "quick",
+        "easy"
+      ],
+      "source": {
+        "name": "bbcgoodfood.com",
+        "url": "https://www.bbcgoodfood.com/recipes/beef-stir-fry"
+      },
+      "difficulty": "Medium",
+      "addedDate": "2026-01-18T06:46:43.296Z",
+      "theme": "Quick Weeknight Dinners"
     }
   ]
 }
