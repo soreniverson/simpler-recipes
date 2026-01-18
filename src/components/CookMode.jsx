@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 
 function CloseIcon() {
   return (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
     </svg>
   );
@@ -10,7 +10,7 @@ function CloseIcon() {
 
 function ChevronLeftIcon() {
   return (
-    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
     </svg>
   );
@@ -18,7 +18,7 @@ function ChevronLeftIcon() {
 
 function ChevronRightIcon() {
   return (
-    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
     </svg>
   );
@@ -41,14 +41,12 @@ export default function CookMode({ instructions, recipeName, onClose }) {
           setWakeLock(lock);
         }
       } catch (err) {
-        // Wake lock not supported or denied - continue without it
         console.log('Wake lock not available:', err);
       }
     }
 
     requestWakeLock();
 
-    // Re-acquire wake lock if page becomes visible again
     const handleVisibilityChange = () => {
       if (document.visibilityState === 'visible') {
         requestWakeLock();
@@ -83,7 +81,7 @@ export default function CookMode({ instructions, recipeName, onClose }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isFirstStep, isLastStep, onClose]);
 
-  // Prevent body scroll when cook mode is open
+  // Prevent body scroll
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => {
@@ -102,104 +100,77 @@ export default function CookMode({ instructions, recipeName, onClose }) {
   return (
     <div className="fixed inset-0 z-50 bg-sand-50 flex flex-col">
       {/* Header */}
-      <header className="flex-shrink-0 flex items-center justify-between px-4 py-3 border-b border-sand-200">
-        <div className="flex-1 min-w-0">
-          <p className="text-sand-500 text-sm truncate">{recipeName}</p>
-        </div>
-        <div className="flex-shrink-0 text-sand-600 text-sm font-medium mx-4">
-          Step {currentStep + 1} of {totalSteps}
-        </div>
+      <header className="flex-shrink-0 flex items-center justify-between px-4 py-4">
         <button
           onClick={onClose}
-          className="flex-shrink-0 p-2 -mr-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+          className="p-2 -ml-2 text-sand-400 hover:text-sand-600 hover:bg-sand-100 rounded-lg transition-colors"
           aria-label="Exit cook mode"
         >
           <CloseIcon />
         </button>
+        <span className="text-sand-500 text-sm">
+          {currentStep + 1} / {totalSteps}
+        </span>
+        <div className="w-9" /> {/* Spacer for centering */}
       </header>
 
       {/* Progress bar */}
-      <div className="flex-shrink-0 h-1 bg-sand-200">
+      <div className="flex-shrink-0 h-1 bg-sand-200 mx-4 rounded-full overflow-hidden">
         <div
-          className="h-full bg-sand-600 transition-all duration-300"
+          className="h-full bg-sand-500 transition-all duration-300 rounded-full"
           style={{ width: `${((currentStep + 1) / totalSteps) * 100}%` }}
         />
       </div>
 
-      {/* Main content area - tap zones for navigation */}
-      <div className="flex-1 flex min-h-0">
-        {/* Left tap zone (previous) */}
-        <button
-          onClick={goToPrevious}
-          disabled={isFirstStep}
-          className={`
-            flex-shrink-0 w-16 sm:w-24 flex items-center justify-center
-            transition-colors
-            ${isFirstStep
-              ? 'text-sand-200 cursor-default'
-              : 'text-sand-300 hover:text-sand-500 hover:bg-sand-100 active:bg-sand-200'
-            }
-          `}
-          aria-label="Previous step"
-        >
-          <ChevronLeftIcon />
-        </button>
-
-        {/* Instruction text */}
-        <div className="flex-1 flex items-center justify-center px-4 py-8 overflow-auto">
-          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-sand-800 leading-relaxed text-center max-w-3xl">
+      {/* Main content */}
+      <div className="flex-1 flex flex-col items-center justify-center px-6 py-8 min-h-0 overflow-auto">
+        <div className="max-w-2xl w-full text-center">
+          <p className="text-sand-400 text-sm font-medium uppercase tracking-wider mb-4">
+            Step {currentStep + 1}
+          </p>
+          <p className="text-xl sm:text-2xl md:text-3xl text-sand-800 leading-relaxed">
             {instructions[currentStep]}
           </p>
         </div>
-
-        {/* Right tap zone (next) */}
-        <button
-          onClick={goToNext}
-          disabled={isLastStep}
-          className={`
-            flex-shrink-0 w-16 sm:w-24 flex items-center justify-center
-            transition-colors
-            ${isLastStep
-              ? 'text-sand-200 cursor-default'
-              : 'text-sand-300 hover:text-sand-500 hover:bg-sand-100 active:bg-sand-200'
-            }
-          `}
-          aria-label="Next step"
-        >
-          <ChevronRightIcon />
-        </button>
       </div>
 
-      {/* Footer with step dots */}
-      <footer className="flex-shrink-0 px-4 py-4 border-t border-sand-200">
-        <div className="flex items-center justify-center gap-2 flex-wrap">
-          {instructions.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentStep(index)}
-              className={`
-                w-2.5 h-2.5 rounded-full transition-all
-                ${index === currentStep
-                  ? 'bg-sand-600 scale-125'
-                  : 'bg-sand-300 hover:bg-sand-400'
-                }
-              `}
-              aria-label={`Go to step ${index + 1}`}
-              aria-current={index === currentStep ? 'step' : undefined}
-            />
-          ))}
-        </div>
+      {/* Footer navigation */}
+      <footer className="flex-shrink-0 px-4 pb-6 pt-4">
+        <div className="flex items-center gap-3 max-w-lg mx-auto">
+          <button
+            onClick={goToPrevious}
+            disabled={isFirstStep}
+            className={`
+              flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-medium transition-all
+              ${isFirstStep
+                ? 'bg-sand-100 text-sand-300 cursor-not-allowed'
+                : 'bg-sand-200 text-sand-700 hover:bg-sand-300 active:scale-[0.98]'
+              }
+            `}
+            aria-label="Previous step"
+          >
+            <ChevronLeftIcon />
+            <span>Back</span>
+          </button>
 
-        {isLastStep && (
-          <div className="mt-4 text-center">
+          {isLastStep ? (
             <button
               onClick={onClose}
-              className="px-6 py-3 bg-sand-900 text-white rounded-lg hover:bg-sand-800 transition-colors text-sm font-medium"
+              className="flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-medium bg-sand-800 text-white hover:bg-sand-700 active:scale-[0.98] transition-all"
             >
-              Done Cooking
+              <span>Done</span>
             </button>
-          </div>
-        )}
+          ) : (
+            <button
+              onClick={goToNext}
+              className="flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-medium bg-sand-800 text-white hover:bg-sand-700 active:scale-[0.98] transition-all"
+              aria-label="Next step"
+            >
+              <span>Next</span>
+              <ChevronRightIcon />
+            </button>
+          )}
+        </div>
       </footer>
     </div>
   );
