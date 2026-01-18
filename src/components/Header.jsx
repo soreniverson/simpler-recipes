@@ -1,7 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import SmartInput from './SmartInput';
 import { getFavoritesCount } from '../utils/favorites';
-import { isMetric, toggleUnit } from '../utils/settings';
+import { isMetric, toggleUnit, getThemePreference, setThemePreference } from '../utils/settings';
 
 function SearchIcon({ className = "w-5 h-5" }) {
   return (
@@ -41,6 +41,7 @@ export default function Header({ recipes = [] }) {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [favoritesCount, setFavoritesCount] = useState(0);
   const [useMetric, setUseMetric] = useState(false);
+  const [themePreference, setThemePref] = useState('system');
   const mobileSearchRef = useRef(null);
   const settingsRef = useRef(null);
 
@@ -59,9 +60,11 @@ export default function Header({ recipes = [] }) {
   // Get initial unit preference and listen for changes
   useEffect(() => {
     setUseMetric(isMetric());
+    setThemePref(getThemePreference());
 
     const handleSettingsChange = () => {
       setUseMetric(isMetric());
+      setThemePref(getThemePreference());
     };
 
     window.addEventListener('settings-changed', handleSettingsChange);
@@ -70,6 +73,10 @@ export default function Header({ recipes = [] }) {
 
   const handleUnitToggle = useCallback(() => {
     toggleUnit();
+  }, []);
+
+  const handleThemeChange = useCallback((theme) => {
+    setThemePreference(theme);
   }, []);
 
   // Close dropdowns when clicking outside
@@ -129,20 +136,45 @@ export default function Header({ recipes = [] }) {
                 <SettingsIcon className="w-5 h-5" />
               </button>
               {isSettingsOpen && (
-                <div className="absolute right-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-sand-200 py-1 z-50">
-                  <div className="px-3 py-2 text-xs font-medium text-sand-400 uppercase tracking-wide">
+                <div className="absolute right-0 mt-1 w-48 bg-surface rounded-lg shadow-lg border border-sand-200 py-1 z-50">
+                  <div className="px-3 py-2 text-xs font-medium text-sand-500 uppercase tracking-wide">
+                    Theme
+                  </div>
+                  <button
+                    onClick={() => handleThemeChange('system')}
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                  >
+                    <span>System</span>
+                    {themePreference === 'system' && <CheckIcon className="w-4 h-4 text-sand-600" />}
+                  </button>
+                  <button
+                    onClick={() => handleThemeChange('light')}
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                  >
+                    <span>Light</span>
+                    {themePreference === 'light' && <CheckIcon className="w-4 h-4 text-sand-600" />}
+                  </button>
+                  <button
+                    onClick={() => handleThemeChange('dark')}
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                  >
+                    <span>Dark</span>
+                    {themePreference === 'dark' && <CheckIcon className="w-4 h-4 text-sand-600" />}
+                  </button>
+                  <div className="border-t border-sand-200 my-1"></div>
+                  <div className="px-3 py-2 text-xs font-medium text-sand-500 uppercase tracking-wide">
                     Measurements
                   </div>
                   <button
                     onClick={handleUnitToggle}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-50 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
                   >
                     <span>US (cups, oz)</span>
                     {!useMetric && <CheckIcon className="w-4 h-4 text-sand-600" />}
                   </button>
                   <button
                     onClick={handleUnitToggle}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-50 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
                   >
                     <span>Metric (ml, g)</span>
                     {useMetric && <CheckIcon className="w-4 h-4 text-sand-600" />}
@@ -177,20 +209,45 @@ export default function Header({ recipes = [] }) {
                 <SettingsIcon className="w-5 h-5" />
               </button>
               {isSettingsOpen && (
-                <div className="absolute right-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-sand-200 py-1 z-50">
-                  <div className="px-3 py-2 text-xs font-medium text-sand-400 uppercase tracking-wide">
+                <div className="absolute right-0 mt-1 w-48 bg-surface rounded-lg shadow-lg border border-sand-200 py-1 z-50">
+                  <div className="px-3 py-2 text-xs font-medium text-sand-500 uppercase tracking-wide">
+                    Theme
+                  </div>
+                  <button
+                    onClick={() => handleThemeChange('system')}
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                  >
+                    <span>System</span>
+                    {themePreference === 'system' && <CheckIcon className="w-4 h-4 text-sand-600" />}
+                  </button>
+                  <button
+                    onClick={() => handleThemeChange('light')}
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                  >
+                    <span>Light</span>
+                    {themePreference === 'light' && <CheckIcon className="w-4 h-4 text-sand-600" />}
+                  </button>
+                  <button
+                    onClick={() => handleThemeChange('dark')}
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                  >
+                    <span>Dark</span>
+                    {themePreference === 'dark' && <CheckIcon className="w-4 h-4 text-sand-600" />}
+                  </button>
+                  <div className="border-t border-sand-200 my-1"></div>
+                  <div className="px-3 py-2 text-xs font-medium text-sand-500 uppercase tracking-wide">
                     Measurements
                   </div>
                   <button
                     onClick={handleUnitToggle}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-50 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
                   >
                     <span>US (cups, oz)</span>
                     {!useMetric && <CheckIcon className="w-4 h-4 text-sand-600" />}
                   </button>
                   <button
                     onClick={handleUnitToggle}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-50 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
                   >
                     <span>Metric (ml, g)</span>
                     {useMetric && <CheckIcon className="w-4 h-4 text-sand-600" />}

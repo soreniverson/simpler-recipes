@@ -62,6 +62,29 @@ const recipes = data.recipes;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
 
+    <!-- Theme initialization (must run before body renders to prevent flash) -->
+    <script is:inline>
+      (function() {
+        const STORAGE_KEY = 'simpler-recipes-settings';
+        let theme = 'system';
+        try {
+          const stored = localStorage.getItem(STORAGE_KEY);
+          if (stored) {
+            const settings = JSON.parse(stored);
+            if (settings.theme) theme = settings.theme;
+          }
+        } catch {}
+
+        const effectiveTheme = theme === 'system'
+          ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+          : theme;
+
+        if (effectiveTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJR6YF1HVL"></script>
     <script>
@@ -84,6 +107,48 @@ const recipes = data.recipes;
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+  /* Light mode (default) */
+  :root {
+    --sand-25: #FDFCFB;
+    --sand-50: #FAF9F7;
+    --sand-100: #F5F4F1;
+    --sand-200: #EBEAE6;
+    --sand-300: #DDDCD7;
+    --sand-400: #BEBDB7;
+    --sand-500: #9A9994;
+    --sand-600: #787772;
+    --sand-700: #5C5B57;
+    --sand-800: #3A3832;
+    --sand-900: #1F1E1B;
+    --sand-950: #0F0E0D;
+    --primary: #5C5B57;
+    --primary-light: #787772;
+    --surface: #FAF9F7;
+    --background: #FDFCFB;
+    --shadow-color: rgba(58, 56, 50, 0.04);
+  }
+
+  /* Dark mode */
+  :root.dark {
+    --sand-25: #1c1b19;
+    --sand-50: #1a1917;
+    --sand-100: #181715;
+    --sand-200: #161513;
+    --sand-300: #141311;
+    --sand-400: #2e2d2a;
+    --sand-500: #5a5854;
+    --sand-600: #787672;
+    --sand-700: #9d9c98;
+    --sand-800: #c5c4c0;
+    --sand-900: #e8e7e3;
+    --sand-950: #f5f4f1;
+    --primary: #9d9c98;
+    --primary-light: #c5c4c0;
+    --surface: #1a1917;
+    --background: #141311;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
 
   html {
     font-size: 18px;

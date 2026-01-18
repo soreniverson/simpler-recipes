@@ -1,12 +1,13 @@
 /**
  * User settings utility for managing preferences in localStorage
- * Currently handles measurement unit preference (metric vs imperial)
+ * Handles measurement unit preference (metric vs imperial) and theme preference
  */
 
 const STORAGE_KEY = 'simpler-recipes-settings';
 
 const DEFAULT_SETTINGS = {
   measurementUnit: 'imperial', // 'imperial' or 'metric'
+  theme: 'system', // 'light', 'dark', or 'system'
 };
 
 /**
@@ -79,4 +80,90 @@ export function toggleUnit() {
   const newUnit = isMetric() ? 'imperial' : 'metric';
   setPreferredUnit(newUnit);
   return newUnit;
+}
+
+// ============ Theme Settings ============
+
+/**
+ * Get the user's theme preference
+ * @returns {'light' | 'dark' | 'system'} The theme preference
+ */
+export function getThemePreference() {
+  return getSettings().theme;
+}
+
+/**
+ * Set the user's theme preference
+ * @param {'light' | 'dark' | 'system'} theme - The theme to use
+ */
+export function setThemePreference(theme) {
+  if (theme !== 'light' && theme !== 'dark' && theme !== 'system') {
+    console.warn(`Invalid theme "${theme}", defaulting to system`);
+    theme = 'system';
+  }
+
+  const settings = getSettings();
+  settings.theme = theme;
+  saveSettings(settings);
+  applyTheme(theme);
+}
+
+/**
+ * Get the effective theme (resolving 'system' to actual preference)
+ * @returns {'light' | 'dark'} The effective theme
+ */
+export function getEffectiveTheme() {
+  const preference = getThemePreference();
+  if (preference === 'system') {
+    if (typeof window !== 'undefined') {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return 'light';
+  }
+  return preference;
+}
+
+/**
+ * Check if dark mode is active
+ * @returns {boolean} True if dark mode is active
+ */
+export function isDarkMode() {
+  return getEffectiveTheme() === 'dark';
+}
+
+/**
+ * Apply theme to document
+ * @param {'light' | 'dark' | 'system'} theme - The theme to apply
+ */
+export function applyTheme(theme) {
+  if (typeof window === 'undefined') return;
+
+  const effectiveTheme = theme === 'system'
+    ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+    : theme;
+
+  if (effectiveTheme === 'dark') {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+}
+
+/**
+ * Initialize theme on page load
+ * Should be called as early as possible to prevent flash
+ */
+export function initializeTheme() {
+  if (typeof window === 'undefined') return;
+
+  const theme = getThemePreference();
+  applyTheme(theme);
+
+  // Listen for OS theme changes when using 'system'
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (getThemePreference() === 'system') {
+      applyTheme('system');
+      window.dispatchEvent(new CustomEvent('settings-changed'));
+    }
+  });
 }
