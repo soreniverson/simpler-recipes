@@ -72,6 +72,7 @@ export default function FavoriteButton({
         ${sizeClasses[size]}
         rounded-full
         transition-all duration-200
+        flex items-center justify-center
         ${favorited
           ? 'text-sand-700 hover:text-sand-800 bg-sand-200 hover:bg-sand-300'
           : 'text-sand-400 hover:text-sand-600 hover:bg-sand-100'
