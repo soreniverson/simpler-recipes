@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import ScalableIngredients from './ScalableIngredients'
+import { addExtractedFavorite, isExtractedFavorite, removeExtractedFavorite } from '../utils/favorites'
 
 function BackIcon() {
   return (
@@ -33,11 +34,28 @@ function ShareIcon() {
   )
 }
 
+function HeartIcon({ filled, className = "w-4 h-4" }) {
+  if (filled) {
+    return (
+      <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+      </svg>
+    );
+  }
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+    </svg>
+  );
+}
+
 export default function ExtractedRecipeView() {
   const [recipe, setRecipe] = useState(null)
   const [sourceUrl, setSourceUrl] = useState(null)
   const [shareUrl, setShareUrl] = useState('')
   const [shareLoading, setShareLoading] = useState(false)
+  const [savedId, setSavedId] = useState(null)
+  const [isAnimating, setIsAnimating] = useState(false)
 
   useEffect(() => {
     // Get recipe data from sessionStorage
@@ -46,11 +64,43 @@ export default function ExtractedRecipeView() {
       const data = JSON.parse(stored)
       setRecipe(data.recipe)
       setSourceUrl(data.sourceUrl)
+      // Check if this recipe is already saved (by savedId in sessionStorage)
+      if (data.savedId && isExtractedFavorite(data.savedId)) {
+        setSavedId(data.savedId)
+      }
     } else {
       // Redirect to home if no recipe data
       window.location.href = '/'
     }
   }, [])
+
+  const handleSave = useCallback(() => {
+    if (savedId) {
+      // Remove from favorites
+      removeExtractedFavorite(savedId)
+      setSavedId(null)
+      // Update sessionStorage
+      const stored = sessionStorage.getItem('extractedRecipe')
+      if (stored) {
+        const data = JSON.parse(stored)
+        delete data.savedId
+        sessionStorage.setItem('extractedRecipe', JSON.stringify(data))
+      }
+    } else {
+      // Add to favorites
+      const newId = addExtractedFavorite(recipe, sourceUrl)
+      setSavedId(newId)
+      setIsAnimating(true)
+      setTimeout(() => setIsAnimating(false), 300)
+      // Store the ID in sessionStorage so we can track it
+      const stored = sessionStorage.getItem('extractedRecipe')
+      if (stored) {
+        const data = JSON.parse(stored)
+        data.savedId = newId
+        sessionStorage.setItem('extractedRecipe', JSON.stringify(data))
+      }
+    }
+  }, [savedId, recipe, sourceUrl])
 
   const handleShare = async () => {
     setShareLoading(true)
@@ -112,9 +162,26 @@ export default function ExtractedRecipeView() {
 
             <div className="p-6 md:p-8">
               <header className="mb-8 pb-6 border-b border-sand-200 print:border-sand-300">
-                <h1 className="text-2xl md:text-3xl font-medium tracking-tight-headline text-sand-900 mb-4">
-                  {recipe.title}
-                </h1>
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <h1 className="text-2xl md:text-3xl font-medium tracking-tight-headline text-sand-900">
+                    {recipe.title}
+                  </h1>
+                  <button
+                    onClick={handleSave}
+                    className={`
+                      flex-shrink-0 p-2.5 rounded-full transition-all duration-200 print:hidden
+                      ${savedId
+                        ? 'text-sand-700 hover:text-sand-800 bg-sand-200 hover:bg-sand-300'
+                        : 'text-sand-400 hover:text-sand-600 hover:bg-sand-100'
+                      }
+                      ${isAnimating ? 'scale-125' : 'scale-100'}
+                    `}
+                    aria-label={savedId ? 'Remove from favorites' : 'Save to favorites'}
+                    aria-pressed={!!savedId}
+                  >
+                    <HeartIcon filled={!!savedId} className="w-6 h-6" />
+                  </button>
+                </div>
 
                 <div className="flex flex-wrap items-center gap-2">
                   {recipe.prepTime && (
