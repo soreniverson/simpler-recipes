@@ -36,7 +36,7 @@ function CheckIcon({ className = "w-4 h-4" }) {
   );
 }
 
-export default function Header({ recipes = [] }) {
+export default function Header() {
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [favoritesCount, setFavoritesCount] = useState(0);
@@ -120,7 +120,6 @@ export default function Header({ recipes = [] }) {
           {/* Desktop Search - using SmartInput */}
           <div className="hidden sm:flex flex-1 justify-center items-center">
             <SmartInput
-              recipes={recipes}
               variant="header"
               placeholder="Paste a URL or search recipes..."
               showKeyboardHint={true}
@@ -133,52 +132,68 @@ export default function Header({ recipes = [] }) {
             <div className="relative" ref={settingsRef}>
               <button
                 onClick={handleSettingsToggle}
-                className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+                className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                 aria-label="Settings"
                 aria-expanded={isSettingsOpen}
+                aria-haspopup="menu"
+                id="settings-button"
               >
                 <SettingsIcon className="w-5 h-5" />
               </button>
               {isSettingsOpen && (
-                <div className="absolute right-0 mt-1 w-48 bg-surface rounded-lg shadow-lg border border-sand-200 py-1 z-50">
-                  <div className="px-3 py-2 text-xs font-medium text-sand-500 uppercase tracking-wide">
+                <div
+                  className="absolute right-0 mt-1 w-48 bg-surface rounded-lg shadow-lg border border-sand-200 py-1 z-50"
+                  role="menu"
+                  aria-labelledby="settings-button"
+                >
+                  <div className="px-3 py-2 text-xs font-medium text-sand-500 uppercase tracking-wide" role="presentation">
                     Theme
                   </div>
                   <button
                     onClick={() => handleThemeChange('system')}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors min-h-[44px]"
+                    role="menuitemradio"
+                    aria-checked={themePreference === 'system'}
                   >
                     <span>System</span>
                     {themePreference === 'system' && <CheckIcon className="w-4 h-4 text-sand-600" />}
                   </button>
                   <button
                     onClick={() => handleThemeChange('light')}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors min-h-[44px]"
+                    role="menuitemradio"
+                    aria-checked={themePreference === 'light'}
                   >
                     <span>Light</span>
                     {themePreference === 'light' && <CheckIcon className="w-4 h-4 text-sand-600" />}
                   </button>
                   <button
                     onClick={() => handleThemeChange('dark')}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors min-h-[44px]"
+                    role="menuitemradio"
+                    aria-checked={themePreference === 'dark'}
                   >
                     <span>Dark</span>
                     {themePreference === 'dark' && <CheckIcon className="w-4 h-4 text-sand-600" />}
                   </button>
-                  <div className="border-t border-sand-200 my-1"></div>
-                  <div className="px-3 py-2 text-xs font-medium text-sand-500 uppercase tracking-wide">
+                  <div className="border-t border-sand-200 my-1" role="separator"></div>
+                  <div className="px-3 py-2 text-xs font-medium text-sand-500 uppercase tracking-wide" role="presentation">
                     Measurements
                   </div>
                   <button
                     onClick={handleUnitToggle}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors min-h-[44px]"
+                    role="menuitemradio"
+                    aria-checked={!useMetric}
                   >
                     <span>US (cups, oz)</span>
                     {!useMetric && <CheckIcon className="w-4 h-4 text-sand-600" />}
                   </button>
                   <button
                     onClick={handleUnitToggle}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors min-h-[44px]"
+                    role="menuitemradio"
+                    aria-checked={useMetric}
                   >
                     <span>Metric (ml, g)</span>
                     {useMetric && <CheckIcon className="w-4 h-4 text-sand-600" />}
@@ -206,52 +221,68 @@ export default function Header({ recipes = [] }) {
             <div className="relative" ref={mobileSettingsRef}>
               <button
                 onClick={handleSettingsToggle}
-                className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+                className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                 aria-label="Settings"
                 aria-expanded={isSettingsOpen}
+                aria-haspopup="menu"
+                id="mobile-settings-button"
               >
                 <SettingsIcon className="w-5 h-5" />
               </button>
               {isSettingsOpen && (
-                <div className="absolute right-0 mt-1 w-48 bg-surface rounded-lg shadow-lg border border-sand-200 py-1 z-50">
-                  <div className="px-3 py-2 text-xs font-medium text-sand-500 uppercase tracking-wide">
+                <div
+                  className="absolute right-0 mt-1 w-48 bg-surface rounded-lg shadow-lg border border-sand-200 py-1 z-50"
+                  role="menu"
+                  aria-labelledby="mobile-settings-button"
+                >
+                  <div className="px-3 py-2 text-xs font-medium text-sand-500 uppercase tracking-wide" role="presentation">
                     Theme
                   </div>
                   <button
                     onClick={() => handleThemeChange('system')}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors min-h-[44px]"
+                    role="menuitemradio"
+                    aria-checked={themePreference === 'system'}
                   >
                     <span>System</span>
                     {themePreference === 'system' && <CheckIcon className="w-4 h-4 text-sand-600" />}
                   </button>
                   <button
                     onClick={() => handleThemeChange('light')}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors min-h-[44px]"
+                    role="menuitemradio"
+                    aria-checked={themePreference === 'light'}
                   >
                     <span>Light</span>
                     {themePreference === 'light' && <CheckIcon className="w-4 h-4 text-sand-600" />}
                   </button>
                   <button
                     onClick={() => handleThemeChange('dark')}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors min-h-[44px]"
+                    role="menuitemradio"
+                    aria-checked={themePreference === 'dark'}
                   >
                     <span>Dark</span>
                     {themePreference === 'dark' && <CheckIcon className="w-4 h-4 text-sand-600" />}
                   </button>
-                  <div className="border-t border-sand-200 my-1"></div>
-                  <div className="px-3 py-2 text-xs font-medium text-sand-500 uppercase tracking-wide">
+                  <div className="border-t border-sand-200 my-1" role="separator"></div>
+                  <div className="px-3 py-2 text-xs font-medium text-sand-500 uppercase tracking-wide" role="presentation">
                     Measurements
                   </div>
                   <button
                     onClick={handleUnitToggle}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors min-h-[44px]"
+                    role="menuitemradio"
+                    aria-checked={!useMetric}
                   >
                     <span>US (cups, oz)</span>
                     {!useMetric && <CheckIcon className="w-4 h-4 text-sand-600" />}
                   </button>
                   <button
                     onClick={handleUnitToggle}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-sand-700 hover:bg-sand-100 transition-colors min-h-[44px]"
+                    role="menuitemradio"
+                    aria-checked={useMetric}
                   >
                     <span>Metric (ml, g)</span>
                     {useMetric && <CheckIcon className="w-4 h-4 text-sand-600" />}
@@ -261,8 +292,9 @@ export default function Header({ recipes = [] }) {
             </div>
             <button
               onClick={handleMobileSearchToggle}
-              className="p-2 text-sand-600 hover:text-sand-900 hover:bg-sand-100 rounded-lg transition-colors"
+              className="p-2 text-sand-600 hover:text-sand-900 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Search"
+              aria-expanded={isMobileSearchOpen}
             >
               <SearchIcon className="w-5 h-5" />
             </button>
@@ -285,7 +317,6 @@ export default function Header({ recipes = [] }) {
         {isMobileSearchOpen && (
           <div ref={mobileSearchRef} className="sm:hidden pb-3">
             <SmartInput
-              recipes={recipes}
               variant="header"
               placeholder="Paste a URL or search..."
               autoFocus={true}

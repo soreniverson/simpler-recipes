@@ -54,9 +54,9 @@ export default function FavoriteButton({
   }, [slug]);
 
   const sizeClasses = {
-    small: 'p-1.5',
-    default: 'p-2',
-    large: 'p-2.5',
+    small: 'p-2.5 min-w-[44px] min-h-[44px]',
+    default: 'p-2.5 min-w-[44px] min-h-[44px]',
+    large: 'p-3 min-w-[48px] min-h-[48px]',
   };
 
   const iconSizes = {

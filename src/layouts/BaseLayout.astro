@@ -1,7 +1,5 @@
 ---
 import Header from '../components/Header.jsx';
-import fs from 'fs';
-import path from 'path';
 
 export interface Props {
   title: string;
@@ -23,10 +21,7 @@ const siteUrl = "https://simpler.recipes";
 const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 const canonicalUrl = canonical || Astro.url.href;
 
-// Load recipes for header search
-const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
-const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
-const recipes = data.recipes;
+// Note: Recipe data for search is now loaded on-demand via fetch in SmartInput
 ---
 
 <!DOCTYPE html>
@@ -98,7 +93,7 @@ const recipes = data.recipes;
     <a href="#main-content" class="skip-link">
       Skip to main content
     </a>
-    <Header client:load recipes={recipes} />
+    <Header client:load />
     <slot />
   </body>
 </html>
@@ -108,7 +103,7 @@ const recipes = data.recipes;
   @tailwind components;
   @tailwind utilities;
 
-  /* Light mode (default) */
+  /* Light mode (default) - WCAG AA compliant */
   :root {
     --sand-25: #FDFCFB;
     --sand-50: #FAF9F7;
@@ -116,35 +111,35 @@ const recipes = data.recipes;
     --sand-200: #EBEAE6;
     --sand-300: #DDDCD7;
     --sand-400: #BEBDB7;
-    --sand-500: #9A9994;
-    --sand-600: #787772;
-    --sand-700: #5C5B57;
+    --sand-500: #706f6b;  /* Improved: ~4.6:1 contrast on white */
+    --sand-600: #5e5d59;  /* Improved: ~5.7:1 contrast */
+    --sand-700: #4a4946;  /* Improved: ~7.5:1 contrast */
     --sand-800: #3A3832;
     --sand-900: #1F1E1B;
     --sand-950: #0F0E0D;
-    --primary: #5C5B57;
-    --primary-light: #787772;
+    --primary: #4a4946;
+    --primary-light: #5e5d59;
     --surface: #FAF9F7;
     --background: #FDFCFB;
     --shadow-color: rgba(58, 56, 50, 0.04);
   }
 
-  /* Dark mode */
+  /* Dark mode - WCAG AA compliant contrast ratios */
   :root.dark {
     --sand-25: #2a2926;
     --sand-50: #242321;
     --sand-100: #1e1d1b;
     --sand-200: #181716;
     --sand-300: #141311;
-    --sand-400: #3a3835;
-    --sand-500: #5a5854;
-    --sand-600: #787672;
-    --sand-700: #9d9c98;
-    --sand-800: #c5c4c0;
+    --sand-400: #454340;
+    --sand-500: #8a8884;  /* Improved: ~4.8:1 contrast on #141311 */
+    --sand-600: #a09e9a;  /* Improved: ~5.8:1 contrast */
+    --sand-700: #b8b6b2;  /* Improved: ~7.0:1 contrast */
+    --sand-800: #d0cecb;
     --sand-900: #e8e7e3;
     --sand-950: #f5f4f1;
-    --primary: #9d9c98;
-    --primary-light: #c5c4c0;
+    --primary: #b8b6b2;   /* Improved for better readability */
+    --primary-light: #d0cecb;
     --surface: #242321;
     --background: #141311;
     --shadow-color: rgba(0, 0, 0, 0.4);
@@ -210,5 +205,17 @@ const recipes = data.recipes;
   button, a {
     min-height: 44px;
     min-width: 44px;
+  }
+
+  /* Respect user preference for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 </style>

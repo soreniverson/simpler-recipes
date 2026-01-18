@@ -74,11 +74,12 @@ function SearchResult({ result, onClick }) {
     <a
       href={`/recipes/${recipe.slug}`}
       onClick={onClick}
-      className="flex items-center gap-3 px-4 py-3 hover:bg-sand-100 transition-colors"
+      className="flex items-center gap-3 px-4 py-3 hover:bg-sand-100 transition-colors min-h-[44px]"
+      role="option"
     >
       {recipe.image ? (
         <div className="flex-shrink-0 w-10 h-10 rounded-lg overflow-hidden bg-sand-200">
-          <img src={recipe.image} alt="" className="w-full h-full object-cover" loading="lazy" />
+          <img src={recipe.image} alt="" width={40} height={40} className="w-full h-full object-cover" loading="lazy" decoding="async" />
         </div>
       ) : (
         <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-sand-200 flex items-center justify-center">
@@ -106,9 +107,13 @@ function SearchResult({ result, onClick }) {
 function SearchDropdown({ results, query, isSearching, onResultClick, isUrl }) {
   if (isUrl) {
     return (
-      <div className="absolute top-full left-0 right-0 mt-2 bg-surface rounded-xl shadow-lg border border-sand-400 overflow-hidden z-50 p-4">
+      <div
+        className="absolute top-full left-0 right-0 mt-2 bg-surface rounded-xl shadow-lg border border-sand-400 overflow-hidden z-50 p-4"
+        role="status"
+        aria-live="polite"
+      >
         <div className="flex items-center gap-3 text-sand-600">
-          <LinkIcon className="w-5 h-5 text-sand-400" />
+          <LinkIcon className="w-5 h-5 text-sand-400" aria-hidden="true" />
           <span className="text-sm">Press Enter to extract recipe from this URL</span>
         </div>
       </div>
@@ -118,18 +123,23 @@ function SearchDropdown({ results, query, isSearching, onResultClick, isUrl }) {
   if (query.trim().length < 2) return null;
 
   return (
-    <div className="absolute top-full left-0 right-0 mt-2 bg-surface rounded-xl shadow-lg border border-sand-400 overflow-hidden z-50 max-h-[70vh] overflow-y-auto">
+    <div
+      className="absolute top-full left-0 right-0 mt-2 bg-surface rounded-xl shadow-lg border border-sand-400 overflow-hidden z-50 max-h-[70vh] overflow-y-auto"
+      role="listbox"
+      aria-label="Search results"
+    >
       {isSearching ? (
-        <div className="text-center py-8">
-          <div className="inline-block w-5 h-5 border-2 border-sand-300 border-t-sand-600 rounded-full animate-spin"></div>
+        <div className="text-center py-8" role="status" aria-live="polite">
+          <div className="inline-block w-5 h-5 border-2 border-sand-300 border-t-sand-600 rounded-full animate-spin" aria-hidden="true"></div>
+          <span className="sr-only">Searching...</span>
         </div>
       ) : results.length === 0 ? (
-        <div className="text-center py-8 px-4">
+        <div className="text-center py-8 px-4" role="status" aria-live="polite">
           <p className="text-sand-500 text-sm">No recipes found for "{query}"</p>
         </div>
       ) : (
         <div>
-          <div className="px-4 py-2 text-xs text-sand-500 border-b border-sand-100">
+          <div className="px-4 py-2 text-xs text-sand-500 border-b border-sand-100" role="status" aria-live="polite">
             {results.length} {results.length === 1 ? 'recipe' : 'recipes'} found
           </div>
           <div className="divide-y divide-sand-100">
@@ -148,8 +158,40 @@ function SearchDropdown({ results, query, isSearching, onResultClick, isUrl }) {
   );
 }
 
+// Cached search data and Fuse instance (shared across all SmartInput instances)
+let cachedSearchData = null;
+let cachedFuseInstance = null;
+let searchDataPromise = null;
+
+async function loadSearchData() {
+  // Return cached data if available
+  if (cachedSearchData) {
+    return cachedSearchData;
+  }
+
+  // Return pending promise if already loading
+  if (searchDataPromise) {
+    return searchDataPromise;
+  }
+
+  // Load search data on-demand
+  searchDataPromise = fetch('/search-index.json')
+    .then((res) => res.json())
+    .then((data) => {
+      cachedSearchData = data;
+      cachedFuseInstance = createSearchIndex(data);
+      return data;
+    })
+    .catch((err) => {
+      console.error('Failed to load search index:', err);
+      searchDataPromise = null;
+      return null;
+    });
+
+  return searchDataPromise;
+}
+
 export default function SmartInput({
-  recipes = [],
   variant = 'default', // 'default' | 'header'
   placeholder = 'Paste a URL or search recipes...',
   showKeyboardHint = false,
@@ -162,20 +204,23 @@ export default function SmartInput({
   const [isOpen, setIsOpen] = useState(false);
   const [isExtracting, setIsExtracting] = useState(false);
   const [error, setError] = useState(null);
+  const [isDataLoaded, setIsDataLoaded] = useState(!!cachedSearchData);
   const containerRef = useRef(null);
   const inputRef = useRef(null);
 
   const isUrl = looksLikeUrl(value);
 
-  // Create Fuse index
-  const fuse = useMemo(() => {
-    if (!recipes || recipes.length === 0) return null;
-    return createSearchIndex(recipes);
-  }, [recipes]);
+  // Load search data when input is focused or user starts typing
+  const ensureSearchData = useCallback(async () => {
+    if (!isDataLoaded) {
+      await loadSearchData();
+      setIsDataLoaded(true);
+    }
+  }, [isDataLoaded]);
 
   // Debounced search (only when not a URL)
   useEffect(() => {
-    if (!fuse || isUrl) {
+    if (isUrl) {
       setResults([]);
       return;
     }
@@ -190,14 +235,19 @@ export default function SmartInput({
     setIsSearching(true);
     setIsOpen(true);
 
-    const timeoutId = setTimeout(() => {
-      const searchResults = searchRecipes(fuse, trimmedQuery);
-      setResults(searchResults);
+    const timeoutId = setTimeout(async () => {
+      // Ensure search data is loaded
+      await ensureSearchData();
+
+      if (cachedFuseInstance) {
+        const searchResults = searchRecipes(cachedFuseInstance, trimmedQuery);
+        setResults(searchResults);
+      }
       setIsSearching(false);
     }, 150);
 
     return () => clearTimeout(timeoutId);
-  }, [value, fuse, isUrl]);
+  }, [value, isUrl, ensureSearchData]);
 
   // Show URL hint when URL detected
   useEffect(() => {
@@ -223,6 +273,8 @@ export default function SmartInput({
       if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
         event.preventDefault();
         inputRef.current?.focus();
+        // Preload search data when user uses keyboard shortcut
+        ensureSearchData();
       }
       if (event.key === 'Escape') {
         setIsOpen(false);
@@ -231,7 +283,7 @@ export default function SmartInput({
     }
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [ensureSearchData]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -318,7 +370,10 @@ export default function SmartInput({
             type="text"
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            onFocus={() => (value.trim().length >= 2 || isUrl) && setIsOpen(true)}
+            onFocus={() => {
+              ensureSearchData(); // Preload search data on focus
+              if (value.trim().length >= 2 || isUrl) setIsOpen(true);
+            }}
             placeholder={placeholder}
             autoFocus={autoFocus}
             className={`
@@ -334,8 +389,8 @@ export default function SmartInput({
             <button
               type="button"
               onClick={handleClear}
-              className={`absolute inset-y-0 flex items-center text-sand-400 hover:text-sand-600 transition-colors ${isHeader ? 'right-8' : 'right-4'}`}
-              aria-label="Clear"
+              className={`absolute inset-y-0 flex items-center justify-center text-sand-400 hover:text-sand-600 transition-colors w-11 ${isHeader ? 'right-6' : 'right-1'}`}
+              aria-label="Clear search"
             >
               <ClearIcon />
             </button>

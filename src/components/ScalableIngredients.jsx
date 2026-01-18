@@ -129,7 +129,7 @@ export default function ScalableIngredients({
         <button
           onClick={handleDecrement}
           disabled={currentServings <= 1}
-          className="w-7 h-7 flex items-center justify-center rounded-full bg-sand-100 hover:bg-sand-200 text-sand-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          className="w-11 h-11 flex items-center justify-center rounded-full bg-sand-100 hover:bg-sand-200 text-sand-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
           aria-label="Decrease servings"
         >
           <MinusIcon />
@@ -140,7 +140,7 @@ export default function ScalableIngredients({
         <button
           onClick={handleIncrement}
           disabled={currentServings >= 99}
-          className="w-7 h-7 flex items-center justify-center rounded-full bg-sand-100 hover:bg-sand-200 text-sand-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          className="w-11 h-11 flex items-center justify-center rounded-full bg-sand-100 hover:bg-sand-200 text-sand-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
           aria-label="Increase servings"
         >
           <PlusIcon />
@@ -179,7 +179,7 @@ export default function ScalableIngredients({
       <div className="flex items-center gap-2 mt-4 pt-4 border-t border-sand-200 print:hidden">
         <button
           onClick={handleCopy}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+          className="inline-flex items-center gap-1.5 px-4 py-2.5 text-sm text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-h-[44px]"
           aria-label="Copy ingredients to clipboard"
         >
           <CopyIcon />
@@ -187,7 +187,7 @@ export default function ScalableIngredients({
         </button>
         <button
           onClick={handlePrint}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+          className="inline-flex items-center gap-1.5 px-4 py-2.5 text-sm text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-h-[44px]"
           aria-label="Print recipe"
         >
           <PrintIcon />

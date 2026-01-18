@@ -75,7 +75,7 @@ const icon = collectionIcons[slug!] || defaultIcon;
         <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {collection.recipes.map((recipe: any) => (
             <li>
-              <RecipeCard client:load recipe={recipe} />
+              <RecipeCard client:visible recipe={recipe} />
             </li>
           ))}
         </ul>

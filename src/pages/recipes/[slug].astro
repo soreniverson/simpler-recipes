@@ -70,7 +70,11 @@ const schemaData = {
               <img
                 src={recipe.image}
                 alt={recipe.title}
+                width={800}
+                height={400}
                 class="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
               />
             </div>
           )}
@@ -150,7 +154,7 @@ const schemaData = {
         <!-- Ingredients sidebar (right) - shown below on mobile, sticky on desktop -->
         <aside class="mt-6 lg:mt-0 lg:sticky lg:top-8">
           <ScalableIngredients
-            client:load
+            client:idle
             ingredients={recipe.ingredients}
             servings={recipe.servings}
           />
