@@ -95,7 +95,7 @@ export default function DayCard({ date, dateKey, meals, onAddMeal, onRemoveMeal 
   );
 
   return (
-    <div className={`bg-sand-50 rounded-xl overflow-hidden ${isToday ? 'ring-2 ring-sand-400' : ''}`}>
+    <div className={isToday ? 'bg-sand-100/50' : ''}>
       {/* Day header */}
       <div className="flex items-center justify-between p-4">
         <div className="flex items-center gap-3">

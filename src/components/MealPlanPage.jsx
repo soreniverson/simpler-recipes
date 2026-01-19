@@ -6,7 +6,6 @@ import {
   getWeekDays,
   formatDateKey,
   getMealsForWeek,
-  hasAnyMealsForWeek,
   addMeal,
   removeMeal
 } from '../utils/mealPlan';
@@ -23,14 +22,6 @@ function ChevronRightIcon({ className = "w-5 h-5" }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-    </svg>
-  );
-}
-
-function CalendarIcon({ className = "w-12 h-12" }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
     </svg>
   );
 }
@@ -117,7 +108,6 @@ export default function MealPlanPage({ recipes = [] }) {
   }, []);
 
   const weekDays = getWeekDays(weekStart);
-  const hasAnyMeals = hasAnyMealsForWeek(weekStart);
   const isCurrentWeek = formatDateKey(getWeekStart(new Date())) === formatDateKey(weekStart);
 
   if (isLoading) {
@@ -166,25 +156,8 @@ export default function MealPlanPage({ recipes = [] }) {
         </div>
       </header>
 
-      {/* Week view */}
-      {!hasAnyMeals ? (
-        <div className="bg-sand-50 rounded-2xl p-12 text-center">
-          <div className="flex justify-center mb-4">
-            <div className="w-20 h-20 rounded-full bg-sand-100 flex items-center justify-center text-sand-400">
-              <CalendarIcon className="w-12 h-12" />
-            </div>
-          </div>
-          <h2 className="text-lg font-medium text-sand-900 mb-2">
-            No meals planned
-          </h2>
-          <p className="text-sand-600 text-sm mb-6 max-w-sm mx-auto">
-            Click the + button on any day to start planning your meals for the week.
-          </p>
-        </div>
-      ) : null}
-
-      {/* Day cards - always show even when empty */}
-      <div className="space-y-4">
+      {/* Day cards */}
+      <div className="bg-sand-50 rounded-xl overflow-hidden divide-y divide-sand-200">
         {weekDays.map(day => {
           const dateKey = formatDateKey(day);
           const dayMeals = weekMeals[dateKey] || { breakfast: [], lunch: [], dinner: [], snack: [], dessert: [] };

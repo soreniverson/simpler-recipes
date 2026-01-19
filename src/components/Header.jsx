@@ -354,17 +354,17 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 sm:hidden">
+        <div className="fixed inset-0 z-[100] sm:hidden" style={{ top: 0, left: 0, right: 0, bottom: 0 }}>
           {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-black/50"
+            className="fixed inset-0 bg-black/50"
             onClick={closeMobileMenu}
           />
 
           {/* Menu Panel */}
           <div
             ref={mobileMenuRef}
-            className="absolute right-0 top-0 h-full w-72 bg-surface shadow-xl flex flex-col"
+            className="fixed right-0 top-0 bottom-0 w-72 bg-surface shadow-xl flex flex-col"
           >
             {/* Menu Header */}
             <div className="flex items-center justify-between p-4 border-b border-sand-200">
