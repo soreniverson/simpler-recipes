@@ -55,21 +55,6 @@ function MenuIcon({ className = "w-5 h-5" }) {
   );
 }
 
-function XIcon({ className = "w-5 h-5" }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  );
-}
-
-function ChevronRightIcon({ className = "w-4 h-4" }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-    </svg>
-  );
-}
 
 export default function Header() {
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
@@ -83,6 +68,7 @@ export default function Header() {
   const mobileSearchRef = useRef(null);
   const settingsRef = useRef(null);
   const mobileMenuRef = useRef(null);
+  const mobileMenuButtonRef = useRef(null);
 
   const { user, isAuthenticated, loading: authLoading, signOut } = useAuth();
 
@@ -141,6 +127,11 @@ export default function Header() {
       if (settingsRef.current && !settingsRef.current.contains(event.target)) {
         setIsSettingsOpen(false);
       }
+      // Close mobile menu when clicking outside
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target) &&
+          mobileMenuButtonRef.current && !mobileMenuButtonRef.current.contains(event.target)) {
+        setIsMobileMenuOpen(false);
+      }
     }
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -157,17 +148,6 @@ export default function Header() {
     return () => document.removeEventListener('keydown', handleEscape);
   }, []);
 
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isMobileMenuOpen]);
 
   const handleMobileSearchToggle = useCallback(() => {
     setIsMobileSearchOpen(prev => !prev);
@@ -179,10 +159,6 @@ export default function Header() {
 
   const handleMobileMenuToggle = useCallback(() => {
     setIsMobileMenuOpen(prev => !prev);
-  }, []);
-
-  const closeMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen(false);
   }, []);
 
   return (
@@ -330,6 +306,7 @@ export default function Header() {
               <SearchIcon className="w-5 h-5" />
             </button>
             <button
+              ref={mobileMenuButtonRef}
               onClick={handleMobileMenuToggle}
               className="p-2 text-sand-600 hover:text-sand-900 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Menu"
@@ -352,136 +329,96 @@ export default function Header() {
         )}
       </div>
 
-      {/* Mobile Menu Overlay - rendered outside normal flow */}
+      {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <>
-          {/* Backdrop */}
-          <div
-            className="sm:hidden fixed inset-0 bg-black/50"
-            style={{ zIndex: 9998 }}
-            onClick={closeMobileMenu}
-          />
+        <div ref={mobileMenuRef} className="sm:hidden absolute top-full left-0 right-0 bg-white border-b border-sand-200 shadow-lg" style={{ zIndex: 100 }}>
+          {/* Nav Links */}
+          <div className="p-2 border-b border-sand-100">
+            <a
+              href="/favorites"
+              className="flex items-center gap-3 px-4 py-3 text-sand-700 hover:bg-sand-50 rounded-lg"
+            >
+              <HeartIcon className="w-5 h-5 text-sand-500" />
+              <span>Favorites</span>
+            </a>
+            <a
+              href="/plan"
+              className="flex items-center gap-3 px-4 py-3 text-sand-700 hover:bg-sand-50 rounded-lg"
+            >
+              <CalendarIcon className="w-5 h-5 text-sand-500" />
+              <span>Meal Plan</span>
+            </a>
+            <a
+              href="/pantry"
+              className="flex items-center gap-3 px-4 py-3 text-sand-700 hover:bg-sand-50 rounded-lg"
+            >
+              <PantryIcon className="w-5 h-5 text-sand-500" />
+              <span>Pantry</span>
+            </a>
+          </div>
 
-          {/* Menu Panel */}
-          <div
-            ref={mobileMenuRef}
-            className="sm:hidden fixed top-0 right-0 h-full w-72 bg-white shadow-xl"
-            style={{ zIndex: 9999 }}
-          >
-            {/* Menu Header */}
-            <div className="flex items-center justify-between p-4 border-b border-sand-200 bg-white">
-              <span className="font-medium text-sand-900">Menu</span>
-              <button
-                onClick={closeMobileMenu}
-                className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
-                aria-label="Close menu"
-              >
-                <XIcon className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Menu Content */}
-            <div className="h-[calc(100%-65px)] overflow-y-auto bg-white">
-              {/* Menu Links */}
-              <div className="p-4 space-y-1">
-                <a
-                  href="/favorites"
-                  onClick={closeMobileMenu}
-                  className="flex items-center gap-3 px-3 py-3 text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+          {/* Settings */}
+          <div className="p-4">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-xs font-medium text-sand-500 uppercase">Measurements</span>
+              <div className="flex bg-sand-100 rounded-lg p-0.5">
+                <button
+                  onClick={() => { if (useMetric) handleUnitToggle(); }}
+                  className={`px-3 py-1 text-xs font-medium rounded-md ${
+                    !useMetric ? 'bg-white text-sand-900 shadow-sm' : 'text-sand-600'
+                  }`}
                 >
-                  <HeartIcon className="w-5 h-5 text-sand-500" />
-                  <span className="flex-1">Favorites</span>
-                  <ChevronRightIcon className="w-4 h-4 text-sand-400" />
-                </a>
-                <a
-                  href="/plan"
-                  onClick={closeMobileMenu}
-                  className="flex items-center gap-3 px-3 py-3 text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+                  US
+                </button>
+                <button
+                  onClick={() => { if (!useMetric) handleUnitToggle(); }}
+                  className={`px-3 py-1 text-xs font-medium rounded-md ${
+                    useMetric ? 'bg-white text-sand-900 shadow-sm' : 'text-sand-600'
+                  }`}
                 >
-                  <CalendarIcon className="w-5 h-5 text-sand-500" />
-                  <span className="flex-1">Meal Plan</span>
-                  <ChevronRightIcon className="w-4 h-4 text-sand-400" />
-                </a>
-                <a
-                  href="/pantry"
-                  onClick={closeMobileMenu}
-                  className="flex items-center gap-3 px-3 py-3 text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
-                >
-                  <PantryIcon className="w-5 h-5 text-sand-500" />
-                  <span className="flex-1">Pantry</span>
-                  <ChevronRightIcon className="w-4 h-4 text-sand-400" />
-                </a>
+                  Metric
+                </button>
               </div>
-
-              {/* Settings Section */}
-              <div className="px-4 pt-4 pb-4 border-t border-sand-200 mt-2">
-                <div className="text-xs font-medium text-sand-500 uppercase tracking-wide mb-3">Settings</div>
-
-                {/* Units picker */}
-                <div className="mb-4">
-                  <div className="text-sm text-sand-700 mb-2">Measurements</div>
-                  <div className="grid grid-cols-2 bg-sand-100 rounded-lg p-1 gap-1">
-                    <button
-                      onClick={() => { if (useMetric) handleUnitToggle(); }}
-                      className={`py-2 text-sm font-medium rounded-md transition-colors ${
-                        !useMetric ? 'bg-white text-sand-900 shadow-sm' : 'text-sand-600 hover:text-sand-800'
-                      }`}
-                    >
-                      US
-                    </button>
-                    <button
-                      onClick={() => { if (!useMetric) handleUnitToggle(); }}
-                      className={`py-2 text-sm font-medium rounded-md transition-colors ${
-                        useMetric ? 'bg-white text-sand-900 shadow-sm' : 'text-sand-600 hover:text-sand-800'
-                      }`}
-                    >
-                      Metric
-                    </button>
-                  </div>
-                </div>
-
-                {/* Theme picker */}
-                <div className="mb-4">
-                  <div className="text-sm text-sand-700 mb-2">Theme</div>
-                  <div className="grid grid-cols-3 bg-sand-100 rounded-lg p-1 gap-1">
-                    {['system', 'light', 'dark'].map((theme) => (
-                      <button
-                        key={theme}
-                        onClick={() => handleThemeChange(theme)}
-                        className={`py-2 text-sm font-medium rounded-md transition-colors ${
-                          themePreference === theme ? 'bg-white text-sand-900 shadow-sm' : 'text-sand-600 hover:text-sand-800'
-                        }`}
-                      >
-                        {theme.charAt(0).toUpperCase() + theme.slice(1)}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Sign in/out */}
-                {!authLoading && (
-                  <div className="pt-4 border-t border-sand-200">
-                    {isAuthenticated ? (
-                      <button
-                        onClick={() => { signOut(); closeMobileMenu(); }}
-                        className="w-full py-3 text-sm font-medium text-sand-600 hover:text-sand-800 hover:bg-sand-100 rounded-lg transition-colors"
-                      >
-                        Sign out
-                      </button>
-                    ) : (
-                      <button
-                        onClick={() => { setIsAuthModalOpen(true); closeMobileMenu(); }}
-                        className="w-full py-3 text-sm font-medium text-white bg-sand-900 hover:bg-sand-800 rounded-lg transition-colors"
-                      >
-                        Sign in
-                      </button>
-                    )}
-                  </div>
-                )}
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-medium text-sand-500 uppercase">Theme</span>
+              <div className="flex bg-sand-100 rounded-lg p-0.5">
+                {['system', 'light', 'dark'].map((theme) => (
+                  <button
+                    key={theme}
+                    onClick={() => handleThemeChange(theme)}
+                    className={`px-2 py-1 text-xs font-medium rounded-md ${
+                      themePreference === theme ? 'bg-white text-sand-900 shadow-sm' : 'text-sand-600'
+                    }`}
+                  >
+                    {theme.charAt(0).toUpperCase() + theme.slice(1)}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
-        </>
+
+          {/* Sign in/out */}
+          {!authLoading && (
+            <div className="p-4 pt-0">
+              {isAuthenticated ? (
+                <button
+                  onClick={() => { signOut(); setIsMobileMenuOpen(false); }}
+                  className="w-full py-2.5 text-sm font-medium text-sand-600 hover:bg-sand-50 rounded-lg"
+                >
+                  Sign out
+                </button>
+              ) : (
+                <button
+                  onClick={() => { setIsAuthModalOpen(true); setIsMobileMenuOpen(false); }}
+                  className="w-full py-2.5 text-sm font-medium text-white bg-sand-900 hover:bg-sand-800 rounded-lg"
+                >
+                  Sign in
+                </button>
+              )}
+            </div>
+          )}
+        </div>
       )}
 
       {/* Auth Modal */}
