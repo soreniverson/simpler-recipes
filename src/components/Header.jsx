@@ -47,24 +47,33 @@ function SettingsIcon({ className = "w-5 h-5" }) {
   );
 }
 
-function CheckIcon({ className = "w-4 h-4" }) {
+function MenuIcon({ className = "w-5 h-5" }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
     </svg>
   );
 }
 
-function UserIcon({ className = "w-5 h-5" }) {
+function XIcon({ className = "w-5 h-5" }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  );
+}
+
+function ChevronRightIcon({ className = "w-4 h-4" }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.25 4.5l7.5 7.5-7.5 7.5" />
     </svg>
   );
 }
 
 export default function Header() {
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [favoritesCount, setFavoritesCount] = useState(0);
@@ -73,7 +82,7 @@ export default function Header() {
   const [themePreference, setThemePref] = useState('system');
   const mobileSearchRef = useRef(null);
   const settingsRef = useRef(null);
-  const mobileSettingsRef = useRef(null);
+  const mobileMenuRef = useRef(null);
 
   const { user, isAuthenticated, loading: authLoading, signOut } = useAuth();
 
@@ -129,10 +138,7 @@ export default function Header() {
       if (mobileSearchRef.current && !mobileSearchRef.current.contains(event.target)) {
         setIsMobileSearchOpen(false);
       }
-      // Check both desktop and mobile settings refs
-      const isInsideDesktopSettings = settingsRef.current && settingsRef.current.contains(event.target);
-      const isInsideMobileSettings = mobileSettingsRef.current && mobileSettingsRef.current.contains(event.target);
-      if (!isInsideDesktopSettings && !isInsideMobileSettings) {
+      if (settingsRef.current && !settingsRef.current.contains(event.target)) {
         setIsSettingsOpen(false);
       }
     }
@@ -140,12 +146,43 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Close mobile menu on escape
+  useEffect(() => {
+    function handleEscape(event) {
+      if (event.key === 'Escape') {
+        setIsMobileMenuOpen(false);
+      }
+    }
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   const handleMobileSearchToggle = useCallback(() => {
     setIsMobileSearchOpen(prev => !prev);
   }, []);
 
   const handleSettingsToggle = useCallback(() => {
     setIsSettingsOpen(prev => !prev);
+  }, []);
+
+  const handleMobileMenuToggle = useCallback(() => {
+    setIsMobileMenuOpen(prev => !prev);
+  }, []);
+
+  const closeMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(false);
   }, []);
 
   return (
@@ -169,7 +206,7 @@ export default function Header() {
             />
           </div>
 
-          {/* Right side - favorites, pantry, plan, settings */}
+          {/* Desktop nav - favorites, plan, pantry, settings */}
           <div className="hidden sm:flex items-center gap-1 flex-shrink-0 justify-end">
             <a
               href="/favorites"
@@ -282,7 +319,7 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Mobile icons */}
+          {/* Mobile icons - just search and hamburger */}
           <div className="flex sm:hidden items-center gap-1 ml-auto">
             <button
               onClick={handleMobileSearchToggle}
@@ -292,115 +329,14 @@ export default function Header() {
             >
               <SearchIcon className="w-5 h-5" />
             </button>
-            <a
-              href="/favorites"
-              className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-              aria-label="Favorites"
+            <button
+              onClick={handleMobileMenuToggle}
+              className="p-2 text-sand-600 hover:text-sand-900 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Menu"
+              aria-expanded={isMobileMenuOpen}
             >
-              <HeartIcon className="w-5 h-5" />
-            </a>
-            <a
-              href="/plan"
-              className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-              aria-label="Meal Plan"
-            >
-              <CalendarIcon className="w-5 h-5" />
-            </a>
-            <a
-              href="/pantry"
-              className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-              aria-label="Pantry"
-            >
-              <PantryIcon className="w-5 h-5" />
-            </a>
-            {/* Settings dropdown (mobile) */}
-            <div className="relative" ref={mobileSettingsRef}>
-              <button
-                onClick={handleSettingsToggle}
-                className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-                aria-label="Settings"
-                aria-expanded={isSettingsOpen}
-                aria-haspopup="menu"
-                id="mobile-settings-button"
-              >
-                <SettingsIcon className="w-5 h-5" />
-              </button>
-              {isSettingsOpen && (
-                <div
-                  className="absolute right-0 mt-1 w-48 bg-surface rounded-xl shadow-lg border border-sand-200 p-2.5 z-50"
-                  role="menu"
-                  aria-labelledby="mobile-settings-button"
-                >
-                  {/* Units picker */}
-                  <div className="mb-2">
-                    <div className="text-[11px] font-medium text-sand-500 mb-1">Measurements</div>
-                    <div className="grid grid-cols-2 bg-sand-100 rounded p-0.5 gap-0.5" role="radiogroup">
-                      <button
-                        onClick={() => { if (useMetric) handleUnitToggle(); }}
-                        className={`py-1 text-[11px] font-medium rounded transition-colors ${
-                          !useMetric ? 'bg-surface text-sand-900' : 'text-sand-600 hover:text-sand-800'
-                        }`}
-                        role="radio"
-                        aria-checked={!useMetric}
-                      >
-                        US
-                      </button>
-                      <button
-                        onClick={() => { if (!useMetric) handleUnitToggle(); }}
-                        className={`py-1 text-[11px] font-medium rounded transition-colors ${
-                          useMetric ? 'bg-surface text-sand-900' : 'text-sand-600 hover:text-sand-800'
-                        }`}
-                        role="radio"
-                        aria-checked={useMetric}
-                      >
-                        Metric
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Theme picker */}
-                  <div className="mb-2">
-                    <div className="text-[11px] font-medium text-sand-500 mb-1">Theme</div>
-                    <div className="grid grid-cols-3 bg-sand-100 rounded p-0.5 gap-0.5" role="radiogroup">
-                      {['system', 'light', 'dark'].map((theme) => (
-                        <button
-                          key={theme}
-                          onClick={() => handleThemeChange(theme)}
-                          className={`py-1 text-[11px] font-medium rounded transition-colors ${
-                            themePreference === theme ? 'bg-surface text-sand-900' : 'text-sand-600 hover:text-sand-800'
-                          }`}
-                          role="radio"
-                          aria-checked={themePreference === theme}
-                        >
-                          {theme.charAt(0).toUpperCase() + theme.slice(1)}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Sign in/out */}
-                  {!authLoading && (
-                    <div className="pt-2 border-t border-sand-200">
-                      {isAuthenticated ? (
-                        <button
-                          onClick={() => { signOut(); setIsSettingsOpen(false); }}
-                          className="w-full py-1.5 text-[11px] font-medium text-sand-600 hover:text-sand-800 hover:bg-sand-100 rounded transition-colors"
-                        >
-                          Sign out
-                        </button>
-                      ) : (
-                        <button
-                          onClick={() => { setIsAuthModalOpen(true); setIsSettingsOpen(false); }}
-                          className="w-full py-1.5 text-[11px] font-medium text-sand-600 hover:text-sand-800 hover:bg-sand-100 rounded transition-colors"
-                        >
-                          Sign in
-                        </button>
-                      )}
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
+              <MenuIcon className="w-5 h-5" />
+            </button>
           </div>
         </div>
 
@@ -415,6 +351,137 @@ export default function Header() {
           </div>
         )}
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-50 sm:hidden">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/50"
+            onClick={closeMobileMenu}
+          />
+
+          {/* Menu Panel */}
+          <div
+            ref={mobileMenuRef}
+            className="absolute right-0 top-0 h-full w-72 bg-surface shadow-xl flex flex-col"
+          >
+            {/* Menu Header */}
+            <div className="flex items-center justify-between p-4 border-b border-sand-200">
+              <span className="font-medium text-sand-900">Menu</span>
+              <button
+                onClick={closeMobileMenu}
+                className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+                aria-label="Close menu"
+              >
+                <XIcon className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Menu Links */}
+            <nav className="flex-1 overflow-y-auto p-4">
+              <div className="space-y-1">
+                <a
+                  href="/favorites"
+                  onClick={closeMobileMenu}
+                  className="flex items-center gap-3 px-3 py-3 text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+                >
+                  <HeartIcon className="w-5 h-5 text-sand-500" />
+                  <span className="flex-1">Favorites</span>
+                  <ChevronRightIcon className="w-4 h-4 text-sand-400" />
+                </a>
+                <a
+                  href="/plan"
+                  onClick={closeMobileMenu}
+                  className="flex items-center gap-3 px-3 py-3 text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+                >
+                  <CalendarIcon className="w-5 h-5 text-sand-500" />
+                  <span className="flex-1">Meal Plan</span>
+                  <ChevronRightIcon className="w-4 h-4 text-sand-400" />
+                </a>
+                <a
+                  href="/pantry"
+                  onClick={closeMobileMenu}
+                  className="flex items-center gap-3 px-3 py-3 text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+                >
+                  <PantryIcon className="w-5 h-5 text-sand-500" />
+                  <span className="flex-1">Pantry</span>
+                  <ChevronRightIcon className="w-4 h-4 text-sand-400" />
+                </a>
+              </div>
+
+              {/* Settings Section */}
+              <div className="mt-6 pt-6 border-t border-sand-200">
+                <div className="px-3 mb-3">
+                  <div className="text-xs font-medium text-sand-500 uppercase tracking-wide">Settings</div>
+                </div>
+
+                {/* Units picker */}
+                <div className="px-3 mb-4">
+                  <div className="text-sm text-sand-700 mb-2">Measurements</div>
+                  <div className="grid grid-cols-2 bg-sand-100 rounded-lg p-1 gap-1">
+                    <button
+                      onClick={() => { if (useMetric) handleUnitToggle(); }}
+                      className={`py-2 text-sm font-medium rounded-md transition-colors ${
+                        !useMetric ? 'bg-surface text-sand-900 shadow-sm' : 'text-sand-600 hover:text-sand-800'
+                      }`}
+                    >
+                      US
+                    </button>
+                    <button
+                      onClick={() => { if (!useMetric) handleUnitToggle(); }}
+                      className={`py-2 text-sm font-medium rounded-md transition-colors ${
+                        useMetric ? 'bg-surface text-sand-900 shadow-sm' : 'text-sand-600 hover:text-sand-800'
+                      }`}
+                    >
+                      Metric
+                    </button>
+                  </div>
+                </div>
+
+                {/* Theme picker */}
+                <div className="px-3 mb-4">
+                  <div className="text-sm text-sand-700 mb-2">Theme</div>
+                  <div className="grid grid-cols-3 bg-sand-100 rounded-lg p-1 gap-1">
+                    {['system', 'light', 'dark'].map((theme) => (
+                      <button
+                        key={theme}
+                        onClick={() => handleThemeChange(theme)}
+                        className={`py-2 text-sm font-medium rounded-md transition-colors ${
+                          themePreference === theme ? 'bg-surface text-sand-900 shadow-sm' : 'text-sand-600 hover:text-sand-800'
+                        }`}
+                      >
+                        {theme.charAt(0).toUpperCase() + theme.slice(1)}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+            {/* Sign in/out at bottom */}
+            {!authLoading && (
+              <div className="p-4 border-t border-sand-200">
+                {isAuthenticated ? (
+                  <button
+                    onClick={() => { signOut(); closeMobileMenu(); }}
+                    className="w-full py-3 text-sm font-medium text-sand-600 hover:text-sand-800 hover:bg-sand-100 rounded-lg transition-colors"
+                  >
+                    Sign out
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => { setIsAuthModalOpen(true); closeMobileMenu(); }}
+                    className="w-full py-3 text-sm font-medium text-white bg-sand-900 hover:bg-sand-800 rounded-lg transition-colors"
+                  >
+                    Sign in
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Auth Modal */}
       <AuthModal
