@@ -1,8 +1,10 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, useCallback } from 'react'
 import { scaleIngredients, parseServings } from '../utils/scaleIngredient'
 import { formatFraction } from '../utils/formatFraction'
 import { isMetric } from '../utils/settings'
 import { convertIngredients } from '../utils/measurements'
+import { getPantryItems, addPantryItems } from '../utils/pantry'
+import { isIngredientMatched, extractIngredientName, calculateRecipeMatch } from '../utils/ingredientMatcher'
 
 function CopyIcon() {
   return (
@@ -36,6 +38,22 @@ function PlusIcon() {
   )
 }
 
+function CheckIcon() {
+  return (
+    <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
+  )
+}
+
+function PantryIcon() {
+  return (
+    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+    </svg>
+  )
+}
+
 // Clean up common formatting issues in ingredient text
 function cleanIngredient(text) {
   return text
@@ -56,6 +74,8 @@ export default function ScalableIngredients({
   const [currentServings, setCurrentServings] = useState(originalServings)
   const [copyStatus, setCopyStatus] = useState('')
   const [useMetric, setUseMetric] = useState(() => isMetric())
+  const [pantryItems, setPantryItems] = useState([])
+  const [addedStatus, setAddedStatus] = useState('')
 
   const isScaled = currentServings !== originalServings
 
@@ -67,6 +87,18 @@ export default function ScalableIngredients({
 
     window.addEventListener('settings-changed', handleSettingsChange)
     return () => window.removeEventListener('settings-changed', handleSettingsChange)
+  }, [])
+
+  // Load pantry items and listen for changes
+  useEffect(() => {
+    const updatePantry = () => {
+      const items = getPantryItems()
+      setPantryItems(items.map(i => i.name))
+    }
+
+    updatePantry()
+    window.addEventListener('pantry-changed', updatePantry)
+    return () => window.removeEventListener('pantry-changed', updatePantry)
   }, [])
 
   // Scale ingredients when servings change
@@ -117,6 +149,32 @@ export default function ScalableIngredients({
     }
   }
 
+  // Calculate which ingredients are matched with pantry
+  const matchInfo = useMemo(() => {
+    if (pantryItems.length === 0) {
+      return { matched: 0, total: ingredients.length, missingIngredients: ingredients }
+    }
+    return calculateRecipeMatch(pantryItems, ingredients)
+  }, [pantryItems, ingredients])
+
+  // Check if a specific ingredient is in pantry
+  const isInPantry = useCallback((ingredient) => {
+    return isIngredientMatched(ingredient, pantryItems)
+  }, [pantryItems])
+
+  // Add missing ingredients to pantry
+  const handleAddMissing = useCallback(() => {
+    const missingNames = matchInfo.missingIngredients
+      .map(ing => extractIngredientName(ing))
+      .filter(name => name && name.length >= 2)
+
+    const added = addPantryItems(missingNames)
+    if (added > 0) {
+      setAddedStatus(`Added ${added} item${added !== 1 ? 's' : ''}`)
+      setTimeout(() => setAddedStatus(''), 2000)
+    }
+  }, [matchInfo.missingIngredients])
+
   return (
     <div className="bg-sand-50 rounded-2xl shadow-sm p-5 print:shadow-none print:rounded-none">
       {/* Header */}
@@ -162,17 +220,53 @@ export default function ScalableIngredients({
         </span>
       </div>
 
+      {/* Pantry match indicator */}
+      {pantryItems.length > 0 && (
+        <div className="flex items-center justify-between mb-4 pb-3 border-b border-sand-200 print:hidden">
+          <span className="text-sm text-sand-600">
+            <span className="font-medium text-sand-800">{matchInfo.matched}/{matchInfo.total}</span> ingredients in pantry
+          </span>
+          {matchInfo.missingIngredients.length > 0 && (
+            <button
+              onClick={handleAddMissing}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-sand-600 hover:text-sand-800 hover:bg-sand-100 rounded-lg transition-colors"
+            >
+              <PantryIcon />
+              <span>{addedStatus || `Add ${matchInfo.missingIngredients.length} missing`}</span>
+            </button>
+          )}
+        </div>
+      )}
+
       {/* Ingredients list */}
       <ul className="space-y-2.5">
-        {scaledIngredients.map((ingredient, index) => (
-          <li
-            key={index}
-            className="flex items-start gap-2.5 text-sand-700 text-sm leading-relaxed"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-sand-400 mt-1.5 flex-shrink-0" aria-hidden="true" />
-            <span>{cleanIngredient(ingredient)}</span>
-          </li>
-        ))}
+        {scaledIngredients.map((ingredient, index) => {
+          const originalIngredient = ingredients[index]
+          const matched = pantryItems.length > 0 && isInPantry(originalIngredient)
+          return (
+            <li
+              key={index}
+              className={`flex items-start gap-2.5 text-sm leading-relaxed ${
+                matched ? 'text-sand-800' : 'text-sand-700'
+              }`}
+            >
+              {pantryItems.length > 0 ? (
+                matched ? (
+                  <span className="w-4 h-4 flex items-center justify-center text-emerald-600 mt-0.5 flex-shrink-0" aria-label="In pantry">
+                    <CheckIcon />
+                  </span>
+                ) : (
+                  <span className="w-4 h-4 flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-sand-400" aria-hidden="true" />
+                  </span>
+                )
+              ) : (
+                <span className="w-1.5 h-1.5 rounded-full bg-sand-400 mt-1.5 flex-shrink-0" aria-hidden="true" />
+              )}
+              <span>{cleanIngredient(ingredient)}</span>
+            </li>
+          )
+        })}
       </ul>
 
       {/* Actions */}

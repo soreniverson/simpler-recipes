@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import RecipeCard from '../../components/RecipeCard.jsx';
+import RecipeGrid from '../../components/RecipeGrid.jsx';
 import fs from 'fs';
 import path from 'path';
 
@@ -72,13 +72,7 @@ const icon = collectionIcons[slug!] || defaultIcon;
       </header>
 
       <section aria-label="Recipes in this collection">
-        <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {collection.recipes.map((recipe: any) => (
-            <li>
-              <RecipeCard client:visible recipe={recipe} />
-            </li>
-          ))}
-        </ul>
+        <RecipeGrid client:load recipes={collection.recipes} />
       </section>
     </div>
   </main>

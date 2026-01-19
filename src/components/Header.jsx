@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import SmartInput from './SmartInput';
 import { getFavoritesCount } from '../utils/favorites';
+import { getPantryCount } from '../utils/pantry';
 import { isMetric, toggleUnit, getThemePreference, setThemePreference } from '../utils/settings';
 
 function SearchIcon({ className = "w-5 h-5" }) {
@@ -15,6 +16,14 @@ function HeartIcon({ className = "w-5 h-5" }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+    </svg>
+  );
+}
+
+function PantryIcon({ className = "w-5 h-5" }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
     </svg>
   );
 }
@@ -40,6 +49,7 @@ export default function Header() {
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [favoritesCount, setFavoritesCount] = useState(0);
+  const [pantryCount, setPantryCount] = useState(0);
   const [useMetric, setUseMetric] = useState(false);
   const [themePreference, setThemePref] = useState('system');
   const mobileSearchRef = useRef(null);
@@ -56,6 +66,18 @@ export default function Header() {
 
     window.addEventListener('favorites-changed', handleChange);
     return () => window.removeEventListener('favorites-changed', handleChange);
+  }, []);
+
+  // Get initial pantry count and listen for changes
+  useEffect(() => {
+    setPantryCount(getPantryCount());
+
+    const handlePantryChange = () => {
+      setPantryCount(getPantryCount());
+    };
+
+    window.addEventListener('pantry-changed', handlePantryChange);
+    return () => window.removeEventListener('pantry-changed', handlePantryChange);
   }, []);
 
   // Get initial unit preference and listen for changes
@@ -202,6 +224,18 @@ export default function Header() {
               )}
             </div>
             <a
+              href="/pantry"
+              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+              aria-label={`Pantry${pantryCount > 0 ? ` (${pantryCount} items)` : ''}`}
+            >
+              <PantryIcon className="w-5 h-5" />
+              {pantryCount > 0 && (
+                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] flex items-center justify-center bg-sand-600 text-white text-[10px] font-medium rounded-full px-1">
+                  {pantryCount > 99 ? '99+' : pantryCount}
+                </span>
+              )}
+            </a>
+            <a
               href="/favorites"
               className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
               aria-label={`Favorites${favoritesCount > 0 ? ` (${favoritesCount})` : ''}`}
@@ -298,6 +332,18 @@ export default function Header() {
             >
               <SearchIcon className="w-5 h-5" />
             </button>
+            <a
+              href="/pantry"
+              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+              aria-label={`Pantry${pantryCount > 0 ? ` (${pantryCount} items)` : ''}`}
+            >
+              <PantryIcon className="w-5 h-5" />
+              {pantryCount > 0 && (
+                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] flex items-center justify-center bg-sand-600 text-white text-[10px] font-medium rounded-full px-1">
+                  {pantryCount > 99 ? '99+' : pantryCount}
+                </span>
+              )}
+            </a>
             <a
               href="/favorites"
               className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"

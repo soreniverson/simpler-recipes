@@ -16,7 +16,19 @@ function ImagePlaceholder() {
   );
 }
 
-export default function RecipeCard({ recipe, showFavorite = true }) {
+function CheckCircleIcon() {
+  return (
+    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+    </svg>
+  );
+}
+
+export default function RecipeCard({ recipe, showFavorite = true, matchInfo }) {
+  // matchInfo: { matched: number, total: number, percentage: number } | undefined
+  const hasMatch = matchInfo && matchInfo.total > 0;
+  const isFullMatch = hasMatch && matchInfo.matched === matchInfo.total;
+
   return (
     <div className="relative h-full bg-sand-50 rounded-xl overflow-hidden hover:bg-sand-100/80 transition-all group">
       {/* Favorite button - positioned in top right of image */}
@@ -50,13 +62,25 @@ export default function RecipeCard({ recipe, showFavorite = true }) {
               {recipe.title}
             </h2>
             <div className="flex flex-wrap items-center gap-2 mt-auto">
+              {hasMatch && (
+                <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${
+                  isFullMatch
+                    ? 'bg-emerald-100 text-emerald-700'
+                    : matchInfo.percentage >= 70
+                    ? 'bg-amber-100 text-amber-700'
+                    : 'bg-sand-200/60 text-sand-600'
+                }`}>
+                  {isFullMatch && <CheckCircleIcon />}
+                  {matchInfo.matched}/{matchInfo.total} ingredients
+                </span>
+              )}
               {recipe.totalTime && (
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-sand-200/60 text-sand-600 text-xs">
                   <ClockIcon />
                   {recipe.totalTime}
                 </span>
               )}
-              {recipe.servings && (
+              {recipe.servings && !hasMatch && (
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-sand-200/60 text-sand-600 text-xs">
                   {recipe.servings} servings
                 </span>

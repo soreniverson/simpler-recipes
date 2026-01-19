@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PantryPage from '../components/PantryPage.jsx';
+---
+
+<BaseLayout title="My Pantry - Simpler Recipes">
+  <main id="main-content" class="min-h-screen bg-background">
+    <div class="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
+      <PantryPage client:load />
+    </div>
+  </main>
+</BaseLayout>

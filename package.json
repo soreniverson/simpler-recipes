@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/build-search-index.js",
+    "prebuild": "node scripts/build-search-index.js && node scripts/build-pantry-suggestions.js",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
