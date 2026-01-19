@@ -225,7 +225,7 @@ export default function Header() {
             </div>
             <a
               href="/pantry"
-              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label={`Pantry${pantryCount > 0 ? ` (${pantryCount} items)` : ''}`}
             >
               <PantryIcon className="w-5 h-5" />
@@ -237,7 +237,7 @@ export default function Header() {
             </a>
             <a
               href="/favorites"
-              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label={`Favorites${favoritesCount > 0 ? ` (${favoritesCount})` : ''}`}
             >
               <HeartIcon className="w-5 h-5" />
@@ -334,7 +334,7 @@ export default function Header() {
             </button>
             <a
               href="/pantry"
-              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label={`Pantry${pantryCount > 0 ? ` (${pantryCount} items)` : ''}`}
             >
               <PantryIcon className="w-5 h-5" />
@@ -346,7 +346,7 @@ export default function Header() {
             </a>
             <a
               href="/favorites"
-              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors"
+              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label={`Favorites${favoritesCount > 0 ? ` (${favoritesCount})` : ''}`}
             >
               <HeartIcon className="w-5 h-5" />
