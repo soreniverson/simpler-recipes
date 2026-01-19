@@ -1,0 +1,81 @@
+---
+// This page handles the OAuth callback from Supabase
+// It runs client-side to complete the auth flow
+export const prerender = false;
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signing in... | Simpler Recipes</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #faf9f7;
+    }
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 2px solid #e5e2dc;
+      border-top-color: #57534e;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .message {
+      margin-top: 16px;
+      color: #57534e;
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align: center;">
+    <div class="spinner"></div>
+    <p class="message">Completing sign in...</p>
+  </div>
+
+  <script>
+    import { supabase, isSupabaseConfigured } from '../../utils/supabase';
+
+    // Handle the OAuth callback
+    async function handleCallback() {
+      if (!isSupabaseConfigured() || !supabase) {
+        window.location.href = '/?auth_error=true';
+        return;
+      }
+
+      try {
+        // Supabase automatically handles the token exchange when detectSessionInUrl is true
+        const { data: { session }, error } = await supabase.auth.getSession();
+
+        if (error) {
+          console.error('Auth callback error:', error);
+          window.location.href = '/?auth_error=true';
+          return;
+        }
+
+        if (session) {
+          // Successfully signed in, redirect to home
+          window.location.href = '/?auth_success=true';
+        } else {
+          // No session, redirect to home
+          window.location.href = '/';
+        }
+      } catch (err) {
+        console.error('Auth callback exception:', err);
+        window.location.href = '/?auth_error=true';
+      }
+    }
+
+    handleCallback();
+  </script>
+</body>
+</html>

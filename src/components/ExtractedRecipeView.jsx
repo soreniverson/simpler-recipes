@@ -57,15 +57,23 @@ export default function ExtractedRecipeView() {
   const [shareLoading, setShareLoading] = useState(false)
   const [savedId, setSavedId] = useState(null)
   const [isAnimating, setIsAnimating] = useState(false)
+  const [showLastFreeBanner, setShowLastFreeBanner] = useState(false)
 
   useEffect(() => {
-    // Get recipe data from sessionStorage
-    const stored = sessionStorage.getItem('extractedRecipe')
+    // Get recipe data from localStorage
+    const stored = localStorage.getItem('simpler-recipes-extracted')
     if (stored) {
       const data = JSON.parse(stored)
       setRecipe(data.recipe)
       setSourceUrl(data.sourceUrl)
-      // Check if this recipe is already saved (by savedId in sessionStorage)
+      // Check if this was the last free extraction
+      if (data.isLastFree) {
+        setShowLastFreeBanner(true)
+        // Clear the flag so it doesn't show again on refresh
+        data.isLastFree = false
+        localStorage.setItem('simpler-recipes-extracted', JSON.stringify(data))
+      }
+      // Check if this recipe is already saved
       if (data.savedId && isExtractedFavorite(data.savedId)) {
         setSavedId(data.savedId)
       }
@@ -80,12 +88,12 @@ export default function ExtractedRecipeView() {
       // Remove from favorites
       removeExtractedFavorite(savedId)
       setSavedId(null)
-      // Update sessionStorage
-      const stored = sessionStorage.getItem('extractedRecipe')
+      // Update localStorage
+      const stored = localStorage.getItem('simpler-recipes-extracted')
       if (stored) {
         const data = JSON.parse(stored)
         delete data.savedId
-        sessionStorage.setItem('extractedRecipe', JSON.stringify(data))
+        localStorage.setItem('simpler-recipes-extracted', JSON.stringify(data))
       }
     } else {
       // Add to favorites
@@ -93,12 +101,12 @@ export default function ExtractedRecipeView() {
       setSavedId(newId)
       setIsAnimating(true)
       setTimeout(() => setIsAnimating(false), 300)
-      // Store the ID in sessionStorage so we can track it
-      const stored = sessionStorage.getItem('extractedRecipe')
+      // Store the ID in localStorage so we can track it
+      const stored = localStorage.getItem('simpler-recipes-extracted')
       if (stored) {
         const data = JSON.parse(stored)
         data.savedId = newId
-        sessionStorage.setItem('extractedRecipe', JSON.stringify(data))
+        localStorage.setItem('simpler-recipes-extracted', JSON.stringify(data))
       }
     }
   }, [savedId, recipe, sourceUrl])
@@ -138,14 +146,51 @@ export default function ExtractedRecipeView() {
     <main id="main-content" className="min-h-screen bg-background">
       <div className="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
         <nav className="mb-6 print:hidden">
-          <a
-            href="/"
+          <button
+            onClick={() => window.history.length > 1 ? window.history.back() : window.location.href = '/'}
             className="inline-flex items-center text-sand-600 hover:text-sand-900 transition-colors text-sm"
           >
             <BackIcon />
             <span className="ml-1">Back</span>
-          </a>
+          </button>
         </nav>
+
+        {/* Last free extraction banner */}
+        {showLastFreeBanner && (
+          <div className="mb-6 bg-sand-100 border border-sand-300 rounded-xl p-4 print:hidden">
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 w-8 h-8 bg-sand-200 rounded-full flex items-center justify-center">
+                <svg className="w-4 h-4 text-sand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <p className="text-sand-900 font-medium text-sm">This was your last free extraction</p>
+                <p className="text-sand-600 text-sm mt-1">
+                  Create a free account to continue extracting recipes and sync across devices.
+                </p>
+                <button
+                  className="mt-3 text-sm font-medium text-sand-900 hover:text-sand-700 underline underline-offset-2"
+                  onClick={() => {
+                    // TODO: Implement account creation
+                    alert('Account creation coming soon!')
+                  }}
+                >
+                  Create free account
+                </button>
+              </div>
+              <button
+                onClick={() => setShowLastFreeBanner(false)}
+                className="flex-shrink-0 text-sand-400 hover:text-sand-600 transition-colors"
+                aria-label="Dismiss"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Two-column layout for desktop */}
         <div className="lg:grid lg:grid-cols-[1fr,340px] lg:gap-8 lg:items-start">

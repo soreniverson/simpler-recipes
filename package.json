@@ -11,10 +11,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.2",
     "@astrojs/react": "^4.4.2",
     "@astrojs/sitemap": "^3.7.0",
     "@astrojs/tailwind": "^6.0.2",
     "@astrojs/vercel": "^9.0.4",
+    "@supabase/supabase-js": "^2.90.1",
     "@vercel/kv": "^3.0.0",
     "astro": "^5.16.11",
     "fuse.js": "^7.1.0",

@@ -1,56 +1,176 @@
 /**
  * Favorites utility for managing saved recipes in localStorage
- * Supports two types:
- * - Curated recipes: { type: 'curated', slug: string }
- * - Extracted recipes: { type: 'extracted', id: string, recipe: object, sourceUrl: string }
+ * Supports two types of favorites:
+ * - Curated recipes: { type: 'curated', slug: string, folderId?: string }
+ * - Extracted recipes: { type: 'extracted', id: string, recipe: object, sourceUrl: string, folderId?: string }
+ *
+ * Data structure:
+ * {
+ *   version: 2,
+ *   folders: [{ id, name, createdAt }],
+ *   items: [favorite objects]
+ * }
  */
 
 const STORAGE_KEY = 'simpler-recipes-favorites';
+const CURRENT_VERSION = 2;
 
 /**
- * Generate a unique ID for extracted recipes
+ * Generate a unique ID
  */
 function generateId() {
   return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
 }
 
 /**
- * Migrate old format (array of strings) to new format
+ * Migrate from old formats to current version
  */
-function migrateIfNeeded(data) {
-  if (!Array.isArray(data) || data.length === 0) return data;
+function migrate(data) {
+  // Handle null/undefined
+  if (!data) {
+    return { version: CURRENT_VERSION, folders: [], items: [] };
+  }
 
-  // Check if already in new format (first item is an object with 'type')
-  if (typeof data[0] === 'object' && data[0].type) {
+  // Version 1: Array of strings (slugs only)
+  if (Array.isArray(data) && data.length > 0 && typeof data[0] === 'string') {
+    return {
+      version: CURRENT_VERSION,
+      folders: [],
+      items: data.map(slug => ({ type: 'curated', slug }))
+    };
+  }
+
+  // Version 1.5: Array of objects with type
+  if (Array.isArray(data)) {
+    return {
+      version: CURRENT_VERSION,
+      folders: [],
+      items: data.map(item => {
+        if (typeof item === 'string') {
+          return { type: 'curated', slug: item };
+        }
+        return item;
+      })
+    };
+  }
+
+  // Version 2: Object with folders and items
+  if (data.version === CURRENT_VERSION) {
     return data;
   }
 
-  // Migrate old format (array of slugs) to new format
-  return data.map(slug => ({ type: 'curated', slug }));
+  // Unknown format, start fresh
+  return { version: CURRENT_VERSION, folders: [], items: [] };
 }
 
 /**
- * Get all favorites from localStorage
- * @returns {Array} Array of favorite objects
+ * Get the full favorites data structure
  */
-export function getFavorites() {
-  if (typeof window === 'undefined') return [];
+function getData() {
+  if (typeof window === 'undefined') {
+    return { version: CURRENT_VERSION, folders: [], items: [] };
+  }
 
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (!stored) return [];
+    if (!stored) {
+      return { version: CURRENT_VERSION, folders: [], items: [] };
+    }
     const data = JSON.parse(stored);
-    const migrated = migrateIfNeeded(data);
+    const migrated = migrate(data);
 
-    // Save migrated data back if it changed
-    if (migrated !== data) {
+    // Save migrated data back if version changed
+    if (data.version !== CURRENT_VERSION) {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(migrated));
     }
 
     return migrated;
   } catch {
-    return [];
+    return { version: CURRENT_VERSION, folders: [], items: [] };
   }
+}
+
+/**
+ * Save data and dispatch change event
+ */
+function saveData(data) {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  window.dispatchEvent(new CustomEvent('favorites-changed', { detail: data }));
+}
+
+// ============ FOLDER FUNCTIONS ============
+
+/**
+ * Get all folders
+ * @returns {Array} Array of folder objects { id, name, createdAt }
+ */
+export function getFolders() {
+  return getData().folders;
+}
+
+/**
+ * Create a new folder
+ * @param {string} name - Folder name
+ * @returns {string} The new folder's ID
+ */
+export function createFolder(name) {
+  const data = getData();
+  const id = generateId();
+  data.folders.push({ id, name: name.trim(), createdAt: Date.now() });
+  saveData(data);
+  return id;
+}
+
+/**
+ * Rename a folder
+ * @param {string} folderId - Folder ID
+ * @param {string} newName - New folder name
+ */
+export function renameFolder(folderId, newName) {
+  const data = getData();
+  const folder = data.folders.find(f => f.id === folderId);
+  if (folder) {
+    folder.name = newName.trim();
+    saveData(data);
+  }
+}
+
+/**
+ * Delete a folder (moves items to unfiled)
+ * @param {string} folderId - Folder ID
+ */
+export function deleteFolder(folderId) {
+  const data = getData();
+  data.folders = data.folders.filter(f => f.id !== folderId);
+  // Move items from deleted folder to unfiled
+  data.items.forEach(item => {
+    if (item.folderId === folderId) {
+      delete item.folderId;
+    }
+  });
+  saveData(data);
+}
+
+// ============ FAVORITE ITEM FUNCTIONS ============
+
+/**
+ * Get all favorites (items only)
+ * @returns {Array} Array of favorite objects
+ */
+export function getFavorites() {
+  return getData().items;
+}
+
+/**
+ * Get favorites in a specific folder
+ * @param {string|null} folderId - Folder ID or null for unfiled
+ * @returns {Array} Array of favorite objects
+ */
+export function getFavoritesInFolder(folderId) {
+  return getData().items.filter(item =>
+    folderId ? item.folderId === folderId : !item.folderId
+  );
 }
 
 /**
@@ -92,15 +212,15 @@ export function isExtractedFavorite(id) {
 /**
  * Add a curated recipe to favorites
  * @param {string} slug - Recipe slug
+ * @param {string|null} folderId - Optional folder ID
  */
-export function addFavorite(slug) {
-  if (typeof window === 'undefined') return;
-
-  const favorites = getFavorites();
-  if (!favorites.some(f => f.type === 'curated' && f.slug === slug)) {
-    favorites.push({ type: 'curated', slug });
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
-    window.dispatchEvent(new CustomEvent('favorites-changed', { detail: { favorites } }));
+export function addFavorite(slug, folderId = null) {
+  const data = getData();
+  if (!data.items.some(f => f.type === 'curated' && f.slug === slug)) {
+    const item = { type: 'curated', slug };
+    if (folderId) item.folderId = folderId;
+    data.items.push(item);
+    saveData(data);
   }
 }
 
@@ -108,16 +228,16 @@ export function addFavorite(slug) {
  * Add an extracted recipe to favorites
  * @param {object} recipe - Full recipe object
  * @param {string} sourceUrl - Original URL
+ * @param {string|null} folderId - Optional folder ID
  * @returns {string} The generated ID for the saved recipe
  */
-export function addExtractedFavorite(recipe, sourceUrl) {
-  if (typeof window === 'undefined') return null;
-
-  const favorites = getFavorites();
+export function addExtractedFavorite(recipe, sourceUrl, folderId = null) {
+  const data = getData();
   const id = generateId();
-  favorites.push({ type: 'extracted', id, recipe, sourceUrl });
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
-  window.dispatchEvent(new CustomEvent('favorites-changed', { detail: { favorites } }));
+  const item = { type: 'extracted', id, recipe, sourceUrl };
+  if (folderId) item.folderId = folderId;
+  data.items.push(item);
+  saveData(data);
   return id;
 }
 
@@ -126,11 +246,9 @@ export function addExtractedFavorite(recipe, sourceUrl) {
  * @param {string} slug - Recipe slug
  */
 export function removeFavorite(slug) {
-  if (typeof window === 'undefined') return;
-
-  const favorites = getFavorites().filter(f => !(f.type === 'curated' && f.slug === slug));
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
-  window.dispatchEvent(new CustomEvent('favorites-changed', { detail: { favorites } }));
+  const data = getData();
+  data.items = data.items.filter(f => !(f.type === 'curated' && f.slug === slug));
+  saveData(data);
 }
 
 /**
@@ -138,11 +256,31 @@ export function removeFavorite(slug) {
  * @param {string} id - Extracted recipe ID
  */
 export function removeExtractedFavorite(id) {
-  if (typeof window === 'undefined') return;
+  const data = getData();
+  data.items = data.items.filter(f => !(f.type === 'extracted' && f.id === id));
+  saveData(data);
+}
 
-  const favorites = getFavorites().filter(f => !(f.type === 'extracted' && f.id === id));
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
-  window.dispatchEvent(new CustomEvent('favorites-changed', { detail: { favorites } }));
+/**
+ * Move a favorite to a different folder
+ * @param {string} itemId - For extracted: the id. For curated: the slug
+ * @param {string} type - 'curated' or 'extracted'
+ * @param {string|null} folderId - Target folder ID or null for unfiled
+ */
+export function moveFavorite(itemId, type, folderId) {
+  const data = getData();
+  const item = data.items.find(f =>
+    type === 'curated' ? (f.type === 'curated' && f.slug === itemId)
+                       : (f.type === 'extracted' && f.id === itemId)
+  );
+  if (item) {
+    if (folderId) {
+      item.folderId = folderId;
+    } else {
+      delete item.folderId;
+    }
+    saveData(data);
+  }
 }
 
 /**
@@ -188,8 +326,23 @@ export function getFavoritesCount() {
  * Clear all favorites
  */
 export function clearFavorites() {
-  if (typeof window === 'undefined') return;
+  saveData({ version: CURRENT_VERSION, folders: [], items: [] });
+}
 
-  localStorage.removeItem(STORAGE_KEY);
-  window.dispatchEvent(new CustomEvent('favorites-changed', { detail: { favorites: [] } }));
+/**
+ * Get folder by ID
+ * @param {string} folderId - Folder ID
+ * @returns {object|null} Folder object or null
+ */
+export function getFolder(folderId) {
+  return getData().folders.find(f => f.id === folderId) || null;
+}
+
+/**
+ * Get count of items in a folder
+ * @param {string|null} folderId - Folder ID or null for unfiled
+ * @returns {number}
+ */
+export function getFolderCount(folderId) {
+  return getFavoritesInFolder(folderId).length;
 }

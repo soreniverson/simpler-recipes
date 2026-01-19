@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MealPlanPage from '../components/MealPlanPage.jsx';
+
+// Get all recipes for the recipe picker
+const recipeFiles = import.meta.glob('../content/recipes/*.json', { eager: true });
+const recipes = Object.values(recipeFiles).map(mod => mod.default || mod);
+---
+
+<BaseLayout title="Meal Plan - Simpler Recipes">
+  <main id="main-content" class="min-h-screen bg-background">
+    <div class="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
+      <MealPlanPage client:load recipes={recipes} />
+    </div>
+  </main>
+</BaseLayout>

@@ -1,5 +1,7 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { createSearchIndex, searchRecipes, getPrimaryMatch } from '../utils/searchIndex';
+import { getAnonymousToken } from '../utils/anonymousToken';
+import AuthModal from './AuthModal';
 
 /**
  * Detect if input looks like a URL
@@ -203,12 +205,21 @@ export default function SmartInput({
   const [isSearching, setIsSearching] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isExtracting, setIsExtracting] = useState(false);
+  const [extractionProgress, setExtractionProgress] = useState('');
   const [error, setError] = useState(null);
   const [isDataLoaded, setIsDataLoaded] = useState(!!cachedSearchData);
+  const [limitReached, setLimitReached] = useState(false);
+  const [limitIsAuthenticated, setLimitIsAuthenticated] = useState(false);
+  const [usageInfo, setUsageInfo] = useState(null);
   const containerRef = useRef(null);
   const inputRef = useRef(null);
 
   const isUrl = looksLikeUrl(value);
+
+  // Initialize anonymous token on mount
+  useEffect(() => {
+    getAnonymousToken();
+  }, []);
 
   // Load search data when input is focused or user starts typing
   const ensureSearchData = useCallback(async () => {
@@ -291,41 +302,103 @@ export default function SmartInput({
     if (!isUrl) return;
 
     setIsExtracting(true);
+    setExtractionProgress('Starting extraction...');
     setError(null);
     setIsOpen(false);
 
-    try {
-      let urlToFetch = value.trim();
-      if (!/^https?:\/\//i.test(urlToFetch)) {
-        urlToFetch = 'https://' + urlToFetch;
-      }
-
-      const response = await fetch('/api/extract', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url: urlToFetch }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to extract recipe');
-      }
-
-      sessionStorage.setItem('extractedRecipe', JSON.stringify({
-        recipe: data,
-        sourceUrl: urlToFetch,
-      }));
-
-      if (onUrlSubmit) {
-        onUrlSubmit(data, urlToFetch);
-      } else {
-        window.location.href = '/recipe';
-      }
-    } catch (err) {
-      setError(err.message);
-      setIsExtracting(false);
+    let urlToFetch = value.trim();
+    if (!/^https?:\/\//i.test(urlToFetch)) {
+      urlToFetch = 'https://' + urlToFetch;
     }
+
+    // Use SSE endpoint for progress updates
+    const eventSource = new EventSource(`/api/extract-stream?url=${encodeURIComponent(urlToFetch)}`);
+
+    eventSource.addEventListener('progress', (event) => {
+      try {
+        const data = JSON.parse(event.data);
+        setExtractionProgress(data.step || 'Processing...');
+      } catch {
+        // Ignore parse errors
+      }
+    });
+
+    eventSource.addEventListener('limit_reached', (event) => {
+      eventSource.close();
+      try {
+        const data = JSON.parse(event.data);
+        setLimitReached(true);
+        setLimitIsAuthenticated(!!data.isAuthenticated);
+        setUsageInfo({ current: data.current, limit: data.limit });
+      } catch {
+        setLimitReached(true);
+      }
+      setIsExtracting(false);
+      setExtractionProgress('');
+    });
+
+    eventSource.addEventListener('usage', (event) => {
+      try {
+        const data = JSON.parse(event.data);
+        setUsageInfo(data);
+      } catch {
+        // Ignore parse errors
+      }
+    });
+
+    eventSource.addEventListener('complete', (event) => {
+      eventSource.close();
+      try {
+        const data = JSON.parse(event.data);
+
+        // Store extraction with usage info for banner display
+        localStorage.setItem('simpler-recipes-extracted', JSON.stringify({
+          recipe: data.recipe,
+          sourceUrl: urlToFetch,
+          isLastFree: usageInfo?.isLastFree || false,
+          remaining: usageInfo?.remaining ?? null,
+        }));
+
+        if (onUrlSubmit) {
+          onUrlSubmit(data.recipe, urlToFetch);
+        } else {
+          window.location.href = '/recipe';
+        }
+      } catch (err) {
+        setError('Failed to parse recipe data');
+        setIsExtracting(false);
+        setExtractionProgress('');
+      }
+    });
+
+    eventSource.addEventListener('error', (event) => {
+      eventSource.close();
+      try {
+        // Try to get error message from event data
+        if (event.data) {
+          const data = JSON.parse(event.data);
+          setError(data.error || 'Failed to extract recipe');
+        } else {
+          setError('Connection lost during extraction');
+        }
+      } catch {
+        setError('Failed to extract recipe');
+      }
+      setIsExtracting(false);
+      setExtractionProgress('');
+    });
+
+    // Handle connection errors
+    eventSource.onerror = () => {
+      if (eventSource.readyState === EventSource.CLOSED) {
+        // Already handled by error event
+        return;
+      }
+      eventSource.close();
+      setError('Connection failed');
+      setIsExtracting(false);
+      setExtractionProgress('');
+    };
   };
 
   const handleClear = useCallback(() => {
@@ -340,13 +413,51 @@ export default function SmartInput({
     setValue('');
   }, []);
 
-  // Loading state
+  // Limit reached - show different UI based on auth status
+  if (limitReached) {
+    // Authenticated users see a simple message, not an auth modal
+    if (limitIsAuthenticated) {
+      return (
+        <div className="fixed inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center px-4 z-50">
+          <div className="bg-surface rounded-2xl shadow-lg border border-sand-200 p-6 max-w-sm w-full text-center">
+            <div className="w-12 h-12 rounded-full bg-sand-100 flex items-center justify-center mx-auto mb-4">
+              <svg className="w-6 h-6 text-sand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-lg font-semibold text-sand-900 mb-2">Monthly limit reached</h3>
+            <p className="text-sand-600 text-sm mb-6">
+              You've used all {usageInfo?.limit || 30} of your monthly extractions. Your limit resets at the start of next month.
+            </p>
+            <button
+              onClick={() => setLimitReached(false)}
+              className="w-full px-4 py-2 bg-sand-800 text-white rounded-lg hover:bg-sand-900 transition-colors"
+            >
+              Got it
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    // Anonymous users see auth modal
+    return (
+      <AuthModal
+        isOpen={true}
+        onClose={() => setLimitReached(false)}
+        title="Create a free account"
+        description={`You've used your ${usageInfo?.limit || 3} free extractions. Sign up to get 30 extractions per month.`}
+      />
+    );
+  }
+
+  // Loading state with progress
   if (isExtracting) {
     return (
       <div className="fixed inset-0 bg-background flex flex-col items-center justify-center px-4 z-50">
-        <div className="text-center" role="status" aria-live="polite">
+        <div className="text-center max-w-sm" role="status" aria-live="polite">
           <div className="inline-block w-8 h-8 border-2 border-sand-300 border-t-sand-700 rounded-full animate-spin mb-4"></div>
-          <p className="text-sand-600 text-base">Extracting recipe...</p>
+          <p className="text-sand-600 text-base">{extractionProgress || 'Extracting recipe...'}</p>
         </div>
       </div>
     );
