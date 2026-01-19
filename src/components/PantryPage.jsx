@@ -36,16 +36,14 @@ function SparklesIcon({ className = "w-5 h-5" }) {
 
 function PantryItem({ item, onRemove }) {
   return (
-    <div className="group flex items-center justify-between gap-2 px-3 py-2 bg-sand-100 rounded-lg hover:bg-sand-200/70 transition-colors">
-      <span className="text-sand-800 text-sm capitalize">{item.name}</span>
-      <button
-        onClick={() => onRemove(item.id)}
-        className="p-1 text-sand-400 hover:text-sand-600 rounded transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100"
-        aria-label={`Remove ${item.name} from pantry`}
-      >
-        <XIcon className="w-4 h-4" />
-      </button>
-    </div>
+    <button
+      onClick={() => onRemove(item.id)}
+      className="group inline-flex items-center gap-1.5 px-3 py-1.5 bg-sand-100 hover:bg-sand-200 rounded-full transition-colors text-sm"
+      aria-label={`Remove ${item.name} from pantry`}
+    >
+      <span className="text-sand-700 capitalize">{item.name}</span>
+      <XIcon className="w-3 h-3 text-sand-400 group-hover:text-sand-600" />
+    </button>
   );
 }
 
@@ -206,14 +204,6 @@ export default function PantryPage() {
         </>
       )}
 
-      {/* Tip */}
-      {items.length > 0 && (
-        <div className="mt-8 p-4 bg-sand-50 rounded-xl">
-          <p className="text-sand-600 text-sm">
-            <strong className="text-sand-700">Tip:</strong> Browse recipes to see how many ingredients you already have. Recipes are sorted by match percentage.
-          </p>
-        </div>
-      )}
     </div>
   );
 }

@@ -225,27 +225,17 @@ export default function Header() {
             </div>
             <a
               href="/pantry"
-              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-              aria-label={`Pantry${pantryCount > 0 ? ` (${pantryCount} items)` : ''}`}
+              className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Pantry"
             >
               <PantryIcon className="w-5 h-5" />
-              {pantryCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] flex items-center justify-center bg-sand-600 text-white text-[10px] font-medium rounded-full px-1">
-                  {pantryCount > 99 ? '99+' : pantryCount}
-                </span>
-              )}
             </a>
             <a
               href="/favorites"
-              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-              aria-label={`Favorites${favoritesCount > 0 ? ` (${favoritesCount})` : ''}`}
+              className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Favorites"
             >
               <HeartIcon className="w-5 h-5" />
-              {favoritesCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] flex items-center justify-center bg-sand-600 text-white text-[10px] font-medium rounded-full px-1">
-                  {favoritesCount > 99 ? '99+' : favoritesCount}
-                </span>
-              )}
             </a>
           </div>
 
@@ -334,27 +324,17 @@ export default function Header() {
             </button>
             <a
               href="/pantry"
-              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-              aria-label={`Pantry${pantryCount > 0 ? ` (${pantryCount} items)` : ''}`}
+              className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Pantry"
             >
               <PantryIcon className="w-5 h-5" />
-              {pantryCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] flex items-center justify-center bg-sand-600 text-white text-[10px] font-medium rounded-full px-1">
-                  {pantryCount > 99 ? '99+' : pantryCount}
-                </span>
-              )}
             </a>
             <a
               href="/favorites"
-              className="relative p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-              aria-label={`Favorites${favoritesCount > 0 ? ` (${favoritesCount})` : ''}`}
+              className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-100 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Favorites"
             >
               <HeartIcon className="w-5 h-5" />
-              {favoritesCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] flex items-center justify-center bg-sand-600 text-white text-[10px] font-medium rounded-full px-1">
-                  {favoritesCount > 99 ? '99+' : favoritesCount}
-                </span>
-              )}
             </a>
           </div>
         </div>
