@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import ScalableIngredients from './ScalableIngredients'
 import RecipeInstructions from './RecipeInstructions'
 import { addExtractedFavorite, isExtractedFavorite, removeExtractedFavorite } from '../utils/favorites'
+import AuthModal from './AuthModal'
 
 function BackIcon() {
   return (
@@ -55,9 +56,11 @@ export default function ExtractedRecipeView() {
   const [sourceUrl, setSourceUrl] = useState(null)
   const [shareUrl, setShareUrl] = useState('')
   const [shareLoading, setShareLoading] = useState(false)
+  const [shareError, setShareError] = useState(null)
   const [savedId, setSavedId] = useState(null)
   const [isAnimating, setIsAnimating] = useState(false)
   const [showLastFreeBanner, setShowLastFreeBanner] = useState(false)
+  const [showAuthModal, setShowAuthModal] = useState(false)
 
   useEffect(() => {
     // Get recipe data from localStorage
@@ -113,6 +116,7 @@ export default function ExtractedRecipeView() {
 
   const handleShare = async () => {
     setShareLoading(true)
+    setShareError(null)
     try {
       const response = await fetch('/api/share', {
         method: 'POST',
@@ -129,6 +133,7 @@ export default function ExtractedRecipeView() {
       } catch {}
     } catch (err) {
       console.error('Share failed:', err)
+      setShareError('Failed to create share link. Please try again.')
     } finally {
       setShareLoading(false)
     }
@@ -171,10 +176,7 @@ export default function ExtractedRecipeView() {
                 </p>
                 <button
                   className="mt-3 text-sm font-medium text-sand-900 hover:text-sand-700 underline underline-offset-2"
-                  onClick={() => {
-                    // TODO: Implement account creation
-                    alert('Account creation coming soon!')
-                  }}
+                  onClick={() => setShowAuthModal(true)}
                 >
                   Create free account
                 </button>
@@ -296,6 +298,10 @@ export default function ExtractedRecipeView() {
                     />
                   </div>
                 )}
+
+                {shareError && (
+                  <p className="mt-3 text-sm text-red-600">{shareError}</p>
+                )}
               </div>
             </div>
           </article>
@@ -309,6 +315,13 @@ export default function ExtractedRecipeView() {
           </aside>
         </div>
       </div>
+
+      <AuthModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+        title="Create a free account"
+        description="Sign up to continue extracting recipes and sync your favorites across devices."
+      />
     </main>
   )
 }
