@@ -15,7 +15,11 @@
  *     }
  *   }
  * }
+ *
+ * Sync: Changes are automatically pushed to Supabase when user is authenticated
  */
+
+import { pushToRemote } from './sync.js';
 
 const STORAGE_KEY = 'simpler-recipes-meal-plan';
 const CURRENT_VERSION = 1;
@@ -58,6 +62,7 @@ function getData() {
 
 /**
  * Save meal plan data to localStorage and dispatch event
+ * Also triggers remote sync if user is authenticated
  * @param {{ version: number, plans: object }} data
  */
 function saveData(data) {
@@ -67,6 +72,11 @@ function saveData(data) {
   window.dispatchEvent(new CustomEvent('meal-plan-changed', {
     detail: { plans: data.plans }
   }));
+
+  // Sync to remote (fire-and-forget, don't block UI)
+  pushToRemote('mealPlans').catch(() => {
+    // Silently fail - offline or not authenticated
+  });
 }
 
 /**

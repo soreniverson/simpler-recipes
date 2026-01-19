@@ -8,9 +8,11 @@ import path from 'path';
 const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
 const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 const recipes = data.recipes;
+
+const description = "Your saved recipes in one place. Save any recipe from our collection or extract recipes from any URL to build your personal cookbook.";
 ---
 
-<BaseLayout title="Favorites - Simpler Recipes">
+<BaseLayout title="Favorites - Simpler Recipes" description={description}>
   <main id="main-content" class="min-h-screen bg-background">
     <div class="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
       <FavoritesPage client:load recipes={recipes} />

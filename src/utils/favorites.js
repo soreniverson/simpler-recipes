@@ -10,7 +10,11 @@
  *   folders: [{ id, name, createdAt }],
  *   items: [favorite objects]
  * }
+ *
+ * Sync: Changes are automatically pushed to Supabase when user is authenticated
  */
+
+import { pushToRemote } from './sync.js';
 
 const STORAGE_KEY = 'simpler-recipes-favorites';
 const CURRENT_VERSION = 2;
@@ -92,11 +96,17 @@ function getData() {
 
 /**
  * Save data and dispatch change event
+ * Also triggers remote sync if user is authenticated
  */
 function saveData(data) {
   if (typeof window === 'undefined') return;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   window.dispatchEvent(new CustomEvent('favorites-changed', { detail: data }));
+
+  // Sync to remote (fire-and-forget, don't block UI)
+  pushToRemote('favorites').catch(() => {
+    // Silently fail - offline or not authenticated
+  });
 }
 
 // ============ FOLDER FUNCTIONS ============

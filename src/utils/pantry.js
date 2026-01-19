@@ -1,7 +1,11 @@
 /**
  * Pantry utility for managing ingredients the user has on hand
  * Uses localStorage with custom events for reactive updates
+ *
+ * Sync: Changes are automatically pushed to Supabase when user is authenticated
  */
+
+import { pushToRemote } from './sync.js';
 
 const STORAGE_KEY = 'simpler-recipes-pantry';
 const CURRENT_VERSION = 1;
@@ -49,6 +53,7 @@ function getPantryData() {
 
 /**
  * Save pantry data to localStorage and dispatch event
+ * Also triggers remote sync if user is authenticated
  * @param {{ items: Array, version: number }} data
  */
 function savePantryData(data) {
@@ -58,6 +63,11 @@ function savePantryData(data) {
   window.dispatchEvent(new CustomEvent('pantry-changed', {
     detail: { items: data.items }
   }));
+
+  // Sync to remote (fire-and-forget, don't block UI)
+  pushToRemote('pantry').catch(() => {
+    // Silently fail - offline or not authenticated
+  });
 }
 
 /**

@@ -1,10 +1,34 @@
 # Simpler Recipes
 
-> A clean, ad-free recipe extraction and browsing service.
+> A clean, ad-free recipe extraction and browsing service with meal planning tools.
 
 ## What This Site Does
 
 Simpler Recipes extracts recipes from cluttered food blogs and presents them in a clean, readable format. Users can paste any recipe URL to get just the essential information: ingredients, instructions, prep time, cook time, and servings.
+
+## Core Features
+
+### Recipe Extraction
+Paste any recipe URL to extract a clean, readable version without ads or life stories.
+URL: https://simpler.recipes/
+
+### Favorites
+Save recipes to your personal collection. Works with both curated recipes and extracted recipes from any URL.
+URL: https://simpler.recipes/favorites
+
+### Meal Planning
+Plan your weekly meals by adding recipes to each day. Navigate between weeks and organize by meal type (breakfast, lunch, dinner, snack, dessert).
+URL: https://simpler.recipes/plan
+
+### Shopping List
+Generate a shopping list from your meal plan. Items are automatically:
+- Merged (same ingredients from multiple recipes combined)
+- Categorized by grocery aisle (Produce, Meat, Dairy, Pantry, etc.)
+- Checked against your pantry (items you already have are marked)
+
+### Pantry
+Track what ingredients you have on hand. When generating shopping lists, pantry items are automatically marked so you know what you already have.
+URL: https://simpler.recipes/pantry
 
 ## Curated Recipe Collections
 
@@ -39,6 +63,19 @@ Hearty, satisfying recipes that bring warmth.
 URL: https://simpler.recipes/collection/comfort-food-classics
 
 Includes: Mac and Cheese, Meatloaf, Lasagna, Chicken Pot Pie, Fried Chicken, Beef Stroganoff, and more.
+
+### Additional Collections
+- Asian Inspired: https://simpler.recipes/collection/asian-inspired
+- Italian Classics: https://simpler.recipes/collection/italian-classics
+- Indian Cuisine: https://simpler.recipes/collection/indian-cuisine
+- Mexican Favorites: https://simpler.recipes/collection/mexican-favorites
+- Mediterranean Mezze: https://simpler.recipes/collection/mediterranean-mezze
+- Breakfast & Brunch: https://simpler.recipes/collection/breakfast-brunch
+- Desserts & Sweets: https://simpler.recipes/collection/desserts-sweets
+- Grilling & BBQ: https://simpler.recipes/collection/grilling-bbq
+- Soups & Stews: https://simpler.recipes/collection/soups-stews
+- Vegetarian Mains: https://simpler.recipes/collection/vegetarian-mains
+- Appetizers & Party: https://simpler.recipes/collection/appetizers-party
 
 ## Individual Recipe URLs
 
@@ -84,4 +121,6 @@ Each recipe includes:
 - All recipes are sourced from popular cooking websites with proper attribution
 - Recipe data is refreshed periodically
 - The site works best with AllRecipes, Food Network, Serious Eats, and most sites using Schema.org recipe markup
-- No account required, no tracking beyond basic analytics
+- No account required for basic features
+- All data (favorites, meal plans, pantry) is stored locally in your browser
+- No tracking beyond basic analytics
