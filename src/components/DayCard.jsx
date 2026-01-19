@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { MEAL_SECTIONS } from '../utils/mealPlan';
 
 function PlusIcon({ className = "w-4 h-4" }) {
@@ -54,7 +53,7 @@ function MealItem({ meal, dateKey, section, onRemove }) {
 
   return (
     <div
-      className="flex items-center gap-3 p-2 rounded-lg hover:bg-sand-100 transition-colors cursor-pointer group"
+      className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-sand-100 transition-colors cursor-pointer group"
       onClick={handleClick}
     >
       {meal.recipeImage ? (
@@ -68,10 +67,13 @@ function MealItem({ meal, dateKey, section, onRemove }) {
           <ImagePlaceholder />
         </div>
       )}
-      <span className="flex-1 text-sm text-sand-800 truncate">{meal.recipeTitle}</span>
+      <div className="flex-1 min-w-0">
+        <span className="text-sm text-sand-800 truncate block">{meal.recipeTitle}</span>
+        <span className="text-xs text-sand-500">{SECTION_LABELS[section]}</span>
+      </div>
       <button
         onClick={handleRemove}
-        className="p-1 text-sand-400 hover:text-sand-600 opacity-0 group-hover:opacity-100 transition-opacity"
+        className="p-1.5 text-sand-400 hover:text-sand-600 hover:bg-sand-200 rounded-md opacity-0 group-hover:opacity-100 transition-all"
         aria-label={`Remove ${meal.recipeTitle}`}
       >
         <XIcon className="w-4 h-4" />
@@ -80,61 +82,22 @@ function MealItem({ meal, dateKey, section, onRemove }) {
   );
 }
 
-function MealSection({ section, meals, dateKey, onAddMeal, onRemoveMeal }) {
-  const hasMeals = meals.length > 0;
-
-  return (
-    <div className="py-2 border-t border-sand-100 first:border-t-0">
-      <div className="flex items-center justify-between mb-1">
-        <span className="text-xs font-medium text-sand-500 uppercase tracking-wide">
-          {SECTION_LABELS[section]}
-        </span>
-        <button
-          onClick={() => onAddMeal(dateKey, section)}
-          className="p-1 text-sand-400 hover:text-sand-600 hover:bg-sand-100 rounded transition-colors"
-          aria-label={`Add ${section}`}
-        >
-          <PlusIcon className="w-3.5 h-3.5" />
-        </button>
-      </div>
-      {hasMeals ? (
-        <div className="space-y-1">
-          {meals.map(meal => (
-            <MealItem
-              key={meal.id}
-              meal={meal}
-              dateKey={dateKey}
-              section={section}
-              onRemove={onRemoveMeal}
-            />
-          ))}
-        </div>
-      ) : (
-        <p className="text-xs text-sand-400 py-1">No meals planned</p>
-      )}
-    </div>
-  );
-}
-
 export default function DayCard({ date, dateKey, meals, onAddMeal, onRemoveMeal }) {
-  const [isExpanded, setIsExpanded] = useState(true);
-
   const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
-  const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   const isToday = date.getTime() === today.getTime();
 
-  const totalMeals = MEAL_SECTIONS.reduce((sum, section) => sum + meals[section].length, 0);
+  // Flatten all meals into a single list with their section info
+  const allMeals = MEAL_SECTIONS.flatMap(section =>
+    meals[section].map(meal => ({ ...meal, section }))
+  );
 
   return (
     <div className={`bg-sand-50 rounded-xl overflow-hidden ${isToday ? 'ring-2 ring-sand-400' : ''}`}>
       {/* Day header */}
-      <button
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full flex items-center justify-between p-4 text-left hover:bg-sand-100/50 transition-colors"
-      >
+      <div className="flex items-center justify-between p-4">
         <div className="flex items-center gap-3">
           <div className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg ${isToday ? 'bg-sand-900 text-white' : 'bg-sand-200 text-sand-700'}`}>
             <span className="text-[10px] font-medium uppercase leading-none">
@@ -146,41 +109,30 @@ export default function DayCard({ date, dateKey, meals, onAddMeal, onRemoveMeal 
           </div>
           <div>
             <h3 className="font-medium text-sand-900">{dayName}</h3>
-            <p className="text-xs text-sand-500">
-              {totalMeals > 0 ? `${totalMeals} meal${totalMeals === 1 ? '' : 's'}` : 'No meals'}
-            </p>
+            {allMeals.length === 0 && (
+              <p className="text-xs text-sand-500">No meals planned</p>
+            )}
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={(e) => { e.stopPropagation(); onAddMeal(dateKey, 'dinner'); }}
-            className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-200 rounded-lg transition-colors"
-            aria-label="Add meal"
-          >
-            <PlusIcon className="w-5 h-5" />
-          </button>
-          <svg
-            className={`w-5 h-5 text-sand-400 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-          </svg>
-        </div>
-      </button>
+        <button
+          onClick={() => onAddMeal(dateKey, 'dinner')}
+          className="p-2 text-sand-500 hover:text-sand-700 hover:bg-sand-200 rounded-lg transition-colors"
+          aria-label="Add meal"
+        >
+          <PlusIcon className="w-5 h-5" />
+        </button>
+      </div>
 
-      {/* Meal sections */}
-      {isExpanded && (
-        <div className="px-4 pb-4">
-          {MEAL_SECTIONS.map(section => (
-            <MealSection
-              key={section}
-              section={section}
-              meals={meals[section]}
+      {/* Meals list */}
+      {allMeals.length > 0 && (
+        <div className="px-4 pb-4 pt-0 space-y-1">
+          {allMeals.map(meal => (
+            <MealItem
+              key={meal.id}
+              meal={meal}
               dateKey={dateKey}
-              onAddMeal={onAddMeal}
-              onRemoveMeal={onRemoveMeal}
+              section={meal.section}
+              onRemove={onRemoveMeal}
             />
           ))}
         </div>
