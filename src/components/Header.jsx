@@ -352,22 +352,24 @@ export default function Header() {
         )}
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - rendered outside normal flow */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-[100] sm:hidden" style={{ top: 0, left: 0, right: 0, bottom: 0 }}>
+        <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/50"
+            className="sm:hidden fixed inset-0 bg-black/50"
+            style={{ zIndex: 9998 }}
             onClick={closeMobileMenu}
           />
 
           {/* Menu Panel */}
           <div
             ref={mobileMenuRef}
-            className="fixed right-0 top-0 bottom-0 w-72 bg-surface shadow-xl flex flex-col"
+            className="sm:hidden fixed top-0 right-0 h-full w-72 bg-white shadow-xl"
+            style={{ zIndex: 9999 }}
           >
             {/* Menu Header */}
-            <div className="flex items-center justify-between p-4 border-b border-sand-200">
+            <div className="flex items-center justify-between p-4 border-b border-sand-200 bg-white">
               <span className="font-medium text-sand-900">Menu</span>
               <button
                 onClick={closeMobileMenu}
@@ -378,9 +380,10 @@ export default function Header() {
               </button>
             </div>
 
-            {/* Menu Links */}
-            <nav className="flex-1 overflow-y-auto p-4">
-              <div className="space-y-1">
+            {/* Menu Content */}
+            <div className="h-[calc(100%-65px)] overflow-y-auto bg-white">
+              {/* Menu Links */}
+              <div className="p-4 space-y-1">
                 <a
                   href="/favorites"
                   onClick={closeMobileMenu}
@@ -411,19 +414,17 @@ export default function Header() {
               </div>
 
               {/* Settings Section */}
-              <div className="mt-6 pt-6 border-t border-sand-200">
-                <div className="px-3 mb-3">
-                  <div className="text-xs font-medium text-sand-500 uppercase tracking-wide">Settings</div>
-                </div>
+              <div className="px-4 pt-4 pb-4 border-t border-sand-200 mt-2">
+                <div className="text-xs font-medium text-sand-500 uppercase tracking-wide mb-3">Settings</div>
 
                 {/* Units picker */}
-                <div className="px-3 mb-4">
+                <div className="mb-4">
                   <div className="text-sm text-sand-700 mb-2">Measurements</div>
                   <div className="grid grid-cols-2 bg-sand-100 rounded-lg p-1 gap-1">
                     <button
                       onClick={() => { if (useMetric) handleUnitToggle(); }}
                       className={`py-2 text-sm font-medium rounded-md transition-colors ${
-                        !useMetric ? 'bg-surface text-sand-900 shadow-sm' : 'text-sand-600 hover:text-sand-800'
+                        !useMetric ? 'bg-white text-sand-900 shadow-sm' : 'text-sand-600 hover:text-sand-800'
                       }`}
                     >
                       US
@@ -431,7 +432,7 @@ export default function Header() {
                     <button
                       onClick={() => { if (!useMetric) handleUnitToggle(); }}
                       className={`py-2 text-sm font-medium rounded-md transition-colors ${
-                        useMetric ? 'bg-surface text-sand-900 shadow-sm' : 'text-sand-600 hover:text-sand-800'
+                        useMetric ? 'bg-white text-sand-900 shadow-sm' : 'text-sand-600 hover:text-sand-800'
                       }`}
                     >
                       Metric
@@ -440,7 +441,7 @@ export default function Header() {
                 </div>
 
                 {/* Theme picker */}
-                <div className="px-3 mb-4">
+                <div className="mb-4">
                   <div className="text-sm text-sand-700 mb-2">Theme</div>
                   <div className="grid grid-cols-3 bg-sand-100 rounded-lg p-1 gap-1">
                     {['system', 'light', 'dark'].map((theme) => (
@@ -448,7 +449,7 @@ export default function Header() {
                         key={theme}
                         onClick={() => handleThemeChange(theme)}
                         className={`py-2 text-sm font-medium rounded-md transition-colors ${
-                          themePreference === theme ? 'bg-surface text-sand-900 shadow-sm' : 'text-sand-600 hover:text-sand-800'
+                          themePreference === theme ? 'bg-white text-sand-900 shadow-sm' : 'text-sand-600 hover:text-sand-800'
                         }`}
                       >
                         {theme.charAt(0).toUpperCase() + theme.slice(1)}
@@ -456,31 +457,31 @@ export default function Header() {
                     ))}
                   </div>
                 </div>
-              </div>
-            </nav>
 
-            {/* Sign in/out at bottom */}
-            {!authLoading && (
-              <div className="p-4 border-t border-sand-200">
-                {isAuthenticated ? (
-                  <button
-                    onClick={() => { signOut(); closeMobileMenu(); }}
-                    className="w-full py-3 text-sm font-medium text-sand-600 hover:text-sand-800 hover:bg-sand-100 rounded-lg transition-colors"
-                  >
-                    Sign out
-                  </button>
-                ) : (
-                  <button
-                    onClick={() => { setIsAuthModalOpen(true); closeMobileMenu(); }}
-                    className="w-full py-3 text-sm font-medium text-white bg-sand-900 hover:bg-sand-800 rounded-lg transition-colors"
-                  >
-                    Sign in
-                  </button>
+                {/* Sign in/out */}
+                {!authLoading && (
+                  <div className="pt-4 border-t border-sand-200">
+                    {isAuthenticated ? (
+                      <button
+                        onClick={() => { signOut(); closeMobileMenu(); }}
+                        className="w-full py-3 text-sm font-medium text-sand-600 hover:text-sand-800 hover:bg-sand-100 rounded-lg transition-colors"
+                      >
+                        Sign out
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => { setIsAuthModalOpen(true); closeMobileMenu(); }}
+                        className="w-full py-3 text-sm font-medium text-white bg-sand-900 hover:bg-sand-800 rounded-lg transition-colors"
+                      >
+                        Sign in
+                      </button>
+                    )}
+                  </div>
                 )}
               </div>
-            )}
+            </div>
           </div>
-        </div>
+        </>
       )}
 
       {/* Auth Modal */}
