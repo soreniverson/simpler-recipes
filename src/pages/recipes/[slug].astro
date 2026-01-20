@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ScalableIngredients from '../../components/ScalableIngredients.jsx';
 import FavoriteButton from '../../components/FavoriteButton.jsx';
 import RecipeInstructions from '../../components/RecipeInstructions.jsx';
+import RemixButton from '../../components/RemixButton.jsx';
 import fs from 'fs';
 import path from 'path';
 
@@ -137,8 +138,13 @@ const schemaData = {
               recipeName={recipe.title}
             />
 
+            <!-- Actions -->
+            <div class="mt-8 pt-6 border-t border-sand-200 print:hidden">
+              <RemixButton client:load recipe={recipe} />
+            </div>
+
             {recipe.tags && recipe.tags.length > 0 && (
-              <footer class="mt-8 pt-6 border-t border-sand-200 print:hidden">
+              <footer class="mt-4 pt-4 border-t border-sand-200 print:hidden">
                 <div class="flex flex-wrap gap-2">
                   {recipe.tags.map((tag: string) => (
                     <span class="px-2 py-0.5 text-xs text-sand-500 bg-sand-100 rounded-full">

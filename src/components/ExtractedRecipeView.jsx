@@ -3,6 +3,7 @@ import ScalableIngredients from './ScalableIngredients'
 import RecipeInstructions from './RecipeInstructions'
 import { addExtractedFavorite, isExtractedFavorite, removeExtractedFavorite } from '../utils/favorites'
 import AuthModal from './AuthModal'
+import RemixButton from './RemixButton'
 
 function BackIcon() {
   return (
@@ -273,9 +274,10 @@ export default function ExtractedRecipeView() {
                 recipeName={recipe.title}
               />
 
-              {/* Share section */}
+              {/* Actions section */}
               <div className="no-print mt-8 pt-6 border-t border-sand-200">
                 <div className="flex flex-wrap gap-3">
+                  <RemixButton recipe={recipe} />
                   <button
                     onClick={handleShare}
                     disabled={shareLoading}
