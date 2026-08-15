@@ -46,7 +46,7 @@ export default function HeroInput() {
           </span>
         ))}
       </p>
-      <p className="mt-4 text-[13px] text-sand-500">Works with most recipe sites. Nothing is stored unless you save it. No account needed.</p>
+      <p className="mt-4 text-[13px] text-sand-500">Works with most recipe sites. Recipes stay on your device. No account needed.</p>
       <RecentRecipes limit={5} />
     </div>
   );
