@@ -152,7 +152,7 @@ export default function PantryPage() {
     <div>
       <header className="mb-6">
         <h1 className="text-lg font-medium text-sand-900 flex items-center gap-2">
-          My Pantry
+          Pantry
           {items.length > 0 && (
             <span className="text-sand-500 font-normal">({items.length})</span>
           )}

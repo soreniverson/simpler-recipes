@@ -5,6 +5,7 @@ import RemixButton from '../../components/RemixButton.jsx';
 import fs from 'fs';
 import path from 'path';
 import { durationToMinutes, minutesToIso, formatMinutes, normalizeYield } from '../../lib/recipe/normalize';
+import { prettySiteName } from '../../lib/recipe/display';
 import { optimizeRemote } from '../../lib/images';
 
 export async function getStaticPaths() {
@@ -59,7 +60,7 @@ const descBits = [
   totalHuman ? `ready in ${totalHuman}` : null,
   yieldInfo.text ? `makes ${yieldInfo.text}` : null,
 ].filter(Boolean);
-const description = `${descBits.join(', ')}. Ad-free, with check-off ingredients, scaling and a hands-free Cook Mode.${recipe.source?.name ? ` From ${recipe.source.name}.` : ''}`;
+const description = `${descBits.join(', ')}. Ad-free, with check-off ingredients, scaling and a hands-free Cook Mode.${recipe.source?.name ? ` From ${prettySiteName(recipe.source.name)}.` : ''}`;
 
 // schema.org — only what we know; never fabricated ratings/nutrition/publish dates.
 const recipeSchema: Record<string, unknown> = {
@@ -69,7 +70,7 @@ const recipeSchema: Record<string, unknown> = {
   url: pageUrl,
   mainEntityOfPage: pageUrl,
   image: rawRecipe.image ? [rawRecipe.image] : undefined,
-  author: recipe.source?.name ? { '@type': 'Organization', name: recipe.source.name, url: recipe.source.url } : undefined,
+  author: recipe.source?.name ? { '@type': 'Organization', name: prettySiteName(recipe.source.name), url: recipe.source.url } : undefined,
   isBasedOn: recipe.source?.url || undefined,
   prepTime: minutesToIso(prepMin),
   cookTime: minutesToIso(cookMin),

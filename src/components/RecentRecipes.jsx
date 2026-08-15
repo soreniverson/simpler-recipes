@@ -20,7 +20,7 @@ export default function RecentRecipes({ limit = 5 }) {
       <div className="flex items-baseline justify-between mb-2">
         <h2 id="recent-heading" className="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500">Recent on this device</h2>
       </div>
-      <ul className="divide-y divide-sand-200 border-y border-sand-200">
+      <ul className="divide-y divide-sand-200 border-t border-sand-200">
         {items.map((e) => (
           <li key={e.id} className="flex items-center gap-3">
             <a href={`/recipe?r=${e.id}`} className="flex-1 min-w-0 flex items-center gap-3 py-3 group">
@@ -34,7 +34,7 @@ export default function RecentRecipes({ limit = 5 }) {
                 <span className="block text-[13px] text-sand-500 truncate">{hostnameOf(e.sourceUrl) || 'saved locally'}</span>
               </span>
             </a>
-            <button type="button" onClick={() => forgetRecentRecipe(e.id)} className="btn-icon text-sand-400 hover:text-sand-800 shrink-0" aria-label={`Remove ${e.recipe.title} from recent`}>
+            <button type="button" onClick={() => forgetRecentRecipe(e.id)} className="btn-icon text-sand-500 hover:text-sand-900 shrink-0" aria-label={`Remove ${e.recipe.title} from recent`}>
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
             </button>
           </li>

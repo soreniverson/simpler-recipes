@@ -182,6 +182,17 @@ export default function RemixModal({ isOpen, onClose, baseRecipe, recipes = [], 
     }
   }, [isOpen, mode, step]);
 
+  // Focus the dialog on open; return focus to the opener on close.
+  useEffect(() => {
+    if (!isOpen) return;
+    const prev = document.activeElement;
+    const t = setTimeout(() => modalRef.current?.focus(), 0);
+    return () => {
+      clearTimeout(t);
+      prev?.focus?.();
+    };
+  }, [isOpen]);
+
   // Handle escape key
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -355,13 +366,27 @@ export default function RemixModal({ isOpen, onClose, baseRecipe, recipes = [], 
       {/* Modal */}
       <div
         ref={modalRef}
-        className="relative bg-surface w-full sm:max-w-2xl max-h-[90vh] sm:max-h-[85vh] rounded-t-2xl sm:rounded-2xl shadow-xl flex flex-col overflow-hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="remix-title"
+        tabIndex={-1}
+        onKeyDown={(e) => {
+          // Keep Tab inside the dialog.
+          if (e.key !== 'Tab' || !modalRef.current) return;
+          const focusable = modalRef.current.querySelectorAll('button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])');
+          if (!focusable.length) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }}
+        className="relative bg-surface w-full sm:max-w-2xl max-h-[90vh] sm:max-h-[85vh] rounded-t-2xl sm:rounded-2xl shadow-xl flex flex-col overflow-hidden outline-none"
       >
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-sand-200">
           <div className="flex items-center gap-2">
             <SparklesIcon className="w-5 h-5 text-sand-600" />
-            <h2 className="text-lg font-medium text-sand-900">Remix Recipe</h2>
+            <h2 id="remix-title" className="text-lg font-medium text-sand-900">Remix recipe</h2>
           </div>
           <button
             onClick={onClose}
@@ -378,7 +403,7 @@ export default function RemixModal({ isOpen, onClose, baseRecipe, recipes = [], 
             <>
               {/* Recipe previews */}
               <div className="flex gap-3 mb-4">
-                <RecipePreview recipe={baseRecipe} label="Base Recipe" />
+                <RecipePreview recipe={baseRecipe} label="Base recipe" />
                 <div className="flex items-center text-2xl text-sand-300 font-light">+</div>
                 <div className="bg-sand-100 rounded-xl p-4 flex-1 min-w-0 flex items-center justify-center">
                   {mode === 'recipe' && selectedRecipe ? (
@@ -407,7 +432,7 @@ export default function RemixModal({ isOpen, onClose, baseRecipe, recipes = [], 
                       : 'text-sand-600 hover:text-sand-800'
                   }`}
                 >
-                  Describe Changes
+                  Describe changes
                 </button>
                 <button
                   onClick={() => setMode('recipe')}
@@ -551,7 +576,7 @@ export default function RemixModal({ isOpen, onClose, baseRecipe, recipes = [], 
                 onClick={handleSave}
                 className="flex-1 bg-sand-950 hover:bg-sand-900 text-sand-50 font-medium py-3 px-4 rounded-xl transition-all text-sm shadow-sm hover:shadow-md"
               >
-                Save Recipe
+                Save recipe
               </button>
             </div>
           )}

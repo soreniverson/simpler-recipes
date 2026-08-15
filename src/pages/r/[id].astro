@@ -41,7 +41,7 @@ if (!recipe) {
 
 const title = recipe ? `${recipe.title} · Simpler Recipes` : 'Recipe not found · Simpler Recipes';
 const description = recipe
-  ? `${recipe.title} — ${metaLine(recipe).join(', ')}. Shared via Simpler Recipes.`
+  ? `${recipe.title}${metaLine(recipe).length ? ` — ${metaLine(recipe).join(', ')}` : ''}. Shared via Simpler Recipes.`
   : 'This shared recipe link is invalid or has expired.';
 ---
 

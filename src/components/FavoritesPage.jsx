@@ -548,13 +548,13 @@ export default function FavoritesPage({ recipes }) {
             No favorites yet
           </h2>
           <p className="text-sand-600 text-sm mb-6 max-w-sm mx-auto">
-            Browse recipes or paste a URL to extract one, then tap the heart icon to save it here.
+            Tap Save on any recipe to keep it here.
           </p>
           <a
             href="/"
             className="inline-flex items-center gap-2 px-4 py-2 bg-sand-900 text-sand-50 rounded-lg hover:bg-sand-800 transition-colors text-sm"
           >
-            Browse Recipes
+            Browse recipes
           </a>
         </div>
       ) : (

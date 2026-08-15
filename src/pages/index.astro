@@ -56,11 +56,11 @@ const websiteSchema = JSON.stringify({
       <section aria-labelledby="collections-heading" class="pt-8 pb-16 border-t border-sand-200">
         <div class="flex items-baseline justify-between mb-4">
           <h2 id="collections-heading" class="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500">
-            Or browse {recipeCount} clean recipes
+            Or browse {recipeCount} recipes
           </h2>
         </div>
         <nav aria-label="Recipe collections">
-          <ul class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-0 sm:gap-y-1">
+          <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-0 sm:gap-y-1">
             {collections.map((c: any) => (
               <li class="border-b border-sand-200/80">
                 <a href={`/collection/${c.slug}/`} class="group flex items-baseline justify-between gap-3 py-3 sm:py-2.5 hover:text-sand-900">

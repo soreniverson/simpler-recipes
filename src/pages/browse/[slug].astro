@@ -32,7 +32,7 @@ const recipes = await Promise.all(rawRecipes.map(async (r) => ({ ...r, image: (a
 const SITE = 'https://www.simpler.recipes';
 const pageUrl = `${SITE}/browse/${page.slug}/`;
 const top = recipes.slice(0, 3).map((r) => r.title);
-const title = `${page.name} — ${recipes.length} clean recipes · Simpler Recipes`;
+const title = `${page.name} — ${recipes.length} recipes, no ads · Simpler Recipes`;
 const description = `${page.intro} ${recipes.length} recipes including ${top.join(', ')}. Ad-free, with check-off ingredients, scaling and Cook Mode.`;
 
 const jsonLd = JSON.stringify({
