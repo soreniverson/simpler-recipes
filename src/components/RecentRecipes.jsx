@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { listRecentRecipes, forgetRecentRecipe, RECENT_EVENT } from '../lib/recentRecipes';
-import { hostnameOf } from '../lib/recipe/validate';
+import { hostnameOf } from '../lib/recipe/href';
 
 /**
  * "Recent" — the last few recipes simplified on this device. Local only; nothing is uploaded.

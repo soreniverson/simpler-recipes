@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import RecipeView from './RecipeView';
 import RemixButton from '../RemixButton';
 import { getRecentRecipe, latestRecentRecipe, touchRecentRecipe, listRecentRecipes } from '../../lib/recentRecipes';
-import { hostnameOf } from '../../lib/recipe/validate';
+import { hostnameOf } from '../../lib/recipe/href';
 
 /**
  * /recipe?r=<id> — renders a recipe extracted on this device (stored locally, never uploaded).

@@ -4,8 +4,8 @@
  * favorited objects) so nothing on disk needs migrating.
  */
 import type { Recipe, RecipeSection } from './types';
-import { durationToMinutes, formatMinutes, normalizeYield } from './normalize';
-import { hostnameOf } from './validate';
+import { durationToMinutes, formatMinutes, normalizeYield } from './units';
+import { hostnameOf } from './href';
 
 export interface AnyRecipe extends Partial<Recipe> {
   title: string;

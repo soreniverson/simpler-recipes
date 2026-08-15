@@ -392,7 +392,7 @@ export default function RemixModal({ isOpen, onClose, baseRecipe, recipes = [], 
                       <p className="text-sm text-sand-700 line-clamp-3">"{prompt}"</p>
                     </div>
                   ) : (
-                    <p className="text-sm text-sand-400">Select below</p>
+                    <p className="text-sm text-sand-500">Select below</p>
                   )}
                 </div>
               </div>

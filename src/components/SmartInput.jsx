@@ -3,7 +3,7 @@ import { createSearchIndex, searchRecipes } from '../utils/searchIndex';
 import { getAnonymousToken } from '../utils/anonymousToken';
 import { looksLikeUrl, normalizeUrl } from '../lib/url';
 import { rememberRecipe } from '../lib/recentRecipes';
-import { hostnameOf } from '../lib/recipe/validate';
+import { hostnameOf } from '../lib/recipe/href';
 
 const AuthModal = lazy(() => import('./AuthModal'));
 

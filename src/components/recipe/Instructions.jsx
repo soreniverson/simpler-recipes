@@ -14,7 +14,7 @@ export default function Instructions({ recipe, done, onToggle, onCookMode }) {
     <section aria-labelledby="instructions-heading">
       <div className="flex items-center justify-between gap-3 mb-4">
         <h2 id="instructions-heading" className="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500">
-          Instructions <span className="tabular text-sand-400 font-normal normal-case tracking-normal">{done.size > 0 ? `${done.size}/${total}` : total}</span>
+          Instructions <span className="tabular text-sand-500 font-normal normal-case tracking-normal">{done.size > 0 ? `${done.size}/${total}` : total}</span>
         </h2>
         {total > 0 && (
           <button type="button" onClick={onCookMode} className="btn-primary btn-sm no-print lg:hidden">

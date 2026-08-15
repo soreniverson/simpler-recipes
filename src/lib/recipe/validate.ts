@@ -92,30 +92,4 @@ export function validateRecipe(input: unknown): { ok: true; recipe: Recipe } | {
 export const MAX_SHARE_BYTES = 48 * 1024;
 export const MAX_REMIX_BYTES = 32 * 1024;
 
-/**
- * Only allow http(s) hrefs when rendering user/remote-supplied URLs.
- * Anything else (javascript:, data:, vbscript:, relative) → null.
- */
-export function safeHref(url: unknown): string | null {
-  if (typeof url !== 'string') return null;
-  const s = url.trim();
-  if (!/^https?:\/\//i.test(s)) return null;
-  try {
-    const u = new URL(s);
-    if (u.protocol !== 'http:' && u.protocol !== 'https:') return null;
-    return u.toString();
-  } catch {
-    return null;
-  }
-}
-
-/** Hostname for display ("www." stripped); never throws. */
-export function hostnameOf(url: unknown): string | null {
-  const s = safeHref(url);
-  if (!s) return null;
-  try {
-    return new URL(s).hostname.replace(/^www\./, '');
-  } catch {
-    return null;
-  }
-}
+export { safeHref, hostnameOf } from './href';

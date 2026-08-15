@@ -22,6 +22,10 @@ export default defineConfig({
       lastmod: new Date(),
     }),
   ],
+  image: {
+    // Curated recipe photos live on the publishers' CDNs; we optimize them at build time.
+    remotePatterns: [{ protocol: 'https' }],
+  },
   build: {
     // The whole stylesheet is small; inlining removes a render-blocking request.
     inlineStylesheets: 'always',

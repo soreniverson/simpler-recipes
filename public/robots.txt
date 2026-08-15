@@ -2,10 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /auth/
-Disallow: /recipe
-Disallow: /r/
-Disallow: /favorites
-Disallow: /pantry
-Disallow: /plan
 
 Sitemap: https://www.simpler.recipes/sitemap-index.xml

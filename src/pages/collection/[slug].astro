@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import RecipeGrid from '../../components/RecipeGrid.jsx';
 import fs from 'fs';
 import path from 'path';
+import { optimizeRemote } from '../../lib/images';
 
 export async function getStaticPaths() {
   const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
@@ -26,7 +27,11 @@ interface Props {
   collection: { slug: string; name: string; description: string };
   recipes: { slug: string; title: string; image: string | null; totalTime: string | null; servings: string | null; ingredients: string[]; tags: string[] }[];
 }
-const { collection, recipes } = Astro.props as Props;
+const { collection, recipes: rawRecipes } = Astro.props as Props;
+// Cards render at ≤ 400px wide (4-col grid on 1080px, 2-col on phones) → 480×360 covers 2× on phones too.
+const recipes = await Promise.all(
+  rawRecipes.map(async (r) => ({ ...r, image: (await optimizeRemote(r.image, 480, 360))?.src ?? r.image }))
+);
 
 const SITE = 'https://www.simpler.recipes';
 const pageUrl = `${SITE}/collection/${collection.slug}/`;

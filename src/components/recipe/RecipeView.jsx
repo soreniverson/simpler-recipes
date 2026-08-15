@@ -4,7 +4,7 @@ import Instructions from './Instructions';
 import CookMode from './CookMode';
 import { getCookState, toggleIngredient, toggleStep, setCookState, resetCookState, COOK_STATE_EVENT } from '../../lib/cookState';
 import { metaLine, sourceInfo, recipeAsText, displayTimes, displayServings } from '../../lib/recipe/display';
-import { safeHref } from '../../lib/recipe/validate';
+import { safeHref } from '../../lib/recipe/href';
 import { isFavorite, toggleFavorite, getExtractedFavorites, addExtractedFavorite, removeExtractedFavorite } from '../../utils/favorites';
 import { PlayIcon, HeartIcon, ShareIcon, PrintIcon, CopyIcon, ExternalIcon, SparklesIcon, ImagePlaceholderIcon } from './Icons';
 

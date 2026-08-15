@@ -5,6 +5,7 @@ import RemixButton from '../../components/RemixButton.jsx';
 import fs from 'fs';
 import path from 'path';
 import { durationToMinutes, minutesToIso, formatMinutes, normalizeYield } from '../../lib/recipe/normalize';
+import { optimizeRemote } from '../../lib/images';
 
 export async function getStaticPaths() {
   const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
@@ -35,7 +36,11 @@ interface Props {
   collection: { slug: string; name: string } | null;
   related: { slug: string; title: string; image: string | null; totalTime: string | null }[];
 }
-const { recipe, collection, related } = Astro.props as Props;
+const { recipe: rawRecipe, collection, related: rawRelated } = Astro.props as Props;
+const heroImg = await optimizeRemote(rawRecipe.image, 800, 600, 78);
+// The view gets the optimized hero; schema/OG keep the original (full-size, canonical) URL.
+const recipe = { ...rawRecipe, image: heroImg?.src ?? rawRecipe.image };
+const related = await Promise.all(rawRelated.map(async (r) => ({ ...r, image: (await optimizeRemote(r.image, 400, 300))?.src ?? r.image })));
 
 const SITE = 'https://www.simpler.recipes';
 const pageUrl = `${SITE}/recipes/${recipe.slug}/`;
@@ -63,7 +68,7 @@ const recipeSchema: Record<string, unknown> = {
   name: recipe.title,
   url: pageUrl,
   mainEntityOfPage: pageUrl,
-  image: recipe.image ? [recipe.image] : undefined,
+  image: rawRecipe.image ? [rawRecipe.image] : undefined,
   author: recipe.source?.name ? { '@type': 'Organization', name: recipe.source.name, url: recipe.source.url } : undefined,
   isBasedOn: recipe.source?.url || undefined,
   prepTime: minutesToIso(prepMin),
@@ -87,7 +92,7 @@ const breadcrumb = {
 const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': [recipeSchema, breadcrumb] }).replace(/</g, '\\u003c');
 ---
 
-<BaseLayout title={title} description={description} image={recipe.image} type="article" canonical={pageUrl}>
+<BaseLayout title={title} description={description} image={rawRecipe.image} type="article" canonical={pageUrl}>
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={jsonLd} />
   </Fragment>

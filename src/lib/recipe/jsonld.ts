@@ -273,7 +273,8 @@ export function recipeFromJsonLd(node: any, pageUrl?: string, byId: Map<string, 
     totalMinutes = prepMinutes + cookMinutes;
   }
 
-  const y = normalizeYield(node.recipeYield ?? node.yield);
+  const rawYield = node.recipeYield ?? node.yield;
+  const y = normalizeYield(typeof rawYield === 'string' ? decodeEntities(rawYield) : rawYield);
   const image = normalizeImage(ref(node.image ?? node.thumbnailUrl), pageUrl);
   const description = cleanText(node.description) || null;
 
