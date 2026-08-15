@@ -36,12 +36,13 @@ export default function RecipeGrid({ recipes, showFavorite = true }) {
 
   return (
     <ul className="grid gap-x-5 gap-y-7 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-      {displayRecipes.map(recipe => (
+      {displayRecipes.map((recipe, i) => (
         <li key={recipe.slug}>
           <RecipeCard
             recipe={recipe}
             showFavorite={showFavorite}
             matchInfo={recipe.matchInfo}
+            eager={i < 4}
           />
         </li>
       ))}

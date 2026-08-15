@@ -119,24 +119,11 @@ export const GET: APIRoute = async ({ request }) => {
     /* ignore */
   }
 
-  // Abuse guard on every request (fails open without KV).
   const ip = getClientIp(request);
-  const rate = await checkIpRateLimit(ip);
-  if (rate.limited) {
-    return new Response(JSON.stringify({ error: 'Too many requests. Please slow down.', code: 'rate-limited' }), {
-      status: 429,
-      headers: { 'Content-Type': 'application/json', 'Retry-After': String(rate.retryAfterSeconds) },
-    });
-  }
-
-  // Cache first — cached results are free and instant.
-  const cached = await getCachedExtraction(url);
-
-  // Identity for the AI quota (only consulted if we need the AI path).
-  const userId = await getUserIdFromRequest(request);
-  const isAuthenticated = !!userId;
-  // Quota identity for the AI path: user id → anonymous cookie token → IP (never "unlimited").
-  const token = isAuthenticated ? userId : getTokenFromRequest(request) ?? ip;
+  // Only the anonymous cookie is read synchronously; everything that costs a round-trip
+  // (rate limit, cache, auth) runs INSIDE the stream so the client sees progress immediately
+  // instead of a blank 4–5s TTFB.
+  const cookieToken = getTokenFromRequest(request);
 
   const stream = new ReadableStream({
     async start(controller) {
@@ -145,7 +132,23 @@ export const GET: APIRoute = async ({ request }) => {
       const complete = (recipe: Recipe, method: ExtractionMethod, extra: Record<string, unknown> = {}) =>
         emit('complete', { recipe, method, ms: Date.now() - started, ...extra });
 
+      // Identity for the AI quota; resolved lazily only when the AI path is reached.
+      let userId: string | null | undefined;
+      const identity = async () => {
+        if (userId === undefined) userId = await getUserIdFromRequest(request);
+        const isAuthenticated = !!userId;
+        return { isAuthenticated, token: isAuthenticated ? (userId as string) : cookieToken ?? ip };
+      };
+
       try {
+        emit('progress', { step: `Fetching ${hostname}…` });
+
+        // Abuse guard (fails open without KV) + cache, in parallel.
+        const [rate, cached] = await Promise.all([checkIpRateLimit(ip), getCachedExtraction(url)]);
+        if (rate.limited) {
+          fail({ code: 'rate-limited', error: 'Too many requests from your network right now.', hint: `Try again in ${Math.ceil(rate.retryAfterSeconds / 60)} min.` });
+          return;
+        }
         if (cached?.recipe) {
           complete(cached.recipe, cached.recipe.extractedVia ?? 'unknown', { cached: true });
           return;
@@ -159,12 +162,12 @@ export const GET: APIRoute = async ({ request }) => {
 
         const videoId = getYouTubeVideoId(url);
         if (videoId) {
-          await handleYouTube(url, videoId, { emit, fail, complete, token, isAuthenticated });
+          const who = await identity();
+          await handleYouTube(url, videoId, { emit, fail, complete, token: who.token, isAuthenticated: who.isAuthenticated });
           return;
         }
 
         // ---- 1. Fetch (SSRF-safe) ----
-        emit('progress', { step: `Fetching ${hostname}…` });
         let html: string;
         let finalUrl = url;
         try {
@@ -194,6 +197,7 @@ export const GET: APIRoute = async ({ request }) => {
           fail({ code: 'no-recipe', error: `We couldn't find a recipe on that page.`, hint: 'Make sure the link goes to a specific recipe, not a category or search page.' });
           return;
         }
+        const { token, isAuthenticated } = await identity();
         if (token) {
           const status = await hasReachedLimit(token, isAuthenticated);
           if (status.limited) {

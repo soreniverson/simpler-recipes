@@ -5,7 +5,6 @@
  * Model: `claude-sonnet-5` — the documented drop-in replacement for the retired
  * `claude-sonnet-4-20250514` this code shipped with (retired 2026-06-15).
  */
-import Anthropic from '@anthropic-ai/sdk';
 import type { Recipe } from './types';
 import { cleanText, durationToMinutes, formatMinutes, normalizeYield, groupIngredients, normalizeInstructions } from './normalize';
 import { finalize } from './extract';
@@ -56,6 +55,7 @@ export interface AiExtractResult {
  */
 export async function extractRecipeWithAi(html: string, apiKey: string, pageUrl?: string): Promise<AiExtractResult> {
   if (!apiKey) return { recipe: null };
+  const { default: Anthropic } = await import('@anthropic-ai/sdk');
   const client = new Anthropic({ apiKey, maxRetries: 1, timeout: 45_000 });
   const text = htmlToPlainText(html);
   if (text.length < 200) return { recipe: null };
@@ -127,6 +127,7 @@ export async function extractRecipeWithAi(html: string, apiKey: string, pageUrl?
  */
 export async function instructionsFromTranscript(transcript: string, title: string, ingredients: string[], apiKey: string): Promise<string[]> {
   if (!apiKey || !transcript) return [];
+  const { default: Anthropic } = await import('@anthropic-ai/sdk');
   const client = new Anthropic({ apiKey, maxRetries: 1, timeout: 45_000 });
   const schema = {
     type: 'object',

@@ -5,7 +5,7 @@ import FavoriteButton from './FavoriteButton';
  * Recipe card: photo, title, one quiet meta line. No pills, no zoom, no colored badges.
  * Pantry match (when the user has a pantry) is a plain sentence.
  */
-export default function RecipeCard({ recipe, showFavorite = true, matchInfo }) {
+export default function RecipeCard({ recipe, showFavorite = true, matchInfo, eager = false }) {
   const [imgFailed, setImgFailed] = useState(false);
   const hasMatch = matchInfo && matchInfo.total > 0;
   const meta = [recipe.totalTime, hasMatch ? `${matchInfo.matched}/${matchInfo.total} in pantry` : null].filter(Boolean).join(' · ');
@@ -27,7 +27,8 @@ export default function RecipeCard({ recipe, showFavorite = true, matchInfo }) {
                 width={400}
                 height={300}
                 className="w-full h-full object-cover dark:brightness-90 group-hover:opacity-95 transition-opacity"
-                loading="lazy"
+                loading={eager ? 'eager' : 'lazy'}
+                fetchpriority={eager ? 'high' : undefined}
                 decoding="async"
                 referrerPolicy="no-referrer"
                 onError={() => setImgFailed(true)}
