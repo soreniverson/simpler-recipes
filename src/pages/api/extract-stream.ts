@@ -128,9 +128,18 @@ export const GET: APIRoute = async ({ request }) => {
   const stream = new ReadableStream({
     async start(controller) {
       const emit = (event: string, data: unknown) => sendEvent(controller, event, data);
-      const fail = (e: UserFacingError) => emit('error', { ...e, url });
-      const complete = (recipe: Recipe, method: ExtractionMethod, extra: Record<string, unknown> = {}) =>
+      // One structured line per extraction (hostname only, no user data) so Vercel logs can answer
+      // "which sites fail, how often, and how slow is each path" without extra tooling.
+      const logOutcome = (outcome: string, extra: Record<string, unknown> = {}) =>
+        console.log(JSON.stringify({ event: 'extract', host: hostname, outcome, ms: Date.now() - started, ...extra }));
+      const fail = (e: UserFacingError) => {
+        logOutcome('error', { code: e.code, ...(e.status ? { status: e.status } : {}) });
+        emit('error', { ...e, url });
+      };
+      const complete = (recipe: Recipe, method: ExtractionMethod, extra: Record<string, unknown> = {}) => {
+        logOutcome('ok', { method, ...(extra.cached ? { cached: true } : {}), ingredients: recipe.ingredients.length, steps: recipe.instructions.length });
         emit('complete', { recipe, method, ms: Date.now() - started, ...extra });
+      };
 
       // Identity for the AI quota; resolved lazily only when the AI path is reached.
       let userId: string | null | undefined;
