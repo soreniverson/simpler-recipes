@@ -123,3 +123,12 @@ describe('safeImageSrc', () => {
     expect(safeImageSrc(null)).toBeNull();
   });
 });
+
+describe('normalizeUrl host:port', () => {
+  it('treats a dotted host with a port as a host, not a scheme', () => {
+    const r = normalizeUrl('example.com:8080/x');
+    expect(r.ok).toBe(true);
+    if (r.ok) expect(r.url).toBe('https://example.com:8080/x');
+    expect(normalizeUrl('mailto:someone@example.com').ok).toBe(false);
+  });
+});

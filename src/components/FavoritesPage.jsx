@@ -415,7 +415,7 @@ function FolderView({ folder, items, recipes, folders, onBack, onRename, onDelet
         </div>
       ) : (
         <section aria-label="Recipes in folder">
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-x-4 gap-y-6 grid-cols-2 lg:grid-cols-3">
             {extractedItems.map(item => (
               <li key={item.id}>
                 <ExtractedRecipeCard
@@ -562,7 +562,7 @@ export default function FavoritesPage({ recipes }) {
           {/* Folders section */}
           <section className="mb-8">
             <h2 className="text-sm font-medium text-sand-700 mb-3">Folders</h2>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-x-4 gap-y-6 grid-cols-2 lg:grid-cols-3">
               {folders.map(folder => (
                 <FolderCard
                   key={folder.id}
@@ -582,7 +582,7 @@ export default function FavoritesPage({ recipes }) {
                 Unfiled
                 <span className="text-sand-500 font-normal ml-2">({unfiledExtracted.length + unfiledCurated.length})</span>
               </h2>
-              <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <ul className="grid gap-x-4 gap-y-6 grid-cols-2 lg:grid-cols-3">
                 {unfiledExtracted.map(item => (
                   <li key={item.id}>
                     <ExtractedRecipeCard

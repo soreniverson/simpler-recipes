@@ -49,7 +49,9 @@ export function normalizeUrl(input: unknown): NormalizeResult {
 
   // Explicit non-http scheme → unsupported.
   const schemeMatch = raw.match(/^([a-z][a-z0-9+.-]*):/i);
-  if (schemeMatch) {
+  // "example.com:8080/x" — a dotted host followed by a port is not a scheme.
+  const hostPort = schemeMatch && /^[a-z0-9-]+(\.[a-z0-9-]+)+:\d{1,5}(\/|$)/i.test(raw);
+  if (schemeMatch && !hostPort) {
     const scheme = schemeMatch[1].toLowerCase();
     if (scheme !== 'http' && scheme !== 'https') return { ok: false, error: 'unsupported-scheme' };
   } else {

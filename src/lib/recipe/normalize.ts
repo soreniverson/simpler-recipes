@@ -85,6 +85,8 @@ export function normalizeImage(input: unknown, baseUrl?: string): string | null 
     try {
       const u = new URL(s, baseUrl);
       if (u.protocol !== 'http:' && u.protocol !== 'https:') continue;
+      // Our pages are https; an http image would be mixed content. Publishers' CDNs all serve https.
+      if (u.protocol === 'http:') u.protocol = 'https:';
       if (/1x1|pixel|blank\.gif|spacer\.gif|placeholder/i.test(u.pathname)) continue;
       // Size hints in the filename ("-500x375.jpg") when the object didn't declare them.
       let { w, h } = c;

@@ -75,10 +75,18 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
           var stored = localStorage.getItem('simpler-recipes-settings');
           if (stored) { var s = JSON.parse(stored); if (s.theme) theme = s.theme; }
         } catch (e) {}
-        var dark = theme === 'system'
-          ? window.matchMedia('(prefers-color-scheme: dark)').matches
-          : theme === 'dark';
+        var mq = window.matchMedia('(prefers-color-scheme: dark)');
+        var dark = theme === 'system' ? mq.matches : theme === 'dark';
         if (dark) document.documentElement.classList.add('dark');
+        // "System" follows the OS live (the Appearance setting re-reads storage on change).
+        try {
+          mq.addEventListener('change', function (e) {
+            var t = 'system';
+            try { var st = localStorage.getItem('simpler-recipes-settings'); if (st) { var o = JSON.parse(st); if (o.theme) t = o.theme; } } catch (err) {}
+            if (t !== 'system') return;
+            document.documentElement.classList.toggle('dark', e.matches);
+          });
+        } catch (e) {}
       })();
     </script>
 

@@ -14,7 +14,7 @@ export default function RecipeCard({ recipe, showFavorite = true, matchInfo, eag
     <div className="relative h-full group">
       {showFavorite && (
         <div className="absolute top-2 right-2 z-10">
-          <FavoriteButton slug={recipe.slug} size="small" />
+          <FavoriteButton slug={recipe.slug} size="small" className="!bg-black/30 !text-white backdrop-blur-sm hover:!bg-black/45 dark:!bg-black/40" />
         </div>
       )}
       <a href={`/recipes/${recipe.slug}/`} className="block h-full rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sand-700">

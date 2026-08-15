@@ -37,7 +37,7 @@ interface RemixRequest {
 }
 
 export const POST: APIRoute = async ({ request }) => {
-  const anthropicApiKey = import.meta.env.ANTHROPIC_API_KEY;
+  const anthropicApiKey = import.meta.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY;
 
   if (!anthropicApiKey) {
     return new Response(JSON.stringify({ error: 'AI service not configured' }), {
