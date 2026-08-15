@@ -404,8 +404,8 @@ export default function SmartInput({ variant = 'default', placeholder = 'Paste a
                       onMouseEnter={() => setActive(i)}
                       tabIndex={-1}
                     >
-                      {r.recipe.image ? (
-                        <img src={r.recipe.image} alt="" width={40} height={40} loading="lazy" decoding="async" className="w-10 h-10 rounded-lg object-cover bg-sand-100 shrink-0" referrerPolicy="no-referrer" />
+                      {r.recipe.thumb || r.recipe.image ? (
+                        <img src={r.recipe.thumb || r.recipe.image} alt="" width={40} height={40} loading="lazy" decoding="async" className="w-10 h-10 rounded-lg object-cover bg-sand-100 shrink-0" referrerPolicy="no-referrer" />
                       ) : (
                         <span className="w-10 h-10 rounded-lg bg-sand-100 shrink-0" aria-hidden="true" />
                       )}

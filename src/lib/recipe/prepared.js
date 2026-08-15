@@ -1,7 +1,7 @@
 import { scaleIngredientLines } from './scale';
-import { formatFraction } from '../utils/formatFraction';
-import { isMetric } from '../utils/settings';
-import { convertIngredients } from '../utils/measurements';
+import { formatFraction } from '../../utils/formatFraction';
+import { isMetric } from '../../utils/settings';
+import { convertIngredients } from '../../utils/measurements';
 import { servingsCount } from './display';
 
 /**
