@@ -1,10 +1,10 @@
 # Simpler Recipes — Overnight Report (2026-08-14 → 15)
 
-Everything below is committed locally on `main` (36 commits ahead of `origin/main` @ `7c25b0c`). **Nothing has been pushed or deployed** — production still runs the old code. See "Founder decisions" first.
+Everything below is committed locally on `main` (43 commits ahead of `origin/main` @ `7c25b0c`). **Nothing has been pushed or deployed** — production still runs the old code. See "Founder decisions" first.
 
 ## 1. Executive summary
 
-The product now does what the tagline promises, end to end. Paste any recipe link and the recipe streams in fast (structured data first, AI only when a page has none, no sign-in gate), lands on a page built for cooking (ingredients first, check-off, honest scaling, hands-free Cook Mode with timers that actually ring), stays on your device under a real address, and can be shared. The curated catalog is properly indexable for the first time (recipe schema was never rendering; robots.txt/og-image were 404), 20 intent-based browse pages were added, and every page moved from Lighthouse mobile perf 69–75 to 83–95 with 100/100/100 accessibility/best-practices/SEO. Two security holes (SSRF, stored XSS via share) and a silently dead AI fallback (retired model) were fixed. 0 → 198 tests; `astro check` 54 → 0 errors.
+The product now does what the tagline promises, end to end. Paste any recipe link and the recipe streams in fast (structured data first, AI only when a page has none, no sign-in gate), lands on a page built for cooking (ingredients first, check-off, honest scaling, hands-free Cook Mode with timers that actually ring), stays on your device under a real address, and can be shared. The curated catalog is properly indexable for the first time (recipe schema was never rendering; robots.txt/og-image were 404), 20 intent-based browse pages were added, and every page moved from Lighthouse mobile perf 69–75 to 83–95 with 100/100/100 accessibility/best-practices/SEO. Two security holes (SSRF, stored XSS via share) and a silently dead AI fallback (retired model) were fixed. 0 → 200 tests; `astro check` 54 → 0 errors.
 
 ## 2. Major improvements by area
 
@@ -30,11 +30,11 @@ The product now does what the tagline promises, end to end. Paste any recipe lin
 
 **Security** — SSRF-hardened fetch (DNS + CIDR incl. IPv6-mapped/NAT64/metadata, manual redirects ≤ 5, 12s timeout, 3MB cap, content-type check); share/remix validated with zod + size caps + rate limits + `javascript:` sourceUrl blocked (stored XSS); IP rate limits; anon quota token can't be reset by clearing a cookie (IP fallback); signed-in users actually recognised server-side (`sr_auth` cookie bridge — they were being metered as anonymous); collection slug guard; nesting-depth guard for hostile HTML.
 
-**Engineering** — vitest suite (198), `typecheck`/`check` scripts, `astro check` clean, 12 dead files removed, duplicated parsers unified into `src/lib/recipe`, data normalizer script (idempotent), work log.
+**Engineering** — vitest suite (200), `typecheck`/`check` scripts, `astro check` clean, 12 dead files removed, duplicated parsers unified into `src/lib/recipe`, data normalizer script (idempotent), work log.
 
 ## 3. Bugs fixed (worst first)
 
-SSRF (any internal address fetchable, redirects followed blindly) · Recipe JSON-LD never rendered (no `head` slot) · robots.txt & og-image 404 · Claude fallback silently 404ing since 2026-06-15 (retired model) · stored XSS via shared `sourceUrl` · signed-in users metered as anonymous; anon quota reset by clearing a cookie · scaling corrupted quantities ("1/2 cup"×2 → "2 /2 cup", "440 g" → "44 g") · durations shown raw ("P0Y0M0DT0H15M0.000S"), yields doubled ("4 serving(s) servings") · TTFB 4–5s before any progress · mobile order steps-before-ingredients · dark mode illegible · `/recipe` prefix in robots blocked `/recipes/*` · plan page recipe picker empty (dead glob) · favorites page shipped 678KB of props · opening an extracted favorite opened the *most recent* recipe instead · timers stopped when Cook Mode closed; silent on iOS · Header "More" couldn't close itself · curated hero photo lost in refactor (caught by critique) · extraction lost when localStorage full · malformed local entries white-screened `/recipe` and the paste box · sticky ingredients became a nested scroller · Sally's "2 and 3/4 cups" scaled wrong · metric conversion of ranges ("1 - 2 tbsp" → "1 - 30 ml") · privacy page described a product without accounts or a cache.
+SSRF (any internal address fetchable, redirects followed blindly) · Recipe JSON-LD never rendered (no `head` slot) · robots.txt & og-image 404 · Claude fallback silently 404ing since 2026-06-15 (retired model) · stored XSS via shared `sourceUrl` · signed-in users metered as anonymous; anon quota reset by clearing a cookie · scaling corrupted quantities ("1/2 cup"×2 → "2 /2 cup", "440 g" → "44 g") · durations shown raw ("P0Y0M0DT0H15M0.000S"), yields doubled ("4 serving(s) servings") · TTFB 4–5s before any progress · mobile order steps-before-ingredients · dark mode illegible · `/recipe` prefix in robots blocked `/recipes/*` · plan page recipe picker empty (dead glob) · favorites page shipped 678KB of props · opening an extracted favorite opened the *most recent* recipe instead · timers stopped when Cook Mode closed; silent on iOS · Header "More" couldn't close itself · curated hero photo lost in refactor (caught by critique) · extraction lost when localStorage full · malformed local entries white-screened `/recipe` and the paste box · sticky ingredients became a nested scroller · Sally's "2 and 3/4 cups" scaled wrong · metric conversion of ranges ("1 - 2 tbsp" → "1 - 30 ml") · privacy page described a product without accounts or a cache · Tailwind silently dropped every `/opacity` modifier on the token colours (tokens were bare `var(--x)`): translucent header/scrim/timer bar were fully transparent, search highlight invisible, dark-mode dividers fell back to gray-200 — tokens are now RGB triplets with `<alpha-value>` (found by the third QA pass) · timer bar caused a hydration mismatch on every recipe page while a timer ran.
 
 ## 4. Measurements (before → after)
 
@@ -50,7 +50,7 @@ SSRF (any internal address fetchable, redirects followed blindly) · Recipe JSON
 | RecipeView island | 36 KB gz | 18.5 KB gz |
 | Search result thumbnails | 1–2 MB of originals per query | 96 px WebP, ~3 KB each |
 | Time to first SSE byte | after rate-limit/cache/auth (300–900 ms of KV/Supabase) | immediate |
-| Tests | 0 | 198 (9 files) + 52 real-site JSON-LD fixtures |
+| Tests | 0 | 200 (9 files) + 52 real-site JSON-LD fixtures |
 | `astro check` errors | 54 | 0 |
 | Indexable pages | 228 recipes + 16 collections (+ client-only shells) | + 20 browse pages; shells/auth excluded |
 

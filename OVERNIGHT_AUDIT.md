@@ -107,3 +107,12 @@ Two fresh subagents reviewed the new build (one as a first-time user/critic, one
 - **Search**: "30 min" / "chicken under 20 minutes" filter by total time; active row visible + kept in view; 16px input on phones (no iOS zoom); results use build-optimized 96px thumbs (`src/pages/search-index.json.ts` replaces the prebuild script — was loading 1–2MB originals per query).
 - **Misc**: Header "More" toggle (shared ref bug), Share keeps the link visible when clipboard is blocked, Copy copies exactly what's shown (scaled/converted), sticky ingredients only when they fit (no nested scroller), progressive browse grids (24 + Show more, all links stay in HTML), card `srcset`, card hearts readable over any photo, favorites 2-col, Remix modal `role=dialog` + focus trap, System theme follows the OS live, host:port URLs, http images upgraded, meta fixes, privacy page rewritten to describe the actual product (**needs founder/legal review**), structured extraction log line, KV/remix small fixes.
 - Regression pass: a third fresh QA agent re-verified the second wave (see report).
+
+## 5. Regression pass (third fresh QA agent, after the second wave)
+
+Verified working: hero photos, timers end-to-end (bar, persistence, alarm, title flash, dismiss), Cook Mode step sync + Done semantics, scaling cases, time-bounded search, favorites → correct extracted recipe, junk-tolerant Recent, share fallback, More menu, progressive browse grid, Copy-as-shown, print numerals, ingredient groups from RecipeTin Eats, homepage layout at 375px, no console errors across pages.
+
+Found and fixed:
+- **P0/P1 — Tailwind opacity modifiers on token colours were silently dropped everywhere** (config used bare `var(--sand-N)`). Header/timer bar/scrim transparent, search highlight invisible, dark-mode dividers gray-200, several hover states missing. Tokens converted to space-separated RGB and the config to `rgb(var(--x) / <alpha-value>)`; the `@apply` variant of the same problem had briefly 500'd the whole dev site earlier that hour (fixed within minutes).
+- **P2 — hydration mismatch** while a timer runs (TimerBar read the store during first client render). Now starts empty and reads after mount.
+- P3 — search "day" durations; scaling modifier-noun pluralisation ("egg yolks", "tomato sauce", "orange or green"), ⅛ cup → 2 tbsp, "plus" addends; Show-more focus; mobile share fallback.
