@@ -3,9 +3,16 @@ import RecipeCard from './RecipeCard';
 import { getPantryItems } from '../utils/pantry';
 import { sortRecipesByMatch } from '../utils/ingredientMatcher';
 
-export default function RecipeGrid({ recipes, showFavorite = true }) {
+/**
+ * Grid of recipe cards. Every card is in the server HTML (crawlable links), but only the first
+ * `pageSize` are visible; the rest are `hidden` until "Show more". Hidden cards' lazy images are
+ * never fetched, so long browse pages (100+ recipes) don't load 100+ images up front.
+ * When the pantry has items, the whole list is re-sorted by match before paging.
+ */
+export default function RecipeGrid({ recipes, showFavorite = true, pageSize = 24 }) {
   const [pantryItems, setPantryItems] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [limit, setLimit] = useState(pageSize);
 
   // Load pantry items and listen for changes
   useEffect(() => {
@@ -33,19 +40,30 @@ export default function RecipeGrid({ recipes, showFavorite = true }) {
 
   // Show original order briefly before sorting kicks in
   const displayRecipes = isLoaded ? sortedRecipes : recipes.map(r => ({ ...r, matchInfo: null }));
+  const remaining = Math.max(0, displayRecipes.length - limit);
 
   return (
-    <ul className="grid gap-x-5 gap-y-7 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-      {displayRecipes.map((recipe, i) => (
-        <li key={recipe.slug}>
-          <RecipeCard
-            recipe={recipe}
-            showFavorite={showFavorite}
-            matchInfo={recipe.matchInfo}
-            eager={i < 4}
-          />
-        </li>
-      ))}
-    </ul>
+    <>
+      <ul className="grid gap-x-5 gap-y-7 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+        {displayRecipes.map((recipe, i) => (
+          <li key={recipe.slug} hidden={i >= limit}>
+            <RecipeCard
+              recipe={recipe}
+              showFavorite={showFavorite}
+              matchInfo={recipe.matchInfo}
+              eager={i < 4}
+            />
+          </li>
+        ))}
+      </ul>
+      {remaining > 0 && (
+        <div className="mt-8 flex justify-center">
+          <button type="button" className="btn-secondary" onClick={() => setLimit((l) => l + pageSize)}>
+            Show {Math.min(pageSize, remaining)} more
+            <span className="text-sand-500 font-normal"> · {remaining} left</span>
+          </button>
+        </div>
+      )}
+    </>
   );
 }
