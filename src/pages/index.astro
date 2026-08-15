@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroInput from '../components/HeroInput.jsx';
 import fs from 'fs';
 import path from 'path';
+import { buildBrowsePages } from '../lib/browse';
 
 // Collections at build time. Ordered by usefulness for "what's for dinner", not alphabetically.
 const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
@@ -17,6 +18,7 @@ const collections = [...data.collections].sort((a: any, b: any) => {
   return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
 });
 const recipeCount = data.recipes.length;
+const browse = buildBrowsePages(data.recipes).map((p) => ({ slug: p.slug, name: p.name, count: p.recipes.length }));
 
 const title = 'Simpler Recipes — paste any recipe link, get just the recipe';
 const description = `Paste a recipe link and get the ingredients and steps with nothing else: no ads, no pop-ups, no life story. Or browse ${recipeCount} clean recipes with check-off ingredients, scaling and a hands-free Cook Mode.`;
@@ -69,6 +71,15 @@ const websiteSchema = JSON.stringify({
             ))}
           </ul>
         </nav>
+      </section>
+
+      <section aria-labelledby="browse-heading" class="pb-16 -mt-6">
+        <h2 id="browse-heading" class="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500 mb-3">By ingredient, time and occasion</h2>
+        <ul class="flex flex-wrap gap-x-5 gap-y-2 text-[15px]">
+          {browse.map((b) => (
+            <li><a href={`/browse/${b.slug}/`} class="text-sand-800 hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300">{b.name} <span class="text-sand-500 tabular">{b.count}</span></a></li>
+          ))}
+        </ul>
       </section>
 
       <footer class="pb-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-sand-500">
