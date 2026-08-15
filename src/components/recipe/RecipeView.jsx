@@ -21,6 +21,8 @@ import { PlayIcon, HeartIcon, ShareIcon, PrintIcon, CopyIcon, ExternalIcon, Spar
  *   variant     'curated' | 'extracted' | 'shared'
  *   shareId     for shared pages (used to build the canonical share URL)
  *   remix       optional render-prop for the Remix control (kept out of this component's bundle)
+ *
+ * @param {{ recipe: any, recipeId: string, sourceUrl?: string | null, variant?: 'curated' | 'extracted' | 'shared', shareId?: string, remix?: any, children?: any }} props
  */
 export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'curated', shareId, remix, children }) {
   const src = useMemo(() => sourceInfo(recipe, sourceUrl), [recipe, sourceUrl]);
