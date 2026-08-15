@@ -23,6 +23,8 @@ export default function RecipeCard({ recipe, showFavorite = true, matchInfo, eag
             {recipe.image && !imgFailed && (
               <img
                 src={recipe.image}
+                srcSet={recipe.imageSet || undefined}
+                sizes={recipe.imageSet ? '(min-width: 1024px) 250px, (min-width: 640px) 33vw, 50vw' : undefined}
                 alt=""
                 width={400}
                 height={300}

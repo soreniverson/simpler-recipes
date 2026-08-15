@@ -4,7 +4,7 @@ import RecipeGrid from '../../components/RecipeGrid.jsx';
 import fs from 'fs';
 import path from 'path';
 import { buildBrowsePages } from '../../lib/browse';
-import { optimizeRemote } from '../../lib/images';
+import { cardImage } from '../../lib/images';
 
 export async function getStaticPaths() {
   const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
@@ -27,7 +27,7 @@ interface Props {
   others: { slug: string; name: string; count: number }[];
 }
 const { page, recipes: rawRecipes, others } = Astro.props as Props;
-const recipes = await Promise.all(rawRecipes.map(async (r) => ({ ...r, image: (await optimizeRemote(r.image, 480, 360))?.src ?? r.image })));
+const recipes = await Promise.all(rawRecipes.map(async (r) => { const img = await cardImage(r.image); return { ...r, image: img?.src ?? r.image, imageSet: img?.set ?? null }; }));
 
 const SITE = 'https://www.simpler.recipes';
 const pageUrl = `${SITE}/browse/${page.slug}/`;

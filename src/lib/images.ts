@@ -78,3 +78,13 @@ export function optimizeRemote(url: string | null | undefined, width: number, he
   }
   return outputs.get(key)!;
 }
+
+/** Card image at two widths (phones fetch ~half the bytes). Returns null when the original is missing. */
+export async function cardImage(url: string | null | undefined): Promise<{ src: string; set: string | null } | null> {
+  if (!url) return null;
+  const [w320, w400, w480] = await Promise.all([optimizeRemote(url, 320, 240), optimizeRemote(url, 400, 300), optimizeRemote(url, 480, 360)]);
+  if (!w480) return null;
+  const all = [w320, w400, w480];
+  const set = all.every((x) => x && !x.remote) ? `${w320!.src} 320w, ${w400!.src} 400w, ${w480.src} 480w` : null;
+  return { src: w480.src, set };
+}
