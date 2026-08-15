@@ -191,6 +191,20 @@ export function normalizeYield(input: unknown): NormalizedYield {
   }
   // Ranges: "4-6 servings" → "4–6 servings"
   text = text.replace(/(\d)\s*(?:-|to)\s*(\d)/i, '$1–$2');
+  // "1 servings" → "1 serving"
+  text = text.replace(/^1 servings$/i, '1 serving');
+  // "4 dozen" → 48
+  const dozen = text.match(/^(\d+)\s*dozen\b/i);
+  if (dozen) count = parseInt(dozen[1], 10) * 12;
+  // A bare number too big to be servings ("48" cookies, "160" ml) is a count of *something*: say
+  // "Makes 48" rather than "48 servings", and don't use it as a scaling baseline above 100.
+  const bareBig = text.match(/^(\d+) servings$/);
+  if (bareBig && parseInt(bareBig[1], 10) > 24) {
+    text = `Makes ${bareBig[1]}`;
+    if (parseInt(bareBig[1], 10) > 100) count = null;
+  }
+  // "160 ml (2/3 cup)" is a volume, not a serving count — keep the text, drop the count.
+  if (/^\d+(?:[.,]\d+)?\s*(ml|g|l|kg|oz|cups?|litres?|liters?)\b/i.test(text) && !/serv|people|portion/i.test(text)) count = null;
   // Capitalise first letter, cap length.
   text = text.charAt(0).toUpperCase() + text.slice(1);
   if (text.length > 60) text = text.slice(0, 57).trimEnd() + '…';

@@ -6,7 +6,7 @@
   },
   "metadata": {
     "recipeCount": 16,
-    "lastUpdated": "2026-08-15T06:06:12.033Z"
+    "lastUpdated": "2026-08-15T07:09:04.625Z"
   },
   "recipes": [
     {
@@ -356,7 +356,7 @@
       "prepTime": "20 min",
       "cookTime": "24 min",
       "totalTime": "44 min",
-      "servings": "48",
+      "servings": "4 dozen",
       "ingredients": [
         "1 cup (2 sticks) unsalted butter, softened, OR 1 cup shortening",
         "1 cup brown sugar (light or dark), packed",
@@ -451,7 +451,7 @@
       "prepTime": null,
       "cookTime": null,
       "totalTime": null,
-      "servings": "160",
+      "servings": "160 ml (2/3 cup)",
       "ingredients": [
         "3 tbsp caster sugar (superfine sugar) - or regular / granulated sugar",
         "1 tbsp lemon zest",
@@ -584,7 +584,7 @@
     {
       "id": "easy-pancakes",
       "slug": "easy-pancakes",
-      "title": "Easy pancakes",
+      "title": "Easy Pancakes",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1273477_8-ad36e3b.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "20 min",
@@ -620,7 +620,7 @@
     {
       "id": "lemon-drizzle-cake",
       "slug": "lemon-drizzle-cake",
-      "title": "Lemon drizzle cake",
+      "title": "Lemon Drizzle Cake",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1238452_7-35e4911.jpg?resize=440,400",
       "prepTime": null,
       "cookTime": "45 min",
@@ -660,7 +660,7 @@
     {
       "id": "easy-chocolate-chip-cookies",
       "slug": "easy-chocolate-chip-cookies",
-      "title": "Easy chocolate chip cookies",
+      "title": "Easy Chocolate Chip Cookies",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chocolate-chunk-cookies_0-6f27241.jpg?resize=440,400",
       "prepTime": "20 min",
       "cookTime": "12 min",

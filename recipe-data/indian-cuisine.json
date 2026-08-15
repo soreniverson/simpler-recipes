@@ -6,7 +6,7 @@
   },
   "metadata": {
     "recipeCount": 12,
-    "lastUpdated": "2026-08-15T06:06:12.039Z"
+    "lastUpdated": "2026-08-15T07:09:04.631Z"
   },
   "recipes": [
     {
@@ -231,7 +231,7 @@
     {
       "id": "easy-chicken-curry",
       "slug": "easy-chicken-curry",
-      "title": "Easy chicken curry",
+      "title": "Easy Chicken Curry",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/easy-chicken-curry-aa22a0b.jpg?resize=440,400",
       "prepTime": "5 min",
       "cookTime": "45 min",
@@ -269,7 +269,7 @@
     {
       "id": "lamb-biryani",
       "slug": "lamb-biryani",
-      "title": "Lamb biryani",
+      "title": "Lamb Biryani",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/lamb-biryani-83e5c3d.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "50 min",
@@ -313,7 +313,7 @@
     {
       "id": "vegetable-samosas",
       "slug": "vegetable-samosas",
-      "title": "Vegetable samosas",
+      "title": "Vegetable Samosas",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/vegetable-samosas-b9b74f9.jpg?resize=440,400",
       "prepTime": "30 min",
       "cookTime": "1 hr 10 min",
@@ -355,7 +355,7 @@
     {
       "id": "chicken-dopiaza",
       "slug": "chicken-dopiaza",
-      "title": "Chicken dopiaza",
+      "title": "Chicken Dopiaza",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2024/04/ChickenDopiaza-a8c2cab.jpg?resize=768,713",
       "prepTime": "10 min",
       "cookTime": "30 min",
@@ -406,7 +406,7 @@
     {
       "id": "chicken-jalfrezi",
       "slug": "chicken-jalfrezi",
-      "title": "Chicken jalfrezi",
+      "title": "Chicken Jalfrezi",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-jalfrezi--020ac52.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "1 hr",
@@ -458,7 +458,7 @@
     {
       "id": "saag-paneer",
       "slug": "saag-paneer",
-      "title": "Saag paneer",
+      "title": "Saag Paneer",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/saag-paneer-4893170.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "20 min",
@@ -497,7 +497,7 @@
     {
       "id": "chicken-bhuna",
       "slug": "chicken-bhuna",
-      "title": "Chicken bhuna",
+      "title": "Chicken Bhuna",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-bhuna-06e1433.jpg?resize=440,400",
       "prepTime": "15 min",
       "cookTime": "50 min",
@@ -537,7 +537,7 @@
     {
       "id": "lighter-lamb-kofta-curry",
       "slug": "lighter-lamb-kofta-curry",
-      "title": "Lighter lamb kofta curry",
+      "title": "Lighter Lamb Kofta Curry",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/lamb-kofta-curry-37686d4.jpg?resize=440,400",
       "prepTime": "40 min",
       "cookTime": "25 min",

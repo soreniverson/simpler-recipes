@@ -37,13 +37,45 @@ function fixTime(raw: unknown): string | null {
 
 const MEATY = /\b(chicken|beef|steak|pork|bacon|ham|lamb|turkey|sausage|chorizo|prosciutto|pancetta|anchov\w*|tuna|salmon|shrimp|prawns?|fish|cod|crab|clams?|mussels?|oyster|scallops?|squid|gelatin)\b(?!\s+seasoning)(?!\s+or\s+veg)/i;
 
+/** Words that stay lowercase inside a title (unless first). */
+const SMALL = new Set(['a', 'an', 'the', 'and', 'or', 'of', 'with', 'in', 'on', 'for', 'to', 'from', 'at', 'by', 'as', 'but', 'nor', 'per', 'via', 'vs', '&']);
+/**
+ * BBC Good Food writes sentence case ("Devilled eggs"); most others Title Case. Only titles that
+ * are strictly sentence case (one capital, rest lowercase) are converted, so mixed-case titles
+ * with brand/proper nouns are left exactly as the publisher wrote them.
+ */
+function titleCaseIfSentence(t: string): string {
+  if (!t || t !== t.charAt(0).toUpperCase() + t.slice(1).toLowerCase()) return t;
+  if (t.split(/\s+/).length < 2) return t;
+  return t
+    .split(/(\s+|-|–|—|\/)/)
+    .map((w, i) => {
+      if (!/[a-z]/i.test(w)) return w;
+      const lower = w.toLowerCase();
+      if (i > 0 && SMALL.has(lower)) return lower;
+      // keep unit-ish tokens as written ("5-minute")
+      return lower.charAt(0).toUpperCase() + lower.slice(1);
+    })
+    .join('');
+}
+
+/** Known bad yields from single-element captures; the sources publish the descriptive form. */
+const YIELD_FIXES: Record<string, string> = {
+  'lemon-curd': '160 ml (2/3 cup)',
+  'the-best-oatmeal-raisin-cookies': '4 dozen',
+};
+
 function normalizeRecipe(r: any): any {
   const before = JSON.stringify(r);
   const out = { ...r };
-  out.title = cleanTitle(r.title) || r.title;
+  out.title = titleCaseIfSentence(cleanTitle(r.title) || r.title);
   if (out.title !== r.title) bump('title');
+  if (YIELD_FIXES[r.slug] && r.servings !== YIELD_FIXES[r.slug]) {
+    out.servings = YIELD_FIXES[r.slug];
+    bump('servings');
+  }
   out.ingredients = (r.ingredients || [])
-    .map((i: string) => stripNotes(cleanIngredientLine(i)))
+    .map((i: string) => stripNotes(cleanIngredientLine(i)).replace(/\b(cups?|tbsp|tsp|tablespoons?|teaspoons?)\s+\1\b/gi, '$1'))
     .filter((i: string) => i && i.length > 0);
   if (JSON.stringify(out.ingredients) !== JSON.stringify(r.ingredients)) bump('ingredients');
   out.instructions = (r.instructions || [])

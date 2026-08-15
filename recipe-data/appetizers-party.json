@@ -6,7 +6,7 @@
   },
   "metadata": {
     "recipeCount": 12,
-    "lastUpdated": "2026-08-15T06:06:12.019Z"
+    "lastUpdated": "2026-08-15T07:09:04.614Z"
   },
   "recipes": [
     {
@@ -54,7 +54,7 @@
     {
       "id": "devilled-eggs",
       "slug": "devilled-eggs",
-      "title": "Devilled eggs",
+      "title": "Devilled Eggs",
       "image": "https://www.recipetineats.com/tachyon/2025/02/Devilled-eggs_8.jpg",
       "prepTime": "20 min",
       "cookTime": "10 min",
@@ -443,7 +443,7 @@
     {
       "id": "baked-camembert",
       "slug": "baked-camembert",
-      "title": "Baked camembert",
+      "title": "Baked Camembert",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/baked_camembert-de29cd6.jpg?resize=500,454",
       "prepTime": "5 min",
       "cookTime": "20 min",
@@ -477,7 +477,7 @@
     {
       "id": "halloumi-fries",
       "slug": "halloumi-fries",
-      "title": "Halloumi fries",
+      "title": "Halloumi Fries",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/halloumi-fries-221b9b7.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "10 min",

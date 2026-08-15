@@ -6,7 +6,7 @@
   },
   "metadata": {
     "recipeCount": 16,
-    "lastUpdated": "2026-08-15T06:06:12.053Z"
+    "lastUpdated": "2026-08-15T07:09:04.645Z"
   },
   "recipes": [
     {
@@ -519,7 +519,7 @@
     {
       "id": "veggie-chilli",
       "slug": "veggie-chilli",
-      "title": "Veggie chilli",
+      "title": "Veggie Chilli",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/veggie-chilli-4a57c04.jpg?resize=440,400",
       "prepTime": null,
       "cookTime": "30 min",
@@ -548,7 +548,7 @@
     {
       "id": "easy-ratatouille",
       "slug": "easy-ratatouille",
-      "title": "Easy ratatouille",
+      "title": "Easy Ratatouille",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/ratatouille-99ab754.jpg?resize=440,400",
       "prepTime": "25 min",
       "cookTime": "40 min",
@@ -585,7 +585,7 @@
     {
       "id": "vegetarian-lasagne",
       "slug": "vegetarian-lasagne",
-      "title": "Vegetarian lasagne",
+      "title": "Vegetarian Lasagne",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2022/02/vegetarian-lasagne-5ee6162.jpg?resize=440,400",
       "prepTime": "25 min",
       "cookTime": "1 hr 10 min",
@@ -631,7 +631,7 @@
     {
       "id": "mushroom-stroganoff",
       "slug": "mushroom-stroganoff",
-      "title": "Mushroom stroganoff",
+      "title": "Mushroom Stroganoff",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-871464_11-1ff1fe2.jpg?resize=500,454",
       "prepTime": "10 min",
       "cookTime": "20 min",
@@ -669,7 +669,7 @@
     {
       "id": "spinach-ricotta-cannelloni",
       "slug": "spinach-ricotta-cannelloni",
-      "title": "Spinach & ricotta cannelloni",
+      "title": "Spinach & Ricotta Cannelloni",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1259591_6-6382b2d.jpg?resize=440,400",
       "prepTime": "50 min",
       "cookTime": "40 min",

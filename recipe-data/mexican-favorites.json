@@ -6,7 +6,7 @@
   },
   "metadata": {
     "recipeCount": 10,
-    "lastUpdated": "2026-08-15T06:06:12.044Z"
+    "lastUpdated": "2026-08-15T07:09:04.637Z"
   },
   "recipes": [
     {
@@ -183,7 +183,7 @@
     {
       "id": "chicken-quesadillas",
       "slug": "chicken-quesadillas",
-      "title": "Chicken quesadillas",
+      "title": "Chicken Quesadillas",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2009/02/Chicken-quesadilla-4b5a699.jpg?resize=768,845",
       "prepTime": "10 min",
       "cookTime": "6 min",
@@ -218,7 +218,7 @@
     {
       "id": "easy-chicken-fajitas",
       "slug": "easy-chicken-fajitas",
-      "title": "Easy chicken fajitas",
+      "title": "Easy Chicken Fajitas",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-fajitas-2-d7172f8.jpg?resize=440,400",
       "prepTime": "15 min",
       "cookTime": "10 min",
@@ -264,7 +264,7 @@
     {
       "id": "mexican-chicken-burger",
       "slug": "mexican-chicken-burger",
-      "title": "Mexican chicken burger",
+      "title": "Mexican Chicken Burger",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/mexican-chicken-burger-092a6e0.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "8 min",
@@ -301,7 +301,7 @@
     {
       "id": "huevos-rancheros",
       "slug": "huevos-rancheros",
-      "title": "Huevos rancheros",
+      "title": "Huevos Rancheros",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/huevos-rancheros-72f825a.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "15 min",
@@ -345,7 +345,7 @@
     {
       "id": "taco-salad",
       "slug": "taco-salad",
-      "title": "Taco salad",
+      "title": "Taco Salad",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2021/07/Taco-salad-462c67b.jpg?resize=768,713",
       "prepTime": "20 min",
       "cookTime": "30 min",
@@ -390,7 +390,7 @@
     {
       "id": "chicken-burrito-bowl",
       "slug": "chicken-burrito-bowl",
-      "title": "Chicken burrito bowl",
+      "title": "Chicken Burrito Bowl",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/buddha-bowls-2358192.jpg?resize=440,400",
       "prepTime": "15 min",
       "cookTime": "30 min",

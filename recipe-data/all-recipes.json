@@ -3,7 +3,7 @@
     "totalRecipes": 228,
     "collectionCount": 16,
     "lastUpdated": "2026-01-18T06:49:07.318Z",
-    "normalizedAt": "2026-08-15T06:06:12.017Z"
+    "normalizedAt": "2026-08-15T07:09:04.612Z"
   },
   "collections": [
     {
@@ -422,7 +422,7 @@
     {
       "id": "devilled-eggs",
       "slug": "devilled-eggs",
-      "title": "Devilled eggs",
+      "title": "Devilled Eggs",
       "image": "https://www.recipetineats.com/tachyon/2025/02/Devilled-eggs_8.jpg",
       "prepTime": "20 min",
       "cookTime": "10 min",
@@ -811,7 +811,7 @@
     {
       "id": "baked-camembert",
       "slug": "baked-camembert",
-      "title": "Baked camembert",
+      "title": "Baked Camembert",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/baked_camembert-de29cd6.jpg?resize=500,454",
       "prepTime": "5 min",
       "cookTime": "20 min",
@@ -845,7 +845,7 @@
     {
       "id": "halloumi-fries",
       "slug": "halloumi-fries",
-      "title": "Halloumi fries",
+      "title": "Halloumi Fries",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/halloumi-fries-221b9b7.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "10 min",
@@ -1567,7 +1567,7 @@
     {
       "id": "healthy-chicken-katsu-curry",
       "slug": "healthy-chicken-katsu-curry",
-      "title": "Healthy chicken katsu curry",
+      "title": "Healthy Chicken Katsu Curry",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-katsu-curry-d339012.jpg?resize=430,400",
       "prepTime": "20 min",
       "cookTime": "35 min",
@@ -1618,7 +1618,7 @@
     {
       "id": "crispy-chilli-beef",
       "slug": "crispy-chilli-beef",
-      "title": "Crispy chilli beef",
+      "title": "Crispy Chilli Beef",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1176635_11-b391f28.jpg?resize=440,400",
       "prepTime": "25 min",
       "cookTime": "15 min",
@@ -1664,7 +1664,7 @@
     {
       "id": "sweet-sour-chicken",
       "slug": "sweet-sour-chicken",
-      "title": "Sweet & sour chicken",
+      "title": "Sweet & Sour Chicken",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2010/02/Sweet-and-sour-chicken-bbd3783.jpg?resize=768,698",
       "prepTime": "20 min",
       "cookTime": "45 min",
@@ -1708,7 +1708,7 @@
     {
       "id": "chicken-noodle-soup",
       "slug": "chicken-noodle-soup",
-      "title": "Chicken noodle soup",
+      "title": "Chicken Noodle Soup",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1035613_10-0e544b7.jpg?resize=500,454",
       "prepTime": "10 min",
       "cookTime": "30 min",
@@ -1745,7 +1745,7 @@
     {
       "id": "miso-soup",
       "slug": "miso-soup",
-      "title": "Miso soup",
+      "title": "Miso Soup",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/miso_soup-e06ed98.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "5 min",
@@ -2373,7 +2373,7 @@
     {
       "id": "banana-bread",
       "slug": "banana-bread",
-      "title": "Banana bread",
+      "title": "Banana Bread",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/06/recipe-image-legacy-id-1273522_8-a6b9246.jpg?resize=440,400",
       "prepTime": "15 min",
       "cookTime": "50 min",
@@ -2412,7 +2412,7 @@
     {
       "id": "ultimate-chocolate-cake",
       "slug": "ultimate-chocolate-cake",
-      "title": "Ultimate chocolate cake",
+      "title": "Ultimate Chocolate Cake",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1043451_11-4713959.jpg?resize=440,400",
       "prepTime": "40 min",
       "cookTime": "1 hr 30 min",
@@ -2477,7 +2477,7 @@
         "1/4 cup white sugar (caster / super fine is best but not essential)",
         "Pinch of salt",
         "1 large egg (~50g / 2oz in shell)",
-        "1 3/4 cups cups milk (any type, any fat %)",
+        "1 3/4 cups milk (any type, any fat %)",
         "1 tsp vanilla extract or essence",
         "4 tsp butter (for cooking)"
       ],
@@ -2507,7 +2507,7 @@
     {
       "id": "really-great-waffles",
       "slug": "really-great-waffles",
-      "title": "Really great waffles",
+      "title": "Really Great Waffles",
       "image": "https://www.recipetineats.com/tachyon/2023/08/Waffles_7.jpg",
       "prepTime": "10 min",
       "cookTime": "15 min",
@@ -2607,7 +2607,7 @@
     {
       "id": "scrambled-eggs-soft-and-creamy-just-as-they-should-be",
       "slug": "scrambled-eggs-soft-and-creamy-just-as-they-should-be",
-      "title": "Scrambled eggs - soft and creamy, just as they should be",
+      "title": "Scrambled Eggs - Soft and Creamy, Just as They Should Be",
       "image": "https://www.recipetineats.com/tachyon/2020/07/Scrambled-Eggs_5-SQ.jpg",
       "prepTime": "1 min",
       "cookTime": "1 min",
@@ -3056,7 +3056,7 @@
     {
       "id": "easy-pancakes",
       "slug": "easy-pancakes",
-      "title": "Easy pancakes",
+      "title": "Easy Pancakes",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1273477_8-ad36e3b.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "20 min",
@@ -3673,7 +3673,7 @@
     {
       "id": "salisbury-steak-meatballs-with-mushroom-gravy",
       "slug": "salisbury-steak-meatballs-with-mushroom-gravy",
-      "title": "Salisbury steak meatballs with mushroom gravy",
+      "title": "Salisbury Steak Meatballs with Mushroom Gravy",
       "image": "https://www.recipetineats.com/tachyon/2023/01/Salisbury-Steak-Meatballs_0.jpg",
       "prepTime": null,
       "cookTime": null,
@@ -4272,7 +4272,7 @@
       "prepTime": "20 min",
       "cookTime": "24 min",
       "totalTime": "44 min",
-      "servings": "48",
+      "servings": "4 dozen",
       "ingredients": [
         "1 cup (2 sticks) unsalted butter, softened, OR 1 cup shortening",
         "1 cup brown sugar (light or dark), packed",
@@ -4367,7 +4367,7 @@
       "prepTime": null,
       "cookTime": null,
       "totalTime": null,
-      "servings": "160",
+      "servings": "160 ml (2/3 cup)",
       "ingredients": [
         "3 tbsp caster sugar (superfine sugar) - or regular / granulated sugar",
         "1 tbsp lemon zest",
@@ -4500,7 +4500,7 @@
     {
       "id": "lemon-drizzle-cake",
       "slug": "lemon-drizzle-cake",
-      "title": "Lemon drizzle cake",
+      "title": "Lemon Drizzle Cake",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1238452_7-35e4911.jpg?resize=440,400",
       "prepTime": null,
       "cookTime": "45 min",
@@ -4540,7 +4540,7 @@
     {
       "id": "easy-chocolate-chip-cookies",
       "slug": "easy-chocolate-chip-cookies",
-      "title": "Easy chocolate chip cookies",
+      "title": "Easy Chocolate Chip Cookies",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chocolate-chunk-cookies_0-6f27241.jpg?resize=440,400",
       "prepTime": "20 min",
       "cookTime": "12 min",
@@ -5152,7 +5152,7 @@
     {
       "id": "chimichurri-butter",
       "slug": "chimichurri-butter",
-      "title": "Chimichurri butter",
+      "title": "Chimichurri Butter",
       "image": "https://www.recipetineats.com/tachyon/2025/11/Chimichurri-butter_1.jpg",
       "prepTime": "10 min",
       "cookTime": "2 min",
@@ -5958,7 +5958,7 @@
     {
       "id": "bacon-wrapped-chicken",
       "slug": "bacon-wrapped-chicken",
-      "title": "Bacon wrapped chicken",
+      "title": "Bacon Wrapped Chicken",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-4558_10-969a1c1.jpg?resize=440,400",
       "prepTime": null,
       "cookTime": "35 min",
@@ -6210,7 +6210,7 @@
     {
       "id": "easy-chicken-curry",
       "slug": "easy-chicken-curry",
-      "title": "Easy chicken curry",
+      "title": "Easy Chicken Curry",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/easy-chicken-curry-aa22a0b.jpg?resize=440,400",
       "prepTime": "5 min",
       "cookTime": "45 min",
@@ -6248,7 +6248,7 @@
     {
       "id": "lamb-biryani",
       "slug": "lamb-biryani",
-      "title": "Lamb biryani",
+      "title": "Lamb Biryani",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/lamb-biryani-83e5c3d.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "50 min",
@@ -6292,7 +6292,7 @@
     {
       "id": "vegetable-samosas",
       "slug": "vegetable-samosas",
-      "title": "Vegetable samosas",
+      "title": "Vegetable Samosas",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/vegetable-samosas-b9b74f9.jpg?resize=440,400",
       "prepTime": "30 min",
       "cookTime": "1 hr 10 min",
@@ -6334,7 +6334,7 @@
     {
       "id": "chicken-dopiaza",
       "slug": "chicken-dopiaza",
-      "title": "Chicken dopiaza",
+      "title": "Chicken Dopiaza",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2024/04/ChickenDopiaza-a8c2cab.jpg?resize=768,713",
       "prepTime": "10 min",
       "cookTime": "30 min",
@@ -6385,7 +6385,7 @@
     {
       "id": "chicken-jalfrezi",
       "slug": "chicken-jalfrezi",
-      "title": "Chicken jalfrezi",
+      "title": "Chicken Jalfrezi",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-jalfrezi--020ac52.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "1 hr",
@@ -6437,7 +6437,7 @@
     {
       "id": "saag-paneer",
       "slug": "saag-paneer",
-      "title": "Saag paneer",
+      "title": "Saag Paneer",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/saag-paneer-4893170.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "20 min",
@@ -6476,7 +6476,7 @@
     {
       "id": "chicken-bhuna",
       "slug": "chicken-bhuna",
-      "title": "Chicken bhuna",
+      "title": "Chicken Bhuna",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-bhuna-06e1433.jpg?resize=440,400",
       "prepTime": "15 min",
       "cookTime": "50 min",
@@ -6516,7 +6516,7 @@
     {
       "id": "lighter-lamb-kofta-curry",
       "slug": "lighter-lamb-kofta-curry",
-      "title": "Lighter lamb kofta curry",
+      "title": "Lighter Lamb Kofta Curry",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/lamb-kofta-curry-37686d4.jpg?resize=440,400",
       "prepTime": "40 min",
       "cookTime": "25 min",
@@ -7017,7 +7017,7 @@
     {
       "id": "the-best-spaghetti-bolognese-recipe",
       "slug": "the-best-spaghetti-bolognese-recipe",
-      "title": "The best spaghetti bolognese",
+      "title": "The Best Spaghetti Bolognese",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/the-best-spaghetti-bolognese-7e83155.jpg?resize=440,400",
       "prepTime": "25 min",
       "cookTime": "1 hr 50 min",
@@ -7071,7 +7071,7 @@
     {
       "id": "creamy-mushroom-pasta",
       "slug": "creamy-mushroom-pasta",
-      "title": "Creamy mushroom pasta",
+      "title": "Creamy Mushroom Pasta",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/creamy_mushroom_pasta-fc7ab67.jpg?resize=440,400",
       "prepTime": "15 min",
       "cookTime": "25 min",
@@ -7510,7 +7510,7 @@
     {
       "id": "easy-tzatziki",
       "slug": "easy-tzatziki",
-      "title": "Easy tzatziki",
+      "title": "Easy Tzatziki",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2021/07/Tzatziki-93ef952.jpg?resize=768,713",
       "prepTime": "15 min",
       "cookTime": null,
@@ -7577,7 +7577,7 @@
     {
       "id": "greek-salad",
       "slug": "greek-salad",
-      "title": "Greek salad",
+      "title": "Greek Salad",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1201727_11-4026b8d.jpg?resize=440,400",
       "prepTime": "15 min",
       "cookTime": null,
@@ -7781,7 +7781,7 @@
     {
       "id": "chicken-quesadillas",
       "slug": "chicken-quesadillas",
-      "title": "Chicken quesadillas",
+      "title": "Chicken Quesadillas",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2009/02/Chicken-quesadilla-4b5a699.jpg?resize=768,845",
       "prepTime": "10 min",
       "cookTime": "6 min",
@@ -7816,7 +7816,7 @@
     {
       "id": "easy-chicken-fajitas",
       "slug": "easy-chicken-fajitas",
-      "title": "Easy chicken fajitas",
+      "title": "Easy Chicken Fajitas",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-fajitas-2-d7172f8.jpg?resize=440,400",
       "prepTime": "15 min",
       "cookTime": "10 min",
@@ -7862,7 +7862,7 @@
     {
       "id": "mexican-chicken-burger",
       "slug": "mexican-chicken-burger",
-      "title": "Mexican chicken burger",
+      "title": "Mexican Chicken Burger",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/mexican-chicken-burger-092a6e0.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "8 min",
@@ -7899,7 +7899,7 @@
     {
       "id": "huevos-rancheros",
       "slug": "huevos-rancheros",
-      "title": "Huevos rancheros",
+      "title": "Huevos Rancheros",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/huevos-rancheros-72f825a.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "15 min",
@@ -7943,7 +7943,7 @@
     {
       "id": "taco-salad",
       "slug": "taco-salad",
-      "title": "Taco salad",
+      "title": "Taco Salad",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2021/07/Taco-salad-462c67b.jpg?resize=768,713",
       "prepTime": "20 min",
       "cookTime": "30 min",
@@ -7988,7 +7988,7 @@
     {
       "id": "chicken-burrito-bowl",
       "slug": "chicken-burrito-bowl",
-      "title": "Chicken burrito bowl",
+      "title": "Chicken Burrito Bowl",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/buddha-bowls-2358192.jpg?resize=440,400",
       "prepTime": "15 min",
       "cookTime": "30 min",
@@ -9173,7 +9173,7 @@
     {
       "id": "lemon-garlic-salmon-tray-bake-easy-healthy",
       "slug": "lemon-garlic-salmon-tray-bake-easy-healthy",
-      "title": "Lemon garlic salmon tray bake - easy & healthy",
+      "title": "Lemon Garlic Salmon Tray Bake - Easy & Healthy",
       "image": "https://www.recipetineats.com/tachyon/2024/02/Lemon-garlic-salmon-tray-bake_1.jpg",
       "prepTime": "10 min",
       "cookTime": "11 min",
@@ -9411,7 +9411,7 @@
     {
       "id": "beef-ginger-stir-fry",
       "slug": "beef-ginger-stir-fry",
-      "title": "Beef & ginger stir-fry",
+      "title": "Beef & Ginger Stir-Fry",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-516670_12-d60c5f8.jpg?resize=440,400",
       "prepTime": "20 min",
       "cookTime": "10 min",
@@ -10023,7 +10023,7 @@
     {
       "id": "thai-chicken-soup",
       "slug": "thai-chicken-soup",
-      "title": "Thai chicken soup",
+      "title": "Thai Chicken Soup",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-780463_11-d88dd8f.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "1 hr 30 min",
@@ -10065,7 +10065,7 @@
     {
       "id": "slow-cooker-beef-stew",
       "slug": "slow-cooker-beef-stew",
-      "title": "Slow-cooker beef stew",
+      "title": "Slow-Cooker Beef Stew",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/slow-cooker-beef-stew-8ade07f.jpg?resize=440,400",
       "prepTime": "20 min",
       "cookTime": "4 hr",
@@ -10105,7 +10105,7 @@
     {
       "id": "chunky-vegetable-soup",
       "slug": "chunky-vegetable-soup",
-      "title": "Chunky vegetable soup",
+      "title": "Chunky Vegetable Soup",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2023/05/Chunky-Veg-Soup-With-Dumplings440x400-9e489cc.jpg?resize=440,400",
       "prepTime": "30 min",
       "cookTime": "40 min",
@@ -10561,7 +10561,7 @@
     {
       "id": "veggie-chilli",
       "slug": "veggie-chilli",
-      "title": "Veggie chilli",
+      "title": "Veggie Chilli",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/veggie-chilli-4a57c04.jpg?resize=440,400",
       "prepTime": null,
       "cookTime": "30 min",
@@ -10590,7 +10590,7 @@
     {
       "id": "easy-ratatouille",
       "slug": "easy-ratatouille",
-      "title": "Easy ratatouille",
+      "title": "Easy Ratatouille",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/ratatouille-99ab754.jpg?resize=440,400",
       "prepTime": "25 min",
       "cookTime": "40 min",
@@ -10627,7 +10627,7 @@
     {
       "id": "vegetarian-lasagne",
       "slug": "vegetarian-lasagne",
-      "title": "Vegetarian lasagne",
+      "title": "Vegetarian Lasagne",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2022/02/vegetarian-lasagne-5ee6162.jpg?resize=440,400",
       "prepTime": "25 min",
       "cookTime": "1 hr 10 min",
@@ -10673,7 +10673,7 @@
     {
       "id": "mushroom-stroganoff",
       "slug": "mushroom-stroganoff",
-      "title": "Mushroom stroganoff",
+      "title": "Mushroom Stroganoff",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-871464_11-1ff1fe2.jpg?resize=500,454",
       "prepTime": "10 min",
       "cookTime": "20 min",
@@ -10711,7 +10711,7 @@
     {
       "id": "spinach-ricotta-cannelloni",
       "slug": "spinach-ricotta-cannelloni",
-      "title": "Spinach & ricotta cannelloni",
+      "title": "Spinach & Ricotta Cannelloni",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1259591_6-6382b2d.jpg?resize=440,400",
       "prepTime": "50 min",
       "cookTime": "40 min",

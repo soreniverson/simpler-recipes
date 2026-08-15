@@ -6,7 +6,7 @@
   },
   "metadata": {
     "recipeCount": 15,
-    "lastUpdated": "2026-08-15T06:06:12.025Z"
+    "lastUpdated": "2026-08-15T07:09:04.619Z"
   },
   "recipes": [
     {
@@ -607,7 +607,7 @@
     {
       "id": "banana-bread",
       "slug": "banana-bread",
-      "title": "Banana bread",
+      "title": "Banana Bread",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/06/recipe-image-legacy-id-1273522_8-a6b9246.jpg?resize=440,400",
       "prepTime": "15 min",
       "cookTime": "50 min",
@@ -646,7 +646,7 @@
     {
       "id": "ultimate-chocolate-cake",
       "slug": "ultimate-chocolate-cake",
-      "title": "Ultimate chocolate cake",
+      "title": "Ultimate Chocolate Cake",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1043451_11-4713959.jpg?resize=440,400",
       "prepTime": "40 min",
       "cookTime": "1 hr 30 min",

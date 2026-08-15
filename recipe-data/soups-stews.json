@@ -6,7 +6,7 @@
   },
   "metadata": {
     "recipeCount": 17,
-    "lastUpdated": "2026-08-15T06:06:12.051Z"
+    "lastUpdated": "2026-08-15T07:09:04.643Z"
   },
   "recipes": [
     {
@@ -636,7 +636,7 @@
     {
       "id": "thai-chicken-soup",
       "slug": "thai-chicken-soup",
-      "title": "Thai chicken soup",
+      "title": "Thai Chicken Soup",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-780463_11-d88dd8f.jpg?resize=440,400",
       "prepTime": "10 min",
       "cookTime": "1 hr 30 min",
@@ -678,7 +678,7 @@
     {
       "id": "chicken-noodle-soup",
       "slug": "chicken-noodle-soup",
-      "title": "Chicken noodle soup",
+      "title": "Chicken Noodle Soup",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1035613_10-0e544b7.jpg?resize=500,454",
       "prepTime": "10 min",
       "cookTime": "30 min",
@@ -715,7 +715,7 @@
     {
       "id": "slow-cooker-beef-stew",
       "slug": "slow-cooker-beef-stew",
-      "title": "Slow-cooker beef stew",
+      "title": "Slow-Cooker Beef Stew",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/slow-cooker-beef-stew-8ade07f.jpg?resize=440,400",
       "prepTime": "20 min",
       "cookTime": "4 hr",
@@ -755,7 +755,7 @@
     {
       "id": "chunky-vegetable-soup",
       "slug": "chunky-vegetable-soup",
-      "title": "Chunky vegetable soup",
+      "title": "Chunky Vegetable Soup",
       "image": "https://images.immediate.co.uk/production/volatile/sites/30/2023/05/Chunky-Veg-Soup-With-Dumplings440x400-9e489cc.jpg?resize=440,400",
       "prepTime": "30 min",
       "cookTime": "40 min",
