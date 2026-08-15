@@ -148,7 +148,9 @@ export function normalizeYield(input: unknown): NormalizedYield {
     // Prefer a descriptive entry ("12 muffins") over a bare number ("12").
     const descriptive = items.filter((e) => !e.bare);
     const pick = (descriptive.length ? descriptive : items).reduce((a, b) => (b.y.text!.length > a.y.text!.length ? b : a));
-    return { text: pick.y.text, count: withCount?.y.count ?? null };
+    // ["2", "2 dozen"]: the bare number is the plugin's "servings" field, the descriptive one is the truth.
+    const count = /\bdozen\b/i.test(pick.y.text!) && pick.y.count != null ? pick.y.count : withCount?.y.count ?? null;
+    return { text: pick.y.text, count };
   }
   if (typeof input === 'number') {
     if (!Number.isFinite(input) || input <= 0) return { text: null, count: null };
@@ -205,8 +207,12 @@ export function normalizeYield(input: unknown): NormalizedYield {
   // "1 servings" → "1 serving"
   text = text.replace(/^1 servings$/i, '1 serving');
   // "4 dozen" → 48
-  const dozen = text.match(/^(\d+)\s*dozen\b/i);
-  if (dozen) count = parseInt(dozen[1], 10) * 12;
+  // "4 dozen" / "Makes 1½ dozen" → 48 / 18
+  const dozen = text.match(/(\d+(?:[.,]\d+)?(?:\s*[¼½¾⅓⅔⅛])?|[¼½¾⅓⅔⅛])\s*dozen\b/i);
+  if (dozen) {
+    const q = parseQuantityToken(dozen[1].replace(',', '.'));
+    if (Number.isFinite(q) && q > 0) count = Math.round(q * 12);
+  }
   // A bare number too big to be servings ("48" cookies, "160" ml) is a count of *something*: say
   // "Makes 48" rather than "48 servings", and don't use it as a scaling baseline above 100.
   const bareBig = text.match(/^(\d+) servings$/);

@@ -118,7 +118,8 @@ describe('yield', () => {
     expect(normalizeYield('Servings: 8')).toEqual({ text: '8 servings', count: 8 });
     expect(normalizeYield('4-6')).toEqual({ text: '4–6 servings', count: 4 });
     expect(normalizeYield('2 1/2 cups guacamole')).toEqual({ text: '2 1/2 cups guacamole', count: 2.5 });
-    expect(normalizeYield('Makes 1½ dozen')).toEqual({ text: 'Makes 1½ dozen', count: 1.5 });
+    expect(normalizeYield('Makes 1½ dozen')).toEqual({ text: 'Makes 1½ dozen', count: 18 });
+    expect(normalizeYield(['2', '2 dozen'])).toEqual({ text: '2 dozen', count: 24 });
   });
   it('handles arrays and QuantitativeValue', () => {
     expect(normalizeYield(['4', '4 servings'])).toEqual({ text: '4 servings', count: 4 });
