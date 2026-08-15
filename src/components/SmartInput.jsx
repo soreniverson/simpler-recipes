@@ -400,7 +400,7 @@ export default function SmartInput({ variant = 'default', placeholder = 'Paste a
                   <li key={r.recipe.slug} role="option" id={`${listId}-opt-${i}`} aria-selected={i === active}>
                     <a
                       href={`/recipes/${r.recipe.slug}/`}
-                      className={`flex items-center gap-3 px-3 sm:px-4 py-2.5 min-h-[52px] ${i === active ? 'bg-sand-200/70' : 'hover:bg-sand-100'}`}
+                      className={`flex items-center gap-3 px-3 sm:px-4 py-2.5 min-h-[52px] ${i === active ? 'bg-sand-200' : 'hover:bg-sand-100'}`}
                       onMouseEnter={() => setActive(i)}
                       tabIndex={-1}
                     >
