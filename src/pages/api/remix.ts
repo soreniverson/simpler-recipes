@@ -46,6 +46,12 @@ export const POST: APIRoute = async ({ request }) => {
     });
   }
 
+  // Cheapest checks first: an oversized body is rejected before any KV round-trip.
+  const declared = Number(request.headers.get('content-length') || 0);
+  if (declared > MAX_REMIX_BYTES) {
+    return new Response(JSON.stringify({ error: 'Request too large' }), { status: 413, headers: { 'Content-Type': 'application/json' } });
+  }
+
   // Remix costs real money per call: IP guard + the same per-user AI quota as extraction.
   const rate = await checkIpRateLimit(getClientIp(request));
   if (rate.limited) {
@@ -66,10 +72,6 @@ export const POST: APIRoute = async ({ request }) => {
     }
   }
 
-  const declared = Number(request.headers.get('content-length') || 0);
-  if (declared > MAX_REMIX_BYTES) {
-    return new Response(JSON.stringify({ error: 'Request too large' }), { status: 413, headers: { 'Content-Type': 'application/json' } });
-  }
   let body: RemixRequest;
   try {
     const raw = await request.text();

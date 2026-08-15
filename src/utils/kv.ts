@@ -84,6 +84,7 @@ export async function getCachedExtraction(url: string): Promise<CachedExtraction
  * Cache an extraction result
  */
 export async function cacheExtraction(url: string, recipe: CachedExtraction['recipe']): Promise<void> {
+  if (!isKVConfigured()) return; // local dev: no cache, no stack trace per extraction
   try {
     const key = getExtractKey(url);
     const payload: CachedExtraction = {
@@ -93,7 +94,7 @@ export async function cacheExtraction(url: string, recipe: CachedExtraction['rec
     };
     await kv.set(key, payload, { ex: EXTRACT_TTL_SECONDS });
   } catch (err) {
-    console.error('Failed to cache extraction:', err);
+    console.error('Failed to cache extraction:', err instanceof Error ? err.message : err);
   }
 }
 
