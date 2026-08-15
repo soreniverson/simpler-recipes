@@ -4,7 +4,7 @@ import Instructions from './Instructions';
 import CookMode from './CookMode';
 import { getCookState, toggleIngredient, toggleStep, setCookState, resetCookState, COOK_STATE_EVENT } from '../../lib/cookState';
 import { metaLine, sourceInfo, recipeAsText, displayTimes, displayServings } from '../../lib/recipe/display';
-import { safeHref } from '../../lib/recipe/href';
+import { safeImageSrc } from '../../lib/recipe/href';
 import { isFavorite, toggleFavorite, getExtractedFavorites, addExtractedFavorite, removeExtractedFavorite } from '../../utils/favorites';
 import { PlayIcon, HeartIcon, ShareIcon, PrintIcon, CopyIcon, ExternalIcon, SparklesIcon, ImagePlaceholderIcon } from './Icons';
 
@@ -136,7 +136,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
 
   const onPrint = useCallback(() => window.print(), []);
 
-  const image = safeHref(recipe.image);
+  const image = safeImageSrc(recipe.image);
   const [imgFailed, setImgFailed] = useState(false);
   const cookProgress = state.currentStep > 0 && state.currentStep < recipe.instructions.length - 1;
 
@@ -167,8 +167,8 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
             <p data-meta className="mt-2 text-[14px] sm:text-[15px] text-sand-600 tabular flex flex-wrap gap-x-2 gap-y-1">
               {meta.map((m, i) => (
                 <span key={i} className="inline-flex items-center gap-2">
-                  {i > 0 && <span className="text-sand-400" aria-hidden="true">·</span>}
                   {m}
+                  {i < meta.length - 1 && <span className="text-sand-400" aria-hidden="true">·</span>}
                 </span>
               ))}
             </p>

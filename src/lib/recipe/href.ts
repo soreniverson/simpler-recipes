@@ -16,6 +16,17 @@ export function safeHref(url: unknown): string | null {
   }
 }
 
+/**
+ * Image `src` safety: http(s) URLs (remote recipe images) OR same-origin root-relative paths
+ * (build-optimised images like /_astro/x.webp). Rejects protocol-relative `//host`, data:, javascript:.
+ */
+export function safeImageSrc(url: unknown): string | null {
+  if (typeof url !== 'string') return null;
+  const s = url.trim();
+  if (/^\/(?!\/)[^\s]*$/.test(s)) return s;
+  return safeHref(s);
+}
+
 /** Hostname for display ("www." stripped); never throws. */
 export function hostnameOf(url: unknown): string | null {
   const s = safeHref(url);

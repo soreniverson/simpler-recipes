@@ -111,3 +111,15 @@ describe('looksLikeUrl', () => {
     expect(looksLikeUrl('')).toBe(false);
   });
 });
+
+import { safeImageSrc } from '../src/lib/recipe/href';
+describe('safeImageSrc', () => {
+  it('accepts http(s) and root-relative paths only', () => {
+    expect(safeImageSrc('https://a.com/x.jpg')).toBe('https://a.com/x.jpg');
+    expect(safeImageSrc('/_astro/x.webp')).toBe('/_astro/x.webp');
+    expect(safeImageSrc('//evil.com/x.jpg')).toBeNull();
+    expect(safeImageSrc('javascript:alert(1)')).toBeNull();
+    expect(safeImageSrc('data:image/png;base64,AAAA')).toBeNull();
+    expect(safeImageSrc(null)).toBeNull();
+  });
+});

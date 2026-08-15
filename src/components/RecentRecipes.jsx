@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { listRecentRecipes, forgetRecentRecipe, RECENT_EVENT } from '../lib/recentRecipes';
-import { hostnameOf } from '../lib/recipe/href';
+import { hostnameOf, safeImageSrc } from '../lib/recipe/href';
 
 /**
  * "Recent" — the last few recipes simplified on this device. Local only; nothing is uploaded.
@@ -24,8 +24,8 @@ export default function RecentRecipes({ limit = 5 }) {
         {items.map((e) => (
           <li key={e.id} className="flex items-center gap-3">
             <a href={`/recipe?r=${e.id}`} className="flex-1 min-w-0 flex items-center gap-3 py-3 group">
-              {e.recipe.image ? (
-                <img src={e.recipe.image} alt="" width={44} height={44} loading="lazy" decoding="async" className="w-11 h-11 rounded-lg object-cover bg-sand-100 shrink-0 dark:brightness-90" referrerPolicy="no-referrer" />
+              {safeImageSrc(e.recipe.image) ? (
+                <img src={safeImageSrc(e.recipe.image)} alt="" width={44} height={44} loading="lazy" decoding="async" className="w-11 h-11 rounded-lg object-cover bg-sand-100 shrink-0 dark:brightness-90" referrerPolicy="no-referrer" />
               ) : (
                 <span className="w-11 h-11 rounded-lg bg-sand-100 shrink-0" aria-hidden="true" />
               )}

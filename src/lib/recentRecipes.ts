@@ -34,9 +34,31 @@ interface Store {
   items: RecentEntry[];
 }
 
+/** Shape check for one stored entry. Anything malformed (hand-edited storage, an old bug,
+ *  another tab on a different version) is dropped instead of crashing the island that renders it. */
+function isEntry(x: unknown): x is RecentEntry {
+  if (!x || typeof x !== 'object') return false;
+  const e = x as Record<string, unknown>;
+  const r = e.recipe as Record<string, unknown> | undefined;
+  return (
+    typeof e.id === 'string' &&
+    typeof e.sourceUrl === 'string' &&
+    typeof e.savedAt === 'number' &&
+    typeof e.openedAt === 'number' &&
+    !!r &&
+    typeof r === 'object' &&
+    typeof r.title === 'string' &&
+    Array.isArray(r.ingredients) &&
+    Array.isArray(r.instructions)
+  );
+}
+
 function load(): Store {
   const s = readJson<Store | null>(RECENT_KEY, null);
-  if (s && s.v === 1 && Array.isArray(s.items)) return s;
+  if (s && s.v === 1 && Array.isArray(s.items)) {
+    const items = s.items.filter(isEntry);
+    return { v: 1, items };
+  }
   // One-time migration from the legacy single slot.
   const legacy = readJson<{ recipe?: Recipe; sourceUrl?: string } | null>(LEGACY_KEY, null);
   const items: RecentEntry[] = [];

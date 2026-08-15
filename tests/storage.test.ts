@@ -33,6 +33,17 @@ describe('shortHash', () => {
 });
 
 describe('recentRecipes', () => {
+  it('drops malformed stored entries instead of surfacing them', () => {
+    rememberRecipe(recipe('Good'), 'https://x.com/good');
+    const raw = JSON.parse(storage.getItem(RECENT_KEY)!);
+    raw.items.push({ id: 'bad1', recipe: { title: { not: 'a string' }, ingredients: [], instructions: [] }, sourceUrl: 'https://x.com/bad', savedAt: 1, openedAt: 1 });
+    raw.items.push('garbage');
+    raw.items.push({ id: 'bad2' });
+    storage.setItem(RECENT_KEY, JSON.stringify(raw));
+    const list = listRecentRecipes();
+    expect(list).toHaveLength(1);
+    expect(list[0].recipe.title).toBe('Good');
+  });
   it('remembers and retrieves by id derived from canonical URL', () => {
     const id = rememberRecipe(recipe('A'), 'https://www.x.com/r/?utm_source=z');
     expect(idForSource('https://x.com/r')).toBe(id);

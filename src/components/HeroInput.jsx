@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import SmartInput from './SmartInput';
 import RecentRecipes from './RecentRecipes';
+import ErrorBoundary from './ErrorBoundary';
 
 /**
  * Homepage hero island: the paste box, three working examples, and the local "Recent" list.
@@ -30,7 +31,6 @@ export default function HeroInput() {
         <span>Try:</span>
         {EXAMPLES.map((e, i) => (
           <span key={e.url} className="inline-flex items-center gap-x-2">
-            {i > 0 && <span className="text-sand-400" aria-hidden="true">·</span>}
             <button
               type="button"
               className="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800 py-1"
@@ -43,11 +43,14 @@ export default function HeroInput() {
             >
               {e.name}
             </button>
+            {i < EXAMPLES.length - 1 && <span className="text-sand-400" aria-hidden="true">·</span>}
           </span>
         ))}
       </p>
       <p className="mt-4 text-[13px] text-sand-500">Works with most recipe sites. Recipes stay on your device. No account needed.</p>
-      <RecentRecipes limit={5} />
+      <ErrorBoundary>
+        <RecentRecipes limit={5} />
+      </ErrorBoundary>
     </div>
   );
 }
