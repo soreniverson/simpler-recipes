@@ -1,0 +1,412 @@
+{
+ "url": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list1:[\"4\"]",
+  "author=dict",
+  "prep=\"PT10M\" cook=\"PT15M\" total=\"PT25M\"",
+  "ing=list4",
+  "plugins=WPRM"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html#article",
+     "isPartOf": {
+      "@id": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html"
+     },
+     "author": {
+      "name": "Jennifer Segal",
+      "@id": "https://www.onceuponachef.com/#/schema/person/d09ca52c9e790675f71c46404845af62"
+     },
+     "headline": "Perfect Basmati Rice: A Step-by-Step Guide",
+     "datePublished": "2013-12-05T21:29:22+00:00",
+     "dateModified": "2024-09-08T06:52:47+00:00",
+     "wordCount": 765,
+     "commentCount": 174,
+     "publisher": {
+      "@id": "https://www.onceuponachef.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html#primaryimage"
+     },
+     "thumbnailUrl": "https://www.onceuponachef.com/images/2013/12/perfect-basmati-rice.jpg",
+     "keywords": [
+      "All Seasons",
+      "Rice"
+     ],
+     "articleSection": [
+      "Freezer-Friendly",
+      "Gluten-Free Adaptable",
+      "Make-Ahead",
+      "Vegetables &amp; Sides",
+      "Vegetarian"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html",
+     "url": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html",
+     "name": "Perfect Basmati Rice: A Step-by-Step Guide - Once Upon a Chef",
+     "isPartOf": {
+      "@id": "https://www.onceuponachef.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html#primaryimage"
+     },
+     "thumbnailUrl": "https://www.onceuponachef.com/images/2013/12/perfect-basmati-rice.jpg",
+     "datePublished": "2013-12-05T21:29:22+00:00",
+     "dateModified": "2024-09-08T06:52:47+00:00",
+     "description": "Learn how to cook fragrant basmati rice to perfection—tender, fluffy, and just right for soaking up your favorite curries and more.",
+     "breadcrumb": {
+      "@id": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html#primaryimage",
+     "url": "https://www.onceuponachef.com/images/2013/12/perfect-basmati-rice.jpg",
+     "contentUrl": "https://www.onceuponachef.com/images/2013/12/perfect-basmati-rice.jpg",
+     "width": 1643,
+     "height": 2048,
+     "caption": "Spoon in a bowl of basmati rice."
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.onceuponachef.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Recipes",
+       "item": "https://www.onceuponachef.com/recipes"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Vegetables &amp; Sides"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.onceuponachef.com/#website",
+     "url": "https://www.onceuponachef.com/",
+     "name": "Once Upon a Chef",
+     "description": "Tested &amp; Perfected Recipes",
+     "publisher": {
+      "@id": "https://www.onceuponachef.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.onceuponachef.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.onceuponachef.com/#organization",
+     "name": "Once Upon a Chef",
+     "url": "https://www.onceuponachef.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.onceuponachef.com/#/schema/logo/image/",
+      "url": "https://www.onceuponachef.com/images/2022/06/Onceuponachef_round_logo.png",
+      "contentUrl": "https://www.onceuponachef.com/images/2022/06/Onceuponachef_round_logo.png",
+      "width": 300,
+      "height": 300,
+      "caption": "Once Upon a Chef"
+     },
+     "image": {
+      "@id": "https://www.onceuponachef.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/onceuponachef",
+      "https://www.instagram.com/onceuponachef/",
+      "https://www.pinterest.com/onceuponachef/"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.onceuponachef.com/#/schema/person/d09ca52c9e790675f71c46404845af62",
+     "name": "Jennifer Segal",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://secure.gravatar.com/avatar/0f0db5e0c7a1bc5100f95117d6515ed3435125b009373be769e3b3599658fb9f?s=96&d=mm&r=g",
+      "url": "https://secure.gravatar.com/avatar/0f0db5e0c7a1bc5100f95117d6515ed3435125b009373be769e3b3599658fb9f?s=96&d=mm&r=g",
+      "contentUrl": "https://secure.gravatar.com/avatar/0f0db5e0c7a1bc5100f95117d6515ed3435125b009373be769e3b3599658fb9f?s=96&d=mm&r=g",
+      "caption": "Jennifer Segal"
+     },
+     "sameAs": [
+      "https://www.onceuponachef.com/about-jenn-segal"
+     ]
+    },
+    {
+     "@type": "Recipe",
+     "name": "Perfect Basmati Rice",
+     "author": {
+      "@id": "https://www.onceuponachef.com/#/schema/person/d09ca52c9e790675f71c46404845af62"
+     },
+     "description": "Learn how to cook fragrant basmati rice to perfection—tender, fluffy, and just right for soaking up your favorite curries and more.",
+     "datePublished": "2013-12-05T16:29:22+00:00",
+     "image": [
+      "https://www.onceuponachef.com/images/2013/12/perfect-basmati-rice.jpg",
+      "https://www.onceuponachef.com/images/2013/12/perfect-basmati-rice-500x500.jpg",
+      "https://www.onceuponachef.com/images/2013/12/perfect-basmati-rice-500x375.jpg",
+      "https://www.onceuponachef.com/images/2013/12/perfect-basmati-rice-480x270.jpg"
+     ],
+     "recipeYield": [
+      "4"
+     ],
+     "prepTime": "PT10M",
+     "cookTime": "PT15M",
+     "totalTime": "PT25M",
+     "recipeIngredient": [
+      "1 cup basmati rice (preferably imported from India or Pakistan)",
+      "1¾ cups water",
+      "1½ tablespoons unsalted butter",
+      "½ teaspoon salt"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Place the rice in a fine mesh strainer. Place under cold running water, swishing the rice with your hand, for 1 to 2 minutes to release excess starch. (Alternatively, place the rice in a medium bowl and add enough water to cover by 2 inches. Using your hands, gently swish the grains to release any excess starch. Carefully pour off the water, leaving the rice in the bowl. Repeat four times, or until the water runs almost clear. Use a fine mesh strainer to drain the rice.)",
+       "name": "Place the rice in a fine mesh strainer. Place under cold running water, swishing the rice with your hand, for 1 to 2 minutes to release excess starch. (Alternatively, place the rice in a medium bowl and add enough water to cover by 2 inches. Using your hands, gently swish the grains to release any excess starch. Carefully pour off the water, leaving the rice in the bowl. Repeat four times, or until the water runs almost clear. Use a fine mesh strainer to drain the rice.)",
+       "url": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html#wprm-recipe-53703-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "In a medium pot, bring the rice, water, butter, and salt to a boil. Cover the pot with a tight fitting lid, then turn the heat down to a simmer and cook for 15 to 20 minutes, until all of the water is absorbed and the rice is tender. If the rice is still too firm, add a few more tablespoons of water and continue cooking for a few minutes more. Remove the pan from the heat and allow it to sit covered for 5 minutes. Fluff the rice with a fork and serve.",
+       "name": "In a medium pot, bring the rice, water, butter, and salt to a boil. Cover the pot with a tight fitting lid, then turn the heat down to a simmer and cook for 15 to 20 minutes, until all of the water is absorbed and the rice is tender. If the rice is still too firm, add a few more tablespoons of water and continue cooking for a few minutes more. Remove the pan from the heat and allow it to sit covered for 5 minutes. Fluff the rice with a fork and serve.",
+       "url": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html#wprm-recipe-53703-step-0-1"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.51",
+      "ratingCount": "106",
+      "reviewCount": "11"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "After rinsing and draining rice, bring to a boil, then cover with a tight fitting lid and put in preheated 325 degree oven for 25 minutes-done many times and works very well.  From Madhur Jaffrey's Indian Cooking",
+       "author": {
+        "@type": "Person",
+        "name": "Colleen Ries"
+       },
+       "datePublished": "2026-03-05"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Hi Jen! Love this recipe and have made it many, many times. Soon I have to make rice for a crowd of about 20-25. I've read that cooking rice in the oven is a good way to make large quantities. Do you recommend that method? And would you use the same ratio of rice/water/butter/salt, just scaled up? Any tips you have would be appreciated!\r\n\r\nAs always, LOVE your website and own both your cookbooks - thank you! You are so talented!",
+       "author": {
+        "@type": "Person",
+        "name": "Jill"
+       },
+       "datePublished": "2026-02-28"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This reciepe makes the perfect Basmati Rice. Soft and Fluffy, done to perfection. Thank you Jennifer for sharing this awesome way to make Basmati Rice.",
+       "author": {
+        "@type": "Person",
+        "name": "Maribel"
+       },
+       "datePublished": "2025-09-09"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "1"
+       },
+       "reviewBody": "Stodgy outcome.",
+       "author": {
+        "@type": "Person",
+        "name": "Paul Mills"
+       },
+       "datePublished": "2025-08-19"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Made tonight, came out perfect!",
+       "author": {
+        "@type": "Person",
+        "name": "Ruth H"
+       },
+       "datePublished": "2025-06-25"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This truly is the “perfect basmati rice”! Tried and true, this recipe never fails. I use Tilda Basmati rice, and it is the perfect amount of water. This recipe is much better than the package directions!",
+       "author": {
+        "@type": "Person",
+        "name": "Debbie Brackenbury"
+       },
+       "datePublished": "2024-05-05"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Perfection indeed! Thank you!! I was delighted at how fluffy and flavorful the rice was following these instructions. It's the level of Basmati I've always dreamed of making. I paired the rice with Vegetable Vindaloo and dinner could not have been better.",
+       "author": {
+        "@type": "Person",
+        "name": "Sydney"
+       },
+       "datePublished": "2023-12-13"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I made this last night. I normally use my instant pot and have that recipe down but I needed this to be stovetop. It was great. I made it with chicken stock because I was putting it into a casserole and added some Italian seasoning and it was fantastic.",
+       "author": {
+        "@type": "Person",
+        "name": "Courtney"
+       },
+       "datePublished": "2023-10-20"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This was delicious! 5 stars for sure!",
+       "author": {
+        "@type": "Person",
+        "name": "Whitney Metzger"
+       },
+       "datePublished": "2023-09-25"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+       },
+       "reviewBody": "hi! I thought I wrote this before but I guess it didn't post = I've made this five times now (delicious) and although I've enjoyed the rice every time, I'm glad I watched the pot because it's always, always, done at 10 minutes (if not sooner, some always sticks to the bottom). I can't imagine cooking it for 15-20. I'm following the insrtructions exactly each time; what am I missing?",
+       "author": {
+        "@type": "Person",
+        "name": "RH"
+       },
+       "datePublished": "2023-09-16"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "What can I say.  It WAS perfect!  I sometimes by rice in bulk so it sure was great just to pull up your recipe and get cooking.",
+       "author": {
+        "@type": "Person",
+        "name": "Christina M Gibson"
+       },
+       "datePublished": "2023-08-24"
+      }
+     ],
+     "recipeCategory": [
+      "Side Dish"
+     ],
+     "recipeCuisine": [
+      "American",
+      "Indian"
+     ],
+     "keywords": "basmati rice",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "207 kcal",
+      "fatContent": "5 g",
+      "carbohydrateContent": "37 g",
+      "proteinContent": "3 g",
+      "saturatedFatContent": "3 g",
+      "fiberContent": "1 g",
+      "sodiumContent": "120 mg",
+      "cholesterolContent": "11 mg",
+      "servingSize": "1 serving"
+     },
+     "@id": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html#recipe",
+     "isPartOf": {
+      "@id": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html#article"
+     },
+     "mainEntityOfPage": "https://www.onceuponachef.com/recipes/perfect-basmati-rice.html"
+    }
+   ]
+  }
+ ]
+}

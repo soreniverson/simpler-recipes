@@ -1,0 +1,461 @@
+{
+ "url": "https://www.loveandlemons.com/banana-bread/",
+ "variant": [
+  "UNQUOTED type attr: <script type=application/ld+json class=yoast-schema-graph> -> app regex misses it",
+  "@graph",
+  "WPRM"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.loveandlemons.com/banana-bread/#article",
+     "isPartOf": {
+      "@id": "https://www.loveandlemons.com/banana-bread/"
+     },
+     "author": [
+      {
+       "@type": "Person",
+       "@id": "https://www.loveandlemons.com/jeanine-donofrio/#person",
+       "name": "Jeanine Donofrio",
+       "description": "Jeanine Donofrio is a New York Times bestselling cookbook author, recipe developer, and the creator of Love & Lemons. She shares trusted and tested vegetarian recipes for cooks of all levels. Jeanine's work has been featured in Bon Appetit, The Washington Post, Good Morning America, People, and more.",
+       "sameAs": [
+        "https://www.loveandlemons.com/jeanine-donofrio/",
+        "https://www.instagram.com/loveandlemons/",
+        "https://www.facebook.com/lovelemonsfood",
+        "https://www.pinterest.com/loveandlemons/"
+       ],
+       "image": [
+        "https://cdn.loveandlemons.com/wp-content/themes/loveandlemons5/images/jeanine720x720.jpg",
+        "https://cdn.loveandlemons.com/wp-content/themes/loveandlemons5/images/jeanine720x540.jpg",
+        "https://cdn.loveandlemons.com/wp-content/themes/loveandlemons5/images/jeanine720x404.jpg"
+       ],
+       "url": "https://www.loveandlemons.com/jeanine-donofrio/"
+      },
+      {
+       "@type": "Person",
+       "@id": "https://www.loveandlemons.com/phoebe-moore/#person",
+       "name": "Phoebe Moore",
+       "description": "Phoebe Moore is the Love & Lemons managing editor and recipe developer. Since joining Love & Lemons in 2018, she has collaborated on three Love & Lemons cookbooks, including Simple Feel Good Food, a New York Times bestseller. She has developed, tested, and edited hundreds of trusted vegetarian recipes for Love & Lemons and has been featured in US News and World Report and New York Magazine.",
+       "sameAs": [
+        "https://www.loveandlemons.com/phoebe-moore/"
+       ],
+       "image": [
+        "https://cdn.loveandlemons.com/wp-content/themes/loveandlemons5/images/phoebe720x720.jpg",
+        "https://cdn.loveandlemons.com/wp-content/themes/loveandlemons5/images/phoebe720x540.jpg",
+        "https://cdn.loveandlemons.com/wp-content/themes/loveandlemons5/images/phoebe720x404.jpg"
+       ],
+       "url": "https://www.loveandlemons.com/phoebe-moore/"
+      }
+     ],
+     "headline": "Banana Bread Recipe",
+     "datePublished": "2024-02-06T14:00:08+00:00",
+     "dateModified": "2024-02-06T14:49:37+00:00",
+     "wordCount": 1140,
+     "commentCount": 467,
+     "publisher": {
+      "@id": "https://www.loveandlemons.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.loveandlemons.com/banana-bread/#primaryimage"
+     },
+     "thumbnailUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/07/banana-bread.jpg",
+     "articleSection": [
+      "baking",
+      "breakfast",
+      "dairy free",
+      "desserts",
+      "fall",
+      "Recipes",
+      "snacks",
+      "snacks &amp; dips",
+      "spring",
+      "summer",
+      "vegetarian",
+      "winter"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.loveandlemons.com/banana-bread/#respond"
+       ]
+      }
+     ],
+     "mainEntityOfPage": "https://www.loveandlemons.com/banana-bread/"
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.loveandlemons.com/banana-bread/",
+     "url": "https://www.loveandlemons.com/banana-bread/",
+     "name": "Banana Bread Recipe - Love and Lemons",
+     "isPartOf": {
+      "@id": "https://www.loveandlemons.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.loveandlemons.com/banana-bread/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.loveandlemons.com/banana-bread/#primaryimage"
+     },
+     "thumbnailUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/07/banana-bread.jpg",
+     "datePublished": "2024-02-06T14:00:08+00:00",
+     "dateModified": "2024-02-06T14:49:37+00:00",
+     "description": "This easy banana bread recipe is the BEST way to use ripe bananas! It's super moist, delicious, and packed with banana flavor.",
+     "breadcrumb": {
+      "@id": "https://www.loveandlemons.com/banana-bread/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.loveandlemons.com/banana-bread/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.loveandlemons.com/banana-bread/#primaryimage",
+     "url": "https://cdn.loveandlemons.com/wp-content/uploads/2023/07/banana-bread.jpg",
+     "contentUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/07/banana-bread.jpg",
+     "width": 1160,
+     "height": 1657
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.loveandlemons.com/banana-bread/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Love and Lemons",
+       "item": "https://www.loveandlemons.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Recipes",
+       "item": "https://www.loveandlemons.com/recipes/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Banana Bread Recipe",
+       "item": "https://www.loveandlemons.com/banana-bread/"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.loveandlemons.com/#website",
+     "url": "https://www.loveandlemons.com/",
+     "name": "Love and Lemons",
+     "description": "Healthy, whole food, vegan and vegetarian recipes",
+     "publisher": {
+      "@id": "https://www.loveandlemons.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.loveandlemons.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.loveandlemons.com/#organization",
+     "name": "Love and Lemons",
+     "url": "https://www.loveandlemons.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.loveandlemons.com/#/schema/logo/image/",
+      "url": "https://www.loveandlemons.com/wp-content/uploads/2019/11/favicon-192x192.png",
+      "contentUrl": "https://www.loveandlemons.com/wp-content/uploads/2019/11/favicon-192x192.png",
+      "width": 192,
+      "height": 192,
+      "caption": "Love and Lemons"
+     },
+     "image": {
+      "@id": "https://www.loveandlemons.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/lovelemonsfood",
+      "https://x.com/lovelemonsfood",
+      "https://www.instagram.com/loveandlemons/",
+      "https://www.pinterest.com/loveandlemons/"
+     ]
+    },
+    [],
+    {
+     "@type": "Recipe",
+     "name": "Banana Bread",
+     "author": [
+      {
+       "@type": "Person",
+       "@id": "https://www.loveandlemons.com/jeanine-donofrio/#person",
+       "name": "Jeanine Donofrio",
+       "description": "Jeanine Donofrio is a New York Times bestselling cookbook author, recipe developer, and the creator of Love & Lemons. She shares trusted and tested vegetarian recipes for cooks of all levels. Jeanine's work has been featured in Bon Appetit, The Washington Post, Good Morning America, People, and more.",
+       "sameAs": [
+        "https://www.loveandlemons.com/jeanine-donofrio/",
+        "https://www.instagram.com/loveandlemons/",
+        "https://www.facebook.com/lovelemonsfood",
+        "https://www.pinterest.com/loveandlemons/"
+       ],
+       "image": [
+        "https://cdn.loveandlemons.com/wp-content/themes/loveandlemons5/images/jeanine720x720.jpg",
+        "https://cdn.loveandlemons.com/wp-content/themes/loveandlemons5/images/jeanine720x540.jpg",
+        "https://cdn.loveandlemons.com/wp-content/themes/loveandlemons5/images/jeanine720x404.jpg"
+       ],
+       "url": "https://www.loveandlemons.com/jeanine-donofrio/"
+      },
+      {
+       "@type": "Person",
+       "@id": "https://www.loveandlemons.com/phoebe-moore/#person",
+       "name": "Phoebe Moore",
+       "description": "Phoebe Moore is the Love & Lemons managing editor and recipe developer. Since joining Love & Lemons in 2018, she has collaborated on three Love & Lemons cookbooks, including Simple Feel Good Food, a New York Times bestseller. She has developed, tested, and edited hundreds of trusted vegetarian recipes for Love & Lemons and has been featured in US News and World Report and New York Magazine.",
+       "sameAs": [
+        "https://www.loveandlemons.com/phoebe-moore/"
+       ],
+       "image": [
+        "https://cdn.loveandlemons.com/wp-content/themes/loveandlemons5/images/phoebe720x720.jpg",
+        "https://cdn.loveandlemons.com/wp-content/themes/loveandlemons5/images/phoebe720x540.jpg",
+        "https://cdn.loveandlemons.com/wp-content/themes/loveandlemons5/images/phoebe720x404.jpg"
+       ],
+       "url": "https://www.loveandlemons.com/phoebe-moore/"
+      }
+     ],
+     "description": "The BEST banana bread recipe! This easy loaf is moist, delicious, and packed with banana flavor. I love to add walnuts for crunch, but feel free to swap in pecans, chocolate chips, or raisins if you prefer.",
+     "datePublished": "2024-02-06T08:00:08+00:00",
+     "image": [
+      "https://cdn.loveandlemons.com/wp-content/uploads/2023/07/banana-bread-recipe-500x500.jpg",
+      "https://cdn.loveandlemons.com/wp-content/uploads/2023/07/banana-bread-recipe-500x375.jpg",
+      "https://cdn.loveandlemons.com/wp-content/uploads/2023/07/banana-bread-recipe-480x270.jpg",
+      "https://cdn.loveandlemons.com/wp-content/uploads/2023/07/banana-bread-recipe.jpg"
+     ],
+     "recipeYield": [
+      "8"
+     ],
+     "prepTime": "PT15M",
+     "cookTime": "PT55M",
+     "totalTime": "PT70M",
+     "recipeIngredient": [
+      "2 cups mashed very ripe banana (about 4 large)",
+      "½ cup cane sugar or brown sugar",
+      "½ cup melted butter or vegetable oil (plus more for the pan)",
+      "2  large eggs",
+      "1 teaspoon vanilla extract",
+      "1½ cups all-purpose flour (spooned and leveled)",
+      "1 teaspoon baking soda",
+      "½ teaspoon sea salt",
+      "½ teaspoon cinnamon",
+      "¼ teaspoon nutmeg",
+      "½ cup chopped walnuts (plus 2 tablespoons for topping)"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Preheat the oven to 350°F and grease an 8x4 or 9x5-inch loaf pan.",
+       "name": "Preheat the oven to 350°F and grease an 8x4 or 9x5-inch loaf pan.",
+       "url": "https://www.loveandlemons.com/banana-bread/#wprm-recipe-72435-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "In a large bowl, whisk together the mashed banana, sugar, butter, eggs, and vanilla.",
+       "name": "In a large bowl, whisk together the mashed banana, sugar, butter, eggs, and vanilla.",
+       "url": "https://www.loveandlemons.com/banana-bread/#wprm-recipe-72435-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "In a medium bowl, whisk together the flour, baking soda, salt, cinnamon, and nutmeg.",
+       "name": "In a medium bowl, whisk together the flour, baking soda, salt, cinnamon, and nutmeg.",
+       "url": "https://www.loveandlemons.com/banana-bread/#wprm-recipe-72435-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add the dry ingredients to the wet ingredients and stir until just combined. Don’t overmix. Fold in the ½ cup walnuts.",
+       "name": "Add the dry ingredients to the wet ingredients and stir until just combined. Don’t overmix. Fold in the ½ cup walnuts.",
+       "url": "https://www.loveandlemons.com/banana-bread/#wprm-recipe-72435-step-0-3"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Pour the batter into the prepared pan and top with the remaining 2 tablespoons walnuts.",
+       "name": "Pour the batter into the prepared pan and top with the remaining 2 tablespoons walnuts.",
+       "url": "https://www.loveandlemons.com/banana-bread/#wprm-recipe-72435-step-0-4"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Bake for 50 to 60 minutes, or until a toothpick inserted comes out clean and the top springs back to the touch. I like to check the loaf after 40 minutes. If the top is golden brown, I cover it with foil for the remaining bake time to prevent further browning.",
+       "name": "Bake for 50 to 60 minutes, or until a toothpick inserted comes out clean and the top springs back to the touch. I like to check the loaf after 40 minutes. If the top is golden brown, I cover it with foil for the remaining bake time to prevent further browning.",
+       "url": "https://www.loveandlemons.com/banana-bread/#wprm-recipe-72435-step-0-5"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.91",
+      "ratingCount": "267",
+      "reviewCount": "10"
+     },
+     "recipeCategory": [
+      "Breakfast",
+      "Dessert",
+      "Snack"
+     ],
+     "recipeCuisine": [
+      "American"
+     ],
+     "keywords": "Banana bread, Banana bread recipe, Easy banana bread recipe, How to make banana bread",
+     "@id": "https://www.loveandlemons.com/banana-bread/#recipe",
+     "review": [
+      {
+       "@type": "Review",
+       "datePublished": "2026-06-16 15:55:01",
+       "reviewBody": "Will make again as it was a family favorite",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5
+       },
+       "author": {
+        "@type": "Person",
+        "name": "Lorna Mary"
+       }
+      },
+      {
+       "@type": "Review",
+       "datePublished": "2026-06-12 07:09:30",
+       "reviewBody": "Best banana bread ever!  I love that the flavor is sweet banana - not overly sweet nor doughy but light and moist!\r\nWonderful recipe-very highly recommended and must make with beautiful walnuts!",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5
+       },
+       "author": {
+        "@type": "Person",
+        "name": "Maya"
+       }
+      },
+      {
+       "@type": "Review",
+       "datePublished": "2026-06-10 09:31:45",
+       "reviewBody": "Really good! I had four super ripe (brown peels) bananas, used brown sugar &amp; melted butter, added walnuts, checked at 40 min, took out at 45 min - perfect! 🤩",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5
+       },
+       "author": {
+        "@type": "Person",
+        "name": "Kathy"
+       }
+      },
+      {
+       "@type": "Review",
+       "datePublished": "2026-06-07 14:28:17",
+       "reviewBody": "This is an amazing recipe. Since finding it I have made it multiple times and it’s absolutely delicious and flavourful and moist! Thank you!",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5
+       },
+       "author": {
+        "@type": "Person",
+        "name": "CJS"
+       }
+      },
+      {
+       "@type": "Review",
+       "datePublished": "2026-04-16 16:12:11",
+       "reviewBody": "Used 1/2 cup of coconut sugar instead of cane sugar! It was delicious and baked well!",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5
+       },
+       "author": {
+        "@type": "Person",
+        "name": "Sophie"
+       }
+      },
+      {
+       "@type": "Review",
+       "datePublished": "2026-04-14 22:25:33",
+       "reviewBody": "I make banana bread pretty frequently but have never found one that I love enough to go back to regularly. I think I’ve finally found the one! I had 10 very ripe bananas so loved that I could use so many for this recipe. I made one for us and one to share, though I am tempted to keep the second for us too! :) I followed the recipe exactly other than adding some turbinado sugar to the top because I love a crunchy top. My husband, who thinks banana bread MUST have chocolate chips, loved this so much. Delicious!",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5
+       },
+       "author": {
+        "@type": "Person",
+        "name": "Lindsey T"
+       }
+      },
+      {
+       "@type": "Review",
+       "datePublished": "2026-03-29 21:59:53",
+       "reviewBody": "Made this on the weekend. So so good! And so many bananas made it really moist. Delicious - thank you!",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5
+       },
+       "author": {
+        "@type": "Person",
+        "name": "CJS"
+       }
+      },
+      {
+       "@type": "Review",
+       "datePublished": "2026-03-24 11:55:37",
+       "reviewBody": "This is one of the best banana breads I’ve made, I added a maple glaze to the top🥵",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5
+       },
+       "author": {
+        "@type": "Person",
+        "name": "Audrey burruss"
+       }
+      },
+      {
+       "@type": "Review",
+       "datePublished": "2026-02-26 11:45:11",
+       "reviewBody": "I come back to this recipe time and time again (basically every time I buy bananas as I always forget to eat them) and I'm shocked at the amazing results each time, without fail!\r\n\r\nFor some reason my oven bakes this thoroughly in less than 40 minutes, but that's not a complain.",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5
+       },
+       "author": {
+        "@type": "Person",
+        "name": "cornelia"
+       }
+      },
+      {
+       "@type": "Review",
+       "datePublished": "2026-02-24 22:51:24",
+       "reviewBody": "Going to try to make this, but only have 2 ripe bananas handy! I asked ChatGPT and it recommended using Apple Sauce as a substitute. Wish me luck!",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 5
+       },
+       "author": {
+        "@type": "Person",
+        "name": "Emily"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

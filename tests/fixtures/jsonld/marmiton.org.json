@@ -1,0 +1,342 @@
+{
+ "url": "https://www.marmiton.org/recettes/recette_gateau-au-yaourt_18595.aspx",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=str:\"4 personnes\"",
+  "author=dict",
+  "prep=\"PT10M\" cook=\"PT25M\" total=\"PT35M\"",
+  "ing=list7",
+  "plugins="
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "NewsMediaOrganization",
+     "@id": "https://www.marmiton.org/#newsmediaorganization",
+     "name": "Marmiton",
+     "alternateName": "marmiton.org",
+     "url": "https://www.marmiton.org",
+     "logo": {
+      "@type": "ImageObject",
+      "@id": "https://www.marmiton.org/#/schema/logo/image/",
+      "url": "https://statics.marmiton.fr/assets/images/logo-gnsUou_.png",
+      "width": 309,
+      "height": 48,
+      "caption": "Marmiton : 78379 recettes de cuisine commentées et notées pour toutes les cuisines !"
+     },
+     "sameAs": [
+      "https://www.facebook.com/marmiton",
+      "https://www.instagram.com/marmiton_org/",
+      "https://www.pinterest.fr/marmiton/",
+      "https://www.tiktok.com/@marmiton_org",
+      "https://www.youtube.com/user/marmitonofficiel",
+      "https://fr.wikipedia.org/wiki/Marmiton.org",
+      "https://www.wikidata.org/wiki/Q3294503"
+     ],
+     "image": {
+      "@id": "https://www.marmiton.org/#/schema/logo/image/"
+     },
+     "foundingDate": "1999",
+     "parentOrganization": {
+      "@type": "Organization",
+      "name": "Reworld Media",
+      "url": "https://www.reworldmedia.com"
+     }
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.marmiton.org/#website",
+     "name": "Marmiton",
+     "url": "https://www.marmiton.org",
+     "publisher": {
+      "@id": "https://www.marmiton.org/#newsmediaorganization"
+     },
+     "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.marmiton.org/recettes/recherche.aspx?aqt={search_term_string}",
+      "query-input": "required name=search_term_string"
+     },
+     "inLanguage": "fr-FR"
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "item": {
+        "@id": "https://www.marmiton.org/",
+        "name": "Accueil"
+       }
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "item": {
+        "@id": "https://www.marmiton.org/recettes",
+        "name": "Recettes"
+       }
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "item": {
+        "@id": "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx",
+        "name": "Tarte au chèvre"
+       }
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx",
+     "url": "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx",
+     "breadcrumb": {
+      "@id": "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx#breadcrumb"
+     },
+     "name": "Tarte au chèvre  : la meilleure recette",
+     "isPartOf": {
+      "@id": "https://www.marmiton.org/#website"
+     },
+     "datePublished": "2006-10-23T11:43:00+02:00",
+     "dateModified": "2026-05-25T05:02:24+02:00",
+     "lastReviewed": "2026-05-25",
+     "description": "Recette Tarte au chèvre  : la meilleure recette rapide et facile : 4 personnes, 35 min de préparation. Notée 4.8/5 par 25 membres Marmiton.",
+     "inLanguage": "fr-FR",
+     "potentialAction": {
+      "@type": "ReadAction",
+      "target": [
+       "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx"
+      ]
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx#primaryimage"
+     },
+     "thumbnailUrl": "https://assets.afcdn.com/recipe/20141020/43387_w1500h844c1cx1224cy1632.webp",
+     "relatedLink": [
+      "https://www.marmiton.org/recettes/recette_tarte-au-fromage-de-chevre-frais_335562.aspx",
+      "https://www.marmiton.org/recettes/recette_tarte-au-chevre-et-aux-poireaux_18100.aspx",
+      "https://www.marmiton.org/recettes/recette_tarte-au-chevre-et-a-la-courgette_28409.aspx",
+      "https://www.marmiton.org/recettes/recette_tarte-au-chevre-et-au-miel-facile_91113.aspx",
+      "https://www.marmiton.org/recettes/recette_tarte-chevre-poireaux_95971.aspx",
+      "https://www.marmiton.org/recettes/recette_tartes-au-chevre-frais_69484.aspx",
+      "https://www.marmiton.org/recettes/recette_tarte-au-chevre-et-a-la-tapenade_35598.aspx",
+      "https://www.marmiton.org/recettes/recette_tarte-chevre-tomate-a-la-creme_80097.aspx",
+      "https://www.marmiton.org/recettes/recette_tarte-chevre-et-epinards_13522.aspx",
+      "https://www.marmiton.org/recettes/index/ingredient/pate-feuilletee",
+      "https://www.marmiton.org/chefs/cyril-lignac-fait-plaisir-aux-gourmands-avec-sa-recette-de-cake-aux-courgettes-et-chevre-frais-pour-l-apero-s4065103.html",
+      "https://www.marmiton.org/bien-choisir-ses-aliments/vous-n-imaginez-pas-tous-les-bienfaits-du-lait-de-chevre-et-de-brebis-s4108851.html",
+      "https://www.marmiton.org/chefs/cyril-lignac-sa-version-revisitee-de-la-salade-de-chevre-chaud-est-un-pur-delice-s4074454.html",
+      "https://www.marmiton.org/none/wrap-au-chevre-croustillant-notre-recette-encore-meilleure-que-celle-des-fast-foods-s4040783.html",
+      "https://www.marmiton.org/focus-ingredient/profitez-encore-de-la-saison-des-courgettes-avec-ce-delicieux-cake-au-chevre-vous-n-allez-pas-etre-decu-s4117927.html",
+      "https://www.marmiton.org/recettes/recette_tarte-chevre-epinards_27063.aspx",
+      "https://www.marmiton.org/recettes/recette_tarte-au-chevre-et-au-miel_41505.aspx",
+      "https://www.marmiton.org/recettes/recette_tarte-chevre-miel_86578.aspx"
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "fr-FR",
+     "url": "https://assets.afcdn.com/recipe/20141020/43387_w1500h844c1cx1224cy1632.webp",
+     "contentUrl": "https://assets.afcdn.com/recipe/20141020/43387_w1500h844c1cx1224cy1632.webp",
+     "width": 1500,
+     "height": 844,
+     "@id": "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx#primaryimage",
+     "caption": "Tarte au chèvre  : la meilleure recette"
+    },
+    {
+     "@type": "ItemList",
+     "@id": "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx#itemlist",
+     "url": "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx",
+     "numberOfItems": 12,
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "url": "https://www.marmiton.org/recettes/recette_tarte-au-chevre-et-aux-poireaux_18100.aspx",
+       "name": "Tarte au chèvre et aux poireaux",
+       "image": "https://assets.afcdn.com/recipe/20160404/30117_w3000h1688cx1500cy1000.webp"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "url": "https://www.marmiton.org/recettes/recette_tarte-au-chevre-et-a-la-tapenade_35598.aspx",
+       "name": "Tarte au chèvre et à la tapenade",
+       "image": "https://assets.afcdn.com/recipe/20140824/22536_w2592h1458cx1296cy968.webp"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "url": "https://www.marmiton.org/recettes/recette_tarte-chevre-tomate-a-la-creme_80097.aspx",
+       "name": "tarte chèvre-tomate à la crème",
+       "image": "https://assets.afcdn.com/recipe/20130729/64613_w2560h1440cx1280cy960.webp"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "url": "https://www.marmiton.org/recettes/recette_tarte-chevre-et-epinards_13522.aspx",
+       "name": "Tarte chèvre et épinards",
+       "image": "https://assets.afcdn.com/recipe/20130812/65573_w3264h1836cx1632cy1224.webp"
+      },
+      {
+       "@type": "ListItem",
+       "position": 5,
+       "url": "https://www.marmiton.org/chefs/cyril-lignac-fait-plaisir-aux-gourmands-avec-sa-recette-de-cake-aux-courgettes-et-chevre-frais-pour-l-apero-s4065103.html",
+       "name": "Cyril Lignac fait plaisir aux gourmands avec sa recette de cake aux courgettes et chèvre frais pour l'apéro",
+       "image": "https://assets.afcdn.com/story/20230602/2220405_w1200h675cx600cy315cxt0cyt0cxb1200cyb630.webp"
+      },
+      {
+       "@type": "ListItem",
+       "position": 6,
+       "url": "https://www.marmiton.org/bien-choisir-ses-aliments/vous-n-imaginez-pas-tous-les-bienfaits-du-lait-de-chevre-et-de-brebis-s4108851.html",
+       "name": "Vous n’imaginez pas tous les bienfaits du lait de chèvre et de brebis",
+       "image": "https://assets.afcdn.com/story/20250317/2294311_w5760h3240cx2880cy1920cxt0cyt0cxb5760cyb3840.webp"
+      },
+      {
+       "@type": "ListItem",
+       "position": 7,
+       "url": "https://www.marmiton.org/chefs/cyril-lignac-sa-version-revisitee-de-la-salade-de-chevre-chaud-est-un-pur-delice-s4074454.html",
+       "name": "Cyril Lignac : sa version revisitée de la salade de chèvre chaud est un pur délice",
+       "image": "https://assets.afcdn.com/story/20231108/2233897_w2000h1125cx1000cy667cxt0cyt0cxb2000cyb1333.webp"
+      },
+      {
+       "@type": "ListItem",
+       "position": 8,
+       "url": "https://www.marmiton.org/none/wrap-au-chevre-croustillant-notre-recette-encore-meilleure-que-celle-des-fast-foods-s4040783.html",
+       "name": "Wrap au chèvre croustillant : notre recette encore meilleure que celle des fast-foods",
+       "image": "https://assets.afcdn.com/story/20220422/2170204_w2121h1193cx1061cy707cxt0cyt0cxb2121cyb1414.webp"
+      },
+      {
+       "@type": "ListItem",
+       "position": 9,
+       "url": "https://www.marmiton.org/focus-ingredient/profitez-encore-de-la-saison-des-courgettes-avec-ce-delicieux-cake-au-chevre-vous-n-allez-pas-etre-decu-s4117927.html",
+       "name": "Profitez encore de la saison des courgettes avec ce délicieux cake au chèvre, vous n'allez pas être déçu",
+       "image": "https://assets.afcdn.com/story/20250911/2309872_w5184h2916cx2592cy1728cxt0cyt0cxb5184cyb3456.webp"
+      },
+      {
+       "@type": "ListItem",
+       "position": 10,
+       "url": "https://www.marmiton.org/recettes/recette_tarte-chevre-epinards_27063.aspx",
+       "name": "Tarte chèvre - épinards ",
+       "image": "https://assets.afcdn.com/recipe/20200708/112615_w5760h3240cx2880cy1920cxt0cyt0cxb5760cyb3840.webp"
+      },
+      {
+       "@type": "ListItem",
+       "position": 11,
+       "url": "https://www.marmiton.org/recettes/recette_tarte-au-chevre-et-au-miel_41505.aspx",
+       "name": "Tarte au chèvre et au miel",
+       "image": "https://assets.afcdn.com/recipe/20140414/49477_w3264h1836cx1632cy1224.webp"
+      },
+      {
+       "@type": "ListItem",
+       "position": 12,
+       "url": "https://www.marmiton.org/recettes/recette_tarte-chevre-miel_86578.aspx",
+       "name": "Tarte chèvre miel",
+       "image": "https://assets.afcdn.com/recipe/20190117/86215_w3400h1913cx1620cy1105cxt0cyt0cxb3400cyb2265.webp"
+      }
+     ]
+    },
+    {
+     "@type": "Recipe",
+     "@id": "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx#recipe",
+     "mainEntityOfPage": {
+      "@id": "https://www.marmiton.org/recettes/recette_tarte-au-chevre_18595.aspx"
+     },
+     "name": "Tarte au chèvre  : la meilleure recette",
+     "recipeCategory": "Plat principal",
+     "image": [
+      "https://assets.afcdn.com/recipe/20141020/43387_w1024h1024c1cx1224cy1632.jpg",
+      "https://assets.afcdn.com/recipe/20141020/43387_w1024h1024c1cx1224cy1632.webp",
+      "https://assets.afcdn.com/recipe/20141020/43387_w1024h768c1cx1224cy1632.jpg",
+      "https://assets.afcdn.com/recipe/20141020/43387_w1024h768c1cx1224cy1632.webp",
+      "https://assets.afcdn.com/recipe/20141020/43387_w1024h576c1cx1224cy1632.jpg",
+      "https://assets.afcdn.com/recipe/20141020/43387_w1024h576c1cx1224cy1632.webp"
+     ],
+     "datePublished": "2006-10-23T11:43:00+02:00",
+     "dateModified": "2026-05-25T05:02:24+02:00",
+     "prepTime": "PT10M",
+     "cookTime": "PT25M",
+     "totalTime": "PT35M",
+     "recipeYield": "4 personnes",
+     "recipeIngredient": [
+      "1 pâte feuilletée",
+      "1 rouleau de fromage de chèvre",
+      "2 tomates",
+      "2 cuillères à café de moutarde",
+      "poivre",
+      "sel",
+      "basilic séché"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Faire précuire la pâte feuilletée préalablement piquée avec une fourchette entre 10 et 15 mn à 250°C au four. "
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Pendant ce temps, couper les tomates en tranches que vous disposerez sur une assiette en alternance avec de l'essuie tout pour absorber l'humidité. "
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Couper le chèvre en grosses tranches (environ 10 ). "
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Sortir la pâte du four, et la badigeonner de moutarde. "
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Disposer les tranches de tomates et par dessus les tranches de chèvre. "
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Saler et poivrer, et parsemer de basilic. "
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Remettre au four environ 10 mn que le chèvre fonde."
+      }
+     ],
+     "author": {
+      "@type": "Person",
+      "name": "Anonyme"
+     },
+     "description": "Recette Tarte au chèvre  : la meilleure recette rapide et facile : 4 personnes, 35 min de préparation. Notée 4.8/5 par 25 membres Marmiton.",
+     "keywords": "Tarte au chèvre , pâte feuilletée, fromage de chèvre, tomate, moutarde, poivre, sel, basilic, Très facile, Bon marché",
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "reviewCount": 25,
+      "ratingValue": 4.8,
+      "worstRating": 1,
+      "bestRating": 5
+     },
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "425 calories",
+      "servingSize": "168.8 grams",
+      "carbohydrateContent": "26.6 g",
+      "fatContent": "28 g",
+      "fiberContent": "2.4 g",
+      "proteinContent": "16 g",
+      "saturatedFatContent": "19.2 g",
+      "sodiumContent": "3.1 g",
+      "sugarContent": "3.1 g"
+     },
+     "suitableForDiet": [
+      "https://schema.org/VegetarianDiet"
+     ]
+    }
+   ]
+  }
+ ]
+}

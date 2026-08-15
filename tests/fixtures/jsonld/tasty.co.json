@@ -1,0 +1,225 @@
+{
+ "url": "https://tasty.co/recipe/creamy-tuscan-chicken",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=plain:Recipe|plain:VideoObject|arrayRoot",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=str",
+  "yield=str:\"4 servings\"",
+  "author=list",
+  "prep=\"PT10M\" cook=\"PT40M\" total=\"PT50M\"",
+  "ing=list13",
+  "plugins="
+ ],
+ "jsonld": [
+  {
+   "@context": "http://schema.org",
+   "@type": "Recipe",
+   "dateModified": "2024-04-10T22:34:25",
+   "datePublished": "2017-07-11T03:03:22",
+   "description": "Transport yourself to the sun-kissed hills of Tuscany with this easy-to-make, comforting, creamy Tuscan chicken. Succulent chicken thighs are seared to perfection and then bathed in a luscious sauce made with garlic, onion, sun-dried tomatoes, cream, and Parmesan cheese. Tender spinach leaves wilt delicately in the sauce, adding a vibrant green hue and freshness to every forkful. Served over tender pasta or with crusty bread to soak up the savory goodness, this dish is a celebration of the delicious flavors of Toscana. Close your eyes, breathe in the aromas, and savor the taste of Italy right in your own home. Buon appetito!",
+   "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/1c4c0c0dece7467c9c4175cb759ed6a7/BFV14220_3CourseTuscanChickenDinner-FB.jpg?resize=1200:*",
+   "name": "Creamy Tuscan Chicken Recipe by Tasty",
+   "publisher": {
+    "@type": "Organization",
+    "name": "Tasty",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/hive/binaries/471926.jpg",
+     "height": 60,
+     "width": 117
+    }
+   },
+   "isPartOf": {
+    "@type": "WebPage",
+    "url": "https://tasty.co/recipe/creamy-tuscan-chicken",
+    "name": "Creamy Tuscan Chicken Recipe by Tasty",
+    "description": "Transport yourself to the sun-kissed hills of Tuscany with this easy-to-make, comforting, creamy Tuscan chicken. Succulent chicken thighs are seared to perfection and then bathed in a luscious sauce made with garlic, onion, sun-dried tomatoes, cream, and Parmesan cheese. Tender spinach leaves wilt delicately in the sauce, adding a vibrant green hue and freshness to every forkful. Served over tender pasta or with crusty bread to soak up the savory goodness, this dish is a celebration of the delicious flavors of Toscana. Close your eyes, breathe in the aromas, and savor the taste of Italy right in your own home. Buon appetito!",
+    "isPartOf": {
+     "@type": "WebSite",
+     "url": "https://tasty.co",
+     "name": "Tasty",
+     "description": "The official home of all things Tasty, the world’s largest food network. Search, watch, and cook every single Tasty recipe and video ever - all in one place!",
+     "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+       "@type": "EntryPoint",
+       "urlTemplate": "https://tasty.co/search?q={search_term}"
+      },
+      "query-input": {
+       "@type": "PropertyValueSpecification",
+       "valueRequired": "http://schema.org/True",
+       "valueName": "search_term"
+      }
+     }
+    }
+   },
+   "author": [
+    {
+     "@type": "Person",
+     "name": "Alvin Zhou"
+    }
+   ],
+   "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "618 calories",
+    "carbohydrateContent": "8 grams",
+    "fatContent": "53 grams",
+    "fiberContent": "1 gram",
+    "proteinContent": "39 grams",
+    "sugarContent": "5 grams"
+   },
+   "recipeIngredient": [
+    "4 bone-in, skin-on chicken thighs",
+    "2 teaspoons salt, for the chicken",
+    "1 teaspoon pepper, for the chicken",
+    "1 tablespoon oil",
+    "3 cloves garlic, chopped",
+    "½ onion, diced",
+    "1 tomato, diced",
+    "2 cups spinach",
+    "2 cups heavy cream",
+    "1 teaspoon salt",
+    "1 teaspoon pepper",
+    "½ cup grated parmesan cheese",
+    "2 tablespoons fresh flat-leaf parsley, chopped"
+   ],
+   "recipeYield": "4 servings",
+   "recipeInstructions": [
+    {
+     "@type": "HowToStep",
+     "text": "Season the chicken all over with salt and pepper."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Heat the oil in a skillet over medium-low heat."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Place the chicken thighs skin side down in the skillet and cook for about 13 minutes to crisp up the skin. Move the chicken around from time to time to ensure it cooks evenly. The skin should be hard to the touch."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Flip the chicken, then cook for about another 15 minutes, until the chicken is cooked through. Remove from pan."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Add the garlic and onion, stirring until onions are translucent. Stir in the tomatoes and spinach until the spinach is wilted."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Add the heavy cream, salt, and pepper, bringing to a boil."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Add the Parmesan cheese and parsley, stirring until the sauce has thickened slightly."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Place the chicken back in the pan, spooning the sauce on top of the chicken."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Enjoy!"
+    }
+   ],
+   "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "27112",
+    "bestRating": "5",
+    "worstRating": "0"
+   },
+   "recipeCategory": "Dinner",
+   "recipeCuisine": "North American",
+   "tool": "Wooden Spoon",
+   "cookTime": "PT40M",
+   "prepTime": "PT10M",
+   "totalTime": "PT50M",
+   "video": {
+    "@type": "VideoObject",
+    "contentUrl": "https://vid.tasty.co/output/14022/mp4_640x640/1478543668",
+    "duration": "PT0S",
+    "description": "Transport yourself to the sun-kissed hills of Tuscany with this easy-to-make, comforting, creamy Tuscan chicken. Succulent chicken thighs are seared to perfection and then bathed in a luscious sauce made with garlic, onion, sun-dried tomatoes, cream, and Parmesan cheese. Tender spinach leaves wilt delicately in the sauce, adding a vibrant green hue and freshness to every forkful. Served over tender pasta or with crusty bread to soak up the savory goodness, this dish is a celebration of the delicious flavors of Toscana. Close your eyes, breathe in the aromas, and savor the taste of Italy right in your own home. Buon appetito!",
+    "name": "Creamy Tuscan Chicken Recipe by Tasty",
+    "publisher": {
+     "@type": "Organization",
+     "name": "Tasty",
+     "logo": {
+      "@type": "ImageObject",
+      "url": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/hive/binaries/471926.jpg",
+      "height": 60,
+      "width": 117
+     }
+    },
+    "thumbnailUrl": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/1c4c0c0dece7467c9c4175cb759ed6a7/BFV14220_3CourseTuscanChickenDinner-FB.jpg?resize=1200:*",
+    "uploadDate": "2017-07-11T03:03:22"
+   }
+  },
+  {
+   "@context": "http://schema.org",
+   "@type": "VideoObject",
+   "contentUrl": "https://vid.tasty.co/output/14022/mp4_640x640/1478543668",
+   "duration": "PT0S",
+   "description": "Transport yourself to the sun-kissed hills of Tuscany with this easy-to-make, comforting, creamy Tuscan chicken. Succulent chicken thighs are seared to perfection and then bathed in a luscious sauce made with garlic, onion, sun-dried tomatoes, cream, and Parmesan cheese. Tender spinach leaves wilt delicately in the sauce, adding a vibrant green hue and freshness to every forkful. Served over tender pasta or with crusty bread to soak up the savory goodness, this dish is a celebration of the delicious flavors of Toscana. Close your eyes, breathe in the aromas, and savor the taste of Italy right in your own home. Buon appetito!",
+   "name": "Creamy Tuscan Chicken Recipe by Tasty",
+   "publisher": {
+    "@type": "Organization",
+    "name": "Tasty",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/hive/binaries/471926.jpg",
+     "height": 60,
+     "width": 117
+    }
+   },
+   "thumbnailUrl": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/1c4c0c0dece7467c9c4175cb759ed6a7/BFV14220_3CourseTuscanChickenDinner-FB.jpg?resize=1200:*",
+   "uploadDate": "2017-07-11T03:03:22"
+  },
+  [
+   {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Cuisine",
+      "item": "https://tasty.co/tag/cuisine"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "European",
+      "item": "https://tasty.co/tag/european"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Italian",
+      "item": "https://tasty.co/tag/italian"
+     }
+    ]
+   },
+   {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://tasty.co"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Creamy Tuscan Chicken Recipe by Tasty",
+      "url": "https://tasty.co/recipe/creamy-tuscan-chicken"
+     }
+    ]
+   }
+  ]
+ ]
+}

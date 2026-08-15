@@ -1,0 +1,559 @@
+{
+ "url": "https://www.skinnytaste.com/chicken-taco-chili/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list2:[\"10\", \"10 servings\"]",
+  "author=dict",
+  "prep=\"PT5M\" cook=\"PT25M\" total=\"PT45M\"",
+  "ing=list19",
+  "plugins=WPRM,MediavineCreate,AMP"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#article",
+     "isPartOf": {
+      "@id": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/"
+     },
+     "author": {
+      "name": "Gina Homolka",
+      "@id": "https://www.skinnytaste.com/#/schema/person/d30ee2b4f0b2b8cff8d010fbf4228b72"
+     },
+     "headline": "Instant Pot Chicken Taco Chili",
+     "datePublished": "2019-02-07T17:14:17+00:00",
+     "dateModified": "2023-06-29T15:44:35+00:00",
+     "wordCount": 1282,
+     "commentCount": 318,
+     "publisher": {
+      "@id": "https://www.skinnytaste.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.skinnytaste.com/wp-content/uploads/2019/02/Instant-Pot-Chicken-Taco-Chili-1-5.jpg",
+     "articleSection": [
+      "Chicken Breast Recipes",
+      "Chicken Recipes",
+      "Dairy Free Recipes",
+      "Dinner Ideas",
+      "Egg Free Recipes",
+      "Fall",
+      "Freezer Meals",
+      "Gluten Free",
+      "High-Fiber Dinners",
+      "High-Fiber Recipes",
+      "Instant Pot Recipes",
+      "Kid Friendly",
+      "One Pan",
+      "Pressure Cooker Recipes",
+      "Recipes",
+      "Super Bowl Recipes",
+      "Weight Watchers – WW Recipes",
+      "Winter"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/",
+     "url": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/",
+     "name": "Easy Instant Pot Chicken Chili recipe l Skinnytaste",
+     "isPartOf": {
+      "@id": "https://www.skinnytaste.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.skinnytaste.com/wp-content/uploads/2019/02/Instant-Pot-Chicken-Taco-Chili-1-5.jpg",
+     "datePublished": "2019-02-07T17:14:17+00:00",
+     "dateModified": "2023-06-29T15:44:35+00:00",
+     "description": "This easy and healthy Instant Pot Chicken Taco Chili is made with chicken, beans, corn and tomatoes and taco seasoning.",
+     "breadcrumb": {
+      "@id": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#primaryimage",
+     "url": "https://www.skinnytaste.com/wp-content/uploads/2019/02/Instant-Pot-Chicken-Taco-Chili-1-5.jpg",
+     "contentUrl": "https://www.skinnytaste.com/wp-content/uploads/2019/02/Instant-Pot-Chicken-Taco-Chili-1-5.jpg",
+     "width": 550,
+     "height": 825,
+     "caption": "Chicken Taco Chili, made with chicken, beans, corn and tomatoes seasoned with taco seasoning is one of my most popular slow cooker recipes, which I just remade for Instant Pot after several requests! This recipe couldn’t be easier, made with ingredients you probably already have in your pantry."
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Skinnytaste",
+       "item": "https://www.skinnytaste.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Recipes",
+       "item": "https://www.skinnytaste.com/recipes/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Instant Pot Recipes",
+       "item": "https://www.skinnytaste.com/recipes/instant-pot-recipes/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Instant Pot Chicken Taco Chili"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.skinnytaste.com/#website",
+     "url": "https://www.skinnytaste.com/",
+     "name": "Skinnytaste",
+     "description": "Delicious Healthy Recipes Made with Real Food",
+     "publisher": {
+      "@id": "https://www.skinnytaste.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.skinnytaste.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.skinnytaste.com/#organization",
+     "name": "Skinnytaste",
+     "url": "https://www.skinnytaste.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.skinnytaste.com/#/schema/logo/image/",
+      "url": "https://www.skinnytaste.com/wp-content/uploads/2016/03/logo@2x.png",
+      "contentUrl": "https://www.skinnytaste.com/wp-content/uploads/2016/03/logo@2x.png",
+      "width": 860,
+      "height": 220,
+      "caption": "Skinnytaste"
+     },
+     "image": {
+      "@id": "https://www.skinnytaste.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/GinasSkinnytaste/",
+      "https://x.com/skinnytaste",
+      "https://instagram.com/skinnytaste/",
+      "https://pinterest.com/skinnytaste/"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.skinnytaste.com/#/schema/person/d30ee2b4f0b2b8cff8d010fbf4228b72",
+     "name": "Gina Homolka",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.skinnytaste.com/wp-content/uploads/2025/04/cropped-gina-author-white-96x96.jpg",
+      "url": "https://www.skinnytaste.com/wp-content/uploads/2025/04/cropped-gina-author-white-96x96.jpg",
+      "contentUrl": "https://www.skinnytaste.com/wp-content/uploads/2025/04/cropped-gina-author-white-96x96.jpg",
+      "caption": "Gina Homolka"
+     }
+    },
+    {
+     "@type": "Recipe",
+     "name": "Instant Pot Chicken Taco Chili",
+     "author": {
+      "@id": "https://www.skinnytaste.com/#/schema/person/d30ee2b4f0b2b8cff8d010fbf4228b72"
+     },
+     "description": "This Instant Pot Chicken Chili is made with chicken, beans, corn, tomatoes, and taco seasoning for a hearty, flavorful, and healthy dinner. This easy taco chili comes together in just over 30 minutes, perfect for busy weeknights!",
+     "datePublished": "2019-02-07T12:14:17+00:00",
+     "image": [
+      "https://www.skinnytaste.com/wp-content/uploads/2019/02/Instant-Pot-Chicken-Taco-Chili-1-5.jpg"
+     ],
+     "recipeYield": [
+      "10",
+      "10 servings"
+     ],
+     "prepTime": "PT5M",
+     "cookTime": "PT25M",
+     "totalTime": "PT45M",
+     "recipeIngredient": [
+      "olive oil spray",
+      "1  small onion (chopped)",
+      "1 15.5 oz can  black beans (not drained)",
+      "1 15.5 oz can  kidney beans (not drained)",
+      "1 8-oz can  tomato sauce",
+      "10 oz package frozen corn kernels",
+      "2 10 oz cans  diced tomatoes w/chilies ( (Rotel))",
+      "24 oz boneless skinless chicken breasts (from 3 breasts)",
+      "4 ounce can  chopped green chili peppers",
+      "1/4 cup chopped fresh cilantro",
+      "1  packet reduced sodium taco seasoning or homemade (see below)",
+      "1 1/2 tablespoons cumin",
+      "1 1/2 tablespoons chili powder",
+      "1/4 teaspoon garlic powder",
+      "1/4 teaspoon onion powder",
+      "1/4 teaspoon dried oregano",
+      "1/2 teaspoon paprika",
+      "1 teaspoon kosher salt",
+      "1/2 teaspoon black pepper"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Press saute and spray the insert with oil, add the onion and stir, cooking until soft and golden, about 4 to 5 minutes.",
+       "name": "Press saute and spray the insert with oil, add the onion and stir, cooking until soft and golden, about 4 to 5 minutes.",
+       "url": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#wprm-recipe-47662-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Press cancel to prevent getting a burn notice, then deglaze the pot with 1/4 cup water.",
+       "name": "Press cancel to prevent getting a burn notice, then deglaze the pot with 1/4 cup water.",
+       "url": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#wprm-recipe-47662-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add the chicken and season both sides with half of the taco seasoning.",
+       "name": "Add the chicken and season both sides with half of the taco seasoning.",
+       "url": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#wprm-recipe-47662-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add the beans, corn, green chilies, then finish with the diced tomatoes and tomato sauce.",
+       "name": "Add the beans, corn, green chilies, then finish with the diced tomatoes and tomato sauce.",
+       "url": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#wprm-recipe-47662-step-0-3"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add 1/2 cup water plus the remaining taco seasonings and gently stir without moving the chicken.",
+       "name": "Add 1/2 cup water plus the remaining taco seasonings and gently stir without moving the chicken.",
+       "url": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#wprm-recipe-47662-step-0-4"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Cover and cook high pressure 25 minutes. Natural release, then remove the chicken and shred with two forks. Return the chicken to the pot and mix to combine.",
+       "name": "Cover and cook high pressure 25 minutes. Natural release, then remove the chicken and shred with two forks. Return the chicken to the pot and mix to combine.",
+       "url": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#wprm-recipe-47662-step-0-5"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Top with fresh cilantro and serve. Makes about 11 cups.",
+       "name": "Top with fresh cilantro and serve. Makes about 11 cups.",
+       "url": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#wprm-recipe-47662-step-0-6"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.87",
+      "ratingCount": "144",
+      "reviewCount": "18"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This was so easy and delicious! I came downstairs the next morning and found my daughter eating the leftovers for breakfast. Small modifications I made were to add about 2/3 cup of chopped roasted red peppers and used chicken stock instead of water (and added less salt). I definitely recommend making your own taco seasoning.",
+       "author": {
+        "@type": "Person",
+        "name": "Colleen"
+       },
+       "datePublished": "2026-01-13"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I make this frequently - so easy and so good.  I usually make corn bread to go with it.",
+       "author": {
+        "@type": "Person",
+        "name": "Kathy"
+       },
+       "datePublished": "2025-11-01"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I have been making the crockpot version for a couple years. I wanted to try it in my instapot and didn't realize you wrote an insta pot version. When I converted myself I put 1 1/2 cup chicken broth in first (the minimum liquid that my pot calls for) placed the wire insert in my pot to keep the chicken off the bottom and easier to find for shredding, put the chicken in, drained the beans and added them, added the onion and seasonings, added the tomatoes and geen chilies (we don't like chunks of tomatoes so I run mine through a food processor to guarantee they dissolve) It worked great. This time I followed the insta pot version and kept getting a burn notice. When I emptied the pot it had definitely burned on the bottom. I think it was from leaving the onions on the bottom so next time I will take them out after browning them and layer them towards the top. For those asking if you can use frozen chicken. Yes you can! I do it all the time. It just makes the instapot take a longer to come to pressure.",
+       "author": {
+        "@type": "Person",
+        "name": "Tracy"
+       },
+       "datePublished": "2025-10-12"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "EASY and DELICIOUS.",
+       "author": {
+        "@type": "Person",
+        "name": "Meridee"
+       },
+       "datePublished": "2025-10-07"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+       },
+       "reviewBody": "Thank you for this delicious and quick dinner. Just what we needed after work this evening.  And I'm so glad I have leftovers for work lunches. The only reason I gave 4 stars is because I thought it needed more heat. Next time I will make a slight change. But this was great and we enjoyed it.",
+       "author": {
+        "@type": "Person",
+        "name": "Tana"
+       },
+       "datePublished": "2025-09-30"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Yum. Made this on top of the stove and it was still easy and delicious. Added some Trader Joe’s chili lime seasoning because I had it and it was a nice addition. Thanks!!",
+       "author": {
+        "@type": "Person",
+        "name": "Patty"
+       },
+       "datePublished": "2025-09-15"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "We love this and make it often. We always put extra chicken in, and less water (1/4 cup instead of 1/2). We also only cook it for 18 minutes instead of 25 and the chicken still shreds perfectly. Thank you for an easy and tasty meal that is fantastic leftover as well. 👍😊",
+       "author": {
+        "@type": "Person",
+        "name": "Tara S."
+       },
+       "datePublished": "2025-01-05"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Super easy, super delicious!  A family (and personal) favorite for a cold and dreary day... and there are a lot of those in Seattle!",
+       "author": {
+        "@type": "Person",
+        "name": "Robin Wright"
+       },
+       "datePublished": "2024-12-14"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "It delicious and so easy to make! I double the recipe for leftovers.",
+       "author": {
+        "@type": "Person",
+        "name": "Colleen Donohue"
+       },
+       "datePublished": "2024-12-06"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Great recipe.  Made some changes for the second time I made it.  Thought it was too thick first time, so I didn't drain the beans.  Also swapped out the kidney beans for pinto beans and added garlic.",
+       "author": {
+        "@type": "Person",
+        "name": "Brad"
+       },
+       "datePublished": "2024-06-14"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Delish and filling. Thank you!",
+       "author": {
+        "@type": "Person",
+        "name": "Amelia"
+       },
+       "datePublished": "2024-04-24"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "One of the tastiest things I've ever prepared!",
+       "author": {
+        "@type": "Person",
+        "name": "Jim Cook"
+       },
+       "datePublished": "2024-01-04"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+       },
+       "reviewBody": "This turned out GREAT. I started WW a month ago and have been in a little rut. This was so easy and delicious. I only had one can of Rotel so I added an extra can of diced fire roasted tomatoes. And it worked out yummy. Thanks for another good one!",
+       "author": {
+        "@type": "Person",
+        "name": "Sheryl"
+       },
+       "datePublished": "2023-10-05"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I've made this all three ways. Stovepipe, ninja, crackpot. It is great, especially for busy Friday and Saturday. Cook on Friday have left overs Saturday. I serve with rice, and leftovers with tortilla chips.",
+       "author": {
+        "@type": "Person",
+        "name": "Lisa Manis"
+       },
+       "datePublished": "2023-09-29"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This has been a family favorite in my house for years.  I just made it in my ninja foodi for the first time.  Just as good and so much faster!",
+       "author": {
+        "@type": "Person",
+        "name": "Debby"
+       },
+       "datePublished": "2023-09-22"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "A family fav!  Everyone loves this! I've been making this for almost two years now!  I used ground chicken or turkey instead of breasts or tenderloins.  I saute in the IP with 1/2 onion and seasoning.  I pulse the bean, rotel and chilis in my Ninja for a bit, my kids like it better this way and it gets creamy.  Then combine everything together and set for 10 minutes on high pressure.  We serve with fritos and shredded cheese.  Thank you so much for this recipe!",
+       "author": {
+        "@type": "Person",
+        "name": "Danielle"
+       },
+       "datePublished": "2023-08-27"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "A winner! Quick and easy and my kids love it. Thanks!",
+       "author": {
+        "@type": "Person",
+        "name": "Ashley"
+       },
+       "datePublished": "2023-08-23"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I doubled the recipe so I can meal prep for this week. It was so easy and so good!  I put 6 chicken breast and of course it was a ton of chicken. So Yummy!",
+       "author": {
+        "@type": "Person",
+        "name": "Brandy"
+       },
+       "datePublished": "2023-07-19"
+      }
+     ],
+     "recipeCategory": [
+      "Dinner"
+     ],
+     "recipeCuisine": [
+      "American"
+     ],
+     "keywords": "Chicken Taco Chili in Instant Pot, easy taco chili, instant pot chicken chili, instant pot chili, instant pot chili recipe",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "servingSize": "1 generous cup",
+      "calories": "211 kcal",
+      "carbohydrateContent": "26 g",
+      "proteinContent": "23 g",
+      "fatContent": "3 g",
+      "saturatedFatContent": "0.5 g",
+      "cholesterolContent": "50 mg",
+      "sodiumContent": "623 mg",
+      "fiberContent": "8 g",
+      "sugarContent": "4.5 g"
+     },
+     "@id": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#recipe",
+     "isPartOf": {
+      "@id": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/#article"
+     },
+     "mainEntityOfPage": "https://www.skinnytaste.com/chicken-taco-chili-in-instant-pot/"
+    }
+   ]
+  }
+ ]
+}

@@ -210,7 +210,7 @@ function collectAfter(heading: Element, wantList: boolean): string[] {
  * Last resort. Looks for an "Ingredients" heading + list and an "Instructions" heading + list/paragraphs.
  * Only succeeds when both are found and reasonably sized.
  */
-export function extractRecipeFromStructure(doc: ReturnType<typeof parseHtml>, pageUrl?: string, meta?: PageMeta): Recipe | null {
+export function extractRecipeFromStructure(doc: ReturnType<typeof parseHtml>, pageUrl?: string, meta?: PageMeta, opts?: { allowPartial?: boolean }): Recipe | null {
   const headings = selectAll('h1, h2, h3, h4, h5, p, strong, b, span, div', doc) as unknown as Element[];
   let ingHeading: Element | null = null;
   let stepHeading: Element | null = null;
@@ -224,13 +224,16 @@ export function extractRecipeFromStructure(doc: ReturnType<typeof parseHtml>, pa
     else if (!stepHeading && STEP_HEADING.test(t)) stepHeading = el;
     if (ingHeading && stepHeading) break;
   }
-  if (!ingHeading || !stepHeading) return null;
-  const ingLines = collectAfter(ingHeading, true).map(cleanIngredientLine).filter(Boolean);
-  const stepLines = collectAfter(stepHeading, false).map((s) => stripStepNumbering(s)).filter(Boolean);
-  if (ingLines.length < 2 || stepLines.length < 1) return null;
-  if (ingLines.length > 80 || stepLines.length > 80) return null; // probably grabbed a nav/menu
+  if (!ingHeading && !stepHeading) return null;
+  const ingLines = ingHeading ? collectAfter(ingHeading, true).map(cleanIngredientLine).filter(Boolean) : [];
+  const stepLines = stepHeading ? collectAfter(stepHeading, false).map((s) => stripStepNumbering(s)).filter(Boolean) : [];
+  // Standalone use requires both halves; the caller may still borrow one half when JSON-LD had the other.
+  const hasIng = ingLines.length >= 2 && ingLines.length <= 80;
+  const hasSteps = stepLines.length >= 1 && stepLines.length <= 80;
+  if (!hasIng && !hasSteps) return null;
+  if (!opts?.allowPartial && !(hasIng && hasSteps)) return null;
 
-  const ingredientGroups = groupIngredients(ingLines);
+  const ingredientGroups = groupIngredients(hasIng ? ingLines : []);
   const ingredients = ingredientGroups.flatMap((g) => g.items);
   const h1 = selectOne('h1', doc) as Element | null;
   const title = (h1 && text(h1)) || meta?.ogTitle || meta?.title || 'Untitled Recipe';
@@ -238,7 +241,7 @@ export function extractRecipeFromStructure(doc: ReturnType<typeof parseHtml>, pa
     title: title.replace(/\s*[-|–]\s*[^-|–]{2,40}$/, '').trim() || title,
     description: meta?.description ?? null,
     ingredients,
-    instructions: stepLines,
+    instructions: hasSteps ? stepLines : [],
     prepTime: null,
     cookTime: null,
     totalTime: null,

@@ -1,0 +1,445 @@
+{
+ "url": "https://www.justonecookbook.com/teriyaki-chicken/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToSection,HowToStep]",
+  "img=list[str]",
+  "yield=list1:[\"2\"]",
+  "author=dict",
+  "prep=\"PT10M\" cook=\"PT15M\" total=\"PT25M\"",
+  "ing=list10",
+  "plugins=WPRM"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.justonecookbook.com/butter-shoyu-chicken/#article",
+     "isPartOf": {
+      "@id": "https://www.justonecookbook.com/butter-shoyu-chicken/"
+     },
+     "author": {
+      "name": "Namiko Hirasawa Chen",
+      "@id": "https://www.justonecookbook.com/#/schema/person/a4a7dc29a996524e82cc4306379027ce"
+     },
+     "headline": "Butter Shoyu Chicken バター醤油チキン",
+     "datePublished": "2024-08-19T12:00:00+00:00",
+     "dateModified": "2025-02-09T22:48:17+00:00",
+     "wordCount": 1028,
+     "commentCount": 122,
+     "publisher": {
+      "@id": "https://www.justonecookbook.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.justonecookbook.com/butter-shoyu-chicken/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-6001-I.jpg",
+     "articleSection": [
+      "Dinner"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.justonecookbook.com/butter-shoyu-chicken/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.justonecookbook.com/butter-shoyu-chicken/",
+     "url": "https://www.justonecookbook.com/butter-shoyu-chicken/",
+     "name": "Butter Shoyu Chicken バター醤油チキン – Just One Cookbook",
+     "isPartOf": {
+      "@id": "https://www.justonecookbook.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.justonecookbook.com/butter-shoyu-chicken/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.justonecookbook.com/butter-shoyu-chicken/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-6001-I.jpg",
+     "datePublished": "2024-08-19T12:00:00+00:00",
+     "dateModified": "2025-02-09T22:48:17+00:00",
+     "description": "Glazed with a delicious soy-butter sauce, this Butter Shoyu Chicken recipe will win your heart! It is so easy but incredibly luxurious!",
+     "breadcrumb": {
+      "@id": "https://www.justonecookbook.com/butter-shoyu-chicken/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.justonecookbook.com/butter-shoyu-chicken/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.justonecookbook.com/butter-shoyu-chicken/#primaryimage",
+     "url": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-6001-I.jpg",
+     "contentUrl": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-6001-I.jpg",
+     "width": 800,
+     "height": 533,
+     "caption": "A plate containing butter shoyu chicken, broccoli, and tomatoes."
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.justonecookbook.com/butter-shoyu-chicken/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.justonecookbook.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Recipes",
+       "item": "https://www.justonecookbook.com/categories/recipes/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Dinner",
+       "item": "https://www.justonecookbook.com/categories/recipes/entree/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Butter Shoyu Chicken バター醤油チキン"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.justonecookbook.com/#website",
+     "url": "https://www.justonecookbook.com/",
+     "name": "Just One Cookbook",
+     "description": "Japanese Food and Recipe Blog",
+     "publisher": {
+      "@id": "https://www.justonecookbook.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.justonecookbook.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.justonecookbook.com/#organization",
+     "name": "Just One Cookbook",
+     "url": "https://www.justonecookbook.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.justonecookbook.com/#/schema/logo/image/",
+      "url": "https://www.justonecookbook.com/wp-content/uploads/2026/03/JOC-Logo-512.png",
+      "contentUrl": "https://www.justonecookbook.com/wp-content/uploads/2026/03/JOC-Logo-512.png",
+      "width": 512,
+      "height": 512,
+      "caption": "Just One Cookbook"
+     },
+     "image": {
+      "@id": "https://www.justonecookbook.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/justonecookbook",
+      "https://x.com/justonecookbook",
+      "https://instagram.com/justonecookbook/",
+      "https://www.pinterest.com/justonecookbook/",
+      "https://www.youtube.com/user/justonecookbook"
+     ],
+     "description": "Just One Cookbook is dedicated to bringing the joy of authentic Japanese home cooking to kitchens around the world. Our mission is to preserve family recipes and provide easy-to-follow guides that help home cooks prepare delicious, memorable meals for their loved ones.",
+     "email": "hello@justonecookbook.com",
+     "legalName": "Just One Cookbook Corporation",
+     "foundingDate": "2011-01-15",
+     "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "minValue": "1",
+      "maxValue": "10"
+     }
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.justonecookbook.com/#/schema/person/a4a7dc29a996524e82cc4306379027ce",
+     "name": "Namiko Hirasawa Chen",
+     "description": "Born and raised in Japan, I’m the founder and recipe developer behind Just One Cookbook, the largest English-language website for authentic Japanese recipes. Since 2011, I’ve shared over 1,200 easy, foolproof recipes with step-by-step photos to help you cook delicious Japanese meals with confidence at home.",
+     "sameAs": [
+      "https://www.justonecookbook.com/about/namiko-hirasawa-chen/",
+      "https://www.facebook.com/justonecookbook/",
+      "https://www.instagram.com/justonecookbook/",
+      "https://www.pinterest.com/justonecookbook/",
+      "https://www.youtube.com/user/justonecookbook"
+     ],
+     "url": "https://www.justonecookbook.com/author/administrator/"
+    },
+    {
+     "@type": "Recipe",
+     "name": "Butter Shoyu Chicken",
+     "author": {
+      "@id": "https://www.justonecookbook.com/#/schema/person/a4a7dc29a996524e82cc4306379027ce"
+     },
+     "description": "Glazed with a delicious soy-butter sauce, this Butter Shoyu Chicken will win your family‘s heart! It is a simple recipe that produces a luxurious result. The chicken is exceptionally moist and tender and so flavorful. It‘s ready in just 25 minutes.",
+     "datePublished": "2024-08-19T05:00:00+00:00",
+     "image": [
+      "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-6001-I.jpg",
+      "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-6001-I-500x500.jpg",
+      "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-6001-I-500x375.jpg",
+      "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-6001-I-480x270.jpg"
+     ],
+     "recipeYield": [
+      "2"
+     ],
+     "prepTime": "PT10M",
+     "cookTime": "PT15M",
+     "totalTime": "PT25M",
+     "recipeIngredient": [
+      "1 lb boneless, skin-on chicken thighs",
+      "¼ tsp Diamond Crystal kosher salt",
+      "⅛ tsp freshly ground black pepper",
+      "1 Tbsp neutral oil",
+      "4 Tbsp sake ((or water; for steaming))",
+      "1 Tbsp unsalted butter",
+      "2½ Tbsp soy sauce",
+      "2 Tbsp sake",
+      "1 Tbsp mirin",
+      "1 Tbsp sugar"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Gather all the ingredients.",
+       "name": "Gather all the ingredients.",
+       "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-0-0",
+       "image": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-Ingredients.jpg"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "From 1 lb&#32;boneless, skin-on chicken thighs, cut each chicken thigh into 2 pieces (as you see, this chicken thigh is large). Cut off any excess fat. Prick the skin with the tip of the knife to help distribute the flavors and heat faster.",
+       "name": "From 1 lb&#32;boneless, skin-on chicken thighs, cut each chicken thigh into 2 pieces (as you see, this chicken thigh is large). Cut off any excess fat. Prick the skin with the tip of the knife to help distribute the flavors and heat faster.",
+       "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-0-1",
+       "image": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-1.jpg"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Lightly sprinkle both sides with ¼ tsp&#32;Diamond Crystal kosher salt and ⅛ tsp&#32;freshly ground black pepper.",
+       "name": "Lightly sprinkle both sides with ¼ tsp&#32;Diamond Crystal kosher salt and ⅛ tsp&#32;freshly ground black pepper.",
+       "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-0-2",
+       "image": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-3.jpg"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Combine the sauce ingredients in a small bowl: 2½ Tbsp&#32;soy sauce, 2 Tbsp&#32;sake, 1 Tbsp&#32;mirin, and 1 Tbsp&#32;sugar. Whisk until the sugar is dissolved. Set aside.",
+       "name": "Combine the sauce ingredients in a small bowl: 2½ Tbsp&#32;soy sauce, 2 Tbsp&#32;sake, 1 Tbsp&#32;mirin, and 1 Tbsp&#32;sugar. Whisk until the sugar is dissolved. Set aside.",
+       "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-0-3",
+       "image": "https://www.justonecookbook.com/wp-content/uploads/2023/01/Butter-Shoyu-Chicken-4-1.jpg"
+      },
+      {
+       "@type": "HowToSection",
+       "name": "To Cook the Chicken",
+       "itemListElement": [
+        {
+         "@type": "HowToStep",
+         "text": "Heat a large frying pan over medium heat. When it‘s hot, add 1 Tbsp neutral oil and distribute it evenly. Add the chicken, skin side down, to the hot pan. (If you‘re doubling the recipe, fry the chicken in batches and return it to the pan before continuing to the next section.)",
+         "name": "Heat a large frying pan over medium heat. When it‘s hot, add 1 Tbsp neutral oil and distribute it evenly. Add the chicken, skin side down, to the hot pan. (If you‘re doubling the recipe, fry the chicken in batches and return it to the pan before continuing to the next section.)",
+         "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-1-0",
+         "image": "https://www.justonecookbook.com/wp-content/uploads/2023/01/Butter-Shoyu-Chicken-4-2.jpg"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "Cook the chicken until golden brown, roughly 4–5 minutes.",
+         "name": "Cook the chicken until golden brown, roughly 4–5 minutes.",
+         "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-1-1",
+         "image": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-5.jpg"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "When the bottom side is nicely brown and crisp, flip over and cook the other side for 3 minutes.",
+         "name": "When the bottom side is nicely brown and crisp, flip over and cook the other side for 3 minutes.",
+         "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-1-2",
+         "image": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-6.jpg"
+        }
+       ]
+      },
+      {
+       "@type": "HowToSection",
+       "name": "To Steam and Add the Sauce",
+       "itemListElement": [
+        {
+         "@type": "HowToStep",
+         "text": "Add 4 Tbsp&#32;sake and cook, covered, until cooking liquid is gone.",
+         "name": "Add 4 Tbsp&#32;sake and cook, covered, until cooking liquid is gone.",
+         "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-2-0",
+         "image": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-7.jpg"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "Remove the lid and wipe off any excess oil from the frying pan with a paper towel.",
+         "name": "Remove the lid and wipe off any excess oil from the frying pan with a paper towel.",
+         "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-2-1",
+         "image": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-8.jpg"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "Add the sauce ingredients and 1 Tbsp&#32;unsalted butter.",
+         "name": "Add the sauce ingredients and 1 Tbsp&#32;unsalted butter.",
+         "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-2-2",
+         "image": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-9.jpg"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "Coat the chicken well with the sauce. Spoon it over the chicken a few times.",
+         "name": "Coat the chicken well with the sauce. Spoon it over the chicken a few times.",
+         "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-2-3",
+         "image": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-10.jpg"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "Serve the chicken onto a plate and drizzle it with some sauce. I usually serve simple veggies like blanched broccoli and tomatoes (serve with homemade Wafu Dressing or Sesame Dressing).",
+         "name": "Serve the chicken onto a plate and drizzle it with some sauce. I usually serve simple veggies like blanched broccoli and tomatoes (serve with homemade Wafu Dressing or Sesame Dressing).",
+         "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-2-4",
+         "image": "https://www.justonecookbook.com/wp-content/uploads/2021/05/Butter-Shoyu-Chicken-11.jpg"
+        }
+       ]
+      },
+      {
+       "@type": "HowToSection",
+       "name": "To Store",
+       "itemListElement": [
+        {
+         "@type": "HowToStep",
+         "text": "You can keep the leftovers in an airtight container and store in the refrigerator for up to 3 days and in the freezer for a month.",
+         "name": "You can keep the leftovers in an airtight container and store in the refrigerator for up to 3 days and in the freezer for a month.",
+         "url": "https://www.justonecookbook.com/butter-shoyu-chicken/#wprm-recipe-60564-step-3-0"
+        }
+       ]
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.78",
+      "ratingCount": "169",
+      "reviewCount": "5"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "What leftovers? 🤣 There’s never leftovers when I cook this and I’ve been making it for years.",
+       "author": {
+        "@type": "Person",
+        "name": "H"
+       },
+       "datePublished": "2026-05-14"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Hi - approximately how long is the steam/cook with sake step? 2-3 minutes?  Thank you!",
+       "author": {
+        "@type": "Person",
+        "name": "Sheri"
+       },
+       "datePublished": "2026-05-09"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Made this for my family last night and it was a hit! My 4.5 year old Kiddo asked for seconds and asked that I make it for their birthday. LOL. I'm sure I'll make it again before then.",
+       "author": {
+        "@type": "Person",
+        "name": "Karen KS"
+       },
+       "datePublished": "2026-05-01"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This recipe is perfect! The chicken is so flavorful and delicious with this method. Do you slice the thighs when serving to make it easier to eat with chopsticks? Or do you serve them who and eat it with knife and fork?",
+       "author": {
+        "@type": "Person",
+        "name": "Sam"
+       },
+       "datePublished": "2023-11-30"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This recipe was very good! Sorry in advance since I may end up asking this on a lot of recipes, but I'm wondering how long you would expect the butter shoyu sauce to last if stored in the fridge? I enjoy a lot of the sauces used here and would like to make some of them in larger quantities to use for future dates if possible.",
+       "author": {
+        "@type": "Person",
+        "name": "Michael"
+       },
+       "datePublished": "2023-10-06"
+      }
+     ],
+     "recipeCategory": [
+      "Main Dish"
+     ],
+     "recipeCuisine": [
+      "Japanese"
+     ],
+     "keywords": "chicken",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "659 kcal",
+      "carbohydrateContent": "9 g",
+      "proteinContent": "38 g",
+      "fatContent": "47 g",
+      "saturatedFatContent": "17 g",
+      "transFatContent": "1 g",
+      "cholesterolContent": "233 mg",
+      "sodiumContent": "1016 mg",
+      "fiberContent": "1 g",
+      "sugarContent": "6 g",
+      "unsaturatedFatContent": "25 g",
+      "servingSize": "1 serving"
+     },
+     "@id": "https://www.justonecookbook.com/butter-shoyu-chicken/#recipe",
+     "isPartOf": {
+      "@id": "https://www.justonecookbook.com/butter-shoyu-chicken/#article"
+     },
+     "mainEntityOfPage": "https://www.justonecookbook.com/butter-shoyu-chicken/"
+    }
+   ]
+  }
+ ]
+}

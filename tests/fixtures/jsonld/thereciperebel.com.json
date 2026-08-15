@@ -1,0 +1,317 @@
+{
+ "url": "https://www.thereciperebel.com/air-fryer-baked-potato/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list2:[\"3\", \"3 potatoes\"]",
+  "author=dict",
+  "prep=\"PT5M\" cook=\"PT40M\" total=\"PT45M\"",
+  "ing=list3",
+  "plugins=WPRM,AMP"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.thereciperebel.com/air-fryer-baked-potato/#article",
+     "isPartOf": {
+      "@id": "https://www.thereciperebel.com/air-fryer-baked-potato/"
+     },
+     "author": {
+      "name": "Ashley Fehr",
+      "@id": "https://www.thereciperebel.com/#/schema/person/6ec3b2899cbae8b4411c5a31c35cd196"
+     },
+     "headline": "Air Fryer Baked Potato",
+     "datePublished": "2025-05-09T06:11:00+00:00",
+     "dateModified": "2025-05-09T06:11:06+00:00",
+     "wordCount": 1042,
+     "commentCount": 84,
+     "publisher": {
+      "@id": "https://www.thereciperebel.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.thereciperebel.com/air-fryer-baked-potato/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.thereciperebel.com/wp-content/uploads/2024/03/air-fryer-baked-potato-www.thereciperebel.com-1200-22-of-43.jpg",
+     "keywords": [
+      "potatoes",
+      "russet potatoes"
+     ],
+     "articleSection": [
+      "Air Fryer",
+      "Dinner",
+      "Fall/Winter",
+      "Healthy Recipes",
+      "Side Dishes",
+      "Under 500 Calories",
+      "Vegetarian"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.thereciperebel.com/air-fryer-baked-potato/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.thereciperebel.com/air-fryer-baked-potato/",
+     "url": "https://www.thereciperebel.com/air-fryer-baked-potato/",
+     "name": "CRISPY Air Fryer Baked Potato - The Recipe Rebel",
+     "isPartOf": {
+      "@id": "https://www.thereciperebel.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.thereciperebel.com/air-fryer-baked-potato/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.thereciperebel.com/air-fryer-baked-potato/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.thereciperebel.com/wp-content/uploads/2024/03/air-fryer-baked-potato-www.thereciperebel.com-1200-22-of-43.jpg",
+     "datePublished": "2025-05-09T06:11:00+00:00",
+     "dateModified": "2025-05-09T06:11:06+00:00",
+     "description": "This Air Fryer Baked Potato recipe is incredibly crispy on the outside, fluffy and creamy on the inside, and couldn't be easier! [VIDEO]",
+     "breadcrumb": {
+      "@id": "https://www.thereciperebel.com/air-fryer-baked-potato/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.thereciperebel.com/air-fryer-baked-potato/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.thereciperebel.com/air-fryer-baked-potato/#primaryimage",
+     "url": "https://www.thereciperebel.com/wp-content/uploads/2024/03/air-fryer-baked-potato-www.thereciperebel.com-1200-22-of-43.jpg",
+     "contentUrl": "https://www.thereciperebel.com/wp-content/uploads/2024/03/air-fryer-baked-potato-www.thereciperebel.com-1200-22-of-43.jpg",
+     "width": 1200,
+     "height": 1200,
+     "caption": "square image of air fryer baked potato in air fryer basket."
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.thereciperebel.com/air-fryer-baked-potato/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "The Recipe Rebel",
+       "item": "https://www.thereciperebel.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Side Dishes",
+       "item": "https://www.thereciperebel.com/category/sides/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Air Fryer Baked Potato"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.thereciperebel.com/#website",
+     "url": "https://www.thereciperebel.com/",
+     "name": "The Recipe Rebel",
+     "description": "",
+     "publisher": {
+      "@id": "https://www.thereciperebel.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.thereciperebel.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.thereciperebel.com/#organization",
+     "name": "The Recipe Rebel",
+     "url": "https://www.thereciperebel.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.thereciperebel.com/#/schema/logo/image/",
+      "url": "https://www.thereciperebel.com/wp-content/uploads/2026/05/logo-square.jpg",
+      "contentUrl": "https://www.thereciperebel.com/wp-content/uploads/2026/05/logo-square.jpg",
+      "width": 696,
+      "height": 696,
+      "caption": "The Recipe Rebel"
+     },
+     "image": {
+      "@id": "https://www.thereciperebel.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/thereciperebel",
+      "https://x.com/thereciperebel",
+      "https://instagram.com/thereciperebel",
+      "https://www.pinterest.com/ashleyfehr/"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.thereciperebel.com/#/schema/person/6ec3b2899cbae8b4411c5a31c35cd196",
+     "name": "Ashley Fehr",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://secure.gravatar.com/avatar/51bfda07ffa2b79ee4cdee666cc787f781c3ea2e096178c0a9d6270eab3dff05?s=96&d=mm&r=g",
+      "url": "https://secure.gravatar.com/avatar/51bfda07ffa2b79ee4cdee666cc787f781c3ea2e096178c0a9d6270eab3dff05?s=96&d=mm&r=g",
+      "contentUrl": "https://secure.gravatar.com/avatar/51bfda07ffa2b79ee4cdee666cc787f781c3ea2e096178c0a9d6270eab3dff05?s=96&d=mm&r=g",
+      "caption": "Ashley Fehr"
+     },
+     "description": "My name is Ashley Fehr and I love creating easy meals my family loves. I also like to do things my way, which means improvising and breaking the rules when necessary. Here you will find creative twists on old favorites and some of my favorite family recipes, passed down from generations!",
+     "sameAs": [
+      "https://www.thereciperebel.com/",
+      "https://www.facebook.com/thereciperebel",
+      "https://x.com/thereciperebel"
+     ],
+     "url": "https://www.thereciperebel.com/author/fehrar/"
+    },
+    {
+     "@type": "Recipe",
+     "name": "Air Fryer Baked Potato recipe",
+     "author": {
+      "@id": "https://www.thereciperebel.com/#/schema/person/6ec3b2899cbae8b4411c5a31c35cd196"
+     },
+     "description": "This Air Fryer Baked Potato recipe is incredibly crispy on the outside, fluffy and creamy on the inside, and much faster than the oven! Simply seasoned and perfect for your favorite toppings.",
+     "datePublished": "2025-05-09T01:11:00+00:00",
+     "image": [
+      "https://www.thereciperebel.com/wp-content/uploads/2024/03/air-fryer-baked-potato-www.thereciperebel.com-1200-22-of-43.jpg",
+      "https://www.thereciperebel.com/wp-content/uploads/2024/03/air-fryer-baked-potato-www.thereciperebel.com-1200-22-of-43-500x500.jpg",
+      "https://www.thereciperebel.com/wp-content/uploads/2024/03/air-fryer-baked-potato-www.thereciperebel.com-1200-22-of-43-500x375.jpg",
+      "https://www.thereciperebel.com/wp-content/uploads/2024/03/air-fryer-baked-potato-www.thereciperebel.com-1200-22-of-43-480x270.jpg"
+     ],
+     "video": {
+      "name": "Air Fryer Baked Potato l The Recipe Rebel",
+      "description": "PRINTABLE RECIPE & NUTRITION INFO: https://www.thereciperebel.com/air-fryer-baked-potato-2/\n\nIngredients\n▢3 russet potatoes (mine were 300 grams)\n▢1½ tablespoons oil\n▢salt and pepper\n\nInstructions\nPreheat air fryer to 400 degrees F according to manufacturer directions if required.\nWash and dry potatoes thoroughly.\nRub all over with oil and season well with salt and pepper. Pierce with a fork once in the middle.\nPlace in the basket of the air fryer, place the basket into the air fryer and cook for 40 minutes (a little less if your potatoes are smaller than mine, a little more if your potatoes are larger than mine).\nCheck doneness be inserting a knife into the center of the potatoes -- if it goes in and comes out easily, they are done. If it seems to get stuck, give them 5-10 more minutes.",
+      "uploadDate": "2025-05-09T05:15:04+00:00",
+      "duration": "PT23S",
+      "thumbnailUrl": "https://i.ytimg.com/vi/rhsLrDij3n8/hqdefault.jpg",
+      "embedUrl": "https://www.youtube.com/embed/rhsLrDij3n8?feature=oembed",
+      "contentUrl": "https://www.youtube.com/watch?v=rhsLrDij3n8",
+      "@type": "VideoObject"
+     },
+     "recipeYield": [
+      "3",
+      "3 potatoes"
+     ],
+     "prepTime": "PT5M",
+     "cookTime": "PT40M",
+     "totalTime": "PT45M",
+     "recipeIngredient": [
+      "3  russet potatoes ((mine were 300 grams))",
+      "1½ tablespoons oil",
+      "salt and pepper"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Preheat air fryer to 400 degrees F according to manufacturer directions if required.",
+       "name": "Preheat air fryer to 400 degrees F according to manufacturer directions if required.",
+       "url": "https://www.thereciperebel.com/air-fryer-baked-potato/#wprm-recipe-20897-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Wash and dry potatoes thoroughly.",
+       "name": "Wash and dry potatoes thoroughly.",
+       "url": "https://www.thereciperebel.com/air-fryer-baked-potato/#wprm-recipe-20897-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Rub all over with oil and season well with salt and pepper. Pierce with a fork once in the middle.",
+       "name": "Rub all over with oil and season well with salt and pepper. Pierce with a fork once in the middle.",
+       "url": "https://www.thereciperebel.com/air-fryer-baked-potato/#wprm-recipe-20897-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Place in the basket of the air fryer, place the basket into the air fryer and cook for 40 minutes (a little less if your potatoes are smaller than mine, a little more if your potatoes are larger than mine).",
+       "name": "Place in the basket of the air fryer, place the basket into the air fryer and cook for 40 minutes (a little less if your potatoes are smaller than mine, a little more if your potatoes are larger than mine).",
+       "url": "https://www.thereciperebel.com/air-fryer-baked-potato/#wprm-recipe-20897-step-0-3"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Check doneness be inserting a knife into the center of the potatoes -- if it goes in and comes out easily, they are done. If it seems to get stuck, give them 5-10 more minutes.",
+       "name": "Check doneness be inserting a knife into the center of the potatoes -- if it goes in and comes out easily, they are done. If it seems to get stuck, give them 5-10 more minutes.",
+       "url": "https://www.thereciperebel.com/air-fryer-baked-potato/#wprm-recipe-20897-step-0-4"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "41",
+      "reviewCount": "1"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I loved this recipe so much! It's quicker than in the oven and loved the crispy skin, which we coated in steak seasoning and salt, which made for a tasty eat!",
+       "author": {
+        "@type": "Person",
+        "name": "Nell Marie"
+       },
+       "datePublished": "2024-09-13"
+      }
+     ],
+     "recipeCategory": [
+      "Air fryer",
+      "Side Dish"
+     ],
+     "recipeCuisine": [
+      "American"
+     ],
+     "keywords": "air fryer baked potato, air fryer baked potatoes",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "servingSize": "1 potato",
+      "calories": "292 kcal",
+      "carbohydrateContent": "38 g",
+      "proteinContent": "5 g",
+      "fatContent": "14 g",
+      "saturatedFatContent": "1 g",
+      "sodiumContent": "11 mg",
+      "fiberContent": "3 g",
+      "sugarContent": "1 g"
+     },
+     "@id": "https://www.thereciperebel.com/air-fryer-baked-potato/#recipe",
+     "isPartOf": {
+      "@id": "https://www.thereciperebel.com/air-fryer-baked-potato/#article"
+     },
+     "mainEntityOfPage": "https://www.thereciperebel.com/air-fryer-baked-potato/"
+    }
+   ]
+  }
+ ]
+}

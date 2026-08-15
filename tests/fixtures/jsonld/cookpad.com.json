@@ -1,0 +1,75 @@
+{
+ "url": "https://cookpad.com/us/recipes/149253-easy-japanese-pancakes",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=plain:WebSite|plain:Recipe",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=str",
+  "yield=NoneType:null",
+  "author=dict",
+  "prep=null cook=null total=null",
+  "ing=list6",
+  "plugins="
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "name": "Cookpad",
+   "url": "https://cookpad.com/"
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Recipe",
+   "name": "Just Mix: Macrobiotic Banana Bread",
+   "image": "https://img-global.cpcdn.com/recipes/4999277500694528/1200x630cq80/photo.jpg",
+   "url": "https://cookpad.com/eng/recipes/149253",
+   "description": "I had over-ripe bananas, so I came up with this recipe to use them up before they went off. They make this cake so amazingly rich and sweet that you won't need to add any sugar. This is also really tasty if you add roasted walnuts, roasted almonds, raisins in Step 3. This is difficult to cut and eat when just baked because it contains so much bananna, so save it for tomorrow! Recipe by Koutan@ mama",
+   "datePublished": "2014-03-05",
+   "dateModified": "2014-10-14",
+   "keywords": "healthy baking, easy banana bread, natural ingredients",
+   "recipeCategory": "Breakfast",
+   "recipeInstructions": [
+    {
+     "@type": "HowToStep",
+     "text": "Roughly mash the banana with a fork."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Add the vegetable oil, soy milk and honey (optional) to the bowl with the banana, and mix with a whisk."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Sift the flour and baking powder, and add to the bowl. Fold in with a rubber spatula."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Pour the batter into a pound cake tin lined with parchment paper, and bake for 40-45 minutes in an oven preheated to 180-190℃.",
+     "image": "https://img-global.cpcdn.com/steps/6051686188580864/400x400cq80/photo.jpg"
+    }
+   ],
+   "recipeIngredient": [
+    "200 grams Cake flour",
+    "1 1/2 tsp Baking powder",
+    "200 grams Peeled banana",
+    "50 ml Vegetable oil",
+    "70 ml Processed soy milk",
+    "1 Maple syrup or honey"
+   ],
+   "author": {
+    "@type": "Person",
+    "name": "cookpad.japan",
+    "url": "https://cookpad.com/eng/users/1823220"
+   },
+   "recipeCuisine": "American",
+   "interactionStatistic": [
+    {
+     "@type": "InteractionCounter",
+     "interactionType": "http://schema.org/BookmarkAction",
+     "userInteractionCount": 4
+    }
+   ]
+  }
+ ]
+}

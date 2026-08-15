@@ -1,0 +1,178 @@
+{
+ "url": "https://www.bettycrocker.com/recipes/ultimate-chocolate-chip-cookies/77c14e03-d8b0-4844-846d-f19304f61c57",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=plain:Recipe|plain:BreadcrumbList|plain:FAQPage",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=str:\"36\"",
+  "author=dict",
+  "prep=\"PT0H15M\" cook=null total=\"PT1H25M\"",
+  "ing=list10",
+  "plugins="
+ ],
+ "jsonld": [
+  {
+   "@context": "http://schema.org",
+   "@type": "Recipe",
+   "@id": "https://www.bettycrocker.com/recipes/homemade-chocolate-chip-cookies/77c14e03-d8b0-4844-846d-f19304f61c57",
+   "name": "Homemade Chocolate Chip Cookies",
+   "image": [
+    "//mojo.generalmills.com/api/public/content/_pLFRXFETcuXWg_Z0MhZPw_gmi_hi_res_jpeg.jpeg?v=693b292b&t=466b54bb264e48b199fc8e83ef1136b4"
+   ],
+   "description": "These homemade chocolate chip cookies are top-rated. We’ll share all the tips you need for making the best chocolate chip cookie recipe—ever.",
+   "author": {
+    "@type": "Person",
+    "name": "Betty Crocker Kitchens",
+    "url": "https://www.bettycrocker.com/about-us"
+   },
+   "datePublished": "2004-01-01",
+   "dateModified": "2026-08-03",
+   "prepTime": "PT0H15M",
+   "totalTime": "PT1H25M",
+   "recipeYield": "36",
+   "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "160 calories",
+    "cholesterolContent": "20 milligrams",
+    "fiberContent": "0 grams",
+    "proteinContent": "1 grams",
+    "saturatedFatContent": "5 grams",
+    "sodiumContent": "75 milligrams",
+    "sugarContent": "14 grams",
+    "carbohydrateContent": "21 grams",
+    "fatContent": "8 grams",
+    "transFatContent": "0 grams",
+    "servingSize": "1 Cookie"
+   },
+   "recipeIngredient": [
+    "1 cup butter, softened",
+    "3/4 cup granulated sugar",
+    "3/4 cup packed brown sugar",
+    "1 large egg",
+    "1 teaspoon vanilla",
+    "2 1/4 cups Gold Medal™ All Purpose Flour",
+    "1 teaspoon baking soda",
+    "1/2 teaspoon salt",
+    "2 cups semisweet chocolate chips",
+    "1 cup coarsely chopped nuts, if desired"
+   ],
+   "recipeInstructions": [
+    {
+     "@type": "HowToStep",
+     "name": "Step 1",
+     "text": "Heat oven to 375°F.",
+     "url": "http://www.bettycrocker.com/recipes/homemade-chocolate-chip-cookies/77c14e03-d8b0-4844-846d-f19304f61c57#step1"
+    },
+    {
+     "@type": "HowToStep",
+     "name": "Step 2",
+     "text": "In a large bowl, beat softened butter, granulated sugar, and brown sugar with an electric mixer on medium speed until fluffy and thoroughly mixed, scraping down the side of the bowl occasionally. Or, mix with a spoon for about 1 minute.",
+     "image": "http://mojo.generalmills.com/api/public/content/IiSOnK-tRumMQhU70fV1uA_gmi_hi_res_jpeg.jpeg?v=329df2a2&t=22e69acac2fe412b8c0cbb786c67369c",
+     "url": "http://www.bettycrocker.com/recipes/homemade-chocolate-chip-cookies/77c14e03-d8b0-4844-846d-f19304f61c57#step2"
+    },
+    {
+     "@type": "HowToStep",
+     "name": "Step 3",
+     "text": "Add egg and vanilla. Beat until smooth and thoroughly blended. Stir in flour, baking soda, and salt just until blended (dough will be stiff).",
+     "image": "http://mojo.generalmills.com/api/public/content/EnkM1NxEQIKJiY05e91Uug_gmi_hi_res_jpeg.jpeg?v=8d9d92cb&t=22e69acac2fe412b8c0cbb786c67369c",
+     "url": "http://www.bettycrocker.com/recipes/homemade-chocolate-chip-cookies/77c14e03-d8b0-4844-846d-f19304f61c57#step3"
+    },
+    {
+     "@type": "HowToStep",
+     "name": "Step 4",
+     "text": "Stir in chocolate chips and nuts.",
+     "image": "http://mojo.generalmills.com/api/public/content/c4IvBSQLReGS-_1OcOTAnw_gmi_hi_res_jpeg.jpeg?v=f88f6cf4&t=22e69acac2fe412b8c0cbb786c67369c",
+     "url": "http://www.bettycrocker.com/recipes/homemade-chocolate-chip-cookies/77c14e03-d8b0-4844-846d-f19304f61c57#step4"
+    },
+    {
+     "@type": "HowToStep",
+     "name": "Step 5",
+     "text": "Scoop dough into rounded measuring tablespoonfuls (#40 cookie scoop) and drop at least 2 inches apart onto ungreased or parchment paper-lined cookie sheets.",
+     "image": "http://mojo.generalmills.com/api/public/content/pPDQOpijSY2bh5qbObrgKQ_gmi_hi_res_jpeg.jpeg?v=a1b26432&t=22e69acac2fe412b8c0cbb786c67369c",
+     "url": "http://www.bettycrocker.com/recipes/homemade-chocolate-chip-cookies/77c14e03-d8b0-4844-846d-f19304f61c57#step5"
+    },
+    {
+     "@type": "HowToStep",
+     "name": "Step 6",
+     "text": "Bake 11 to 13 minutes or until the edges are golden brown (centers will be soft). Cool 3 minutes on the cookie sheet; remove the cookies from the cookie sheet to a cooling rack.",
+     "image": "http://mojo.generalmills.com/api/public/content/u5L_prIWQk6QabEf-5l1jw_gmi_hi_res_jpeg.jpeg?v=dabb32af&t=22e69acac2fe412b8c0cbb786c67369c",
+     "url": "http://www.bettycrocker.com/recipes/homemade-chocolate-chip-cookies/77c14e03-d8b0-4844-846d-f19304f61c57#step6"
+    },
+    {
+     "@type": "HowToStep",
+     "name": "Step 7",
+     "text": "Cool completely, about 30 minutes. Store covered in an airtight container.",
+     "image": "http://mojo.generalmills.com/api/public/content/VR1F7R3kToOkWHJ-gEtqjw_gmi_hi_res_jpeg.jpeg?v=4c206744&t=22e69acac2fe412b8c0cbb786c67369c",
+     "url": "http://www.bettycrocker.com/recipes/homemade-chocolate-chip-cookies/77c14e03-d8b0-4844-846d-f19304f61c57#step7"
+    }
+   ],
+   "recipeCategory": "Dessert",
+   "keywords": "bake, dessert, cookie, sheet, drop, nuts, &, seeds, chocolate, chips, chunks"
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.bettycrocker.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Recipes",
+     "item": "https://www.bettycrocker.com/recipes"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Cookie Recipes",
+     "item": "https://www.bettycrocker.com/recipes/dishes/cookie-recipes"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Why are my chocolate chip cookies flat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "<p><strong>Too Little Flour: </strong>Measuring accurately is a key. Not using enough flour in your cookie dough can result in flat cookies. Stir up the flour and then spoon it into your measuring cup. Level it off the top using the flat-edge of a knife.</p><p><strong>Melted Butter: </strong>If the butter is melted, even a little, it can make your cookies flatter.<strong> </strong>Use only butter that’s been softened enough that it will leave an imprint when you press your finger tip lightly into it. Soften butter on the counter or unwrap it and place on a microwavable plate. Microwave uncovered on Very-Low (20%) for up to 1 minute. Check it every 5 seconds, turning the stick over if one side is softening faster than the others.</p><p><strong>Hot Cookie Sheet: </strong>Cool the cookie sheet completely before reusing it. A warm cookie sheet can cause the cookie dough to start spreading too quickly.</p><p><strong>&nbsp;</strong></p>"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why is my dough too stiff and won’t spread in the oven?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "<p><strong>Too Much Flour:</strong> We found that if you stir up the flour and spoon it into the measuring cup (verses dipping the measuring cup into the flour) and leveling it off with the straight edge of a knife, you’ll have successful results.</p><p><strong>Wrong Size Egg:</strong> We test with large eggs because that’s what most people buy. If you use a smaller egg, there won’t be enough liquid to properly hydrate the flour and other ingredients.</p><p>To fix stiff cookie dough, add a teaspoon of water or milk at a time, until the dough becomes pliable.</p>"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I keep chocolate chip cookies soft?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "<p>The best way to keep your cookies soft is to store them in an airtight food-storage bag at room temperature. Homemade chocolate chip cookies will last for a few days when stored properly on the counter.</p>"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I make chocolate chip cookies without brown sugar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "<p>Using just granulated sugar won’t produce the same results for texture or flavor. The cookies will be crisper and taste more like a sugar cookie with chocolate chips. You can use whatever type of brown sugar you have on hand—either light or dark brown sugar. You can make your own brown sugar by mixing 1 cup granulated sugar with 2 tablespoons molasses. This will yield 1 cup brown sugar.</p>"
+     }
+    }
+   ],
+   "name": "homemade-chocolate-chip-cookies"
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "url": "https://www.foodandwine.com/recipes/classic-southern-fried-chicken",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=arrayRoot",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=ImageObject",
+  "yield=str:\"4\"",
+  "author=list",
+  "prep=null cook=null total=\"PT45M\"",
+  "ing=list7",
+  "plugins="
+ ],
+ "jsonld": [
+  [
+   {
+    "@context": "http://schema.org",
+    "@type": [
+     "Recipe",
+     "NewsArticle"
+    ],
+    "headline": "Classic Southern Fried Chicken",
+    "datePublished": "2013-12-06T18:19:52-05:00",
+    "dateModified": "2021-11-01T18:01:41-04:00",
+    "author": [
+     {
+      "@type": "Person",
+      "name": "Chris Ubick",
+      "url": "https://www.foodandwine.com/author/chris-ubick"
+     }
+    ],
+    "description": "In The Help, the character Minny reveres Crisco, calling it &#34;the most important invention in the kitchen since jarred mayonnaise.&#34; She uses Crisco to ...",
+    "image": {
+     "@type": "ImageObject",
+     "url": "https://www.foodandwine.com/thmb/sWDLn92c5S0fYZ9jie2PpumhM1A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/201108fw-xl-classic-southern-fried-chicken-2000-3295f5289f494ba884b46dcce0aae3b0.jpg",
+     "height": 1500,
+     "width": 1500
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Food & Wine",
+     "url": "https://www.foodandwine.com",
+     "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.foodandwine.com/thmb/uV0O06O8WNrLepjgxkntdVuRpeE=/112x112/filters:no_upscale():max_bytes(150000):strip_icc()/brand_logo_schema-f3b2e548eb6f4243ad527798593483e0.png",
+      "width": 112,
+      "height": 112
+     },
+     "brand": "Food & Wine",
+     "publishingPrinciples": "https://www.foodandwine.com/about-us-6373913#toc-editorial-policies",
+     "sameAs": [
+      "https://www.facebook.com/foodandwine",
+      "https://www.instagram.com/foodandwine/?hl=en",
+      "https://www.pinterest.com/foodandwine/",
+      "https://flipboard.com/@foodandwine",
+      "https://www.youtube.com/channel/UCKH_4hkRSyUSHDIFMzlGCRA",
+      "https://en.wikipedia.org/wiki/Food_%26_Wine"
+     ]
+    },
+    "name": "Classic Southern Fried Chicken",
+    "recipeCuisine": [
+     "Southern"
+    ],
+    "recipeIngredient": [
+     "One 4-pound chicken, cut into 8 pieces",
+     "2 large eggs",
+     "1/2 cup whole milk",
+     "1 1/2 cups all-purpose flour",
+     "1 tablespoon seasoned salt, such as Lawry's",
+     "1 teaspoon seasoned pepper, such as Lawry's",
+     "24 ounces solid vegetable shortening, such as Crisco"
+    ],
+    "recipeInstructions": [
+     {
+      "@type": "HowToStep",
+      "text": "Pat the chicken pieces dry and line a baking sheet with wax paper. In a large bowl, whisk the eggs with the milk. Add the chicken. In another bowl, whisk the flour with the seasoned salt and seasoned pepper. Dredge the chicken in the seasoned flour and transfer to the baking sheet."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "In a 12-inch, cast-iron skillet, heat the vegetable shortening to 365°. Add all of the chicken and fry over moderate heat, turning occasionally, until deeply golden brown and an instant-read thermometer inserted nearest the bone registers 170°, 20 to 24 minutes. Drain the chicken on paper towels and serve right away."
+     }
+    ],
+    "recipeYield": "4",
+    "totalTime": "PT45M",
+    "review": [
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "SharonC"
+      },
+      "reviewBody": "I let my chicken sit in kosher salt in water for at least an hour. I also add butter to the Crisco oil. I have never done the egg and milk, but it's on my mind. I am from Texas, while my Mother was from Kentucky, so the south was always in our kitchen.",
+      "datePublished": "2019-06-21T01:11:30.000Z"
+     }
+    ],
+    "mainEntityOfPage": {
+     "@type": [
+      "WebPage"
+     ],
+     "@id": "https://www.foodandwine.com/recipes/classic-southern-fried-chicken",
+     "name": "Classic Southern Fried Chicken",
+     "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+         "@id": "https://www.foodandwine.com/recipes",
+         "name": "Recipes"
+        }
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+         "@id": "https://www.foodandwine.com/recipes/dinner",
+         "name": "Dinner"
+        }
+       },
+       {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+         "@id": "https://www.foodandwine.com/poultry-dishes-7497047",
+         "name": "Poultry Dishes"
+        }
+       },
+       {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+         "@id": "https://www.foodandwine.com/chicken-main-course-7497051",
+         "name": "Chicken Main Course"
+        }
+       }
+      ]
+     }
+    }
+   }
+  ]
+ ]
+}

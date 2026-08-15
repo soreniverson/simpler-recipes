@@ -261,3 +261,14 @@ describe('@id reference resolution (Yoast/RankMath graphs)', () => {
     expect(out.recipe!.image).toBe('https://x.com/img/primary.jpg');
   });
 });
+
+describe('half-empty structured data borrows from the page', () => {
+  it('fills empty recipeInstructions from an Instructions heading + list', () => {
+    const html = `<html><head><title>T</title><script type="application/ld+json">${JSON.stringify({ '@type': 'Recipe', name: 'Pioneer Roast', recipeIngredient: ['1 roast', '2 onions'], recipeInstructions: [] })}</script></head>
+      <body><h1>Pioneer Roast</h1><h2>Ingredients</h2><ul><li>1 roast</li><li>2 onions</li></ul><h2>Directions</h2><ol><li>Sear the roast.</li><li>Braise 3 hours.</li></ol></body></html>`;
+    const out = extractRecipeFromHtml(html, 'https://tpw.example.com/roast');
+    expect(out.method).toBe('jsonld');
+    expect(out.recipe!.ingredients).toEqual(['1 roast', '2 onions']);
+    expect(out.recipe!.instructions).toEqual(['Sear the roast.', 'Braise 3 hours.']);
+  });
+});

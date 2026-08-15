@@ -1,0 +1,459 @@
+{
+ "url": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list1:[\"8\"]",
+  "author=dict",
+  "prep=\"PT15M\" cook=\"PT420M\" total=\"PT435M\"",
+  "ing=list16",
+  "plugins=WPRM,MediavineCreate,AMP"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#article",
+     "isPartOf": {
+      "@id": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/"
+     },
+     "author": {
+      "name": "Sara Welch",
+      "@id": "https://www.dinneratthezoo.com/#/schema/person/3874ff1c9d558166e703ec4f11f11190"
+     },
+     "headline": "Slow Cooker Pot Roast",
+     "datePublished": "2020-06-03T21:32:33+00:00",
+     "dateModified": "2023-03-06T18:05:18+00:00",
+     "wordCount": 995,
+     "commentCount": 25,
+     "publisher": {
+      "@id": "https://www.dinneratthezoo.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.dinneratthezoo.com/wp-content/uploads/2019/12/slow-cooker-pot-roast-5.jpg",
+     "articleSection": [
+      "Beef",
+      "Comfort Food",
+      "Dinner",
+      "Featured Recipes",
+      "Slow Cooker"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/",
+     "url": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/",
+     "name": "Slow Cooker Pot Roast - Dinner at the Zoo",
+     "isPartOf": {
+      "@id": "https://www.dinneratthezoo.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.dinneratthezoo.com/wp-content/uploads/2019/12/slow-cooker-pot-roast-5.jpg",
+     "datePublished": "2020-06-03T21:32:33+00:00",
+     "dateModified": "2023-03-06T18:05:18+00:00",
+     "description": "This slow cooker pot roast is a chuck roast simmered to tender perfection in a crock pot with carrots and potatoes. A comfort food classic.",
+     "breadcrumb": {
+      "@id": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.dinneratthezoo.com/slow-cooker-pot-roast/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#primaryimage",
+     "url": "https://www.dinneratthezoo.com/wp-content/uploads/2019/12/slow-cooker-pot-roast-5.jpg",
+     "contentUrl": "https://www.dinneratthezoo.com/wp-content/uploads/2019/12/slow-cooker-pot-roast-5.jpg",
+     "width": 680,
+     "height": 1020,
+     "caption": "Slow cooker pot roast served with carrots, potatoes and green beans."
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.dinneratthezoo.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Slow Cooker",
+       "item": "https://www.dinneratthezoo.com/category/slow-cooker/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Slow Cooker Pot Roast"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.dinneratthezoo.com/#website",
+     "url": "https://www.dinneratthezoo.com/",
+     "name": "Dinner at the Zoo",
+     "description": "Feed Your Family Well",
+     "publisher": {
+      "@id": "https://www.dinneratthezoo.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.dinneratthezoo.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.dinneratthezoo.com/#organization",
+     "name": "Dinner at the Zoo",
+     "url": "https://www.dinneratthezoo.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.dinneratthezoo.com/#/schema/logo/image/",
+      "url": "https://www.dinneratthezoo.com/wp-content/uploads/2026/04/DatZ-logo-stacked-color-RGB-SQUARE-YOAST_696.jpg",
+      "contentUrl": "https://www.dinneratthezoo.com/wp-content/uploads/2026/04/DatZ-logo-stacked-color-RGB-SQUARE-YOAST_696.jpg",
+      "width": 696,
+      "height": 696,
+      "caption": "Dinner at the Zoo"
+     },
+     "image": {
+      "@id": "https://www.dinneratthezoo.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "http://www.facebook.com/dinneratthezoo",
+      "https://x.com/dinneratthezoo",
+      "http://www.instagram.com/dinneratthezoo",
+      "http://www.pinterest.com/dinneratthezoo"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.dinneratthezoo.com/#/schema/person/3874ff1c9d558166e703ec4f11f11190",
+     "name": "Sara Welch",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://secure.gravatar.com/avatar/008b9a079f72a6cc33350130cf7f24feb9662a4ff3c0b86432495a1547c4addf?s=96&d=mm&r=g",
+      "url": "https://secure.gravatar.com/avatar/008b9a079f72a6cc33350130cf7f24feb9662a4ff3c0b86432495a1547c4addf?s=96&d=mm&r=g",
+      "contentUrl": "https://secure.gravatar.com/avatar/008b9a079f72a6cc33350130cf7f24feb9662a4ff3c0b86432495a1547c4addf?s=96&d=mm&r=g",
+      "caption": "Sara Welch"
+     },
+     "sameAs": [
+      "https://www.dinneratthezoo.com/about-me-contact-info/"
+     ]
+    },
+    {
+     "@type": "Recipe",
+     "name": "Slow Cooker Pot Roast",
+     "author": {
+      "@id": "https://www.dinneratthezoo.com/#/schema/person/3874ff1c9d558166e703ec4f11f11190"
+     },
+     "description": "This slow cooker pot roast is a chuck roast simmered to tender perfection in a crock pot with carrots and potatoes. A comfort food classic that&#x27;s simple to make, and is great for feeding a crowd.",
+     "datePublished": "2020-06-03T14:32:33+00:00",
+     "image": [
+      "https://www.dinneratthezoo.com/wp-content/uploads/2019/12/slow-cooker-pot-roast-5.jpg",
+      "https://www.dinneratthezoo.com/wp-content/uploads/2019/12/slow-cooker-pot-roast-5-500x500.jpg",
+      "https://www.dinneratthezoo.com/wp-content/uploads/2019/12/slow-cooker-pot-roast-5-500x375.jpg",
+      "https://www.dinneratthezoo.com/wp-content/uploads/2019/12/slow-cooker-pot-roast-5-480x270.jpg"
+     ],
+     "video": {
+      "name": "Slow Cooker Pot Roast",
+      "description": "This slow cooker pot roast is a chuck roast simmered to tender perfection in a crock pot with carrots and potatoes. A comfort food classic that's simple to make, and is great for feeding a crowd.",
+      "thumbnailUrl": "https://content.jwplatform.com/thumbs/KUd5BSNM-720.jpg",
+      "contentUrl": "https://content.jwplatform.com/videos/KUd5BSNM.mp4",
+      "uploadDate": "2020-06-03T21:25:04.000Z",
+      "@type": "VideoObject"
+     },
+     "recipeYield": [
+      "8"
+     ],
+     "prepTime": "PT15M",
+     "cookTime": "PT420M",
+     "totalTime": "PT435M",
+     "recipeIngredient": [
+      "1 tablespoon olive oil",
+      "4 pound chuck roast",
+      "salt and pepper to taste",
+      "2 1/2 cups beef broth",
+      "1 tablespoon tomato paste",
+      "1 tablespoon Worcestershire sauce",
+      "1 tablespoon minced garlic",
+      "1  teaspoon dried Italian seasoning",
+      "1  bay leaf",
+      "1 teaspoon smoked paprika",
+      "1  onion (peeled and cut into wedges)",
+      "2 pounds small Yukon gold potatoes (whole or halved)",
+      "1 pound carrots (peeled, halved and cut into 2 inch pieces)",
+      "3 slices bacon",
+      "2 tablespoons corn starch",
+      "2 tablespoons chopped parsley"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Heat the oil in a large pot over medium high heat. Season the roast generously all over with salt and pepper.",
+       "name": "Heat the oil in a large pot over medium high heat. Season the roast generously all over with salt and pepper.",
+       "url": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#wprm-recipe-26984-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Place the meat in the pan. Cook for 4-5 minutes per side or until browned.",
+       "name": "Place the meat in the pan. Cook for 4-5 minutes per side or until browned.",
+       "url": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#wprm-recipe-26984-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Place the beef broth, tomato paste, Worcestershire sauce, garlic, Italian seasoning, bay leaf, smoked paprika and salt and pepper in the bottom of a large slow cooker. Whisk to combine.",
+       "name": "Place the beef broth, tomato paste, Worcestershire sauce, garlic, Italian seasoning, bay leaf, smoked paprika and salt and pepper in the bottom of a large slow cooker. Whisk to combine.",
+       "url": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#wprm-recipe-26984-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Arrange the onions, carrots and potatoes in the bottom of the slow cooker. Place the roast on top.",
+       "name": "Arrange the onions, carrots and potatoes in the bottom of the slow cooker. Place the roast on top.",
+       "url": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#wprm-recipe-26984-step-0-3"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Lay the slices of bacon on top of the roast. Cover and cook for 6-8 hours on low heat.",
+       "name": "Lay the slices of bacon on top of the roast. Cover and cook for 6-8 hours on low heat.",
+       "url": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#wprm-recipe-26984-step-0-4"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Remove the meat and vegetables from the pot and arrange on a serving platter. Discard the bay leaf and bacon.",
+       "name": "Remove the meat and vegetables from the pot and arrange on a serving platter. Discard the bay leaf and bacon.",
+       "url": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#wprm-recipe-26984-step-0-5"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Pour the liquid from the slow cooker through a strainer into a medium sized saucepan. Skim any fat from the liquid. Bring the liquid to a simmer over medium heat.",
+       "name": "Pour the liquid from the slow cooker through a strainer into a medium sized saucepan. Skim any fat from the liquid. Bring the liquid to a simmer over medium heat.",
+       "url": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#wprm-recipe-26984-step-0-6"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Whisk together the corn starch with 3 tablespoons of cold water. Add the corn starch mixture to the pan of liquid. Bring to a boil and cook for 1 minute or until gravy has just thickened.",
+       "name": "Whisk together the corn starch with 3 tablespoons of cold water. Add the corn starch mixture to the pan of liquid. Bring to a boil and cook for 1 minute or until gravy has just thickened.",
+       "url": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#wprm-recipe-26984-step-0-7"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Pour the sauce over the meat and vegetables. Sprinkle with parsley, then serve.",
+       "name": "Pour the sauce over the meat and vegetables. Sprinkle with parsley, then serve.",
+       "url": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#wprm-recipe-26984-step-0-8"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "18",
+      "reviewCount": "10"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I love your  recipes as they always come out perfect!  Meat was so tender and everything tasted great!",
+       "author": {
+        "@type": "Person",
+        "name": "Jane"
+       },
+       "datePublished": "2021-02-01"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I made this for family tonight and it disappeared!  Thank you for s great recipe and for providing creative alternative suggestions.  I added soy sauce and a little raw sugar - it was perfect!",
+       "author": {
+        "@type": "Person",
+        "name": "Julia Acheson"
+       },
+       "datePublished": "2021-01-08"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I love all your recipes! This one is another keeper",
+       "author": {
+        "@type": "Person",
+        "name": "Taylor"
+       },
+       "datePublished": "2020-10-13"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This recipe for pot roast has become my favorite one to use. I decided to make this at the last minute for a family dinner party, so I tried it in the oven instead and it came out superb. I don't generally like cooked carrots, but with the seasonings in the gravy, even picky old me found them delicious. Thanks again for the wonderful recipe!",
+       "author": {
+        "@type": "Person",
+        "name": "Beth Harrington"
+       },
+       "datePublished": "2020-10-11"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Really awesome. I will try these at my home.",
+       "author": {
+        "@type": "Person",
+        "name": "Eileen Derosa"
+       },
+       "datePublished": "2020-07-16"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I love  slow cooker recipes. They are so easy to make and always so tasty!",
+       "author": {
+        "@type": "Person",
+        "name": "Catalina"
+       },
+       "datePublished": "2020-06-12"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This is SO amazing!! Everyone at my house really love it!",
+       "author": {
+        "@type": "Person",
+        "name": "Toni"
+       },
+       "datePublished": "2020-06-12"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Love this recipe! Beautiful roast, came out just right",
+       "author": {
+        "@type": "Person",
+        "name": "Vikki"
+       },
+       "datePublished": "2020-06-11"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This slow cooker pot roast looks absolutely delicious! Yummy!",
+       "author": {
+        "@type": "Person",
+        "name": "Erin"
+       },
+       "datePublished": "2020-06-11"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This pot roast is super tender and tasty! I love the combination of flavors, my mouth is watering right now!",
+       "author": {
+        "@type": "Person",
+        "name": "Tara"
+       },
+       "datePublished": "2020-06-11"
+      }
+     ],
+     "recipeCategory": [
+      "Main",
+      "Main Course"
+     ],
+     "recipeCuisine": [
+      "American"
+     ],
+     "keywords": "crock pot roast, slow cooker pot roast",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "502 kcal",
+      "carbohydrateContent": "24 g",
+      "proteinContent": "49 g",
+      "fatContent": "27 g",
+      "saturatedFatContent": "13 g",
+      "cholesterolContent": "162 mg",
+      "sodiumContent": "606 mg",
+      "fiberContent": "5 g",
+      "sugarContent": "4 g",
+      "servingSize": "1 serving"
+     },
+     "@id": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#recipe",
+     "isPartOf": {
+      "@id": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/#article"
+     },
+     "mainEntityOfPage": "https://www.dinneratthezoo.com/slow-cooker-pot-roast/"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,389 @@
+{
+ "url": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list2:[\"2\", \"2 cups\"]",
+  "author=dict",
+  "prep=null cook=\"PT5M\" total=\"PT5M\"",
+  "ing=list4",
+  "plugins=WPRM,MediavineCreate"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#article",
+     "isPartOf": {
+      "@id": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/"
+     },
+     "author": {
+      "name": "Dorothy Kern",
+      "@id": "https://www.crazyforcrust.com/#/schema/person/ef87234b40b0d0f495a4fea2bf64d34b"
+     },
+     "headline": "5-minute Hot Fudge Sauce",
+     "datePublished": "2019-07-30T10:00:20+00:00",
+     "dateModified": "2023-04-29T14:32:41+00:00",
+     "wordCount": 720,
+     "commentCount": 365,
+     "publisher": {
+      "@id": "https://www.crazyforcrust.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.crazyforcrust.com/wp-content/uploads/2019/07/5-minute-hot-fudge-recipe.jpg",
+     "keywords": [
+      "chocolate",
+      "fudge",
+      "ice cream",
+      "O Organics",
+      "Safeway",
+      "sauce"
+     ],
+     "articleSection": [
+      "Ice Cream",
+      "Recipes"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/",
+     "url": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/",
+     "name": "5-minute Hot Fudge Sauce - Crazy for Crust",
+     "isPartOf": {
+      "@id": "https://www.crazyforcrust.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.crazyforcrust.com/wp-content/uploads/2019/07/5-minute-hot-fudge-recipe.jpg",
+     "datePublished": "2019-07-30T10:00:20+00:00",
+     "dateModified": "2023-04-29T14:32:41+00:00",
+     "description": "5-minute Hot Fudge Sauce has just three ingredients and is perfect to use all summer long! This simple recipe tastes like melted fudge.",
+     "breadcrumb": {
+      "@id": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#primaryimage",
+     "url": "https://www.crazyforcrust.com/wp-content/uploads/2019/07/5-minute-hot-fudge-recipe.jpg",
+     "contentUrl": "https://www.crazyforcrust.com/wp-content/uploads/2019/07/5-minute-hot-fudge-recipe.jpg",
+     "width": 640,
+     "height": 1308,
+     "caption": "hot fudge sauce with spoon dripping"
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.crazyforcrust.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Recipe Index",
+       "item": "https://www.crazyforcrust.com/recipe-index/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "5-minute Hot Fudge Sauce"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.crazyforcrust.com/#website",
+     "url": "https://www.crazyforcrust.com/",
+     "name": "Crazy for Crust",
+     "description": "Easy Dessert Recipes that Work (and taste delicious)",
+     "publisher": {
+      "@id": "https://www.crazyforcrust.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.crazyforcrust.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.crazyforcrust.com/#organization",
+     "name": "Crazy For Crust",
+     "url": "https://www.crazyforcrust.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.crazyforcrust.com/#/schema/logo/image/",
+      "url": "https://www.crazyforcrust.com/wp-content/uploads/2026/08/logo-crazyforcrust-696.jpg",
+      "contentUrl": "https://www.crazyforcrust.com/wp-content/uploads/2026/08/logo-crazyforcrust-696.jpg",
+      "width": 696,
+      "height": 696,
+      "caption": "Crazy For Crust"
+     },
+     "image": {
+      "@id": "https://www.crazyforcrust.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/CrazyforCrust/",
+      "https://x.com/crazyforcrust",
+      "https://www.instagram.com/crazyforcrust/",
+      "https://www.pinterest.com/crazyforcrust/",
+      "https://www.youtube.com/channel/UCOwqCgdas2ZzZTDWT1z98Lg"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.crazyforcrust.com/#/schema/person/ef87234b40b0d0f495a4fea2bf64d34b",
+     "name": "Dorothy Kern",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://secure.gravatar.com/avatar/ec6be0a1ca505a1c7a7db2820126bf9b99cd4016c58a0a97f87bf841d7c4ae2c?s=96&r=g",
+      "url": "https://secure.gravatar.com/avatar/ec6be0a1ca505a1c7a7db2820126bf9b99cd4016c58a0a97f87bf841d7c4ae2c?s=96&r=g",
+      "contentUrl": "https://secure.gravatar.com/avatar/ec6be0a1ca505a1c7a7db2820126bf9b99cd4016c58a0a97f87bf841d7c4ae2c?s=96&r=g",
+      "caption": "Dorothy Kern"
+     },
+     "description": "Welcome to Crazy for Crust, where I share recipes that are sometimes crazy, often with a crust, and always served with a slice of life.",
+     "sameAs": [
+      "https://www.crazyforcrust.com/about/"
+     ]
+    },
+    {
+     "@type": "Recipe",
+     "name": "5-minute Hot Fudge Recipe",
+     "author": {
+      "@id": "https://www.crazyforcrust.com/#/schema/person/ef87234b40b0d0f495a4fea2bf64d34b"
+     },
+     "description": "Easy 5-minute Hot Fudge sauce is the perfect ice cream sundae topping. Just 3 ingredients and you have an easy chocolate sauce recipe!",
+     "datePublished": "2019-07-30T03:00:20+00:00",
+     "image": [
+      "https://www.crazyforcrust.com/wp-content/uploads/2019/07/5-minute-hot-fudge-6.jpg",
+      "https://www.crazyforcrust.com/wp-content/uploads/2019/07/5-minute-hot-fudge-6-500x500.jpg",
+      "https://www.crazyforcrust.com/wp-content/uploads/2019/07/5-minute-hot-fudge-6-500x375.jpg",
+      "https://www.crazyforcrust.com/wp-content/uploads/2019/07/5-minute-hot-fudge-6-480x270.jpg"
+     ],
+     "recipeYield": [
+      "2",
+      "2 cups"
+     ],
+     "cookTime": "PT5M",
+     "totalTime": "PT5M",
+     "recipeIngredient": [
+      "1 (14 ounce) can (396g) sweetened condensed milk",
+      "1 cup (170g) semi-sweet chocolate chips",
+      "2 tablespoons (28g) unsalted butter",
+      "1 teaspoon vanilla extract"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Add sweetened condensed milk and chocolate chips to a saucepan. Heat over medium heat, stirring constantly, until chocolate chips are melted.",
+       "name": "Add sweetened condensed milk and chocolate chips to a saucepan. Heat over medium heat, stirring constantly, until chocolate chips are melted.",
+       "url": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#wprm-recipe-47007-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Remove from heat and stir in butter and vanilla. Stir until butter is melted.",
+       "name": "Remove from heat and stir in butter and vanilla. Stir until butter is melted.",
+       "url": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#wprm-recipe-47007-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Place hot fudge in a jar. Use while hot.",
+       "name": "Place hot fudge in a jar. Use while hot.",
+       "url": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#wprm-recipe-47007-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Store leftovers covered in the refrigerator for up to 2 weeks. To reheat: place jar in microwave and heat in 30 second increments, stirring between each, until melted and smooth.",
+       "name": "Store leftovers covered in the refrigerator for up to 2 weeks. To reheat: place jar in microwave and heat in 30 second increments, stirring between each, until melted and smooth.",
+       "url": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#wprm-recipe-47007-step-0-3"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.86",
+      "ratingCount": "502",
+      "reviewCount": "8"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I've made this recipe twice. The first time I used reliable Nestle's semi-sweet chocolate chips, and it was delicious. The second time I made it with espresso chocolate chips, and it was over the top astounding! (I am a coffee lover, so take that into consideration.)\r\n\r\nBy the way, I think your note about it keeping in the refrigerator for two weeks is complete nonsense. It disappears WAY faster than that! :-)",
+       "author": {
+        "@type": "Person",
+        "name": "Jim"
+       },
+       "datePublished": "2026-08-06"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This is perfect! Very rich and so simple  and quick to prepare. Won't be able to keep enough ice cream in the freezer. Wish there was as simple a recipe for caramel sauce",
+       "author": {
+        "@type": "Person",
+        "name": "Sherrie Curtis"
+       },
+       "datePublished": "2026-06-16"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Salt of course, thats brilliant- I think that will be amazing! Can't wait to try!!\r\nThank you so much!!!",
+       "author": {
+        "@type": "Person",
+        "name": "Louise"
+       },
+       "datePublished": "2026-06-14"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Wow!! I didn’t have high expectations with this recipe…. It def shocked me!! Taste just like hot fudge!! Thank you for sharing!",
+       "author": {
+        "@type": "Person",
+        "name": "Krystal"
+       },
+       "datePublished": "2026-06-09"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+       },
+       "reviewBody": "This was a good chocolatey sauce.  I wanted it a bit fudgier.  I added 4 T hershey baking cocoa and fine sea salt.  Yes it gets firmer as it sets perfect for ice cream.  It was so good.  I'll keep making this forever.",
+       "author": {
+        "@type": "Person",
+        "name": "Wendy"
+       },
+       "datePublished": "2026-05-24"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "We unfortunately are lactose intolerant as a family. Genetics, thanks.\r\n\r\nWe made this with coconut milk sweetened condensed milk and lactose free margarine, added a splash of vanilla, and otherwise followed it exactly.\r\n\r\nIt was so good. Thank you.",
+       "author": {
+        "@type": "Person",
+        "name": "Kelli"
+       },
+       "datePublished": "2026-05-24"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I loved this..... it fast perfect thickness, and fast.What's not to like.  Thank you for sharing this.",
+       "author": {
+        "@type": "Person",
+        "name": "LeighAnn Mejia"
+       },
+       "datePublished": "2026-05-22"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "2"
+       },
+       "reviewBody": "Not a great flavor.  Consistency is too thick.  It's missing something.  I will eat what I made, but will not make this recipe again.",
+       "author": {
+        "@type": "Person",
+        "name": "V Naylor"
+       },
+       "datePublished": "2026-05-18"
+      }
+     ],
+     "recipeCategory": [
+      "Dessert"
+     ],
+     "recipeCuisine": [
+      "American"
+     ],
+     "keywords": "chocolate, ice cream, sauce",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "1258 kcal",
+      "carbohydrateContent": "155 g",
+      "proteinContent": "21 g",
+      "fatContent": "63 g",
+      "saturatedFatContent": "38 g",
+      "cholesterolContent": "103 mg",
+      "sodiumContent": "263 mg",
+      "fiberContent": "7 g",
+      "sugarContent": "141 g",
+      "servingSize": "1 jar"
+     },
+     "@id": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#recipe",
+     "isPartOf": {
+      "@id": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/#article"
+     },
+     "mainEntityOfPage": "https://www.crazyforcrust.com/5-minute-hot-fudge-sauce/"
+    }
+   ]
+  }
+ ]
+}

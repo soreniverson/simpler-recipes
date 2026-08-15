@@ -1,0 +1,419 @@
+{
+ "url": "https://thewoksoflife.com/kung-pao-chicken/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list1:[\"4\"]",
+  "author=dict",
+  "prep=\"PT30M\" cook=\"PT10M\" total=\"PT40M\"",
+  "ing=list20",
+  "plugins=WPRM"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://thewoksoflife.com/kung-pao-chicken/#article",
+     "isPartOf": {
+      "@id": "https://thewoksoflife.com/kung-pao-chicken/"
+     },
+     "author": {
+      "name": "Judy",
+      "@id": "https://thewoksoflife.com/#/schema/person/fe1d38b7a3d76f6320f93bc97392a55d"
+     },
+     "headline": "Kung Pao Chicken",
+     "datePublished": "2019-05-13T16:18:59+00:00",
+     "dateModified": "2023-10-03T18:02:00+00:00",
+     "wordCount": 1087,
+     "commentCount": 354,
+     "publisher": {
+      "@id": "https://thewoksoflife.com/#organization"
+     },
+     "image": {
+      "@id": "https://thewoksoflife.com/kung-pao-chicken/#primaryimage"
+     },
+     "thumbnailUrl": "https://thewoksoflife.com/wp-content/uploads/2019/05/kung-pao-chicken-14.jpg",
+     "articleSection": [
+      "Chicken &amp; Poultry",
+      "Chinese Takeout",
+      "Main Dishes",
+      "Most Popular",
+      "Recipes"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://thewoksoflife.com/kung-pao-chicken/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://thewoksoflife.com/kung-pao-chicken/",
+     "url": "https://thewoksoflife.com/kung-pao-chicken/",
+     "name": "Kung Pao Chicken: An Authentic Chinese Recipe - The Woks of Life",
+     "isPartOf": {
+      "@id": "https://thewoksoflife.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://thewoksoflife.com/kung-pao-chicken/#primaryimage"
+     },
+     "image": {
+      "@id": "https://thewoksoflife.com/kung-pao-chicken/#primaryimage"
+     },
+     "thumbnailUrl": "https://thewoksoflife.com/wp-content/uploads/2019/05/kung-pao-chicken-14.jpg",
+     "datePublished": "2019-05-13T16:18:59+00:00",
+     "dateModified": "2023-10-03T18:02:00+00:00",
+     "description": "Kung Pao Chicken exists in traditional Chinese cuisine AND on takeout menus. This easy Sichuan kung pao chicken recipe is the real thing!",
+     "breadcrumb": {
+      "@id": "https://thewoksoflife.com/kung-pao-chicken/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://thewoksoflife.com/kung-pao-chicken/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://thewoksoflife.com/kung-pao-chicken/#primaryimage",
+     "url": "https://thewoksoflife.com/wp-content/uploads/2019/05/kung-pao-chicken-14.jpg",
+     "contentUrl": "https://thewoksoflife.com/wp-content/uploads/2019/05/kung-pao-chicken-14.jpg",
+     "width": 1300,
+     "height": 1837,
+     "caption": "Scoop of kung pao chicken in spoon"
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://thewoksoflife.com/kung-pao-chicken/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://thewoksoflife.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Recipes",
+       "item": "https://thewoksoflife.com/category/recipes/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Chicken & Poultry",
+       "item": "https://thewoksoflife.com/category/recipes/chicken/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Kung Pao Chicken"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://thewoksoflife.com/#website",
+     "url": "https://thewoksoflife.com/",
+     "name": "The Woks of Life",
+     "description": "a culinary genealogy",
+     "publisher": {
+      "@id": "https://thewoksoflife.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://thewoksoflife.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://thewoksoflife.com/#organization",
+     "name": "The Woks of Life",
+     "url": "https://thewoksoflife.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://thewoksoflife.com/#/schema/logo/image/",
+      "url": "https://thewoksoflife.com/wp-content/uploads/2019/05/Temporary-Logo-e1556728319201.png",
+      "contentUrl": "https://thewoksoflife.com/wp-content/uploads/2019/05/Temporary-Logo-e1556728319201.png",
+      "width": 365,
+      "height": 364,
+      "caption": "The Woks of Life"
+     },
+     "image": {
+      "@id": "https://thewoksoflife.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/thewoksoflife",
+      "https://x.com/thewoksoflife"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://thewoksoflife.com/#/schema/person/fe1d38b7a3d76f6320f93bc97392a55d",
+     "name": "Judy",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://thewoksoflife.com/wp-content/uploads/2020/10/judy-110x110.jpg",
+      "url": "https://thewoksoflife.com/wp-content/uploads/2020/10/judy-110x110.jpg",
+      "contentUrl": "https://thewoksoflife.com/wp-content/uploads/2020/10/judy-110x110.jpg",
+      "caption": "Judy"
+     },
+     "description": "Judy Leung is the matriarch of The Woks of Life family, working on the blog alongside husband Bill and daughters Sarah and Kaitlin. Born in Shanghai, China, she immigrated to the United States at sixteen. Fluent in both English and three Chinese dialects, she also plays the important role of researcher and menu translator! Drawing from over four decades of cooking experience and travel, Judy aims to bring Chinese culinary traditions to readers and preserve recipes that might otherwise be lost to time. Her expertise spans from Shanghainese cooking and everyday homestyle dishes to a variety of regional foodways, showcasing the depth and breadth of Chinese cuisine for a global audience. Over the last decade, she's helped transform The Woks of Life into what Saveur Magazine has deemed \"the internet's most popular Chinese cooking blog,\" co-written a New York Times bestselling cookbook, and become convinced that we will never run out of recipes to share!",
+     "sameAs": [
+      "https://thewoksoflife.com",
+      "facebook.com/thewoksoflife",
+      "https://x.com/thewoksoflife"
+     ],
+     "url": "https://thewoksoflife.com/author/jleung/"
+    },
+    {
+     "@type": "Recipe",
+     "name": "Kung Pao Chicken Recipe - Chinese Restaurant Quality",
+     "author": {
+      "@id": "https://thewoksoflife.com/#/schema/person/fe1d38b7a3d76f6320f93bc97392a55d"
+     },
+     "description": "Kung Pao Chicken exists both in traditional Chinese cuisine and on takeout menus. This easy, authentic Sichuan kung pao chicken recipe is the real thing.",
+     "datePublished": "2019-05-13T12:18:59+00:00",
+     "image": [
+      "https://thewoksoflife.com/wp-content/uploads/2019/04/kung-pao-chicken-11.jpg",
+      "https://thewoksoflife.com/wp-content/uploads/2019/04/kung-pao-chicken-11-500x500.jpg",
+      "https://thewoksoflife.com/wp-content/uploads/2019/04/kung-pao-chicken-11-500x375.jpg",
+      "https://thewoksoflife.com/wp-content/uploads/2019/04/kung-pao-chicken-11-480x270.jpg"
+     ],
+     "video": {
+      "name": "Kung Pao Chicken",
+      "description": "See how easily authentic Kung Pao chicken comes together in a wok! Our kung pao chicken recipe is more authentic to the actual Chinese version than what you get at takeout restaurants.",
+      "thumbnailUrl": "https://content.jwplatform.com/thumbs/cqzpKldV-720.jpg",
+      "contentUrl": "https://content.jwplatform.com/videos/cqzpKldV.mp4",
+      "uploadDate": "2019-05-13T17:50:27.000Z",
+      "@type": "VideoObject"
+     },
+     "recipeYield": [
+      "4"
+     ],
+     "prepTime": "PT30M",
+     "cookTime": "PT10M",
+     "totalTime": "PT40M",
+     "recipeIngredient": [
+      "1 teaspoon vegetable oil",
+      "1 cup raw peanuts ((shelled, with or without the skin))",
+      "12 oz. chicken breast ((cut into 3/4-inch/2cm cubes))",
+      "1 teaspoon vegetable oil",
+      "1 teaspoon cornstarch",
+      "1 teaspoon shaoxing wine",
+      "1/8 teaspoon salt",
+      "1 pinch white pepper",
+      "1 tablespoon light soy sauce",
+      "1/2 teaspoon dark soy sauce",
+      "1 tablespoon rice wine vinegar",
+      "1 teaspoon sugar",
+      "3 tablespoons water",
+      "1 teaspoon cornstarch",
+      "3 tablespoons oil",
+      "3 cloves garlic ((smashed and sliced))",
+      "2  thin slices ginger ((minced))",
+      "2  dried red chilies",
+      "1/2 teaspoon Sichuan peppercorn powder",
+      "6  scallions ((white portions only, cut into 3/4-inch/2cm pieces)"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Heat a teaspoon of oil in a wok over medium heat and add a cup of raw shelled peanuts. Stir constantly (or they’ll burn) for 3 minutes. Turn off the heat and stir for another minute using the residual heat in the wok. Set aside to cool. They will turn crunchy once they’re cooled completely. You can also skip this step and use already roasted shelled peanuts.",
+       "name": "Heat a teaspoon of oil in a wok over medium heat and add a cup of raw shelled peanuts. Stir constantly (or they’ll burn) for 3 minutes. Turn off the heat and stir for another minute using the residual heat in the wok. Set aside to cool. They will turn crunchy once they’re cooled completely. You can also skip this step and use already roasted shelled peanuts.",
+       "url": "https://thewoksoflife.com/kung-pao-chicken/#wprm-recipe-25892-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Marinate the chicken. Mix together the chicken with all the marinade ingredients in a bowl and set aside for 20 minutes.",
+       "name": "Marinate the chicken. Mix together the chicken with all the marinade ingredients in a bowl and set aside for 20 minutes.",
+       "url": "https://thewoksoflife.com/kung-pao-chicken/#wprm-recipe-25892-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Prepare the sauce. Mix together all the sauce ingredients in a medium bowl and set aside.",
+       "name": "Prepare the sauce. Mix together all the sauce ingredients in a medium bowl and set aside.",
+       "url": "https://thewoksoflife.com/kung-pao-chicken/#wprm-recipe-25892-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Heat 2 tablespoons oil in a wok over high heat. Sear the chicken, remove from the wok to a bowl, and set aside.",
+       "name": "Heat 2 tablespoons oil in a wok over high heat. Sear the chicken, remove from the wok to a bowl, and set aside.",
+       "url": "https://thewoksoflife.com/kung-pao-chicken/#wprm-recipe-25892-step-0-3"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Turn the heat to low and add another tablespoon oil. Add the garlic, ginger, chilies, Sichuan peppercorn powder, and scallions. Cook for a minute or two until fragrant.",
+       "name": "Turn the heat to low and add another tablespoon oil. Add the garlic, ginger, chilies, Sichuan peppercorn powder, and scallions. Cook for a minute or two until fragrant.",
+       "url": "https://thewoksoflife.com/kung-pao-chicken/#wprm-recipe-25892-step-0-4"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add the chicken back to the pan and turn up the heat to high. Stir-fry for a minute and then use your finger to stir up your prepared sauce (the cornstarch will have settled to the bottom, so make sure it’s well incorporated). Add the sauce to the wok and stir-fry for another minute. The sauce should thicken very quickly.",
+       "name": "Add the chicken back to the pan and turn up the heat to high. Stir-fry for a minute and then use your finger to stir up your prepared sauce (the cornstarch will have settled to the bottom, so make sure it’s well incorporated). Add the sauce to the wok and stir-fry for another minute. The sauce should thicken very quickly.",
+       "url": "https://thewoksoflife.com/kung-pao-chicken/#wprm-recipe-25892-step-0-5"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Finally, add the peanuts. Give everything a final stir and serve.",
+       "name": "Finally, add the peanuts. Give everything a final stir and serve.",
+       "url": "https://thewoksoflife.com/kung-pao-chicken/#wprm-recipe-25892-step-0-6"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.94",
+      "ratingCount": "91",
+      "reviewCount": "7"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Fantastic recipe! I made it again this week but substituted cashews for the peanuts still roasting them with the method in your recipe.",
+       "author": {
+        "@type": "Person",
+        "name": "Scott"
+       },
+       "datePublished": "2026-08-14"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Precisely!!! The first thing I do is look at a recipe. If there are more than garlic, ginger, Szechuan peppercorns, scallions, chilis, and peanuts added to the chicken, I turn the page (so to speak). And of course, velveting the chicken is absolutely imperative. \r\n\r\nKPC is how I judge a Chinese restaurant (and potstickers). Most Americanize it with celery and bell peppers (I assume so as to fill the bowl without using adequate amounts of the more expensive protein). Yuck. Really.\r\n\r\nFrankly, this is how I first judged The Woks of Life channel. I looked at how you made KPC! You passed with flying colors and I became a huge fan of your food and your family business model, online and cookbook. I deeply admire how you used your ancestor's restaurant experiences to teach your daughters and put together the site as a family, and succeed, probably, beyond your wildest dreams. \r\n\r\nGreat respect.",
+       "author": {
+        "@type": "Person",
+        "name": "hokieduck"
+       },
+       "datePublished": "2026-07-24"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "My mom and I made this tonight from your INCREDIBLE cookbook (she read it all day and spent a couple hours at the local Asian market with her new found knowledge, just talking it all in! She's SO excited). It's SO good. I don't know that I've ever liked this dish at Chinese restaurants, but I'm certainly never going to be able to again because THIS is unbelievable. The slight tingling of the sichuan peppers is perfect. Just wanted to say THANK YOU and bless you guys and your family!",
+       "author": {
+        "@type": "Person",
+        "name": "Sam Reynolds"
+       },
+       "datePublished": "2026-06-26"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I made this recipe last night and I love it! I think I may make it again tonight.. I have found out that velveting chicken makes a difference so thank you for that. The sauce was a little bit thick, but I had thrown away my measuring spoons so I was measuring dry spices in the palm of my hand and eyeballing liquid spices. I will be using measuring spoons the next time I make it, but it was delicious and I didn’t modify anything other than the guesstimation of the amounts.",
+       "author": {
+        "@type": "Person",
+        "name": "Scott"
+       },
+       "datePublished": "2026-05-04"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "We have made this recipe several times now. It always comes out beautifully. Once, we used already roasted peanuts, and so were able to skip that step. Another time, we were out of peanuts and used cashews. This remains one of our favorite recipes.",
+       "author": {
+        "@type": "Person",
+        "name": "Ignacio"
+       },
+       "datePublished": "2026-04-15"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This is such an amazing dish! I add a lot of vegetables and serve over plain white rice to help spread the meal farther, I also add a loooot of vegetables. We do not use wine of any kind so we use apple cider vinegar instead. It has become one of my favorites! I was just curious, what is the serving size? I see the calories are 440 per serving but how much is one serving supposed to be. I usually make the 12 serving amount to feed my whole family. I know the rice is extra, just looking for serving size. Thabk you so much for sharing your recipes! We love so many of them! The lo mein is another huge hit in our home!",
+       "author": {
+        "@type": "Person",
+        "name": "Emily"
+       },
+       "datePublished": "2026-01-03"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "mark",
+       "author": {
+        "@type": "Person",
+        "name": "teamasterman"
+       },
+       "datePublished": "2025-11-18"
+      }
+     ],
+     "recipeCategory": [
+      "Chicken and Poultry"
+     ],
+     "recipeCuisine": [
+      "Chinese"
+     ],
+     "keywords": "kung pao chicken",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "440 kcal",
+      "carbohydrateContent": "11 g",
+      "proteinContent": "29 g",
+      "fatContent": "33 g",
+      "saturatedFatContent": "6 g",
+      "cholesterolContent": "54 mg",
+      "sodiumContent": "477 mg",
+      "fiberContent": "4 g",
+      "sugarContent": "2 g",
+      "servingSize": "1 serving"
+     },
+     "@id": "https://thewoksoflife.com/kung-pao-chicken/#recipe",
+     "isPartOf": {
+      "@id": "https://thewoksoflife.com/kung-pao-chicken/#article"
+     },
+     "mainEntityOfPage": "https://thewoksoflife.com/kung-pao-chicken/"
+    }
+   ]
+  }
+ ]
+}

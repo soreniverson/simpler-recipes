@@ -1,0 +1,175 @@
+{
+ "url": "https://www.bbcgoodfood.com/recipes/classic-lasagne-0",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=plain:VideoObject|plain:Recipe|plain:BreadcrumbList|plain:None",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[dict]",
+  "yield=int:6",
+  "author=list",
+  "prep=\"PT20M\" cook=\"PT1H40M\" total=\"PT2H\"",
+  "ing=list9",
+  "plugins="
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@type": "VideoObject",
+   "name": "How to make a lasagne",
+   "contentUrl": "https://media.delight.video/0c18e53b610964fac175fe0e757adc30557e79b7/e9b0860f3b45ac058d7c7c7fdb33e5e939858fa5/MEDIA/v0/HD/media.mp4",
+   "thumbnailUrl": "https://media.delight.video/0c18e53b610964fac175fe0e757adc30557e79b7/e9b0860f3b45ac058d7c7c7fdb33e5e939858fa5/MEDIA/v0/THUMBS/media.0000024.jpg",
+   "uploadDate": "2015-11-03T13:31:19.569Z",
+   "duration": "PT4M6S",
+   "customPosterUrl": "https://media.delight.video/0c18e53b610964fac175fe0e757adc30557e79b7/e9b0860f3b45ac058d7c7c7fdb33e5e939858fa5/POSTER_USER/v0/e9b0860f3b45ac058d7c7c7fdb33e5e939858fa5.jpeg"
+  },
+  {
+   "@context": "https://schema.org",
+   "@id": "https://www.bbcgoodfood.com/recipes/classic-lasagne-0#Recipe",
+   "@type": "Recipe",
+   "description": "Prepare this easy homemade lasagne ahead of time and save in the freezer, uncooked, for when you need it during a busy week. Just bake for an extra 45 mins",
+   "image": [
+    {
+     "@type": "ImageObject",
+     "url": "https://images.immediate.co.uk/production/volatile/sites/30/2023/11/Lasagne-d4cb438.jpg?resize=768,845",
+     "width": 768,
+     "height": 845
+    },
+    {
+     "@type": "ImageObject",
+     "url": "https://images.immediate.co.uk/production/volatile/sites/30/2023/11/Lasagne-d4cb438.jpg?resize=1366,1503",
+     "width": 1366,
+     "height": 1503
+    }
+   ],
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.bbcgoodfood.com/recipes/classic-lasagne-0"
+   },
+   "name": "Classic lasagne",
+   "url": "https://www.bbcgoodfood.com/recipes/classic-lasagne-0",
+   "author": [
+    {
+     "@type": "Person",
+     "name": "Good Food team",
+     "url": "https://www.bbcgoodfood.com/author/goodfood"
+    }
+   ],
+   "dateModified": "2026-07-03T14:45:09+01:00",
+   "datePublished": "2023-11-28T15:45:30+00:00",
+   "headline": "Classic lasagne",
+   "keywords": "Baked pasta, Beef mince, Beef stock, Easy entertaining, Emma Lewis, How to make lasagna, Italian recipes, Lasagna, Lasagne, Lasagne al forno, Lasange, Mozzarella, Nutmeg, Olive oil, Pasta, Prosciutto, Tomato sauce",
+   "publisher": {
+    "@type": "Organization",
+    "name": "Good Food",
+    "url": "https://www.bbcgoodfood.com",
+    "logo": {
+     "@type": "ImageObject",
+     "height": 325,
+     "url": "https://images.immediate.co.uk/production/volatile/sites/30/2026/02/goodfood.logo-f37096c.png?resize=1312,325",
+     "width": 1312
+    }
+   },
+   "cookTime": "PT1H40M",
+   "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "580 calories",
+    "fatContent": "32 grams fat",
+    "saturatedFatContent": "14 grams saturated fat",
+    "carbohydrateContent": "31 grams carbohydrates",
+    "sugarContent": "8 grams sugar",
+    "fiberContent": "3 grams fiber",
+    "proteinContent": "44 grams protein",
+    "sodiumContent": "1.71 milligram of sodium"
+   },
+   "prepTime": "PT20M",
+   "recipeCategory": "Dinner, Lunch, Main course",
+   "recipeCuisine": "Italian",
+   "recipeIngredient": [
+    "2 olive oil plus extra for the dish",
+    "750g lean beef mince",
+    "90g pack prosciutto",
+    "800g passata or half our basic tomato sauce",
+    "200ml hot beef stock",
+    "nutmeg",
+    "300g fresh lasagne sheets",
+    "white sauce (find a recipe in the method, or use shop-bought)",
+    "125g ball mozzarella torn into thin strips"
+   ],
+   "recipeInstructions": [
+    {
+     "@type": "HowToStep",
+     "text": "To make the meat sauce, heat 2 tbsp olive oil in a frying pan and cook 750g lean beef mince in two batches for about 10 mins until browned all over."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Finely chop 4 slices of prosciutto from a 90g pack, then stir through the meat mixture."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Pour over 800g passata or half our basic tomato sauce recipe and 200ml hot beef stock. Add a little grated nutmeg, then season."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Bring up to the boil, then simmer for 30 mins until the sauce looks rich."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Heat the oven to 180C/160C fan/gas 4 and lightly oil an ovenproof dish (about 30 x 20cm)."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Spoon one third of the meat sauce into the dish, then cover with some fresh lasagne sheets from a 300g pack. Drizzle over roughly 130g ready-made or homemade white sauce."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Repeat until you have three layers of pasta. Cover with the remaining 390g white sauce, making sure you can’t see any pasta poking through."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Scatter 125g torn mozzarella over the top."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Arrange the rest of the prosciutto on top. Bake for 45 mins until the top is bubbling and lightly browned."
+    }
+   ],
+   "recipeYield": 6,
+   "totalTime": "PT2H"
+  },
+  {
+   "@context": "https://schema.org/",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.bbcgoodfood.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Recipes",
+     "item": "https://www.bbcgoodfood.com/recipes"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Classic lasagne"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org/",
+   "@id": "https://www.bbcgoodfood.com/recipes/classic-lasagne-0#Recipe",
+   "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 5,
+    "reviewCount": 337,
+    "bestRating": 5,
+    "worstRating": 1
+   }
+  }
+ ]
+}

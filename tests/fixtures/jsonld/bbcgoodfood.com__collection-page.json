@@ -1,0 +1,79 @@
+{
+ "url": "https://www.bbcgoodfood.com/recipes/collection/lasagne-recipes",
+ "variant": [
+  "collection page: ItemList + first item is a Recipe?"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@id": "https://www.bbcgoodfood.com/recipes/collection/lasagne-recipes#Recipe",
+   "@type": "Recipe",
+   "description": "Cook a classic Italian pasta bake for the family. We have all sorts of lasagne recipes, including traditional mince, seafood and veggie versions.",
+   "image": [
+    {
+     "@type": "ImageObject",
+     "url": "https://images.immediate.co.uk/production/volatile/sites/30/2023/11/Lasagne-d4cb438.jpg?resize=768,845",
+     "width": 768,
+     "height": 845
+    },
+    {
+     "@type": "ImageObject",
+     "url": "https://images.immediate.co.uk/production/volatile/sites/30/2023/11/Lasagne-d4cb438.jpg?resize=1366,1503",
+     "width": 1366,
+     "height": 1503
+    }
+   ],
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.bbcgoodfood.com/recipes/collection/lasagne-recipes"
+   },
+   "name": "Lasagne recipes",
+   "url": "https://www.bbcgoodfood.com/recipes/collection/lasagne-recipes",
+   "dateModified": "2026-07-18T12:25:34+01:00",
+   "datePublished": "2013-05-28T11:38:55+01:00",
+   "headline": "Lasagne recipes",
+   "keywords": "BAKE, Cheese, Comfort Food, Dinner, Family, Italian, Lasagna, Lasagne, Pasta, Pasta bake, Recipes, Supper",
+   "publisher": {
+    "@type": "Organization",
+    "name": "Good Food",
+    "url": "https://www.bbcgoodfood.com",
+    "logo": {
+     "@type": "ImageObject",
+     "height": 325,
+     "url": "https://images.immediate.co.uk/production/volatile/sites/30/2026/02/goodfood.logo-f37096c.png?resize=1312,325",
+     "width": 1312
+    }
+   },
+   "recipeIngredient": "Lasagne recipes"
+  },
+  {
+   "@context": "https://schema.org/",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.bbcgoodfood.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Recipes",
+     "item": "https://www.bbcgoodfood.com/recipes"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Collection",
+     "item": "https://www.bbcgoodfood.com/recipes/collection"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Lasagne recipes"
+    }
+   ]
+  }
+ ]
+}

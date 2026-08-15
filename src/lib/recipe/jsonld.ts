@@ -8,6 +8,7 @@
 import type { Recipe, RecipeSection } from './types';
 import {
   cleanText,
+  cleanTitle,
   decodeEntities,
   durationToMinutes,
   formatMinutes,
@@ -96,7 +97,7 @@ function typeList(node: any): string[] {
   const t = node?.['@type'];
   if (!t) return [];
   const arr = Array.isArray(t) ? t : [t];
-  return arr.filter((x) => typeof x === 'string').map((x) => x.toLowerCase().replace(/^https?:\/\/schema\.org\//, ''));
+  return arr.filter((x) => typeof x === 'string').map((x) => x.toLowerCase().replace(/^https?:\/\/schema\.org\//, '').replace(/^schema:/, ''));
 }
 
 export function isRecipeNode(node: unknown): boolean {
@@ -260,7 +261,9 @@ export function recipeFromJsonLd(node: any, pageUrl?: string, byId: Map<string, 
   const instructions = instructionGroups.flatMap((g) => g.items);
   if (!ingredients.length && !instructions.length) return null;
 
-  const title = cleanText(node.name || node.headline) || 'Untitled Recipe';
+  const publisherNode0 = ref(node.publisher) as any;
+  const siteName0 = publisherNode0 && typeof publisherNode0 === 'object' ? cleanText(publisherNode0.name) : null;
+  const title = cleanTitle(node.name || node.headline, siteName0) || 'Untitled Recipe';
   const prepMinutes = durationToMinutes(node.prepTime);
   const cookMinutes = durationToMinutes(node.cookTime);
   let totalMinutes = durationToMinutes(node.totalTime);

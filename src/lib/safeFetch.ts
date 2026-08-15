@@ -185,8 +185,18 @@ export function isBlockedHostname(hostname: string): boolean {
 }
 
 async function defaultResolve(hostname: string): Promise<string[]> {
-  const results = await lookup(hostname, { all: true, verbatim: true });
-  return results.map((r) => r.address);
+  try {
+    const results = await lookup(hostname, { all: true, verbatim: true });
+    return results.map((r) => r.address);
+  } catch (err: any) {
+    // Transient resolver hiccups (EAI_AGAIN/ETIMEOUT) are common under parallel load; retry once.
+    if (err && (err.code === 'EAI_AGAIN' || err.code === 'ETIMEOUT' || err.code === 'ECONNREFUSED')) {
+      await new Promise((r) => setTimeout(r, 150));
+      const results = await lookup(hostname, { all: true, verbatim: true });
+      return results.map((r) => r.address);
+    }
+    throw err;
+  }
 }
 
 /**

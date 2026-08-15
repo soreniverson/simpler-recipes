@@ -1,0 +1,620 @@
+{
+ "url": "https://carlsbadcravings.com/chicken-tikka-masala/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list2:[\"6\", \"6 servings\"]",
+  "author=dict",
+  "prep=\"PT25M\" cook=\"PT35M\" total=\"PT240M\"",
+  "ing=list15",
+  "plugins=WPRM,AMP"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#article",
+     "isPartOf": {
+      "@id": "https://carlsbadcravings.com/chicken-tikka-masala/"
+     },
+     "author": {
+      "name": "Jen",
+      "@id": "https://carlsbadcravings.com/#/schema/person/011eec8c8fad982a33756761e2229fb6"
+     },
+     "headline": "How to Make Chicken Tikka Masala",
+     "datePublished": "2022-10-03T00:56:44+00:00",
+     "dateModified": "2024-08-29T19:55:24+00:00",
+     "wordCount": 5844,
+     "commentCount": 24,
+     "publisher": {
+      "@id": "https://carlsbadcravings.com/#organization"
+     },
+     "image": {
+      "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#primaryimage"
+     },
+     "thumbnailUrl": "https://carlsbadcravings.com/wp-content/uploads/2022/10/Chicken-Tikka-Masala-11.jpg",
+     "articleSection": [
+      "Asian Food Recipes",
+      "Chicken Recipe Ideas",
+      "Chicken Thigh Recipes",
+      "Dinner Cravings",
+      "Indian cravings",
+      "Stovetop",
+      "Videos"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://carlsbadcravings.com/chicken-tikka-masala/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": [
+      "WebPage",
+      "FAQPage"
+     ],
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/",
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/",
+     "name": "Tikka Masala Recipe - Carlsbad Cravings",
+     "isPartOf": {
+      "@id": "https://carlsbadcravings.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#primaryimage"
+     },
+     "image": {
+      "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#primaryimage"
+     },
+     "thumbnailUrl": "https://carlsbadcravings.com/wp-content/uploads/2022/10/Chicken-Tikka-Masala-11.jpg",
+     "datePublished": "2022-10-03T00:56:44+00:00",
+     "dateModified": "2024-08-29T19:55:24+00:00",
+     "description": "This Chicken Tikka Masala recipe rivals your favorite restaurant and is easy to make at home with accessible ingredients – you will be blown away at the flavor!",
+     "breadcrumb": {
+      "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#breadcrumb"
+     },
+     "mainEntity": [
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510814266"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510771104"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510662118"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664739501468"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510806262"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510838448"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510824426"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510906337"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510987168"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510876637"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510979414"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664511006216"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664511051585"
+      },
+      {
+       "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664752787763"
+      }
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://carlsbadcravings.com/chicken-tikka-masala/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#primaryimage",
+     "url": "https://carlsbadcravings.com/wp-content/uploads/2022/10/Chicken-Tikka-Masala-11.jpg",
+     "contentUrl": "https://carlsbadcravings.com/wp-content/uploads/2022/10/Chicken-Tikka-Masala-11.jpg",
+     "width": 1200,
+     "height": 1800,
+     "caption": "up close or tikka masala with chicken in a bowl with rice"
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://carlsbadcravings.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Latest Cravings",
+       "item": "https://carlsbadcravings.com/latest-cravings/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "How to Make Chicken Tikka Masala"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://carlsbadcravings.com/#website",
+     "url": "https://carlsbadcravings.com/",
+     "name": "Carlsbad Cravings",
+     "description": "Carlsbad Cravings",
+     "publisher": {
+      "@id": "https://carlsbadcravings.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://carlsbadcravings.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://carlsbadcravings.com/#organization",
+     "name": "Carlsbad Cravings",
+     "url": "https://carlsbadcravings.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://carlsbadcravings.com/#/schema/logo/image/",
+      "url": "https://carlsbadcravings.com/wp-content/uploads/2021/02/default-sharing-image.jpg",
+      "contentUrl": "https://carlsbadcravings.com/wp-content/uploads/2021/02/default-sharing-image.jpg",
+      "width": 1200,
+      "height": 630,
+      "caption": "Carlsbad Cravings"
+     },
+     "image": {
+      "@id": "https://carlsbadcravings.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/carlsbadcravings",
+      "https://x.com/carlsbadcraving",
+      "https://www.instagram.com/carlsbadcravings/",
+      "https://www.pinterest.com/carlsbadcraving",
+      "https://www.youtube.com/channel/UCz7ZKCvC7yDdH2Jq6VdLP5w"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://carlsbadcravings.com/#/schema/person/011eec8c8fad982a33756761e2229fb6",
+     "name": "Jen"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510814266",
+     "position": 1,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510814266",
+     "name": "What does Chicken Tikka Masala mean?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The word<em> tikka</em> is a Persian word, meaning <strong>\"bits\" or \"pieces.\"</strong>  <em>Masala </em>means <strong>mixture</strong>.  It refers to the pieces of chicken cooked in a tandoor, then simmered in a mixture of tomatoes, cream and spices.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510771104",
+     "position": 2,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510771104",
+     "name": "Where did Tikka Masala Come From?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "There are several theories and claims as to the exact origin of Tikka Masala, the most popular being from either the South Asian community in Great Britain or a restaurant in Glasgow, Scotland.<br/><br/>During the British Raj, a period from 1858 to 1947, the British Empire ruled over the Indian subcontinent.  During this time, many South Asians migrated to the U.K., and opened restaurants.  Food historians Peter and Colleen Grove adamantly believe the dish “was most certainly invented in Britain, probably by a Bangladeshi chef.” The two foodies point the finger towards Balbir Singh’s Shahi Chicken Masala recipe, published in 1961 in Indian Cookery.<br/><br/>The other theory is that Tikka Masala originated in the 1970s in the authentic curry house, Shish Mahal, in Glasgow, Scotland by Ali Ahmed Aslam.  The story goes that a truck driver ordered Chicken Tikka, but complained that the dish was too dry and sent it back to the kitchen. So, Ali took a nod from Brits love for gravies and sauces and created the dish with a can of tomato soup, spices, and a dab of yogurt.<br/><br/>No matter who invented this iconic dish, it is a global favorite spanning countries, continents and can now be made in your own kitchen!",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510662118",
+     "position": 3,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510662118",
+     "name": "Is Tikka Masala Indian?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "While the exact origins of Tikka Masala are contested, it is widely accepted to have originated somewhere in Great Britain and is the considered the national dish, even more so than Fish and Chips!  In fact, in 2001, British Foreign Secretary Robin Cook mentioned the dish in a speech, hailing the Chicken Tikka Masala as a symbol of modern multicultural Britain, and how Britain celebrates external influences. In the speech, the Secretary offered his own simplified explanation of how the dish evolved: “Chicken Tikka is an Indian dish. The masala sauce was added to satisfy the desire of British people to have their meat served in gravy.”",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664739501468",
+     "position": 4,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664739501468",
+     "name": "Butter Chicken VS. Chicken Tikka Masala",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Chicken Tikka Masala and Butter Chicken are two of the most popular curries and look strikingly similar with their creamy orange sauce and chunks of chicken.  They are made with many of the same ingredients including chicken, yogurt, tomatoes and garam masala, so it can be difficult to tell the two apart by appearance alone.  With one taste, however, you will see that the two favorite curries differ significantly in flavor.  <br/><br/>Tikka Masala has a pronounced smoky flavor from the chargrilled chicken and an overall more complex flavor profile than Butter Chicken.  Butter Chicken, however, is not chargrilled and just simmered with the sauce.  It has a less pronounced tomato flavor and is also richer due to the generous addition of butter which also adds a subtle sweetness. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510806262",
+     "position": 5,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510806262",
+     "name": "What is Tikka Masala sauce made of?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tikka Masala is a tomato and cream-based curry sauce made of sautéed onions, tomatoes, ginger, garlic and many Indian spices such as garam masala, turmeric, coriander and cumin and paprika.  The sauce is simmered, pureed, then cream (either in the form of heavy cream, yogurt or cashews) is stirred into the sauce to make it creamy. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510838448",
+     "position": 6,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510838448",
+     "name": "What does Tikka Masala taste like?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tikka Masala is a tomato and cream-based sauce that’s smoky from the chargrilled chicken, rich and creamy, with a slight sweetness and tanginess with mild heat (although we like it hot!) punctuated by earthy spices, ginger and garlic.  <br/><br/>The spices in the Tikka Masala vary depending on the region and from cook to cook; there is no such thing as an authentic version.  While there is no standard recipe for Tikka Masala, garam masala is a key ingredient, a traditional Indian spice blend that may contain cardamom, cinnamon, cloves, and black pepper, and sometimes also coriander and cumin. Chicken Tikka Masala also often include ginger, garlic, turmeric, paprika, coriander, and cumin.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510824426",
+     "position": 7,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510824426",
+     "name": "How spicy is Chicken Tikka masala?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tikka Masala is a mildly spicy, earthy, curry dish with a creamy tomato sauce.  Traditionally, it contains Kashmiri chili, which is a type of chili pepper grown in the Kashmir region of India. It’s bright red in color and has a very mild spice level.  Many restaurant versions, however, offer mild, medium or spicy curry. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510906337",
+     "position": 8,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510906337",
+     "name": "What do you eat with Tikka Masala? ",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Chicken Tikka Masala is traditionally paired with basmati rice in order to soak up the rich sauce and offer a neutral textural component.  It is also usually  paired with naan to mop up the leftover sauce.  Other sides to compliment the rich and earthy spices are raita, a creamy yogurt cucumber dish, and mango chutney. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510987168",
+     "position": 9,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510987168",
+     "name": "Is Tikka Masala healthy? ",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Chicken Tikka Masala is high in protein thanks to the chicken but high in calories due to the heavy cream.  To reduce the calories, evaporated milk can be used in place of the heavy cream.  It won’t taste as rich, but still delicious and extremely flavorful.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510876637",
+     "position": 10,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510876637",
+     "name": "Are there variations of Tikka Masala?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "There are widespread adaptations of Tikka Masala made with different proteins such as pork, paneer, tofu, chickpeas, and vegetables such as peas, cauliflower, and/or carrots.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510979414",
+     "position": 11,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664510979414",
+     "name": "Can Tikka Masala be made vegetarian?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes!  Paneer Tikka Masala is a popular vegetarian alternative made with paneer cheese instead of the chicken. Paneer is an Indian, non-melting cheese, traditionally made from curdled buffalo milk, or a mixture of buffalo and cows' milks and some sort of fruit or vegetable acid like lemon juice. The cheese is mild and milky in flavor, soft and spongy, ideal for soaking up the flavor of the marsala sauce.  The paneer is usually cut into cubes for curries and can be grilled, or cooked on skewers without melting.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664511006216",
+     "position": 12,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664511006216",
+     "name": "Can Tikka Masala be made vegan?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, Tikka Masala can be made vegan by using extra firm tofu instead of the chicken, diary free yogurt, and coconut milk instead of heavy cream.  Drain the tofu first by placing in a bowl then placing a plate on top, then topping with a heavy object for 10 minutes or so. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664511051585",
+     "position": 13,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664511051585",
+     "name": "Are Chicken Tikka and Chicken Tikka Masala the same dish?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No, Chicken Tikka and Chicken Tikka Masala are not the same dish, but they start as the same dish.<br/><br/>Both Chicken Tikka and Chicken Tikka Masala begin by marinating small chunks of chicken in a mixture of yogurt and spices.  The chicken is then skewered and grilled in a special clay oven called a tandoor.  At this point, the grilled chicken is Chicken Tikka.  It becomes Chicken Tikka <em>Masala </em>by adding the chargrilled chicken to a masala curry sauce made with tomatoes, cream, onions and spices, particularly garam masala.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664752787763",
+     "position": 14,
+     "url": "https://carlsbadcravings.com/chicken-tikka-masala/#faq-question-1664752787763",
+     "name": "Is Tikka Masala gluten free?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, Chicken Tikka Masala recipe as written is gluten free. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Recipe",
+     "name": "Chicken Tikka",
+     "author": {
+      "@id": "https://carlsbadcravings.com/#/schema/person/011eec8c8fad982a33756761e2229fb6"
+     },
+     "description": "Chicken Tikka Masala is a must-make, astonishingly easy recipe, made with local grocery store ingredients!  The lusciously rich and creamy, bronze-orange tomato-cream curry sauce is earthy, smoky, packed with spices and of course  juicy, marinated, charred chicken.  This Tikka Masala recipe has been perfected from the spices, to the cooking techniques, down to which tomatoes you use for the best recipe out there!  Now, just load your chicken curry over hot rice with a showering of cilantro and a side of naan to mop up the silky sauce, and prepare for downright deliciousness!",
+     "datePublished": "2022-10-02T17:56:44+00:00",
+     "image": [
+      "https://carlsbadcravings.com/wp-content/uploads/2022/10/Chicken-Tikka-Masala-7a.jpg",
+      "https://carlsbadcravings.com/wp-content/uploads/2022/10/Chicken-Tikka-Masala-7a-500x500.jpg",
+      "https://carlsbadcravings.com/wp-content/uploads/2022/10/Chicken-Tikka-Masala-7a-500x375.jpg",
+      "https://carlsbadcravings.com/wp-content/uploads/2022/10/Chicken-Tikka-Masala-7a-480x270.jpg"
+     ],
+     "recipeYield": [
+      "6",
+      "6 servings"
+     ],
+     "prepTime": "PT25M",
+     "cookTime": "PT35M",
+     "totalTime": "PT240M",
+     "recipeIngredient": [
+      "2 pounds boneless chicken thighs, ( cut into large bite-sized pieces (about 1 1/2-inches))",
+      "1 cup plain or Greek yogurt, (fullfat is best)",
+      "2 tablespoons lemon juice",
+      "2 tablespoons freshly grated ginger, (divided)",
+      "2 tablespoons minced garlic, (divided)",
+      "neutral, high smoking point oil such as canola or coconut, see notes ((do NOT use olive oil for chicken))",
+      "1  large onion, (chopped)",
+      "1 28 oz. can FIRE ROASTED crushed tomatoes ((see notes))",
+      "1 TBS EACH  garam masala, chili powder, paprika (not smoked)",
+      "2 1/2 teaspoons salt",
+      "2 tsp EACH turmeric, ground cumin, ground coriander",
+      "1/2-1 teaspoon cayenne pepper",
+      "1/4 teaspoon ground cardamon ((optional if you have it))",
+      "1 1/3 cups heavy cream ((use evaporated milk for lower calories))",
+      "1 teaspoon sugar, (optional, as needed)"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Mix spices:  Whisk together all of the Spice Blend spices in a small bowl; set aside.",
+       "name": "Mix spices:  Whisk together all of the Spice Blend spices in a small bowl; set aside.",
+       "url": "https://carlsbadcravings.com/chicken-tikka-masala/#wprm-recipe-67305-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Marinate chicken:  Remove 2 1/2 tablespoons Spice Blend to a large bowl or freezer bag (whatever you are going to marinate the chicken in).  Add the yogurt, lemon juice, 1 tablespoon grated ginger and 1 tablespoon minced garlic.  Whisk to combine.  Add the chopped chicken and stir to evenly coat.  Marinate for 30-45 minutes at room temperature, but BEST if refrigerated overnight.",
+       "name": "Marinate chicken:  Remove 2 1/2 tablespoons Spice Blend to a large bowl or freezer bag (whatever you are going to marinate the chicken in).  Add the yogurt, lemon juice, 1 tablespoon grated ginger and 1 tablespoon minced garlic.  Whisk to combine.  Add the chopped chicken and stir to evenly coat.  Marinate for 30-45 minutes at room temperature, but BEST if refrigerated overnight.",
+       "url": "https://carlsbadcravings.com/chicken-tikka-masala/#wprm-recipe-67305-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Sauté aromatics for sauce:  Heat 1 1/2 tablespoons oil in a large braiser or Dutch oven over medium-high heat. Add the onions and sauté until softened, 5-7 minutes.  Add the remaining 1 tablespoon ginger, 1 tablespoon garlic and the remaining Spice Blend and sauté for 1 minute.",
+       "name": "Sauté aromatics for sauce:  Heat 1 1/2 tablespoons oil in a large braiser or Dutch oven over medium-high heat. Add the onions and sauté until softened, 5-7 minutes.  Add the remaining 1 tablespoon ginger, 1 tablespoon garlic and the remaining Spice Blend and sauté for 1 minute.",
+       "url": "https://carlsbadcravings.com/chicken-tikka-masala/#wprm-recipe-67305-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Make sauce:  Stir in the crushed tomatoes.  Bring to a boil then reduce to gentle simmer and cook for 10 minutes, stirring often and scraping up the brown bits from the bottom of the pan.  (You can cook the chicken while the sauce simmers, see Step 6).",
+       "name": "Make sauce:  Stir in the crushed tomatoes.  Bring to a boil then reduce to gentle simmer and cook for 10 minutes, stirring often and scraping up the brown bits from the bottom of the pan.  (You can cook the chicken while the sauce simmers, see Step 6).",
+       "url": "https://carlsbadcravings.com/chicken-tikka-masala/#wprm-recipe-67305-step-0-3"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Blend sauce (optional but recommended):  After simmering, transfer the tomato mixture to a high-powered blender and purée until smooth, leaving a corner of the lid open and covered with a paper towel so steam can escape and it doesn’t explode.  Alternatively, transfer to a bowl and use an immersion blender to blend, then return back to the pan.  Season to taste.  Depending on the tomatoes you used, you may need 1-2 teaspoons sugar to balance the acidity.",
+       "name": "Blend sauce (optional but recommended):  After simmering, transfer the tomato mixture to a high-powered blender and purée until smooth, leaving a corner of the lid open and covered with a paper towel so steam can escape and it doesn’t explode.  Alternatively, transfer to a bowl and use an immersion blender to blend, then return back to the pan.  Season to taste.  Depending on the tomatoes you used, you may need 1-2 teaspoons sugar to balance the acidity.",
+       "url": "https://carlsbadcravings.com/chicken-tikka-masala/#wprm-recipe-67305-step-0-4"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Cook chicken: Heat 2 tablespoons oil in a large cast iron skillet over high heat until smoking. Working in batches, add the chicken in a single layer and cook until charred on each side, about 2 minutes per side (it will not be cooked through).    Transfer chicken to a bowl; set aside.  Scrape out the skillet in between batches and add more oil to cook the next batch.",
+       "name": "Cook chicken: Heat 2 tablespoons oil in a large cast iron skillet over high heat until smoking. Working in batches, add the chicken in a single layer and cook until charred on each side, about 2 minutes per side (it will not be cooked through).    Transfer chicken to a bowl; set aside.  Scrape out the skillet in between batches and add more oil to cook the next batch.",
+       "url": "https://carlsbadcravings.com/chicken-tikka-masala/#wprm-recipe-67305-step-0-5"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Combine:  Stir the heavy cream into the blended sauce followed by the chicken.  Cover and gently simmer for a few minutes, until the chicken is cooked through.  Season to taste with additional salt, sugar and/or cayenne pepper.",
+       "name": "Combine:  Stir the heavy cream into the blended sauce followed by the chicken.  Cover and gently simmer for a few minutes, until the chicken is cooked through.  Season to taste with additional salt, sugar and/or cayenne pepper.",
+       "url": "https://carlsbadcravings.com/chicken-tikka-masala/#wprm-recipe-67305-step-0-6"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Serve:  Serve over basmati rice with optional cilantro.",
+       "name": "Serve:  Serve over basmati rice with optional cilantro.",
+       "url": "https://carlsbadcravings.com/chicken-tikka-masala/#wprm-recipe-67305-step-0-7"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "9",
+      "reviewCount": "7"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I love chicken tikka masala, and this is as good or better than the best I’ve ever had in a restaurant! This time I added two Thai birds eye chilis with the onions, which probably made it an 8 out of 10 spice level. Perfect for me!",
+       "author": {
+        "@type": "Person",
+        "name": "chris"
+       },
+       "datePublished": "2024-05-28"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "LOVE this recipe. \r\n\r\nMy only question is about marinading. You said it is best marinaded over night. Just curious if this means marinade it over night and cook it for the following dinner (so technically in the marinade for say 24 hours - 7pm to 7pm). Is that not going to over-marinade it and make it chewy? Just want to clarify so I can make this over and over and over again lol\r\n\r\nThank you!! Love your recipes",
+       "author": {
+        "@type": "Person",
+        "name": "Amanda Kelly"
+       },
+       "datePublished": "2024-02-22"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I have LOVED all your recipes and am so happy I have found your website. I would like to make this meal into a freezer meal for a future quick meal and am wondering what your recommendation would be in order to do that. Thank you!",
+       "author": {
+        "@type": "Person",
+        "name": "Rachel"
+       },
+       "datePublished": "2024-02-13"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Because this recipe is so good—I’ve already commented on it—I’d like to make a few suggestions so others who love it can enjoy it more often. I make up a big batch of the sliced mix so it’s ready to go. And you may want to make a double batch of the sauce, up until you add the cream, and freeze it in portions suitable for the amount of chicken you will use. Then it’s easy to marinate the chicken for several hours, cook it, and heat in the sauce, adding the cream as indicated. (Actually, I had leftover sauce with cream and it froze well that way, too.)",
+       "author": {
+        "@type": "Person",
+        "name": "Marlene"
+       },
+       "datePublished": "2023-09-05"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I made it for my family and they raved about it. It's absolutely delicious and I'll add it to my repertoire.",
+       "author": {
+        "@type": "Person",
+        "name": "Mariel"
+       },
+       "datePublished": "2023-04-23"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This is restaurant quality!  You nailed the flavor of this dish to a tee.  It's now on my weekly dinner rotation.   I've made many of your recipes and read your whole story, such an inspiration!",
+       "author": {
+        "@type": "Person",
+        "name": "Lauren"
+       },
+       "datePublished": "2023-01-02"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Usually I'm very disappointed by most recipe blogs, as they have no respect for the origins and traditions of a dish and they often randomly substitute white people stuff to make it easier. I really respect how deeply you go into the origins of the food and how \"traditional\" you keep your recipes. \r\n\r\nThis is a fantastic website. Keep up the awesome work!",
+       "author": {
+        "@type": "Person",
+        "name": "franz"
+       },
+       "datePublished": "2022-11-08"
+      }
+     ],
+     "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#recipe",
+     "isPartOf": {
+      "@id": "https://carlsbadcravings.com/chicken-tikka-masala/#article"
+     },
+     "mainEntityOfPage": "https://carlsbadcravings.com/chicken-tikka-masala/"
+    }
+   ]
+  }
+ ]
+}

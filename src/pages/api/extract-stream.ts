@@ -151,6 +151,12 @@ export const GET: APIRoute = async ({ request }) => {
           return;
         }
 
+        // Social/video apps serve login walls to servers; say so instead of "no recipe found".
+        if (/(^|\.)(instagram\.com|tiktok\.com|pinterest\.[a-z.]+|facebook\.com|fb\.watch|x\.com|twitter\.com|threads\.net|snapchat\.com)$/i.test(hostname)) {
+          fail({ code: 'blocked-by-site', error: `We can't read recipes from ${hostname} yet.`, hint: 'Look for a recipe link in the post or bio and paste that instead.' });
+          return;
+        }
+
         const videoId = getYouTubeVideoId(url);
         if (videoId) {
           await handleYouTube(url, videoId, { emit, fail, complete, token, isAuthenticated });

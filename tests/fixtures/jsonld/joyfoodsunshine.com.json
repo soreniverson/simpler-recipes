@@ -1,0 +1,592 @@
+{
+ "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list2:[\"36\", \"36 cookies\"]",
+  "author=dict",
+  "prep=\"PT10M\" cook=\"PT8M\" total=\"PT30M\"",
+  "ing=list10",
+  "plugins=WPRM,MediavineCreate"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#article",
+     "isPartOf": {
+      "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/"
+     },
+     "author": {
+      "name": "Laura Sandford",
+      "@id": "https://joyfoodsunshine.com/#/schema/person/26aa1eec196fcfdeab13ab7a9999d220"
+     },
+     "headline": "The Best Chocolate Chip Cookie Recipe Ever",
+     "datePublished": "2018-02-11T11:00:40+00:00",
+     "dateModified": "2026-06-07T12:53:38+00:00",
+     "wordCount": 3233,
+     "commentCount": 17008,
+     "publisher": {
+      "@id": "https://joyfoodsunshine.com/#organization"
+     },
+     "image": {
+      "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#primaryimage"
+     },
+     "thumbnailUrl": "https://joyfoodsunshine.com/wp-content/uploads/2018/02/best-chocolate-chip-cookies-recipe-1.jpg",
+     "keywords": [
+      "chocolate",
+      "cookies",
+      "dessert",
+      "easy"
+     ],
+     "articleSection": [
+      "Chocolate",
+      "Christmas",
+      "Cookies",
+      "Dessert",
+      "Home Slider",
+      "Popular Recipes",
+      "Recipe Videos",
+      "Recipes"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": [
+      "WebPage",
+      "FAQPage"
+     ],
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/",
+     "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/",
+     "name": "The Best Chocolate Chip Cookie Recipe Ever - JoyFoodSunshine",
+     "isPartOf": {
+      "@id": "https://joyfoodsunshine.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#primaryimage"
+     },
+     "image": {
+      "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#primaryimage"
+     },
+     "thumbnailUrl": "https://joyfoodsunshine.com/wp-content/uploads/2018/02/best-chocolate-chip-cookies-recipe-1.jpg",
+     "datePublished": "2018-02-11T11:00:40+00:00",
+     "dateModified": "2026-06-07T12:53:38+00:00",
+     "description": "This is the best chocolate chip cookies recipe ever - buttery, slightly doughy, & so good. So easy with no weird ingredients or chilling!",
+     "breadcrumb": {
+      "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#breadcrumb"
+     },
+     "mainEntity": [
+      {
+       "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1625436116770"
+      },
+      {
+       "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1625436128177"
+      },
+      {
+       "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1625436171331"
+      },
+      {
+       "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1625436565075"
+      },
+      {
+       "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1706970732418"
+      },
+      {
+       "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1734964809435"
+      },
+      {
+       "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1734964893337"
+      },
+      {
+       "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1779970977033"
+      },
+      {
+       "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1780836762529"
+      }
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#primaryimage",
+     "url": "https://joyfoodsunshine.com/wp-content/uploads/2018/02/best-chocolate-chip-cookies-recipe-1.jpg",
+     "contentUrl": "https://joyfoodsunshine.com/wp-content/uploads/2018/02/best-chocolate-chip-cookies-recipe-1.jpg",
+     "width": 1199,
+     "height": 1199
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://joyfoodsunshine.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Recipes",
+       "item": "https://joyfoodsunshine.com/recipe-index/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Dessert",
+       "item": "https://joyfoodsunshine.com/category/dessert/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "The Best Chocolate Chip Cookie Recipe Ever"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://joyfoodsunshine.com/#website",
+     "url": "https://joyfoodsunshine.com/",
+     "name": "JoyFoodSunshine",
+     "description": "Simple &amp; delicious recipes!",
+     "publisher": {
+      "@id": "https://joyfoodsunshine.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://joyfoodsunshine.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://joyfoodsunshine.com/#organization",
+     "name": "JoyFoodSunshine",
+     "url": "https://joyfoodsunshine.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://joyfoodsunshine.com/#/schema/logo/image/",
+      "url": "https://joyfoodsunshine.com/wp-content/uploads/2023/04/easy-delicious-recipes.png",
+      "contentUrl": "https://joyfoodsunshine.com/wp-content/uploads/2023/04/easy-delicious-recipes.png",
+      "width": 696,
+      "height": 696,
+      "caption": "JoyFoodSunshine"
+     },
+     "image": {
+      "@id": "https://joyfoodsunshine.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/joyfoodsunshine/",
+      "https://x.com/joyfoodsunshine",
+      "https://www.instagram.com/joyfoodsunshine/",
+      "https://www.pinterest.com/joyfoodsunshine/",
+      "https://www.tiktok.com/@joyfoodsunshine",
+      "https://www.youtube.com/channel/UCyAZ-9YgvYS7t2piPqshwog"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://joyfoodsunshine.com/#/schema/person/26aa1eec196fcfdeab13ab7a9999d220",
+     "name": "Laura Sandford",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://joyfoodsunshine.com/wp-content/uploads/2023/04/cropped-author-avatar-96x96.jpg",
+      "url": "https://joyfoodsunshine.com/wp-content/uploads/2023/04/cropped-author-avatar-96x96.jpg",
+      "contentUrl": "https://joyfoodsunshine.com/wp-content/uploads/2023/04/cropped-author-avatar-96x96.jpg",
+      "caption": "Laura Sandford"
+     },
+     "description": "Hello! I’m Laura, baker, chef, chemist and mom of 6! I have a degree in chemistry and passion for delicious food. I use my knowledge of and love for science to create recipes to feed my family and share with all of you. Hello! I’m Laura! I have a degree in chemistry and passion for delicious food. I use my knowledge of and love for science to create recipes you can count on. I believe delicious food doesn’t have to be complicated – and have a passion for creating easy recipes that taste gourmet",
+     "sameAs": [
+      "https://joyfoodsunshine.com/about-laura/"
+     ]
+    },
+    {
+     "@type": "Question",
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1625436116770",
+     "position": 1,
+     "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1625436116770",
+     "name": "How do you make gooey chocolate chip cookies? ",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The trick to making this best chocolate chip cookie recipe gooey is to not over-bake them. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1625436128177",
+     "position": 2,
+     "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1625436128177",
+     "name": "Why do cookies spread &amp; flatten?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "There are a few main reasons for this that I have found in my experience:<br/>1) <strong>Expired leavening agents. </strong>If your baking soda or baking powder are past their prime, your chocolate chip cookies will likely flatten and spread. Even if the date on the container checks out, it still might not be good. That would be the first place I would start. <br/><strong>How to test if your baking soda is active:</strong> Combine 1/2 cup of hot water, 1/4 teaspoon vinegar and 1/4 tsp of baking soda. When you add the baking soda a reaction should take place immediately. If not, then you need new baking soda.<br/><strong>How to test if your baking powder is active: </strong>Add  1/2 tsp of baking powder to 1/2 cup of hot water. It should bubble immediately. A reaction should take place immediately. If not, then you need new baking powder.<br/>2) <strong>Over-mixing. </strong>If you over-mix the ingredients in this best chocolate chip cookie recipe you may end up with flat cookies.<br/>3) <strong>Ingredients are too warm.</strong> Sometimes over-mixing can also lead to your ingredients becoming too warm. If you notice this happening, you <em>can</em> chill the dough before baking to return the batter to room temperature.<br/>4) <strong>Incorrect oven temperature. </strong>I recommend baking with an electric convection oven. If your cookies and other baked goods are not turning out properly, invest in a cheap oven thermometer to check the temperature. If your oven is baking too hot or too cold, then the cookies will not turn out well.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1625436171331",
+     "position": 3,
+     "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1625436171331",
+     "name": "Why didn't my cookies flatten? ",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "If your cookies didn't flatten, here are a few things that could've been the problem. I have never had this happen to me in 10 years, so here are my educated guesses...<br/>1) The <strong>ingredients/cookie dough was too cold.</strong> Cold dough doesn't spread as well as room temperature dough.<br/>2) You <strong>accidentally used too much flour.</strong> Be sure to use a measuring cup made for dry ingredients (not a pyrex liquid measuring cup), and measure the flour correctly by scooping and leveling.<br/>3) <strong>The oven temperature is incorrect.</strong> I recommend using an<a href=\"https://amzn.to/31SQB4F\" target=\"_blank\" rel=\"noreferrer noopener\"> oven thermometer</a> to check the temperature of your oven (it's only $7), because it can often be different than the reading it gives on the display or what the dial is set at.<br/>4) <strong>The butter/sugar mixture wasn't fully creamed. </strong>Try creaming the butter and sugar together for longer.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1625436565075",
+     "position": 4,
+     "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1625436565075",
+     "name": "Can you bake chocolate chip cookie dough from frozen? ",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "I have tested baking this recipe from frozen more times than I can even count. I have gotten the best results when I place the dough on a parchment lined baking sheet.<br/>Then, preheat the oven to 350 degrees Fahrenheit (ONLY if you are baking the <em><strong>frozen dough)</strong></em> and put the cookies in the oven in the beginning of the preheating time. Set the timer for 15 minutes and remove the cookies after 15 minutes. The top will look a little more brown than usual, but they will still taste amazing.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1706970732418",
+     "position": 5,
+     "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1706970732418",
+     "name": "Can I halve this recipe?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, this recipe halves easily. Simply decrease the ingredients by half and the recipe will make 18 cookies. Or, try this recipe for <a href=\"https://joyfoodsunshine.com/small-batch-chocolate-chip-cookies/\">small batch chocolate chip cookies </a>that makes 8 cookies, or even smaller, make my <a href=\"https://joyfoodsunshine.com/mug-cookie/\" type=\"post\" id=\"110614\">mug cookie recipe!</a>",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1734964809435",
+     "position": 6,
+     "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1734964809435",
+     "name": "Can I add nuts to this recipe?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, you can add walnuts or pecans with great success. Simply decrease the amount of chocolate chips slightly to accommodate the extra nuts. See these recipes: <a href=\"https://joyfoodsunshine.com/chocolate-chip-walnut-cookies/\">Chocolate Chip Walnut Cookies</a> and <a href=\"https://joyfoodsunshine.com/pecan-chocolate-chip-cookies/\">Pecan Chocolate Chip Cookies </a>for the ratios! ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1734964893337",
+     "position": 7,
+     "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1734964893337",
+     "name": "Does 1 cup of flour weight 120 grams?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "This is one of the most-asked questions I receive, and it's a complicated one to answer. While 120 grams is the \"accepted\" value for 1 cup of flour. If you measure flour like most people do (scoop and level), then 1 cup rarely (if ever) weighs that amount. It typically ranges from 130-140 g. For me, it's always 135 grams. So, the metric measurements in this recipe are exact (based on 1 cup of flour really being around 135 g). I made 10 batches using 410 grams of flour and they all came out perfectly. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1779970977033",
+     "position": 8,
+     "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1779970977033",
+     "name": "Can I put the dough in the refrigerator and bake the next day?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, I do this <em>all the time</em>. You can make the dough and store it in an airtight container in the refrigerator for up to 3 days. Bake according to the recipe instructions, although if the dough is cold you may need to add 1-2 minutes to the baking time! ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1780836762529",
+     "position": 9,
+     "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#faq-question-1780836762529",
+     "name": "Can I make this recipe into bars or a cookie cake?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes! Follow my <a href=\"https://joyfoodsunshine.com/chocolate-chip-cookie-bars/\" type=\"post\" id=\"18752\">chocolate chip cookie bars recipe</a> or make my <a href=\"https://joyfoodsunshine.com/chocolate-chip-cookie-cake/\" type=\"post\" id=\"26301\">chocolate chip cookie cake recipe </a>- both are adapted from this chocolate chip cookie recipe so you know they're good!",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Recipe",
+     "name": "The Best Chocolate Chip Cookie Recipe Ever",
+     "author": {
+      "@id": "https://joyfoodsunshine.com/#/schema/person/26aa1eec196fcfdeab13ab7a9999d220"
+     },
+     "description": "This is the best chocolate chip cookie recipe ever. No funny ingredients, no chilling time, etc. Just a simple, straightforward, amazingly delicious, doughy yet still fully cooked, chocolate chip cookie that turns out perfectly every single time!&nbsp;",
+     "datePublished": "2018-02-11T04:00:40+00:00",
+     "image": [
+      "https://joyfoodsunshine.com/wp-content/uploads/2016/01/best-chocolate-chip-cookies-recipe-ever-no-chilling-1.jpg",
+      "https://joyfoodsunshine.com/wp-content/uploads/2016/01/best-chocolate-chip-cookies-recipe-ever-no-chilling-1-500x500.jpg",
+      "https://joyfoodsunshine.com/wp-content/uploads/2016/01/best-chocolate-chip-cookies-recipe-ever-no-chilling-1-500x375.jpg",
+      "https://joyfoodsunshine.com/wp-content/uploads/2016/01/best-chocolate-chip-cookies-recipe-ever-no-chilling-1-480x270.jpg"
+     ],
+     "video": {
+      "name": "The Best Chocolate Chip Cookie Recipe",
+      "description": "This is the best chocolate chip cookie recipe ever. No funny ingredients, no chilling, etc. Just a simple, straightforward, amazingly delicious, doughy yet still fully cooked, chocolate chip cookie that turns out perfectly every single time!",
+      "thumbnailUrl": "https://content.jwplatform.com/thumbs/ktnRiTlu-720.jpg",
+      "contentUrl": "https://content.jwplatform.com/videos/ktnRiTlu.mp4",
+      "uploadDate": "2018-10-05T00:00:00.000Z",
+      "@type": "VideoObject"
+     },
+     "recipeYield": [
+      "36",
+      "36 cookies"
+     ],
+     "prepTime": "PT10M",
+     "cookTime": "PT8M",
+     "totalTime": "PT30M",
+     "recipeIngredient": [
+      "1 cup salted butter (softened)",
+      "1 cup granulated sugar",
+      "1 cup light brown sugar (packed)",
+      "2 teaspoons pure vanilla extract",
+      "2 large eggs",
+      "3 cups all-purpose flour",
+      "1 teaspoon baking soda",
+      "½ teaspoon baking powder",
+      "1 teaspoon sea salt",
+      "2 cups chocolate chips ((12 oz))"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Preheat oven to 375 degrees Fahrenheit (190 degrees Celsius). Line three baking sheets with parchment paper and set aside.",
+       "name": "Preheat oven to 375 degrees Fahrenheit (190 degrees Celsius). Line three baking sheets with parchment paper and set aside.",
+       "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#wprm-recipe-8678-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "In a medium bowl mix flour, baking soda, baking powder and salt. Set aside.",
+       "name": "In a medium bowl mix flour, baking soda, baking powder and salt. Set aside.",
+       "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#wprm-recipe-8678-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Cream together butter and sugars until combined.",
+       "name": "Cream together butter and sugars until combined.",
+       "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#wprm-recipe-8678-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Beat in eggs and vanilla until light (about 1 minute).",
+       "name": "Beat in eggs and vanilla until light (about 1 minute).",
+       "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#wprm-recipe-8678-step-0-3"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Mix in the dry ingredients until combined.",
+       "name": "Mix in the dry ingredients until combined.",
+       "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#wprm-recipe-8678-step-0-4"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add chocolate chips and mix well.",
+       "name": "Add chocolate chips and mix well.",
+       "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#wprm-recipe-8678-step-0-5"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Roll 2-3 Tablespoons (depending on how large you like your cookies) of dough at a time into balls and place them evenly spaced on your prepared cookie sheets.",
+       "name": "Roll 2-3 Tablespoons (depending on how large you like your cookies) of dough at a time into balls and place them evenly spaced on your prepared cookie sheets.",
+       "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#wprm-recipe-8678-step-0-6"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Bake in preheated oven for approximately 8-10 minutes. Take them out when they are just barely starting to turn brown.",
+       "name": "Bake in preheated oven for approximately 8-10 minutes. Take them out when they are just barely starting to turn brown.",
+       "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#wprm-recipe-8678-step-0-7"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Let them sit on the baking pan for 5 minutes before removing to cooling rack.",
+       "name": "Let them sit on the baking pan for 5 minutes before removing to cooling rack.",
+       "url": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#wprm-recipe-8678-step-0-8"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.99",
+      "ratingCount": "14516",
+      "reviewCount": "7"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "HANDS DOWN. THE BEST COOKIE I'VE EVER MADE!! \r\nI have tried a few other chocolate chip cookie recipes and was very disappointed. So I literally googled the bars chocolate chip cookies on the internet and stumbled upon this. Everyone raves about them, I make them all the time now. I don't ever buy store bought cookies anymore. You have to try these. Also I use giradell white chocolate chips and they are next level. I also make 1/2 the batch with added coconut flakes and pecans. Fabulous just simply fabulous. Oh disclaimer.. the recipe says it yields 36 cookies. But I end up with about 64 Everytime. It makes a lot of cookies. I do use a cookie scoop as well so that my cookies are uniform.",
+       "author": {
+        "@type": "Person",
+        "name": "SHANNON L BOST"
+       },
+       "datePublished": "2026-08-12"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Wow... it never ceases to amaze me how people just choose rudeness for no reason. \r\n\r\nThis recipe is 10/10, and my family and friends think I am an expert baker now. I have made this loads of times, even subbing out the egg for applesauce or banana for my vegetarian people and it still crushes every time! \r\n\r\nIt does sound like you need to upgrade your oven along with your attitude, Kit.\r\n\r\nLaura, you're an all-star. LOVE your storytelling. Thank you for sharing this recipe with us.",
+       "author": {
+        "@type": "Person",
+        "name": "Serena"
+       },
+       "datePublished": "2026-08-12"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Been using this recipe for so long and it truly is the best, most perfectly balanced chocolate chip cookie! As a mom of almost 4 littles I'm inspired by you, Laura!",
+       "author": {
+        "@type": "Person",
+        "name": "Sara"
+       },
+       "datePublished": "2026-08-12"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I will say this only once: THESE ARE INSANELY DELICIOUS.",
+       "author": {
+        "@type": "Person",
+        "name": "JUDITH A SWEENEY"
+       },
+       "datePublished": "2026-08-12"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "THANK YOU....SO MUCH! I am 68 yrs old and always just used the recipe on bag of the chips. They were always good, but flat. \r\nThese however, are amazing! I followed instructions exactly as you printed them and they are the best ever! Look just like yours above. This is now in my cookie recipe book forever! Family loves them!",
+       "author": {
+        "@type": "Person",
+        "name": "Melissa"
+       },
+       "datePublished": "2026-08-12"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "The best cookies. Everytime I make them people ask for the recipe. Truly the best!! My go to.",
+       "author": {
+        "@type": "Person",
+        "name": "Kara"
+       },
+       "datePublished": "2026-08-11"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "10/10 brought it to a family function and received rave reviews!",
+       "author": {
+        "@type": "Person",
+        "name": "Rachel"
+       },
+       "datePublished": "2026-08-10"
+      }
+     ],
+     "recipeCategory": [
+      "Dessert"
+     ],
+     "recipeCuisine": [
+      "American"
+     ],
+     "suitableForDiet": [
+      "https://schema.org/VegetarianDiet"
+     ],
+     "keywords": "best chocolate chip cookie reicpe, best chocolate chip cookies, chocolate chip cookie recipe, chocolate chip cookies, chocolate chip cookies no chilling, easy chocolate chip cookie recipe",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "servingSize": "1 cookie",
+      "calories": "183 kcal",
+      "carbohydrateContent": "26 g",
+      "proteinContent": "2 g",
+      "fatContent": "8 g",
+      "cholesterolContent": "27 mg",
+      "fiberContent": "1 g",
+      "sugarContent": "18 g",
+      "saturatedFatContent": "5 g",
+      "sodiumContent": "153 mg"
+     },
+     "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#recipe",
+     "isPartOf": {
+      "@id": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#article"
+     },
+     "mainEntityOfPage": "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/"
+    }
+   ]
+  }
+ ]
+}

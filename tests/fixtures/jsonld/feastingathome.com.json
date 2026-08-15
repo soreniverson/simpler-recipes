@@ -1,0 +1,482 @@
+{
+ "url": "https://www.feastingathome.com/kale-salad/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=str:\"6\"",
+  "author=dict",
+  "prep=\"PT40M\" cook=\"PT30M\" total=\"PT1H10M\"",
+  "ing=list23",
+  "plugins=TastyRecipes,AMP"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.feastingathome.com/kale-salad/#article",
+     "isPartOf": {
+      "@id": "https://www.feastingathome.com/kale-salad/"
+     },
+     "author": {
+      "name": "Tonia Schemmel",
+      "@id": "https://www.feastingathome.com/#/schema/person/6b4e8d033be841fcd8d7ff78f2e37c70"
+     },
+     "headline": "Creamy Kale Salad",
+     "datePublished": "2023-04-07T07:19:47+00:00",
+     "dateModified": "2026-01-30T20:18:14+00:00",
+     "wordCount": 922,
+     "commentCount": 18,
+     "publisher": {
+      "@id": "https://www.feastingathome.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.feastingathome.com/kale-salad/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.feastingathome.com/wp-content/uploads/2023/04/Kale-Salad-8.jpg",
+     "articleSection": [
+      "30-Minute Meals",
+      "Energizing Recipes",
+      "Entertaining",
+      "Fall Recipes",
+      "Gluten-Free",
+      "Healthy Recipes",
+      "Holiday Recipes",
+      "Low-Carb",
+      "Mediterranean Recipes",
+      "Potluck Recipes",
+      "Quick &amp; Easy Recipes",
+      "Salad Recipes",
+      "Spring Recipes",
+      "Summer Recipes",
+      "Vegetable Recipes",
+      "Vegetarian Recipes",
+      "Winter Recipes",
+      "Year Round"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.feastingathome.com/kale-salad/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": [
+      "WebPage",
+      "FAQPage"
+     ],
+     "@id": "https://www.feastingathome.com/kale-salad/",
+     "url": "https://www.feastingathome.com/kale-salad/",
+     "name": "Creamy Kale Salad | Feasting At Home",
+     "isPartOf": {
+      "@id": "https://www.feastingathome.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.feastingathome.com/kale-salad/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.feastingathome.com/kale-salad/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.feastingathome.com/wp-content/uploads/2023/04/Kale-Salad-8.jpg",
+     "datePublished": "2023-04-07T07:19:47+00:00",
+     "dateModified": "2026-01-30T20:18:14+00:00",
+     "description": "A delicious Kale Salad with Buttermilk Dressing, tamed red onions, fresh herbs and crunchy addicting salad topper- healthy and nutrient dense!",
+     "breadcrumb": {
+      "@id": "https://www.feastingathome.com/kale-salad/#breadcrumb"
+     },
+     "mainEntity": [
+      {
+       "@id": "https://www.feastingathome.com/kale-salad/#faq-question-1680535587651"
+      },
+      {
+       "@id": "https://www.feastingathome.com/kale-salad/#faq-question-1680800792299"
+      },
+      {
+       "@id": "https://www.feastingathome.com/kale-salad/#faq-question-1680800934510"
+      },
+      {
+       "@id": "https://www.feastingathome.com/kale-salad/#faq-question-1680802394115"
+      }
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.feastingathome.com/kale-salad/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.feastingathome.com/kale-salad/#primaryimage",
+     "url": "https://www.feastingathome.com/wp-content/uploads/2023/04/Kale-Salad-8.jpg",
+     "contentUrl": "https://www.feastingathome.com/wp-content/uploads/2023/04/Kale-Salad-8.jpg",
+     "width": 1200,
+     "height": 1800,
+     "caption": "Full of healthy texture and flavor, this nutrient-dense Kale Salad is enhanced with creamy buttermilk dressing, tamed red onions, and an addicting crunchy quinoa salad toppe"
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.feastingathome.com/kale-salad/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.feastingathome.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "By Meal Type",
+       "item": "https://www.feastingathome.com/category/by-meal-type/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Salad Recipes",
+       "item": "https://www.feastingathome.com/category/by-meal-type/salad/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Creamy Kale Salad"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.feastingathome.com/#website",
+     "url": "https://www.feastingathome.com/",
+     "name": "Feasting At Home",
+     "description": "Where healthy meets delicious!",
+     "publisher": {
+      "@id": "https://www.feastingathome.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.feastingathome.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.feastingathome.com/#organization",
+     "name": "Feasting at Home Blog",
+     "url": "https://www.feastingathome.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.feastingathome.com/#/schema/logo/image/",
+      "url": "https://www.feastingathome.com/wp-content/uploads/2023/03/FEASTING-AT-HOME.jpg",
+      "contentUrl": "https://www.feastingathome.com/wp-content/uploads/2023/03/FEASTING-AT-HOME.jpg",
+      "width": 200,
+      "height": 200,
+      "caption": "Feasting at Home Blog"
+     },
+     "image": {
+      "@id": "https://www.feastingathome.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/feastingathome",
+      "https://x.com/feastingathome",
+      "https://instagram.com/feastingathome/",
+      "https://www.pinterest.com/feastingathome/"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.feastingathome.com/#/schema/person/6b4e8d033be841fcd8d7ff78f2e37c70",
+     "name": "Tonia Schemmel",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://secure.gravatar.com/avatar/9cbf54bd10b34386fc02f2bafe0b13fcb733a3933a81de8791bffa76bdeb62c4?s=96&d=blank&r=g",
+      "url": "https://secure.gravatar.com/avatar/9cbf54bd10b34386fc02f2bafe0b13fcb733a3933a81de8791bffa76bdeb62c4?s=96&d=blank&r=g",
+      "contentUrl": "https://secure.gravatar.com/avatar/9cbf54bd10b34386fc02f2bafe0b13fcb733a3933a81de8791bffa76bdeb62c4?s=96&d=blank&r=g",
+      "caption": "Tonia Schemmel"
+     },
+     "description": "Tonia Schemmel is a chef and recipe developer for Feasting at Home blog. She’s a former restaurant owner (Mizuna) and caterer living in the San Juan Islands.",
+     "sameAs": [
+      "https://www.feastingathome.com/tonia-schemmel/"
+     ],
+     "knowsAbout": [
+      "fermenting",
+      "sourdough baking",
+      "healthy recipes",
+      "weeknight dinners",
+      "comfort food",
+      "baking recipes",
+      "vegetarian recipes"
+     ],
+     "jobTitle": "Recipe Developer",
+     "worksFor": "Feasting at Home",
+     "url": "https://www.feastingathome.com/tonia-schemmel/"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://www.feastingathome.com/kale-salad/#faq-question-1680535587651",
+     "position": 1,
+     "url": "https://www.feastingathome.com/kale-salad/#faq-question-1680535587651",
+     "name": "How do you get the bitterness out of kale?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Chop kale first and then rinse under cool water.<br/>Massaging kale with olive oil also gets some of the harsher flavors of kale out.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://www.feastingathome.com/kale-salad/#faq-question-1680800792299",
+     "position": 2,
+     "url": "https://www.feastingathome.com/kale-salad/#faq-question-1680800792299",
+     "name": "Why is kale better for you than lettuce?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kale is packed with more nutrients and a lot more fiber. High in vitamins c and k, potassium and calcium.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://www.feastingathome.com/kale-salad/#faq-question-1680800934510",
+     "position": 3,
+     "url": "https://www.feastingathome.com/kale-salad/#faq-question-1680800934510",
+     "name": "How long does massaged kale last in the fridge?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Up to 3 or 4 days without dressing. About 2 days with dressing.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://www.feastingathome.com/kale-salad/#faq-question-1680802394115",
+     "position": 4,
+     "url": "https://www.feastingathome.com/kale-salad/#faq-question-1680802394115",
+     "name": "How do you tame raw red onions?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Soak raw slices in water and baking soda to really take the pungent bitterness out. This neutralizes the acid making them more alkaline and mild. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@context": "https://schema.org/",
+     "@type": "Recipe",
+     "name": "Creamy Kale Salad Recipe",
+     "description": "Full of healthy texture and flavor, this nutrient-dense Kale Salad with creamy buttermilk dressing and tamed red onions is sprinkled with an addicting crunchy salad topper.",
+     "author": {
+      "@type": "Person",
+      "name": "Tonia | Feasting at Home"
+     },
+     "keywords": "Creamy kale salad, kale salad, kale salad recipe, kale salad buttermilk dressing, kale salad creamy dressing",
+     "image": [
+      "https://www.feastingathome.com/wp-content/uploads/2023/04/Kale-Salad-10-225x225.jpg",
+      "https://www.feastingathome.com/wp-content/uploads/2023/04/Kale-Salad-10-260x195.jpg",
+      "https://www.feastingathome.com/wp-content/uploads/2023/04/Kale-Salad-10-320x180.jpg",
+      "https://www.feastingathome.com/wp-content/uploads/2023/04/Kale-Salad-10.jpg"
+     ],
+     "url": "https://www.feastingathome.com/kale-salad/",
+     "recipeIngredient": [
+      "1/2 cup buttermilk",
+      "1 tablespoon olive oil",
+      "1 tablespoon apple cider vinegar",
+      "2 tablespoons mayo (or greek yogurt)",
+      "1 tablespoon dijon (or whole-grain mustard)",
+      "1/4-1/2  teaspoon salt",
+      "1/4 teaspoon pepper",
+      "1/2 small red onion, sliced in thin rounds",
+      "1 cup water",
+      "1 tablespoon baking soda ",
+      "10-12 ounces lacinato kale, destem and cut into 1-2 inch pieces",
+      "2 tablespoon olive oil",
+      "2 tablespoons lemon juice",
+      "1/4 teaspoon salt",
+      "1/2 cup fresh dill, loosely packed",
+      "1 cup quinoa, cooked",
+      "2 tablespoons olive oil",
+      "1/2 teaspoon salt",
+      "1/2 cup sunflower seeds",
+      "1/2 cup pumpkin seeds",
+      "1/4 cup hempseeds",
+      "1/4 cup sesame seeds",
+      "1 tablespoon tamari or braggs (optional)"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Whisk together buttermilk, olive oil, apple cider vinegar, mayo, mustard, salt and pepper. Chill this while you make the rest of the salad. Or better yet make a day or two ahead.",
+       "name": "Dressing",
+       "url": "https://www.feastingathome.com/kale-salad/#instruction-step-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Place water and baking soda in a bowl with the thinly sliced red onion rings and soak for 15 minutes. (This will neutralize and remove the pungent bitter bite.) Rinse onion slices really well with water to clean off the baking soda residue.",
+       "name": "Red Onions",
+       "url": "https://www.feastingathome.com/kale-salad/#instruction-step-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "In a salad serving bowl, combine kale with olive oil, lemon juice, and salt. Massage with your hands to work the liquids and salt into the leaves, about 5 minutes or more if you want it really tender. (Lacinato kale is known to be more tender. If you use a different kale massage longer for mature kale, less for baby leaves.)",
+       "name": "Kale",
+       "url": "https://www.feastingathome.com/kale-salad/#instruction-step-3"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Toss cooked quinoa (thoroughly cooled- see notes) with olive oil and salt. Spread onto two sheet pans in thin layers. Bake at 350F for about 30 minutes, stirring every 10 minutes.",
+       "name": "Crunchy Quinoa Topper",
+       "url": "https://www.feastingathome.com/kale-salad/#instruction-step-4"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "In a bowl, mix together sunflower seeds, pumpkin seeds, hempseeds, sesame seeds with 1 tablespoon tamari or Braggs. Spread onto a sheet pan and bake for 10 minutes or until desired toastiness. After the seeds completely cool, mix with the crispy quinoa and store in an airtight container up to a month.",
+       "url": "https://www.feastingathome.com/kale-salad/#instruction-step-5"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Drizzle in about 1/2 of the dressing over the kale, taste and adjust salt, pepper and add more dressing (we like it saucy, but make it to your preference!). Layer on onions and dill. Top with 1/2 cup or more of quinoa crunchies. ",
+       "name": "Assemble",
+       "url": "https://www.feastingathome.com/kale-salad/#instruction-step-6"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Reserve the crunchy quinoa topper for sprinkling on when serving immediately.",
+       "url": "https://www.feastingathome.com/kale-salad/#instruction-step-7"
+      }
+     ],
+     "prepTime": "PT40M",
+     "cookTime": "PT30M",
+     "totalTime": "PT1H10M",
+     "recipeYield": "6",
+     "recipeCategory": "salad",
+     "cookingMethod": "tossed",
+     "recipeCuisine": "American",
+     "suitableForDiet": "VegetarianDiet",
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "reviewCount": "5",
+      "ratingValue": "5"
+     },
+     "nutrition": {
+      "servingSize": "1 cup without salad topper",
+      "calories": "158 calories",
+      "sugarContent": "3.8 g",
+      "sodiumContent": "339.7 mg",
+      "fatContent": "10.3 g",
+      "saturatedFatContent": "1.5 g",
+      "transFatContent": "0 g",
+      "carbohydrateContent": "9.9 g",
+      "fiberContent": "2.4 g",
+      "proteinContent": "9 g",
+      "cholesterolContent": "3.2 mg",
+      "@type": "nutritionInformation"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "author": {
+        "@type": "Person",
+        "name": "Amy"
+       },
+       "datePublished": "2023-04-09",
+       "reviewBody": "Love this salad. Relatively simple but so delicious.  Specially the crunchy salad topping.  It’s going in our regular rotation."
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "author": {
+        "@type": "Person",
+        "name": "Fern"
+       },
+       "datePublished": "2023-04-17",
+       "reviewBody": "I have eaten this salad for the past 3 days and I have to say it gets better with time. The kale relaxes and absorbs the luscious dressing. I really like that you can make all the components ahead, makes it so easy to put together! So good!!"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "author": {
+        "@type": "Person",
+        "name": "Danni Eldred"
+       },
+       "datePublished": "2024-11-02",
+       "reviewBody": "Great recipe.  The buttermilk dressing is very nice (I used mayo because I didn't want to open a new container of Greek yogurt--glad I did, as it was tasty).  The large amount of dill goes so nicely with the dressing.  Lovely colors and textures.  I will make it again."
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "author": {
+        "@type": "Person",
+        "name": "Herta"
+       },
+       "datePublished": "2026-01-13",
+       "reviewBody": "Surprisingly complex and moreish! I mixed the onion with the lemon juice and oil before adding the kale, so no need for the baking soda step. Didn't have fresh dill, so mixed dried with the dressing; flavors melded well. Don't skip the quinoa-nut topper, it's the star!"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "author": {
+        "@type": "Person",
+        "name": "Brianna"
+       },
+       "datePublished": "2026-02-28",
+       "reviewBody": "This is so good. Since I didn’t have buttermilk, I used sour cream, some dill pickle mayo, and almond milk to thin. \r\n\r\nI realize it’s a riff on the recipe based on what I had in my fridge, but the flavors work and this is what’s so fun about cooking!"
+      }
+     ],
+     "datePublished": "2023-04-07",
+     "@id": "https://www.feastingathome.com/kale-salad/#recipe",
+     "isPartOf": {
+      "@id": "https://www.feastingathome.com/kale-salad/#article"
+     },
+     "mainEntityOfPage": "https://www.feastingathome.com/kale-salad/"
+    }
+   ]
+  }
+ ]
+}

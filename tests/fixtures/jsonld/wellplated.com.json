@@ -1,0 +1,414 @@
+{
+ "url": "https://www.wellplated.com/crockpot-chicken-tacos/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list2:[\"4\", \"4 servings\"]",
+  "author=dict",
+  "prep=\"PT10M\" cook=\"PT185M\" total=\"PT195M\"",
+  "ing=list10",
+  "plugins=WPRM,MediavineCreate"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.wellplated.com/crockpot-chicken-tacos/#article",
+     "isPartOf": {
+      "@id": "https://www.wellplated.com/crockpot-chicken-tacos/"
+     },
+     "author": {
+      "@id": "https://www.wellplated.com/erin-clarke/#person"
+     },
+     "headline": "Crockpot Chicken Tacos",
+     "datePublished": "2024-03-27T10:05:00+00:00",
+     "wordCount": 980,
+     "commentCount": 14,
+     "publisher": {
+      "@id": "https://www.wellplated.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.wellplated.com/crockpot-chicken-tacos/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.wellplated.com/wp-content/uploads/2024/03/Best-Crockpot-Chicken-Tacos.jpg",
+     "articleSection": [
+      "Any Season",
+      "Budget Friendly",
+      "Chicken",
+      "Cinco de Mayo",
+      "Dairy Free",
+      "Freezer-Friendly",
+      "Game Day",
+      "Gluten Free",
+      "Healthy Dinners",
+      "Kid-Friendly",
+      "Low Carb",
+      "Main Dishes",
+      "Mexican",
+      "Recipes",
+      "Recipes By Cuisine",
+      "Recipes by Diet",
+      "Recipes by Occasion",
+      "Recipes by Season",
+      "Slow Cooker"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.wellplated.com/crockpot-chicken-tacos/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.wellplated.com/crockpot-chicken-tacos/",
+     "url": "https://www.wellplated.com/crockpot-chicken-tacos/",
+     "name": "Crockpot Chicken Tacos &#8211; WellPlated.com",
+     "isPartOf": {
+      "@id": "https://www.wellplated.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.wellplated.com/crockpot-chicken-tacos/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.wellplated.com/crockpot-chicken-tacos/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.wellplated.com/wp-content/uploads/2024/03/Best-Crockpot-Chicken-Tacos.jpg",
+     "datePublished": "2024-03-27T10:05:00+00:00",
+     "description": "Chicken, jarred salsa and a few other simple ingredients come together to make these easy crockpot chicken tacos. Just 10 minutes of prep!",
+     "breadcrumb": {
+      "@id": "https://www.wellplated.com/crockpot-chicken-tacos/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.wellplated.com/crockpot-chicken-tacos/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.wellplated.com/crockpot-chicken-tacos/#primaryimage",
+     "url": "https://www.wellplated.com/wp-content/uploads/2024/03/Best-Crockpot-Chicken-Tacos.jpg",
+     "contentUrl": "https://www.wellplated.com/wp-content/uploads/2024/03/Best-Crockpot-Chicken-Tacos.jpg",
+     "width": 1194,
+     "height": 1548,
+     "caption": "Three crockpot chicken tacos filled with shredded chicken, shredded cheese, avocado chunks, fresh cilantro, and lime wedges on a gray-rimmed plate. Some cilantro and food are scattered on the white surface nearby."
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.wellplated.com/crockpot-chicken-tacos/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.wellplated.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Recipes",
+       "item": "https://www.wellplated.com/category/recipes-by-type/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Slow Cooker",
+       "item": "https://www.wellplated.com/category/recipes-by-type/slow-cooker/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Crockpot Chicken Tacos"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.wellplated.com/#website",
+     "url": "https://www.wellplated.com/",
+     "name": "Well Plated",
+     "description": "Easy, Healthy, Family-Friendly Recipes",
+     "publisher": {
+      "@id": "https://www.wellplated.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.wellplated.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.wellplated.com/#organization",
+     "name": "Well Plated",
+     "url": "https://www.wellplated.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.wellplated.com/#/schema/logo/image/",
+      "url": "https://www.wellplated.com/wp-content/uploads/2019/04/Well-Plated-Logo-Square.jpg",
+      "contentUrl": "https://www.wellplated.com/wp-content/uploads/2019/04/Well-Plated-Logo-Square.jpg",
+      "width": 900,
+      "height": 900,
+      "caption": "Well Plated"
+     },
+     "image": {
+      "@id": "https://www.wellplated.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "http://www.facebook.com/wellplated",
+      "https://x.com/wellplated",
+      "http://www.instagram.com/wellplated",
+      "https://www.linkedin.com/in/erin-clarke-36386350",
+      "http://www.pinterest.com/wellplated",
+      "https://youtube.com/c/wellplated",
+      "https://www.tiktok.com/@wellplated",
+      "https://wellplated.substack.com/"
+     ],
+     "description": "Well Plated is a trusted resource for home cooks and busy families who are eager to eat wholesome food, but who don’t want to give up their favorite dishes, spend hours cooking, or buy pricey, fussy ingredients. The recipes are developed by successful two-time cookbook author Erin Clarke and go through a rigorous testing process so you can feel confident they work. Well Plated recipes are meant for cooks of all levels: kitchen novices, families, young kids, and seasoned-cooks can all find something to love. On Well Plated, you’ll find hundreds of easy-to-follow, from-scratch recipes from easy dinners, to breakfasts, to sides, to desserts, appetizers, drinks, and more. In addition to recipes, Erin shares helpful kitchen tips, step-by-step photos, and video tutorials that will give you confidence in the kitchen. She has millions of followers on social media who have fallen in love for her genuine personality and thoughtful, realistic approach to cooking.",
+     "email": "hello@wellplated.com",
+     "legalName": "Well Plated by Erin",
+     "foundingDate": "2012-05-31"
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.wellplated.com/erin-clarke/#person",
+     "name": "Erin Clarke",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.wellplated.com/wp-content/uploads/2025/10/cropped-About-Erin-Clarke-well-plated-96x96.jpg",
+      "url": "https://www.wellplated.com/wp-content/uploads/2025/10/cropped-About-Erin-Clarke-well-plated-96x96.jpg",
+      "contentUrl": "https://www.wellplated.com/wp-content/uploads/2025/10/cropped-About-Erin-Clarke-well-plated-96x96.jpg",
+      "caption": "Erin Clarke"
+     },
+     "description": "Hi, I’m Erin Clarke, cookbook author and the home cook behind Well Plated. I’ve helped millions of people cook healthier meals that actually taste amazing and sold over 200,000 books! I’m here to help you save time, dirty fewer dishes, and feel great about what you’re eating, without overthinking it. Welcome!",
+     "sameAs": [
+      "https://www.wellplated.com/erin-clarke/",
+      "https://www.facebook.com/wellplated/",
+      "https://www.instagram.com/wellplated/",
+      "https://www.pinterest.com/wellplated/",
+      "https://x.com/wellplated"
+     ],
+     "url": "https://www.wellplated.com/erin-clarke/"
+    },
+    {
+     "@type": "Recipe",
+     "name": "Crockpot Chicken Tacos",
+     "author": {
+      "@id": "https://www.wellplated.com/erin-clarke/#person"
+     },
+     "description": "Chicken, jarred salsa and a few other simple ingredients come together to make these easy crockpot chicken tacos. Just 10 minutes of prep!",
+     "datePublished": "2024-03-27T05:05:00+00:00",
+     "image": [
+      "https://www.wellplated.com/wp-content/uploads/2024/03/Best-Crockpot-Chicken-Tacos.jpg",
+      "https://www.wellplated.com/wp-content/uploads/2024/03/Best-Crockpot-Chicken-Tacos-500x500.jpg",
+      "https://www.wellplated.com/wp-content/uploads/2024/03/Best-Crockpot-Chicken-Tacos-500x375.jpg",
+      "https://www.wellplated.com/wp-content/uploads/2024/03/Best-Crockpot-Chicken-Tacos-480x270.jpg"
+     ],
+     "video": {
+      "name": "Crockpot Chicken Tacos Video",
+      "description": "Simple ingredients and 10 minutes of prep are all it tasks for this easy crockpot chicken tacos recipe. Salsa, spices, and lime juice make it the best!",
+      "thumbnailUrl": "https://content.jwplatform.com/thumbs/96gkW2AZ-720.jpg",
+      "contentUrl": "https://content.jwplatform.com/videos/96gkW2AZ.mp4",
+      "uploadDate": "2024-10-29T00:00:00.000Z",
+      "@type": "VideoObject"
+     },
+     "recipeYield": [
+      "4",
+      "4 servings"
+     ],
+     "prepTime": "PT10M",
+     "cookTime": "PT185M",
+     "totalTime": "PT195M",
+     "recipeIngredient": [
+      "2 pounds boneless, skinless chicken breasts or thighs",
+      "1  (16-ounce) jar prepared salsa",
+      "2 teaspoons ground chili powder",
+      "1 teaspoons ground cumin",
+      "1 teaspoon garlic powder",
+      "1 teaspoon onion powder",
+      "2 tablespoons freshly squeezed lime juice (from about 1 lime, plus additional for serving)",
+      "¼ cup chopped fresh cilantro (plus additional for serving)",
+      "Whole wheat or corn tortillas (for serving)",
+      "Toppings of choice: shredded cheddar cheese, avocado, shredded lettuce"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "In the bottom of a slow cooker, stir together the salsa, chili powder, cumin, garlic powder, onion powder and lime juice.",
+       "name": "Combine",
+       "url": "https://www.wellplated.com/crockpot-chicken-tacos/#wprm-recipe-142728-step-0-0",
+       "image": "https://www.wellplated.com/wp-content/uploads/2024/03/How-to-Make-Crockpot-Chicken-Tacos.jpg"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add the chicken breast, turning it to coat it in the salsa mixture. Spoon some of the salsa over the top.",
+       "name": "Add",
+       "url": "https://www.wellplated.com/crockpot-chicken-tacos/#wprm-recipe-142728-step-0-1",
+       "image": "https://www.wellplated.com/wp-content/uploads/2024/03/How-to-Make-Crockpot-Chicken-Tacos-1.jpg"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Cover and slow cook the chicken on low until the chicken is cooked registers 165°F on an instant read thermometer, 2 to 3 hours (note that slow cooker models can vary; check at the 90 minute-mark to gauge progress).",
+       "name": "Cook",
+       "url": "https://www.wellplated.com/crockpot-chicken-tacos/#wprm-recipe-142728-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "With two forks, shred the chicken directly in your slow cooker (or remove it to a plate to shred if that’s easier for you, then return to the slow cooker). Add the cilantro and stir to combine. Cover and let everything warm together for 5 minutes.",
+       "name": "Shred",
+       "url": "https://www.wellplated.com/crockpot-chicken-tacos/#wprm-recipe-142728-step-0-3",
+       "image": "https://www.wellplated.com/wp-content/uploads/2024/03/How-to-Make-Crockpot-Chicken-Tacos-2.jpg"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Warm the tortillas, either wrapped in a damp towel in the microwave or by lightly charring them over a gas stove. Fill with the chicken and add your toppings of choice.",
+       "name": "Assemble",
+       "url": "https://www.wellplated.com/crockpot-chicken-tacos/#wprm-recipe-142728-step-0-4",
+       "image": "https://www.wellplated.com/wp-content/uploads/2024/03/How-to-Make-Crockpot-Chicken-Tacos-3.jpg"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "6",
+      "reviewCount": "6"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "We absolutely loved it!  I made it exactly as written and it was delicious.  This is a definite keeper.",
+       "author": {
+        "@type": "Person",
+        "name": "Jean Brubeck"
+       },
+       "datePublished": "2026-03-01"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "A keeper! Excellent",
+       "author": {
+        "@type": "Person",
+        "name": "Diane"
+       },
+       "datePublished": "2024-08-22"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Absolutely delicious recipe - thank you for sharing !  Used Mateo’s mild salsa and 1.5 times the recipe and I have yummy left overs after feeding 6 hungry adults who all had seconds. I will pass this recipe on to my grown children - super easy recipe for school nights. I did have to cook it longer - maybe because the chicken breasts and salsa were cold out of the fridge.",
+       "author": {
+        "@type": "Person",
+        "name": "Jeanne"
+       },
+       "datePublished": "2024-07-27"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Turned out great and was a very simple recipe for my taco Monday. Working from home now, so the smell of taco’s cooking all day was quite nice as well. I’ll be making this dish often! Thanks",
+       "author": {
+        "@type": "Person",
+        "name": "Mandie"
+       },
+       "datePublished": "2024-04-01"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Was searching for a recipe for crock-pot chicken tacos, and stumbled across your website. What luck! There are so many recipes I want to try. Made this one today, and it was delicious (and amazingly easy). Both hubby and son approved, so it’s going in the keeper file. Thanks.",
+       "author": {
+        "@type": "Person",
+        "name": "Gemma"
+       },
+       "datePublished": "2024-03-30"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Insanely good. It’s easy and the whole family loves it. I like it best with the crispy taco shells made from the white corn tortillas and oil. With the leftovers I like to make chicken quesadillas. So good! Thank you, Erin.",
+       "author": {
+        "@type": "Person",
+        "name": "Nadia Ferrer"
+       },
+       "datePublished": "2024-03-27"
+      }
+     ],
+     "recipeCategory": [
+      "Dinner",
+      "Main Course"
+     ],
+     "recipeCuisine": [
+      "Mexican"
+     ],
+     "keywords": "best shredded chicken tacos recipe, crockpot shredded chicken tacos",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "servingSize": "1 (of 4)",
+      "calories": "302 kcal",
+      "carbohydrateContent": "10 g",
+      "proteinContent": "50 g",
+      "fatContent": "6 g",
+      "saturatedFatContent": "1 g",
+      "transFatContent": "0.03 g",
+      "cholesterolContent": "145 mg",
+      "fiberContent": "3 g",
+      "sugarContent": "5 g",
+      "unsaturatedFatContent": "3 g"
+     },
+     "@id": "https://www.wellplated.com/crockpot-chicken-tacos/#recipe",
+     "isPartOf": {
+      "@id": "https://www.wellplated.com/crockpot-chicken-tacos/#article"
+     },
+     "mainEntityOfPage": "https://www.wellplated.com/crockpot-chicken-tacos/"
+    }
+   ]
+  }
+ ]
+}

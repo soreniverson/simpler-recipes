@@ -1,0 +1,444 @@
+{
+ "url": "https://downshiftology.com/recipes/chicken-salad/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToSection]",
+  "img=list[str]",
+  "yield=list2:[\"6\", \"6 servings\"]",
+  "author=dict",
+  "prep=\"PT10M\" cook=\"PT15M\" total=\"PT25M\"",
+  "ing=list11",
+  "plugins=WPRM,MediavineCreate,AMP"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": [
+      "WebPage",
+      "FAQPage"
+     ],
+     "@id": "https://downshiftology.com/recipes/chicken-salad/",
+     "url": "https://downshiftology.com/recipes/chicken-salad/",
+     "name": "Ultimate Chicken Salad Recipe - Downshiftology",
+     "isPartOf": {
+      "@id": "https://downshiftology.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://downshiftology.com/recipes/chicken-salad/#primaryimage"
+     },
+     "image": {
+      "@id": "https://downshiftology.com/recipes/chicken-salad/#primaryimage"
+     },
+     "thumbnailUrl": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/10/Chicken-Salad-main.jpg",
+     "datePublished": "2026-04-02T05:52:14+00:00",
+     "dateModified": "2026-04-02T05:52:16+00:00",
+     "description": "This is everyone's favorite chicken salad! It's layered with fresh flavors, delicious textures, and is sure to be a potluck winner.",
+     "breadcrumb": {
+      "@id": "https://downshiftology.com/recipes/chicken-salad/#breadcrumb"
+     },
+     "mainEntity": [
+      {
+       "@id": "https://downshiftology.com/recipes/chicken-salad/#faq-question-1775059611024"
+      },
+      {
+       "@id": "https://downshiftology.com/recipes/chicken-salad/#faq-question-1775059620846"
+      },
+      {
+       "@id": "https://downshiftology.com/recipes/chicken-salad/#faq-question-1775059643300"
+      }
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://downshiftology.com/recipes/chicken-salad/"
+       ]
+      }
+     ],
+     "video": [
+      {
+       "@id": "https://downshiftology.com/recipes/chicken-salad/#video"
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://downshiftology.com/recipes/chicken-salad/#primaryimage",
+     "url": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/10/Chicken-Salad-main.jpg",
+     "contentUrl": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/10/Chicken-Salad-main.jpg",
+     "width": 1600,
+     "height": 1067,
+     "caption": "Best chicken salad recipe."
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://downshiftology.com/recipes/chicken-salad/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://downshiftology.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Recipes",
+       "item": "https://downshiftology.com/recipes/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Courses",
+       "item": "https://downshiftology.com/courses/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Salads",
+       "item": "https://downshiftology.com/courses/salads/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 5,
+       "name": "Ultimate Chicken Salad"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://downshiftology.com/#website",
+     "url": "https://downshiftology.com/",
+     "name": "Downshiftology",
+     "description": "Healthy eating, living and travel.",
+     "publisher": {
+      "@id": "https://downshiftology.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://downshiftology.com/?s={search_term_string}"
+       },
+       "query-input": "required name=search_term_string"
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://downshiftology.com/#organization",
+     "name": "Downshiftology",
+     "url": "https://downshiftology.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://downshiftology.com/#/schema/logo/image/",
+      "url": "https://downshiftology.com/wp-content/uploads/2023/06/Default-sharing-image.png",
+      "contentUrl": "https://downshiftology.com/wp-content/uploads/2023/06/Default-sharing-image.png",
+      "width": "1200",
+      "height": "630",
+      "caption": "Downshiftology"
+     },
+     "image": {
+      "@id": "https://downshiftology.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "http://www.facebook.com/downshiftology",
+      "https://twitter.com/downshiftology",
+      "http://www.instagram.com/downshiftology",
+      "https://www.linkedin.com/in/lisa-bryan-b0880a/",
+      "http://www.pinterest.com/downshiftology",
+      "http://www.youtube.com/c/downshiftology"
+     ]
+    },
+    {
+     "@type": "Question",
+     "@id": "https://downshiftology.com/recipes/chicken-salad/#faq-question-1775059611024",
+     "position": 1,
+     "url": "https://downshiftology.com/recipes/chicken-salad/#faq-question-1775059611024",
+     "name": "Can I swap the mayonnaise for yogurt?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, you can do that for a creamier touch.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://downshiftology.com/recipes/chicken-salad/#faq-question-1775059620846",
+     "position": 2,
+     "url": "https://downshiftology.com/recipes/chicken-salad/#faq-question-1775059620846",
+     "name": "If I can’t find tarragon, what other herbs work?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "While I do think fresh tarragon makes this recipe extra tasty, you could also use fresh chervil, basil, or dill. In a pinch, you could use dried tarragon (use about 1 teaspoon), though I do think fresh herb options are best.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://downshiftology.com/recipes/chicken-salad/#faq-question-1775059643300",
+     "position": 3,
+     "url": "https://downshiftology.com/recipes/chicken-salad/#faq-question-1775059643300",
+     "name": "Can you freeze chicken salad?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No, I don’t recommend it. Mayo-based dressings tend to separate and go a bit watery when they’re thawed. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Recipe",
+     "name": "Ultimate Chicken Salad Recipe",
+     "author": {
+      "@type": "Person",
+      "name": "Lisa Bryan"
+     },
+     "description": "This is everyone&#039;s favorite chicken salad! It&#039;s layered with fresh flavors, delicious textures, and is sure to be a potluck winner. Watch the video below to see how I make it in my kitchen!",
+     "datePublished": "2026-04-01T22:52:14+00:00",
+     "image": [
+      "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/10/Chicken-Salad-main.jpg",
+      "https://downshiftology.com/wp-content/uploads/2023/10/Chicken-Salad-main-500x500.jpg",
+      "https://downshiftology.com/wp-content/uploads/2023/10/Chicken-Salad-main-500x375.jpg",
+      "https://downshiftology.com/wp-content/uploads/2023/10/Chicken-Salad-main-480x270.jpg"
+     ],
+     "video": {
+      "name": "BEST CHICKEN SALAD RECIPE | easy & healthy",
+      "description": "Chicken salad is a classic salad recipe with diced chicken, creamy mayonnaise, crisp celery, green onion, sweet grapes, and fresh herbs. But there's a little something extra in my version that makes it the ultimate chicken salad - tarragon!\n\nThis recipe is easy, healthy, bright, flavorful, and will make any summer meal a breeze. Give it a try!\n\nPrintable Chicken Salad Recipe: https://downshiftology.com/recipes/chicken-salad/\n\nSign up for weekly emails (never miss a recipe!): https://mailchi.mp/downshiftology/youtube/\n\nJoin the private Facebook group of fellow Downshifters around the world: https://www.facebook.com/groups/downshiftologycommunity/\n\nPRODUCTS MENTIONED:\nWhite Pot: https://amzn.to/2AolCSv\nServing Bowl: https://bit.ly/3bALvvo\nInstant Read Thermometer: https://amzn.to/3cBo5Ya\n\nALWAYS IN MY KITCHEN:\nCounter Stools: http://bit.ly/2tUNvZG\nVitamix Blender: https://amzn.to/2NjFp75\nSpiralizer: https://amzn.to/2N37WRy \nTea Kettle: http://amzn.to/2uuNSMp\nUtensil Holder: http://bit.ly/2tVfGaH\nFlour Jars: http://bit.ly/2tV6C5y\nKnife Set: http://bit.ly/2tUGzMa\nCutting Board: https://amzn.to/2Vskgv9\nGlass Mixing Bowls: https://amzn.to/2L2hx6O\n\nFor everything else I use in my videos, check out the SHOP page on my website: https://downshiftology.com/shop\n\nThe music I use: https://bit.ly/2Ms5nF2 - Great music for YouTubers!\n\nBlouse (similar): https://bit.ly/3bCe1Nb\nJeans: http://bit.ly/32Fq7l5\nLinen Apron: http://bit.ly/2twA32E\n\nDisclaimer: product links may include affiliate links.\n#chickensalad #chickenrecipes #saladrecipes",
+      "uploadDate": "2020-05-15T15:59:12+00:00",
+      "duration": "PT7M2S",
+      "thumbnailUrl": "https://i.ytimg.com/vi/cSAGdGSdE6k/hqdefault.jpg",
+      "embedUrl": "https://www.youtube.com/embed/cSAGdGSdE6k?feature=oembed",
+      "contentUrl": "https://www.youtube.com/watch?v=cSAGdGSdE6k",
+      "@type": "VideoObject"
+     },
+     "recipeYield": [
+      "6",
+      "6 servings"
+     ],
+     "prepTime": "PT10M",
+     "cookTime": "PT15M",
+     "totalTime": "PT25M",
+     "recipeIngredient": [
+      "2 pounds boneless skinless chicken breasts",
+      "1 cup red grapes (quartered)",
+      "2  celery ribs (diced)",
+      "3  green onions (green and white parts) (sliced)",
+      "1 cup mayonnaise",
+      "1 tablespoon Dijon mustard",
+      "½ cup sliced raw almonds",
+      "2 tablespoon finely chopped parsley",
+      "1 tablespoon finely chopped tarragon",
+      "1  lemon (juiced (about 3 tablespoons))",
+      "kosher salt and freshly ground black pepper (to taste)"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToSection",
+       "name": "For the poached chicken",
+       "itemListElement": [
+        {
+         "@type": "HowToStep",
+         "text": "Cover the chicken with water. Place the chicken breasts in a wide pot or pan and cover by about an inch with cold water. Season the water with salt. Optionally, you can add aromatics of your choice. Read my poached chicken recipe for more details.",
+         "name": "Add",
+         "url": "https://downshiftology.com/recipes/chicken-salad/#wprm-recipe-41562-step-0-0",
+         "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/10/How-To-Make-Chicken-Salad-1.jpg"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "Simmer the chicken. Turn the heat to medium until it reaches a gentle simmer. Then reduce the heat back to low and cover the pan. Let the chicken simmer for 8 to 12 minutes, or until the internal temperature reaches 160°F to 165°F. Remove the chicken and let it rest for a couple of minutes. Then chill in the fridge.",
+         "name": "Poach",
+         "url": "https://downshiftology.com/recipes/chicken-salad/#wprm-recipe-41562-step-0-1",
+         "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/10/How-To-Make-Chicken-Salad-2.jpg"
+        }
+       ]
+      },
+      {
+       "@type": "HowToSection",
+       "name": "For the chicken salad recipe",
+       "itemListElement": [
+        {
+         "@type": "HowToStep",
+         "text": "Dice the cooled chicken. Transfer the cooled chicken to a cutting board and dice it into ½-inch pieces. Add it to a large mixing bowl.",
+         "name": "Dice",
+         "url": "https://downshiftology.com/recipes/chicken-salad/#wprm-recipe-41562-step-1-0",
+         "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/10/How-To-Make-Chicken-Salad-3.jpg"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "Mix together and chill. Add the grapes, celery, green onion, mayonnaise, mustard, almonds, parsley, tarragon, and lemon juice. Season with salt and pepper, then stir together, until well combined. Let it chill covered in the fridge until you&#39;re ready to serve.",
+         "name": "Slice",
+         "url": "https://downshiftology.com/recipes/chicken-salad/#wprm-recipe-41562-step-1-1",
+         "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/10/How-To-Make-Chicken-Salad-4.jpg"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "Serve. Transfer the salad to a serving bowl and garnish with additional fresh herbs, if you&#39;d like.",
+         "name": "Mix",
+         "url": "https://downshiftology.com/recipes/chicken-salad/#wprm-recipe-41562-step-1-2",
+         "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/10/How-To-Make-Chicken-Salad-5.jpg"
+        }
+       ]
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.96",
+      "ratingCount": "437",
+      "reviewCount": "7"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "If you have dried tarragon the ratio is about one teaspoon instead of one tablespoon fresh. Probably want to mix it with the mayo and mustard first and let it sit before you mix the rest. \r\n\r\nI've made similar veronique recipes (tarragon and green grapes) and found myself in the same situation and was able to substitute an equal amount of mint and parsley, half each, and that worked fairly well.",
+       "author": {
+        "@type": "Person",
+        "name": "Jessica"
+       },
+       "datePublished": "2026-08-03"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Bowl full of awesomeness!",
+       "author": {
+        "@type": "Person",
+        "name": "Cyndi Cain"
+       },
+       "datePublished": "2026-08-02"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Absolutely the best chicken salad recipe I have made! Loved the little bites with hints of lemon and tarragon. It feels like a nice update to older recipes with the added crunch of the almonds, too. Thank you!",
+       "author": {
+        "@type": "Person",
+        "name": "Nancy Roussin"
+       },
+       "datePublished": "2026-07-26"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Absolutely the best chicken salad recipe I have made! Love the little bites with hints of lemon and tarragon.",
+       "author": {
+        "@type": "Person",
+        "name": "Nancy Roussin"
+       },
+       "datePublished": "2026-07-26"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I just made this for my daughter's first birthday party and I have never gotten so many compliments or requests for a recipe than this chicken salad!! My stepdad loved it so much he said I could sell this stuff! it's a little more prep work than I usually do for a chicken salad but truly worth the time and effort - absolutely delicious and will be adding to my recipe book for party rotations!",
+       "author": {
+        "@type": "Person",
+        "name": "Stacy"
+       },
+       "datePublished": "2026-07-20"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Forgot to share that I made this TWICE during our family vacation in June.   I used a rotisserie chicken to save time, and it was incredible.  Served with butter lettuce cups and croissants.  The family said it is my \"signature\" dish and must make every time we are together.  \r\n\r\nJessica",
+       "author": {
+        "@type": "Person",
+        "name": "Jessica Sbragia"
+       },
+       "datePublished": "2026-07-13"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I made this recipe and the salad was delicious! I only wish I made more!",
+       "author": {
+        "@type": "Person",
+        "name": "Juanita Johnson"
+       },
+       "datePublished": "2026-07-11"
+      }
+     ],
+     "recipeCategory": [
+      "Main Course",
+      "Salad"
+     ],
+     "recipeCuisine": [
+      "American"
+     ],
+     "keywords": "Chicken Salad, Chicken Salad Recipe, How To Make Chicken Salad, Side dish, Spring Salad, Summer Salad",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "524 kcal",
+      "carbohydrateContent": "10 g",
+      "proteinContent": "36 g",
+      "fatContent": "38 g",
+      "saturatedFatContent": "6 g",
+      "cholesterolContent": "112 mg",
+      "sodiumContent": "454 mg",
+      "fiberContent": "3 g",
+      "sugarContent": "6 g",
+      "servingSize": "1 serving"
+     },
+     "@id": "https://downshiftology.com/recipes/chicken-salad/#recipe",
+     "isPartOf": {
+      "@id": "https://downshiftology.com/recipes/chicken-salad/"
+     },
+     "mainEntityOfPage": "https://downshiftology.com/recipes/chicken-salad/"
+    },
+    {
+     "@type": "VideoObject",
+     "@id": "https://downshiftology.com/recipes/chicken-salad/#video",
+     "name": "Ultimate Chicken Salad Recipe - Downshiftology",
+     "isPartOf": {
+      "@id": "https://downshiftology.com/recipes/chicken-salad/"
+     },
+     "thumbnailUrl": "https://downshiftology.com/wp-content/uploads/2023/05/csagdgsde6k.jpg",
+     "description": "This is everyone's favorite chicken salad! It's layered with fresh flavors, delicious textures, and is sure to be a potluck winner.",
+     "uploadDate": "2026-04-01",
+     "width": 480,
+     "height": 270,
+     "embedUrl": "https://www.youtube.com/embed/cSAGdGSdE6k",
+     "duration": "PT7M2S",
+     "isFamilyFriendly": true,
+     "inLanguage": "en-US"
+    }
+   ]
+  }
+ ]
+}

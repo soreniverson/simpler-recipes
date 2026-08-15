@@ -1,0 +1,416 @@
+{
+ "url": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list1:[\"6\"]",
+  "author=dict",
+  "prep=\"PT5M\" cook=\"PT25M\" total=\"PT30M\"",
+  "ing=list17",
+  "plugins=WPRM"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#article",
+     "isPartOf": {
+      "@id": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/"
+     },
+     "author": {
+      "name": "Dana @ Minimalist Baker",
+      "@id": "https://minimalistbaker.com/#/schema/person/ed5ce1b1862e6237956babab32d2dc56"
+     },
+     "headline": "1-Pot Vegan Minestrone (Gluten-Free)",
+     "datePublished": "2017-09-25T10:00:38+00:00",
+     "dateModified": "2025-04-17T21:27:39+00:00",
+     "wordCount": 842,
+     "commentCount": 534,
+     "publisher": {
+      "@id": "https://minimalistbaker.com/#organization"
+     },
+     "image": {
+      "@id": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#primaryimage"
+     },
+     "thumbnailUrl": "https://minimalistbaker.com/wp-content/uploads/2017/08/PERFECT-1-Pot-Vegan-Minestrone-Vegetables-beans-pasta-SO-delicious-and-healthy-minestrone-soup-recipe-vegan-glutenfree-minimalistbaker-4.jpg",
+     "keywords": [
+      "beans",
+      "carrots",
+      "garlic",
+      "kale",
+      "nutritional yeast",
+      "onions",
+      "pasta",
+      "tomatoes",
+      "vegetable broth",
+      "zucchini"
+     ],
+     "articleSection": [
+      "Appetizer",
+      "Comfort Food",
+      "Dairy-Free",
+      "Dinner",
+      "Egg-Free",
+      "Entree",
+      "Fall",
+      "Gluten Free",
+      "Grain-Free",
+      "Italian-Inspired",
+      "Lunch",
+      "Nut-Free",
+      "Oat-Free",
+      "Oil-Free",
+      "One Bowl",
+      "Recipes",
+      "Refined Sugar-Free",
+      "Savory",
+      "Sides",
+      "Soup",
+      "Soy-Free",
+      "Spring",
+      "Summer",
+      "Vegan",
+      "Vegetarian",
+      "Winter"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/",
+     "url": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/",
+     "name": "Vegan Gluten-Free Minestrone | Minimalist Baker Recipes",
+     "isPartOf": {
+      "@id": "https://minimalistbaker.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#primaryimage"
+     },
+     "image": {
+      "@id": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#primaryimage"
+     },
+     "thumbnailUrl": "https://minimalistbaker.com/wp-content/uploads/2017/08/PERFECT-1-Pot-Vegan-Minestrone-Vegetables-beans-pasta-SO-delicious-and-healthy-minestrone-soup-recipe-vegan-glutenfree-minimalistbaker-4.jpg",
+     "datePublished": "2017-09-25T10:00:38+00:00",
+     "dateModified": "2025-04-17T21:27:39+00:00",
+     "description": "Easy, 1-pot vegan and gluten-free minestrone! Simple, wholesome ingredients and 30 minutes to prepare. SO delicious and perfect for fall and winter!",
+     "breadcrumb": {
+      "@id": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#primaryimage",
+     "url": "https://minimalistbaker.com/wp-content/uploads/2017/08/PERFECT-1-Pot-Vegan-Minestrone-Vegetables-beans-pasta-SO-delicious-and-healthy-minestrone-soup-recipe-vegan-glutenfree-minimalistbaker-4.jpg",
+     "contentUrl": "https://minimalistbaker.com/wp-content/uploads/2017/08/PERFECT-1-Pot-Vegan-Minestrone-Vegetables-beans-pasta-SO-delicious-and-healthy-minestrone-soup-recipe-vegan-glutenfree-minimalistbaker-4.jpg",
+     "width": 1456,
+     "height": 2184,
+     "caption": "Bowl of 1-Pot Minestrone for a delicious and healthy plant-based dinner"
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://minimalistbaker.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "1-Pot Vegan Minestrone (Gluten-Free)"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://minimalistbaker.com/#website",
+     "url": "https://minimalistbaker.com/",
+     "name": "Minimalist Baker",
+     "description": "Simple Food, Simply Delicious",
+     "publisher": {
+      "@id": "https://minimalistbaker.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://minimalistbaker.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://minimalistbaker.com/#organization",
+     "name": "Minimalist Baker",
+     "url": "https://minimalistbaker.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://minimalistbaker.com/#/schema/logo/image/",
+      "url": "https://minimalistbaker.com/wp-content/uploads/2015/04/logo@2x.png",
+      "contentUrl": "https://minimalistbaker.com/wp-content/uploads/2015/04/logo@2x.png",
+      "width": 660,
+      "height": 226,
+      "caption": "Minimalist Baker"
+     },
+     "image": {
+      "@id": "https://minimalistbaker.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/MinimalistBaker",
+      "https://x.com/minimalistbaker",
+      "https://instagram.com/minimalistbaker/",
+      "https://www.pinterest.com/minimalistbaker/",
+      "https://www.youtube.com/c/Minimalistbaker"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://minimalistbaker.com/#/schema/person/ed5ce1b1862e6237956babab32d2dc56",
+     "name": "Dana @ Minimalist Baker",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://secure.gravatar.com/avatar/a37a7f43d1ca99ce8fb4cc1b0998963b6f234a7fc92ed5b5c8957253b3ce8273?s=96&d=mm&r=g",
+      "url": "https://secure.gravatar.com/avatar/a37a7f43d1ca99ce8fb4cc1b0998963b6f234a7fc92ed5b5c8957253b3ce8273?s=96&d=mm&r=g",
+      "contentUrl": "https://secure.gravatar.com/avatar/a37a7f43d1ca99ce8fb4cc1b0998963b6f234a7fc92ed5b5c8957253b3ce8273?s=96&d=mm&r=g",
+      "caption": "Dana @ Minimalist Baker"
+     },
+     "description": "Hi, I'm Dana! I am a food stylist, photographer, creator of the Food Photography School, and author of the 31 Meals Cookbook and Everyday Cooking. Find me on Twitter, Instagram, and Pinterest."
+    },
+    {
+     "@type": "Recipe",
+     "name": "1-Pot Vegan Minestrone (Gluten-Free)",
+     "author": {
+      "@type": "Person",
+      "name": "Minimalist Baker"
+     },
+     "description": "Easy, 1-pot vegan and gluten-free minestrone! Simple, wholesome ingredients, 30 minutes to prepare. SO delicious and perfect for late summer, fall, and winter!",
+     "datePublished": "2017-09-25T03:00:38+00:00",
+     "image": [
+      "https://minimalistbaker.com/wp-content/uploads/2017/08/Vegan-Minestrone-SQUARE.jpg"
+     ],
+     "video": {
+      "name": "1-Pot Vegan Minestrone (Gluten-Free!) | Minimalist Baker Recipes",
+      "description": "Easy, 1-pot vegan and gluten-free Minestrone! Simple, wholesome ingredients, 30 minutes to prepare. SO delicious and perfect for fall and winter!\n\nFull Recipe: https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/\n\nMinestrone is a thick Italian soup typically made with vegetables, beans, and pasta. It’s believed to date back to the 2nd century BC when Rome conquered Italy. At this time, there was an expansion in the variety of vegetables available and Italian peasants would gather ingredients from leftover meals to make soup.\n \nFOLLOW US!\nBlog: http://minimalistbaker.com/\nInstagram: https://instagram.com/minimalistbaker/\nTwitter: https://twitter.com/minimalistbaker\nFacebook: https://www.facebook.com/MinimalistBaker",
+      "uploadDate": "2018-11-13T11:30:01+00:00",
+      "duration": "PT48S",
+      "thumbnailUrl": "https://i.ytimg.com/vi/_aW660KeZVc/hqdefault.jpg",
+      "embedUrl": "https://www.youtube.com/embed/_aW660KeZVc?feature=oembed",
+      "contentUrl": "https://www.youtube.com/watch?v=_aW660KeZVc",
+      "@type": "VideoObject"
+     },
+     "recipeYield": [
+      "6"
+     ],
+     "prepTime": "PT5M",
+     "cookTime": "PT25M",
+     "totalTime": "PT30M",
+     "recipeIngredient": [
+      "2 Tbsp water  ((or sub oil))",
+      "1/2 medium white or yellow onion ((diced))",
+      "3 cloves garlic* ((minced))",
+      "2 large carrots ((peeled and sliced into thin rounds))",
+      "1 ½ cups green beans ((trimmed // roughly chopped))",
+      "1/4 tsp each sea salt &amp; black pepper ((plus more to taste))",
+      "1 small zucchini  ((sliced into 1/4-inch rounds))",
+      "1 (15-ounce) can diced fire-roasted tomatoes",
+      "6 cups vegetable broth (DIY or store-bought)",
+      "2 tsp dried basil  ((or sub 1 Tbsp fresh per 2 tsp dried))",
+      "2 tsp dried oregano ((or sub 1 Tbsp fresh per 2 tsp dried))",
+      "1 Tbsp nutritional yeast",
+      "1 pinch red chili pepper flake ((optional))",
+      "1 Tbsp coconut sugar (or other sweetener to taste)",
+      "1 (15-ounce) can white beans or chickpeas ((rinsed + drained))",
+      "2 cups (uncooked) gluten-free pasta*  ((I like Trader Joe’s Gluten-Free Fusilli))",
+      "1 cup kale or spinach  ((or other green // roughly chopped))"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Heat a large pot or Dutch oven over medium heat. Once hot, add water, onion, and garlic and stir. Cook for 3 minutes, stirring occasionally.",
+       "name": "Heat a large pot or Dutch oven over medium heat. Once hot, add water, onion, and garlic and stir. Cook for 3 minutes, stirring occasionally.",
+       "url": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#wprm-recipe-34610-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add carrots and green beans and season with salt and pepper. Stir and cook for 3-4 minutes, stirring occasionally, until vegetables have softened slightly and have some color.",
+       "name": "Add carrots and green beans and season with salt and pepper. Stir and cook for 3-4 minutes, stirring occasionally, until vegetables have softened slightly and have some color.",
+       "url": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#wprm-recipe-34610-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add zucchini, fire-roasted tomatoes, vegetable broth, basil, oregano, nutritional yeast, red pepper flake (optional), coconut sugar, and beans. Stir to coat.",
+       "name": "Add zucchini, fire-roasted tomatoes, vegetable broth, basil, oregano, nutritional yeast, red pepper flake (optional), coconut sugar, and beans. Stir to coat.",
+       "url": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#wprm-recipe-34610-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Increase heat to medium-high and bring soup to a strong simmer. Then reduce heat slightly to medium-low until the soup is simmering but not boiling. Add pasta and stir. Cook for 10 minutes, stirring occasionally, until the pasta is al dente, reducing the heat, as needed, to keep the soup at a simmer.",
+       "name": "Increase heat to medium-high and bring soup to a strong simmer. Then reduce heat slightly to medium-low until the soup is simmering but not boiling. Add pasta and stir. Cook for 10 minutes, stirring occasionally, until the pasta is al dente, reducing the heat, as needed, to keep the soup at a simmer.",
+       "url": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#wprm-recipe-34610-step-0-3"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Taste soup and adjust seasonings as needed, adding coconut sugar to balance the flavors (optional). I added more dried basil, oregano, and salt.",
+       "name": "Taste soup and adjust seasonings as needed, adding coconut sugar to balance the flavors (optional). I added more dried basil, oregano, and salt.",
+       "url": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#wprm-recipe-34610-step-0-4"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add kale or spinach (or other green) and stir. Cook for another 3-4 minutes to wilt the kale and allow the flavors to meld together. Turn off heat and let rest for a few minutes before serving.",
+       "name": "Add kale or spinach (or other green) and stir. Cook for another 3-4 minutes to wilt the kale and allow the flavors to meld together. Turn off heat and let rest for a few minutes before serving.",
+       "url": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#wprm-recipe-34610-step-0-5"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "To serve, divide soup between serving bowls and garnish with fresh herbs and vegan parmesan cheese (optional).",
+       "name": "To serve, divide soup between serving bowls and garnish with fresh herbs and vegan parmesan cheese (optional).",
+       "url": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#wprm-recipe-34610-step-0-6"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Store leftovers in the refrigerator up to 3-4 days or the freezer up to 1 month. Be careful not to overheat the soup when warming leftovers, as the pasta is tender once cooked and will get mushy if overcooked.",
+       "name": "Store leftovers in the refrigerator up to 3-4 days or the freezer up to 1 month. Be careful not to overheat the soup when warming leftovers, as the pasta is tender once cooked and will get mushy if overcooked.",
+       "url": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#wprm-recipe-34610-step-0-7"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.88",
+      "ratingCount": "216",
+      "reviewCount": "5"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Yum!!  Made this just after coming in from shoveling snow.  Quick, tasty and tummy warming.  Used kale but will try spinach next time.  Because there will definitely be a next time.  Thank-you for this recipe.",
+       "author": {
+        "@type": "Person",
+        "name": "C.V."
+       },
+       "datePublished": "2026-01-27"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "We really enjoyed this! I ended up adding another cup of broth, and because I had no basil, subbed Italian seasoning, and it was fantastic! Thanks for sharing!",
+       "author": {
+        "@type": "Person",
+        "name": "David B"
+       },
+       "datePublished": "2025-12-08"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Very tasty, I used broth cubes, frozen green beans and frozen spinach. Would definitely recommend!",
+       "author": {
+        "@type": "Person",
+        "name": "Miranda Walls"
+       },
+       "datePublished": "2025-09-16"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I really wanted soup for dinner tonight but didn't plan for it. I took my chances with this recipe even though I didn't have noodles (used golden potatoes instead), celery, white onion (used red), fire roasted tomatoes (just had regular canned diced), zucchini, green beans, dried basil (added in some Italian seasoning), or nutritional yeast. \r\n\r\nEven missing all of these ingredients, this soup turned out amazing! I am enjoying it as I type this. Oh I did end up adding frozen yellow and white corn for some texture and doubled the white beans for extra substance. \r\n\r\nThis recipe is officially bookmarked! I look forward to making it as it was intended - just need to shop for it first ;)",
+       "author": {
+        "@type": "Person",
+        "name": "Megan"
+       },
+       "datePublished": "2025-08-15"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Best soup ever! I’ve probably made this recipe 100 times and everyone loves it, including my very picky five year old.",
+       "author": {
+        "@type": "Person",
+        "name": "Demarie"
+       },
+       "datePublished": "2025-02-22"
+      }
+     ],
+     "recipeCategory": [
+      "Side",
+      "Soup"
+     ],
+     "recipeCuisine": [
+      "Gluten-Free",
+      "Italian-Inspired",
+      "Vegan"
+     ],
+     "keywords": "minestrone",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "servingSize": "1 serving",
+      "calories": "127 kcal",
+      "carbohydrateContent": "18.1 g",
+      "proteinContent": "9.2 g",
+      "fatContent": "2.4 g",
+      "saturatedFatContent": "0.5 g",
+      "sodiumContent": "948 mg",
+      "fiberContent": "4.7 g",
+      "sugarContent": "7.1 g"
+     },
+     "@id": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#recipe",
+     "isPartOf": {
+      "@id": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/#article"
+     },
+     "mainEntityOfPage": "https://minimalistbaker.com/1-pot-vegan-minestrone-gluten-free/"
+    }
+   ]
+  }
+ ]
+}

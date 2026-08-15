@@ -1,0 +1,170 @@
+{
+ "url": "https://www.tasteofhome.com/recipes/basic-homemade-bread/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=plain:Recipe|plain:BreadcrumbList",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=ImageObject",
+  "yield=str:\"2 loaves (16 pieces each)\"",
+  "author=list",
+  "prep=\"PT20M\" cook=\"PT30M\" total=\"PT50M\"",
+  "ing=list6",
+  "plugins="
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Recipe",
+   "@id": "https://www.tasteofhome.com/recipes/basic-homemade-bread/",
+   "name": "Homemade Bread Recipe",
+   "datePublished": "2018-01-01",
+   "dateModified": "2024-08-23",
+   "prepTime": "PT20M",
+   "cookTime": "PT30M",
+   "totalTime": "PT50M",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Basic-Homemade-Bread_EXPS_TOHcom20_32480_C01_26_2b.jpg",
+    "height": 1200,
+    "width": 1200
+   },
+   "recipeCategory": "",
+   "description": "Here's a step-by-step guide to kneading, shaping and baking yeast bread for the freshest, fluffiest homemade loaves.",
+   "recipeIngredient": [
+    "1 package (1/4 ounce) active dry yeast",
+    "3 tablespoons plus 1/2 teaspoon sugar",
+    "2-1/4 cups warm water (110&deg; to 115&deg;)",
+    "1 tablespoon salt",
+    "6-1/4 to 6-3/4 cups bread flour",
+    "2 tablespoons canola oil"
+   ],
+   "recipeInstructions": [
+    {
+     "@type": "HowToStep",
+     "name": "Proof the yeast",
+     "text": "Proofing yeast is the first step to any yeast bread recipe. To do this, add the package of yeast to the warm water. Stir in a half-teaspoon of sugar. The warm water helps activate the yeast and the sugar feeds this microorganism. Let the mixture stand for about 5 minutes. When it looks a bit frothy, you know your yeast is ready for bread baking. Editor's Tip: Be sure that your water is the right temperature—aim for 105 to 110ºF. Any hotter and you'll kill the yeast and have to begin again. This is where a quick-read thermometer comes in handy!",
+     "image": "https://www.tasteofhome.com/wp-content/uploads/2017/09/GHTJS17_4217_D07_25_9b.jpg?fit=696,1024"
+    },
+    {
+     "@type": "HowToStep",
+     "name": "Make the bread dough",
+     "text": "Next, in the bowl of your stand mixer (or in a very large mixing bowl), whisk together the remaining sugar, salt and three cups of flour. Then add the canola oil and yeast mixture and beat until smooth. You can use the dough hook of your stand mixer or a wooden spoon and a lot of elbow grease. You can even use one of these fancy dough whisks to get the job done. Once the dough is smooth, add in the remaining flour a half-cup at a time until you have a soft dough. Editor's Tip: This recipe calls for bread flour. You can find it in the baking aisle of any grocery store. Bread flour has a bit more gluten in it than traditional all-purpose flour, which makes it ideal for this type of baking. But if you don't have any on hand, you can easily sub in all-purpose flour.",
+     "image": "https://www.tasteofhome.com/wp-content/uploads/2019/12/BW19_47666_C10_04_1b.jpg?fit=696,800"
+    },
+    {
+     "@type": "HowToStep",
+     "name": "Knead",
+     "text": "Remove the dough from your mixing bowl and place it on a lightly floured surface like a countertop or table. Make sure you have plenty of room to work. Now roll up your sleeves because it's time to knead! Start by folding the top of the dough toward you. With your palms, push with a rolling motion away from you. Turn the dough a quarter turn and repeat, folding, pushing and turning until the bread dough is smooth and elastic. If you find the dough is really sticky, add a bit more flour to your surface as needed. Kneading a batch of dough should take about 5 to 10 minutes. You'll know your bread dough is properly kneaded when you can stretch a bit of dough between your fingers and get it thin enough to see through it without it breaking—that's the windowpane test and it means enough gluten has developed in the dough. If the dough tears, keep going. Editor's Tip: When kneading by hand, you don't need to worry about over-kneading your dough. You will tire yourself out long before you overwork it.",
+     "image": "https://www.tasteofhome.com/wp-content/uploads/2018/11/BW20_22631_B09_29_7b-horizontal.jpg?fit=696,800"
+    },
+    {
+     "@type": "HowToStep",
+     "name": "Let the dough rise",
+     "text": "After kneading, it's time to let the dough rest while the yeast does its thing. To proof bread dough, grease your container with a bit of oil or cooking spray and cover the dough with a damp cloth. Let it sit in a warm (at least 70º) environment until the dough doubles in size. It should take about 90 minutes for this recipe, but the timing can vary depending on factors including the temperature of the room. If your home is on the cooler side, check if your oven has a proofing setting (many newer models do) or follow our tips for proofing bread dough in the cold. Editor's Tip: Knowing when the bread has doubled in size can be tough for new bakers. It may help to take a photo of your dough at the start of the process. Or use a handy proofing container: The geometric shape makes it easy to mark where your bread starts (use a dry-erase marker or sticky note) so you can see exactly how much it has grown.",
+     "image": "https://www.tasteofhome.com/wp-content/uploads/2018/11/BW20_22631_B09_29_8b-horizontal.jpg?fit=696,800"
+    },
+    {
+     "@type": "HowToStep",
+     "name": "Punch down and shape",
+     "text": "Once the dough has doubled in size, give it a quick check with your fingertips. When you poke the dough, it should slowly spring back. If the dough still feels firm, it needs a bit more time to rise. Next, it's time to punch down. That means taking your fist and pressing it into your bread dough to release some of the air. Then remove the dough from its proofing container and divide it in half. You can eyeball this if you like, or use a scale to get the proportions exact. After dividing the dough, shape each portion into a loaf. Then place each loaf into a greased loaf pan.",
+     "image": "https://www.tasteofhome.com/wp-content/uploads/2018/11/BW20_22631_B09_29_5b.jpg?fit=696,800"
+    },
+    {
+     "@type": "HowToStep",
+     "name": "Proof again",
+     "text": "Once shaped and in the pan, it's time to proof the bread for a second time. Just like last time, cover the dough with a towel and place in a warm, humid part of your kitchen. Let the bread proof and grow for about another 60 to 90 minutes until it fills the pans.",
+     "image": "https://www.tasteofhome.com/wp-content/uploads/2020/06/ps32480_MC163887C03_15_5b.jpg?fit=696,800"
+    },
+    {
+     "@type": "HowToStep",
+     "name": "Bake",
+     "text": "Finally, it's time to bake! Pop the loaves into a 375º oven and bake for 30 to 35 minutes. The loaves should be golden brown. If you want to be sure they're baked through, use your thermometer to check the internal temperature of the bread. You're looking for about 185º. Once baked, remove from the oven and let the pans cool on a wire rack. After 10 minutes, you can remove the bread from the pan and let the loaves cool completely.",
+     "image": "https://www.tasteofhome.com/wp-content/uploads/2020/11/slide2.A-bread-TMBBP19_32480_B06_20_5b.jpg?fit=696,800"
+    }
+   ],
+   "recipeYield": "2 loaves (16 pieces each)",
+   "author": [
+    {
+     "@type": "Person",
+     "name": "Lisa A. Kaminski"
+    }
+   ],
+   "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": " 102 calories",
+    "fatContent": "1g fat (0 saturated fat)",
+    "cholesterolContent": "0 cholesterol",
+    "sodiumContent": "222mg sodium",
+    "carbohydrateContent": "20g carbohydrate (1g sugars",
+    "fiberContent": "1g fiber)",
+    "proteinContent": "3g protein. "
+   },
+   "aggregateRating": {
+    "@context": "http://schema.org/",
+    "@type": "AggregateRating",
+    "worstRating": 1,
+    "bestRating": 5,
+    "ratingValue": 4.71,
+    "reviewCount": 331
+   },
+   "video": {
+    "@type": "VideoObject",
+    "name": "Basic Homemade Bread",
+    "description": "Check out this video for how to make Basic Homemade Bread",
+    "thumbnailUrl": [
+     "http://content.jwplatform.com/v2/media/qjfqVMiz/poster.jpg?width=720"
+    ],
+    "uploadDate": "",
+    "duration": "P0DT0H0M1S",
+    "contentUrl": "http://content.jwplatform.com/videos/qjfqVMiz-Uot7Fvi8.mp4"
+   }
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@id": "https://www.tasteofhome.com/",
+      "name": "Home"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@id": "https://www.tasteofhome.com/recipes/",
+      "name": "Recipes"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "item": {
+      "@id": "https://www.tasteofhome.com/recipes/dishes-beverages/",
+      "name": "Dishes &amp; Beverages"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "item": {
+      "@id": "https://www.tasteofhome.com/recipes/dishes-beverages/breads-rolls-pastries/",
+      "name": "Breads, Rolls &amp; Pastries"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "item": {
+      "@id": "https://www.tasteofhome.com/recipes/dishes-beverages/breads-rolls-pastries/bread-recipes/",
+      "name": "Bread Recipes"
+     }
+    }
+   ]
+  }
+ ]
+}

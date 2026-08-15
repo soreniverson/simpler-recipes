@@ -1,0 +1,233 @@
+{
+ "url": "https://www.thepioneerwoman.com/food-cooking/recipes/a11875/beef-stew-with-mushrooms/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=arrayRoot",
+  "recipes=1",
+  "instr=list[]",
+  "img=list[dict]",
+  "yield=str:\"8 serving(s)\"",
+  "author=dict",
+  "prep=\"PT25M\" cook=\"PT30M\" total=\"PT55M\"",
+  "ing=list12",
+  "plugins="
+ ],
+ "jsonld": [
+  [
+   {
+    "@context": "http://schema.org",
+    "@type": "Recipe",
+    "thumbnailUrl": "https://hips.hearstapps.com/thepioneerwoman/wp-content/uploads/2009/11/4145871052_03d8b92950_o.jpg?crop=0.6666666666666666xw:1xh;center,top&resize=100:*",
+    "datePublished": "2009-11-30T08:26:44-05:00",
+    "headline": "Beef Stew with Mushrooms",
+    "articleBody": null,
+    "wordCount": null,
+    "image": [
+     {
+      "@type": "ImageObject",
+      "height": 1200,
+      "thumbnail": "https://hips.hearstapps.com/thepioneerwoman/wp-content/uploads/2009/11/4145871052_03d8b92950_o.jpg?crop=0.6666666666666666xw:1xh;center,top&resize=100:*",
+      "url": "https://hips.hearstapps.com/thepioneerwoman/wp-content/uploads/2009/11/4145871052_03d8b92950_o.jpg?crop=0.6666666666666666xw:1xh;center,top&resize=1200:*",
+      "width": 1200
+     },
+     {
+      "@type": "ImageObject",
+      "height": 900,
+      "thumbnail": "https://hips.hearstapps.com/thepioneerwoman/wp-content/uploads/2009/11/4145871052_03d8b92950_o.jpg?crop=0.6666666666666666xw:1xh;center,top&resize=100:*",
+      "url": "https://hips.hearstapps.com/thepioneerwoman/wp-content/uploads/2009/11/4145871052_03d8b92950_o.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*",
+      "width": 1200
+     },
+     {
+      "@type": "ImageObject",
+      "height": 675,
+      "thumbnail": "https://hips.hearstapps.com/thepioneerwoman/wp-content/uploads/2009/11/4145871052_03d8b92950_o.jpg?crop=0.6666666666666666xw:1xh;center,top&resize=100:*",
+      "url": "https://hips.hearstapps.com/thepioneerwoman/wp-content/uploads/2009/11/4145871052_03d8b92950_o.jpg?crop=1xw:0.84375xh;center,top&resize=1200:*",
+      "width": 1200
+     }
+    ],
+    "mainEntityOfPage": {
+     "@id": "https://www.thepioneerwoman.com/food-cooking/recipes/a8903/beef-stew-with-mushrooms/",
+     "@type": "WebPage"
+    },
+    "publisher": {
+     "@type": "NewsMediaOrganization",
+     "name": "The Pioneer Woman",
+     "sameAs": [
+      "https://x.com/thepioneerwoman",
+      "https://www.tiktok.com/@thepioneerwoman",
+      "https://www.facebook.com/thepioneerwoman",
+      "https://www.instagram.com/thepioneerwomanmag/",
+      "https://www.pinterest.com/thepioneerwoman/"
+     ],
+     "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.thepioneerwoman.com/_assets/design-tokens/thepioneerwoman/static/images/logos/logo-jsonld.1dc32aa.png",
+      "width": 312,
+      "height": 60
+     },
+     "address": {
+      "@type": "PostalAddress",
+      "postalCode": "10019",
+      "addressRegion": "NY",
+      "streetAddress": "300 W 57th Street",
+      "addressCountry": "US",
+      "addressLocality": "New York"
+     },
+     "parentOrganization": {
+      "@type": "NewsMediaOrganization",
+      "name": "Hearst Corporation",
+      "url": "https://www.hearst.com/magazines",
+      "sameAs": [
+       "https://en.wikipedia.org/wiki/Hearst_Magazines",
+       "https://www.instagram.com/hearstmagazines/",
+       "https://www.linkedin.com/company/hearst-magazines/posts/"
+      ],
+      "address": {
+       "postalCode": "10019",
+       "addressRegion": "NY",
+       "streetAddress": "300 W 57th Street",
+       "addressCountry": "US",
+       "addressLocality": "New York"
+      }
+     }
+    },
+    "keywords": [
+     "content-type: Recipe",
+     "locale: US",
+     "displayType: recipe",
+     "shortTitle: Beef Stew with Mushrooms",
+     "contentId: 9b921695-3e01-4b02-b7d5-479d6e4b1231",
+     "subsection: Recipes",
+     "collection: Main Courses",
+     "collection: Cowgirl Food",
+     "collection: Beef",
+     "sponsored: false",
+     "isSyndicated: false",
+     "Recipes, Cooking, Food",
+     "CATEGORY: main dish",
+     "CATEGORY: meat",
+     "TOTALTIME: 00:55:00",
+     "FILTERTIME: <1HR"
+    ],
+    "url": "https://www.thepioneerwoman.com/food-cooking/recipes/a8903/beef-stew-with-mushrooms/",
+    "isBasedOn": "https://www.thepioneerwoman.com/food-cooking/recipes/a8903/beef-stew-with-mushrooms/",
+    "isAccessibleForFree": true,
+    "description": "Did you hear the one about the mushroom that walked into the bar? Yeah.",
+    "author": {
+     "name": "Ree Drummond",
+     "url": "https://www.thepioneerwoman.com/author/1143543/pioneerwoman/",
+     "@type": "Person",
+     "description": "<p>Ree Drummond is the founder of The Pioneer Woman and a lover of butter, basset hounds and life on the ranch! Ree started her blog in 2006, and now millions visit <a href=\"http://thepioneerwoman.com/\"><ins>ThePioneerWoman.com</ins></a> every month for her trusted recipes and fun family stories. Here’s what she has been up to since it all began:<br>\r\n<br>\r\n<strong>New York Times Bestselling Author</strong><br>\r\nRee has written two memoirs (<em>Black Heels to Tractor Wheels</em>, and <em>Frontier Follies</em>) plus nine bestselling cookbooks: <br>\r\n<em>The Pioneer Woman Cooks: Recipes from an Accidental Country Girl</em> (2009)<br>\r\n<em>The Pioneer Woman Cooks: Food from My Frontier</em> (2012)<br>\r\n<em>The Pioneer Woman Cooks: A Year of Holidays</em> (2013)<br>\r\n<em>The Pioneer Woman Cooks: Dinnertime</em> (2015)<br>\r\n<em>The Pioneer Woman Cooks: Come and Get It</em>! (2017)<br>\r\n<em>The Pioneer Woman Cooks: The New Frontier</em> (2019)<br>\r\n<em>The Pioneer Woman Cooks: Super Easy</em> (2021)<br>\r\n<em>The Pioneer Woman Cooks: Dinner’s Ready!</em> (2023)<br>\r\n<em>The Pioneer Woman Cooks: The Essential</em> <em>Recipes</em> (2025)</p>\r\n<p><br></p>\r\n<p><strong>Food Network Host </strong><br>\r\nSince 2011, Ree has been sharing simple, family-friendly recipes—and the occasional kitchen prank!—on her award-winning show <em>The Pioneer Woman</em>, filmed right on Drummond Ranch. Ree is also a regular judge on Food Network competitions, including Christmas Cookie Challenge. <br>\r\n<br>\r\n<strong>Founder, The Pioneer Woman Collection</strong><br>\r\nRee has been creating and selling kitchen and home products at Walmart since 2015 and she’s involved in designing every piece and pattern. The line now includes best-selling appliances (you have to see the floral blender!), plus hundreds of pieces of cookware, tableware, and more. Ree doesn’t like to play favorites but the Agatha print has a special place in her heart. &nbsp;<br>\r\n<br>\r\n<strong>Restaurant and Hotel Owner</strong><br>\r\nTogether with her husband Ladd, Ree has opened several bustling businesses in Pawhuska, Oklahoma, including The Pioneer Woman Mercantile—a bakery, restaurant, and general store that draws visitors from across the country (many come for the biscuits alone!), P-Town Pizza, Charlie’s Ice Cream Shop, and The Boarding House, a charming hotel with eight different rooms decorated by Ree and Ladd. <br>\r\n<br>\r\n<strong>Media Personality</strong><br>\r\nRee appears regularly on national TV shows like <em>Today</em>, <em>Good Morning America</em> and more—all while managing to keep flour off her shirt.</p>\r\n<p><br></p>\r\n<p><strong>Wife, Mom and…Grandma!</strong><br>\r\nRee’s kids (daughters Alex and Paige and sons Bryce and Todd) are all grown up, and as of December 2024, Ree is the proud grandma of the cutest baby ever, Sofia Scott, born to Alex and her husband Mauricio. Ree still cooks for Ladd (and the kids when they’re home), and she also looks after a few mischievous ranch dogs.</p>",
+     "jobTitle": "The Pioneer Woman",
+     "image": "https://hips.hearstapps.com/rover/profile_photos/d506dcf8-b59e-4ec9-8e30-c5187f20c75d_1755285871.file",
+     "knowsAbout": [
+      "Ree's Life",
+      "Food and Cooking",
+      "Archive",
+      "News and Entertainment",
+      "Home and Life"
+     ]
+    },
+    "name": "Beef Stew with Mushrooms",
+    "prepTime": "PT25M",
+    "cookTime": "PT30M",
+    "totalTime": "PT55M",
+    "recipeIngredient": [
+     "2 lb. Beef Stew Meat (sirloin Cut Into Cubes)",
+     "2 tbsp. Flour",
+     "4 tbsp. Butter",
+     "2 tbsp. Olive Oil",
+     "2 whole Shallots, Minced",
+     "3 cloves Garlic, Minced",
+     "8 oz. weight Cremini Or White Button Mushrooms",
+     "1/2 c. Red Wine",
+     "1/2 can Beef Consomme",
+     "Salt And Pepper, to taste",
+     "Pasta, Cooked And Drained",
+     "2 sprigs Fresh Thyme"
+    ],
+    "recipeInstructions": [],
+    "recipeYield": "8 serving(s)",
+    "recipeCategory": [
+     "main dish",
+     "meat"
+    ],
+    "aggregateRating": {
+     "@type": "AggregateRating",
+     "ratingValue": 5,
+     "reviewCount": 2,
+     "worstRating": 1,
+     "bestRating": 5,
+     "@context": "http://schema.org/"
+    },
+    "comment": [
+     {
+      "@context": "http://schema.org/",
+      "@type": "Comment",
+      "datePublished": "2020-10-09",
+      "author": {
+       "@context": "http://schema.org/",
+       "@type": "Person",
+       "name": "Guest072778"
+      },
+      "text": "This looks yummy!  The printable version of this recipe is missing.  Could you post it?",
+      "upvoteCount": 0,
+      "downvoteCount": 0
+     },
+     {
+      "@context": "http://schema.org/",
+      "@type": "Comment",
+      "datePublished": "2021-02-09",
+      "author": {
+       "@context": "http://schema.org/",
+       "@type": "Person",
+       "name": "Guest528170"
+      },
+      "text": "What can I sub for red wine?",
+      "upvoteCount": 0,
+      "downvoteCount": 0
+     }
+    ],
+    "review": [
+     {
+      "@context": "http://schema.org/",
+      "@type": "Review",
+      "datePublished": "2023-01-13",
+      "author": {
+       "@context": "http://schema.org/",
+       "@type": "Person",
+       "name": "suziB"
+      },
+      "reviewBody": "<p>You are hilarious!!  I am a relatively beginner cook, at the ripe old age of 58!!  I have suddenly become fond of it, finding a recipe that sounds delish and then trying to make it.  I am making beef stew right now, I made my own bone broth which is a 2 day process, roasting the bones and then cooking them with onion, leeks, etc. For 24 hours.  Anyhow, I am trying to figure out when to add the mushrooms, so it looks like I should sautee them first and add them to the stew at the end.  I don't want them to disintegrate! I also like carrots in my stew, so lots of them and sometimes parsnips.  If you add potatoes, you can't freeze it.  Anyhow, you are awesome!!</p>",
+      "reviewRating": {
+       "@context": "http://schema.org/",
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": 1,
+       "bestRating": 5
+      }
+     },
+     {
+      "@context": "http://schema.org/",
+      "@type": "Review",
+      "datePublished": "2020-12-04",
+      "author": {
+       "@context": "http://schema.org/",
+       "@type": "Person",
+       "name": "Guest886234"
+      },
+      "reviewBody": "I had second thoughts about this recipe but then I said wait.........it's the Pioneer \nWoman!  Give it a try.  Wow!  Glad I did, it's on the stove now in its final simmer and I can't stay out of the pot.  Absolutely delicious.  Thank you very, very much.",
+      "reviewRating": {
+       "@context": "http://schema.org/",
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": 1,
+       "bestRating": 5
+      }
+     }
+    ],
+    "commentCount": 4
+   }
+  ]
+ ]
+}

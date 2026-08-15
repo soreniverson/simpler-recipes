@@ -1,0 +1,211 @@
+{
+ "url": "https://www.101cookbooks.com/baked-potato/",
+ "variant": [
+  "fetched with bot UA (browser UA gets CF 403)"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.101cookbooks.com/baked-potato/#article",
+     "isPartOf": {
+      "@id": "https://www.101cookbooks.com/baked-potato/"
+     },
+     "author": {
+      "name": "Heidi Swanson",
+      "@id": "https://www.101cookbooks.com/#/schema/person/f6ae8bf91a19e11846bdddebf6448c47"
+     },
+     "headline": "Perfect Baked Potato",
+     "datePublished": "2024-02-28T20:21:54+00:00",
+     "dateModified": "2024-03-24T23:11:39+00:00",
+     "mainEntityOfPage": {
+      "@id": "https://www.101cookbooks.com/baked-potato/"
+     },
+     "wordCount": 297,
+     "commentCount": 65,
+     "image": {
+      "@id": "https://www.101cookbooks.com/baked-potato/#primaryimage"
+     },
+     "thumbnailUrl": "https://images.101cookbooks.com/baked-potato-recipe-v.jpg?w=620&auto=format",
+     "articleSection": [
+      "100+ Vegetarian Recipes",
+      "260+ Vegan Recipes",
+      "Gluten Free Recipes",
+      "Heidi's Favorites",
+      "Side Dish Recipes"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.101cookbooks.com/baked-potato/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.101cookbooks.com/baked-potato/",
+     "url": "https://www.101cookbooks.com/baked-potato/",
+     "name": "Perfect Baked Potato | 101 Cookbooks",
+     "isPartOf": {
+      "@id": "https://www.101cookbooks.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.101cookbooks.com/baked-potato/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.101cookbooks.com/baked-potato/#primaryimage"
+     },
+     "thumbnailUrl": "https://images.101cookbooks.com/baked-potato-recipe-v.jpg?w=620&auto=format",
+     "datePublished": "2024-02-28T20:21:54+00:00",
+     "dateModified": "2024-03-24T23:11:39+00:00",
+     "author": {
+      "@id": "https://www.101cookbooks.com/#/schema/person/f6ae8bf91a19e11846bdddebf6448c47"
+     },
+     "description": "Up your baked potato game and achieve the perfect baked potato. No foil needed, just a hot oven and a salt-rubbed russet potato.",
+     "breadcrumb": {
+      "@id": "https://www.101cookbooks.com/baked-potato/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.101cookbooks.com/baked-potato/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.101cookbooks.com/baked-potato/#primaryimage",
+     "url": "https://images.101cookbooks.com/baked-potato-recipe-v.jpg?w=620&auto=format",
+     "contentUrl": "https://images.101cookbooks.com/baked-potato-recipe-v.jpg?w=620&auto=format"
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.101cookbooks.com/#website",
+     "url": "https://www.101cookbooks.com/",
+     "name": "101 Cookbooks",
+     "description": "When you own over 100 cookbooks, it is time to stop buying, and start cooking. This site chronicles a cookbook collection, one recipe at a time.",
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.101cookbooks.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.101cookbooks.com/#/schema/person/f6ae8bf91a19e11846bdddebf6448c47",
+     "name": "Heidi Swanson"
+    }
+   ]
+  },
+  {
+   "@context": "http://schema.org/",
+   "@type": "Recipe",
+   "name": "Perfect Baked Potato",
+   "author": {
+    "@type": "Person",
+    "name": "Heidi Swanson"
+   },
+   "description": "If you want to know how to make the perfect baked potato, keep reading. We’re talking crispy jackets that split open to reveal a fluffy white potato interior. This method results in perfection every time.",
+   "datePublished": "2024-02-28T12:21:54+00:00",
+   "recipeYield": [
+    "4"
+   ],
+   "prepTime": "PT5M",
+   "cookTime": "PT60M",
+   "totalTime": "PT65M",
+   "recipeIngredient": [
+    "4  large baking potatoes",
+    "flaky sea salt",
+    "butter or olive oil"
+   ],
+   "recipeInstructions": [
+    {
+     "@type": "HowToStep",
+     "text": "Place a rack in the center of the oven and preheat to 400°F / 200°C degrees. Scrub the potatoes, prick them all over with a fork, and sprinkle generously with sea salt. Bake the potatoes until tender throughout. This can take an hour for large potatoes. Less for smaller spuds.",
+     "name": "Place a rack in the center of the oven and preheat to 400°F / 200°C degrees. Scrub the potatoes, prick them all over with a fork, and sprinkle generously with sea salt. Bake the potatoes until tender throughout. This can take an hour for large potatoes. Less for smaller spuds."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "While the potatoes are baking, prepare any toppings you&#39;re considering.",
+     "name": "While the potatoes are baking, prepare any toppings you&#39;re considering."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Test potato doneness by sliding a sharp knife into it, when they&#39;re done, the knife should feel little resistance. Remove from the oven. You may want to allow the potatoes to cool a bit.",
+     "name": "Test potato doneness by sliding a sharp knife into it, when they&#39;re done, the knife should feel little resistance. Remove from the oven. You may want to allow the potatoes to cool a bit."
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Carefully slice a big cross into the top of each potato, then gently but firmly push in on the ends of each potato. This way the tops open up. Load up with toppings starting with butter (or olive oil) and enjoy!",
+     "name": "Carefully slice a big cross into the top of each potato, then gently but firmly push in on the ends of each potato. This way the tops open up. Load up with toppings starting with butter (or olive oil) and enjoy!"
+    }
+   ],
+   "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "7",
+    "reviewCount": "1"
+   },
+   "review": [
+    {
+     "@type": "Review",
+     "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+     },
+     "reviewBody": "I absolutely loved trying out this Perfect Roasted Potatoes recipe! The combination of the crispy outer layer and the fluffy interior is a game-changer. The golden-brown color and the aromatic herbs make these potatoes not only delicious but also visually appealing. Thanks for sharing this fantastic recipe.",
+     "author": {
+      "@type": "Person",
+      "name": "Justyna"
+     },
+     "datePublished": "2024-02-28"
+    }
+   ],
+   "recipeCategory": [
+    "Side Dish"
+   ],
+   "recipeCuisine": [
+    "American"
+   ],
+   "keywords": "baked potato",
+   "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "168 kcal",
+    "carbohydrateContent": "38 g",
+    "proteinContent": "5 g",
+    "fatContent": "0.2 g",
+    "saturatedFatContent": "0.1 g",
+    "sodiumContent": "156 mg",
+    "fiberContent": "3 g",
+    "sugarContent": "1 g",
+    "unsaturatedFatContent": "0.11 g",
+    "servingSize": "1 serving"
+   },
+   "image": [
+    "https://images.101cookbooks.com/baked-potato-recipe-h.jpg?w=1200&auto=format",
+    "https://images.101cookbooks.com/baked-potato-recipe-v.jpg?w=1200&auto=format",
+    "https://images.101cookbooks.com/baked-potato-recipe-v.jpg?w=1200&h=1200&fp-z=2&fp-y=.5&fp-x=.5&fit=crop&crop=entropy"
+   ]
+  }
+ ]
+}

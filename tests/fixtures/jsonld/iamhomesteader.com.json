@@ -1,0 +1,384 @@
+{
+ "url": "https://iamhomesteader.com/cowboy-butter/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list2:[\"10\", \"10 tablespoons\"]",
+  "author=dict",
+  "prep=\"PT5M\" cook=null total=\"PT5M\"",
+  "ing=list12",
+  "plugins=WPRM,AMP"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://iamhomesteader.com/cowboy-butter/#article",
+     "isPartOf": {
+      "@id": "https://iamhomesteader.com/cowboy-butter/"
+     },
+     "author": {
+      "name": "Amanda Rettke",
+      "@id": "https://iamhomesteader.com/#/schema/person/f490bc6b8e5ad49139c58a75dc80899f"
+     },
+     "headline": "Cowboy Butter",
+     "datePublished": "2022-11-22T15:00:00+00:00",
+     "dateModified": "2025-09-08T22:16:48+00:00",
+     "wordCount": 663,
+     "commentCount": 103,
+     "publisher": {
+      "@id": "https://iamhomesteader.com/#organization"
+     },
+     "image": {
+      "@id": "https://iamhomesteader.com/cowboy-butter/#primaryimage"
+     },
+     "thumbnailUrl": "https://iamhomesteader.com/wp-content/uploads/2022/11/cowboy-butter-2.jpg",
+     "keywords": [
+      "appetizer",
+      "Meats",
+      "Vegetables"
+     ],
+     "articleSection": [
+      "Appetizer",
+      "Dressings/Dip"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://iamhomesteader.com/cowboy-butter/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://iamhomesteader.com/cowboy-butter/",
+     "url": "https://iamhomesteader.com/cowboy-butter/",
+     "name": "Cowboy Butter - I Am Homesteader",
+     "isPartOf": {
+      "@id": "https://iamhomesteader.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://iamhomesteader.com/cowboy-butter/#primaryimage"
+     },
+     "image": {
+      "@id": "https://iamhomesteader.com/cowboy-butter/#primaryimage"
+     },
+     "thumbnailUrl": "https://iamhomesteader.com/wp-content/uploads/2022/11/cowboy-butter-2.jpg",
+     "datePublished": "2022-11-22T15:00:00+00:00",
+     "dateModified": "2025-09-08T22:16:48+00:00",
+     "description": "Cowboy Butter is flavored butter that can be used as a dipping sauce or formed into a log to use as a spread.",
+     "breadcrumb": {
+      "@id": "https://iamhomesteader.com/cowboy-butter/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://iamhomesteader.com/cowboy-butter/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://iamhomesteader.com/cowboy-butter/#primaryimage",
+     "url": "https://iamhomesteader.com/wp-content/uploads/2022/11/cowboy-butter-2.jpg",
+     "contentUrl": "https://iamhomesteader.com/wp-content/uploads/2022/11/cowboy-butter-2.jpg",
+     "width": 1200,
+     "height": 800,
+     "caption": "Cowboy Butter Melted on a Steak in a Skillet."
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://iamhomesteader.com/cowboy-butter/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://iamhomesteader.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Dressings/Dip",
+       "item": "https://iamhomesteader.com/category/dressings-dip/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Cowboy Butter"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://iamhomesteader.com/#website",
+     "url": "https://iamhomesteader.com/",
+     "name": "I Am Homesteader",
+     "description": "est. 2016",
+     "publisher": {
+      "@id": "https://iamhomesteader.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://iamhomesteader.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://iamhomesteader.com/#organization",
+     "name": "I Am Homesteader",
+     "url": "https://iamhomesteader.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://iamhomesteader.com/#/schema/logo/image/",
+      "url": "https://iamhomesteader.com/wp-content/uploads/2016/11/logo-web.png",
+      "contentUrl": "https://iamhomesteader.com/wp-content/uploads/2016/11/logo-web.png",
+      "width": 505,
+      "height": 356,
+      "caption": "I Am Homesteader"
+     },
+     "image": {
+      "@id": "https://iamhomesteader.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/HomesteadRecipes/",
+      "https://x.com/iamhomesteader",
+      "https://www.instagram.com/iamhomesteader/",
+      "https://www.pinterest.com/iamhomesteader/"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://iamhomesteader.com/#/schema/person/f490bc6b8e5ad49139c58a75dc80899f",
+     "name": "Amanda Rettke",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://secure.gravatar.com/avatar/270ec908de4055fc8242aad2b97aa2807977589bc25f229df0b76112f7636b8c?s=96&d=mm&r=g",
+      "url": "https://secure.gravatar.com/avatar/270ec908de4055fc8242aad2b97aa2807977589bc25f229df0b76112f7636b8c?s=96&d=mm&r=g",
+      "contentUrl": "https://secure.gravatar.com/avatar/270ec908de4055fc8242aad2b97aa2807977589bc25f229df0b76112f7636b8c?s=96&d=mm&r=g",
+      "caption": "Amanda Rettke"
+     }
+    },
+    {
+     "@type": "Recipe",
+     "name": "Cowboy Butter",
+     "author": {
+      "@type": "Person",
+      "name": "Amanda Rettke--iamhomesteader.com"
+     },
+     "description": "Cowboy Butter is flavored butter that can be used as a dipping sauce or formed into a log to use as a spread.",
+     "datePublished": "2022-11-22T09:00:00+00:00",
+     "image": [
+      "https://iamhomesteader.com/wp-content/uploads/2022/11/cowboy-butter-2.jpg",
+      "https://iamhomesteader.com/wp-content/uploads/2022/11/cowboy-butter-2-500x500.jpg",
+      "https://iamhomesteader.com/wp-content/uploads/2022/11/cowboy-butter-2-500x375.jpg",
+      "https://iamhomesteader.com/wp-content/uploads/2022/11/cowboy-butter-2-480x270.jpg"
+     ],
+     "video": {
+      "name": "Cowboy Butter",
+      "description": "Cowboy Butter is flavored butter that can be used as a dipping sauce or formed into a log to use as a spread. It’s delicious when served with steak, turkey, chicken, and more.",
+      "thumbnailUrl": "https://content.jwplatform.com/thumbs/c8BcC6lp-720.jpg",
+      "contentUrl": "https://content.jwplatform.com/videos/c8BcC6lp.mp4",
+      "uploadDate": "2024-05-14T16:53:57.000Z",
+      "@type": "VideoObject"
+     },
+     "recipeYield": [
+      "10",
+      "10 tablespoons"
+     ],
+     "prepTime": "PT5M",
+     "totalTime": "PT5M",
+     "recipeIngredient": [
+      "½ cup (1 stick / 113 g) unsalted butter, (softened)",
+      "1 tablespoon coarse Dijon Mustard",
+      "1 tablespoon fresh chives, (chopped)",
+      "1 tablespoon fresh parsley, (chopped)",
+      "2 teaspoons fresh thyme,",
+      "2 teaspoons garlic, (minced)",
+      "1 teaspoon lemon juice",
+      "½ teaspoon paprika",
+      "¼ teaspoon kosher salt",
+      "⅛ teaspoon pepper",
+      "⅛ teaspoon cayenne pepper",
+      "⅛ teaspoon crushed red pepper flakes"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "In a medium bowl, add the softened butter, dijon mustard, chives, parsley, thyme, garlic, lemon juice, paprika, salt, pepper, cayenne, and red pepper flakes. Mix together until combined. This will make about ⅔ cup of butter. (You could also mix the ingredients in a food processor.)",
+       "name": "Whisk together all ingredients.",
+       "url": "https://iamhomesteader.com/cowboy-butter/#wprm-recipe-116484-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "To make a compound butter:  Scoop the cowboy butter onto a piece of plastic wrap.  Roll the butter into a log shape, pressing and shaping as you go until the butter is completely wrapped in plastic.  Twist the ends of the plastic wrap together and refrigerate until firm (2 hours up to overnight).",
+       "name": "scoop butter onto plastic and wrap into a log.",
+       "url": "https://iamhomesteader.com/cowboy-butter/#wprm-recipe-116484-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "To make a butter dip: Melt the mixture in the microwave in 20-second increments, stirring in between, until fully melted.",
+       "name": "melt mixture in microwave.",
+       "url": "https://iamhomesteader.com/cowboy-butter/#wprm-recipe-116484-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Store in the refrigerator in an airtight container for up to 5 days.",
+       "name": "Store in the refrigerator.",
+       "url": "https://iamhomesteader.com/cowboy-butter/#wprm-recipe-116484-step-0-3"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.96",
+      "ratingCount": "72",
+      "reviewCount": "8"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I’ve never left a comment on a recipe before… this is THAT good. Just finished making it, my husband is gonna be home in 3 hours and I can’t waitttt!!!",
+       "author": {
+        "@type": "Person",
+        "name": "Lauren G"
+       },
+       "datePublished": "2026-08-10"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+       },
+       "reviewBody": "Tried this on steak tonight and the herbs were excellent.",
+       "author": {
+        "@type": "Person",
+        "name": "Recipe Tester"
+       },
+       "datePublished": "2026-06-22"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I've made this recipe several times now and it stores for quite some time, even using the fresh herbs. I've used it a month after and the flavours hold up and the herbs stay fresh in the butter. I double the recipe so I always have it on hand and don't have to make it so often. It is used on fish, pork and steak mainly and it's great everytime. I love garlic and it settles well into the butter when stored, so it's not as strong. Recommended.",
+       "author": {
+        "@type": "Person",
+        "name": "Charmaine"
+       },
+       "datePublished": "2026-05-29"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Thank you so much for the recipe.  I have always wanted to try cowboy butter and as I was searching for recipes I found this one . It did not disappoint.  The taste is Amazing.  Thank you again for sharing. 😁",
+       "author": {
+        "@type": "Person",
+        "name": "Laura Ford"
+       },
+       "datePublished": "2026-05-17"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Used this in my scallop potatoes on Easter. It was awesome! It’s now a staple in my frig just like butter.",
+       "author": {
+        "@type": "Person",
+        "name": "Donna"
+       },
+       "datePublished": "2026-04-05"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "You are amazing.  Thank you.",
+       "author": {
+        "@type": "Person",
+        "name": "Mary Lou"
+       },
+       "datePublished": "2026-03-14"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Hello…I have Cusos cowboy butter seasoning.  I want to make your recipe with this seasoning mix.  Do you have a recommendation as to the amount of the seasoning to use with 2 sticks of unsalted butter?\r\nThank you",
+       "author": {
+        "@type": "Person",
+        "name": "Mary Lou"
+       },
+       "datePublished": "2026-03-13"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I agree.",
+       "author": {
+        "@type": "Person",
+        "name": "Catherine"
+       },
+       "datePublished": "2025-12-30"
+      }
+     ],
+     "keywords": "Cowboy Butter",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "94 kcal",
+      "servingSize": "1 tablespoon"
+     },
+     "@id": "https://iamhomesteader.com/cowboy-butter/#recipe",
+     "isPartOf": {
+      "@id": "https://iamhomesteader.com/cowboy-butter/#article"
+     },
+     "mainEntityOfPage": "https://iamhomesteader.com/cowboy-butter/"
+    }
+   ]
+  }
+ ]
+}

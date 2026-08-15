@@ -1,0 +1,228 @@
+{
+ "url": "https://www.giallozafferano.it/ricetta/Tiramisu.html",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=plain:Recipe|plain:Organization|plain:FAQPage",
+  "recipes=1",
+  "instr=list[str]",
+  "img=str",
+  "yield=int:10",
+  "author=dict",
+  "prep=\"PT40M\" cook=\"PT6M\" total=\"PT46M\"",
+  "ing=list6",
+  "plugins="
+ ],
+ "jsonld": [
+  {
+   "@context": "http://schema.org",
+   "@type": "Recipe",
+   "name": "Tiramisù",
+   "author": {
+    "@type": "Organization",
+    "name": "GialloZafferano"
+   },
+   "datePublished": "2006-01-01 00:00:00",
+   "dateModified": "2026-07-16 16:44:04",
+   "estimatedCost": "Medio",
+   "recipeCategory": "Dolci",
+   "image": "https://www.giallozafferano.it/images/173-17354/Tiramisu_650x433_wm.jpg",
+   "description": "Il tiramisù classico è il dolce al cucchiaio italiano più amato al mondo: una versione facile con crema al mascarpone e savoiardi inzuppati nel caffè.",
+   "prepTime": "PT40M",
+   "cookTime": "PT6M",
+   "totalTime": "PT46M",
+   "recipeYield": 10,
+   "recipeIngredient": [
+    "Mascarpone 1 kg",
+    "Uova 8",
+    "Savoiardi (circa 42 pezzi) 350 g",
+    "Zucchero 200 g",
+    "Caffè 200 g",
+    "Cacao amaro in polvere q.b."
+   ],
+   "recipeInstructions": [
+    "Per preparare il tiramisù come prima cosa preparate il caffè con la moka e lasciatelo raffreddare in una ciotolina bassa e ampia. Separate le uova dividendo gli albumi dai tuorli, ricordate che per montare bene gli albumi non dovranno presentare alcuna traccia di tuorlo. Versate i tuorli in una ciotola (dovranno pesare circa 120 g), aggiungete metà dose di zucchero (100 g) 1 e lavorate con le fruste elettriche 2 sino a che il composto sarà diventato chiaro e spumoso 3 .",
+    "Con le fruste ancora in funzione, potrete aggiungere il mascarpone, poco alla volta 4 , sino ad ottenere una crema densa e compatta 5 ; tenetela da parte. Pulite molto bene le fruste e passate a montare gli albumi (ne serviranno circa 360 g). Versateli in una ciotola e aggiungete lo zucchero rimasto 6 .",
+    "Dovrete montarli a neve ben ferma 7 8 . Prendete una cucchiaiata di albumi e versatela nella ciotola con la crema di mascarpone e mescolate con una spatola 9 , così stempererete il composto.",
+    "Dopodiché procedete ad aggiungere i restanti albumi in una volta sola mescolando molto delicatamente dal basso verso l'alto 10 . La crema al mascarpone è ora pronta 11 . Distribuitene una generosa cucchiaiata sul fondo di una pirofila di vetro, grande 35x25 cm e distribuite per bene su tutta la base 12 .",
+    "Inzuppate per pochi istanti i savoiardi nel caffè freddo prima da un lato e poi dall’altro 13 . Man mano distribuite i savoiardi imbevuti nella pirofila, cercando di sistemarli tutti in un verso 14 , così da ottenere un primo strato di biscotti. Aggiungete circa metà della crema al mascarpone e spargetela bene 15 in modo da coprirli completamente. ",
+    "Distribuite sopra i savoiardi imbevuti nel caffè in maniera ordinata ( 16) , poi realizzate un altro strato con la crema rimasta ( 17) e livellate bene la superficie ( 18) . ",
+    "Spolverizzatela con del cacao amaro in polvere 19 e lasciate rassodare in frigorifero per un paio d’ore 20 . Il vostro tiramisù è pronto per essere gustato 21 !"
+   ],
+   "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "http://schema.org/CommentAction",
+    "userInteractionCount": "2251"
+   },
+   "keywords": "ricette, ricetta, cucina, cucinare, Tiramisù, Mascarpone, Uova, Savoiardi, Zucchero, Caffè, Cacao amaro in polvere",
+   "suitableForDiet": [
+    "http://schema.org/VegetarianDiet"
+   ],
+   "cookingMethod": "Piatti Freddi",
+   "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "620,6 kcal",
+    "carbohydrateContent": "42 g",
+    "sugarContent": "24,7 g",
+    "fatContent": "44,7 g",
+    "saturatedFatContent": "23,3 g",
+    "fiberContent": "0,9 g",
+    "cholesterolContent": "276,9 mg",
+    "sodiumContent": "584,6 mg"
+   },
+   "aggregateRating": {
+    "@type": "AggregateRating",
+    "bestRating": 5,
+    "ratingCount": 3749,
+    "ratingValue": 4.2
+   }
+  },
+  {
+   "@context": "http://schema.org",
+   "@type": "Organization",
+   "name": "GialloZafferano",
+   "url": "https://www.giallozafferano.it/",
+   "logo": "https://www.giallozafferano.it/style/images/logo-giallozafferano.svg",
+   "sameAs": [
+    "https://www.facebook.com/GialloZafferanolive/",
+    "https://www.instagram.com/giallozafferano/",
+    "https://www.youtube.com/user/GialloZafferanoTV",
+    "https://x.com/giallozafferano",
+    "https://www.tiktok.com/@giallozafferano"
+   ]
+  },
+  {
+   "@context": "http://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Perché la crema del tiramisù risulta troppo liquida?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Verifica che gli albumi siano montati a neve ben ferma e che il mascarpone sia a temperatura ambiente. Una miscelazione errata o l'uso di un mascarpone troppo freddo possono compromettere la consistenza della crema finale."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Posso sostituire i savoiardi con altri biscotti?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "&Egrave; possibile utilizzare Pavesini o altri biscotti secchi. Tieni presente che la consistenza potrebbe variare, quindi regola brevemente l'ammollo nel caff&egrave; per evitare che si disintegrino."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "È importante che tutti gli ingredienti siano a temperatura ambiente?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "S&igrave;, per ottenere un montaggio ottimale e una corretta emulsione, uova e mascarpone devono essere a temperatura ambiente. Questo aiuta a prevenire problemi di consistenza durante la preparazione."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Come conservare il tiramisù dopo il congelamento?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dopo il congelamento, lascia scongelare il tiramis&ugrave; in frigorifero per almeno una notte intera prima di servirlo. In questo modo la consistenza si stabilizzer&agrave; e il gusto rimarr&agrave; ottimale."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Come adattare le dosi per un numero diverso di porzioni?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Riduci o aumenta proporzionalmente tutte le dosi rispetto alla ricetta base (generalmente per 8 persone) per mantenere l'equilibrio degli ingredienti. In questo modo otterrai un tiramis&ugrave; coerente anche per porzioni diverse."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Posso sostituire il mascarpone con altri formaggi?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "&Egrave; possibile usare la ricotta o la Philadelphia al posto del mascarpone, ma il risultato avr&agrave; un sapore e una consistenza leggermente diversi. Adegua le proporzioni per mantenere l'equilibrio della crema."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qual è la ricetta originale del tiramisù?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La ricetta originale del tiramis&ugrave; prevede pochi ingredienti semplici: uova fresche, mascarpone, savoiardi, zucchero, caff&egrave; espresso e cacao amaro in polvere. Con il nostro procedimento passo passo otterrete un tiramis&ugrave; cremoso e bilanciato, proprio come vuole la tradizione italiana."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Si può fare il tiramisù senza uova crude?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Certo! Potete preparare il tiramis&ugrave; senza uova crude acquistando tuorli e albumi pastorizzati, oppure realizzando una variante senza uova, con panna montata e mascarpone. Il risultato sar&agrave; comunque goloso e sicuro per tutti."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quanto tempo deve riposare il tiramisù in frigorifero?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Il tiramis&ugrave; deve riposare in frigorifero per almeno 2 ore, ma per un risultato perfetto consigliamo di lasciarlo riposare 6 ore o tutta la notte. In questo modo i sapori si amalgamano e la consistenza diventa cremosa e compatta al punto giusto."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Posso preparare il tiramisù in anticipo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "S&igrave;, potete preparare il tiramis&ugrave; anche il giorno prima di servirlo. Anzi, &egrave; uno di quei dolci che migliorano con il tempo! Conservatelo in frigorifero ben coperto e aggiungete il cacao amaro solo prima di servirlo, per mantenerlo asciutto e profumato."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quali biscotti posso utilizzare al posto dei savoiardi? grazie ",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "@alessiamotta: Ciao, puoi usare i biscotti che preferisci. Pi&ugrave; saranno sottili e pi&ugrave; dovrai regolare l'ammollo nel caff&egrave; perch&egrave; non risultino troppo impregnati."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ciao, quando unisco il mascarpone a  tuorli e zucchero, il composto mi diventa tutto liquido e grumoso, cosa posso fare? ",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "@diesci:Ciao, forse il mascarpone &egrave; troppo freddo: ammorbidiscilo a temperatura ambiente prima di incorporarlo, cos&igrave; non former&agrave; grumi.&nbsp;Inoltre pu&ograve; dipendere anche dalla qualit&agrave; del mascarpone..."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "le uova a temperatura ambiente?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "@valetitti29: Ciao, si usa pure tutti gli ingredienti a temperatura ambiente."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "C’è un’alternativa al caffè?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "@Simone Notarbartolo:Certo, vieni a curiosare tra i nostri tiramis&ugrave; speciali per avere tante altre gustose alternative al caff&egrave;:&nbsp;<a href=\"https://www.giallozafferano.it/tiramisu-speciali\">https://www.giallozafferano.it/tiramisu-speciali</a>"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "salve, per fare il tiramisù con questa ricetta e pastorizzare le uova, come devo procedere???",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "@manu 81:Ciao, segui la nostra ricetta della <a href=\"https://ricette.giallozafferano.it/Crema-al-mascarpone.html\">crema al mascarpone</a>!"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "le uova di frigorifero o temperatura ambiente ? ",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "@RaffaGiaco1: Ciao, sempre meglio a temperatura ambiente cos&igrave; come il mascarpone non troppo freddo!"
+     }
+    }
+   ]
+  }
+ ]
+}

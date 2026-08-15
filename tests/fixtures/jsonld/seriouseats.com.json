@@ -1,0 +1,452 @@
+{
+ "url": "https://www.seriouseats.com/the-best-chili-recipe",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=arrayRoot",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=ImageObject",
+  "yield=str:\"10\"",
+  "author=list",
+  "prep=\"PT25M\" cook=\"PT240M\" total=\"PT745M\"",
+  "ing=list37",
+  "plugins="
+ ],
+ "jsonld": [
+  [
+   {
+    "@context": "http://schema.org",
+    "@type": [
+     "Recipe"
+    ],
+    "headline": "The Best Chili Ever",
+    "datePublished": "2010-01-22T02:25:00-05:00",
+    "dateModified": "2025-09-24T11:05:34-04:00",
+    "author": [
+     {
+      "@type": "Person",
+      "name": "J. Kenji López-Alt",
+      "url": "https://www.seriouseats.com/j-kenji-lopez-alt-5118720"
+     }
+    ],
+    "description": "The best beef chili combines puréed chiles, short ribs, tender kidney beans, and an array of umami-boosting ingredients.",
+    "image": {
+     "@type": "ImageObject",
+     "url": "https://www.seriouseats.com/thmb/V9u0mZQAnW_upNkZj4ejM5o3Wvg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-best-chili-recipe-HERO-ca6537699d274a44a868be954b520303.JPG",
+     "height": 1125,
+     "width": 1500
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Serious Eats",
+     "url": "https://www.seriouseats.com",
+     "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.seriouseats.com/thmb/tCg_KKb2J_OIG_QEUtCkqjhiJGQ=/2339x320/filters:no_upscale():max_bytes(150000):strip_icc()/Serious_Eats_Schema_Logo-30a63d9c07734d35836c8ff2d368419c.png",
+      "width": 2339,
+      "height": 320
+     },
+     "brand": "Serious Eats",
+     "publishingPrinciples": "https://www.seriouseats.com/about-us-5120006#toc-editorial-guidelines",
+     "sameAs": [
+      "https://www.instagram.com/seriouseats",
+      "https://www.facebook.com/seriouseats",
+      "https://www.pinterest.com/seriouseats",
+      "https://www.youtube.com/user/seriouseats"
+     ]
+    },
+    "name": "The Best Chili Ever",
+    "aggregateRating": {
+     "@type": "AggregateRating",
+     "ratingValue": "4.5",
+     "ratingCount": "4"
+    },
+    "cookTime": "PT240M",
+    "keywords": "american, bean, beef, chili, low carb, meat",
+    "nutrition": {
+     "@type": "NutritionInformation",
+     "calories": "684 kcal",
+     "carbohydrateContent": "48 g",
+     "cholesterolContent": "124 mg",
+     "fiberContent": "11 g",
+     "proteinContent": "48 g",
+     "saturatedFatContent": "14 g",
+     "sodiumContent": "1542 mg",
+     "sugarContent": "11 g",
+     "fatContent": "34 g",
+     "servingSize": "Serves 6 to 10",
+     "unsaturatedFatContent": "0 g"
+    },
+    "prepTime": "PT25M",
+    "recipeCategory": [
+     "Chili",
+     "Mains"
+    ],
+    "recipeCuisine": [
+     "American"
+    ],
+    "recipeIngredient": [
+     "1 pound (450g) dried dark red kidney beans",
+     "3 tablespoons (26g) kosher salt or 6 tablespoons table salt",
+     "3 whole ancho, pasilla, or mulato chiles, seeded and torn into rough 1-inch pieces (about 1/2 ounce)",
+     "2 whole New Mexico red, California, costeño, or choricero chiles, seeded and torn into rough 1-inch pieces (about 1/8 ounce)",
+     "1 whole cascabel, árbol, or pequin chile, seeded and torn in half",
+     "1 1/2 tablespoons (9g) whole cumin seeds",
+     "1 1/2 teaspoons (3g) whole coriander seeds",
+     "2 whole cloves",
+     "1 star anise",
+     "5 pounds (2.3kg) bone-in beef short ribs, trimmed of silver skin and excess fat",
+     "Freshly ground black pepper",
+     "2 tablespoons (30ml) vegetable oil",
+     "1 quart (900ml) low-sodium chicken broth (preferably homemade ), divided",
+     "1 ounce (23g) chopped unsweetened chocolate",
+     "2 tablespoons (30ml) tomato paste",
+     "1 tablespoon (5.4g) extra-finely ground coffee beans",
+     "2 whole anchovy fillets",
+     "2 teaspoons (10ml) soy sauce",
+     "1 teaspoon (5ml) Marmite",
+     "1 large yellow onion, diced fine (about 1 1/2 cups)",
+     "4 cloves garlic, minced (about 1 tablespoon)",
+     "3 fresh Thai bird chiles or 1 jalapeño, finely chopped",
+     "1 tablespoon (3g) dried oregano",
+     "2 bay leaves",
+     "1 (28-ounce; 794g) can crushed tomatoes",
+     "1/4 cup (60ml) cider vinegar, plus more to taste",
+     "1/4 cup (60ml) vodka or bourbon",
+     "2 tablespoons (28g) dark brown sugar",
+     "1 tablespoon (15ml) Buffalo-style hot sauce, such as Frank's RedHot (or more to taste)",
+     "Scallions, sliced finely",
+     "Cheddar, Jack, or Colby cheese, grated",
+     "Sour cream",
+     "Jalapeño or Poblano peppers, diced and seeded",
+     "Onion, diced",
+     "Avocado, diced",
+     "Saltines",
+     "Fritos"
+    ],
+    "recipeInstructions": [
+     {
+      "@type": "HowToStep",
+      "image": [
+       {
+        "@type": "ImageObject",
+        "url": "https://www.seriouseats.com/thmb/Te_zV424LqUE9dFCk4IeGxrkMxk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-best-chili-recipe-step1-dfed9f7ff12449c6ad0ee44c4b496fa0.JPG"
+       }
+      ],
+      "text": "Place beans, the 6 tablespoons (54g) kosher salt, and 4 quarts (4L) water in a large container or bowl. Allow to soak at room temperature at least 8 hours and up to 1 day. Drain and rinse soaked beans."
+     },
+     {
+      "@type": "HowToStep",
+      "image": [
+       {
+        "@type": "ImageObject",
+        "url": "https://www.seriouseats.com/thmb/GIv1K9CIplaI3G3votmqAdE7LPY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-best-chili-recipe-step2-194ac1d9fa6342cb82e699c5c75ed731.jpg"
+       }
+      ],
+      "text": "Add dried chiles to a large heavy-bottomed Dutch oven or stockpot and cook over medium-high heat, stirring frequently, until slightly darkened with an intense, roasted aroma, 2 to 5 minutes. Do not allow to smoke. Remove chiles, place in a small bowl, and set aside. Alternatively, place dried chiles on a microwave-safe plate and microwave on high power in 15-second increments until chiles are pliable and toasted-smelling, about 30 seconds total. Reduce the heat to medium; add the cumin, coriander, cloves, and star anise to the Dutch oven and stir, toasting until the spices become fragrant. Remove spices, cool slightly, then transfer to a spice grinder and grind into a powder. Set aside."
+     },
+     {
+      "@type": "HowToStep",
+      "image": [
+       {
+        "@type": "ImageObject",
+        "url": "https://www.seriouseats.com/thmb/dkq4pHmQiU4yJppewwSLM6kEmRE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-best-chili-recipe-step3-30d51212e1884ef889029ddba15cc9e0.jpg"
+       }
+      ],
+      "text": "Season short ribs on all sides with salt and freshly ground black pepper. Add oil to Dutch oven and heat over high heat until smoking. Add half of short ribs and brown well on all sides (it may be necessary to brown ribs in 3 batches, depending on size of Dutch oven—do not overcrowd pan), 8 to 12 minutes total, reducing heat if fat begins to smoke excessively or meat begins to burn. Transfer to a large rimmed baking sheet or plate. Repeat with remaining short ribs, browning them in the fat remaining in Dutch oven. Once all short ribs are cooked, transfer all rendered fat into a small bowl and reserve separately. Allow short ribs to cool at room temperature."
+     },
+     {
+      "@type": "HowToStep",
+      "image": [
+       {
+        "@type": "ImageObject",
+        "url": "https://www.seriouseats.com/thmb/D9mJ4t8xAUkes_7KE6B1MXQgRcI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-best-chili-recipe-step4-b59f779fd8364a9d98bfbbc6c24abd78.jpg"
+       }
+      ],
+      "text": "Meanwhile, return Dutch oven to medium-high heat and add 1 cup (240ml) chicken broth, using a flat wooden spoon or stiff spatula to scrape browned bits off of bottom of pan. Reduce heat until chicken broth is at a bare simmer, add toasted chiles to liquid, and cook until chiles have softened and liquid is reduced by half, 5 to 8 minutes. Transfer chiles and liquid to a blender. Add ground spices, chocolate, tomato paste, coffee, anchovies, soy sauce, and Marmite. Blend at high speed, scraping down sides as necessary, until a completely smooth purée has formed, about 2 minutes. Set chile purée aside."
+     },
+     {
+      "@type": "HowToStep",
+      "image": [
+       {
+        "@type": "ImageObject",
+        "url": "https://www.seriouseats.com/thmb/-ZOTm3TL7Fb3rV9e9fleIR6HdTo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-best-chili-recipe-step5-978724ff6c1049f994299f4007e601f8.jpg"
+       }
+      ],
+      "text": "Trim meat from short rib bones and hand-chop into rough 1/2-inch to 1/4-inch pieces (finer or larger, as you prefer), reserving bones separately. Add any accumulated meat juices to chile purée."
+     },
+     {
+      "@type": "HowToStep",
+      "image": [
+       {
+        "@type": "ImageObject",
+        "url": "https://www.seriouseats.com/thmb/nLqMB7cCDqGoZtUXlW_kImcW2oU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-best-chili-recipe-step6-587c5c4126b647719432c0e515192a1d.jpg"
+       }
+      ],
+      "text": "Heat 4 tablespoons (60ml) rendered beef fat (if necessary, add vegetable oil to reach 4 tablespoons) in a large Dutch oven or heavy-bottomed stockpot over medium heat until shimmering. Add onions and cook, stirring frequently, until softened but not browned, 6 to 8 minutes. Add garlic, fresh chiles, and oregano and cook, stirring frequently, until fragrant, about 1 minute. Add chile purée and cook, stirring frequently and scraping bottom of pot, until chile mixture begins to fry and leaves a coating on bottom of pan, 2 to 4 minutes. Add remaining chicken stock, chopped beef, beef bones, and bay leaves. Bring to a simmer, scraping bottom of pan to loosen browned bits. Reduce heat to lowest possible setting, add beans, and cook, with cover slightly ajar, until beans are almost tender, about 1 hour. Add crushed tomatoes and cider vinegar and cook, with cover slightly ajar, until beans and beef are fully tender and broth is rich and lightly thickened, 2 to 3 1/2 hours longer, adding water if necessary to keep beans and meat mostly submerged (a little protrusion is okay)."
+     },
+     {
+      "@type": "HowToStep",
+      "image": [
+       {
+        "@type": "ImageObject",
+        "url": "https://www.seriouseats.com/thmb/QZfMePtKqhWViEbEPLTLHlUWlmA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-best-chili-recipe-step7-25982d43aa73438ea87150b3af2ad235.jpg"
+       }
+      ],
+      "text": "Using tongs, remove and discard bay leaves and bones. (At this point, any excess meat still attached to the bones can be removed, chopped, and added back to the chili, if desired.) Add vodka (or bourbon), brown sugar, and hot sauce and stir to combine. Season to taste with kosher salt, ground black pepper, and additional vinegar."
+     },
+     {
+      "@type": "HowToStep",
+      "image": [
+       {
+        "@type": "ImageObject",
+        "url": "https://www.seriouseats.com/thmb/6Vh8lEpeUlFw52wpoUxM3dUIMQE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-best-chili-recipe-step-8-9e261857299740459d3a5a793840beca.JPG"
+       }
+      ],
+      "text": "Serve immediately, or, for best flavor, allow to cool and refrigerate overnight, or up to 1 week in a sealed container. Reheat and serve with desired garnishes."
+     }
+    ],
+    "recipeYield": "10",
+    "totalTime": "PT745M",
+    "review": [
+     {
+      "@type": "Review",
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": "4"
+      },
+      "author": {
+       "@type": "Person",
+       "name": "CheekyTray5416"
+      },
+      "reviewBody": "It was really good, few caveats and I did this a in a pressure cooker. I would do a mix of kidney and pinto (I would even add .5x more beans but it’s totally up to user preference). Probably use 1 additional onion and 3–4 more garlic cloves. I didn’t have the the whole spices except for clove, so used 1 TB of ground cumin and 1.2 tp of ground coriander. I used flank steak because that’s what I had, but would go chuck next go. I would salt it 24 hours ahead of time while soaking the beans. Used beef bones instead of short rib, seared those and it came out perfectly. I then put the seared cubes of meat, bones, soaked uncooked beans, annd canned tomatoes all together and pressure cooked for 13 min with rapid release. I then added the vinegar and hot sauce.",
+      "datePublished": "2026-08-06T04:10:44.525Z"
+     },
+     {
+      "@type": "Review",
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": "5"
+      },
+      "author": {
+       "@type": "Person",
+       "name": "SpiffyKelp3223"
+      },
+      "reviewBody": "I use this recipe as the blueprint for the chili I've been making for almost 5 years now. It's a huge crowd pleaser, earning its title \"best chili ever\" from the mouths of those who've tried it. I usually skip the short rib and instead use 1-2lb of ground beef (sometimes 1/2 ground pork).",
+      "datePublished": "2026-07-20T18:22:52.903Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "rfusca"
+      },
+      "reviewBody": "Pretty awesome! Short ribs were pretty expensive locally, but 'country style' boneless beef ribs were dirt cheap. So I did those and threw in a package of ultra cheap beef neck bones. Came out wonderful.Method wise, the only difference I did was after the first hour, I threw the rest of the ingredients in and then put it in the pressure cooker for an hour. Everything came out sooooo tender and full of flavor.",
+      "datePublished": "2011-11-11T11:46:31.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "John Bostwick"
+      },
+      "reviewBody": "I'm making this as I write the review. I have tried other chili's and I have yet found one that I have liked, until now that is....It has the perfect chili taste that I have been looking for. Although. I made some tweaks, like more dried peppers and instead of chicken stock used beef stock, which makes better sense to me as this is all about the peppers and beef. Oh, and I added alot more meat and included tritip along with the short ribs, about a 1.5 pounds more, I would guess.I tend to add more spice and seasonings when the recipe calls for a table spoon, I add 1.5 table spoons, because to me there is never enough spice and since I added more beef, I could use the more spice.The taste is spot on, just enough spiciness and lots of beefy flavor.",
+      "datePublished": "2021-11-07T22:05:13.000Z"
+     },
+     {
+      "@type": "Review",
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": "5"
+      },
+      "author": {
+       "@type": "Person",
+       "name": "QuickEel2098"
+      },
+      "reviewBody": "A fantastic recipe and a real favourite. I love the dried smoky chilli and peppers but my one addition would be 'chipotle chilli's in Adobe Sauce' A can of wonder. I love the addition of coffee and chocolate but Adobe Sauce is a game changer",
+      "datePublished": "2026-08-09T13:26:32.718Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Clasiq2016"
+      },
+      "reviewBody": "Would utilizing the oven, instead of the stove and adding gelatin techniques you talk about in the beef stew recipe found here : http://www.seriouseats.com/... work for this chilli recipe?",
+      "datePublished": "2016-10-27T02:02:52.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "CerintheM"
+      },
+      "reviewBody": "Made this for the Superbowl and it was TOTALLY AMAZING. I am from NY however, and couldn't care less about chili tradition, this just tasted GREAT. Like the above commenter, I replaced kidney with pinto, chocolate with cocoa powder (1 heaping tbsp) - although I liked it much better than the above commenter!Two caveats: could stand to be a bit thicker. Next time, I would add corn meal, tapioca, flour, or whatever thickener.Much bigger caveat. This was SERIOUSLY anise-y. I would either leave it out altogether, or maybe cook with it and take it out at the end - not grind it with other spices.",
+      "datePublished": "2016-02-13T09:53:16.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "LoYo"
+      },
+      "reviewBody": "I was really disappointed in this recipe. I just bought your book and havE been reading it cover to cover and this was the first recipe I tried out. The meat was not even close to tender after 2.5 hours in the oven. When it finally was tender everything was an unappealing uniform sludge. I don't understand the use of short ribs either- they are hard to work with, too fatty and too expensive whereas chuck would work so much better. I have 75 dollars worth of chili that basically is going in the trash.",
+      "datePublished": "2015-11-03T11:56:55.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Davegravy"
+      },
+      "reviewBody": "Best chili I've ever made but also the first time I've made chili from an actual recipe rather than improv.I may have over trimmed the beef because I had no rendered fat left after searing my meat. I saved the trimmings and rendered them separately to deal with this.I had the hard / undercooked bean problem like others on here. Not sure how to get around that one, but it's still far from inedible.I'm still playing with thinning it out and getting the right balance of acidity, but at first the flavor was way too intense and dark. That's a better problem to have than a chili that's too bland.",
+      "datePublished": "2017-02-28T11:25:51.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "drawnonward"
+      },
+      "reviewBody": "This recipe is a little complex, luckily I had most of the ingredients in pantry already. Substituted in beef chuck instead of short rib, it came out amazing! Going to make this for thanksgiving.",
+      "datePublished": "2015-11-18T00:27:37.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "John Levon"
+      },
+      "reviewBody": "Beans didn't soften: definitely pay attention to the comments about vinegar! 30 minutes picking out rock hard beans...",
+      "datePublished": "2015-05-06T19:57:18.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Sharon Thompson"
+      },
+      "reviewBody": "Made this chili for my chili loving son, who's a chef, & he declared my search for the perfect chili recipe over even before I told him it was Chef Kenjis. This is it, The Best Chili Ever. It's definitely more complicated than the basic chili many people settle for, but it's so worth the extra effort. The 2nd time I made it, I doubled the recipe so I could freeze some for another day, but it was all eaten before I could save any. I did use Chuck roast cut into 1/2\" cubes along w some short ribs, that were in short supply that day, but the cubed meat as opposed to ground is another game changer; I'll never make ground meat chili again. The dried pepper puree is another major flavor upgrade. Thinking of making extra to have on hand to use as a condiment or in other recipes. 5 Stars, A++++. Thank you, Chef Kenji.",
+      "datePublished": "2025-01-07T13:32:55.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Tiffany"
+      },
+      "reviewBody": "Just made this chili for the first time - WOW, it's fantastic. I mostly followed the recipe but with limit on time and ingredients I made some adjustments and it still turned out phenomenal. Didn't want to splurge on short rib for the first go-round so took the suggestions in the comments for chuck - this worked beautifully. I didn't have the time to properly prepare dried beans so I used 3 cans of red kidney beans, rinsed and drained, still added them at the appropriate point but simmered for half the time. And surprisingly was able to quickly find Marmite at my local Kroger on the salad dressing aisle; there was a small international section where it was located. This recipe is a labor of love but absolutely worth it. Husband has a chili cook-off at work this week - fingers crossed I, I mean he, wins! Thank you so much for sharing this with us.",
+      "datePublished": "2024-12-10T04:01:54.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Michael Morad-McCoy"
+      },
+      "reviewBody": "Wow. Sorry. But this was really not good. I'm typically a fan of Kenji but this one turned out to be a waste of time and money. Bland and uninteresting. The beef ribs? Total waste of a lot of money when other meats provided much more flavor. And the chilis? Just didn't add much. Quite honestly, I've gotten far more flavor out of dried chili powders and other spices. Most of this ended up in the compost bin. Seriously disappointed.",
+      "datePublished": "2024-11-20T00:41:21.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Jim Urban"
+      },
+      "reviewBody": "This recipe is so great. The very first time I made it was for a chili cook-off. I got first place!",
+      "datePublished": "2024-11-07T18:22:35.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Ian MacMillan"
+      },
+      "reviewBody": "Do you have any advice for making this at high altitude? I live in Sant Fe NM I've had trouble with getting beans to cook. Would you recommend cooking them separately in a pressure cooker and adding them to the chili at some point? Or just simmer them for longer?",
+      "datePublished": "2024-11-04T17:55:41.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "cjn52"
+      },
+      "reviewBody": "Chicken broth? Has anyone tried this with beef broth?",
+      "datePublished": "2024-10-21T15:33:38.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Mark S."
+      },
+      "reviewBody": "Thanks Kenji. I've used star anise in my chili for years. It's also great when soaked and then tossed onto a bed of hot coals When grilling. Dried Rosemary branches as well.My chili 'secret' weapon is the glcerin rendered from the meat browning process. After browning, I strain the liquids into a bowl and add the solids to a separate bowl. Place the bowl of liquid in the freezer until the fats on top harden - a couple of hours or more depending on volume. I usually wait until it's entirely frozen, then submerge the bowl into warm water up to the level of the frozen fats. After just a couple minutes, the hardened mass will slide from the bowl; be sure to keep it inverted as you slip it onto a cutting board, then skim the 'lower' section away from the harder slab of fats. Discard the fats and add the glycerin (containing a lot of the bits of meat, seasonings, etc.) back to the pot along with the meat and continue with your recipe.",
+      "datePublished": "2024-10-14T15:53:28.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "EdgyYeast1452"
+      },
+      "reviewBody": "I made this last fall and stayed pretty close to the recipe. It was an all-day job, plus looking for all the unusual ingredients. It's expensive and a ton of prep work. I used too many umami enhancers- won't make that mistake again, a little goes a long way. What it does get right is roasting your own peppers, slow cooking a flavorful cut of beef (using chuck now) and creating a well rounded flavor profile with onion, tomato, and cider vinegar. Add red wine. Easy on the bitters such as coffee, star anise, marmite (eliminate), cloves, anchovies and chocolate. These can cover up the flavor of the meat and chilies, and you don't wasn't it dense and heavy. More is not necessarily better. I'm ready to try again, this time with the goal of erring on the bright side.",
+      "datePublished": "2024-10-14T14:24:07.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Sherman Kaplan"
+      },
+      "reviewBody": "Sorry guys and gals, but I have been making Cincinnati chili for more than half a century, so I will stick with what's proven and works, so pass the Tabasco, please…Sherm",
+      "datePublished": "2024-10-14T08:03:18.000Z"
+     }
+    ],
+    "mainEntityOfPage": {
+     "@type": [
+      "WebPage"
+     ],
+     "@id": "https://www.seriouseats.com/the-best-chili-recipe",
+     "name": "The Best Chili Ever",
+     "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+         "@id": "https://www.seriouseats.com/recipes-by-course-5117906",
+         "name": "Recipes By Course"
+        }
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+         "@id": "https://www.seriouseats.com/main-recipes-5117839",
+         "name": "Mains"
+        }
+       },
+       {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+         "@id": "https://www.seriouseats.com/main-recipes-by-type-5117824",
+         "name": "Mains By Type"
+        }
+       },
+       {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+         "@id": "https://www.seriouseats.com/chili-recipes-5117821",
+         "name": "Chili"
+        }
+       }
+      ]
+     }
+    }
+   }
+  ]
+ ]
+}

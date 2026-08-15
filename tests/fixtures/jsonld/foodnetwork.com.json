@@ -1,0 +1,1328 @@
+{
+ "url": "https://www.foodnetwork.com/recipes/ree-drummond/perfect-pot-roast-recipe-2118771",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=arrayRoot",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[dict]",
+  "yield=str:\"6 servings\"",
+  "author=list",
+  "prep=\"P0Y0M0DT0H15M0.000S\" cook=\"P0Y0M0DT4H15M0.000S\" total=\"P0Y0M0DT4H30M0.000S\"",
+  "ing=list9",
+  "plugins="
+ ],
+ "jsonld": [
+  [
+   {
+    "@context": "http://schema.org",
+    "@type": "Recipe",
+    "mainEntityOfPage": true,
+    "name": "Perfect Pot Roast",
+    "url": "https://www.foodnetwork.com/recipes/ree-drummond/perfect-pot-roast-recipe-2118771",
+    "headline": "Perfect Pot Roast",
+    "description": "Learn the best meat to use for beef pot roast, easy ways to build flavor and how to long pot roast takes to cook in the oven. Plus, discover why braising is the best way to make tender, flavorful pot roast.",
+    "author": [
+     {
+      "@type": "Person",
+      "name": "Ree Drummond",
+      "url": "https://www.foodnetwork.com/profiles/talent/ree-drummond"
+     }
+    ],
+    "image": [
+     {
+      "@type": "ImageObject",
+      "url": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2023/9/12/PERFECT_POT_ROAST_H.jpg.rend.hgtvcom.1280.1280.suffix/1694547512468.webp",
+      "height": "1280",
+      "width": "1280"
+     },
+     {
+      "@type": "ImageObject",
+      "url": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2023/9/12/PERFECT_POT_ROAST_H.jpg.rend.hgtvcom.1280.960.suffix/1694547512468.webp",
+      "height": "960",
+      "width": "1280"
+     },
+     {
+      "@type": "ImageObject",
+      "url": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2023/9/12/PERFECT_POT_ROAST_H.jpg.rend.hgtvcom.1280.720.suffix/1694547512468.webp",
+      "height": "720",
+      "width": "1280"
+     }
+    ],
+    "datePublished": "2015-06-10T13:40:43.943-04:00",
+    "dateModified": "2025-01-08T14:55:01.698-05:00",
+    "publisher": {
+     "@type": "Organization",
+     "name": "Food Network",
+     "url": "https://www.foodnetwork.com",
+     "logo": {
+      "@type": "ImageObject",
+      "url": "https://food.fnr.sndimg.com/etc/clientlibs/assets/images/food/fn-logo-flat-60x60.png",
+      "height": "60",
+      "width": "60"
+     }
+    },
+    "keywords": "Roasting,Roasted Vegetable,Roast Recipes,Roast Beef,Pot Roast,Main Dish,Gluten Free,Easy Main Dish,Beef",
+    "cookTime": "P0Y0M0DT4H15M0.000S",
+    "prepTime": "P0Y0M0DT0H15M0.000S",
+    "totalTime": "P0Y0M0DT4H30M0.000S",
+    "recipeIngredient": [
+     "Salt and freshly ground black pepper",
+     "One 3- to 5-pound chuck roast ",
+     "2 or 3 tablespoons olive oil",
+     "2 whole onions, peeled and halved",
+     "6 to 8 whole carrots, unpeeled, cut into 2-inch pieces",
+     "1 cup red wine, optional",
+     "3 cups beef broth",
+     "2 or 3 sprigs fresh rosemary",
+     "2 or 3 sprigs fresh thyme"
+    ],
+    "nutrition": {
+     "@type": "NutritionInformation",
+     "servingSize": "1 of 6 servings",
+     "calories": "531",
+     "fatContent": "21g",
+     "saturatedFatContent": "7g",
+     "carbohydrateContent": "15g",
+     "fiberContent": "4g",
+     "sugarContent": "6g",
+     "proteinContent": "64g",
+     "cholesterolContent": "182mg",
+     "sodiumContent": "1361mg"
+    },
+    "recipeInstructions": [
+     {
+      "@type": "HowToStep",
+      "text": "Preheat the oven to 275 degrees F. "
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Generously salt and pepper the chuck roast. "
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Heat the olive oil in large pot or Dutch oven over medium-high heat. Add the halved onions to the pot, browning them on both sides. Remove the onions to a plate. "
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Throw the carrots into the same very hot pot and toss them around a bit until slightly browned, about a minute or so. Reserve the carrots with the onions. "
+     },
+     {
+      "@type": "HowToStep",
+      "text": "If needed, add a bit more olive oil to the very hot pot. Place the meat in the pot and sear it for about a minute on all sides until it is nice and brown all over. Remove the roast to a plate. "
+     },
+     {
+      "@type": "HowToStep",
+      "text": "With the burner still on high, use either red wine or beef broth (about 1 cup) to deglaze the pot, scraping the bottom with a whisk. Place the roast back into the pot and add enough beef stock to cover the meat halfway. "
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Add in the onions and the carrots, along with the fresh herbs. "
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Put the lid on, then roast for 3 hours for a 3-pound roast. For a 4 to 5-pound roast, plan on 4 hours. The roast is ready when it's fall-apart tender."
+     }
+    ],
+    "aggregateRating": {
+     "@type": "AggregateRating",
+     "ratingValue": 4.7,
+     "reviewCount": 1725
+    },
+    "recipeYield": "6 servings",
+    "review": [
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "katgirlkg"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This is by far the very best pot roast recipe ever! I had tried others but when I found this one, I never went back. And everyone raves about it! I make it with the wine and the beef stock and it is outstanding! The meat is always very tender!  I make potatoes on the stove then mash them up. I use some of the potato water along with the juices from the meat to make the gravy. The meat juices contain the wonderful herbs and onions so the gravy is amazing! This recipe is far too good to save it for only special occasions! I make it at least once a month!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "MileHighCooking"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "The toughest part of this recipe is waiting!!!  Have made this several times and it never disappoints.  Have made this recipe as written and it’s great. But, when I have planned ahead, I season the roast with salt, pepper, and some dried herbs (parsley, oregano, garlic powder) the evening before and put it in the fridge (uncovered).  Next day, take it out 30-60 min ahead of searing.  The crust on the outside of the roast is beautiful and the meat is delicious!  Add in some of Ree’s creamy mashed potatoes and it’s a perfect meal!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "joyczy"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Made this yesterday with mashed potatoes. The only thing I added was Heinz 57 sauce because I wanted to finish up the bottle. No need for any gravy mix, I used Better Than Bouillon beef base. Meat was very soft and delicious, The whole roast disappeared!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "WitchAWoman"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This might be the best pot roast I EVER had.  Tossed celery around w/ carrots, deglazed with red wine, used regular beef broth, quartered yukon golds in the last hour.  3.5lb chuck roast.  Can't believe the cost of chuck roast, but it was totally worth it.  $30 well spent."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "DebraD"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Made this last night and it was again one of favorite cold winter rainy night recipes.  We added celery with the carrots,  added red wine, with the beef broth, some tomato paste and potatoes at last hour to so.  A huge family hit!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Smh7363"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "It had been many years since I made a roast because each one I have ever made never turned out well. I decided today I would try making this recipe and it was absolutely the best. The chuck roast was fall apart tender and so delicious. The worst part of today was realizing I should have been making this no fail recipe since the first time it ever aired on the show. "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "martyvettech"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Have made this many times. Simply the best. So easy and great with mashed potatoes. "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "sim1iii"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This is such a basic straightforward recipe, that turns out wonderful every time I make it. After browning the meat and veggies, and deglazing the pan, I put it all in my slow cooker to cook. Great for busy days. "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "jaballard"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I would have liked to post a photo, but it was gone before I got to make my plate!! I have always hated (understatement) pot roast. After all of my 50 years of eating and despising that this was dinner, and then being asked to please make it because other people liked it..and getting the same face I gave as child... THANK YOU, THANK YOU, THANK YOU!!!!! This is a God sent recipe for those that \"just can,to eat it\". The one bite and Nope, people. "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "stevenvexson"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "First time I made this it was fabulous. I really loved the carrots cooked in the broth and the meat was falling apart tender. This time it was a little tough even though I baked the 2 pound roast for 3 hours. Guess it was the meat. Tasted good though."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "chocolatelabradors"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Baking it ensures it is perfect! I came across this after using a crock pot for years! Frustrated with my pot roast being tough or or cooked in the crockpot...even on low for hours, or the carrots were still hard, this recipe is a game changer! Browning the veggies (yellow onion, pre-pelled baby carrots, small mini yellow stew potatoes) before they go in, gets them 1/2 done so they will be finished with the meat is done. I turned the heat down to 250 degrees with 1.5 hrs left for my personal taste and to ensure it wouldn't be overdone. Started at 11am and finished around 345pm. I have small kids so I just used salt and pepper for seasoning on thw veggies and the meat. It turned out perfectly and my $20 chuck roast was not wasted. Thank you!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "AuntSandra"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Hi yall! I loved this recipie, but unfortunateley he took the plates and silverware in the divorce (also the kids). They said that i was scitsofrenich? Whatever that means. So, i had to ead this dish off of my moldy floor. It was still! Delious! 5 st*#ars"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Carole W."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Everyone needs a good pot roast recipe----this is it.   Simple and delicious.  Use more  herbs if you like    and a sprinkle of fresh at serving time to pump up the flavor.  "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Odie1"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 4,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "First time I made this it was fabulous. I really loved the carrots cooked in the broth and the meat was falling apart tender. This time it was a little tough even though I baked the 2 pound roast for 3 hours. Guess it was the meat. Tasted good though."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Kathy.strzyzewski"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Followed this recipe today, 5 lb beef chuck roast, Dutch oven, a 4 hour cook time!  Had two couples over for dinner. I was nervous because I’m learning to develop my cook skills. Turned out great! Wonderful flavor and I am so happy my gravy was also a hit!!! "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Marcia M."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "my sister in law, who doesn't eat beef, told me years ago that she tried ree's recipe and was very pleased with the results because for once my brother had something good to say about what she had prepared.  i always did my roasts the way my mother did back in the 60s, in an electric frying pan with nothing but carrots and potatoes. i was in my 20s then, now in my70s and i haven't made a pot roast in many years, but i had my brother over yesterday because i wanted to try out one of my new gadgets, and i decided to try ree's pot roast. the basic difference for me was the browning of the onions and carrots, and the addition of a little red wine.  i also gave my potatoes a bit of a sear before adding the liquids (ree's recipe doesn't include potatoes, but my mother's did).  <br /><br />needless to say, my roast was great.  it was the browning of the aromatics that did it.  i will be browning my aromatics - and my potatoes - from now on.  and who needs an excuse to open up a bottle of red wine.  this recipe worked very well for my non-meat eating sister in law, and it worked great for me.  i guess that sometimes an old dog can learn a new trick."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Debra D."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 3,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I’ve used other recipes that I thought were better so wouldn’t make this again. After 4 hours the meat wasn’t falling apart tender (could have been the meat 🤷‍♀️). I added tomato paste and garlic, but still not enough flavor. "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Cheryl"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 4,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I used a small amount of tube tomato paste and just added a few chopped tomatoes that I had. After it finished cooking took meat out and added a tablespoon of cornstarch with water to slightly thicken and turned out very good "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Erica M."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Great recipe and I used a Pioneer Woman dutch oven to cook in. However more seasoning besides salt and pepper is definitely needed. I did end up adding more seasoning after a little taste test. I also added diced potatoes after the roast had been cooking for awhile and the entire family loved the meal. This recipe is a keeper!!  "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "DixAnn C."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 4,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "It was tender but lacked flavor.Next time will add potatoes..and more seasoning. Think I will use a slurry to thicken juices toward the end of cooking."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "JaneyBloop"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This was really good!  I had a 3 1/2 pound chuck roast and it was in the oven for about 3 1/2 hours.  I used dry herbs because that's what I had on hand.  I added some fresh mushrooms that were in my refrigerator and needed using, and added four cloves of garlic along with half red wine/half beef broth.  Thanks Ree.... this will go on rotation!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "smarogers"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Super easy to assemble. I used a Avacado oil and Beef stock with Red wine which I can buy here. I too had dried herbs and not fresh. I used vidalia Onion and farm fresh carrots as they are currently in season and mushrooms. Will definitely make this again. The gravy made from these juices was delicious."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "didemusajmck"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Great recipe! The meat was so tender that it fell apart easily! The vegetables and juices were delicious."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "mychelleh1"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I halved the recipe because of our family size so I only cooked it for two hours and it came out perfectly. The roast was tender as were the vegetables. I included potatoes and red bell peppers as well as minced garlic. This is a very basic but good recipe."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Kristen"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I’ve made this a few times and I agree with other comments, cook it for the time and temperature suggested. I used the red wine to deglaze and added a few cloves of garlic cut in half, and portobello mushrooms. I also season with salt, pepper, and onion powder  before I seared the meat. I serve with  mashed potatoes and baby Lima beans! A family favorite."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "karenscookies1800207498"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I had the same trouble as Rae- did-my pot roasts always turned out kind of tough. I too thought I was cooking them too long. WRONG!!  (I was not cooking them long enough.)<br />Anyway, just follow THESE directions &amp; everything will be just fine.🙂 I had to use dried herbs, as that's what I have. I also used 3 cloves of garlic. I went with the red wine option. <br />Totally delicious. "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Gale W."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This is so good. I had a small roast- only a pound and a half so decided to add even more vegees. After browning the onions and carrots, I browned some golden potatoes. I had no beef stock or broth, so added a can of onion soup. I used the red wine, fresh rosemary and thyme. I also added fresh green beans and whole mushrooms. The rosemary aroma filled the house! Delicious!!!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "bob griswold"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Great recipe:) I added potatoes to the pot as well :)"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Have been using this recipe for years with slight occasional variations. Always delicious. Family loves it!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "cheriecnnr"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "My entire family loves this pot roast accompanied with her Perfect Mash Potatoes recipe.  I do 4 things only differently (but you don't need to)... 1) I brown everything first in my grandma's cast iron skillet with olive oil adding garlic and season salt as well.  2) I brown chunky celery pieces as well as the carrot and onion and 3) I throw everything in a large crock pot, stacking just the way she says, meat, onions, carrots, celery, broth, rosemary and thyme sprigs.  I use an 8 qt crock pot and the veggies have plenty of room on the sides so a little of the meat shows on top, pour in the broth and place the sprigs on top of the meat peaking out.  Put on high for 4 hours and don't take the lid off while cooking.  It comes out perfect every time and I always serve with her perfect mashed potatoes recipe!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Susan Foscarota"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This is my favorite pot roast recipe on cold winter days!!!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anne O."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This recipe is easy to make and my family and I just love it. I follow the directions exactly as written. I have made it with the optional red wine and without it. It is absolutely delicious either way. This is just one of many of Ree's recipes that we love because Ree's Recipes Rock!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Lisa E."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "The ease of prep, the limited expense &amp; the resulting flavor of this roast, have been my 'go-to' ever since I gave it a try!?  I too, add garlic cloves to the recipe (like another reviewer below), but it truly is up to what your individual tastes may be.  Whether making this for a family meal, dinner with friends or Sunday eve preprepping for a busy Monday at work, it is foolproof!!  Always the recipe I use now!! "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "L.A. McKay"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 4,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "It's pretty standard, not really special, but if you are a new cook, this is a good place to start."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "mlmrs78"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Delicious! I have made this twice. The first time, I followed the recipe. The second time, I added 2 cloves of minced garlic to the pot after I took the meat out. I cooked the garlic for about 30 seconds and then deglazed the pan. It was delicious the first time, but my family thought it needed just a little something. The garlic brought out some additional flavor and made it extra delicious!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Jennie Briggs-Dreyer"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This is the best pot roast I’ve ever made. I’ve had the same problem with slow cookers, and it just doesn’t work as good as this recipe. Delicious whole thing was eaten up."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Marianne Black"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "My slow cooker pot roasts were not working out anymore and this recipe and cooking method has made us love pot roast all over again!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Perfect Sunday Dinner and Football Meal."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "So good warms your soul! so easy to make!<br />Definitely a favorite Sunday winter dinner in our family!! "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This pot roast is delicious, everyone loves it. Super easy and a great meal after a hike! "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This is a huge hit with everyone I make it for. I did not change a thing - it’s perfect the way it is.  If you’re a novice at this like me it might be helpful to add that the key is to keep the heat high when you pour in the wine so that all the little bits of meat release from the pan.  I use a wood spatula with a straight edge and it works perfectly.  When I deglaze the pan like this I feel like a true chef!   And it makes it taste so good!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "mailtocyndi@gmail.com"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Delicious flavor and super easy. I added chunked red potatoes with more S&amp;P for the last 30 minutes. Needed more salt when it came out too."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Cindy Tomlinson"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Ree, this recipe is amazing ! My new Go To. It’s fall apart tender, the best we have ever had. Thanks.👩‍🍳😋🤗"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "John G."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I've made this three times now and it is delicious beyond belief.  The texture is so perfect it literally falls apart out of the pot."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Philip Bamonti"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Question- urgent!!<br />Will this work with a convection oven?<br />"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "The ultimate basics for a delicious, homestyle, pot roast.  Even when varying ingredients and seasoning I refer to this template every time I make a pot roast at home and NEVER have anyone turn it down.  Affordable (when a chuck is on sale), no need to go purchase niche items, and tasty.  Yumm!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Wonderful combination! Simple and robust.  I use  2 tablespoons Worcestershire sauce. "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "claudia.raye18"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Can I cook this in the stove in a stainless steel pot with a lid? I don’t have a Dutch oven or crock pot "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Tamia Banks"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "fantastic and delicious "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I make this at least once a month! My family thinks it is the best pot roast they have ever had! I mostly follow the recipe exactly as it is written,but every now and then I add whole mushrooms! I never use a crockpot and I always use a chuck roast! Always serve with mashed potatoes! It is a requested meal in this house! Thanks for the fabulous recipe! The pioneer woman never lets me down! I think the people who have had bad luck with this recipe must be using a different cut of meat and not using a Dutch oven!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Marcia Ball"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I cooked this recipe for my family tonight, and we all loved it!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Robert K."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I am cooking this for the second time right now (it's in the oven on a crisp fall day, making the house smell incredible). I usually follow what is written in the recipe, as I am not an utterly confident cook. I do well when I follow the recipes, but I need to be more experienced to be creative and probably never will feel comfortable doing so. So, even though I don't typically make any changes, I did change this one by adding some potatoes. I cut and quartered them and put them in with the other vegetables. That is how I remember having a pot roast as a kid. I bought a bottom round roast and made sure to salt, pepper, and garlic powder on all sides. It makes a nice brown color on the meat. This is an excellent recipe. The onions, carrots (and potatoes) are delicious from the pan. What's nice about this is you can put it in the oven, set it for three hours, and do anything else you have to do. You don't have to worry about watching it like you would if it were on the stovetop boiling. I am glad I tried this. It was easy to make but delicious. This pot roast with vegetables will make you seem like a very skilled cook, even if you are a beginner.  "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Every time I make this for my family, they absolutely love it! This is my go to recipe every time I make pot roast!!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Paula Everard"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I have made this recipe numerous times and changed things like adding potato’s and using beefy onion soup. It doesnt matter which way you do it it always comes out delicious!! The ONLY way i do my pot roast."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anne"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I have made this pot roast at least 20 times. It's my  families favorite. It has NEVER been off. I add a little more carrots and onions, and throw in a few cloves of whole garlic (I take garlic out before serving).<br /><br />"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "raphaelthedeacon"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Fantastic. Only slightly more complicated than the crock pot, but much, much better resuilts."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "lieteaurandi"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Absolutely loved this recipe and so glad I found it! <br />My original plan was to just toss everything in a slow cooker. But I’m so happy I seared the veggies and meat. It added so much flavor. <br /><br />I also tossed about 10 tiny russet potatoes in with everything and it was a great addition! <br /> My piece of meat was about 2.25 lbs and I cooked it for 4 hours. It fell apart and was perfect!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Nancy S."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Perfect pot roast!  Tender and delicious and so easy!  My husband said he could eat it every night!  The broth makes great gravy too!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Trisann"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I made this Pot Roast today.  I read most of the reviews first and the majority were great.  I  attribute bad reviews to people not knowing how to cook properly, or they misunderstood the directions.  This is definitely a keeper in our home.  Thank you Ree!!<br />"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "PERFECT!!!!!!!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This was FABULOUS…Thank you Ree"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "enriquearenas24"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Perfect! Wouldn't change a thing besides the cooking time because I live above 8,000 ft. of elevation."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Wow. Tasty and good for you! Michael Stice!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Julie Gwennap"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Just made this today and it was so much easier and tastier than our usual crockpot roast. "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "jamie.cherewko1"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Finally a tender roast!!!! <br />My kids will finally eat roast without groaning. Love this recipe."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 4,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Good one<br />"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "maggieschroyer"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Sooo…I just made this for Father’s Day for my husband who is a pot roast fanatic.  If we go to a place that has pot roast, he gets it.  In our over 7 years of marriage I’ve never made it because I’ve been too nervous.  He told me this pot roast was the best meal I’ve ever made for him (and that’s alot of meals)!  I gave all the credit to Ree but man, spot on recipe!  "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I added celery and baby gold potatoes. It was amazing!! Perfectly tender fall apart roast with a great sauce. My new go to! "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Carol E."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Yes... it was delicious I added fennel seeds bay leaf and celery I made mashed potatoes and gravy too from the drippings."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "made2dream"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Roasted onions, garlic, potatoes with seasonings mentioned.  Removed and added roast to brown on both sides. Didn't have beef broth so I added a bit of water and collected the juices and what was toasted in the pan. I added white wine to my pot with juices and added the meat, potatoes and more seasoning. My friend thoroughly enjoyed the flavors as his father who passed was a Chef and it's hard to please his taste buds. He ate it the next day as well which was a \"tell\" that he loved it. He admitted he drank the much flavored broth. Thank you!"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Anonymous"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This pot roast is as advertised, excellent! I use the red wine to deglaze the pan &amp; the wine adds a nice rich flavor. "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Food Network User"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Made this for tonight's dinner. Hubby loved it. I also added 1 halved potato and 2 garlic pieced .  I can't wait to use this recipe again. "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Food Network User"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I didn't have those separate herbs, fresh or dried, so I sprinkled in Herbs de Provence. That with the browned onions and carrots made this the best flavored pot roast I've ever tasted."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Richard C."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I made this for Easter dinner last night for my wife and I. It was so delicious. The only change I made to the recipe was adding to large russet potatoes that I had. I peeled and chopped them up. Thanks for the wonderful recipe "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Food Network User"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Absolutely delicious!  The whole family enjoyed it.  I added a large carton of cleaned and stemmed mushrooms to the pan before baking as well.  "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "lisa a."
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Phenomenal.  Be sure to season the meat prior to searing with substantial salt and pepper."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Food Network User"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I absolutely loved this recipe! I made mine in a crockpot, and I made it with boneless chuck roast (use 1 1/2 lbs in the place of the 3 lbs of bone-in chuck roast, and 4.75 lbs in the place of the 5-lbs of bone-in chuck roast). Anyway, I substituted 2 tbsp of granulated onion (or onion powder) for the onion halves, I just skipped the browning and just put the granulated onion in the crockpot, I skipped cooking the carrots and just put them in the crockpot, I seasoned the meat and browned it as directed, I placed it in the crockpot, I substituted beef broth for the red wine, I added it to the crockpot, I added the other cups of beef broth to the crockpot, I added the herbs, covered it, and cooked it on high for 4 hours (for the larger one, cook it on high for 4 hours and 15 min). You can also cook it on low for 8 hours (for both sizes of meat). 😊😋"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Food Network User"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I am getting ready to make a Top Round Roast using Ree Drummonds recipe for chuck roast. I am also going to add Yukon Gold Potatoes, Halved. I made a Blueberry Loaf this morning. Can't wait till dinner time. I will get back to you after we eat."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Food Network User"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "This was the best pot roast ever. I made it as written, just added some garlic powder when seasoning the meat with salt and pepper. I used a 5 pound chuck roast, roasted for a bit over 4 hours. So juicy and flavorful and the carrots were out of this world. My family devoured it! "
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "lifish"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 2,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "Not a fan, in the end it tastes like boiled beef.  Next time I will have the butcher grind up the chuck for burgers."
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "phyllisasherer"
+      },
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": 5,
+       "worstRating": "1",
+       "bestRating": "5"
+      },
+      "reviewBody": "I'm making this today, THANK YOU! I'll make mashed potatoes for the side, and a tray of cornbread &lt;3"
+     }
+    ],
+    "video": {
+     "@type": "VideoObject",
+     "name": "Ree Drummond's Perfect Pot Roast",
+     "description": "Lots of trial and error went into the recipe for Ree's Perfect Pot Roast. Now the meat in this dish is so tender it falls off right off the bone.",
+     "duration": "PT0H4M14S",
+     "thumbnailUrl": "https://food.fnr.sndimg.com/content/dam/images/food/video/2/22/225/2259/2259102.jpg.rend.hgtvcom.406.305.suffix/1780647690955.webp",
+     "contentUrl": "https://www.foodnetwork.com/apps/api/playback?path=/etc/sni-asset/food/videos/0/02/021/0216/0216872",
+     "uploadDate": "2026-06-05T04:21:33.024-04:00"
+    },
+    "recipeCategory": "main-dish"
+   },
+   {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+       "@id": "https://www.foodnetwork.com",
+       "name": "Home"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+       "@id": "https://www.foodnetwork.com/recipes",
+       "name": "Recipes"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+       "@id": "https://www.foodnetwork.com/recipes/ingredients/meat",
+       "name": "Meat"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+       "@id": "https://www.foodnetwork.com/recipes/ingredients/meat/beef",
+       "name": "Beef"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+       "@id": "https://www.foodnetwork.com/recipes/ree-drummond/perfect-pot-roast-recipe-2118771",
+       "name": "Perfect Pot Roast"
+      }
+     }
+    ]
+   }
+  ]
+ ]
+}

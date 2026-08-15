@@ -1,0 +1,633 @@
+{
+ "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list1:[\"6\"]",
+  "author=dict",
+  "prep=\"PT10M\" cook=\"PT300M\" total=\"PT310M\"",
+  "ing=list10",
+  "plugins=WPRM"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#article",
+     "isPartOf": {
+      "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/"
+     },
+     "author": {
+      "name": "Brandie Skibinski",
+      "@id": "https://www.thecountrycook.net/#/schema/person/690f3aef4d0df4f6c8394916cdea8ec7"
+     },
+     "headline": "Crock Pot Chicken and Dumplings",
+     "datePublished": "2022-12-23T13:00:00+00:00",
+     "dateModified": "2025-10-15T16:09:12+00:00",
+     "wordCount": 1177,
+     "commentCount": 103,
+     "publisher": {
+      "@id": "https://www.thecountrycook.net/#/schema/person/690f3aef4d0df4f6c8394916cdea8ec7"
+     },
+     "image": {
+      "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.thecountrycook.net/wp-content/uploads/2019/05/thumbnail-Crock-Pot-Chicken-and-Dumplings-scaled.jpg",
+     "articleSection": [
+      "Chicken/Turkey Recipes",
+      "Dinner Recipes",
+      "Slow Cooker Recipes",
+      "Videos"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": [
+      "WebPage",
+      "FAQPage"
+     ],
+     "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/",
+     "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/",
+     "name": "Crock Pot Chicken and Dumplings - The Country Cook",
+     "isPartOf": {
+      "@id": "https://www.thecountrycook.net/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.thecountrycook.net/wp-content/uploads/2019/05/thumbnail-Crock-Pot-Chicken-and-Dumplings-scaled.jpg",
+     "datePublished": "2022-12-23T13:00:00+00:00",
+     "dateModified": "2025-10-15T16:09:12+00:00",
+     "description": "Crock Pot Chicken and Dumplings is an easy, creamy recipe made with chicken stock, chicken breasts, cream of chicken and canned biscuits.",
+     "breadcrumb": {
+      "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#breadcrumb"
+     },
+     "mainEntity": [
+      {
+       "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1667396292524"
+      },
+      {
+       "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1622855426131"
+      },
+      {
+       "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1622855625459"
+      },
+      {
+       "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1622857443431"
+      },
+      {
+       "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1667396394859"
+      },
+      {
+       "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1667396578943"
+      }
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#primaryimage",
+     "url": "https://www.thecountrycook.net/wp-content/uploads/2019/05/thumbnail-Crock-Pot-Chicken-and-Dumplings-scaled.jpg",
+     "contentUrl": "https://www.thecountrycook.net/wp-content/uploads/2019/05/thumbnail-Crock-Pot-Chicken-and-Dumplings-scaled.jpg",
+     "width": 1200,
+     "height": 1200,
+     "caption": "Crock Pot Chicken and Dumplings recipe."
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.thecountrycook.net/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Dinner Recipes",
+       "item": "https://www.thecountrycook.net/category/main-dishes/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Crock Pot Chicken and Dumplings"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.thecountrycook.net/#website",
+     "url": "https://www.thecountrycook.net/",
+     "name": "The Country Cook",
+     "description": "Recipes for the busy cook!",
+     "publisher": {
+      "@id": "https://www.thecountrycook.net/#/schema/person/690f3aef4d0df4f6c8394916cdea8ec7"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.thecountrycook.net/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": [
+      "Person",
+      "Organization"
+     ],
+     "@id": "https://www.thecountrycook.net/#/schema/person/690f3aef4d0df4f6c8394916cdea8ec7",
+     "name": "Brandie Skibinski",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.thecountrycook.net/wp-content/uploads/2023/04/logo-tcc-new-2.svg",
+      "url": "https://www.thecountrycook.net/wp-content/uploads/2023/04/logo-tcc-new-2.svg",
+      "contentUrl": "https://www.thecountrycook.net/wp-content/uploads/2023/04/logo-tcc-new-2.svg",
+      "width": "1024",
+      "height": "1025",
+      "caption": "Brandie Skibinski"
+     },
+     "logo": {
+      "@id": "https://www.thecountrycook.net/wp-content/uploads/2023/04/logo-tcc-new-2.svg"
+     },
+     "description": "I’m a regular home cook, like most of you, doing my best to get a good meal on the table for my family. I like to say the recipes on here are recipes for the busy cook (you know who you are). You can still get a good meal on the table, with a few shortcuts to help you along the way. I hope you’ll find lots of recipes here that you’ll love and hopefully will become family favorites. Read more...",
+     "sameAs": [
+      "https://www.thecountrycook.net/author/",
+      "https://x.com/Country_Cook"
+     ]
+    },
+    {
+     "@type": "Question",
+     "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1667396292524",
+     "position": 1,
+     "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1667396292524",
+     "name": "How do you thicken chicken and dumplings?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "With this recipe, I add flour to each dumpling and it helps to thicken it up. You can also make a slurry by whisking 3 tablespoons of cornstarch with 3 tablespoons of water and stir that into the pot. Bring the mixture to a boil or set it on high and it will thicken.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1622855426131",
+     "position": 2,
+     "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1622855426131",
+     "name": "Can I use fresh chicken breasts instead of frozen?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Absolutely! I used frozen chicken breasts (which are much cheaper than their fresh counterparts - but still just as yummy!) The time might need to be adjusted slightly for fresh chicken breasts. You can also use different cuts like chicken thighs.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1622855625459",
+     "position": 3,
+     "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1622855625459",
+     "name": "Do I need to use a specific brand of biscuits?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "I like the Pillsbury Grands biscuits but you can use any of your favorite refrigerated biscuits.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1622857443431",
+     "position": 4,
+     "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1622857443431",
+     "name": "Why roll the biscuit dough in flour?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "This helps to thicken up the chicken broth. It also helps to keep the dumplings from sticking together. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1667396394859",
+     "position": 5,
+     "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1667396394859",
+     "name": "What goes along with chicken and dumplings as a side?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We like to serve these with some vegetables. Generally, steamed broccoli, <a href=\"https://www.thecountrycook.net/maple-glazed-carrots/\">carrots</a>, or <a href=\"https://www.thecountrycook.net/bacon-garlic-green-beans/\">green beans</a>. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1667396578943",
+     "position": 6,
+     "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#faq-question-1667396578943",
+     "name": "How long do dumplings take in the slow cooker?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Once you add the dumplings to the crock pot, it will take 1 to 1-1/2 hours to cook.",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Recipe",
+     "name": "Crock Pot Chicken and Dumplings",
+     "author": {
+      "@type": "Person",
+      "name": "Brandie Skibinski"
+     },
+     "description": "Crock Pot Chicken and Dumplings is a super easy, creamy recipe that uses chicken stock, frozen chicken breasts, cream of chicken and canned biscuits. So good!",
+     "datePublished": "2022-12-23T08:00:00+00:00",
+     "image": [
+      "https://www.thecountrycook.net/wp-content/uploads/2019/05/thumbnail-Crock-Pot-Chicken-and-Dumplings-scaled.jpg",
+      "https://www.thecountrycook.net/wp-content/uploads/2019/05/thumbnail-Crock-Pot-Chicken-and-Dumplings-500x500.jpg",
+      "https://www.thecountrycook.net/wp-content/uploads/2019/05/thumbnail-Crock-Pot-Chicken-and-Dumplings-500x375.jpg",
+      "https://www.thecountrycook.net/wp-content/uploads/2019/05/thumbnail-Crock-Pot-Chicken-and-Dumplings-480x270.jpg"
+     ],
+     "video": {
+      "name": "How to make: Crock Pot Chicken and Dumplings",
+      "description": "FULL RECIPE: https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/\nCrock Pot Chicken and Dumplings is a super easy, creamy recipe that uses chicken stock, frozen chicken breasts, cream of chicken and canned biscuits. So good!",
+      "uploadDate": "2021-06-05T01:32:40+00:00",
+      "duration": "PT3M35S",
+      "thumbnailUrl": "https://i.ytimg.com/vi/Ha1pk160idU/hqdefault.jpg",
+      "embedUrl": "https://www.youtube.com/embed/Ha1pk160idU?feature=oembed",
+      "contentUrl": "https://www.youtube.com/watch?v=Ha1pk160idU",
+      "@type": "VideoObject",
+      "hasPart": [
+       {
+        "@type": "Clip",
+        "@id": "#wprm-recipe-25077-step-0-0",
+        "name": "Step 1",
+        "startOffset": "1",
+        "endOffset": "44",
+        "url": "https://www.youtube.com/watch?v=Ha1pk160idU&t=1"
+       },
+       {
+        "@type": "Clip",
+        "@id": "#wprm-recipe-25077-step-0-1",
+        "name": "Step 2",
+        "startOffset": "45",
+        "endOffset": "61",
+        "url": "https://www.youtube.com/watch?v=Ha1pk160idU&t=45"
+       },
+       {
+        "@type": "Clip",
+        "@id": "#wprm-recipe-25077-step-0-2",
+        "name": "Step 3",
+        "startOffset": "62",
+        "endOffset": "68",
+        "url": "https://www.youtube.com/watch?v=Ha1pk160idU&t=62"
+       },
+       {
+        "@type": "Clip",
+        "@id": "#wprm-recipe-25077-step-0-3",
+        "name": "Step 4",
+        "startOffset": "69",
+        "endOffset": "102",
+        "url": "https://www.youtube.com/watch?v=Ha1pk160idU&t=69"
+       },
+       {
+        "@type": "Clip",
+        "@id": "#wprm-recipe-25077-step-0-4",
+        "name": "Step 5",
+        "startOffset": "103",
+        "endOffset": "126",
+        "url": "https://www.youtube.com/watch?v=Ha1pk160idU&t=103"
+       },
+       {
+        "@type": "Clip",
+        "@id": "#wprm-recipe-25077-step-0-5",
+        "name": "Step 6",
+        "startOffset": "127",
+        "endOffset": "144",
+        "url": "https://www.youtube.com/watch?v=Ha1pk160idU&t=127"
+       },
+       {
+        "@type": "Clip",
+        "@id": "#wprm-recipe-25077-step-0-6",
+        "name": "Step 7",
+        "startOffset": "145",
+        "endOffset": "168",
+        "url": "https://www.youtube.com/watch?v=Ha1pk160idU&t=145"
+       },
+       {
+        "@type": "Clip",
+        "@id": "#wprm-recipe-25077-step-0-7",
+        "name": "Step 8",
+        "startOffset": "169",
+        "endOffset": "176",
+        "url": "https://www.youtube.com/watch?v=Ha1pk160idU&t=169"
+       },
+       {
+        "@type": "Clip",
+        "@id": "#wprm-recipe-25077-step-0-8",
+        "name": "Final Step",
+        "startOffset": "177",
+        "endOffset": "214",
+        "url": "https://www.youtube.com/watch?v=Ha1pk160idU&t=177"
+       }
+      ]
+     },
+     "recipeYield": [
+      "6"
+     ],
+     "prepTime": "PT10M",
+     "cookTime": "PT300M",
+     "totalTime": "PT310M",
+     "recipeIngredient": [
+      "32 ounce container chicken broth",
+      "10.5 ounce can cream of chicken soup with herbs",
+      "1 cup diced onion",
+      "1 cup diced celery",
+      "3-4  frozen chicken breasts ((see note below))",
+      "1-2 teaspoons garlic salt",
+      "1/2 teaspoon black pepper",
+      "1 cup frozen peas and carrots, (optional)",
+      "16 ounce tube Pillsbury Grands Refrigerated Biscuits",
+      "1/2 cup all purpose flour"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Place 32 ounce&#32;container chicken broth, 10.5 ounce&#32;can cream of chicken soup with herbs, 1 cup&#32;diced onion and 1 cup&#32;diced celery into a 5-6 quart oval slow cooker. Stir well (it will be a bit lumpy from the cream of chicken soup.)",
+       "name": "Place 32 ounce&#32;container chicken broth, 10.5 ounce&#32;can cream of chicken soup with herbs, 1 cup&#32;diced onion and 1 cup&#32;diced celery into a 5-6 quart oval slow cooker. Stir well (it will be a bit lumpy from the cream of chicken soup.)",
+       "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#wprm-recipe-25077-step-0-0",
+       "video": {
+        "@id": "#wprm-recipe-25077-step-0-0"
+       }
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add 3-4&#32;frozen chicken breasts into crock pot and season with 1-2 teaspoons&#32;garlic salt and 1/2 teaspoon&#32;black pepper.",
+       "name": "Add 3-4&#32;frozen chicken breasts into crock pot and season with 1-2 teaspoons&#32;garlic salt and 1/2 teaspoon&#32;black pepper.",
+       "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#wprm-recipe-25077-step-0-1",
+       "video": {
+        "@id": "#wprm-recipe-25077-step-0-1"
+       }
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Cover and cook on low for about 4-6 hours (until chicken is fully cooked through.)",
+       "name": "Cover and cook on low for about 4-6 hours (until chicken is fully cooked through.)",
+       "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#wprm-recipe-25077-step-0-2",
+       "video": {
+        "@id": "#wprm-recipe-25077-step-0-2"
+       }
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Then take the chicken out and cut it into bite size pieces or shred it with a couple of forks. Put the chicken back into the slow cooker. Add 1 cup&#32;frozen peas and carrots, into the slow cooker if you are using.",
+       "name": "Then take the chicken out and cut it into bite size pieces or shred it with a couple of forks. Put the chicken back into the slow cooker. Add 1 cup&#32;frozen peas and carrots, into the slow cooker if you are using.",
+       "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#wprm-recipe-25077-step-0-3",
+       "video": {
+        "@id": "#wprm-recipe-25077-step-0-3"
+       }
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Take the 16 ounce&#32;tube Pillsbury Grands Refrigerated Biscuits, separate them and flatten each one with the palm of your hand (or roll them out). Then cut the biscuits into strips then cut down the center.",
+       "name": "Take the 16 ounce&#32;tube Pillsbury Grands Refrigerated Biscuits, separate them and flatten each one with the palm of your hand (or roll them out). Then cut the biscuits into strips then cut down the center.",
+       "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#wprm-recipe-25077-step-0-4",
+       "video": {
+        "@id": "#wprm-recipe-25077-step-0-4"
+       }
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Put 1/2 cup&#32;all purpose flour into a bowl and place slices of biscuits into the flour and toss them to coat well with the flour.",
+       "name": "Put 1/2 cup&#32;all purpose flour into a bowl and place slices of biscuits into the flour and toss them to coat well with the flour.",
+       "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#wprm-recipe-25077-step-0-5",
+       "video": {
+        "@id": "#wprm-recipe-25077-step-0-5"
+       }
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Drop the coated biscuits (one by one into the slow cooker.) Take a spoon and gently push the biscuits down under the broth so the tops get moistened (don&#39;t stir.)",
+       "name": "Drop the coated biscuits (one by one into the slow cooker.) Take a spoon and gently push the biscuits down under the broth so the tops get moistened (don&#39;t stir.)",
+       "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#wprm-recipe-25077-step-0-6",
+       "video": {
+        "@id": "#wprm-recipe-25077-step-0-6"
+       }
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Cover and cook on high for about 1 to 1 1/2 hours. Gently stir occasionally. Carefully take a dumpling out and check to make sure it is cooked through. If not, continue to cook until done.",
+       "name": "Cover and cook on high for about 1 to 1 1/2 hours. Gently stir occasionally. Carefully take a dumpling out and check to make sure it is cooked through. If not, continue to cook until done.",
+       "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#wprm-recipe-25077-step-0-7",
+       "video": {
+        "@id": "#wprm-recipe-25077-step-0-7"
+       }
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Sprinkle with some dried parsley (optional.) Then serve!",
+       "name": "Sprinkle with some dried parsley (optional.) Then serve!",
+       "url": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#wprm-recipe-25077-step-0-8",
+       "video": {
+        "@id": "#wprm-recipe-25077-step-0-8"
+       }
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.81",
+      "ratingCount": "77",
+      "reviewCount": "9"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "We are dumpling people! I like the chicken of course but we prefer mostly dumplings with chicken flavoring LOL! So this was absolutely perfect!! Of course, I think this is easy to make as little (or as many) dumplings as you prefer. So delicious and reminded me of home",
+       "author": {
+        "@type": "Person",
+        "name": "Dorothea"
+       },
+       "datePublished": "2026-05-06"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Turned out perfect! So delicious! Thank you!",
+       "author": {
+        "@type": "Person",
+        "name": "Desi"
+       },
+       "datePublished": "2026-01-25"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I cut the recipe in half for two people and thought this was much easier than the stove top recipes I have tried. This was my first time using frozen chicken breasts in the slow cooker and biscuits as dumplings. I would definitely make this again.",
+       "author": {
+        "@type": "Person",
+        "name": "Rose"
+       },
+       "datePublished": "2023-11-17"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I absolutely love every recipe I have tried of yours:)! Everything always turns out delicious. Just wanted to say thank you so much for sharing your wonderful recipes with us. They are amazing!!!",
+       "author": {
+        "@type": "Person",
+        "name": "Lynn"
+       },
+       "datePublished": "2023-10-25"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I LOVE chicken and dumplings so I was stoked to try this recipe. I made it, and on the second time I omitted the onion and celery as I really didn't like tasting them. It came out so thick and creamy and delicious that time I couldn't have been happier. However, I do find if I don't gently stir the dumplings in they'll overcook into a giant biscuit on top. Regardless, it's delicious, I've made it multiple times, including for a church pitch-in and it disappeared.",
+       "author": {
+        "@type": "Person",
+        "name": "Shaunessy"
+       },
+       "datePublished": "2022-05-31"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Finally found the recipe that I've been waiting for,  it was easy and tasted awesome!!",
+       "author": {
+        "@type": "Person",
+        "name": "Mary"
+       },
+       "datePublished": "2021-10-09"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Turned out lovely.\r\nUsed boneless skinless chicken thighs.",
+       "author": {
+        "@type": "Person",
+        "name": "Measha"
+       },
+       "datePublished": "2021-07-05"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Can't wait to cook this!!",
+       "author": {
+        "@type": "Person",
+        "name": "Catherine"
+       },
+       "datePublished": "2021-01-24"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This was so easy and so good.  I added corn and peas.",
+       "author": {
+        "@type": "Person",
+        "name": "Ski DiNunzio"
+       },
+       "datePublished": "2020-08-02"
+      }
+     ],
+     "recipeCategory": [
+      "Main Course"
+     ],
+     "recipeCuisine": [
+      "American"
+     ],
+     "keywords": "Crock Pot Chicken and Dumplings",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "129 kcal",
+      "carbohydrateContent": "13 g",
+      "proteinContent": "14 g",
+      "fatContent": "1 g",
+      "cholesterolContent": "36 mg",
+      "sodiumContent": "489 mg",
+      "fiberContent": "1 g",
+      "sugarContent": "1 g",
+      "servingSize": "1 serving"
+     },
+     "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#recipe",
+     "isPartOf": {
+      "@id": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/#article"
+     },
+     "mainEntityOfPage": "https://www.thecountrycook.net/crock-pot-chicken-and-dumplings/"
+    }
+   ]
+  }
+ ]
+}

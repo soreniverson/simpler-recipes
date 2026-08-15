@@ -1,0 +1,490 @@
+{
+ "url": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph|plain:WebPage",
+  "recipes=1",
+  "instr=list[HowToSection]",
+  "img=list[str]",
+  "yield=list2:[\"2\", \"2 servings\"]",
+  "author=dict",
+  "prep=\"PT10M\" cook=\"PT20M\" total=\"PT30M\"",
+  "ing=list13",
+  "plugins=WPRM,MediavineCreate,AMP"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#article",
+     "isPartOf": {
+      "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/"
+     },
+     "author": {
+      "name": "Tiffany",
+      "@id": "https://www.lecremedelacrumb.com/#/schema/person/fd3774af0495fba3aa301a6a7a47d826"
+     },
+     "headline": "Air Fryer Chicken Breasts",
+     "datePublished": "2023-06-27T17:08:06+00:00",
+     "dateModified": "2025-06-16T22:21:53+00:00",
+     "wordCount": 1287,
+     "commentCount": 6,
+     "publisher": {
+      "@id": "https://www.lecremedelacrumb.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.lecremedelacrumb.com/wp-content/uploads/2023/06/Airfryerchickenbreast-17bb-3-scaled.jpg",
+     "articleSection": [
+      "Air Fryer Recipes",
+      "Easy Main Dishes &amp; Dinner Recipes",
+      "Quick and Easy 30-Minute Dinner Recipes"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": [
+      "WebPage",
+      "FAQPage"
+     ],
+     "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/",
+     "url": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/",
+     "name": "Air Fryer Chicken Breasts - Creme De La Crumb",
+     "isPartOf": {
+      "@id": "https://www.lecremedelacrumb.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.lecremedelacrumb.com/wp-content/uploads/2023/06/Airfryerchickenbreast-17bb-3-scaled.jpg",
+     "datePublished": "2023-06-27T17:08:06+00:00",
+     "dateModified": "2025-06-16T22:21:53+00:00",
+     "description": "Meal prep has never been so easy with these Air Fryer Chicken Breasts! Learn how to make juicy chicken breast in two ways!",
+     "breadcrumb": {
+      "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#breadcrumb"
+     },
+     "mainEntity": [
+      {
+       "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#faq-question-1686947797793"
+      },
+      {
+       "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#faq-question-1686948366270"
+      }
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#primaryimage",
+     "url": "https://www.lecremedelacrumb.com/wp-content/uploads/2023/06/Airfryerchickenbreast-17bb-3-scaled.jpg",
+     "contentUrl": "https://www.lecremedelacrumb.com/wp-content/uploads/2023/06/Airfryerchickenbreast-17bb-3-scaled.jpg",
+     "width": 1707,
+     "height": 2560,
+     "caption": "plate of broccoli, rice, chicken breast, and fork"
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.lecremedelacrumb.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Recipes",
+       "item": "https://www.lecremedelacrumb.com/recipes/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Easy Main Dishes &amp; Dinner Recipes",
+       "item": "https://www.lecremedelacrumb.com/category/main-dishes/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Air Fryer Chicken Breasts"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.lecremedelacrumb.com/#website",
+     "url": "https://www.lecremedelacrumb.com/",
+     "name": "Creme De La Crumb",
+     "description": "Simple, tasty recipes for people who love good food.",
+     "publisher": {
+      "@id": "https://www.lecremedelacrumb.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.lecremedelacrumb.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.lecremedelacrumb.com/#organization",
+     "name": "Creme de la Crumb",
+     "url": "https://www.lecremedelacrumb.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.lecremedelacrumb.com/#/schema/logo/image/",
+      "url": "https://www.lecremedelacrumb.com/wp-content/uploads/2020/06/cc-bg-emerald-stacked.jpg",
+      "contentUrl": "https://www.lecremedelacrumb.com/wp-content/uploads/2020/06/cc-bg-emerald-stacked.jpg",
+      "width": 1600,
+      "height": 1600,
+      "caption": "Creme de la Crumb"
+     },
+     "image": {
+      "@id": "https://www.lecremedelacrumb.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "http://www.facebook.com/cremedelacrumbblog",
+      "https://x.com/CremedelaCrumb1",
+      "https://instagram.com/cremedelacrumb1",
+      "https://www.pinterest.com/cremedelacrumb/",
+      "https://www.youtube.com/channel/UCZJieTrPZv5Q1sLwY0jCAng"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.lecremedelacrumb.com/#/schema/person/fd3774af0495fba3aa301a6a7a47d826",
+     "name": "Tiffany",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://secure.gravatar.com/avatar/15e5a64f2145d0c2ab195cf65dee614b4b97440fc62a6c08fcf241a783abd9bf?s=96&d=mm&r=g",
+      "url": "https://secure.gravatar.com/avatar/15e5a64f2145d0c2ab195cf65dee614b4b97440fc62a6c08fcf241a783abd9bf?s=96&d=mm&r=g",
+      "contentUrl": "https://secure.gravatar.com/avatar/15e5a64f2145d0c2ab195cf65dee614b4b97440fc62a6c08fcf241a783abd9bf?s=96&d=mm&r=g",
+      "caption": "Tiffany"
+     },
+     "description": "Hey there, I’m Tiffany - cook, photographer, mother, and avid taco eater. I am passionate about turning simple flavors and ingredients into tasty meals the whole family will love, with minimal prep and cleanup so there’s more time to spend eating and enjoying. Stay awhile, and help yourself to a taco or two.",
+     "sameAs": [
+      "https://www.lecremedelacrumb.com/about/",
+      "https://www.facebook.com/cremedelacrumbblog/"
+     ],
+     "knowsAbout": [
+      "Food Blogging. Recipe Development",
+      "Food Photography",
+      "Baking",
+      "Desserts",
+      "Quick and Easy Meals",
+      "Dinner Recipses",
+      "Family Recipes"
+     ],
+     "jobTitle": "Food Blogger, Founder, Chef, Recipe Developer",
+     "worksFor": "Creme De La Crumb"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#faq-question-1686947797793",
+     "position": 1,
+     "url": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#faq-question-1686947797793",
+     "name": "How do I know if the chicken is cooked through?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Especially when looking at breaded chicken, it might be difficult to know if the chicken is cooked through. I highly recommend using a meat thermometer so that you can check the internal temperature. I like to take chicken breast out of the air fryer once it has hit 155-160 F and then it continues cooking a bit further while it rests before serving. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Question",
+     "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#faq-question-1686948366270",
+     "position": 2,
+     "url": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#faq-question-1686948366270",
+     "name": "How long to cook thin chicken breast in the air fryer?",
+     "answerCount": 1,
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "If you cut the chicken into thinner pieces like I recommend doing with breaded chicken, the chicken will cook more quickly in the air fryer. However, the cooking time varies depending on the thickness of the chicken! I recommend cooking for 15 minutes and then checking the internal temperature of the chicken to determine if it needs any longer. ",
+      "inLanguage": "en-US"
+     },
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Recipe",
+     "name": "Air Fryer Chicken Breasts",
+     "author": {
+      "@id": "https://www.lecremedelacrumb.com/#/schema/person/fd3774af0495fba3aa301a6a7a47d826"
+     },
+     "description": "Meal prep has never been so easy with these Air Fryer Chicken Breasts! Learn how to make the perfect, juicy chicken in the air fryer in not one but two ways! Perfect for topping on salads, or having in sandwiches or on pasta!",
+     "datePublished": "2023-06-27T11:08:06+00:00",
+     "image": [
+      "https://www.lecremedelacrumb.com/wp-content/uploads/2023/06/Airfryerchickenbreast-14b-1-scaled.jpg",
+      "https://www.lecremedelacrumb.com/wp-content/uploads/2023/06/Airfryerchickenbreast-14b-1-500x500.jpg",
+      "https://www.lecremedelacrumb.com/wp-content/uploads/2023/06/Airfryerchickenbreast-14b-1-500x375.jpg",
+      "https://www.lecremedelacrumb.com/wp-content/uploads/2023/06/Airfryerchickenbreast-14b-1-480x270.jpg"
+     ],
+     "video": {
+      "name": "Air Fryer Chicken Breasts",
+      "description": "Meal prep has never been so easy with these Air Fryer Chicken Breasts! Learn how to make the perfect, juicy chicken in the air fryer in not one but two ways! Perfect for topping on salads, or having in sandwiches or on pasta!",
+      "thumbnailUrl": "https://content.jwplatform.com/thumbs/nty49VmE-720.jpg",
+      "contentUrl": "https://content.jwplatform.com/videos/nty49VmE.mp4",
+      "uploadDate": "2023-10-02T00:00:00.000Z",
+      "@type": "VideoObject"
+     },
+     "recipeYield": [
+      "2",
+      "2 servings"
+     ],
+     "prepTime": "PT10M",
+     "cookTime": "PT20M",
+     "totalTime": "PT30M",
+     "recipeIngredient": [
+      "2  skinless, boneless chicken breasts",
+      "¼ tsp garlic powder",
+      "salt (to taste)",
+      "cracked black pepper (to taste)",
+      "cooking spray (see note)",
+      "2  skinless, boneless chicken breasts",
+      "2 tbsp flour",
+      "¼ tsp garlic powder",
+      "salt (to taste)",
+      "cracked black pepper (to taste)",
+      "1  small egg",
+      "8 tbsp panko breadcrumbs",
+      "cooking spray (see note)"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToSection",
+       "name": "To Make Seasoned Air Fryer Chicken Breasts",
+       "itemListElement": [
+        {
+         "@type": "HowToStep",
+         "text": "Season the breasts with the garlic powder, salt and pepper. Spritz with the cooking spray and cook for 15-20 minutes at 350F until the chicken is cooked through, turning halfway. The exact cooking time will depend on the thickness of the breasts.",
+         "name": "Season the breasts with the garlic powder, salt and pepper. Spritz with the cooking spray and cook for 15-20 minutes at 350F until the chicken is cooked through, turning halfway. The exact cooking time will depend on the thickness of the breasts.",
+         "url": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#wprm-recipe-58694-step-0-0"
+        }
+       ]
+      },
+      {
+       "@type": "HowToSection",
+       "name": "To Make Thin Breaded Air Fryer Chicken Breasts",
+       "itemListElement": [
+        {
+         "@type": "HowToStep",
+         "text": "Using a sharp knife halve the chicken breasts down the middle so you have two same size, but thinner breast pieces. Using the heel of your hand, lightly bash the thicker bits so the four pieces are of roughly the same thickness.",
+         "name": "Using a sharp knife halve the chicken breasts down the middle so you have two same size, but thinner breast pieces. Using the heel of your hand, lightly bash the thicker bits so the four pieces are of roughly the same thickness.",
+         "url": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#wprm-recipe-58694-step-1-0"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "Combine the flour, garlic powder, and a little salt and pepper in the bottom of a shallow bowl. In another, lightly beat the egg with a little more salt and pepper. In a third, add the panko breadcrumbs. ",
+         "name": "Combine the flour, garlic powder, and a little salt and pepper in the bottom of a shallow bowl. In another, lightly beat the egg with a little more salt and pepper. In a third, add the panko breadcrumbs. ",
+         "url": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#wprm-recipe-58694-step-1-1"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "Dip the chicken pieces first in the flour mixture, then the egg, then the breadcrumbs so they are well coated. Use one hand for the flour and crumbs, and another for the egg to avoid coating your fingers! ",
+         "name": "Dip the chicken pieces first in the flour mixture, then the egg, then the breadcrumbs so they are well coated. Use one hand for the flour and crumbs, and another for the egg to avoid coating your fingers! ",
+         "url": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#wprm-recipe-58694-step-1-2"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "Spritz the breaded chicken pieces on both side with cooking spray and cook for 20 minutes at 350F, turning halfway, until the breadcrumbs are golden and crispy. ",
+         "name": "Spritz the breaded chicken pieces on both side with cooking spray and cook for 20 minutes at 350F, turning halfway, until the breadcrumbs are golden and crispy. ",
+         "url": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#wprm-recipe-58694-step-1-3"
+        }
+       ]
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.88",
+      "ratingCount": "8",
+      "reviewCount": "6"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+       },
+       "reviewBody": "This was a great recipe; however, I found 20 minutes to be to long in the air fryer. They were on the dry side.  Next time I’ll start at 5-7 minutes a side and increase if necessary.",
+       "author": {
+        "@type": "Person",
+        "name": "Terry M"
+       },
+       "datePublished": "2025-11-11"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Love this recipe. I had large portions,so had to add 10 minutes cook time. Turned out very juicy.",
+       "author": {
+        "@type": "Person",
+        "name": "Maria W."
+       },
+       "datePublished": "2025-07-29"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Wow! Definitely a keeper! I used chicken tenders and added paprika to the flour. I was really low on breadcrumbs and ended up mixing some crushed plain potato chips with breadcrumbs. I'm new to airfryer cooking and I'm amazed at how good food tastes when cooked or even reheated in them. This will be my new go to chicken recipe- next time I'll try w/ just breadcrumbs .",
+       "author": {
+        "@type": "Person",
+        "name": "Laurel Rose"
+       },
+       "datePublished": "2023-12-30"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Great recipe.",
+       "author": {
+        "@type": "Person",
+        "name": "AmberBasler"
+       },
+       "datePublished": "2023-08-23"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Worked perfectly! We cut them in strips and they were a perfect substitute for chicken nuggets for our kids.",
+       "author": {
+        "@type": "Person",
+        "name": "Lindsey"
+       },
+       "datePublished": "2023-07-07"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Excellent Just As Described",
+       "author": {
+        "@type": "Person",
+        "name": "Adele"
+       },
+       "datePublished": "2023-06-30"
+      }
+     ],
+     "recipeCategory": [
+      "Main Course"
+     ],
+     "recipeCuisine": [
+      "American"
+     ],
+     "keywords": "air fryer chicken breasts",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "347 kcal",
+      "carbohydrateContent": "35 g",
+      "proteinContent": "33 g",
+      "fatContent": "7 g",
+      "saturatedFatContent": "2 g",
+      "transFatContent": "0.03 g",
+      "cholesterolContent": "154 mg",
+      "sodiumContent": "455 mg",
+      "fiberContent": "2 g",
+      "sugarContent": "3 g",
+      "unsaturatedFatContent": "4 g",
+      "servingSize": "1 serving"
+     },
+     "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#recipe",
+     "isPartOf": {
+      "@id": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/#article"
+     },
+     "mainEntityOfPage": "https://www.lecremedelacrumb.com/air-fryer-chicken-breasts/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "WebPage",
+   "headline": "Air Fryer Chicken Breasts - Creme De La Crumb",
+   "about": [
+    {
+     "@type": "Thing",
+     "name": "chicken breast",
+     "sameAs": "https://en.wikipedia.org/wiki/Chicken_as_food"
+    },
+    {
+     "@type": "Thing",
+     "name": "Breast",
+     "sameAs": "https://en.wikipedia.org/wiki/Breast"
+    }
+   ],
+   "mentions": [
+    {
+     "@type": "Thing",
+     "name": "Meal prep",
+     "sameAs": "https://en.wikipedia.org/wiki/Meal_preparation"
+    },
+    {
+     "@type": "Thing",
+     "name": "Recipe",
+     "sameAs": "https://en.wikipedia.org/wiki/Recipe"
+    },
+    {
+     "@type": "Thing",
+     "name": "perfect",
+     "sameAs": "https://en.wikipedia.org/wiki/Perfection"
+    },
+    {
+     "@type": "Thing",
+     "name": "sandwiches",
+     "sameAs": "https://en.wikipedia.org/wiki/Sandwich"
+    }
+   ]
+  }
+ ]
+}

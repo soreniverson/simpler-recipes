@@ -9,6 +9,8 @@ export interface Props {
   canonical?: string;
   /** Set true for pages that must not be indexed (client-only shells, auth callbacks, user data). */
   noindex?: boolean;
+  /** Hide the global header (e.g. focused reading surfaces). */
+  hideHeader?: boolean;
 }
 
 const {
@@ -18,6 +20,7 @@ const {
   type = "website",
   canonical,
   noindex = false,
+  hideHeader = false,
 } = Astro.props;
 
 export const SITE_URL = "https://www.simpler.recipes";
@@ -25,20 +28,19 @@ const siteUrl = SITE_URL;
 const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 // Canonical: always the www host, path from the current page unless overridden.
 const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
-
-// Note: Recipe data for search is now loaded on-demand via fetch in SmartInput
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#F6F5F3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)" />
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>
-    <meta name="title" content={title} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
@@ -53,56 +55,54 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content={canonicalUrl} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={fullImageUrl} />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- Fonts: self-hosted Geist (variable), latin subset preloaded -->
+    <link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Theme initialization (must run before body renders to prevent flash) -->
     <script is:inline>
       (function() {
-        const STORAGE_KEY = 'simpler-recipes-settings';
-        let theme = 'system';
+        var theme = 'system';
         try {
-          const stored = localStorage.getItem(STORAGE_KEY);
-          if (stored) {
-            const settings = JSON.parse(stored);
-            if (settings.theme) theme = settings.theme;
-          }
-        } catch {}
-
-        const effectiveTheme = theme === 'system'
-          ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-          : theme;
-
-        if (effectiveTheme === 'dark') {
-          document.documentElement.classList.add('dark');
-        }
+          var stored = localStorage.getItem('simpler-recipes-settings');
+          if (stored) { var s = JSON.parse(stored); if (s.theme) theme = s.theme; }
+        } catch (e) {}
+        var dark = theme === 'system'
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : theme === 'dark';
+        if (dark) document.documentElement.classList.add('dark');
       })();
     </script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJR6YF1HVL"></script>
-    <script>
+    <!-- Google Analytics: loaded after the page is interactive so it never competes with content -->
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-RJR6YF1HVL');
+      gtag('config', 'G-RJR6YF1HVL', { send_page_view: true });
+      (function () {
+        var load = function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RJR6YF1HVL';
+          document.head.appendChild(s);
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 4000 });
+        else window.addEventListener('load', function () { setTimeout(load, 1500); });
+      })();
     </script>
 
     <!-- Page-specific head content (structured data, extra meta) -->
     <slot name="head" />
   </head>
-  <body class="bg-background text-sand-900 min-h-screen">
+  <body class="bg-background text-sand-900 min-h-screen antialiased">
     <a href="#main-content" class="skip-link">
       Skip to main content
     </a>
-    <Header client:load />
+    {!hideHeader && <Header client:idle />}
     <slot />
   </body>
 </html>
@@ -112,115 +112,135 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
   @tailwind components;
   @tailwind utilities;
 
-  /* Light mode (default) - WCAG AA compliant */
+  @font-face {
+    font-family: 'Geist';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(/fonts/geist-latin-wght-normal.woff2) format('woff2-variations');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  @font-face {
+    font-family: 'Geist';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(/fonts/geist-latin-ext-wght-normal.woff2) format('woff2-variations');
+    unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+  }
+  /* Metric-compatible fallback so text doesn't jump when Geist arrives. */
+  @font-face {
+    font-family: 'Geist Fallback';
+    src: local('Arial'), local('Helvetica Neue'), local('Helvetica');
+    size-adjust: 104%;
+    ascent-override: 92%;
+    descent-override: 24%;
+    line-gap-override: 0%;
+  }
+
+  /* ---------- Design tokens ---------- */
+  /* Light mode (default). Text tints from sand-500 up are AA on sand-50; sand-400 is for hairlines only. */
   :root {
     --sand-25: #FEFEFE;
-    --sand-50: #FCFBFA;  /* Cards - closer to white for contrast */
+    --sand-50: #FCFBFA;
     --sand-100: #F5F4F1;
     --sand-200: #EBEAE6;
     --sand-300: #DDDCD7;
     --sand-400: #BEBDB7;
-    --sand-500: #706f6b;  /* Improved: ~4.6:1 contrast on white */
-    --sand-600: #5e5d59;  /* Improved: ~5.7:1 contrast */
-    --sand-700: #4a4946;  /* Improved: ~7.5:1 contrast */
+    --sand-500: #706f6b;
+    --sand-600: #5e5d59;
+    --sand-700: #4a4946;
     --sand-800: #3A3832;
     --sand-900: #1F1E1B;
     --sand-950: #0F0E0D;
     --primary: #4a4946;
     --primary-light: #5e5d59;
-    --surface: #FCFBFA;  /* Match sand-50 for cards */
-    --background: #F6F5F3;  /* Slightly darker for contrast */
+    --surface: #FCFBFA;
+    --background: #F6F5F3;
+    --on-primary: #FCFBFA;
     --shadow-color: rgba(58, 56, 50, 0.06);
+    color-scheme: light;
   }
 
-  /* Dark mode - WCAG AA compliant contrast ratios */
+  /* Dark mode. The tint ramp keeps the SAME direction as light (25 darkest surface → 300 lightest
+     hairline), so `bg-sand-100` is a subtle raised surface and `hover:bg-sand-100` lifts, not sinks. */
   :root.dark {
-    --sand-25: #2a2926;
+    --sand-25: #1a1917;
     --sand-50: #242321;
-    --sand-100: #1e1d1b;
-    --sand-200: #181716;
-    --sand-300: #141311;
-    --sand-400: #454340;
-    --sand-500: #8a8884;  /* Improved: ~4.8:1 contrast on #141311 */
-    --sand-600: #a09e9a;  /* Improved: ~5.8:1 contrast */
-    --sand-700: #b8b6b2;  /* Improved: ~7.0:1 contrast */
-    --sand-800: #d0cecb;
-    --sand-900: #e8e7e3;
+    --sand-100: #2b2a27;
+    --sand-200: #34322f;
+    --sand-300: #403e3a;
+    --sand-400: #575551;
+    --sand-500: #93918d;
+    --sand-600: #a5a39f;
+    --sand-700: #bcbab6;
+    --sand-800: #d3d1cd;
+    --sand-900: #e9e8e4;
     --sand-950: #f5f4f1;
-    --primary: #b8b6b2;   /* Improved for better readability */
-    --primary-light: #d0cecb;
+    --primary: #bcbab6;
+    --primary-light: #d3d1cd;
     --surface: #242321;
     --background: #141311;
+    --on-primary: #141311;
     --shadow-color: rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
   }
 
   html {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Geist', 'Geist Fallback', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   }
+
+  body {
+    text-rendering: optimizeLegibility;
+  }
+
+  img { max-width: 100%; height: auto; }
+
+  .tabular { font-variant-numeric: tabular-nums; }
 
   .skip-link {
-    @apply absolute -top-10 left-0 bg-primary text-sand-50 px-4 py-2 z-50;
-    transition: top 0.3s;
+    @apply absolute -top-16 left-2 bg-sand-900 text-sand-50 px-4 py-2 rounded-lg z-[100];
+    transition: top 0.2s;
   }
+  .skip-link:focus { @apply top-2; }
 
-  .skip-link:focus {
-    @apply top-0;
+  /* ---------- Buttons: one system ---------- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 h-11 px-4 rounded-lg text-[15px] font-medium leading-none whitespace-nowrap select-none transition-colors;
   }
+  .btn-sm { @apply h-9 px-3 text-[14px]; }
+  .btn:disabled { @apply opacity-40 cursor-not-allowed; }
+  .btn-primary { @apply btn bg-sand-900 text-sand-50 hover:bg-sand-800; }
+  .btn-secondary { @apply btn bg-sand-100 text-sand-800 hover:bg-sand-200; }
+  .btn-ghost { @apply btn text-sand-700 hover:bg-sand-100 hover:text-sand-900; }
+  .btn-icon { @apply inline-flex items-center justify-center h-11 w-11 rounded-lg text-sand-600 hover:bg-sand-100 hover:text-sand-900 transition-colors; }
+  .btn-lg { @apply h-12 px-5 text-base; }
 
+  /* ---------- Focus ---------- */
+  :focus-visible { @apply outline outline-2 outline-offset-2 outline-sand-700; }
+  input:focus-visible, textarea:focus-visible { @apply outline-none; }
+
+  /* ---------- Print ---------- */
   @media print {
-    .no-print {
-      display: none !important;
-    }
-
-    body {
-      background: white !important;
-      font-size: 12pt;
-    }
-
-    .print-only {
-      display: block !important;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    h1 {
-      font-size: 18pt;
-      margin-bottom: 12pt;
-    }
-
-    h2 {
-      font-size: 14pt;
-      margin-top: 16pt;
-      margin-bottom: 8pt;
-    }
-
-    ul, ol {
-      margin-left: 18pt;
-    }
-
-    li {
-      margin-bottom: 4pt;
-    }
-  }
-
-  :focus-visible {
-    @apply outline-2 outline-offset-2 outline-sand-950;
-  }
-
-  button, a {
-    min-height: 44px;
-    min-width: 44px;
+    @page { margin: 14mm 16mm; }
+    .no-print, header[data-site-header], .skip-link { display: none !important; }
+    html { font-size: 12pt; }
+    body { background: white !important; color: black !important; }
+    a { text-decoration: none; color: inherit; }
+    .print-only { display: block !important; }
+    h1 { font-size: 20pt; margin-bottom: 8pt; }
+    h2 { font-size: 12pt; margin-top: 14pt; margin-bottom: 6pt; }
+    li { break-inside: avoid; }
+    section, aside { break-inside: avoid-page; }
+    ol, ul { page-break-inside: auto; }
   }
 
   /* Respect user preference for reduced motion */
   @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;

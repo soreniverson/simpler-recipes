@@ -1,0 +1,151 @@
+{
+ "url": "https://www.jamieoliver.com/recipes/chicken-recipes/perfect-roast-chicken/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=arrayRoot",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[dict]",
+  "yield=str:\"4\"",
+  "author=dict",
+  "prep=null cook=\"PT85M\" total=\"PT85M\"",
+  "ing=list8",
+  "plugins="
+ ],
+ "jsonld": [
+  [
+   {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://www.jamieoliver.com/recipes/chicken/perfect-roast-chicken/",
+    "primaryImageOfPage": {
+     "@type": "ImageObject",
+     "url": "https://asset.jamieoliver.com/images/cq7w2e71/production/2a409dd1676dc3b6324c21286a51a733d5731793-973x1300.jpg/2a409dd1676dc3b6324c21286a51a733d5731793-973x1300.webp?rect=0,285,973,730&w=1200&h=900&fm=webp&q=75&fit=crop&auto=format",
+     "width": 1200,
+     "height": 900
+    }
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    "@id": "https://www.jamieoliver.com/recipes/chicken/perfect-roast-chicken/",
+    "mainEntityOfPage": "https://www.jamieoliver.com/recipes/chicken/perfect-roast-chicken/",
+    "image": [
+     {
+      "@type": "ImageObject",
+      "url": "https://asset.jamieoliver.com/images/cq7w2e71/production/2a409dd1676dc3b6324c21286a51a733d5731793-973x1300.jpg/2a409dd1676dc3b6324c21286a51a733d5731793-973x1300.webp?rect=0,164,973,973&w=1200&h=1200&fm=webp&q=75&fit=crop&auto=format",
+      "width": 1200,
+      "height": 1200
+     },
+     {
+      "@type": "ImageObject",
+      "url": "https://asset.jamieoliver.com/images/cq7w2e71/production/2a409dd1676dc3b6324c21286a51a733d5731793-973x1300.jpg/2a409dd1676dc3b6324c21286a51a733d5731793-973x1300.webp?rect=0,285,973,730&w=1200&h=900&fm=webp&q=75&fit=crop&auto=format",
+      "width": 1200,
+      "height": 900
+     },
+     {
+      "@type": "ImageObject",
+      "url": "https://asset.jamieoliver.com/images/cq7w2e71/production/2a409dd1676dc3b6324c21286a51a733d5731793-973x1300.jpg/2a409dd1676dc3b6324c21286a51a733d5731793-973x1300.webp?rect=0,377,973,547&w=1280&h=720&fm=webp&q=75&fit=crop&auto=format",
+      "width": 1280,
+      "height": 720
+     }
+    ],
+    "name": "Easy roast chicken",
+    "description": "There's nothing better than a delicious Sunday roast. Follow this easy roast chicken recipe for beautifully succulent results. Just add spuds!",
+    "recipeYield": "4",
+    "totalTime": "PT85M",
+    "cookTime": "PT85M",
+    "recipeCategory": "Chicken",
+    "recipeIngredient": [
+     "1 x 1.6kg whole free-range chicken",
+     "2 medium onions",
+     "2 carrots",
+     "2 sticks of celery",
+     "1 bulb of garlic",
+     "olive oil",
+     "1 lemon",
+     "1 bunch of mixed fresh herbs such as thyme, rosemary, bay"
+    ],
+    "recipeInstructions": [
+     {
+      "@type": "HowToStep",
+      "text": "Remove the chicken from the fridge 30 minutes before you want to cook it, to let it come up to room temperature."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Preheat the oven to 240°C/475°F/gas 9."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Wash and roughly chop the vegetables – there’s no need to peel them. Break the garlic bulb into cloves, leaving them unpeeled."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Pile all the veg, garlic and herbs into the middle of a large roasting tray and drizzle with oil."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Drizzle the chicken with oil and season well with sea salt and black pepper, then rub all over the bird. Place the chicken on top of the vegetables."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Carefully prick the lemon all over, using the tip of a sharp knife (if you have a microwave, you could pop the lemon in these for 40 seconds at this point as this will really bring out the flavour). Put the lemon inside the chicken’s cavity, with the bunch of herbs."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Place the tray in the oven, then turn the heat down immediately to 200°C/400°F/gas 6 and cook for 1 hour 20 minutes."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "If you’re doing roast potatoes and veggies, this is the time to crack on with them – get them into the oven for the last 45 minutes of cooking."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Baste the chicken halfway through cooking and if the veg look dry, add a splash of water to the tray to stop them from burning."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "When the chicken is cooked, take the tray out of the oven and transfer the chicken to a board to rest for 15 minutes or so. Cover it with a layer of tin foil and a tea towel and leave aside while you make your gravy."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "To carve your chicken, remove any string and take off the wings (break them up and add to your gravy, along with the veg trivet, for mega flavour). Carefully cut down between the leg and the breast. Cut through the joint and pull the leg off."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Repeat on the other side, then cut each leg between the thigh and the drumstick so you end up with four portions of dark meat. Place these on a serving platter."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "You should now have a clear space to carve the rest of your chicken. Angle the knife along the breastbone and carve one side off, then the other."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "When you get down to the fussy bits, just use your fingers to pull all the meat off, and turn the chicken over to get all the tasty, juicy bits from underneath. You should be left with a stripped carcass, and a platter full of lovely meat that you can serve with your piping hot gravy and some delicious roast veg."
+     }
+    ],
+    "keywords": "chicken, roast chicken, roast chicken, roast, family food, Course, Lunch &amp; dinner recipes, Mains, One-pan recipes, Dish Type, Roast, Main Ingredient, Chicken, Method, Roasting, Occasion, Mother's day, Sunday lunch, non-promotable, Christmas, Student Recipes, christmas dinner",
+    "author": {
+     "@type": "Person",
+     "name": "Jamie Oliver"
+    },
+    "nutrition": {
+     "@type": "NutritionInformation",
+     "calories": "374 calories",
+     "carbohydrateContent": "13.4 g",
+     "fatContent": "15.8 g",
+     "fiberContent": "3.4 g",
+     "proteinContent": "45.5 g",
+     "sodiumContent": "1.2 g",
+     "saturatedFatContent": "3.9 g",
+     "sugarContent": "9.3 g"
+    },
+    "datePublished": "2016-01-25",
+    "suitableForDiet": [
+     "https://schema.org/LowLactoseDiet",
+     "https://schema.org/GlutenFreeDiet"
+    ]
+   }
+  ]
+ ]
+}

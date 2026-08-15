@@ -1,0 +1,409 @@
+{
+ "url": "https://www.saltandlavender.com/creamy-garlic-chicken/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list1:[\"4\"]",
+  "author=dict",
+  "prep=\"PT10M\" cook=\"PT20M\" total=\"PT30M\"",
+  "ing=list11",
+  "plugins=WPRM,MediavineCreate,AMP"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.saltandlavender.com/creamy-garlic-chicken/#article",
+     "isPartOf": {
+      "@id": "https://www.saltandlavender.com/creamy-garlic-chicken/"
+     },
+     "author": {
+      "name": "Natasha",
+      "@id": "https://www.saltandlavender.com/#/schema/person/0639ee2979a638d947154ec52b0c3184"
+     },
+     "headline": "Creamy Garlic Chicken",
+     "datePublished": "2018-12-04T12:00:06+00:00",
+     "dateModified": "2026-04-12T21:43:03+00:00",
+     "wordCount": 1222,
+     "commentCount": 1871,
+     "publisher": {
+      "@id": "https://www.saltandlavender.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.saltandlavender.com/creamy-garlic-chicken/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.saltandlavender.com/wp-content/uploads/2018/12/creamy-garlic-chicken-recipe-3.jpg",
+     "articleSection": [
+      "Chicken &amp; Poultry",
+      "Mains",
+      "Quick &amp; Easy",
+      "Recipes"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.saltandlavender.com/creamy-garlic-chicken/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.saltandlavender.com/creamy-garlic-chicken/",
+     "url": "https://www.saltandlavender.com/creamy-garlic-chicken/",
+     "name": "Creamy Garlic Chicken &#8226; Salt &amp; Lavender",
+     "isPartOf": {
+      "@id": "https://www.saltandlavender.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.saltandlavender.com/creamy-garlic-chicken/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.saltandlavender.com/creamy-garlic-chicken/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.saltandlavender.com/wp-content/uploads/2018/12/creamy-garlic-chicken-recipe-3.jpg",
+     "datePublished": "2018-12-04T12:00:06+00:00",
+     "dateModified": "2026-04-12T21:43:03+00:00",
+     "description": "This creamy garlic chicken recipe is the ultimate easy comfort food! Tender chicken breasts smothered in a creamy garlic sauce are irresistible. Garlic lovers unite!",
+     "breadcrumb": {
+      "@id": "https://www.saltandlavender.com/creamy-garlic-chicken/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.saltandlavender.com/creamy-garlic-chicken/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.saltandlavender.com/creamy-garlic-chicken/#primaryimage",
+     "url": "https://www.saltandlavender.com/wp-content/uploads/2018/12/creamy-garlic-chicken-recipe-3.jpg",
+     "contentUrl": "https://www.saltandlavender.com/wp-content/uploads/2018/12/creamy-garlic-chicken-recipe-3.jpg",
+     "width": 1440,
+     "height": 2160,
+     "caption": "This easy creamy garlic chicken is a simple and incredibly delicious weeknight meal. The creamy garlic sauce with whole cloves of garlic will have you going back for seconds!"
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.saltandlavender.com/creamy-garlic-chicken/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.saltandlavender.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Chicken &amp; Poultry",
+       "item": "https://www.saltandlavender.com/category/chicken/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Creamy Garlic Chicken"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.saltandlavender.com/#website",
+     "url": "https://www.saltandlavender.com/",
+     "name": "Salt &amp; Lavender",
+     "description": "Hundreds of easy-to-follow recipes for busy weeknights! Eat well flavored!",
+     "publisher": {
+      "@id": "https://www.saltandlavender.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.saltandlavender.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.saltandlavender.com/#organization",
+     "name": "Salt & Lavender",
+     "url": "https://www.saltandlavender.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.saltandlavender.com/#/schema/logo/image/",
+      "url": "https://www.saltandlavender.com/wp-content/uploads/2018/03/salt-lavender-logo.jpg",
+      "contentUrl": "https://www.saltandlavender.com/wp-content/uploads/2018/03/salt-lavender-logo.jpg",
+      "width": 3333,
+      "height": 1417,
+      "caption": "Salt & Lavender"
+     },
+     "image": {
+      "@id": "https://www.saltandlavender.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/saltandlavender/",
+      "https://x.com/saltandlavender",
+      "https://instagram.com/saltandlavender/",
+      "https://www.threads.net/@saltandlavender",
+      "https://www.pinterest.com/saltandlavender"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.saltandlavender.com/#/schema/person/0639ee2979a638d947154ec52b0c3184",
+     "name": "Natasha",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.saltandlavender.com/wp-content/uploads/2023/09/cropped-cropped-natasha-bull-salt-lavender-kitchen-teacup-1-96x96.jpg",
+      "url": "https://www.saltandlavender.com/wp-content/uploads/2023/09/cropped-cropped-natasha-bull-salt-lavender-kitchen-teacup-1-96x96.jpg",
+      "contentUrl": "https://www.saltandlavender.com/wp-content/uploads/2023/09/cropped-cropped-natasha-bull-salt-lavender-kitchen-teacup-1-96x96.jpg",
+      "caption": "Natasha"
+     },
+     "sameAs": [
+      "https://www.saltandlavender.com/about/"
+     ],
+     "url": "https://www.saltandlavender.com/about/"
+    },
+    {
+     "@type": "Recipe",
+     "name": "Creamy Garlic Chicken",
+     "author": {
+      "@id": "https://www.saltandlavender.com/#/schema/person/0639ee2979a638d947154ec52b0c3184"
+     },
+     "description": "This creamy garlic chicken recipe is the ultimate easy comfort food! Tender chicken breasts smothered in a creamy garlic sauce are irresistible. Garlic lovers unite!",
+     "datePublished": "2018-12-04T05:00:06+00:00",
+     "image": [
+      "https://www.saltandlavender.com/wp-content/uploads/2018/12/creamy-garlic-chicken-recipe-1.jpg",
+      "https://www.saltandlavender.com/wp-content/uploads/2018/12/creamy-garlic-chicken-recipe-1-500x500.jpg",
+      "https://www.saltandlavender.com/wp-content/uploads/2018/12/creamy-garlic-chicken-recipe-1-500x375.jpg",
+      "https://www.saltandlavender.com/wp-content/uploads/2018/12/creamy-garlic-chicken-recipe-1-480x270.jpg"
+     ],
+     "recipeYield": [
+      "4"
+     ],
+     "prepTime": "PT10M",
+     "cookTime": "PT20M",
+     "totalTime": "PT30M",
+     "recipeIngredient": [
+      "2 large boneless skinless chicken breasts",
+      "Salt &amp; pepper  (to taste)",
+      "Flour (for dredging)",
+      "1 tablespoon olive oil",
+      "2 tablespoons butter (divided)",
+      "1 whole head garlic (cloves peeled)",
+      "1/2 cup chicken broth or stock",
+      "1/2 teaspoon lemon juice",
+      "1/4 teaspoon garlic powder",
+      "1 cup heavy/whipping cream",
+      "Parsley (chopped (optional))"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Cut the chicken in half lengthwise so you have 4 smaller cutlets. Generously season them with salt &amp; pepper and coat them in the flour. ",
+       "name": "Cut the chicken in half lengthwise so you have 4 smaller cutlets. Generously season them with salt &amp; pepper and coat them in the flour. ",
+       "url": "https://www.saltandlavender.com/creamy-garlic-chicken/#wprm-recipe-22361-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add the olive oil and 1 tbsp of the butter to a skillet over medium-high heat. Once the pan is hot, sauté the chicken for 4-5 minutes/side or until it's nice and golden. Take the chicken out of the pan and set it aside.",
+       "name": "Add the olive oil and 1 tbsp of the butter to a skillet over medium-high heat. Once the pan is hot, sauté the chicken for 4-5 minutes/side or until it's nice and golden. Take the chicken out of the pan and set it aside.",
+       "url": "https://www.saltandlavender.com/creamy-garlic-chicken/#wprm-recipe-22361-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Reduce the heat to medium (or even med-low if using cast iron), and add the rest of the butter to the pan. Let it melt and then add the garlic cloves. Cook them for 3-4 minutes, stirring often, until they're lightly browned on the outside.&nbsp;",
+       "name": "Reduce the heat to medium (or even med-low if using cast iron), and add the rest of the butter to the pan. Let it melt and then add the garlic cloves. Cook them for 3-4 minutes, stirring often, until they're lightly browned on the outside.&nbsp;",
+       "url": "https://www.saltandlavender.com/creamy-garlic-chicken/#wprm-recipe-22361-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add the chicken broth, lemon juice, and garlic powder to the pan. Let it bubble for around 4 minutes or until the liquid is noticeably reduced.&nbsp;",
+       "name": "Add the chicken broth, lemon juice, and garlic powder to the pan. Let it bubble for around 4 minutes or until the liquid is noticeably reduced.&nbsp;",
+       "url": "https://www.saltandlavender.com/creamy-garlic-chicken/#wprm-recipe-22361-step-0-3"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Stir in the cream and add the chicken back into the pan. Let it cook for another 5 minutes or so, until the sauce is reduced and the chicken is cooked through. Serve with freshly chopped parsley if you wish.",
+       "name": "Stir in the cream and add the chicken back into the pan. Let it cook for another 5 minutes or so, until the sauce is reduced and the chicken is cooked through. Serve with freshly chopped parsley if you wish.",
+       "url": "https://www.saltandlavender.com/creamy-garlic-chicken/#wprm-recipe-22361-step-0-4"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.88",
+      "ratingCount": "580",
+      "reviewCount": "9"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+       },
+       "reviewBody": "Delicious recipe as is, but we like a but more intense flavor so after tasting it, I added more spice (adobo, cayenne, etc.,) and served it with angel hair pasta. We loved it!",
+       "author": {
+        "@type": "Person",
+        "name": "Jessica Landi"
+       },
+       "datePublished": "2026-08-11"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "5 stars! So quick and easy make, my family loved it!",
+       "author": {
+        "@type": "Person",
+        "name": "Jaci"
+       },
+       "datePublished": "2026-08-10"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "SO delicious. The sauce is perfect on mashed potatoes. I'd never cooked using whole garlic cloves before, so I was a little worried it would be too much, but it was perfect. Definitely adding this recipe to the rotation.",
+       "author": {
+        "@type": "Person",
+        "name": "Christine W."
+       },
+       "datePublished": "2026-08-02"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Made this recipe for my family and it was a huge hit! They wanted the same dish the next day. lol. Thank you so much for this recipe. it will definitely be in our regular rotation.  Soooo DELICIOUS!!",
+       "author": {
+        "@type": "Person",
+        "name": "Deb Eckert"
+       },
+       "datePublished": "2026-07-29"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Our family love this recipe &amp; I’ve also passed it on to friends. Making it tonight again with small roasted cubed potatoes &amp; green beans also great with mash or rice . Thankyou for a great recipe",
+       "author": {
+        "@type": "Person",
+        "name": "lesley Smith"
+       },
+       "datePublished": "2026-07-27"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Simple  yet elegant.   I paired this with buccatini pasta and sautéed beet green.",
+       "author": {
+        "@type": "Person",
+        "name": "Robin dymacek"
+       },
+       "datePublished": "2026-07-08"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I was looking for something to take the board out of chicken breast and this absolute did it. It was so fast and easy delicious",
+       "author": {
+        "@type": "Person",
+        "name": "Lillian Mckenzie"
+       },
+       "datePublished": "2026-07-03"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This was so good! Super easy and enjoyable. Hubby loved it, the kids left no scraps and the work team enjoyed the leftovers. A few things to add that I did differently (totally delicious without the additional changes, but this is what worked best for us) Add some minced garlic on top of the fresh garlic (trust me, you’ll thank me later) Once cooked, transfer to an oven baking dish. Sprinkle with some paprika and then bake for a little while longer, uncovered (15min) Mmm voila!",
+       "author": {
+        "@type": "Person",
+        "name": "Talei"
+       },
+       "datePublished": "2026-06-28"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+       },
+       "reviewBody": "Loved how quick the sauce came together. Great weeknight dinner!",
+       "author": {
+        "@type": "Person",
+        "name": "Recipe Tester"
+       },
+       "datePublished": "2026-06-21"
+      }
+     ],
+     "recipeCategory": [
+      "Main Course"
+     ],
+     "recipeCuisine": [
+      "American"
+     ],
+     "keywords": "creamy garlic chicken recipe",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "435 kcal",
+      "carbohydrateContent": "6 g",
+      "proteinContent": "26 g",
+      "fatContent": "34 g",
+      "saturatedFatContent": "18 g",
+      "cholesterolContent": "169 mg",
+      "sodiumContent": "313 mg",
+      "fiberContent": "1 g",
+      "sugarContent": "1 g",
+      "servingSize": "1 serving"
+     },
+     "@id": "https://www.saltandlavender.com/creamy-garlic-chicken/#recipe",
+     "isPartOf": {
+      "@id": "https://www.saltandlavender.com/creamy-garlic-chicken/#article"
+     },
+     "mainEntityOfPage": "https://www.saltandlavender.com/creamy-garlic-chicken/"
+    }
+   ]
+  }
+ ]
+}

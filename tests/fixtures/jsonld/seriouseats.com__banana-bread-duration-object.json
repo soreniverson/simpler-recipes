@@ -1,0 +1,387 @@
+{
+ "url": "https://www.seriouseats.com/classic-banana-bread-recipe",
+ "variant": [
+  "Duration object for cookTime/totalTime"
+ ],
+ "jsonld": [
+  [
+   {
+    "@context": "http://schema.org",
+    "@type": [
+     "Recipe"
+    ],
+    "headline": "Stella Parks&#39; Ultimate Banana Nut Bread",
+    "datePublished": "2016-09-08T03:30:00-04:00",
+    "dateModified": "2025-12-17T10:31:44-05:00",
+    "author": [
+     {
+      "@type": "Person",
+      "name": "Stella Parks",
+      "url": "https://www.seriouseats.com/stella-parks-5119004"
+     }
+    ],
+    "description": "The key to making this banana bread is using a blend of spices to amplify the banana flavor, along with a few other tricks to keep the crumb moist and tender.",
+    "image": {
+     "@type": "ImageObject",
+     "url": "https://www.seriouseats.com/thmb/xdOQq451b9yBkmWYOKZ2l-FCs7g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__09__20160826-banana-bread-vicky-wasik-13-f36813f9f40f4168a4c2b06ceb28cee2.jpg",
+     "height": 1125,
+     "width": 1500
+    },
+    "video": {
+     "@type": "VideoObject",
+     "contentUrl": "https://content.jwplatform.com/videos/HWYLDkQA-YWmivM3Y.mp4",
+     "description": "You already make wonderful banana bread. Here are some tips to make your wonderful bread better than ever. [Video: Serious Eats Video. Technique: Stella Parks. ]",
+     "duration": "PT6M37S",
+     "name": "How to Make the Best Banana Bread",
+     "thumbnailUrl": "https://cdn.jwplayer.com/v2/media/HWYLDkQA/poster.jpg?width=1280",
+     "uploadDate": "2021-03-31T14:49:28-04:00"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Serious Eats",
+     "url": "https://www.seriouseats.com",
+     "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.seriouseats.com/thmb/tCg_KKb2J_OIG_QEUtCkqjhiJGQ=/2339x320/filters:no_upscale():max_bytes(150000):strip_icc()/Serious_Eats_Schema_Logo-30a63d9c07734d35836c8ff2d368419c.png",
+      "width": 2339,
+      "height": 320
+     },
+     "brand": "Serious Eats",
+     "publishingPrinciples": "https://www.seriouseats.com/about-us-5120006#toc-editorial-guidelines",
+     "sameAs": [
+      "https://www.instagram.com/seriouseats",
+      "https://www.facebook.com/seriouseats",
+      "https://www.pinterest.com/seriouseats",
+      "https://www.youtube.com/user/seriouseats"
+     ]
+    },
+    "name": "Stella Parks&#39; Ultimate Banana Nut Bread",
+    "aggregateRating": {
+     "@type": "AggregateRating",
+     "ratingValue": "4.5",
+     "ratingCount": "29"
+    },
+    "cookTime": {
+     "@type": "Duration",
+     "minValue": "PT45M",
+     "maxValue": "PT70M"
+    },
+    "keywords": "baking, banana bread, bread, greek yogurt, loaf, oat, quick bread",
+    "nutrition": {
+     "@type": "NutritionInformation",
+     "calories": "436 kcal",
+     "carbohydrateContent": "49 g",
+     "cholesterolContent": "31 mg",
+     "fiberContent": "4 g",
+     "proteinContent": "7 g",
+     "saturatedFatContent": "12 g",
+     "sodiumContent": "260 mg",
+     "sugarContent": "19 g",
+     "fatContent": "24 g",
+     "servingSize": "Makes one 10 1/2–inch loaf, two 9- by 5-inch loaves, or 12 muffins",
+     "unsaturatedFatContent": "0 g"
+    },
+    "prepTime": "PT10M",
+    "recipeCategory": [
+     "Dessert",
+     "Breakfast",
+     "Banana Bread",
+     "Breakfast and Brunch",
+     "Breakfast Sweets",
+     "Fruit Desserts",
+     "Muffins"
+    ],
+    "recipeCuisine": [
+     "American"
+    ],
+    "recipeIngredient": [
+     "4 medium bananas (20 ounces; 565g), ripe but not fully black",
+     "4 ounces plain Greek yogurt (1/2 cup; 115g), preferably nonfat",
+     "2 large eggs, straight from the fridge",
+     "1/2 ounce vanilla extract (1 tablespoon; 15g)",
+     "10 ounces all-purpose flour (2 cups; 280g)",
+     "5 1/4 ounces sugar (3/4 cup; 150g), preferably toasted",
+     "3 ounces oat flour (3/4 cup; 85g), such as Bob&#39;s Red Mill (see note)",
+     "1 teaspoon baking powder",
+     "1 teaspoon baking soda",
+     "3/4 teaspoon (3g) Diamond Crystal kosher salt; for table salt, use half as much by volume or use the same weight",
+     "3/4 teaspoon ground cinnamon",
+     "1/2 teaspoon ground cloves",
+     "1/4 teaspoon ground or grated nutmeg",
+     "5 1/4 ounces coconut oil, virgin or refined (3/4 cup; 150g), creamy but firm, about 70°F (21°C)",
+     "6 ounces toasted pecan or other nut pieces (1 cup; 170g) (see note)Banana Whipped Cream (optional)",
+     "Banana Whipped Cream (optional)"
+    ],
+    "recipeInstructions": [
+     {
+      "@type": "HowToStep",
+      "text": "Line a 10 1/2– by 5 1/2–inch loaf pan with a 9- by 13-inch sheet of parchment paper, or two 9- by 5-inch loaf pans with 7- by 13-inch sheets of parchment paper. Adjust oven rack to lower-middle position and preheat to 350°F. Peel bananas (for roughly 12 ounces or 340g fruit) and mash with Greek yogurt, eggs, and vanilla in a medium bowl. If bananas are underripe, cover bowl with plastic and let mixture stand 30 minutes."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "Combine flour, sugar, oat flour, baking powder, baking soda, salt, cinnamon, cloves, nutmeg, and coconut oil in the bowl of a stand mixer fitted with a paddle attachment. Mix on low until coconut oil disappears into a mealy powder. Add banana mash and continue mixing only until the floury bits disappear. Fold in nuts with a flexible spatula, scrape into prepared pan(s), and spread into an even layer. Bake until well risen and golden brown, or to an internal temperature of around 206°F (97°C), about 70 minutes for a large loaf or 45 for small. Wrapped tightly in foil, banana bread will keep up to 3 days at room temperature or 1 week in the fridge. Serve with Banana Whipped Cream, if desired."
+     },
+     {
+      "@type": "HowToStep",
+      "text": "For Banana Nut Muffins: Divide batter evenly among 12 lightly greased nonstick muffin cups, adding approximately 1/2 cup (4 ounces; 120g) to each cup. Bake until domed and just beginning to brown around the edges, about 25 minutes."
+     }
+    ],
+    "recipeYield": [
+     "12",
+     "1 loaf"
+    ],
+    "totalTime": {
+     "@type": "Duration",
+     "minValue": "PT55M",
+     "maxValue": "PT80M"
+    },
+    "review": [
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "SDKBaker"
+      },
+      "reviewBody": "Hiya Stella!I was introduced to SeriousEats by Kenji and I've been lucky enough to run through your recipes now! I've never made banana bread before and this recipe just had everything. One thing to note is that I've followed your suggestion to another comment about using brown-butter instead of coconut oil, and I must say, the recipe turns out fantastic! I've also made the recipe using cupcake tins and they're still just as good.And for anyone interested, I found the recipe to be \"freezer-friendly.\" I'll usually put them in a cupcake tin in paper cups, freeze them, then toss them in a freezer bag. They don't have the same rise as fresh batter unfortunately, but the taste still holds nicely!",
+      "datePublished": "2020-05-01T06:13:27.000Z"
+     },
+     {
+      "@type": "Review",
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": "5"
+      },
+      "author": {
+       "@type": "Person",
+       "name": "QuickMash9277"
+      },
+      "reviewBody": "The first time I made this recipe, my bananas were definitely underripe - I tried the trick with the yolks, but I guess they really weren't close enough to ripe. The second time worked much better! I used whole grain flower and just ground up some oats in my blender. For some extra flavor, I added a tablespoon of molasses. Came out beautiful with ripe bananas, definitely will make this again.",
+      "datePublished": "2026-05-31T20:18:38.348Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "River P"
+      },
+      "reviewBody": "Just made this recipe, I substituted almost everything and am deliriously happy with the result! Thank-you. I used kefir instead of yoghurt. Make sure to shake the bottle because the liquid tends to rise to the top. It was utterly divine, moist and light, rich and healthy. I put in one tablespoon freshly squeezed orange juice. Bananas and orange are a combo made in heaven, the acidity was just right. In fact the best fruit salad is banana, orange+juice, mango, papaya...I digress what was lovely is that it held together fabulously but was still light no gumminess but plenty moisture. it stays moist for five days wrapped in cling film. I made three, froze two. Oh the flour was extra strength bread flour. A little more expensive but worth it as it works brilliantly. Just never over work it or the glutens will be activated. Fold, fold, fold and only fold. Makes the lightest most delicious moist everything including English scones and cakes. I find it gives things more rise at no cost to texture or consistency and tenderness. Bit of a bakers secrete really. Thanks again I couldn't have been happier with the result.",
+      "datePublished": "2021-10-27T06:43:04.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "UpbeatTaro8846"
+      },
+      "reviewBody": "For those of us trying to limit our saturated fat intake, coconut is the highest of all fats, including butter. Can I sub a vegetable oil such as sunflower or canola?",
+      "datePublished": "2025-09-11T14:44:20.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "hillit"
+      },
+      "reviewBody": "Hi! What's the affect of using full fat greek yogurt in this recipe instead of nonfat? Also, is there a good substitute for the oat flour? I have white whole wheat, buckwheat, corn, spelt and rye (just no oat!). Thanks!",
+      "datePublished": "2020-06-03T15:15:06.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "vidapuppy78"
+      },
+      "reviewBody": "I made these a muffins, using toasted walnuts. They turned out great. I used my homemade yogurt, which wasn't quite greek yogurt consistency, but it still worked great. Thank you for another great recipe!",
+      "datePublished": "2020-01-24T15:58:20.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "NZ31"
+      },
+      "reviewBody": "For my GF peeps! From the Stella's Cookbook I used the gluten free version of Top Shelf Muffin Mix scaled to size (as written is 12oz flour; 10oz needed for this recipe).I did leave out the nuts in the recipe because they're not my favorite. It also helped with scaling for pans, at least for me. Total knockout! I have tried the banana bread version of TSMM from the cookbook and while they're good, I really love the taste the yogurt provides.",
+      "datePublished": "2019-08-23T15:11:14.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Pufflet"
+      },
+      "reviewBody": "Stella, I made this banana bread last night as written with toasted sugar, yogurt, coconut oil, etc. The only thing I couldn't find was oat flour so I subbed whole wheat as you recommended. Bar none, this is the best banana bread I've ever tasted! I think a big part of why this is so delicious is the toasted sugar which I took the time to make. I did a 3 hour toast and the sugar was wonderful although it seems to be hardening this am. No matter, I'd do it again in a heartbeat.",
+      "datePublished": "2019-05-21T16:36:25.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Stella Parks"
+      },
+      "reviewBody": "@Evie, okay, all good on the oat and banana front. I'm wondering if something might be up with the yogurt, though. After looking for La Yogurt online, it seems their Greek style is blended, which indicates thickeners like gelatin rather than traditional straining. I couldn't find an ingredient label online to confirm, but check the package to make sure it doesn't contain any ingredients like that (blended yogurts have a higher moisture content than strained, which would create a thinner batter, producing less rise and a gummier crumb).If that's not the case, I'll keep at it!",
+      "datePublished": "2016-10-18T21:21:06.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "ELeeSF"
+      },
+      "reviewBody": "This is my favorite banana bread recipe. I normally follow it exactly but today I ran out of Greek yogurt so I used some of leftover Sourdough starter. It turned out pretty good.",
+      "datePublished": "2020-04-11T18:33:24.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "vaxxa"
+      },
+      "reviewBody": "The texture was great - moist & soft - but the flavor was lacking. I halved the recipe, as I always do before a full commitment, so I know to add more sugar & a splash of citrus next time.",
+      "datePublished": "2019-12-25T22:38:52.000Z"
+     },
+     {
+      "@type": "Review",
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": "5"
+      },
+      "author": {
+       "@type": "Person",
+       "name": "Sigrid Hard"
+      },
+      "reviewBody": "Love it. The internal temp information is genius. All the best. Thank you!!!",
+      "datePublished": "2026-07-03T14:47:03.539Z"
+     },
+     {
+      "@type": "Review",
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": "1"
+      },
+      "author": {
+       "@type": "Person",
+       "name": "MDS"
+      },
+      "reviewBody": "I made this banana bread last evening and followed the recipe to the letter including baking to an internal temperature of 206 degrees.I was excited to have it with my morning coffee, so I cut the first slice and……..Booooo. It was so dry it was inedible so I tossed it.This is probably the fourth banana bread recipe I've tried and every one has been so dry they were inedible. I have always trusted Serious Eats but this one was a miss. I consider myself a skilled cook and baker so this banana bread recipe quest I'm on .appears to have become my \"white whale\".This was not a case where I \"tweaked\" the recipe with 10 subbstitutions and essentially made a different recipe. I followed this recipe exactly.I'm frustrated that I still have not found that reliable, repeatable moist banana bread recipe but I'll keep looking.Thank goodness bananas aren't as expensive as Filet Mignon.",
+      "datePublished": "2026-01-08T01:07:16.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Alec Martin"
+      },
+      "reviewBody": "Excellent recipe, love making these as muffins!One question - we have an egg allergy in the house, any recommendations on replacing the egg in this recipe so everyone may enjoy?",
+      "datePublished": "2025-11-20T15:10:20.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "CK Bryant"
+      },
+      "reviewBody": "You may think of banana bread as a very simple, thrifty way to use a few overripe bananas that would otherwise go in the bin. Well, this is none of that. I mean, it's not crazy complicated, but it's a little more technique, a little more expense, and just overall more... deliberate than \"oh, these bananas are about to go bad.\"And if it isn't the best banana bread on the planet, I don't know what is. I implore you to make this exactly as specified at least once. Get the oat flour, toast the sugar, make the banana whipped cream. It is insanely good.",
+      "datePublished": "2025-11-13T16:05:12.000Z"
+     },
+     {
+      "@type": "Review",
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": "5"
+      },
+      "author": {
+       "@type": "Person",
+       "name": "Chris"
+      },
+      "reviewBody": "Baked as written. Fabulous! I live at high altitude (4,500 ft) and was tempted to modify, but simply shortened the baking time (about 55 mins) in a convection oven. For my second loaf, I added 1/2 tsp piment d'Espelette (goes in nearly everything I cook!) for a touch of heat on the palate. Delicious.Note: toasting the sugar seems like a chore, but I find the step crucial for the slight caramel flavor it adds. I now toast 2 lbs at a go (about 3 hours at 300°) when I'm working on other kitchen projects.",
+      "datePublished": "2025-10-01T18:24:44.000Z"
+     },
+     {
+      "@type": "Review",
+      "reviewRating": {
+       "@type": "Rating",
+       "ratingValue": "5"
+      },
+      "author": {
+       "@type": "Person",
+       "name": "Serious Eats Member"
+      },
+      "reviewBody": "These are delicious. Got rave reviews at our place.I made them as muffins. Took 28 mins to get to 205F interior temp. Used half choc chips and half nuts. Came right out of the muffin pan. They were basically perfect. I don't know how they could be better.And folks, just follow the recipe. Read all the steps and then do them. Weigh your ingredients. Know your oven temperature. The recipe works.",
+      "datePublished": "2025-06-19T21:47:39.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Stephen E Block"
+      },
+      "reviewBody": "I found this recipe to be extra ordinary. I toasted the sugar for only an hour and it was a big difference, to the finished product. I use grams and it is interesting that she uses 140 grams per cup. Many recipes say 125 grams is a cup. The gram equivelant stated in the recipe worked well. I made muffins and baked them for the first 15 min at 425 and then lowered the temp to 350 for 10 more min. Cooks Illustrated does this for muffins as they found the high heat forces the sides to bake a bit faster causing the rest to dome higher. Seems to work. Loved the recipe.1 other note, I mistakenly used the 565 grams of banana pulp, but the recipe states that that is peel and banana and the pulp should be about 340 grams. I loved the extra pulp though.",
+      "datePublished": "2025-05-16T10:39:40.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Pete Balmat"
+      },
+      "reviewBody": "I forgot to mention that no sugar was used in our loaves. The spices cardamom, nutmeg, clove, cinnamon, were enough to make exquisite loaves without unnecessary sugar.Bananas have more than enough.",
+      "datePublished": "2025-01-27T01:43:46.000Z"
+     },
+     {
+      "@type": "Review",
+      "author": {
+       "@type": "Person",
+       "name": "Peter Balmat"
+      },
+      "reviewBody": "Cardamom and almond flour and safflower oil.'Cause that is what I had. 😊",
+      "datePublished": "2025-01-27T00:56:11.000Z"
+     }
+    ],
+    "mainEntityOfPage": {
+     "@type": [
+      "WebPage"
+     ],
+     "@id": "https://www.seriouseats.com/classic-banana-bread-recipe",
+     "name": "Stella Parks&#39; Ultimate Banana Nut Bread",
+     "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+         "@id": "https://www.seriouseats.com/all-recipes-5117985",
+         "name": "Recipes"
+        }
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+         "@id": "https://www.seriouseats.com/recipes-by-ingredient-recipes-5117749",
+         "name": "Recipes By Ingredients"
+        }
+       },
+       {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+         "@id": "https://www.seriouseats.com/fruit-recipes-5117662",
+         "name": "Fruit"
+        }
+       },
+       {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+         "@id": "https://www.seriouseats.com/banana-recipes-5117659",
+         "name": "Banana"
+        }
+       }
+      ]
+     }
+    }
+   }
+  ]
+ ]
+}

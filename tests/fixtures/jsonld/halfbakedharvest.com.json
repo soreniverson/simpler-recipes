@@ -1,0 +1,305 @@
+{
+ "url": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list1:[\"6\"]",
+  "author=dict",
+  "prep=\"PT15M\" cook=\"PT15M\" total=\"PT30M\"",
+  "ing=list19",
+  "plugins=WPRM,MediavineCreate"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/#article",
+     "isPartOf": {
+      "@id": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/"
+     },
+     "author": {
+      "name": "Tieghan Gerard",
+      "@id": "https://www.halfbakedharvest.com/#/schema/person/9b2904ad2a2c76cbcd62517659d460f7"
+     },
+     "headline": "30 Minute Al Pastor Tacos with Smashed Avocado.",
+     "datePublished": "2026-07-13T07:00:00+00:00",
+     "wordCount": 1139,
+     "commentCount": 10,
+     "publisher": {
+      "@id": "https://www.halfbakedharvest.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.halfbakedharvest.com/wp-content/uploads/2026/07/30-Minute-Al-Pastor-Tacos-with-Smashed-Avocado-1-scaled.jpg",
+     "articleSection": [
+      "American",
+      "By Method",
+      "Cinco de Mayo",
+      "Cuisine + Inspiration",
+      "Diet-Specific",
+      "Gluten-Free",
+      "Healthy-ish",
+      "Holidays + Seasonal",
+      "Main Course",
+      "Mexican",
+      "Pork",
+      "Quick + Easy",
+      "Recipes",
+      "Spring",
+      "Summer",
+      "Tacos",
+      "Type of Meal"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/",
+     "url": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/",
+     "name": "30 Minute Al Pastor Tacos with Smashed Avocado. - Half Baked Harvest",
+     "isPartOf": {
+      "@id": "https://www.halfbakedharvest.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.halfbakedharvest.com/wp-content/uploads/2026/07/30-Minute-Al-Pastor-Tacos-with-Smashed-Avocado-1-scaled.jpg",
+     "datePublished": "2026-07-13T07:00:00+00:00",
+     "description": "Reinvent taco night with these 30-minute al pastor-style tacos made with chipotle pineapple pork, pineapple salsa verde, and smashed avocado.",
+     "breadcrumb": {
+      "@id": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/#primaryimage",
+     "url": "https://www.halfbakedharvest.com/wp-content/uploads/2026/07/30-Minute-Al-Pastor-Tacos-with-Smashed-Avocado-1-scaled.jpg",
+     "contentUrl": "https://www.halfbakedharvest.com/wp-content/uploads/2026/07/30-Minute-Al-Pastor-Tacos-with-Smashed-Avocado-1-scaled.jpg",
+     "width": 1200,
+     "height": 1799,
+     "caption": "30 Minute Al Pastor Tacos with Smashed Avocado | halfbakedharvest.com"
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.halfbakedharvest.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Recipes",
+       "item": "https://www.halfbakedharvest.com/category/recipes/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "30 Minute Al Pastor Tacos with Smashed Avocado."
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.halfbakedharvest.com/#website",
+     "url": "https://www.halfbakedharvest.com/",
+     "name": "Half Baked Harvest",
+     "description": "Made with Love",
+     "publisher": {
+      "@id": "https://www.halfbakedharvest.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.halfbakedharvest.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.halfbakedharvest.com/#organization",
+     "name": "Half Baked Harvest",
+     "url": "https://www.halfbakedharvest.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.halfbakedharvest.com/#/schema/logo/image/",
+      "url": "https://www.halfbakedharvest.com/wp-content/uploads/2026/04/half-baked-harvest-yoast-black.png",
+      "contentUrl": "https://www.halfbakedharvest.com/wp-content/uploads/2026/04/half-baked-harvest-yoast-black.png",
+      "width": 1000,
+      "height": 1000,
+      "caption": "Half Baked Harvest"
+     },
+     "image": {
+      "@id": "https://www.halfbakedharvest.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/hbharvest",
+      "https://x.com/hbharvest",
+      "http://instagram.com/halfbakedharvest",
+      "https://pinterest.com/hbharvest/",
+      "https://www.youtube.com/user/tieghangerard/videos"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.halfbakedharvest.com/#/schema/person/9b2904ad2a2c76cbcd62517659d460f7",
+     "name": "Tieghan Gerard",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://secure.gravatar.com/avatar/7036495bc5ea357403212cff0b64834c57cfbd3ed04ba77bfdf88b1b027f1d84?s=96&d=mm&r=pg",
+      "url": "https://secure.gravatar.com/avatar/7036495bc5ea357403212cff0b64834c57cfbd3ed04ba77bfdf88b1b027f1d84?s=96&d=mm&r=pg",
+      "contentUrl": "https://secure.gravatar.com/avatar/7036495bc5ea357403212cff0b64834c57cfbd3ed04ba77bfdf88b1b027f1d84?s=96&d=mm&r=pg",
+      "caption": "Tieghan Gerard"
+     },
+     "sameAs": [
+      "https://www.halfbakedharvest.com/meet-tieghan/"
+     ]
+    },
+    {
+     "@type": "Recipe",
+     "name": "30 Minute Al Pastor Tacos with Smashed Avocado",
+     "author": {
+      "@id": "https://www.halfbakedharvest.com/#/schema/person/9b2904ad2a2c76cbcd62517659d460f7"
+     },
+     "description": "Turn an ordinary weeknight into a fiesta with these easy 30-minute al pastor-style tacos topped with pineapple salsa verde and roasted corn smashed avocado.",
+     "datePublished": "2026-07-13T01:00:00+00:00",
+     "image": [
+      "https://www.halfbakedharvest.com/wp-content/uploads/2026/07/30-Minute-Al-Pastor-Tacos-with-Smashed-Avocado-1-scaled.jpg",
+      "https://www.halfbakedharvest.com/wp-content/uploads/2026/07/30-Minute-Al-Pastor-Tacos-with-Smashed-Avocado-1-500x500.jpg",
+      "https://www.halfbakedharvest.com/wp-content/uploads/2026/07/30-Minute-Al-Pastor-Tacos-with-Smashed-Avocado-1-500x375.jpg",
+      "https://www.halfbakedharvest.com/wp-content/uploads/2026/07/30-Minute-Al-Pastor-Tacos-with-Smashed-Avocado-1-480x270.jpg"
+     ],
+     "recipeYield": [
+      "6"
+     ],
+     "prepTime": "PT15M",
+     "cookTime": "PT15M",
+     "totalTime": "PT30M",
+     "recipeIngredient": [
+      "2 pounds ground pork or chicken",
+      "1  yellow onion, chopped",
+      "1 tablespoon smoked paprika",
+      "1 to 2  chipotle peppers in adobo, chopped",
+      "1 cup red enchilada sauce",
+      "1 can (20-ounce)  pineapple chunks in juice",
+      "sea salt and black pepper",
+      "16  hard or soft taco shells, warmed",
+      "shredded Oaxaca cheese, crumbled queso fresco, and fresh cilantro (for serving)",
+      "1 cup salsa verde",
+      "1 cup fresh pineapple chunks",
+      "1 cup roasted corn",
+      "juice from 1 lime",
+      "1/2 cup chopped fresh cilantro",
+      "2 tablespoons toasted pepitas, crushed",
+      "2  avocados, diced",
+      "2 tablespoons fresh lime juice",
+      "1/2 cup chopped fresh cilantro",
+      "2 ears grilled corn, kernels removed"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "1. In a large skillet set over medium heat, add ground meat and onion. Cook, breaking up the meat with a wooden spoon, until browned and cooked through, 8 to 10 minutes. Stir in the smoked paprika, chipotle peppers, enchilada sauce, and the entire can of pineapple with its juice. Season with salt and pepper. Simmer 5 to 10 minutes, until the sauce thickens and coats the meat.2. To make the pineapple salsa verde. In a bowl, combine the salsa verde, pineapple, roasted corn, lime juice, cilantro, and pepitas. Season with sea salt.3. Mix the avocado. Mix the avocados, lime juice, cilantro, and corn. Lightly smash together, leaving the avocado slightly chunky. Season with sea salt.4. Stuff each warmed tortilla with cheese and spoon over the al pastor. Top with pineapple salsa verde, smashed avocado, fresh cilantro. Eat with lime wedges!",
+       "name": "1. In a large skillet set over medium heat, add ground meat and onion. Cook, breaking up the meat with a wooden spoon, until browned and cooked through, 8 to 10 minutes. Stir in the smoked paprika, chipotle peppers, enchilada sauce, and the entire can of pineapple with its juice. Season with salt and pepper. Simmer 5 to 10 minutes, until the sauce thickens and coats the meat.2. To make the pineapple salsa verde. In a bowl, combine the salsa verde, pineapple, roasted corn, lime juice, cilantro, and pepitas. Season with sea salt.3. Mix the avocado. Mix the avocados, lime juice, cilantro, and corn. Lightly smash together, leaving the avocado slightly chunky. Season with sea salt.4. Stuff each warmed tortilla with cheese and spoon over the al pastor. Top with pineapple salsa verde, smashed avocado, fresh cilantro. Eat with lime wedges!",
+       "url": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/#wprm-recipe-196951-step-0-0"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "2",
+      "reviewCount": "2"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This was really good.  Like if an al pastor taco had a love child with a sloppy Joe!!\r\n\r\nThanks for the great recipe.\r\n\r\nKp",
+       "author": {
+        "@type": "Person",
+        "name": "Kp"
+       },
+       "datePublished": "2026-07-28"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "You have THE BEST recipes. Thank you for all the hard work that goes into your site.",
+       "author": {
+        "@type": "Person",
+        "name": "Jenny Wood"
+       },
+       "datePublished": "2026-07-13"
+      }
+     ],
+     "recipeCategory": [
+      "Main Course"
+     ],
+     "recipeCuisine": [
+      "American",
+      "Mexican"
+     ],
+     "keywords": "30 minute meal, quick tacos, tacos",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "640 kcal",
+      "servingSize": "1 serving"
+     },
+     "@id": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/#recipe",
+     "isPartOf": {
+      "@id": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/#article"
+     },
+     "mainEntityOfPage": "https://www.halfbakedharvest.com/30-minute-al-pastor-tacos/"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,533 @@
+{
+ "url": "https://cooking.nytimes.com/recipes/1012984-chicken-teriyaki",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=plain:Recipe|plain:WebPage|plain:Organization|plain:NewsMediaOrganization",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[dict]",
+  "yield=str:\"8 servings\"",
+  "author=dict",
+  "prep=null cook=null total=\"PT30M\"",
+  "ing=list10",
+  "plugins="
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@id": "urn:nyt:ScoopRecipe:4e048f8642e6595e82309426e6ecd889",
+   "@type": "Recipe",
+   "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingCount": 6036,
+    "ratingValue": 5
+   },
+   "author": {
+    "@id": "nyt://person/a93efbf3-b045-50de-a05b-34867d79401b",
+    "@type": "Person",
+    "name": "John T. Edge"
+   },
+   "cookingMethod": "Broil",
+   "copyrightHolder": {
+    "@id": "https://cooking.nytimes.com/#publisher",
+    "@type": "Organization",
+    "name": "NYT Cooking"
+   },
+   "copyrightYear": 2010,
+   "dateModified": "2024-02-13T00:00:00Z",
+   "datePublished": "2010-01-06T00:00:00Z",
+   "description": "Teriyaki is derived from the Japanese root words teri, which means “to shine,” and yaki, which means “to broil or grill.” That’s the way traditional teriyaki looks: shiny and incised with grill marks. In Japan, teriyaki is a mix of soy sauce, sake and the rice wine mirin, which imparts a subtle sweetness. The teriyaki found throughout Seattle, of which this is an adaptation, is a bit more showy. Cooks sweeten with white sugar and pineapple juice. They thicken with cornstarch. Ginger and garlic go into the mix because of the Korean ancestry of many cooks. It is not at all traditional, but it is simple to prepare and a pleasure to eat. Be sure to plan ahead as you do need to marinate the chicken before cooking. An overnight stay in the fridge is ideal, but many readers have been happy with a quick marinade of an hour or so. John T. Edge",
+   "image": [
+    {
+     "@id": "nyt://image/c7d61d08-2ef4-553f-845c-b9d9bc3a908b#videoSixteenByNineJumbo1600",
+     "@type": "ImageObject",
+     "contentUrl": "https://static01.nyt.com/images/2024/02/13/multimedia/SS-Chicken-Teriyaki-ghfm/SS-Chicken-Teriyaki-ghfm-videoSixteenByNineJumbo1600.jpg",
+     "creditText": "Christopher Testani for The New York Times. Food Stylist: Simon Andrews.",
+     "dateModified": "2024-03-20T16:34:39.215Z",
+     "datePublished": "2024-02-09T21:48:14.000Z",
+     "height": "900",
+     "uploadDate": "2024-02-09T21:48:14.000Z",
+     "url": "https://static01.nyt.com/images/2024/02/13/multimedia/SS-Chicken-Teriyaki-ghfm/SS-Chicken-Teriyaki-ghfm-videoSixteenByNineJumbo1600.jpg",
+     "width": "1600"
+    },
+    {
+     "@id": "nyt://image/c7d61d08-2ef4-553f-845c-b9d9bc3a908b#googleFourByThree",
+     "@type": "ImageObject",
+     "contentUrl": "https://static01.nyt.com/images/2024/02/13/multimedia/SS-Chicken-Teriyaki-ghfm/SS-Chicken-Teriyaki-ghfm-googleFourByThree-v2.jpg",
+     "creditText": "Christopher Testani for The New York Times. Food Stylist: Simon Andrews.",
+     "dateModified": "2024-03-20T16:34:39.215Z",
+     "datePublished": "2024-02-09T21:48:14.000Z",
+     "height": "600",
+     "uploadDate": "2024-02-09T21:48:14.000Z",
+     "url": "https://static01.nyt.com/images/2024/02/13/multimedia/SS-Chicken-Teriyaki-ghfm/SS-Chicken-Teriyaki-ghfm-googleFourByThree-v2.jpg",
+     "width": "800"
+    },
+    {
+     "@id": "nyt://image/c7d61d08-2ef4-553f-845c-b9d9bc3a908b#mediumSquareAt3X",
+     "@type": "ImageObject",
+     "contentUrl": "https://static01.nyt.com/images/2024/02/13/multimedia/SS-Chicken-Teriyaki-ghfm/SS-Chicken-Teriyaki-ghfm-mediumSquareAt3X.jpg",
+     "creditText": "Christopher Testani for The New York Times. Food Stylist: Simon Andrews.",
+     "dateModified": "2024-03-20T16:34:39.215Z",
+     "datePublished": "2024-02-09T21:48:14.000Z",
+     "height": "1800",
+     "uploadDate": "2024-02-09T21:48:14.000Z",
+     "url": "https://static01.nyt.com/images/2024/02/13/multimedia/SS-Chicken-Teriyaki-ghfm/SS-Chicken-Teriyaki-ghfm-mediumSquareAt3X.jpg",
+     "width": "1800"
+    },
+    {
+     "@id": "nyt://image/c7d61d08-2ef4-553f-845c-b9d9bc3a908b#facebookJumbo",
+     "@type": "ImageObject",
+     "contentUrl": "https://static01.nyt.com/images/2024/02/13/multimedia/SS-Chicken-Teriyaki-ghfm/SS-Chicken-Teriyaki-ghfm-facebookJumbo.jpg",
+     "creditText": "Christopher Testani for The New York Times. Food Stylist: Simon Andrews.",
+     "dateModified": "2024-03-20T16:34:39.215Z",
+     "datePublished": "2024-02-09T21:48:14.000Z",
+     "height": "549",
+     "uploadDate": "2024-02-09T21:48:14.000Z",
+     "url": "https://static01.nyt.com/images/2024/02/13/multimedia/SS-Chicken-Teriyaki-ghfm/SS-Chicken-Teriyaki-ghfm-facebookJumbo.jpg",
+     "width": "1050"
+    }
+   ],
+   "isAccessibleForFree": false,
+   "keywords": "Chicken Thigh, Easy, Soy Sauce, Weeknight",
+   "mainEntityOfPage": {
+    "@id": "//cooking.nytimes.com/recipes/1012984-chicken-teriyaki",
+    "@type": "WebPage",
+    "name": "Chicken Teriyaki"
+   },
+   "name": "Chicken Teriyaki",
+   "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "556.5",
+    "carbohydrateContent": "31 grams",
+    "cholesterolContent": "189.1 milligrams",
+    "fatContent": "32.3 grams",
+    "fiberContent": "0.5 grams",
+    "proteinContent": "34.6 grams",
+    "saturatedFatContent": "8.8 grams",
+    "sodiumContent": "1907.5 milligrams",
+    "sugarContent": "25.9 grams",
+    "transFatContent": "0.2 grams",
+    "unsaturatedFatContent": "6.8 grams"
+   },
+   "publisher": {
+    "@id": "https://cooking.nytimes.com/#publisher",
+    "@type": "Organization",
+    "name": "NYT Cooking"
+   },
+   "recipeCategory": "Dinner, Main Course, Poultry",
+   "recipeCuisine": "Asian, Japanese",
+   "recipeIngredient": [
+    "1 cup soy sauce",
+    "1 cup granulated sugar",
+    "1 ½ teaspoons brown sugar",
+    "6 garlic cloves, crushed in a press",
+    "2 tablespoons grated fresh ginger",
+    "¼ teaspoon black pepper",
+    "1 3-inch cinnamon stick",
+    "1 tablespoon pineapple juice",
+    "8 skinless, boneless chicken thighs",
+    "2 tablespoons cornstarch"
+   ],
+   "recipeInstructions": [
+    {
+     "@type": "HowToStep",
+     "text": "In a small saucepan, combine all ingredients except cornstarch and chicken. Bring to boil over high heat. Reduce heat to low and stir until sugar is dissolved, about 3 minutes. Remove from heat and let cool. Discard cinnamon stick and mix in ½ cup water.",
+     "url": "https://cooking.nytimes.com/recipes/1012984-chicken-teriyaki#recipe-step-1"
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Place chicken in a heavy-duty resealable plastic bag. Add soy sauce mixture, seal bag, and turn to coat chicken. Refrigerate for at least an hour, ideally overnight.",
+     "url": "https://cooking.nytimes.com/recipes/1012984-chicken-teriyaki#recipe-step-2"
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Remove chicken and set aside. Pour mixture into a small saucepan. Bring to a boil over high heat, then reduce heat to low. Mix cornstarch with 2 tablespoons water and add to pan. Stir until mixture begins to thicken, and gradually stir in enough water (about ½ cup) until sauce is the consistency of heavy cream. Remove from heat and set aside.",
+     "url": "https://cooking.nytimes.com/recipes/1012984-chicken-teriyaki#recipe-step-3"
+    },
+    {
+     "@type": "HowToStep",
+     "text": "Heat a broiler or grill. Lightly brush chicken pieces on all sides with sauce, and broil or grill about 3 minutes per side. While chicken is cooking, place sauce over high heat and bring to a boil, then reduce heat to a bare simmer, adding water a bit at a time to keep mixture at a pourable consistency. To serve, slice chicken into strips, arrange on plates, and drizzle with sauce.",
+     "url": "https://cooking.nytimes.com/recipes/1012984-chicken-teriyaki#recipe-step-4"
+    }
+   ],
+   "recipeYield": "8 servings",
+   "review": [
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "KAR"
+     },
+     "datePublished": "2026-07-14T02:29:31Z",
+     "reviewBody": "We thought it was a little too sweet ( and we’re Seattlites), so this time I thinned it at the last boiling with more pineapple juice. It really cut the sweetness. Delicious."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "MariaMaria"
+     },
+     "datePublished": "2026-07-06T22:34:38Z",
+     "reviewBody": "Any ideas for a substitute for pineapple juice?. I never use it and don’t want to waste the leftovers."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Dr. Bob"
+     },
+     "datePublished": "2026-07-06T19:41:00Z",
+     "reviewBody": "Another consideration is that fresh pineapple juice contains a powerful enzyme, bromelain, that breaks down meat. This is heat inactivated. Thus, using canned pineapple juice or cooking the sauce mixture as directed will not tenderize the chicken. But be careful not to marinate too long if using fresh pineapple juice that has not been heat inactivated."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Ross K"
+     },
+     "datePublished": "2026-07-06T13:33:13Z",
+     "reviewBody": "Made is is -perfect.ruining the intensity with carrots, onions, bone-in chicken, orange juice etc would be such a shame."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Paige"
+     },
+     "datePublished": "2026-07-06T10:50:11Z",
+     "reviewBody": "This recipe is great, really loved it. I chose to use chicken breasts instead of thighs and ended up baking them instead of broiling which works just fine. I pounded 4 chicken breasts and used the same quantities of other ingredients (I used slightly less sugar than recommended bc I didn’t have the full amount and just grated a whole ginger root). I baked for 22 minutes at 195 C/385 F, flipping the chicken halfway and coating the other side with sauce. Turned out great. As another user said the sugar did start to burn on the tray but the chicken was fine and clean up wasn’t too bad after letting it soak and using steel wool. There’s a good amount of sauce left over, plenty for a sauce lover such as myself. Try this recipe!"
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "ladybug66"
+     },
+     "datePublished": "2026-07-04T15:50:16Z",
+     "reviewBody": "Delicious and juicy!  By accident I didn't reduce the marinade but the dish still turned out great.  I let it marinate over night."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Peregrine"
+     },
+     "datePublished": "2026-06-28T16:31:33Z",
+     "reviewBody": "This was really good. I don't keep pineapple juice around so I subbed blood orange for both the pineapple juice and some of the water you're supposed to add. I assume it would work with salmon and tofu."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "DT"
+     },
+     "datePublished": "2026-06-19T20:23:51Z",
+     "reviewBody": "I really dislike when a recipe says something like at all the ingredients except cornstarch and then at the end of step one it says now add half a cup of water. Some of us follow these recipes laying by line so when it’s something confusing like that, it throws us off."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Kathy"
+     },
+     "datePublished": "2026-06-15T00:46:27Z",
+     "reviewBody": "This was nice and easy for a weeknight dinner. I halved the sugar and felt it was nicely balanced. One thing I’m wondering about: the sauce, though delicious, looked like gravy, and not at all like the glossy, translucent sauce in the photo. Did I do something wrong or did others’ turn out that way?"
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "stephanieoporto"
+     },
+     "datePublished": "2026-06-14T16:38:06Z",
+     "reviewBody": "The new cook mode is not ideal. I just mixed in the 1/2c water before boiling and dissolving sugar because it’s listed in the first step and says mix everything except chicken and corn starch. Stir for 3 minutes until sugar dissolves. Discard cinnamon and stir in water should be step 2 if you’re going to list it like this."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Cyndie"
+     },
+     "datePublished": "2026-05-24T16:41:58Z",
+     "reviewBody": "I considered using less sugar as others recommended but decided to follow the recipe. It was too sweet for my taste. My husband thought it fine but not phenomenal."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Kia"
+     },
+     "datePublished": "2026-05-04T12:05:24Z",
+     "reviewBody": "Ate this with seared and diced trumpet mushrooms, + sushi rice.  A perfect dish."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "GSeabhac"
+     },
+     "datePublished": "2026-04-22T04:25:24Z",
+     "reviewBody": "Now I get why I'm not that fond of most teriyaki. I'm from Seattle. I'm not fond of sweet with meat, in general, and most teriyaki here is much too sweet for my preference. I make my own teriyaki from one of the less-sweet recipes that uses soy and mirin, and I really like that sauce. I never realized our regional teriyaki here is sweeter than teriyaki elsewhere. Now I know."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "P.S"
+     },
+     "datePublished": "2026-04-06T11:09:27Z",
+     "reviewBody": "Guys.  Yes. It’s a lot of sugar.  But unless you’re drinking the sauce, it’s really not a big deal."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Kelly"
+     },
+     "datePublished": "2026-03-16T16:25:37Z",
+     "reviewBody": "1) Recipe easy to follow, and prepare.  2) Flavors will suit even the pickiest of eaters.  My sister and her kids, and my mother, enjoyed it.  3)  Clean up is a breeze.\nI didn't find it to be overly sweet as some have commented.  Maybe by marinating it overnight, more of the flavors from the other ingredients balanced it.  I found the garlic and ginger more pronounced when it was cooked the following day.\nIn my opinion, better than takeout (and a lot cheaper!)."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Mary"
+     },
+     "datePublished": "2017-02-20T14:15:51Z",
+     "reviewBody": "For those of you put off by the quantity of sugar, the introduction explains that this is a sweet, Seattle-specific, inauthentic version of Teriyaki. Perhaps a more authentic recipe would be more to your taste? This site has several less-sugary options, including Melissa Clark's Yakitori sauce. Google authentic Teriyaki, and wow, do the internets yield results!  Or stick with this one, and reduce the amount of sugar. So many options that don't involve sugar-shaming other readers."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Janet"
+     },
+     "datePublished": "2018-06-07T22:22:04Z",
+     "reviewBody": "This is so much tastier than any bottled teriyaki sauce, though I'm grateful for readers' suggestions for how to reduce the amount of sugar. Another thing: I wish the editors would stop using plastic bags in the recipe directions for marinades etc. Nonreactive bowls with a plate on top work fine."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Linda Criss"
+     },
+     "datePublished": "2017-02-10T13:41:33Z",
+     "reviewBody": "Make the marinade<br/>Do not heat<br/>Make a bed of onion and carrot chunks<br/>place bone in - skin on - chicken thighs on top of vegetables<br/>Pour marinade over the dish<br/>Bake 350<br/>Two hours"
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Mary"
+     },
+     "datePublished": "2017-02-20T14:16:34Z",
+     "reviewBody": "I omitted the granulated sugar, but used all of the juice from a can of pineapple chunks. I marinated the chicken for an hour, then I browned it in a skillet for ~5 minutes per side, removed it from the heat. I cut up an onion, bell pepper, a fresh jalapeno and stir fried them with the pineapple chunks in a bit of peanut oil in the same pan until I had a few char marks and then added the chicken back, along with the marinade.  I simmered all of that for about fifteen minutes. Served with rice."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Jennifer"
+     },
+     "datePublished": "2016-11-16T22:00:29Z",
+     "reviewBody": "This was easy and much better than any store bought marinade. First tip when reading ANY recipe I would say is to Always read it all the way through first, but,  I did not marinade overnight, never do, no one has time for that. I let it marinate for 1hr 30min. More than enough time. Buy pre shaved ginger at grocery store by the herb pastes. 10-12 min each side for chicken under broiler. Pair with white rice and if you have a Publix near you then get their Makoto Honey Ginger salad mix in a bag."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "professional chef"
+     },
+     "datePublished": "2017-04-30T17:11:38Z",
+     "reviewBody": "2 hours is 3-4x longer than necessary. Thighs cook quickly in a preheated oven, 25-35 minutes tops, depending on temperature and amount cooking. Im a professional chef on a mission to help people stop destroying their perfectly innocent and naturally delicious chickens."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Michelle"
+     },
+     "datePublished": "2017-03-03T00:04:29Z",
+     "reviewBody": "Excellent.  Worth the little bit of planning to marinate the night before.  I used 1/2 cup of sugar and it was perfect.  There was ample sauce, so we put it on our rice too.  I baked the thighs at 400 for 12 minutes first, then broiled 3 minutes per side and they were perfectly done.  "
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Christina"
+     },
+     "datePublished": "2017-07-11T17:17:34Z",
+     "reviewBody": "What I like to do when recipes call for marinading overnight, 6 hours etc is to make up a big batch, do  the marinade time then freeze the uncooked meat in some sauce in zip lock bags.  That way I can have the meat already marinaded when I pull it from the freezer.  I have a wonderful  recipe for boneless pork chops - Teriyaki and Beer Marinade.  Great on the grill."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Gaby"
+     },
+     "datePublished": "2016-09-07T20:17:20Z",
+     "reviewBody": "I made it with skinless pounded chicken breast. I only marinated it 4 hours and it was still delicious. Grilled it and served it with basmati rice, scallions and roasted king oyster mushrooms."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Peter C. Herman"
+     },
+     "datePublished": "2018-08-28T03:37:32Z",
+     "reviewBody": "Really good, but a cup of sugar? Seriously? I cut the sugar content down to about three tablespoons of brown sugar (I also used pineapple juice) and it came out great."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Kim"
+     },
+     "datePublished": "2017-10-04T13:14:05Z",
+     "reviewBody": "No one has time for that? I think of overnight marinating as a time SAVER not a time suck. Go figure."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Maggie"
+     },
+     "datePublished": "2017-02-10T22:35:14Z",
+     "reviewBody": "You're roasting your thighs for TWO HOURS??? I know they're forgiving, but why so long? FWIW, that's about twice the time I would find necessary."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Jennifer"
+     },
+     "datePublished": "2017-02-13T20:56:22Z",
+     "reviewBody": "Made this tonight.  Family loved it.  I did marinate the chicken overnight and grilled it.  Cut the granulated to sugar to 3/4 cup.  I added a small can of pineapple chunks to the chicken and used the juice for the sauce.  Easy to make too.  Will be making this again."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "RDCollins"
+     },
+     "datePublished": "2017-02-20T14:14:53Z",
+     "reviewBody": "If the marinade Isa not heated and allowed to simmer, the cinnamon stick would be wasted, and cinnamon is a significant part of the final flavor of the sauce."
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "susan"
+     },
+     "datePublished": "2018-12-17T12:53:26Z",
+     "reviewBody": "Being from seattle I am used to this type of teriyaki and loved it.  Nine of us ate 12 thighs for dinner tonight and probably would have eaten more if it had been available.  I didn’t even bother slicing it and just gave everyone a thigh, served on rice with a nice helping of the sauce.I didn’t have pineapple juice so took some cut up pineapple and sort of smashed it into the marinade.  The only thing I would do differently next time is add a little vinegar.  I think it needs a bit of acid.  \n"
+    }
+   ],
+   "totalTime": "PT30M",
+   "url": "//cooking.nytimes.com/recipes/1012984-chicken-teriyaki"
+  },
+  {
+   "@context": "https://schema.org",
+   "@id": "//cooking.nytimes.com/recipes/1012984-chicken-teriyaki",
+   "@type": "WebPage",
+   "author": {
+    "@id": "nyt://person/a93efbf3-b045-50de-a05b-34867d79401b",
+    "@type": "Person",
+    "name": "John T. Edge"
+   },
+   "copyrightHolder": {
+    "@id": "https://cooking.nytimes.com/#publisher",
+    "@type": "Organization",
+    "name": "NYT Cooking"
+   },
+   "copyrightYear": 2010,
+   "dateModified": "2024-02-13T00:00:00Z",
+   "datePublished": "2010-01-06T00:00:00Z",
+   "description": "Teriyaki is derived from the Japanese root words teri, which means “to shine,” and yaki, which means “to broil or grill.” That’s the way traditional teriyaki looks: shiny and incised with grill marks. In Japan, teriyaki is a mix of soy sauce, sake and the rice wine mirin, which imparts a subtle sweetness. The teriyaki found throughout Seattle, of which this is an adaptation, is a bit more showy. Cooks sweeten with white sugar and pineapple juice. They thicken with cornstarch. Ginger and garlic go into the mix because of the Korean ancestry of many cooks. It is not at all traditional, but it is simple to prepare and a pleasure to eat. Be sure to plan ahead as you do need to marinate the chicken before cooking. An overnight stay in the fridge is ideal, but many readers have been happy with a quick marinade of an hour or so. John T. Edge",
+   "hasPart": {
+    "@type": "WebPageElement",
+    "cssSelector": ".recipe",
+    "isAccessibleForFree": false
+   },
+   "isAccessibleForFree": false,
+   "isPartOf": {
+    "@type": [
+     "CreativeWork",
+     "Product"
+    ],
+    "name": "NYT Cooking",
+    "productID": "cooking.nytimes.com:basic"
+   },
+   "name": "Chicken Teriyaki",
+   "publisher": {
+    "@id": "https://cooking.nytimes.com/#publisher",
+    "@type": "Organization",
+    "name": "NYT Cooking"
+   },
+   "url": "//cooking.nytimes.com/recipes/1012984-chicken-teriyaki"
+  },
+  {
+   "@context": "https://schema.org",
+   "@id": "https://cooking.nytimes.com/#publisher",
+   "@type": "Organization",
+   "alternateName": [
+    "nytimes cooking",
+    "New York Times Cooking"
+   ],
+   "diversityPolicy": "https://www.nytco.com/company/diversity-and-inclusion/",
+   "ethicsPolicy": "https://www.nytco.com/company/standards-ethics/",
+   "foundingDate": "2014-09-17",
+   "logo": {
+    "@type": "ImageObject",
+    "contentUrl": "https://static01.nyt.com/applications/cooking/623885b/assets/SiteLogoBlack-112x112.svg",
+    "creditText": "NYT Cooking",
+    "height": "112",
+    "url": "https://static01.nyt.com/applications/cooking/623885b/assets/SiteLogoBlack-112x112.svg",
+    "width": "112"
+   },
+   "name": "NYT Cooking",
+   "parentOrganization": {
+    "@id": "https://www.nytimes.com/#publisher",
+    "@type": "NewsMediaOrganization",
+    "name": "The New York Times"
+   },
+   "sameAs": [
+    "https://www.facebook.com/nytcooking/",
+    "https://www.instagram.com/nytcooking/",
+    "https://www.youtube.com/c/NYTCooking",
+    "https://www.tiktok.com/@nytcooking",
+    "https://apps.apple.com/us/app/nyt-cooking/id911422904",
+    "https://play.google.com/store/apps/details?id=com.nytimes.cooking&hl=en_US&gl=US"
+   ],
+   "url": "https://cooking.nytimes.com"
+  },
+  {
+   "@context": "https://schema.org",
+   "@id": "https://www.nytimes.com/#publisher",
+   "@type": "NewsMediaOrganization",
+   "diversityPolicy": "https://www.nytco.com/company/diversity-and-inclusion/",
+   "ethicsPolicy": "https://www.nytco.com/company/standards-ethics/",
+   "foundingDate": "1851-09-18",
+   "logo": {
+    "@type": "ImageObject",
+    "contentUrl": "https://static01.nyt.com/images/icons/t_logo_291_black.png",
+    "creditText": "The New York Times",
+    "height": "291",
+    "url": "https://static01.nyt.com/images/icons/t_logo_291_black.png",
+    "width": "291"
+   },
+   "masthead": "https://www.nytimes.com/interactive/2023/01/28/admin/the-new-york-times-masthead.html",
+   "name": "The New York Times",
+   "sameAs": [
+    "https://www.facebook.com/nytimes/",
+    "https://twitter.com/nytimes",
+    "https://www.instagram.com/nytimes/",
+    "https://www.youtube.com/user/TheNewYorkTimes",
+    "https://www.linkedin.com/company/the-new-york-times",
+    "https://www.wikidata.org/wiki/Q9684",
+    "https://en.wikipedia.org/wiki/The_New_York_Times"
+   ],
+   "url": "https://www.nytimes.com/"
+  }
+ ]
+}

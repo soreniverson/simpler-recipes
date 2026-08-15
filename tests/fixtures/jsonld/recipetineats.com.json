@@ -1,0 +1,529 @@
+{
+ "url": "https://www.recipetineats.com/beef-stroganoff/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph|plain:NewsArticle",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list2:[\"4\", \"4 - 5 people\"]",
+  "author=dict",
+  "prep=\"PT15M\" cook=\"PT15M\" total=\"PT30M\"",
+  "ing=list12",
+  "plugins=WPRM,MediavineCreate"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.recipetineats.com/beef-stroganoff/#article",
+     "isPartOf": {
+      "@id": "https://www.recipetineats.com/beef-stroganoff/"
+     },
+     "author": {
+      "name": "Nagi",
+      "@id": "https://www.recipetineats.com/#/schema/person/1684e6a75e9f91ae2e33ca2de95b47e2"
+     },
+     "headline": "Beef Stroganoff",
+     "datePublished": "2019-02-27T23:35:05+00:00",
+     "dateModified": "2025-06-30T03:47:46+00:00",
+     "wordCount": 1385,
+     "commentCount": 1213,
+     "image": {
+      "@id": "https://www.recipetineats.com/beef-stroganoff/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.recipetineats.com/tachyon/2018/01/Beef-Stroganoff_2-1-1.jpg",
+     "articleSection": [
+      "Beef",
+      "Beef Recipes",
+      "Gluten Free",
+      "Main Dishes",
+      "Mains",
+      "Nagi's Picks",
+      "Quick and Easy",
+      "Quick Dinner Recipes"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.recipetineats.com/beef-stroganoff/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.recipetineats.com/beef-stroganoff/",
+     "url": "https://www.recipetineats.com/beef-stroganoff/",
+     "name": "Beef Stroganoff - RecipeTin Eats",
+     "isPartOf": {
+      "@id": "https://www.recipetineats.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.recipetineats.com/beef-stroganoff/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.recipetineats.com/beef-stroganoff/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.recipetineats.com/tachyon/2018/01/Beef-Stroganoff_2-1-1.jpg",
+     "datePublished": "2019-02-27T23:35:05+00:00",
+     "dateModified": "2025-06-30T03:47:46+00:00",
+     "author": {
+      "@id": "https://www.recipetineats.com/#/schema/person/1684e6a75e9f91ae2e33ca2de95b47e2"
+     },
+     "description": "This retro classic is making a comeback! This 30 minute Beef Stroganoff has juicy beef (no dry chewy beef here!) smothered in a creamy mushroom gravy served over pasta or noodles.",
+     "breadcrumb": {
+      "@id": "https://www.recipetineats.com/beef-stroganoff/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.recipetineats.com/beef-stroganoff/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.recipetineats.com/beef-stroganoff/#primaryimage",
+     "url": "https://www.recipetineats.com/tachyon/2018/01/Beef-Stroganoff_2-1-1.jpg",
+     "contentUrl": "https://www.recipetineats.com/tachyon/2018/01/Beef-Stroganoff_2-1-1.jpg",
+     "width": 900,
+     "height": 1260,
+     "caption": "Beef Stroganoff in a rustic white bowl over noodles"
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.recipetineats.com/beef-stroganoff/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.recipetineats.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Beef Recipes",
+       "item": "https://www.recipetineats.com/category/beef-recipes/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Beef Stroganoff"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.recipetineats.com/#website",
+     "url": "https://www.recipetineats.com/",
+     "name": "RecipeTin Eats",
+     "description": "Fast Prep, Big Flavours",
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.recipetineats.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.recipetineats.com/#/schema/person/1684e6a75e9f91ae2e33ca2de95b47e2",
+     "name": "Nagi",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://secure.gravatar.com/avatar/75eae612677fdf550ba9a478ea595902153a0a06b8b27aaf6bc3eddcf6367244?s=96&d=https%3A%2F%2Fwww.recipetineats.com%2Ftachyon%2F2024%2F06%2Favatar-guest-temp-cache-bust-duplicate.png&r=g",
+      "url": "https://secure.gravatar.com/avatar/75eae612677fdf550ba9a478ea595902153a0a06b8b27aaf6bc3eddcf6367244?s=96&d=https%3A%2F%2Fwww.recipetineats.com%2Ftachyon%2F2024%2F06%2Favatar-guest-temp-cache-bust-duplicate.png&r=g",
+      "contentUrl": "https://secure.gravatar.com/avatar/75eae612677fdf550ba9a478ea595902153a0a06b8b27aaf6bc3eddcf6367244?s=96&d=https%3A%2F%2Fwww.recipetineats.com%2Ftachyon%2F2024%2F06%2Favatar-guest-temp-cache-bust-duplicate.png&r=g",
+      "caption": "Nagi"
+     },
+     "description": "I believe you can make great food with everyday ingredients even if you’re short on time and cost conscious. You just need to cook clever and get creative!",
+     "sameAs": [
+      "http://www.recipetineats.com/about-me/"
+     ],
+     "url": "https://www.recipetineats.com/author/nagi-maehashigmail-com/"
+    },
+    {
+     "@type": "Recipe",
+     "name": "Beef Stroganoff",
+     "author": {
+      "@id": "https://www.recipetineats.com/#/schema/person/1684e6a75e9f91ae2e33ca2de95b47e2"
+     },
+     "description": "RECIPE VIDEO ABOVE. Juicy strips of beef smothered in a sour cream mushroom gravy - a quick dinner everyone will love! KEY STEPS: Sear beef super quickly for maximum juiciness and use a large skillet (for quick sear + fast sauce reduction). Stroganoff calls for good beef but if you only have a budget cut, use this easy Chinese method to tenderise the beef (it&#x27;s called &quot;velveting&quot;). It&#x27;s life changing - and perfect for Stroganoff.",
+     "datePublished": "2019-02-28T10:35:05+00:00",
+     "image": [
+      "https://www.recipetineats.com/tachyon/2018/01/Beef-Stroganoff_2-1-1.jpg",
+      "https://www.recipetineats.com/tachyon/2018/01/Beef-Stroganoff_2-1-1.jpg?resize=500%2C500",
+      "https://www.recipetineats.com/tachyon/2018/01/Beef-Stroganoff_2-1-1.jpg?resize=500%2C375",
+      "https://www.recipetineats.com/tachyon/2018/01/Beef-Stroganoff_2-1-1.jpg?resize=480%2C270"
+     ],
+     "recipeYield": [
+      "4",
+      "4 - 5 people"
+     ],
+     "prepTime": "PT15M",
+     "cookTime": "PT15M",
+     "totalTime": "PT30M",
+     "recipeIngredient": [
+      "600 g / 1.2 lb   scotch fillet steak / boneless rib eye ((Note 1))",
+      "2 tbsp vegetable oil (, divided)",
+      "1  large onion ((or 2 small onions), sliced)",
+      "300 g / 10 oz   mushrooms (, sliced (not too thin))",
+      "40 g / 3 tbsp   butter",
+      "2 tbsp flour ((Note 2))",
+      "2 cups / 500 ml   beef broth (, preferably salt reduced)",
+      "1 tbsp Dijon mustard",
+      "150 ml / 2/3 cup   sour cream",
+      "Salt and pepper",
+      "250 - 300 g / 8 - 10 oz   pasta or egg noodles of choice ((Note 3))",
+      "Chopped chives (, for garnish (optional))"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "Use your fist (or rolling pin or mallet) to flatten the steaks to about 3/4cm / 1/3\" thick. Slice into 5mm / 1/5\" strips (cut long ones in half), discarding excess fat.",
+       "name": "Use your fist (or rolling pin or mallet) to flatten the steaks to about 3/4cm / 1/3\" thick. Slice into 5mm / 1/5\" strips (cut long ones in half), discarding excess fat.",
+       "url": "https://www.recipetineats.com/beef-stroganoff/#wprm-recipe-27097-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Sprinkle with a pinch of salt and pepper.",
+       "name": "Sprinkle with a pinch of salt and pepper.",
+       "url": "https://www.recipetineats.com/beef-stroganoff/#wprm-recipe-27097-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Heat 1 tbsp oil in a large skillet over high heat. Scatter half the beef in the skillet, QUICKLY spread it with tongs. Leave untouched for 30 seconds until browned. Turn beef quickly (as best you can!). Leave untouched for 30 seconds to brown. Immediately remove onto a plate. Don't worry about pink bits and that it will be raw inside.",
+       "name": "Heat 1 tbsp oil in a large skillet over high heat. Scatter half the beef in the skillet, QUICKLY spread it with tongs. Leave untouched for 30 seconds until browned. Turn beef quickly (as best you can!). Leave untouched for 30 seconds to brown. Immediately remove onto a plate. Don't worry about pink bits and that it will be raw inside.",
+       "url": "https://www.recipetineats.com/beef-stroganoff/#wprm-recipe-27097-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add remaining 1 tbsp oil and repeat with remaining beef.",
+       "name": "Add remaining 1 tbsp oil and repeat with remaining beef.",
+       "url": "https://www.recipetineats.com/beef-stroganoff/#wprm-recipe-27097-step-0-3"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Turn heat down to medium high. Add butter, melt. Then add onions, cook for 1 minute, then add mushrooms.",
+       "name": "Turn heat down to medium high. Add butter, melt. Then add onions, cook for 1 minute, then add mushrooms.",
+       "url": "https://www.recipetineats.com/beef-stroganoff/#wprm-recipe-27097-step-0-4"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Cook mushrooms until golden. Scrape bottom of fry pan to get all the golden bits off (this is flavour!).",
+       "name": "Cook mushrooms until golden. Scrape bottom of fry pan to get all the golden bits off (this is flavour!).",
+       "url": "https://www.recipetineats.com/beef-stroganoff/#wprm-recipe-27097-step-0-5"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add flour, cook, stirring, for 1 minute.",
+       "name": "Add flour, cook, stirring, for 1 minute.",
+       "url": "https://www.recipetineats.com/beef-stroganoff/#wprm-recipe-27097-step-0-6"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add half the broth while stirring. Once incorporated, add remaining broth.",
+       "name": "Add half the broth while stirring. Once incorporated, add remaining broth.",
+       "url": "https://www.recipetineats.com/beef-stroganoff/#wprm-recipe-27097-step-0-7"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Stir, then add sour cream and mustard. Stir until incorporated (don't worry if it looks split, sour cream will \"melt\" as it heats).",
+       "name": "Stir, then add sour cream and mustard. Stir until incorporated (don't worry if it looks split, sour cream will \"melt\" as it heats).",
+       "url": "https://www.recipetineats.com/beef-stroganoff/#wprm-recipe-27097-step-0-8"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Bring to simmer ,then reduce heat to medium low. Once it thickens to the consistency of pouring cream (3 - 5 minutes), adjust salt and pepper to taste.",
+       "name": "Bring to simmer ,then reduce heat to medium low. Once it thickens to the consistency of pouring cream (3 - 5 minutes), adjust salt and pepper to taste.",
+       "url": "https://www.recipetineats.com/beef-stroganoff/#wprm-recipe-27097-step-0-9"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add beef back in (including plate juices). Simmer for 1 minute, then remove from stove immediately. (Note 4)",
+       "name": "Add beef back in (including plate juices). Simmer for 1 minute, then remove from stove immediately. (Note 4)",
+       "url": "https://www.recipetineats.com/beef-stroganoff/#wprm-recipe-27097-step-0-10"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Serve over pasta or egg noodles, sprinkled with chives if desired.",
+       "name": "Serve over pasta or egg noodles, sprinkled with chives if desired.",
+       "url": "https://www.recipetineats.com/beef-stroganoff/#wprm-recipe-27097-step-0-11"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.91",
+      "ratingCount": "531",
+      "reviewCount": "14"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I also add sweet paprika and tomato paste",
+       "author": {
+        "@type": "Person",
+        "name": "Sue Coull"
+       },
+       "datePublished": "2026-05-12"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+       },
+       "reviewBody": "Made the mistake of pouring the mixture over egg noodles and sucked up most of the juice can I make separate juice with mustard and sour cream and beef broth. Help",
+       "author": {
+        "@type": "Person",
+        "name": "Nancy Burgess"
+       },
+       "datePublished": "2026-04-19"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Good recipe however the 12345678 steps are wrong -7 should be 8!!",
+       "author": {
+        "@type": "Person",
+        "name": "Michelle"
+       },
+       "datePublished": "2026-04-16"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "So delicious!! I cheated and bought pre cut steak from our butcher which I worried might be a bit tough but it was perfect",
+       "author": {
+        "@type": "Person",
+        "name": "Cassie"
+       },
+       "datePublished": "2026-04-12"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Great recipe. Very tastier and easy to make.",
+       "author": {
+        "@type": "Person",
+        "name": "Robyn Symons"
+       },
+       "datePublished": "2026-04-12"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I made this with pork scotch fillet and it was the best stroganoff I've ever had by a long margin!\r\n\r\nAnother great recipe, thanks.",
+       "author": {
+        "@type": "Person",
+        "name": "Beckett"
+       },
+       "datePublished": "2026-04-08"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+       },
+       "reviewBody": "From memory, Worcestershire sauce usually goes in Steak Diane?",
+       "author": {
+        "@type": "Person",
+        "name": "BrianW"
+       },
+       "datePublished": "2026-03-26"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Great recipe. Easy to make fun to read",
+       "author": {
+        "@type": "Person",
+        "name": "Judy"
+       },
+       "datePublished": "2026-03-15"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I loved every last bite of this delicious beef strogonaof.🤤🤤",
+       "author": {
+        "@type": "Person",
+        "name": "Jacob"
+       },
+       "datePublished": "2026-03-11"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I made this last night and it was really good!  The directions are easy to follow. I ate it with egg noodles",
+       "author": {
+        "@type": "Person",
+        "name": "Tanalee"
+       },
+       "datePublished": "2026-03-05"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "It’s been a few years since I made beef stroganoff. So I needed a good recipe. Came across this one. Definitely worthy of being pinned!! \r\nReheated in a pan with some water to reconstitute. Worked great, then simmered until the meat was heated up.",
+       "author": {
+        "@type": "Person",
+        "name": "G Tamura"
+       },
+       "datePublished": "2026-03-03"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+       },
+       "reviewBody": "I’ve always added  2 tablespoons paprika \r\nAnd tomato paste and it’s delicious. And gives it great colour.  Otherwise it’s the same as Family Circle recipe 40 years ago.",
+       "author": {
+        "@type": "Person",
+        "name": "Lorelle Redshaw"
+       },
+       "datePublished": "2026-02-09"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I have never had beef stroganoff before, let alone make it. It sounded good so I tried it and it was delicious!",
+       "author": {
+        "@type": "Person",
+        "name": "MiMi"
+       },
+       "datePublished": "2026-02-07"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "What a fantastic flavorsome recipe.\r\nI tried it for dinner this evening and everyone loved it!\r\nI served it with brown basmati \r\nrice instead of pasta and added a handful of baby peas for that extra color to the dish.\r\nWe loved it! This is by far the best beef stroganoff I’ve made. The fact that I used a much better quality cut of meat, (scotch fillet) made a huge difference to the taste, smooth and velvety.",
+       "author": {
+        "@type": "Person",
+        "name": "Suzette Barclay"
+       },
+       "datePublished": "2026-01-12"
+      }
+     ],
+     "recipeCategory": [
+      "Main"
+     ],
+     "recipeCuisine": [
+      "Russian",
+      "Western"
+     ],
+     "keywords": "Beef Stroganoff, Beef Stroganoff recipe",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "servingSize": "243 g",
+      "calories": "586 kcal",
+      "carbohydrateContent": "9 g",
+      "proteinContent": "37 g",
+      "fatContent": "44 g",
+      "saturatedFatContent": "24 g",
+      "cholesterolContent": "125 mg",
+      "sodiumContent": "449 mg",
+      "fiberContent": "1 g",
+      "sugarContent": "3 g"
+     },
+     "@id": "https://www.recipetineats.com/beef-stroganoff/#recipe",
+     "isPartOf": {
+      "@id": "https://www.recipetineats.com/beef-stroganoff/#article"
+     },
+     "mainEntityOfPage": "https://www.recipetineats.com/beef-stroganoff/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "NewsArticle",
+   "headline": "Beef Stroganoff",
+   "url": "http://www.recipetineats.com/beef-stroganoff/",
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://www.recipetineats.com/beef-stroganoff/"
+   },
+   "thumbnailUrl": "https://www.recipetineats.com/tachyon/2018/01/Beef-Stroganoff_2-1-1.jpg?resize=150%2C150",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.recipetineats.com/tachyon/2018/01/Beef-Stroganoff_2-1-1.jpg"
+   },
+   "articleSection": "Beef",
+   "author": [
+    {
+     "@type": "Person",
+     "name": "Nagi"
+    }
+   ],
+   "creator": [
+    "Nagi"
+   ],
+   "publisher": {
+    "@type": "Organization",
+    "name": "RecipeTin Eats",
+    "logo": ""
+   },
+   "keywords": [],
+   "dateCreated": "2019-02-27T23:35:05Z",
+   "datePublished": "2019-02-27T23:35:05Z",
+   "dateModified": "2025-06-30T03:47:46Z"
+  }
+ ]
+}

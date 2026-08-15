@@ -48,6 +48,20 @@ export function stripStepNumbering(step: string): string {
 export function durationToMinutes(input: unknown): number | null {
   if (input == null) return null;
   if (typeof input === 'number') return input > 0 && Number.isFinite(input) ? Math.round(input) : null;
+  if (Array.isArray(input)) return durationToMinutes(input[0]);
+  if (typeof input === 'object') {
+    // schema.org Duration / QuantitativeValue objects: {minValue, maxValue} or {value}
+    const o = input as any;
+    const v = o.value ?? o.minValue ?? o.maxValue;
+    if (v != null) {
+      const n = durationToMinutes(v);
+      if (n != null) return n;
+      // Some sites put a bare number of minutes.
+      const num = Number(v);
+      if (Number.isFinite(num) && num > 0) return Math.round(num);
+    }
+    return null;
+  }
   if (typeof input !== 'string') return null;
   const s = input.trim();
   if (!s) return null;
@@ -180,7 +194,9 @@ export function normalizeYield(input: unknown): NormalizedYield {
 
   // Extract the first number (supports ranges "4-6", "4 to 6", mixed numbers "2 1/2", unicode "2½").
   const NUM = '(\\d+(?:[.,]\\d+)?(?:\\s*[¼½¾⅓⅔⅛]|\\s+\\d\\/\\d)?|[¼½¾⅓⅔⅛]|\\d\\/\\d)';
-  const numMatch = s.match(new RegExp(`${NUM}(?:\\s*(?:-|–|to)\\s*${NUM})?`));
+  // Prefer the number attached to a serving word: "1 loaf, 10 servings" → 10; "2 cups (8 servings)" → 8.
+  const servingWord = s.match(new RegExp(`${NUM}(?:\\s*(?:-|–|to)\\s*${NUM})?\\s*(?:servings?|serves|people|persons?|portions?|personnes|porzioni)\\b`, 'i'));
+  const numMatch = servingWord ?? s.match(new RegExp(`${NUM}(?:\\s*(?:-|–|to)\\s*${NUM})?`));
   let count: number | null = null;
   if (numMatch) {
     const a = parseQuantityToken(numMatch[1].replace(',', '.'));
@@ -197,9 +213,10 @@ export function normalizeYield(input: unknown): NormalizedYield {
   if (/^\d+(?:[.,]\d+)?(?:\s*(?:-|–|to)\s*\d+(?:[.,]\d+)?)?$/i.test(text)) text = `${text} servings`;
   // "4 servings servings" guard, and "Servings: 4" → "4 servings"
   else if (/^servings?\s*:?\s*\d+/i.test(text)) text = text.replace(/^servings?\s*:?\s*/i, '') + ' servings';
-  // "Serves 4" / "Serves: 4-6" → "4–6 servings"; "Yield: 12" → "12 servings"
-  else if (/^(serves|yield|yields|makes)\s*:?\s*\d+(?:[.,]\d+)?(?:\s*(?:-|–|to)\s*\d+)?\s*$/i.test(text)) {
-    text = text.replace(/^(serves|yield|yields|makes)\s*:?\s*/i, '').replace(/\s*(-|to)\s*/i, '–') + ' servings';
+  // "Serves 4" / "Serves: 4-6" → "4–6 servings"; "Yield: 12" → "12 servings". ("Makes 16" stays as-is:
+  // it may be 16 cookies, not 16 servings.)
+  else if (/^(serves|yield|yields)\s*:?\s*\d+(?:[.,]\d+)?(?:\s*(?:-|–|to)\s*\d+)?\s*$/i.test(text)) {
+    text = text.replace(/^(serves|yield|yields)\s*:?\s*/i, '').replace(/\s*(-|to)\s*/i, '–') + ' servings';
   }
   // Ranges: "4-6 servings" → "4–6 servings"
   text = text.replace(/(\d)\s*(?:-|to)\s*(\d)/i, '$1–$2');
@@ -215,32 +232,57 @@ export function normalizeYield(input: unknown): NormalizedYield {
 
 /** Pick the best image URL out of string | ImageObject | array of either. */
 export function normalizeImage(input: unknown, baseUrl?: string): string | null {
-  const candidates: string[] = [];
+  interface Cand { url: string; w: number | null; h: number | null; order: number }
+  const candidates: Cand[] = [];
   const push = (v: unknown) => {
     if (!v) return;
-    if (typeof v === 'string') candidates.push(v);
+    if (typeof v === 'string') candidates.push({ url: v, w: null, h: null, order: candidates.length });
     else if (Array.isArray(v)) v.forEach(push);
     else if (typeof v === 'object') {
       const o = v as any;
-      push(o.url ?? o.contentUrl ?? o['@id'] ?? o.thumbnailUrl);
+      const url = o.url ?? o.contentUrl ?? o['@id'] ?? o.thumbnailUrl;
+      if (typeof url === 'string') {
+        const w = Number(typeof o.width === 'object' ? o.width?.value : o.width) || null;
+        const h = Number(typeof o.height === 'object' ? o.height?.value : o.height) || null;
+        candidates.push({ url, w, h, order: candidates.length });
+      } else push(url);
     }
   };
   push(input);
-  for (const raw of candidates) {
-    const s = raw.trim();
-    if (!s) continue;
-    if (s.startsWith('data:')) continue;
+  const valid: Cand[] = [];
+  for (const c of candidates) {
+    const s = c.url.trim();
+    if (!s || s.startsWith('data:')) continue;
     try {
       const u = new URL(s, baseUrl);
       if (u.protocol !== 'http:' && u.protocol !== 'https:') continue;
-      // Skip obvious tracking pixels / placeholders.
       if (/1x1|pixel|blank\.gif|spacer\.gif|placeholder/i.test(u.pathname)) continue;
-      return u.toString();
+      // Size hints in the filename ("-500x375.jpg") when the object didn't declare them.
+      let { w, h } = c;
+      if (!w || !h) {
+        const m = u.pathname.match(/-(\d{2,4})x(\d{2,4})\.[a-z]{3,4}$/i);
+        if (m) { w = Number(m[1]); h = Number(m[2]); }
+      }
+      valid.push({ url: u.toString(), w, h, order: c.order });
     } catch {
       continue;
     }
   }
-  return null;
+  if (!valid.length) return null;
+  if (valid.length === 1) return valid[0].url;
+  // Score: prefer landscape 4:3–16:9 (fits the recipe hero), then larger, then earlier.
+  const score = (c: Cand) => {
+    if (!c.w || !c.h) return 0;
+    const ratio = c.w / c.h;
+    const aspect = ratio >= 1.25 && ratio <= 1.85 ? 2 : ratio > 1 ? 1 : 0;
+    return aspect * 1e7 + Math.min(c.w * c.h, 5e6);
+  };
+  const withDims = valid.filter((c) => c.w && c.h);
+  if (withDims.length) {
+    withDims.sort((a, b) => score(b) - score(a) || a.order - b.order);
+    return withDims[0].url;
+  }
+  return valid[0].url;
 }
 
 // ---------- Ingredients ----------
@@ -298,13 +340,72 @@ export function cleanIngredientLine(raw: unknown): string {
   if (!s) return '';
   s = s
     .replace(/^[-•*·▢□☐]\s*/, '') // bullets
-    .replace(/\(\(([^)]+)\)\)/g, '($1)') // ((x)) → (x)
     .replace(/\(\s*,\s*/g, '(') // ( , x) → (x)
     .replace(/\s*,\s*\)/g, ')')
+    .replace(/\(\s+/g, '(')
+    .replace(/\s+\)/g, ')')
+    // Price annotations (Budget Bytes style): "($0.35)", "($1.20 each)", trailing "$0.50"
+    .replace(/\s*\(\s*\$\s*\d+(?:[.,]\d+)?(?:\s*(?:each|total|\/[a-z]+))?\s*\)/gi, '')
+    .replace(/\s+\$\d+(?:[.,]\d+)?\b(?!\s*[a-z])/g, '')
+    // Footnote markers "flour*" / "flour**"
+    .replace(/(\S)\*{1,3}(?=\s|$|,)/g, '$1')
     .replace(/\(\s*\)/g, '') // empty parens
     .replace(/\s+([,;.])/g, '$1') // space before punctuation
     .replace(/\s{2,}/g, ' ')
     .trim();
+  return unwrapNestedNotes(s);
+}
+
+/**
+ * WPRM (and friends) wrap the whole "notes" field in parens, so notes that themselves contain
+ * parens come out doubled: "onion ((or 2 small), sliced)", "lemon (juiced (about 3 tbsp))".
+ * Rewrite the outer wrapper into natural prose:
+ *   "1 large onion ((or 2 small onions), sliced)" → "1 large onion (or 2 small onions), sliced"
+ *   "1 lemon (juiced (about 3 tablespoons))"       → "1 lemon, juiced (about 3 tablespoons)"
+ * Only touches an outer group that contains a nested group; plain "(chopped)" is left alone.
+ */
+export function unwrapNestedNotes(input: string): string {
+  let s = input;
+  // Unbalanced source data ("6 scallions ((white portions only)"): drop the stray doubled paren.
+  const opens = (s.match(/\(/g) || []).length;
+  const closes = (s.match(/\)/g) || []).length;
+  if (opens > closes && s.includes('((')) s = s.replace('((', '(');
+  else if (closes > opens && s.includes('))')) s = s.replace(/\)\)(?!.*\)\))/, ')');
+  // Repeat for triple-nesting "((drained (Note 1)))" and multiple groups per line.
+  for (let pass = 0; pass < 3; pass++) {
+    const next = unwrapOnce(s);
+    if (next === s) break;
+    s = next;
+  }
+  return s;
+}
+
+function unwrapOnce(s: string): string {
+  // Walk top-level groups; rewrite the first one that contains a nested group.
+  let depth = 0;
+  let open = -1;
+  let hasNested = false;
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i];
+    if (c === '(') {
+      depth++;
+      if (depth === 1) {
+        open = i;
+        hasNested = false;
+      } else if (depth === 2) hasNested = true;
+    } else if (c === ')' && depth > 0) {
+      depth--;
+      if (depth === 0 && hasNested && open !== -1) {
+        const before = s.slice(0, open).replace(/\s+$/, '');
+        const inner = s.slice(open + 1, i).trim();
+        const after = s.slice(i + 1);
+        let joined: string;
+        if (inner.startsWith('(')) joined = `${before} ${inner}`; // "((or 2 small), sliced)" → "(or 2 small), sliced"
+        else joined = before.endsWith(',') || before === '' ? `${before} ${inner}` : `${before}, ${inner}`; // "(juiced (about 3 tbsp))" → ", juiced (about 3 tbsp)"
+        return (joined + after).replace(/\s{2,}/g, ' ').replace(/\s+,/g, ',').trim();
+      }
+    }
+  }
   return s;
 }
 
@@ -323,7 +424,16 @@ export function normalizeInstructions(input: unknown): Section<string>[] {
     current = { name: null, items: [] };
   };
   const addStep = (text: unknown) => {
-    const t = stripStepNumbering(cleanText(text));
+    const cleaned = cleanText(text);
+    // A single "step" that is really the whole numbered method → split it.
+    if (cleaned.length > 300) {
+      const pieces = splitNumberedBlob(cleaned);
+      if (pieces.length > 1) {
+        pieces.forEach((p) => addStep(p));
+        return;
+      }
+    }
+    const t = stripStepNumbering(cleaned);
     if (!t) return;
     // Some sites put "Ingredients: …" or a heading as a step — drop pure headers.
     if (t.length < 3) return;
@@ -391,12 +501,32 @@ export function splitInstructionString(s: string): string[] {
   text = decodeEntities(text);
   // Newlines
   let parts = text.split(/\r?\n+/).map((x) => x.trim()).filter(Boolean);
-  // "1. Do x. 2. Do y." embedded numbering
-  if (parts.length === 1) {
-    const numbered = parts[0].split(/(?:^|\s)(?=(?:step\s*)?\d{1,2}[.)]\s+[A-Z])/i).map((x) => x.trim()).filter(Boolean);
-    if (numbered.length > 1) parts = numbered;
-  }
+  // "1. Do x. 2. Do y." embedded numbering (only split where a number follows sentence punctuation
+  // or starts the string, so "add 2. 5 cups" and "Step 2. plain" don't get shredded).
+  if (parts.length === 1) parts = splitNumberedBlob(parts[0]);
   return parts;
+}
+
+/** Split "…coats the meat.2. To make the salsa… 3. Mix…" into steps when numbering is ascending. */
+export function splitNumberedBlob(text: string): string[] {
+  const re = /(?:^|(?<=[.!?:)\]"”])\s*)(?:step\s*)?(\d{1,2})[.)]\s+(?=[A-Z"“(])/gi;
+  const marks: { idx: number; n: number; len: number }[] = [];
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text))) marks.push({ idx: m.index, n: parseInt(m[1], 10), len: m[0].length });
+  if (marks.length < 2) return [text.trim()].filter(Boolean);
+  // Require ascending numbering starting at 1 (or 2 if the blob's first step lost its label).
+  const ascending = marks.every((mk, i) => (i === 0 ? mk.n <= 2 : mk.n === marks[i - 1].n + 1));
+  if (!ascending) return [text.trim()].filter(Boolean);
+  const out: string[] = [];
+  const first = text.slice(0, marks[0].idx).trim();
+  if (first) out.push(first);
+  for (let i = 0; i < marks.length; i++) {
+    const start = marks[i].idx + marks[i].len;
+    const end = i + 1 < marks.length ? marks[i + 1].idx : text.length;
+    const seg = text.slice(start, end).trim();
+    if (seg) out.push(seg);
+  }
+  return out;
 }
 
 // ---------- Author / site ----------
@@ -430,4 +560,24 @@ export function normalizeKeywords(input: unknown, extra: unknown[] = []): string
   add(input);
   extra.forEach(add);
   return out.slice(0, 15);
+}
+
+// ---------- Titles ----------
+
+/** Trim SEO suffixes/prefixes from source titles: "X Recipe by Tasty", "X Recipe - Site", "X | Site". */
+export function cleanTitle(input: unknown, siteName?: string | null): string {
+  let t = cleanText(input);
+  if (!t) return '';
+  // Split off " - Site" / " | Site" / " – Site" tails when the tail is short (a site name), never a subtitle.
+  const tail = t.match(/^(.{6,}?)\s+[-|–—:]\s+([^-|–—]{2,40})$/);
+  if (tail) {
+    const tailText = tail[2].trim();
+    const looksLikeSite = /recipe|site|kitchen|eats|food|cook|baking|by\s|\.com|\.co\b/i.test(tailText) || (siteName && tailText.toLowerCase() === siteName.toLowerCase());
+    if (looksLikeSite) t = tail[1].trim();
+  }
+  t = t.replace(/\s+recipe\s+by\s+.+$/i, '');
+  t = t.replace(/\s+\(recipe\)$/i, '');
+  t = t.replace(/\s+recipe$/i, (m) => (t.split(/\s+/).length > 2 ? '' : m));
+  t = t.replace(/[!]+$/, '');
+  return t.trim() || cleanText(input);
 }

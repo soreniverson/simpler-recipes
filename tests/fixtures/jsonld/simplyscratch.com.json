@@ -1,0 +1,310 @@
+{
+ "url": "https://www.simplyscratch.com/beet-salad-vinegret/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToSection]",
+  "img=list[str]",
+  "yield=list2:[\"12\", \"12 servings\"]",
+  "author=dict",
+  "prep=\"PT30M\" cook=\"PT50M\" total=\"PT80M\"",
+  "ing=list9",
+  "plugins=WPRM,MediavineCreate"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.simplyscratch.com/beet-salad-vinegret/#article",
+     "isPartOf": {
+      "@id": "https://www.simplyscratch.com/beet-salad-vinegret/"
+     },
+     "author": {
+      "name": "Laurie McNamara",
+      "@id": "https://www.simplyscratch.com/#/schema/person/e3575a40b7b798fa94a33dbe1ff102e9"
+     },
+     "headline": "Beet Salad (Vinegret)",
+     "datePublished": "2026-02-11T17:34:32+00:00",
+     "dateModified": "2026-02-12T15:06:13+00:00",
+     "wordCount": 1381,
+     "commentCount": 2,
+     "publisher": {
+      "@id": "https://www.simplyscratch.com/#/schema/person/e3575a40b7b798fa94a33dbe1ff102e9"
+     },
+     "image": {
+      "@id": "https://www.simplyscratch.com/beet-salad-vinegret/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.simplyscratch.com/wp-content/uploads/2026/02/DSC0442.jpg",
+     "articleSection": [
+      "chopped salad",
+      "meal prep",
+      "Recipes",
+      "Salads",
+      "Side Dishes",
+      "vegetable",
+      "vegetarian",
+      "vinaigrette"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.simplyscratch.com/beet-salad-vinegret/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.simplyscratch.com/beet-salad-vinegret/",
+     "url": "https://www.simplyscratch.com/beet-salad-vinegret/",
+     "name": "Beet Salad (Vinegret) - Simply Scratch",
+     "isPartOf": {
+      "@id": "https://www.simplyscratch.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.simplyscratch.com/beet-salad-vinegret/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.simplyscratch.com/beet-salad-vinegret/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.simplyscratch.com/wp-content/uploads/2026/02/DSC0442.jpg",
+     "datePublished": "2026-02-11T17:34:32+00:00",
+     "dateModified": "2026-02-12T15:06:13+00:00",
+     "description": "Beet Salad (Vinegret or Vinaigrette) is a popular Ukrainian (or Russian) winter salad of potatoes, beets, pickles, beans and sauerkraut.",
+     "breadcrumb": {
+      "@id": "https://www.simplyscratch.com/beet-salad-vinegret/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.simplyscratch.com/beet-salad-vinegret/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.simplyscratch.com/beet-salad-vinegret/#primaryimage",
+     "url": "https://www.simplyscratch.com/wp-content/uploads/2026/02/DSC0442.jpg",
+     "contentUrl": "https://www.simplyscratch.com/wp-content/uploads/2026/02/DSC0442.jpg",
+     "width": 1400,
+     "height": 2098,
+     "caption": "Beet Salad (Vinegret)"
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.simplyscratch.com/beet-salad-vinegret/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.simplyscratch.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Beet Salad (Vinegret)"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.simplyscratch.com/#website",
+     "url": "https://www.simplyscratch.com/",
+     "name": "Simply Scratch",
+     "description": "Delicious recipes made simply from scratch",
+     "publisher": {
+      "@id": "https://www.simplyscratch.com/#/schema/person/e3575a40b7b798fa94a33dbe1ff102e9"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.simplyscratch.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": [
+      "Person",
+      "Organization"
+     ],
+     "@id": "https://www.simplyscratch.com/#/schema/person/e3575a40b7b798fa94a33dbe1ff102e9",
+     "name": "Laurie McNamara",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.simplyscratch.com/wp-content/uploads/2020/01/simplyscratch_logo.vFINAL.png",
+      "url": "https://www.simplyscratch.com/wp-content/uploads/2020/01/simplyscratch_logo.vFINAL.png",
+      "contentUrl": "https://www.simplyscratch.com/wp-content/uploads/2020/01/simplyscratch_logo.vFINAL.png",
+      "width": 3259,
+      "height": 2948,
+      "caption": "Laurie McNamara"
+     },
+     "logo": {
+      "@id": "https://www.simplyscratch.com/wp-content/uploads/2020/01/simplyscratch_logo.vFINAL.png"
+     },
+     "sameAs": [
+      "http://www.simplyscratch.com/"
+     ]
+    },
+    {
+     "@type": "Recipe",
+     "name": "Beet Salad (Vinegret)",
+     "author": {
+      "@type": "Person",
+      "name": "Laurie McNamara"
+     },
+     "description": "Beet Salad (Vinegret or Vinaigrette) is a popular Ukrainian (and Russian) winter salad consisting mostly of potatoes, beets, pickles, beans and sauerkraut. It&#039;s slightly sweet, sour and salty and loaded with vitamins, nutrients and probiotics.Yields 12 cups but can be halved to serve less.",
+     "datePublished": "2026-02-11T12:34:32+00:00",
+     "image": [
+      "https://www.simplyscratch.com/wp-content/uploads/2026/02/DSC0442.jpg",
+      "https://www.simplyscratch.com/wp-content/uploads/2026/02/DSC0442-500x500.jpg",
+      "https://www.simplyscratch.com/wp-content/uploads/2026/02/DSC0442-500x375.jpg",
+      "https://www.simplyscratch.com/wp-content/uploads/2026/02/DSC0442-480x270.jpg"
+     ],
+     "recipeYield": [
+      "12",
+      "12 servings"
+     ],
+     "prepTime": "PT30M",
+     "cookTime": "PT50M",
+     "totalTime": "PT80M",
+     "recipeIngredient": [
+      "6 to 8 medium red beets",
+      "2 large yellow potatoes ( or yukon gold )",
+      "1 (15 ounce) can canned pink or red kidney beans (rinsed and drained)",
+      "15 (15 ounce) can canned cannellini beans (rinsed and drained)",
+      "1 (20 ounce) jar dill pickles  (or about 15 mini dill pickles)",
+      "2 cups sauerkraut (I like Bubbies brand)",
+      "1 large sweet onion (diced)",
+      "1/4 cup olive oil  (or sunflower oil, more or less to taste)",
+      "kosher salt (to taste)"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToSection",
+       "name": "ROAST THE BEETS:",
+       "itemListElement": [
+        {
+         "@type": "HowToStep",
+         "text": "Preheat your oven to 400°F (or 200°C).Trim off the leafy stems from the beets, wash and pat dry. Divide the beets onto 2 pieces of heavy duty aluminum foil (use 2 layers for regular foil). Drizzle a little olive oil over top and sprinkle with a pinch of kosher salt. Fold up and crimp the top sealing the foil pouches tightly. Place onto a rimmed baking sheet and roast on the middle rack of your preheated oven for 50 to 60 minutes.Once roasted, remove and carefully open the pouches to avoid the steam. Let cool. Once cooled, peel (or don’t – that’s up to you) and dice into 1/2-inch pieces.",
+         "name": "Preheat your oven to 400°F (or 200°C).Trim off the leafy stems from the beets, wash and pat dry. Divide the beets onto 2 pieces of heavy duty aluminum foil (use 2 layers for regular foil). Drizzle a little olive oil over top and sprinkle with a pinch of kosher salt. Fold up and crimp the top sealing the foil pouches tightly. Place onto a rimmed baking sheet and roast on the middle rack of your preheated oven for 50 to 60 minutes.Once roasted, remove and carefully open the pouches to avoid the steam. Let cool. Once cooled, peel (or don’t – that’s up to you) and dice into 1/2-inch pieces.",
+         "url": "https://www.simplyscratch.com/beet-salad-vinegret/#wprm-recipe-124770-step-0-0"
+        }
+       ]
+      },
+      {
+       "@type": "HowToSection",
+       "name": "BOIL THE POTATOES:",
+       "itemListElement": [
+        {
+         "@type": "HowToStep",
+         "text": "While the beets are in the oven, place the yellow potatoes into a pot of cold water. Bring to a boil and cook 15 minutes. You want the potatoes to be a little firm still so they won’t fall apart when tossing with the other ingredients.Once cooked, remove and let cool. Once cooled, peel (or don’t peel) and dice the potatoes into 1/2-inch pieces.",
+         "name": "While the beets are in the oven, place the yellow potatoes into a pot of cold water. Bring to a boil and cook 15 minutes. You want the potatoes to be a little firm still so they won’t fall apart when tossing with the other ingredients.Once cooked, remove and let cool. Once cooled, peel (or don’t peel) and dice the potatoes into 1/2-inch pieces.",
+         "url": "https://www.simplyscratch.com/beet-salad-vinegret/#wprm-recipe-124770-step-1-0"
+        }
+       ]
+      },
+      {
+       "@type": "HowToSection",
+       "name": "PREP AND CHOP THE REMAINING INGREDIENTS:",
+       "itemListElement": [
+        {
+         "@type": "HowToStep",
+         "text": "In the largest bowl you have, add the diced beets and potatoes, beans, sauerkraut, dill pickles and sweet onion. And pour in olive oil and any beet juice/oil from roasting and then season with a couple pinches of salt (I eyeball this). Use a rubber spatula to gently toss to combine.",
+         "name": "In the largest bowl you have, add the diced beets and potatoes, beans, sauerkraut, dill pickles and sweet onion. And pour in olive oil and any beet juice/oil from roasting and then season with a couple pinches of salt (I eyeball this). Use a rubber spatula to gently toss to combine.",
+         "url": "https://www.simplyscratch.com/beet-salad-vinegret/#wprm-recipe-124770-step-2-0"
+        },
+        {
+         "@type": "HowToStep",
+         "text": "You can serve this immediately, but it is best if refrigerated for an hour or longer.",
+         "name": "You can serve this immediately, but it is best if refrigerated for an hour or longer.",
+         "url": "https://www.simplyscratch.com/beet-salad-vinegret/#wprm-recipe-124770-step-2-1"
+        }
+       ]
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "2",
+      "reviewCount": "2"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I used to go to this health food store that was owned by a Ukrainian woman. She had a little food bar inside the store and this was one of the dishes she offered. It was my absolute favorite! The store went out of business but I never stopped thinking about that salad until I saw your post!! \r\nI just made the recipe tonight and it's absolutely delicious! Thank you so much for offering up such a great recipe!",
+       "author": {
+        "@type": "Person",
+        "name": "Wendy Diaz"
+       },
+       "datePublished": "2026-03-10"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Great recipe, something new and different is always fun to try!",
+       "author": {
+        "@type": "Person",
+        "name": "Cris"
+       },
+       "datePublished": "2026-02-13"
+      }
+     ],
+     "recipeCategory": [
+      "Salads"
+     ],
+     "recipeCuisine": [
+      "Russian",
+      "Ukrainian"
+     ],
+     "keywords": "bean, beet salad, beets, healthy recipe, high fiber, probiotic, salad, vegetarian",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "servingSize": "1 cup",
+      "calories": "196 kcal",
+      "carbohydrateContent": "32 g",
+      "proteinContent": "7 g",
+      "fatContent": "5 g",
+      "saturatedFatContent": "1 g",
+      "sodiumContent": "570 mg",
+      "fiberContent": "9 g",
+      "sugarContent": "11 g",
+      "unsaturatedFatContent": "4 g"
+     },
+     "@id": "https://www.simplyscratch.com/beet-salad-vinegret/#recipe",
+     "isPartOf": {
+      "@id": "https://www.simplyscratch.com/beet-salad-vinegret/#article"
+     },
+     "mainEntityOfPage": "https://www.simplyscratch.com/beet-salad-vinegret/"
+    }
+   ]
+  }
+ ]
+}

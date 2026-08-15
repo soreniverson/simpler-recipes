@@ -10,7 +10,9 @@ export default defineConfig({
   adapter: vercel(),
   integrations: [
     react(),
-    tailwind(),
+    // Base styles live in BaseLayout's global <style>; letting the integration inject them too
+    // compiled Tailwind twice (~57KB of CSS on every page).
+    tailwind({ applyBaseStyles: false }),
     sitemap({
       // Only crawlable, useful pages. Client-only shells and user-data pages are excluded.
       filter: (page) =>
@@ -20,6 +22,10 @@ export default defineConfig({
       lastmod: new Date(),
     }),
   ],
+  build: {
+    // The whole stylesheet is small; inlining removes a render-blocking request.
+    inlineStylesheets: 'always',
+  },
   vite: {
     ssr: {
       noExternal: ['nanoid'],

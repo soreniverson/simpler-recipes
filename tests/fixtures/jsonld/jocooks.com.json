@@ -1,0 +1,423 @@
+{
+ "url": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/",
+ "fetchedAt": "2026-08-14",
+ "variant": [
+  "roots=@graph",
+  "recipes=1",
+  "instr=list[HowToStep]",
+  "img=list[str]",
+  "yield=list1:[\"6\"]",
+  "author=dict",
+  "prep=\"PT10M\" cook=\"PT20M\" total=\"PT30M\"",
+  "ing=list10",
+  "plugins=WPRM,MediavineCreate"
+ ],
+ "jsonld": [
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Article",
+     "@id": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#article",
+     "isPartOf": {
+      "@id": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/"
+     },
+     "author": {
+      "name": "Joanna Cismaru",
+      "@id": "https://www.jocooks.com/#/schema/person/b773e7bca51cae7852c73f000e3724d0"
+     },
+     "headline": "Creamy Garlic Parmesan Mushrooms",
+     "datePublished": "2019-05-29T00:26:16+00:00",
+     "dateModified": "2023-09-11T21:51:05+00:00",
+     "wordCount": 848,
+     "commentCount": 22,
+     "publisher": {
+      "@id": "https://www.jocooks.com/#organization"
+     },
+     "image": {
+      "@id": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.jocooks.com/wp-content/uploads/2018/03/creamy-garlic-parmesan-mushrooms-1-10.jpg",
+     "keywords": [
+      "garlic",
+      "heavy cream",
+      "mushrooms",
+      "parmesan cheese"
+     ],
+     "articleSection": [
+      "30 Minutes or Less",
+      "American",
+      "Dinner",
+      "Lunch",
+      "Mushrooms",
+      "One Pot",
+      "Recipes",
+      "Side Dishes",
+      "Vegetarian"
+     ],
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "CommentAction",
+       "name": "Comment",
+       "target": [
+        "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#respond"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "WebPage",
+     "@id": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/",
+     "url": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/",
+     "name": "Creamy Garlic Parmesan Mushrooms - Jo Cooks",
+     "isPartOf": {
+      "@id": "https://www.jocooks.com/#website"
+     },
+     "primaryImageOfPage": {
+      "@id": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#primaryimage"
+     },
+     "image": {
+      "@id": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#primaryimage"
+     },
+     "thumbnailUrl": "https://www.jocooks.com/wp-content/uploads/2018/03/creamy-garlic-parmesan-mushrooms-1-10.jpg",
+     "datePublished": "2019-05-29T00:26:16+00:00",
+     "dateModified": "2023-09-11T21:51:05+00:00",
+     "description": "These Creamy Garlic Parmesan Mushrooms are sautéed in butter and garlic until perfectly browned, then tossed in a super easy creamy Parmesan sauce.",
+     "breadcrumb": {
+      "@id": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#breadcrumb"
+     },
+     "inLanguage": "en-US",
+     "potentialAction": [
+      {
+       "@type": "ReadAction",
+       "target": [
+        "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/"
+       ]
+      }
+     ]
+    },
+    {
+     "@type": "ImageObject",
+     "inLanguage": "en-US",
+     "@id": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#primaryimage",
+     "url": "https://www.jocooks.com/wp-content/uploads/2018/03/creamy-garlic-parmesan-mushrooms-1-10.jpg",
+     "contentUrl": "https://www.jocooks.com/wp-content/uploads/2018/03/creamy-garlic-parmesan-mushrooms-1-10.jpg",
+     "width": 640,
+     "height": 896,
+     "caption": "side view shot of creamy garlic mushrooms in a skillet"
+    },
+    {
+     "@type": "BreadcrumbList",
+     "@id": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#breadcrumb",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.jocooks.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Recipes",
+       "item": "https://www.jocooks.com/category/recipes/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Creamy Garlic Parmesan Mushrooms"
+      }
+     ]
+    },
+    {
+     "@type": "WebSite",
+     "@id": "https://www.jocooks.com/#website",
+     "url": "https://www.jocooks.com/",
+     "name": "Jo Cooks",
+     "description": "Simple - Easy - Comfort",
+     "publisher": {
+      "@id": "https://www.jocooks.com/#organization"
+     },
+     "potentialAction": [
+      {
+       "@type": "SearchAction",
+       "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.jocooks.com/?s={search_term_string}"
+       },
+       "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+       }
+      }
+     ],
+     "inLanguage": "en-US"
+    },
+    {
+     "@type": "Organization",
+     "@id": "https://www.jocooks.com/#organization",
+     "name": "Jo Cooks",
+     "url": "https://www.jocooks.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.jocooks.com/#/schema/logo/image/",
+      "url": "https://www.jocooks.com/wp-content/uploads/2020/10/jocooks-round-logo.jpg",
+      "contentUrl": "https://www.jocooks.com/wp-content/uploads/2020/10/jocooks-round-logo.jpg",
+      "width": 300,
+      "height": 300,
+      "caption": "Jo Cooks"
+     },
+     "image": {
+      "@id": "https://www.jocooks.com/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/JoCooksRecipes",
+      "https://x.com/jocooks_com",
+      "https://www.instagram.com/jocooks/",
+      "http://www.pinterest.com/jocooks",
+      "https://www.youtube.com/c/JoCismaru"
+     ]
+    },
+    {
+     "@type": "Person",
+     "@id": "https://www.jocooks.com/#/schema/person/b773e7bca51cae7852c73f000e3724d0",
+     "name": "Joanna Cismaru",
+     "image": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://www.jocooks.com/wp-content/uploads/2022/11/joanna-cismaru-headshot-96x96.jpeg",
+      "url": "https://www.jocooks.com/wp-content/uploads/2022/11/joanna-cismaru-headshot-96x96.jpeg",
+      "contentUrl": "https://www.jocooks.com/wp-content/uploads/2022/11/joanna-cismaru-headshot-96x96.jpeg",
+      "caption": "Joanna Cismaru"
+     },
+     "description": "I'm Joanna Cismaru, home cook, recipe developer, and the person behind JoCooks since 2011. I test every recipe in my own kitchen, multiple times, until it's actually worth making. My goal is simple: recipes that work, written the way a real person cooks.",
+     "sameAs": [
+      "https://www.jocooks.com/about/",
+      "https://x.com/jocooks_com"
+     ],
+     "url": "https://www.jocooks.com/author/jo/"
+    },
+    {
+     "@type": "Recipe",
+     "name": "Creamy Garlic Parmesan Mushrooms",
+     "author": {
+      "@id": "https://www.jocooks.com/#/schema/person/b773e7bca51cae7852c73f000e3724d0"
+     },
+     "description": "These Creamy Garlic Parmesan Mushrooms are sautéed in butter and garlic until perfectly browned, then tossed in a super easy creamy Parmesan sauce that only requires 2 ingredients!",
+     "datePublished": "2019-05-28T18:26:16+00:00",
+     "image": [
+      "https://www.jocooks.com/wp-content/uploads/2018/03/creamy-garlic-parmesan-mushrooms-1-10.jpg",
+      "https://www.jocooks.com/wp-content/uploads/2018/03/creamy-garlic-parmesan-mushrooms-1-10-500x500.jpg",
+      "https://www.jocooks.com/wp-content/uploads/2018/03/creamy-garlic-parmesan-mushrooms-1-10-500x375.jpg",
+      "https://www.jocooks.com/wp-content/uploads/2018/03/creamy-garlic-parmesan-mushrooms-1-10-480x270.jpg"
+     ],
+     "video": {
+      "name": "Creamy Garlic Parmesan Mushrooms",
+      "description": "These Creamy Garlic Parmesan Mushrooms are sautéed in butter and garlic until perfectly browned, then tossed in a super easy creamy Parmesan sauce that only requires 2 ingredients.",
+      "thumbnailUrl": "https://content.jwplatform.com/thumbs/FHaJfLpD-720.jpg",
+      "contentUrl": "https://content.jwplatform.com/videos/FHaJfLpD.mp4",
+      "uploadDate": "2018-04-05T17:14:19.000Z",
+      "@type": "VideoObject"
+     },
+     "recipeYield": [
+      "6"
+     ],
+     "prepTime": "PT10M",
+     "cookTime": "PT20M",
+     "totalTime": "PT30M",
+     "recipeIngredient": [
+      "3 tablespoon butter (unsalted)",
+      "2 tablespoon olive oil",
+      "2 pounds cremini mushrooms (cleaned and cut in half)",
+      "¼ teaspoon salt (or to taste)",
+      "½ teaspoon pepper (or to taste)",
+      "3 cloves garlic (minced)",
+      "1 ½ cups heavy cream",
+      "½ cup Parmesan cheese (freshly grated)",
+      "2 tablespoon parsley (fresh, chopped)",
+      "¼ cup Parmesan cheese (freshly grated)"
+     ],
+     "recipeInstructions": [
+      {
+       "@type": "HowToStep",
+       "text": "In a large skillet&nbsp;add the butter and olive oil and cook over medium-high heat until butter has melted.",
+       "name": "In a large skillet&nbsp;add the butter and olive oil and cook over medium-high heat until butter has melted.",
+       "url": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#wprm-recipe-16264-step-0-0"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add the cremini mushrooms, season with salt and pepper and saute until they start to brown and are tender. I like my mushrooms really browned so I sautéed mine for about 15 minutes.",
+       "name": "Add the cremini mushrooms, season with salt and pepper and saute until they start to brown and are tender. I like my mushrooms really browned so I sautéed mine for about 15 minutes.",
+       "url": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#wprm-recipe-16264-step-0-1"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Add the garlic and cook for another 30 seconds until it becomes aromatic. Stir in the heavy cream and Parmesan cheese and cook until the sauce is bubbly. It will thicken up a bit. Taste for seasoning and adjust as necessary.",
+       "name": "Add the garlic and cook for another 30 seconds until it becomes aromatic. Stir in the heavy cream and Parmesan cheese and cook until the sauce is bubbly. It will thicken up a bit. Taste for seasoning and adjust as necessary.",
+       "url": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#wprm-recipe-16264-step-0-2"
+      },
+      {
+       "@type": "HowToStep",
+       "text": "Garnish with parsley and more parmesan cheese and serve immediately. You could serve this over pasta or as a side dish.",
+       "name": "Garnish with parsley and more parmesan cheese and serve immediately. You could serve this over pasta or as a side dish.",
+       "url": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#wprm-recipe-16264-step-0-3"
+      }
+     ],
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.72",
+      "ratingCount": "25",
+      "reviewCount": "9"
+     },
+     "review": [
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I made this the lazy way - mostly canned mushrooms, minced garlic, parsley, grated parm all from the store rather than doing that myself and my wife and I agree it was delicious!",
+       "author": {
+        "@type": "Person",
+        "name": "Jules Mermelstein"
+       },
+       "datePublished": "2024-12-31"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I made this recipe and it DID NOT DISAPPOINT!  It was better than any restaurant I have ever been to.  So Good!!!",
+       "author": {
+        "@type": "Person",
+        "name": "Jo Mack"
+       },
+       "datePublished": "2021-08-23"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+       },
+       "reviewBody": "Really tasty. I switched the cream for half and half and I added a touch of dried tarragon at the very end for a touch of mild sweet to brighten the dish a bit",
+       "author": {
+        "@type": "Person",
+        "name": "Pamela J Dale"
+       },
+       "datePublished": "2019-12-22"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "We absolutely love this dish and tonight I am going to teach my husband to make it!",
+       "author": {
+        "@type": "Person",
+        "name": "Mary"
+       },
+       "datePublished": "2019-10-31"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "Wonderful!!!  My husband and I love this recipe. I used the white mushrooms. May try others next time.  I KNOW I will be making again.",
+       "author": {
+        "@type": "Person",
+        "name": "Cindy S"
+       },
+       "datePublished": "2019-04-01"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I made this tonight and holy cow is it good!  So creamy and mushroomy.  I had 1/2 &amp; 1/2 on hand so that is what I used and I also sautéed shallots with the shrooms and garlic. It was a really nice additions!  I’m having it over pasta tonight, but the viewers mentioning pouring it over toast makes me look forward to breakfast!  I’m going to scramble an egg for the toast and smother it is fungi goodness.  Bon a petit!",
+       "author": {
+        "@type": "Person",
+        "name": "KKay"
+       },
+       "datePublished": "2018-07-03"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "I sauteed fresh sliced mushrooms with fresh garlic, in a olive oil/sea salt  butter blend with added extra virgin olive oil. I then combined half and half with Kraft grated parmesan  cheese and sauteed till blended and thickened . Inspired by another commenter, I spread the mushroom concoction on toasted honey wheat bread.  This dish was easy, filling and delicious. Can't wait to make again and serve with pasta and some kind of meat.",
+       "author": {
+        "@type": "Person",
+        "name": "Holly S."
+       },
+       "datePublished": "2018-03-19"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "SO GOOD",
+       "author": {
+        "@type": "Person",
+        "name": "Annette"
+       },
+       "datePublished": "2018-03-13"
+      },
+      {
+       "@type": "Review",
+       "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+       },
+       "reviewBody": "This is very good. We had ours with steak.  Wonderful",
+       "author": {
+        "@type": "Person",
+        "name": "Annette"
+       },
+       "datePublished": "2018-03-13"
+      }
+     ],
+     "recipeCategory": [
+      "Lunch",
+      "Main Course"
+     ],
+     "recipeCuisine": [
+      "American"
+     ],
+     "keywords": "30 minute meals, garlic, mushrooms",
+     "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "382 kcal",
+      "carbohydrateContent": "9 g",
+      "proteinContent": "9 g",
+      "fatContent": "35 g",
+      "saturatedFatContent": "20 g",
+      "cholesterolContent": "105 mg",
+      "sodiumContent": "330 mg",
+      "sugarContent": "2 g",
+      "servingSize": "1 serving"
+     },
+     "@id": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#recipe",
+     "isPartOf": {
+      "@id": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/#article"
+     },
+     "mainEntityOfPage": "https://www.jocooks.com/recipes/creamy-garlic-parmesan-mushrooms/"
+    }
+   ]
+  }
+ ]
+}

@@ -175,7 +175,7 @@ describe('ingredients', () => {
     expect(groupIngredients(['a', 'b'])).toEqual([{ name: null, items: ['a', 'b'] }]);
   });
   it('cleans ingredient lines', () => {
-    expect(cleanIngredientLine('400 g / 14 oz artichoke hearts in brine ((drained (Note 1)))')).toBe('400 g / 14 oz artichoke hearts in brine (drained (Note 1))');
+    expect(cleanIngredientLine('400 g / 14 oz artichoke hearts in brine ((drained (Note 1)))')).toBe('400 g / 14 oz artichoke hearts in brine, drained (Note 1)');
     expect(cleanIngredientLine('1 cup ( , chopped)')).toBe('1 cup (chopped)');
     expect(cleanIngredientLine('- 2 eggs')).toBe('2 eggs');
     expect(cleanIngredientLine('▢ 1 tsp salt')).toBe('1 tsp salt');
@@ -240,5 +240,60 @@ describe('author & keywords', () => {
     expect(normalizeKeywords('Chicken, Dinner , chicken', ['Quick'])).toEqual(['chicken', 'dinner', 'quick']);
     expect(normalizeKeywords(['a', 'b'])).toEqual(['a', 'b']);
     expect(normalizeKeywords(null)).toEqual([]);
+  });
+});
+
+import { splitNumberedBlob, cleanTitle } from '../src/lib/recipe/normalize';
+
+describe('round 2 fixes from corpus audit', () => {
+  it('cleans WPRM nested parens and price annotations', () => {
+    expect(cleanIngredientLine('500g chicken thigh ((boneless, skinless), cut into 3cm / 2.2" cubes (Note 1))')).toBe('500g chicken thigh (boneless, skinless), cut into 3cm / 2.2" cubes (Note 1)');
+    expect(cleanIngredientLine('2 cloves garlic (, minced (~1.5 tbsp))')).toBe('2 cloves garlic, minced (~1.5 tbsp)');
+    expect(cleanIngredientLine('1 large onion ((or 2 small onions), sliced)')).toBe('1 large onion (or 2 small onions), sliced');
+    expect(cleanIngredientLine('1 lemon (juiced (about 3 tablespoons))')).toBe('1 lemon, juiced (about 3 tablespoons)');
+    expect(cleanIngredientLine('Parsley (chopped (optional))')).toBe('Parsley, chopped (optional)');
+    expect(cleanIngredientLine('2 pounds boneless chicken thighs, (cut into 1" pieces (or breasts))')).toBe('2 pounds boneless chicken thighs, cut into 1" pieces (or breasts)');
+    expect(cleanIngredientLine('1 cup (240ml) milk')).toBe('1 cup (240ml) milk');
+    expect(cleanIngredientLine('1 lemon (juiced)')).toBe('1 lemon (juiced)');
+    expect(cleanIngredientLine('1 Tbsp olive oil ($0.13)')).toBe('1 Tbsp olive oil');
+    expect(cleanIngredientLine('1 15oz. can black beans ($1.00 each)')).toBe('1 15oz. can black beans');
+    expect(cleanIngredientLine('2 cups flour*')).toBe('2 cups flour');
+    expect(cleanIngredientLine('1 tsp cornstarch**, optional')).toBe('1 tsp cornstarch, optional');
+  });
+  it('picks yield count next to the serving word and keeps "Makes 16"', () => {
+    expect(normalizeYield('1 loaf, 10 servings')).toEqual({ text: '1 loaf, 10 servings', count: 10 });
+    expect(normalizeYield('2 cups (8 servings)')).toEqual({ text: '2 cups (8 servings)', count: 8 });
+    expect(normalizeYield('Makes 16')).toEqual({ text: 'Makes 16', count: 16 });
+    expect(normalizeYield('4 personnes')).toEqual({ text: '4 personnes', count: 4 });
+  });
+  it('picks a landscape image over the 1:1 first candidate', () => {
+    expect(normalizeImage(['https://x.com/a-500x500.jpg', 'https://x.com/a-500x375.jpg', 'https://x.com/a-480x270.jpg'])).toBe('https://x.com/a-500x375.jpg');
+    expect(normalizeImage([{ url: 'https://x.com/sq.jpg', width: 500, height: 500 }, { url: 'https://x.com/wide.jpg', width: 1200, height: 800 }])).toBe('https://x.com/wide.jpg');
+    expect(normalizeImage(['https://x.com/a.jpg', 'https://x.com/b.jpg'])).toBe('https://x.com/a.jpg');
+  });
+  it('splits a single numbered blob into steps but leaves prose alone', () => {
+    expect(splitNumberedBlob('Season the meat until it coats the meat.2. To make the salsa verde, blend. 3. Mix the avocado in.')).toEqual([
+      'Season the meat until it coats the meat.',
+      'To make the salsa verde, blend.',
+      'Mix the avocado in.',
+    ]);
+    expect(splitNumberedBlob('Add 2. 5 cups sugar and bake for 20. Serve warm.')).toEqual(['Add 2. 5 cups sugar and bake for 20. Serve warm.']);
+    expect(normalizeInstructions('Step 2. plain string')).toEqual([{ name: null, items: ['plain string'] }]);
+    const blob = 'Heat oil in a big pan and brown the meat on all sides, working in batches so it sears rather than steams; set aside on a plate while you make the base. 2. Add onions and cook until soft, then garlic for a minute more, scraping the pan. 3. Return the meat, add stock, and simmer gently for two hours until tender, topping up liquid as needed and stirring now and then so nothing catches on the bottom of the pan at all during that time period ok. 4. Serve.';
+    expect(normalizeInstructions([{ '@type': 'HowToStep', text: blob }])[0].items).toHaveLength(4);
+  });
+  it('handles Duration objects', () => {
+    expect(durationToMinutes({ '@type': 'Duration', minValue: 'PT45M', maxValue: 'PT70M' })).toBe(45);
+    expect(durationToMinutes({ value: 30 })).toBe(30);
+    expect(durationToMinutes(['PT20M'])).toBe(20);
+  });
+  it('cleans SEO titles', () => {
+    expect(cleanTitle('Creamy Tuscan Chicken Recipe by Tasty')).toBe('Creamy Tuscan Chicken');
+    expect(cleanTitle('Kung Pao Chicken Recipe - Chinese Restaurant Quality')).toBe('Kung Pao Chicken Recipe - Chinese Restaurant Quality');
+    expect(cleanTitle('Homemade Bread Recipe')).toBe('Homemade Bread');
+    expect(cleanTitle('JUICY Pesto Pasta!')).toBe('JUICY Pesto Pasta');
+    expect(cleanTitle('Banana Bread - Simply Recipes', 'Simply Recipes')).toBe('Banana Bread');
+    expect(cleanTitle('Salt - Fat - Acid - Heat')).toBe('Salt - Fat - Acid - Heat');
+    expect(cleanTitle('Pad Thai')).toBe('Pad Thai');
   });
 });

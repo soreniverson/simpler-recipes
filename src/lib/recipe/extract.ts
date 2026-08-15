@@ -26,7 +26,8 @@ export function extractRecipeFromHtml(html: string, pageUrl?: string, opts: Extr
   let method: ExtractionOutcome['method'] = 'jsonld';
 
   // Fill gaps / fallbacks need the DOM. Only parse when needed (JSON-LD covers ~90%).
-  const needsDom = !recipe || !recipe.image || !recipe.siteName;
+  const incomplete = !!recipe && (!recipe.instructions.length || !recipe.ingredients.length);
+  const needsDom = !recipe || incomplete || !recipe.image || !recipe.siteName;
   if (needsDom) {
     let doc: ReturnType<typeof parseHtml> | null = null;
     try {
@@ -43,6 +44,23 @@ export function extractRecipeFromHtml(html: string, pageUrl?: string, opts: Extr
       if (!recipe && allowHeuristics) {
         recipe = extractRecipeFromStructure(doc, pageUrl, meta);
         method = 'html';
+      }
+      // Structured data present but half-empty (e.g. `recipeInstructions: []`): borrow the missing
+      // half from the page's own markup when it's clearly there.
+      if (recipe && incomplete && allowHeuristics) {
+        const fromDom = extractRecipeFromMicrodata(doc, pageUrl) ?? extractRecipeFromStructure(doc, pageUrl, meta, { allowPartial: true });
+        if (fromDom) {
+          if (!recipe.instructions.length && fromDom.instructions.length) {
+            recipe.instructions = fromDom.instructions;
+            if (fromDom.instructionGroups) recipe.instructionGroups = fromDom.instructionGroups;
+            else delete recipe.instructionGroups;
+          }
+          if (!recipe.ingredients.length && fromDom.ingredients.length) {
+            recipe.ingredients = fromDom.ingredients;
+            if (fromDom.ingredientGroups) recipe.ingredientGroups = fromDom.ingredientGroups;
+            else delete recipe.ingredientGroups;
+          }
+        }
       }
       if (recipe) {
         if (!recipe.image && meta.ogImage) recipe.image = meta.ogImage;
