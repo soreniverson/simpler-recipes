@@ -60,7 +60,7 @@ export default function Ingredients({
   let flat = 0;
 
   return (
-    <div className={compact ? '' : 'lg:bg-sand-50 lg:rounded-2xl lg:border lg:border-sand-200 lg:p-5'}>
+    <div data-ingredients className={compact ? '' : 'lg:bg-sand-50 lg:rounded-2xl lg:border lg:border-sand-200 lg:p-5'}>
       <div className="flex items-baseline justify-between gap-3 mb-3">
         <h2 id="ingredients-heading" className="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500">
           Ingredients{' '}

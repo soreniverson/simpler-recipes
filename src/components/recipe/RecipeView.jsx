@@ -139,7 +139,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
   const cookProgress = state.currentStep > 0 && state.currentStep < recipe.instructions.length - 1;
 
   return (
-    <article className="max-w-[1080px] mx-auto px-4 sm:px-6 py-4 sm:py-8" itemScope={undefined}>
+    <article data-recipe-view className="max-w-[1080px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
       {/* ---------- Header ---------- */}
       <header className="mb-7 sm:mb-9 lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 lg:items-start">
         {image && !imgFailed && (
@@ -162,7 +162,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
           <h1 className="text-[26px] sm:text-[32px] leading-[1.15] font-semibold tracking-[-0.015em] text-sand-900 [text-wrap:balance]">{recipe.title}</h1>
 
           {(meta.length > 0 || times.total) && (
-            <p className="mt-2 text-[14px] sm:text-[15px] text-sand-600 tabular flex flex-wrap gap-x-2 gap-y-1">
+            <p data-meta className="mt-2 text-[14px] sm:text-[15px] text-sand-600 tabular flex flex-wrap gap-x-2 gap-y-1">
               {meta.map((m, i) => (
                 <span key={i} className="inline-flex items-center gap-2">
                   {i > 0 && <span className="text-sand-400" aria-hidden="true">·</span>}
@@ -216,7 +216,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
       </header>
 
       {/* ---------- Body ---------- */}
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 lg:items-start">
+      <div data-body className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 lg:items-start">
         <aside className="lg:col-start-2 lg:row-start-1 lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:overscroll-contain mb-8 lg:mb-0 print:mb-4" aria-labelledby="ingredients-heading">
           <Ingredients
             recipe={recipe}
@@ -260,7 +260,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
 
       {/* Print-only source line */}
       {src.url && (
-        <p className="hidden print:block mt-6 text-[11pt] text-sand-700">
+        <p className="hidden print-source text-sand-700">
           Source: {src.name} — {src.url}
         </p>
       )}
