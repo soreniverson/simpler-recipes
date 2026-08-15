@@ -1,8 +1,6 @@
 import { useMemo, useState, useEffect, useCallback } from 'react';
-import { scaleIngredientLines } from '../../lib/recipe/scale';
-import { formatFraction } from '../../utils/formatFraction';
 import { isMetric } from '../../utils/settings';
-import { convertIngredients } from '../../utils/measurements';
+import { preparedIngredientLines } from '../../lib/recipe/prepared';
 import { ingredientGroups, servingsCount, ingredientsAsText } from '../../lib/recipe/display';
 import { CheckIcon, CopyIcon, MinusIcon, PlusIcon, RotateIcon } from './Icons';
 
@@ -34,13 +32,7 @@ export default function Ingredients({
     return () => window.removeEventListener('settings-changed', onChange);
   }, []);
 
-  const lines = useMemo(() => {
-    let out = recipe.ingredients;
-    if (isScaled) out = scaleIngredientLines(out, baseServings, current);
-    out = out.map(formatFraction);
-    if (useMetric) out = convertIngredients(out, true);
-    return out;
-  }, [recipe.ingredients, isScaled, baseServings, current, useMetric]);
+  const lines = useMemo(() => preparedIngredientLines(recipe, current, useMetric), [recipe, current, useMetric]);
 
   const groups = ingredientGroups(recipe);
   const total = recipe.ingredients.length;
@@ -134,7 +126,7 @@ export default function Ingredients({
                       <span
                         aria-hidden="true"
                         className={`mt-[3px] shrink-0 w-[20px] h-[20px] rounded-[6px] border flex items-center justify-center transition-colors peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-sand-700 ${
-                          done ? 'bg-sand-800 border-sand-800 text-sand-50' : 'border-sand-400 bg-sand-50 group-hover:border-sand-600'
+                          done ? 'bg-sand-800 border-sand-800 text-sand-50' : 'border-sand-500 bg-sand-50 group-hover:border-sand-700'
                         }`}
                       >
                         {done && <CheckIcon className="w-3.5 h-3.5" />}

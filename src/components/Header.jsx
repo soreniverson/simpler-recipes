@@ -32,7 +32,8 @@ export default function Header({ showSearch = true }) {
   const [metric, setMetric] = useState(false);
   const [theme, setTheme] = useState('system');
   const menuRef = useRef(null);
-  const menuBtnRef = useRef(null);
+  const menuBtnRef = useRef(null); // desktop trigger
+  const mobileBtnRef = useRef(null); // phone trigger (separately rendered)
   const { isAuthenticated, loading: authLoading, signOut } = useAuth();
 
   useEffect(() => {
@@ -54,12 +55,12 @@ export default function Header({ showSearch = true }) {
   useEffect(() => {
     if (!menuOpen) return;
     const onDown = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target) && !menuBtnRef.current?.contains(e.target)) setMenuOpen(false);
+      if (menuRef.current && !menuRef.current.contains(e.target) && !menuBtnRef.current?.contains(e.target) && !mobileBtnRef.current?.contains(e.target)) setMenuOpen(false);
     };
     const onKey = (e) => {
       if (e.key === 'Escape') {
         setMenuOpen(false);
-        menuBtnRef.current?.focus();
+        (menuBtnRef.current?.offsetParent ? menuBtnRef.current : mobileBtnRef.current)?.focus();
       }
     };
     document.addEventListener('mousedown', onDown);
@@ -137,7 +138,7 @@ export default function Header({ showSearch = true }) {
                 {mobileSearch ? <CloseIcon /> : <SearchIcon />}
               </button>
             )}
-            <button ref={menuBtnRef} type="button" onClick={() => { toggleMenu(); setMobileSearch(false); }} className="btn-icon" aria-label="Menu" aria-expanded={menuOpen} aria-controls="mobile-menu">
+            <button ref={mobileBtnRef} type="button" onClick={() => { toggleMenu(); setMobileSearch(false); }} className="btn-icon" aria-label="Menu" aria-expanded={menuOpen} aria-controls="mobile-menu">
               {menuOpen ? <CloseIcon /> : <MenuIcon />}
             </button>
           </div>

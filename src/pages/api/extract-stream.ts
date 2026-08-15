@@ -79,7 +79,7 @@ function describeFetchError(err: SafeFetchError, hostname: string): UserFacingEr
       return { code: 'too-large', error: 'That page is too large to read.', hint: 'Try the direct link to the recipe.' };
     case 'http-error': {
       const status = err.status ?? 0;
-      if (status === 404 || status === 410) return { code: 'not-found', status, error: "That page doesn't exist anymore.", hint: 'Check the link, or search for the recipe on the site.' };
+      if (status === 404 || status === 410) return { code: 'not-found', status, error: `We couldn't find that page on ${hostname} (${status}).`, hint: 'Check the link, or search for the recipe on the site.' };
       if (status === 401 || status === 403 || status === 429 || status === 451 || status === 503) {
         return { code: 'blocked-by-site', status, error: `${hostname} won't let us read that page.`, hint: 'Some sites block automated readers. You can still open the original.' };
       }

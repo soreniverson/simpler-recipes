@@ -42,11 +42,12 @@ export default function Instructions({ recipe, done, onToggle, onCookMode }) {
                         onClick={() => onToggle(index)}
                         aria-pressed={isDone}
                         aria-label={`Step ${index + 1}${isDone ? ', done' : ''}`}
-                        className={`shrink-0 mt-[1px] w-7 h-7 -ml-1 rounded-full flex items-center justify-center text-[15px] font-medium tabular transition-colors no-print-bg ${
+                        className={`shrink-0 -mt-[2px] w-8 h-8 -ml-1.5 rounded-full flex items-center justify-center text-[15px] font-medium tabular transition-colors ${
                           isDone ? 'bg-sand-800 text-sand-50' : 'text-sand-900 hover:bg-sand-100'
                         }`}
                       >
-                        {isDone ? <CheckIcon className="w-4 h-4" /> : index + 1}
+                        {isDone ? <CheckIcon className="w-4 h-4 print:hidden" /> : null}
+                        <span className={isDone ? 'hidden print:inline' : ''}>{index + 1}</span>
                       </button>
                       <p className={`max-w-[64ch] text-[17px] leading-[1.55] ${isDone ? 'text-sand-500' : 'text-sand-800'}`}>{step}</p>
                     </li>

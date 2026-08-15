@@ -156,7 +156,14 @@ export default function CookMode({ recipe, currentStep, onStepChange, checkedIng
     else if (dx > 0 && !isFirst) go(step - 1);
   };
 
+  // Done sits where Next was: ignore taps in the first 500ms after arriving on the last step so a
+  // fast Next-Next-Next doesn't exit Cook Mode by accident.
+  const arrivedLast = useRef(0);
+  useEffect(() => {
+    if (isLast) arrivedLast.current = Date.now();
+  }, [isLast]);
   const finish = () => {
+    if (Date.now() - arrivedLast.current < 500) return;
     onStepDone?.(step);
     onClose();
   };
@@ -168,7 +175,7 @@ export default function CookMode({ recipe, currentStep, onStepChange, checkedIng
       aria-modal="true"
       aria-labelledby="cook-mode-title"
       tabIndex={-1}
-      className="fixed inset-0 z-[60] bg-background text-sand-900 flex flex-col outline-none"
+      className="fixed inset-0 z-[60] bg-background text-sand-900 flex flex-col outline-none print:hidden"
       style={{ paddingTop: 'env(safe-area-inset-top)', paddingBottom: 'env(safe-area-inset-bottom)' }}
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
@@ -207,7 +214,7 @@ export default function CookMode({ recipe, currentStep, onStepChange, checkedIng
       <main className="flex-1 min-h-0 overflow-y-auto px-6 sm:px-10 py-6 flex flex-col">
         {/* my-auto (not items-center) so long steps scroll from the top instead of clipping. */}
         <div className={`w-full mx-auto my-auto ${long ? 'max-w-[34ch] sm:max-w-[40ch]' : 'max-w-[28ch] sm:max-w-[30ch]'}`}>
-          <p key={step} className={`${long ? 'text-[22px] sm:text-[26px] lg:text-[30px] leading-[1.35]' : 'text-[30px] sm:text-[34px] lg:text-[38px] leading-[1.28]'} text-sand-900 [text-wrap:pretty]`}>
+          <p key={step} className={`${long ? 'text-[22px] sm:text-[26px] lg:text-[30px] leading-[1.35]' : 'text-[30px] sm:text-[34px] lg:text-[38px] leading-[1.28]'} text-sand-900 [text-wrap:pretty] break-words [overflow-wrap:anywhere]`}>
             {text}
           </p>
           {timers.length > 0 && (

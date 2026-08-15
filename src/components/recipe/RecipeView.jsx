@@ -3,8 +3,9 @@ import Ingredients from './Ingredients';
 import Instructions from './Instructions';
 import CookMode from './CookMode';
 import { TimerBar, TimerAlarm } from './Timers';
+import { preparedIngredientLines } from '../../lib/recipe/prepared';
 import { getCookState, toggleIngredient, toggleStep, setCookState, COOK_STATE_EVENT } from '../../lib/cookState';
-import { metaLine, sourceInfo, recipeAsText, displayTimes, displayServings } from '../../lib/recipe/display';
+import { metaLine, sourceInfo, recipeAsText, displayTimes, displayServings, servingsCount } from '../../lib/recipe/display';
 import { safeImageSrc } from '../../lib/recipe/href';
 import { isFavorite, toggleFavorite, getExtractedFavorites, addExtractedFavorite, removeExtractedFavorite } from '../../utils/favorites';
 import { PlayIcon, HeartIcon, ShareIcon, PrintIcon, CopyIcon, ExternalIcon, SparklesIcon, ImagePlaceholderIcon } from './Icons';
@@ -126,8 +127,15 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
           setShareState('copied');
         }
       } else {
-        await navigator.clipboard.writeText(url);
-        setShareState('copied');
+        try {
+          await navigator.clipboard.writeText(url);
+          setShareState('copied');
+        } catch {
+          // Clipboard blocked (permissions, insecure context): don't lose the link — show it.
+          setShareUrl(url);
+          setShareState('shown');
+          return;
+        }
       }
     } catch {
       setShareState('error');
@@ -135,16 +143,25 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
     clearTimeout(shareTimeout.current);
     shareTimeout.current = setTimeout(() => setShareState('idle'), 2200);
   }, [variant, recipe, shareId, src.url]);
+  const [shareUrl, setShareUrl] = useState(null);
 
   // ---- copy ----
   const [copied, setCopied] = useState(false);
   const onCopy = useCallback(async () => {
     try {
-      await navigator.clipboard.writeText(recipeAsText(recipe, src.url));
+      // Copy what's on screen: scaled + unit-converted lines, with the chosen servings.
+      const base = servingsCount(recipe);
+      const cur = state.servings ?? base;
+      const scaled = base != null && cur != null && cur !== base;
+      const text = recipeAsText(recipe, src.url, {
+        ingredientLines: preparedIngredientLines(recipe, cur),
+        servingsLabel: scaled ? `${cur} servings` : null,
+      });
+      await navigator.clipboard.writeText(text);
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
     } catch {}
-  }, [recipe, src.url]);
+  }, [recipe, src.url, state.servings]);
 
   const onPrint = useCallback(() => window.print(), []);
 
@@ -157,7 +174,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
       {/* ---------- Header ---------- */}
       <header className="mb-7 sm:mb-9 lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 lg:items-start">
         {image && !imgFailed && (
-          <div className="-mx-4 sm:mx-0 mb-5 lg:mb-0 lg:order-2 sm:rounded-2xl overflow-hidden bg-sand-100 aspect-[16/10] max-h-[240px] sm:max-h-[360px] lg:max-h-none lg:aspect-[4/3] print:hidden">
+          <div className="-mx-4 sm:mx-0 mb-5 lg:mb-0 lg:order-2 sm:rounded-2xl overflow-hidden bg-sand-100 aspect-[16/10] max-h-[240px] sm:max-h-[360px] lg:max-h-none lg:aspect-[16/10] print:hidden">
             <img
               src={image}
               alt=""
@@ -215,7 +232,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
             </button>
             <button type="button" onClick={onShare} className="btn-ghost" disabled={shareState === 'working'} aria-live="polite">
               <ShareIcon className="w-[18px] h-[18px]" />
-              {shareState === 'copied' ? 'Link copied' : shareState === 'error' ? 'Couldn’t share' : shareState === 'working' ? 'Sharing…' : 'Share'}
+              {shareState === 'copied' ? 'Link copied' : shareState === 'error' ? 'Couldn’t share' : shareState === 'working' ? 'Sharing…' : shareState === 'shown' ? 'Link ready' : 'Share'}
             </button>
             <button type="button" onClick={onPrint} className="btn-ghost hidden sm:inline-flex">
               <PrintIcon className="w-[18px] h-[18px]" />
@@ -226,12 +243,27 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
               {copied ? 'Copied' : 'Copy'}
             </button>
           </div>
+          {shareState === 'shown' && shareUrl && (
+            <div className="mt-3 flex items-center gap-2 max-w-md no-print">
+              <input
+                type="text"
+                readOnly
+                value={shareUrl}
+                onFocus={(e) => e.target.select()}
+                aria-label="Share link"
+                className="flex-1 min-w-0 h-10 px-3 rounded-lg border border-sand-300 bg-surface text-[14px] text-sand-800"
+              />
+              <button type="button" className="btn-secondary btn-sm" onClick={() => { setShareUrl(null); setShareState('idle'); }}>Done</button>
+            </div>
+          )}
         </div>
       </header>
 
       {/* ---------- Body ---------- */}
       <div data-body className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 lg:items-start">
-        <aside className="lg:col-start-2 lg:row-start-1 lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:overscroll-contain mb-8 lg:mb-0 print:mb-4" aria-labelledby="ingredients-heading">
+        {/* Sticky only when the list can plausibly fit beside the steps; a long list scrolls with the page
+            instead of becoming a nested scroller that looks complete when it isn't. */}
+        <aside className={`lg:col-start-2 lg:row-start-1 mb-8 lg:mb-0 print:mb-4 ${recipe.ingredients.length <= 14 ? 'lg:sticky lg:top-20' : ''}`} aria-labelledby="ingredients-heading">
           <Ingredients
             recipe={recipe}
             checked={checked}

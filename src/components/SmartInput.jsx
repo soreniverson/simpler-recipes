@@ -58,7 +58,7 @@ function loadSearch() {
   return loading;
 }
 
-const ERROR_ACTIONS = new Set(['blocked-by-site', 'timeout', 'network-error', 'http-error', 'no-recipe', 'too-large', 'unsupported-content-type']);
+const ERROR_ACTIONS = new Set(['timeout', 'network-error', 'http-error', 'no-recipe', 'too-large', 'unsupported-content-type', 'server-error', 'rate-limited']);
 
 /**
  * The paste-or-search box.
@@ -273,9 +273,13 @@ export default function SmartInput({ variant = 'default', placeholder = 'Paste a
 
   const shownResults = showAll ? results : results.slice(0, 8);
   const activeId = active >= 0 && shownResults[active] ? `${listId}-opt-${active}` : undefined;
+  useEffect(() => {
+    if (!activeId) return;
+    document.getElementById(activeId)?.scrollIntoView({ block: 'nearest' });
+  }, [activeId]);
 
   const inputClass = isHeader
-    ? 'h-10 pl-10 pr-10 rounded-lg text-[14px]'
+    ? 'h-10 pl-10 pr-10 rounded-lg text-[16px] lg:text-[14px]'
     : 'h-14 sm:h-16 pl-12 sm:pl-14 pr-14 rounded-2xl text-[16px] sm:text-[18px]';
 
   return (
@@ -298,6 +302,7 @@ export default function SmartInput({ variant = 'default', placeholder = 'Paste a
             }}
             onPaste={onPaste}
             onKeyDown={onKeyDown}
+            aria-label={isHeader ? 'Search recipes or paste a recipe link' : 'Recipe link or search'}
             onFocus={() => {
               loadSearch();
               if (!isUrl && value.trim().length >= 2) setOpen(true);
@@ -395,7 +400,7 @@ export default function SmartInput({ variant = 'default', placeholder = 'Paste a
                   <li key={r.recipe.slug} role="option" id={`${listId}-opt-${i}`} aria-selected={i === active}>
                     <a
                       href={`/recipes/${r.recipe.slug}/`}
-                      className={`flex items-center gap-3 px-3 sm:px-4 py-2.5 min-h-[52px] ${i === active ? 'bg-sand-100' : 'hover:bg-sand-100/70'}`}
+                      className={`flex items-center gap-3 px-3 sm:px-4 py-2.5 min-h-[52px] ${i === active ? 'bg-sand-200/70' : 'hover:bg-sand-100'}`}
                       onMouseEnter={() => setActive(i)}
                       tabIndex={-1}
                     >

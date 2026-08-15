@@ -140,10 +140,11 @@ export function ingredientsAsText(recipe: AnyRecipe, lines?: string[]): string {
 }
 
 /** Full recipe as plain text (for Copy / share fallback). */
-export function recipeAsText(recipe: AnyRecipe, sourceUrl?: string | null): string {
-  const meta = metaLine(recipe).join(' · ');
+export function recipeAsText(recipe: AnyRecipe, sourceUrl?: string | null, opts: { ingredientLines?: string[]; servingsLabel?: string | null } = {}): string {
+  let meta = metaLine(recipe).join(' · ');
+  if (opts.servingsLabel) meta = meta.replace(/\b\d+[^·]*servings?\b/i, opts.servingsLabel) || opts.servingsLabel;
   const src = sourceInfo(recipe, sourceUrl);
-  const parts = [recipe.title, meta, src.url ? `Source: ${src.url}` : '', '', 'Ingredients', ingredientsAsText(recipe), '', 'Instructions'];
+  const parts = [recipe.title, meta, src.url ? `Source: ${src.url}` : '', '', opts.servingsLabel ? `Ingredients (${opts.servingsLabel})` : 'Ingredients', ingredientsAsText(recipe, opts.ingredientLines), '', 'Instructions'];
   let n = 1;
   for (const g of instructionGroups(recipe)) {
     if (g.name) parts.push(`${g.name}:`);

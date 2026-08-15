@@ -48,9 +48,46 @@ export function createSearchIndex(recipes) {
  * @param {number} limit - Max results to return
  * @returns {Array} Search results with metadata
  */
+/** "30 min", "under 20 minutes", "quick 15 min dinner" → minutes, and the query with that part removed. */
+export function parseDurationQuery(query) {
+  const m = query.match(/\b(?:under|less than|in|within)?\s*(\d{1,3})\s*(?:-|–)?\s*(min|mins|minute|minutes|hr|hrs|hour|hours)\b/i);
+  if (!m) return null;
+  const n = parseInt(m[1], 10);
+  const minutes = /^h/i.test(m[2]) ? n * 60 : n;
+  const rest = query.replace(m[0], ' ').replace(/\b(quick|fast|easy|recipes?|dinners?|meals?)\b/gi, ' ').replace(/\s+/g, ' ').trim();
+  return { minutes, rest };
+}
+
+function totalMinutesOf(recipe) {
+  const t = recipe.totalTime;
+  if (!t) return null;
+  if (typeof t === 'number') return t;
+  const h = t.match(/(\d+)\s*h/i);
+  const m = t.match(/(\d+)\s*m/i);
+  if (!h && !m) return null;
+  return (h ? parseInt(h[1], 10) * 60 : 0) + (m ? parseInt(m[1], 10) : 0);
+}
+
 export function searchRecipes(fuse, query, limit = 20) {
   if (!query || query.trim().length < 2) {
     return [];
+  }
+
+  // Time-bounded queries: "30 min" means "recipes done in 30 minutes", not fuzzy matches on "min".
+  const dq = parseDurationQuery(query.trim());
+  if (dq) {
+    const docs = fuse.getIndex().docs || fuse._docs || [];
+    let pool = docs.filter((r) => {
+      const tm = totalMinutesOf(r);
+      return tm != null && tm <= dq.minutes;
+    });
+    if (dq.rest.length >= 2) {
+      const sub = new Fuse(pool, fuseOptions).search(dq.rest, { limit: limit * 2 });
+      pool = sub.map((r) => r.item);
+    } else {
+      pool = pool.sort((a, b) => (totalMinutesOf(a) ?? 0) - (totalMinutesOf(b) ?? 0));
+    }
+    return pool.slice(0, limit).map((recipe) => ({ recipe, score: 0, matches: [{ field: 'totalTime', value: recipe.totalTime, indices: [] }] }));
   }
 
   const results = fuse.search(query.trim(), { limit });
