@@ -131,3 +131,17 @@ describe('scaleIngredientLine — QA cases ("and" fractions, addends)', () => {
     expect(s('1 large egg + 1 egg yolk', 2)).toBe('2 large eggs + 2 egg yolk');
   });
 });
+
+describe('scaleIngredientLine — regression QA cases', () => {
+  const s = scaleIngredientLine;
+  it('does not pluralise modifier nouns', () => {
+    expect(s('3 egg yolks', 2)).toBe('6 egg yolks');
+    expect(s('2 (6.5 ounce) cans canned tomato sauce', 2)).toBe('4 (6.5 ounce) cans canned tomato sauce');
+    expect(s('1 yellow, orange or green bell pepper', 2)).toBe('2 yellow, orange or green bell peppers');
+    expect(s('1 bunch celery, cut into 4-inch pieces', 2)).toBe('2 bunches celery, cut into 4-inch pieces');
+  });
+  it('⅛ cup becomes 2 tbsp; "plus" addends scale', () => {
+    expect(s('½ cup sugar', 0.25)).toBe('2 tbsp sugar');
+    expect(s('1 teaspoon salt, plus 1/2 teaspoon for the topping', 2)).toBe('2 teaspoons salt, plus 1 teaspoon for the topping');
+  });
+});

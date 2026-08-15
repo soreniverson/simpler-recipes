@@ -151,26 +151,29 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
     line-gap-override: 0%;
   }
 
-  /* ---------- Design tokens ---------- */
+  /* ---------- Design tokens ----------
+     Colors are stored as space-separated RGB so Tailwind can apply opacity modifiers
+     (`bg-background/95`, `bg-sand-950/30`) via `rgb(var(--x) / <alpha-value>)`. Use them as
+     `rgb(var(--sand-900))` in hand-written CSS. */
   /* Light mode (default). Text tints from sand-500 up are AA on sand-50; sand-400 is for hairlines only. */
   :root {
-    --sand-25: #FEFEFE;
-    --sand-50: #FCFBFA;
-    --sand-100: #F5F4F1;
-    --sand-200: #EBEAE6;
-    --sand-300: #DDDCD7;
-    --sand-400: #BEBDB7;
-    --sand-500: #706f6b;
-    --sand-600: #5e5d59;
-    --sand-700: #4a4946;
-    --sand-800: #3A3832;
-    --sand-900: #1F1E1B;
-    --sand-950: #0F0E0D;
-    --primary: #4a4946;
-    --primary-light: #5e5d59;
-    --surface: #FCFBFA;
-    --background: #F6F5F3;
-    --on-primary: #FCFBFA;
+    --sand-25: 254 254 254;
+    --sand-50: 252 251 250;
+    --sand-100: 245 244 241;
+    --sand-200: 235 234 230;
+    --sand-300: 221 220 215;
+    --sand-400: 190 189 183;
+    --sand-500: 112 111 107;
+    --sand-600: 94 93 89;
+    --sand-700: 74 73 70;
+    --sand-800: 58 56 50;
+    --sand-900: 31 30 27;
+    --sand-950: 15 14 13;
+    --primary: 74 73 70;
+    --primary-light: 94 93 89;
+    --surface: 252 251 250;
+    --background: 246 245 243;
+    --on-primary: 252 251 250;
     --shadow-color: rgba(58, 56, 50, 0.06);
     color-scheme: light;
   }
@@ -178,23 +181,23 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
   /* Dark mode. The tint ramp keeps the SAME direction as light (25 darkest surface → 300 lightest
      hairline), so `bg-sand-100` is a subtle raised surface and `hover:bg-sand-100` lifts, not sinks. */
   :root.dark {
-    --sand-25: #1a1917;
-    --sand-50: #242321;
-    --sand-100: #2b2a27;
-    --sand-200: #34322f;
-    --sand-300: #403e3a;
-    --sand-400: #575551;
-    --sand-500: #93918d;
-    --sand-600: #a5a39f;
-    --sand-700: #bcbab6;
-    --sand-800: #d3d1cd;
-    --sand-900: #e9e8e4;
-    --sand-950: #f5f4f1;
-    --primary: #bcbab6;
-    --primary-light: #d3d1cd;
-    --surface: #242321;
-    --background: #141311;
-    --on-primary: #141311;
+    --sand-25: 26 25 23;
+    --sand-50: 36 35 33;
+    --sand-100: 43 42 39;
+    --sand-200: 52 50 47;
+    --sand-300: 64 62 58;
+    --sand-400: 87 85 81;
+    --sand-500: 147 145 141;
+    --sand-600: 165 163 159;
+    --sand-700: 188 186 182;
+    --sand-800: 211 209 205;
+    --sand-900: 233 232 228;
+    --sand-950: 245 244 241;
+    --primary: 188 186 182;
+    --primary-light: 211 209 205;
+    --surface: 36 35 33;
+    --background: 20 19 17;
+    --on-primary: 20 19 17;
     --shadow-color: rgba(0, 0, 0, 0.4);
     color-scheme: dark;
   }
@@ -244,9 +247,9 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
     @page { margin: 12mm 14mm; }
     /* Force the light palette regardless of dark-mode class or OS preference. */
     :root, :root.dark {
-      --sand-25: #FFFFFF; --sand-50: #FFFFFF; --sand-100: #F5F4F1; --sand-200: #E5E4E0; --sand-300: #D6D5D0;
-      --sand-400: #B5B4AE; --sand-500: #6a6965; --sand-600: #55544f; --sand-700: #403f3b; --sand-800: #2c2b27;
-      --sand-900: #161512; --sand-950: #000000; --surface: #FFFFFF; --background: #FFFFFF; --on-primary: #FFFFFF;
+      --sand-25: 255 255 255; --sand-50: 255 255 255; --sand-100: 245 244 241; --sand-200: 229 228 224; --sand-300: 214 213 208;
+      --sand-400: 181 180 174; --sand-500: 106 105 101; --sand-600: 85 84 79; --sand-700: 64 63 59; --sand-800: 44 43 39;
+      --sand-900: 22 21 18; --sand-950: 0 0 0; --surface: 255 255 255; --background: 255 255 255; --on-primary: 255 255 255;
       color-scheme: light;
     }
     html { font-size: 11pt; }

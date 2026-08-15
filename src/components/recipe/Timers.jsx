@@ -5,8 +5,12 @@ import { TimerIcon, CloseIcon } from './Icons';
 
 /** Live list of timers (re-renders every tick while any timer exists). */
 export function useTimers() {
-  const [list, setList] = useState(() => (typeof window === 'undefined' ? [] : getTimers()));
-  useEffect(() => subscribeTimers(setList), []);
+  // Start empty on both server and client so SSR markup matches; the real list arrives after mount.
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    setList(getTimers());
+    return subscribeTimers(setList);
+  }, []);
   return list;
 }
 

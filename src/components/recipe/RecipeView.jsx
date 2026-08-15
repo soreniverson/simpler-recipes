@@ -123,8 +123,14 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
             setShareState('idle');
             return;
           }
-          await navigator.clipboard.writeText(url);
-          setShareState('copied');
+          try {
+            await navigator.clipboard.writeText(url);
+            setShareState('copied');
+          } catch {
+            setShareUrl(url);
+            setShareState('shown');
+            return;
+          }
         }
       } else {
         try {

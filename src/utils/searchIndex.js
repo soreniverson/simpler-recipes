@@ -62,10 +62,11 @@ function totalMinutesOf(recipe) {
   const t = recipe.totalTime;
   if (!t) return null;
   if (typeof t === 'number') return t;
+  const d = t.match(/(\d+)\s*d(?:ay)?s?\b/i);
   const h = t.match(/(\d+)\s*h/i);
   const m = t.match(/(\d+)\s*m/i);
-  if (!h && !m) return null;
-  return (h ? parseInt(h[1], 10) * 60 : 0) + (m ? parseInt(m[1], 10) : 0);
+  if (!d && !h && !m) return null;
+  return (d ? parseInt(d[1], 10) * 1440 : 0) + (h ? parseInt(h[1], 10) * 60 : 0) + (m ? parseInt(m[1], 10) : 0);
 }
 
 export function searchRecipes(fuse, query, limit = 20) {

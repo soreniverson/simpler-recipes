@@ -70,7 +70,7 @@ export function findScalableNumbers(line: string): Num[] {
   const addends = (from: number) => {
     let c = from;
     // up to two plain words may sit between the quantity and the "+" ("1 large egg + 1 egg yolk")
-    const re = new RegExp(String.raw`^\s*(?:[A-Za-z-]+\s+){0,2}\+\s*(${NUMBER})(?:\s*${UNIT}\.?)?`, 'i');
+    const re = new RegExp(String.raw`^\s*(?:[A-Za-z-]+,?\s+){0,2}(?:\+|plus)\s*(${NUMBER})(?:\s*${UNIT}\.?)?`, 'i');
     for (let guard = 0; guard < 4; guard++) {
       const am = line.slice(c).match(re);
       if (!am) break;
@@ -204,7 +204,7 @@ const NOUNS: Record<string, string> = {
   clove: 'cloves', breast: 'breasts', thigh: 'thighs', drumstick: 'drumsticks', fillet: 'fillets', sausage: 'sausages', tortilla: 'tortillas',
   bun: 'buns', roll: 'rolls', leaf: 'leaves', chilli: 'chillies', chili: 'chilies', jalapeño: 'jalapeños', jalapeno: 'jalapenos',
   scallion: 'scallions', mushroom: 'mushrooms', peach: 'peaches', pear: 'pears', date: 'dates', biscuit: 'biscuits', cookie: 'cookies',
-  bagel: 'bagels', bulb: 'bulbs', bunch: 'bunches', pinch: 'pinches', dash: 'dashes', handful: 'handfuls', steak: 'steaks', chop: 'chops', wing: 'wings', leg: 'legs', ear: 'ears', stalk: 'stalks', sprig: 'sprigs',
+  bagel: 'bagels', bulb: 'bulbs', leek: 'leeks', bunch: 'bunches', pinch: 'pinches', dash: 'dashes', handful: 'handfuls', steak: 'steaks', chop: 'chops', wing: 'wings', leg: 'legs', ear: 'ears', stalk: 'stalks', sprig: 'sprigs',
 };
 const NOUN_SINGULAR: Record<string, string> = Object.fromEntries(Object.entries(NOUNS).map(([a, b]) => [b, a]));
 const NOUN_ALT = [...Object.keys(NOUNS), ...Object.values(NOUNS)].sort((a, b) => b.length - a.length).join('|');
@@ -237,7 +237,7 @@ function applyScaling(line: string, nums: Num[], factor: number): string {
   if (/^(tbsps?|tablespoons?|tbs|tbl)$/.test(unitLower) && clusterMax < 1) {
     mult = 3;
     newUnit = 'tsp';
-  } else if (/^(cups?|c)$/.test(unitLower) && clusterMax < 0.125) {
+  } else if (/^(cups?|c)$/.test(unitLower) && clusterMax <= 0.125 + 1e-9) {
     mult = 16;
     newUnit = 'tbsp';
   }
@@ -299,9 +299,13 @@ function agreeNoun(line: string, count: number): string {
     const core = raw.replace(/[,;:.]+$/, '');
     const punct = raw.slice(core.length);
     const lower = core.toLowerCase();
-    // "kaffir lime leaves": a listed noun used as an adjective — the real noun is the next word.
+    // "kaffir lime leaves", "egg yolks", "tomato sauce", "orange or green pepper": a listed noun used
+    // as a modifier — the real noun comes later. Skip it (leaving a line unchanged beats mangling it).
     const nextCore = (words[i + 2] || '').replace(/[,;:.]+$/, '').toLowerCase();
-    if ((NOUNS[lower] || NOUN_SINGULAR[lower]) && (NOUNS[nextCore] || NOUN_SINGULAR[nextCore]) && !punct) continue;
+    const isNoun = !!(NOUNS[lower] || NOUN_SINGULAR[lower]);
+    const nextIsNoun = !!(NOUNS[nextCore] || NOUN_SINGULAR[nextCore]);
+    const nextIsTail = /^(sauce|paste|pur[ée]e|juice|zest|yolks?|whites?|stock|broth|powder|oil|butter|milk|cream|flour|water|extract|seeds?|leaves|leaf|syrup|jam|jelly|salsa|soup|wine|vinegar|skin|peel|rind|slices?|wedges?|halves|quarters|or|and|&)$/i.test(nextCore) || (/s$/.test(nextCore) && !/ss$/.test(nextCore));
+    if (isNoun && !punct && (nextIsNoun || nextIsTail)) continue;
     let repl: string | null = null;
     if (count > 1 && NOUNS[lower]) repl = NOUNS[lower];
     else if (count <= 1 && NOUN_SINGULAR[lower]) repl = NOUN_SINGULAR[lower];

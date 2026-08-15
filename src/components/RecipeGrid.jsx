@@ -58,7 +58,17 @@ export default function RecipeGrid({ recipes, showFavorite = true, pageSize = 24
       </ul>
       {remaining > 0 && (
         <div className="mt-8 flex justify-center">
-          <button type="button" className="btn-secondary" onClick={() => setLimit((l) => l + pageSize)}>
+          <button
+            type="button"
+            className="btn-secondary"
+            onClick={(e) => {
+              const first = limit;
+              setLimit((l) => l + pageSize);
+              // Keep keyboard users in place: focus the first newly revealed card.
+              const list = e.currentTarget.parentElement?.previousElementSibling;
+              requestAnimationFrame(() => list?.children?.[first]?.querySelector('a')?.focus());
+            }}
+          >
             Show {Math.min(pageSize, remaining)} more
             <span className="text-sand-500 font-normal"> · {remaining} left</span>
           </button>
