@@ -1,5 +1,7 @@
 import { kv } from '@vercel/kv';
 import { createHash } from 'crypto';
+import { cacheKeyForUrl } from '../lib/url';
+import type { Recipe } from '../lib/recipe/types';
 
 // Prefixes for namespacing
 const SHARE_PREFIX = 'share:';
@@ -57,25 +59,22 @@ export function isKVConfigured(): boolean {
 const EXTRACT_TTL_SECONDS = 7 * 24 * 60 * 60;
 
 export interface CachedExtraction {
-  recipe: {
-    title: string;
-    ingredients: string[];
-    instructions: string[];
-    prepTime?: string | null;
-    cookTime?: string | null;
-    servings?: string | null;
-    image?: string | null;
-    source?: string;
-  };
+  recipe: Recipe;
   extractedAt: number;
+  /** Cache schema version — bump to invalidate everything cached by an older parser. */
+  v?: number;
 }
 
+/** Bump when the parser output shape/quality changes materially. */
+export const EXTRACT_CACHE_VERSION = 2;
+
 /**
- * Generate a cache key from URL
+ * Generate a cache key from a URL. Uses the canonical form so `?utm_source=`,
+ * trailing slashes, `www.` and http/https variants share one entry.
  */
 function getExtractKey(url: string): string {
-  const hash = createHash('sha256').update(url.toLowerCase().trim()).digest('hex').substring(0, 16);
-  return `${EXTRACT_PREFIX}${hash}`;
+  const hash = createHash('sha256').update(cacheKeyForUrl(url)).digest('hex').substring(0, 16);
+  return `${EXTRACT_PREFIX}v${EXTRACT_CACHE_VERSION}:${hash}`;
 }
 
 /**
@@ -99,6 +98,7 @@ export async function cacheExtraction(url: string, recipe: CachedExtraction['rec
     const payload: CachedExtraction = {
       recipe,
       extractedAt: Date.now(),
+      v: EXTRACT_CACHE_VERSION,
     };
     await kv.set(key, payload, { ex: EXTRACT_TTL_SECONDS });
   } catch (err) {

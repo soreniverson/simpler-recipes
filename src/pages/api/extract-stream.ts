@@ -9,279 +9,314 @@ import {
 } from '../../utils/kv';
 import { getTokenFromRequest } from '../../utils/anonymousToken';
 import { getUserIdFromRequest } from '../../utils/supabase';
+import { normalizeUrl } from '../../lib/url';
+import { safeFetch, SafeFetchError } from '../../lib/safeFetch';
+import { extractRecipeFromHtml, siteNameFromUrl } from '../../lib/recipe/extract';
+import { extractRecipeWithAi } from '../../lib/recipe/ai';
+import type { Recipe, ExtractionMethod } from '../../lib/recipe/types';
+import { checkIpRateLimit, getClientIp } from '../../lib/limits';
 import {
   getYouTubeVideoId,
-  extractJsonLdScripts,
-  findRecipeInJsonLd,
-  parseRecipeFromJsonLd,
   parseRecipeFromDescription,
   fetchYouTubeTranscript,
-  fetchPage,
   fetchYouTubeVideoInfo,
-  extractWithClaude,
-  extractInstructionsFromTranscript,
-  decodeHtmlEntities,
-  parseInstructions,
-  type ExtractedRecipe,
 } from '../../utils/recipeExtractor';
+import { instructionsFromTranscript } from '../../lib/recipe/ai';
 
 export const prerender = false;
 
-// Helper to send SSE message
-function sendEvent(controller: ReadableStreamDefaultController, event: string, data: any) {
-  const message = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
-  controller.enqueue(new TextEncoder().encode(message));
+/**
+ * SSE protocol (event → data):
+ *   progress      { step: string }
+ *   complete      { recipe, cached?: boolean, method: ExtractionMethod, ms: number }
+ *   usage         { current, limit, remaining, isLastFree, isAuthenticated }   (AI path only)
+ *   limit_reached { message, current, limit, isAuthenticated, url }           (AI path only)
+ *   error         { code, error: string (human), hint?: string, url?: string, status?: number }
+ */
+
+type ErrorCode =
+  | 'invalid-url'
+  | 'unsupported-scheme'
+  | 'blocked-host'
+  | 'dns-failed'
+  | 'timeout'
+  | 'http-error'
+  | 'blocked-by-site'
+  | 'not-found'
+  | 'unsupported-content-type'
+  | 'too-large'
+  | 'network-error'
+  | 'no-recipe'
+  | 'rate-limited'
+  | 'youtube-unavailable'
+  | 'server-error';
+
+interface UserFacingError {
+  code: ErrorCode;
+  error: string;
+  hint?: string;
+  status?: number;
+}
+
+/** Plain-English messages. No internals leak to the user. */
+function describeFetchError(err: SafeFetchError, hostname: string): UserFacingError {
+  switch (err.code) {
+    case 'invalid-url':
+    case 'unsupported-scheme':
+      return { code: err.code, error: "That doesn't look like a web address.", hint: 'Paste the full link to the recipe page, starting with https://.' };
+    case 'blocked-host':
+      return { code: 'blocked-host', error: "That address can't be fetched.", hint: 'Only public recipe pages are supported.' };
+    case 'dns-failed':
+      return { code: 'dns-failed', error: `We couldn't find ${hostname}.`, hint: 'Check the address for typos and try again.' };
+    case 'timeout':
+      return { code: 'timeout', error: `${hostname} took too long to respond.`, hint: 'Try again in a moment, or open the original page.' };
+    case 'too-many-redirects':
+    case 'network-error':
+      return { code: 'network-error', error: `We couldn't reach ${hostname}.`, hint: 'The site may be down. Try again in a moment.' };
+    case 'unsupported-content-type':
+      return { code: 'unsupported-content-type', error: "That link isn't a web page.", hint: 'Paste a link to the recipe page itself, not a file or image.' };
+    case 'too-large':
+      return { code: 'too-large', error: 'That page is too large to read.', hint: 'Try the direct link to the recipe.' };
+    case 'http-error': {
+      const status = err.status ?? 0;
+      if (status === 404 || status === 410) return { code: 'not-found', status, error: "That page doesn't exist anymore.", hint: 'Check the link, or search for the recipe on the site.' };
+      if (status === 401 || status === 403 || status === 429 || status === 451 || status === 503) {
+        return { code: 'blocked-by-site', status, error: `${hostname} won't let us read that page.`, hint: 'Some sites block automated readers. You can still open the original.' };
+      }
+      return { code: 'http-error', status, error: `${hostname} returned an error (${status}).`, hint: 'Try again in a moment, or open the original page.' };
+    }
+    default:
+      return { code: 'server-error', error: 'Something went wrong on our side.', hint: 'Please try again.' };
+  }
+}
+
+function sendEvent(controller: ReadableStreamDefaultController, event: string, data: unknown) {
+  controller.enqueue(new TextEncoder().encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
+}
+
+function json(body: unknown, status = 200) {
+  return new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
 }
 
 export const GET: APIRoute = async ({ request }) => {
-  const url = new URL(request.url).searchParams.get('url');
+  const started = Date.now();
+  const rawUrl = new URL(request.url).searchParams.get('url');
+  if (!rawUrl) return json({ error: 'URL is required', code: 'invalid-url' }, 400);
 
-  if (!url) {
-    return new Response(JSON.stringify({ error: 'URL is required' }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' },
-    });
+  const normalized = normalizeUrl(rawUrl);
+  if (!normalized.ok) {
+    const msg =
+      normalized.error === 'unsupported-scheme'
+        ? 'Only http and https links are supported.'
+        : "That doesn't look like a web address.";
+    return json({ error: msg, code: normalized.error === 'unsupported-scheme' ? 'unsupported-scheme' : 'invalid-url' }, 400);
   }
-
-  // Validate URL
+  const url = normalized.url;
+  let hostname = 'that site';
   try {
-    const parsedUrl = new URL(url);
-    if (!['http:', 'https:'].includes(parsedUrl.protocol)) throw new Error('Invalid protocol');
+    hostname = new URL(url).hostname.replace(/^www\./, '');
   } catch {
-    return new Response(JSON.stringify({ error: 'Invalid URL' }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' },
+    /* ignore */
+  }
+
+  // Abuse guard on every request (fails open without KV).
+  const ip = getClientIp(request);
+  const rate = await checkIpRateLimit(ip);
+  if (rate.limited) {
+    return new Response(JSON.stringify({ error: 'Too many requests. Please slow down.', code: 'rate-limited' }), {
+      status: 429,
+      headers: { 'Content-Type': 'application/json', 'Retry-After': String(rate.retryAfterSeconds) },
     });
   }
 
-  // Check cache first - cached results don't count against limit
+  // Cache first — cached results are free and instant.
   const cached = await getCachedExtraction(url);
 
-  // Check if user is authenticated
+  // Identity for the AI quota (only consulted if we need the AI path).
   const userId = await getUserIdFromRequest(request);
   const isAuthenticated = !!userId;
-
-  // Get token for rate limiting (use userId if authenticated, otherwise anonymous token)
   const token = isAuthenticated ? userId : getTokenFromRequest(request);
 
-  // If not cached, check extraction limit
-  let limitReached = false;
-  let limitStatus = null;
-  if (!cached && token) {
-    limitStatus = await hasReachedLimit(token, isAuthenticated);
-    limitReached = limitStatus.limited;
-  }
-
-  // Create SSE stream
   const stream = new ReadableStream({
     async start(controller) {
-      try {
-        // Check if limit reached (send as SSE so client can handle it)
-        if (limitReached && limitStatus) {
-          const message = isAuthenticated
-            ? 'You\'ve reached your monthly extraction limit. Your limit resets next month.'
-            : 'You\'ve used all your free extractions. Create a free account to get 30 extractions per month.';
-          sendEvent(controller, 'limit_reached', {
-            message,
-            current: limitStatus.current,
-            limit: limitStatus.limit,
-            isAuthenticated,
-          });
-          return;
-        }
+      const emit = (event: string, data: unknown) => sendEvent(controller, event, data);
+      const fail = (e: UserFacingError) => emit('error', { ...e, url });
+      const complete = (recipe: Recipe, method: ExtractionMethod, extra: Record<string, unknown> = {}) =>
+        emit('complete', { recipe, method, ms: Date.now() - started, ...extra });
 
-        if (cached) {
-          sendEvent(controller, 'progress', { step: 'Found in cache!' });
-          sendEvent(controller, 'complete', { recipe: cached.recipe, cached: true });
+      try {
+        if (cached?.recipe) {
+          complete(cached.recipe, cached.recipe.extractedVia ?? 'unknown', { cached: true });
           return;
         }
 
         const videoId = getYouTubeVideoId(url);
-        let success = false;
-
         if (videoId) {
-          success = await handleYouTubeExtraction(controller, url, videoId);
-        } else {
-          success = await handleWebExtraction(controller, url);
+          await handleYouTube(url, videoId, { emit, fail, complete, token, isAuthenticated });
+          return;
         }
 
-        // Increment extraction count only on successful extraction
-        if (success && token) {
-          const newCount = await incrementExtraction(token);
-          const limit = isAuthenticated ? AUTHENTICATED_EXTRACTION_LIMIT : ANONYMOUS_EXTRACTION_LIMIT;
-          const remaining = limit - newCount;
-
-          // Include usage info in the complete event
-          sendEvent(controller, 'usage', {
-            current: newCount,
-            limit,
-            remaining: Math.max(0, remaining),
-            isLastFree: !isAuthenticated && remaining === 0,
-            isAuthenticated,
-          });
+        // ---- 1. Fetch (SSRF-safe) ----
+        emit('progress', { step: `Fetching ${hostname}…` });
+        let html: string;
+        let finalUrl = url;
+        try {
+          const res = await safeFetch(url);
+          html = res.body;
+          finalUrl = res.url;
+        } catch (err) {
+          if (err instanceof SafeFetchError) {
+            fail(describeFetchError(err, hostname));
+            return;
+          }
+          throw err;
         }
+
+        // ---- 2. Structured extraction (free) ----
+        emit('progress', { step: 'Finding the recipe…' });
+        const outcome = extractRecipeFromHtml(html, finalUrl);
+        if (outcome.recipe) {
+          await cacheExtraction(url, outcome.recipe);
+          complete(outcome.recipe, outcome.method, { candidates: outcome.candidates });
+          return;
+        }
+
+        // ---- 3. AI fallback (metered) ----
+        const anthropicApiKey = import.meta.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY;
+        if (!anthropicApiKey) {
+          fail({ code: 'no-recipe', error: `We couldn't find a recipe on that page.`, hint: 'Make sure the link goes to a specific recipe, not a category or search page.' });
+          return;
+        }
+        if (token) {
+          const status = await hasReachedLimit(token, isAuthenticated);
+          if (status.limited) {
+            emit('limit_reached', {
+              message: isAuthenticated
+                ? "This page has no recipe data we can read directly, and you've used this month's AI extractions."
+                : "This page has no recipe data we can read directly. You've used your free AI extractions — create a free account for 30 a month.",
+              current: status.current,
+              limit: status.limit,
+              isAuthenticated,
+              url,
+            });
+            return;
+          }
+        }
+        emit('progress', { step: 'Reading the page more carefully…' });
+        const ai = await extractRecipeWithAi(html, anthropicApiKey, finalUrl);
+        if (!ai.recipe) {
+          fail({ code: 'no-recipe', error: `We couldn't find a recipe on that page.`, hint: 'Make sure the link goes to a specific recipe, not a category or search page.' });
+          return;
+        }
+        if (!ai.recipe.siteName) ai.recipe.siteName = siteNameFromUrl(finalUrl);
+        await cacheExtraction(url, ai.recipe);
+        await reportUsage(emit, token, isAuthenticated);
+        complete(ai.recipe, 'ai');
       } catch (err) {
-        console.error('Extraction error:', err);
-        sendEvent(controller, 'error', { error: 'Failed to extract recipe' });
+        console.error('[extract] unexpected', err);
+        fail({ code: 'server-error', error: 'Something went wrong on our side.', hint: 'Please try again.' });
       } finally {
-        controller.close();
+        try {
+          controller.close();
+        } catch {
+          /* already closed */
+        }
       }
-    }
+    },
   });
 
   return new Response(stream, {
     headers: {
       'Content-Type': 'text/event-stream',
-      'Cache-Control': 'no-cache',
-      'Connection': 'keep-alive',
+      'Cache-Control': 'no-cache, no-transform',
+      Connection: 'keep-alive',
+      'X-Accel-Buffering': 'no',
     },
   });
 };
 
-async function handleYouTubeExtraction(
-  controller: ReadableStreamDefaultController,
-  url: string,
-  videoId: string
-): Promise<boolean> {
-  const youtubeApiKey = import.meta.env.YOUTUBE_API_KEY;
-  const anthropicApiKey = import.meta.env.ANTHROPIC_API_KEY;
-
-  if (!youtubeApiKey) {
-    sendEvent(controller, 'error', { error: 'YouTube API not configured' });
-    return false;
-  }
-
-  // Step 1: Fetch video info
-  sendEvent(controller, 'progress', { step: 'Fetching video info...' });
-  const videoInfo = await fetchYouTubeVideoInfo(videoId, youtubeApiKey);
-
-  if (!videoInfo) {
-    sendEvent(controller, 'error', { error: 'Video not found' });
-    return false;
-  }
-
-  const { title, description, thumbnail } = videoInfo;
-
-  // Step 2: Parse description
-  sendEvent(controller, 'progress', { step: 'Parsing description...' });
-  const { ingredients, instructions, recipeLink } = parseRecipeFromDescription(description);
-
-  let finalIngredients = ingredients;
-  let finalInstructions = instructions;
-
-  // Step 3: If no ingredients but has recipe link, follow it
-  if (ingredients.length === 0 && recipeLink) {
-    sendEvent(controller, 'progress', { step: 'Fetching linked recipe...' });
-
-    const linkedHtml = await fetchPage(recipeLink);
-    if (linkedHtml) {
-      const jsonLdScripts = extractJsonLdScripts(linkedHtml);
-      let recipeSchema = null;
-      for (const script of jsonLdScripts) {
-        recipeSchema = findRecipeInJsonLd(script);
-        if (recipeSchema) break;
-      }
-
-      if (recipeSchema?.recipeIngredient?.length) {
-        finalIngredients = recipeSchema.recipeIngredient.map(decodeHtmlEntities);
-        finalInstructions = parseInstructions(recipeSchema.recipeInstructions).map(decodeHtmlEntities);
-      } else if (anthropicApiKey) {
-        sendEvent(controller, 'progress', { step: 'Extracting with AI...' });
-        const claudeRecipe = await extractWithClaude(linkedHtml, anthropicApiKey);
-        if (claudeRecipe) {
-          finalIngredients = claudeRecipe.ingredients || [];
-          finalInstructions = claudeRecipe.instructions || [];
-        }
-      }
-    }
-  }
-
-  // Step 4: If we have ingredients but no instructions, get from transcript
-  if (finalIngredients.length > 0 && finalInstructions.length === 0 && anthropicApiKey) {
-    sendEvent(controller, 'progress', { step: 'Fetching video transcript...' });
-    const transcript = await fetchYouTubeTranscript(videoId);
-
-    if (transcript) {
-      sendEvent(controller, 'progress', { step: 'Extracting instructions from video...' });
-      finalInstructions = await extractInstructionsFromTranscript(
-        transcript,
-        title,
-        finalIngredients,
-        anthropicApiKey
-      );
-    }
-  }
-
-  const recipe: ExtractedRecipe = {
-    title,
-    ingredients: finalIngredients,
-    instructions: finalInstructions,
-    prepTime: null,
-    cookTime: null,
-    servings: null,
-    image: thumbnail,
-    source: 'youtube',
-  };
-
-  // Cache successful extraction
-  if (recipe.ingredients.length > 0 || recipe.instructions.length > 0) {
-    await cacheExtraction(url, recipe);
-  }
-
-  sendEvent(controller, 'complete', { recipe });
-  return true;
+async function reportUsage(emit: (e: string, d: unknown) => void, token: string | null, isAuthenticated: boolean) {
+  if (!token) return;
+  const newCount = await incrementExtraction(token);
+  const limit = isAuthenticated ? AUTHENTICATED_EXTRACTION_LIMIT : ANONYMOUS_EXTRACTION_LIMIT;
+  const remaining = Math.max(0, limit - newCount);
+  emit('usage', { current: newCount, limit, remaining, isLastFree: !isAuthenticated && remaining === 0, isAuthenticated });
 }
 
-async function handleWebExtraction(controller: ReadableStreamDefaultController, url: string): Promise<boolean> {
-  const anthropicApiKey = import.meta.env.ANTHROPIC_API_KEY;
+interface Ctx {
+  emit: (e: string, d: unknown) => void;
+  fail: (e: UserFacingError) => void;
+  complete: (recipe: Recipe, method: ExtractionMethod, extra?: Record<string, unknown>) => void;
+  token: string | null;
+  isAuthenticated: boolean;
+}
 
-  // Step 1: Fetch page
-  sendEvent(controller, 'progress', { step: 'Fetching page...' });
-  const html = await fetchPage(url);
-
-  if (!html) {
-    sendEvent(controller, 'error', { error: 'Failed to fetch page' });
-    return false;
+async function handleYouTube(url: string, videoId: string, ctx: Ctx) {
+  const youtubeApiKey = import.meta.env.YOUTUBE_API_KEY || process.env.YOUTUBE_API_KEY;
+  const anthropicApiKey = import.meta.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY;
+  if (!youtubeApiKey) {
+    ctx.fail({ code: 'youtube-unavailable', error: "YouTube links aren't available right now.", hint: 'Paste the recipe link from the video description instead.' });
+    return;
   }
-
-  // Step 2: Try JSON-LD extraction
-  sendEvent(controller, 'progress', { step: 'Looking for recipe data...' });
-
-  const jsonLdScripts = extractJsonLdScripts(html);
-  let recipeSchema = null;
-  for (const script of jsonLdScripts) {
-    recipeSchema = findRecipeInJsonLd(script);
-    if (recipeSchema) break;
+  ctx.emit('progress', { step: 'Fetching video info…' });
+  const info = await fetchYouTubeVideoInfo(videoId, youtubeApiKey);
+  if (!info) {
+    ctx.fail({ code: 'not-found', error: "We couldn't find that video.", hint: 'Check the link and try again.' });
+    return;
   }
+  ctx.emit('progress', { step: 'Reading the description…' });
+  const { ingredients, instructions, recipeLink } = parseRecipeFromDescription(info.description);
+  let finalIngredients = ingredients;
+  let finalInstructions = instructions;
+  let recipe: Recipe | null = null;
 
-  let recipe = parseRecipeFromJsonLd(recipeSchema);
-
-  // Step 3: If no schema or incomplete, use Claude
-  if (!recipe && anthropicApiKey) {
-    sendEvent(controller, 'progress', { step: 'Extracting with AI...' });
-
-    const claudeRecipe = await extractWithClaude(html, anthropicApiKey);
-    if (claudeRecipe && (claudeRecipe.ingredients?.length || claudeRecipe.instructions?.length)) {
-      recipe = {
-        title: claudeRecipe.title || 'Untitled Recipe',
-        ingredients: claudeRecipe.ingredients || [],
-        instructions: claudeRecipe.instructions || [],
-        prepTime: claudeRecipe.prepTime || null,
-        cookTime: claudeRecipe.cookTime || null,
-        servings: claudeRecipe.servings || null,
-        image: null,
-      };
+  if (ingredients.length === 0 && recipeLink) {
+    ctx.emit('progress', { step: 'Following the recipe link…' });
+    try {
+      const linked = await safeFetch(recipeLink);
+      const out = extractRecipeFromHtml(linked.body, linked.url);
+      if (out.recipe) recipe = out.recipe;
+      else if (anthropicApiKey) {
+        const ai = await extractRecipeWithAi(linked.body, anthropicApiKey, linked.url);
+        if (ai.recipe) recipe = ai.recipe;
+      }
+    } catch {
+      /* fall through to transcript path */
     }
+  }
+
+  if (!recipe && finalIngredients.length > 0 && finalInstructions.length === 0 && anthropicApiKey) {
+    ctx.emit('progress', { step: 'Watching the video for steps…' });
+    const transcript = await fetchYouTubeTranscript(videoId);
+    if (transcript) finalInstructions = await instructionsFromTranscript(transcript, info.title, finalIngredients, anthropicApiKey);
   }
 
   if (!recipe) {
-    sendEvent(controller, 'error', { error: 'Could not extract recipe from this page' });
-    return false;
+    if (!finalIngredients.length && !finalInstructions.length) {
+      ctx.fail({ code: 'no-recipe', error: "We couldn't find a recipe for that video.", hint: 'Look for a recipe link in the video description and paste that instead.' });
+      return;
+    }
+    recipe = {
+      title: info.title,
+      description: null,
+      ingredients: finalIngredients,
+      instructions: finalInstructions,
+      prepTime: null,
+      cookTime: null,
+      totalTime: null,
+      servings: null,
+      yieldCount: null,
+      image: info.thumbnail,
+      sourceUrl: url,
+      siteName: 'YouTube',
+      source: 'youtube',
+      extractedVia: 'youtube',
+    };
+  } else {
+    recipe.image = recipe.image || info.thumbnail;
+    recipe.sourceUrl = recipe.sourceUrl || url;
   }
 
-  // Cache successful extraction
   await cacheExtraction(url, recipe);
-
-  sendEvent(controller, 'complete', { recipe });
-  return true;
+  ctx.complete(recipe, recipe.extractedVia ?? 'youtube');
 }

@@ -14,21 +14,23 @@ export default function RemixButton({ recipe, variant = 'default', className = '
   const [recipes, setRecipes] = useState([]);
   const [savedMessage, setSavedMessage] = useState('');
 
-  // Load all recipes for the selector
+  // Load the recipe catalog only when the modal is opened (it's ~450KB — never on page load).
   useEffect(() => {
-    async function loadRecipes() {
+    if (!isOpen || recipes.length) return;
+    let cancelled = false;
+    (async () => {
       try {
         const response = await fetch('/api/recipes/all');
         if (response.ok) {
           const data = await response.json();
-          setRecipes(data.recipes || []);
+          if (!cancelled) setRecipes(data.recipes || []);
         }
       } catch (err) {
         console.error('Failed to load recipes:', err);
       }
-    }
-    loadRecipes();
-  }, []);
+    })();
+    return () => { cancelled = true; };
+  }, [isOpen, recipes.length]);
 
   const handleSave = (newRecipe, id) => {
     setSavedMessage('Recipe saved to favorites!');

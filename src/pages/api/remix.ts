@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import Anthropic from '@anthropic-ai/sdk';
-import type { ExtractedRecipe } from '../../utils/recipeExtractor';
+import type { Recipe as ExtractedRecipe } from '../../lib/recipe/types';
+import { AI_MODEL } from '../../lib/recipe/ai';
 
 export const prerender = false;
 
@@ -9,6 +10,20 @@ function sendEvent(controller: ReadableStreamDefaultController, event: string, d
   const message = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
   controller.enqueue(new TextEncoder().encode(message));
 }
+
+const REMIX_SCHEMA = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['title', 'ingredients', 'instructions', 'prepTime', 'cookTime', 'servings'],
+  properties: {
+    title: { type: 'string' },
+    ingredients: { type: 'array', items: { type: 'string' } },
+    instructions: { type: 'array', items: { type: 'string' } },
+    prepTime: { type: ['string', 'null'] },
+    cookTime: { type: ['string', 'null'] },
+    servings: { type: ['string', 'null'] },
+  },
+} as const;
 
 interface RemixRequest {
   baseRecipe: ExtractedRecipe;
@@ -119,8 +134,12 @@ Return ONLY valid JSON with this exact structure:
         sendEvent(controller, 'progress', { step: 'Generating new recipe...' });
 
         const message = await client.messages.create({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 3000,
+          model: AI_MODEL,
+          max_tokens: 4000,
+          output_config: {
+            effort: 'medium',
+            format: { type: 'json_schema', schema: REMIX_SCHEMA as any },
+          },
           messages: [{
             role: 'user',
             content: userPrompt
@@ -128,8 +147,12 @@ Return ONLY valid JSON with this exact structure:
           system: systemPrompt
         });
 
-        const content = message.content[0];
-        if (content.type !== 'text') {
+        if (message.stop_reason === 'refusal') {
+          sendEvent(controller, 'error', { error: "We couldn't remix this recipe." });
+          return;
+        }
+        const content = message.content.find((b) => b.type === 'text');
+        if (!content || content.type !== 'text') {
           sendEvent(controller, 'error', { error: 'Unexpected response format' });
           return;
         }
@@ -139,13 +162,16 @@ Return ONLY valid JSON with this exact structure:
           const parsed = JSON.parse(content.text);
           recipe = {
             title: parsed.title || 'Remixed Recipe',
+            description: null,
             ingredients: parsed.ingredients || [],
             instructions: parsed.instructions || [],
             prepTime: parsed.prepTime || null,
             cookTime: parsed.cookTime || null,
+            totalTime: null,
             servings: parsed.servings || null,
             image: null, // Remixed recipes don't have images
             source: 'remix',
+            extractedVia: 'remix',
           };
         } catch {
           sendEvent(controller, 'error', { error: 'Failed to parse recipe' });

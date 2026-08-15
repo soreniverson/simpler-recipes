@@ -7,19 +7,24 @@ export interface Props {
   image?: string;
   type?: 'website' | 'article';
   canonical?: string;
+  /** Set true for pages that must not be indexed (client-only shells, auth callbacks, user data). */
+  noindex?: boolean;
 }
 
 const {
   title,
-  description = "Extract clean, ad-free recipes from any URL. No more scrolling through life stories.",
+  description = "Paste any recipe link and get just the recipe — ingredients and steps, no ads, no life story.",
   image = "/og-default.png",
   type = "website",
-  canonical
+  canonical,
+  noindex = false,
 } = Astro.props;
 
-const siteUrl = "https://simpler.recipes";
+export const SITE_URL = "https://www.simpler.recipes";
+const siteUrl = SITE_URL;
 const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
-const canonicalUrl = canonical || Astro.url.href;
+// Canonical: always the www host, path from the current page unless overridden.
+const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
 
 // Note: Recipe data for search is now loaded on-demand via fetch in SmartInput
 ---
@@ -36,6 +41,7 @@ const canonicalUrl = canonical || Astro.url.href;
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={type} />
@@ -88,6 +94,9 @@ const canonicalUrl = canonical || Astro.url.href;
       gtag('js', new Date());
       gtag('config', 'G-RJR6YF1HVL');
     </script>
+
+    <!-- Page-specific head content (structured data, extra meta) -->
+    <slot name="head" />
   </head>
   <body class="bg-background text-sand-900 min-h-screen">
     <a href="#main-content" class="skip-link">

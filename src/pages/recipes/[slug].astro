@@ -6,6 +6,7 @@ import RecipeInstructions from '../../components/RecipeInstructions.jsx';
 import RemixButton from '../../components/RemixButton.jsx';
 import fs from 'fs';
 import path from 'path';
+import { durationToMinutes, minutesToIso } from '../../lib/recipe/normalize';
 
 export async function getStaticPaths() {
   const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
@@ -19,15 +20,28 @@ export async function getStaticPaths() {
 
 const { recipe } = Astro.props;
 
-// Generate schema.org structured data for SEO
-const schemaData = {
-  "@context": "https://schema.org/",
+// Generate schema.org structured data for SEO. Only emit what we actually know —
+// no fabricated fields. Times go through the tested ISO 8601 helpers.
+const SITE = 'https://www.simpler.recipes';
+const pageUrl = `${SITE}/recipes/${recipe.slug}/`;
+const prepMin = durationToMinutes(recipe.prepTime);
+const cookMin = durationToMinutes(recipe.cookTime);
+const totalMin = durationToMinutes(recipe.totalTime) ?? ((prepMin || cookMin) ? (prepMin || 0) + (cookMin || 0) : null);
+const yieldText = recipe.servings ? (/^\d+$/.test(String(recipe.servings)) ? `${recipe.servings} servings` : String(recipe.servings)) : undefined;
+const schemaData: Record<string, unknown> = {
+  "@context": "https://schema.org",
   "@type": "Recipe",
   "name": recipe.title,
-  "image": recipe.image ? [recipe.image] : [],
-  "prepTime": recipe.prepTime ? `PT${recipe.prepTime.replace(/\s/g, '').toUpperCase()}` : undefined,
-  "cookTime": recipe.cookTime ? `PT${recipe.cookTime.replace(/\s/g, '').toUpperCase()}` : undefined,
-  "recipeYield": recipe.servings,
+  "url": pageUrl,
+  "mainEntityOfPage": pageUrl,
+  "image": recipe.image ? [recipe.image] : undefined,
+  "author": recipe.source?.name ? { "@type": "Organization", "name": recipe.source.name, "url": recipe.source.url } : undefined,
+  "isBasedOn": recipe.source?.url || undefined,
+  "prepTime": minutesToIso(prepMin),
+  "cookTime": minutesToIso(cookMin),
+  "totalTime": minutesToIso(totalMin),
+  "recipeYield": yieldText,
+  "keywords": recipe.tags?.length ? recipe.tags.join(', ') : undefined,
   "recipeIngredient": recipe.ingredients,
   "recipeInstructions": recipe.instructions.map((step: string, i: number) => ({
     "@type": "HowToStep",
@@ -35,6 +49,7 @@ const schemaData = {
     "text": step
   }))
 };
+for (const k of Object.keys(schemaData)) if (schemaData[k] === undefined) delete schemaData[k];
 ---
 
 <BaseLayout
