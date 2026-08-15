@@ -14,7 +14,13 @@ export default function RecipeCard({ recipe, showFavorite = true, matchInfo, eag
     <div className="relative h-full group">
       {showFavorite && (
         <div className="absolute top-2 right-2 z-10">
-          <FavoriteButton slug={recipe.slug} size="small" className="!text-white/85 hover:!text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.55)]" />
+          {/* 44px tap target, but the scrim is a soft radial rather than a hard chip: the mark stays
+              legible over pale photography without reading as a badge. */}
+          <FavoriteButton
+            slug={recipe.slug}
+            size="small"
+            className="!text-white [background:radial-gradient(circle,rgba(0,0,0,0.45)_0%,rgba(0,0,0,0.28)_48%,rgba(0,0,0,0)_72%)] hover:!text-white"
+          />
         </div>
       )}
       <a href={`/recipes/${recipe.slug}/`} className="block h-full rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sand-700">

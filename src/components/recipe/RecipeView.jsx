@@ -195,7 +195,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
       {/* ---------- Header ---------- */}
       <header className="mb-7 sm:mb-9 lg:col-start-1 lg:row-start-1 min-w-0">
         {image && !imgFailed && (
-          <div className="-mx-4 sm:mx-0 mb-6 sm:rounded-2xl overflow-hidden bg-sand-100 aspect-[16/9] print:hidden">
+          <div className="-mx-4 sm:mx-0 mb-6 sm:rounded-2xl overflow-hidden bg-sand-100 aspect-[16/9] lg:aspect-[2/1] print:hidden">
             <img
               src={image}
               alt=""

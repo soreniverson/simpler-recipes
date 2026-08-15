@@ -108,7 +108,7 @@ export default function Ingredients({
         {groups.map((g, gi) => (
           <div key={gi}>
             {g.name && <h3 className="text-[14px] font-medium text-sand-800 mt-1 mb-1">{g.name}</h3>}
-            <ul>
+            <ul className="divide-y divide-sand-200/45">
               {g.items.map(() => {
                 const index = flat++;
                 const done = checked.has(index);

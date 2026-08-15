@@ -39,8 +39,8 @@ const websiteSchema = JSON.stringify({
     <div class="max-w-[1080px] mx-auto px-4 sm:px-6">
       <!-- Hero: one promise, one input, and the food. The collage is the brand moment; it is
            desktop-only (it was always `hidden lg:block`) and now ships as a 38KB WebP. -->
-      <section class="pt-6 sm:pt-10 pb-10 sm:pb-14" aria-labelledby="hero-heading">
-        <div class="bg-surface rounded-3xl p-7 sm:p-10 lg:p-14 shadow-sm lg:flex lg:items-center lg:gap-12">
+      <section class="pt-10 sm:pt-16 pb-10 sm:pb-14" aria-labelledby="hero-heading">
+        <div class="lg:flex lg:items-center lg:gap-14">
           <div class="flex-1 lg:max-w-xl min-w-0">
             <h1 id="hero-heading" class="text-[34px] sm:text-[46px] leading-[1.05] font-medium tracking-[-0.028em] text-sand-900 [text-wrap:balance]">
               Just the recipe.
@@ -80,15 +80,12 @@ const websiteSchema = JSON.stringify({
           </a>
         </div>
         <nav aria-label="Recipe collections">
-          <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-0">
             {collections.map((c: any) => (
-              <li>
-                <a href={`/collection/${c.slug}/`} class="group flex h-full flex-col justify-between gap-2 rounded-xl bg-surface p-4 shadow-xs hover:shadow-sm transition-shadow">
-                  <div>
-                    <h3 class="text-[15px] font-medium text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{c.name}</h3>
-                    <p class="mt-1 text-[13px] leading-snug text-sand-500 line-clamp-2">{c.description}</p>
-                  </div>
-                  <p class="text-[12px] tabular text-sand-400">{c.recipeCount} recipes</p>
+              <li class="border-b border-sand-200/70">
+                <a href={`/collection/${c.slug}/`} class="group flex items-baseline justify-between gap-4 py-3">
+                  <span class="text-[16px] text-sand-800 group-hover:text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{c.name}</span>
+                  <span class="text-[13px] tabular text-sand-400 shrink-0">{c.recipeCount}</span>
                 </a>
               </li>
             ))}
