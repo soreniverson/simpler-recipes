@@ -24,7 +24,7 @@ const sections: { title: string; body: string[]; items?: string[] }[] = [
   {
     title: 'When we use AI',
     body: [
-      'Most sites publish structured recipe data and we read it directly — no AI involved. When a page has no structured data, we send the page’s text (never anything about you) to Anthropic’s Claude API to pull out the recipe. Anthropic’s API does not use that content to train models. This fallback is limited per person, which is what the small quota on the homepage refers to.',
+      'Most sites publish structured recipe data and we read it directly — no AI involved. When a page has no structured data, we send the page’s text (never anything about you) to Anthropic’s Claude API to pull out the recipe. Anthropic’s API does not use that content to train models. This fallback is the only part of the service with a per-person limit.',
     ],
   },
   {
