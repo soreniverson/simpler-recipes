@@ -75,6 +75,8 @@ export function findScalableNumbers(line: string): Num[] {
   }
   cursor += unitM[0].length;
   rest = line.slice(cursor);
+  // "1 can (14 oz) beans": the parenthetical after a container is its size, not a conversion.
+  if (CONTAINER_UNIT.test(unitM[0].trim().replace(/\.$/, ''))) return nums;
 
   // Optional conversion right after the unit: "(45 ml)", "(400ml)", "(about 1 cup)"
   const paren = rest.match(new RegExp(String.raw`^\s*\(\s*(?:about|approx\.?|approximately|~)?\s*(${NUMBER})(?:${RANGE_SEP}(${NUMBER}))?\s*${UNIT}?\.?\s*\)`, 'i'));
@@ -97,11 +99,12 @@ export function findScalableNumbers(line: string): Num[] {
 }
 
 /** Unit family for rounding decisions, taken from the text after a number. */
-function unitAfter(line: string, end: number): 'volume-small' | 'volume' | 'metric' | 'count' | 'weight-us' | 'other' {
+function unitAfter(line: string, end: number): 'volume-small' | 'volume' | 'metric' | 'metric-large' | 'count' | 'weight-us' | 'other' {
   const after = line.slice(end, end + 16).toLowerCase();
   if (/^\s*(tsps?|teaspoons?|t\b)/.test(after)) return 'volume-small';
   if (/^\s*(tbsps?|tablespoons?|tbs\b|tbl\b|cups?|c\.|fl\.?\s*oz|quarts?|pints?|gallons?|sticks?)/.test(after)) return 'volume';
-  if (/^\s*(g\b|grams?|kgs?|kilograms?|ml\b|milli|l\b|liters?|litres?|cm\b|mm\b)/.test(after)) return 'metric';
+  if (/^\s*(kgs?\b|kilograms?|l\b|liters?|litres?)/.test(after)) return 'metric-large';
+  if (/^\s*(g\b|grams?|ml\b|milli|cm\b|mm\b)/.test(after)) return 'metric';
   if (/^\s*(oz\b|ounces?|lbs?\b|pounds?)/.test(after)) return 'weight-us';
   if (/^\s*[a-z(]/.test(after) && !/^\s*(x|×)/.test(after)) return 'count';
   return 'other';
@@ -116,6 +119,9 @@ export function roundForCooking(value: number, family: ReturnType<typeof unitAft
       if (value >= 20) return Math.round(value / 5) * 5 || Math.round(value);
       if (value >= 5) return Math.round(value);
       return Math.round(value * 2) / 2;
+    case 'metric-large':
+      // 1.2 kg × ¼ = 0.3 kg, not ½ kg; one decimal like recipes write it.
+      return Math.round(value * 10) / 10 || Math.round(value * 100) / 100;
     case 'weight-us':
       return snapFraction(value, [0.25, 0.5, 0.75]);
     case 'volume-small':
@@ -123,7 +129,8 @@ export function roundForCooking(value: number, family: ReturnType<typeof unitAft
     case 'volume':
       return snapFraction(value, [0.125, 0.25, 1 / 3, 0.5, 2 / 3, 0.75]);
     case 'count':
-      return snapFraction(value, [0.5]);
+      // "6 cloves" × 1.75 → 11, not 10½. Halves only make sense under ~1 (½ an onion).
+      return value >= 1.25 ? Math.round(value) : snapFraction(value, [0.5]);
     default:
       return snapFraction(value, [0.25, 1 / 3, 0.5, 2 / 3, 0.75]);
   }
@@ -162,6 +169,190 @@ export function formatQuantity(value: number): string {
 /** Lines that must never be scaled even if they start with a number. */
 const NO_SCALE = /\b(to taste|as needed|for serving|for garnish|optional garnish)\b/i;
 
+/** Units whose number we pluralise/singularise to match the scaled quantity. */
+const PLURAL_UNIT = /^(cup|tablespoon|teaspoon|clove|slice|piece|can|sprig|stalk|head|handful|stick|ounce|pound|gram|quart|pint|bunch|package|packet|inch|pinch|dash|box)(s|es)?$/i;
+/** Container units: a parenthetical after these is a size ("2 cans (400 g each)"), never scaled. */
+const CONTAINER_UNIT = /^(cans?|tins?|jars?|bottles?|packages?|pkgs?|packets?|boxe?s?|bags?|sticks?)$/i;
+/** Volume conversions for amounts that get too small to measure in the original unit. */
+const MEASURE_UNIT = String.raw`(?:cups?|c\.|tablespoons?|tbsps?|tbs|tbl|teaspoons?|tsps?|ounces?|oz\.?|fl\.?\s*oz\.?|pounds?|lbs?\.?|grams?|g\b|kilograms?|kgs?|milliliters?|millilitres?|ml|liters?|litres?|l\b|quarts?|qts?|pints?|pts?)`;
+const PAREN_FORBIDDEN = /\b(each|can|cans|tin|tins|jar|jars|package|packet|pkg|box|bag|inch|inches|cm|mm|x|×|%|°|from|of|for)\b|["″]/i;
+
+/** Common countable nouns whose number should agree with a bare count ("2 egg" → "2 eggs"). */
+const NOUNS: Record<string, string> = {
+  egg: 'eggs', onion: 'onions', potato: 'potatoes', tomato: 'tomatoes', carrot: 'carrots', apple: 'apples', banana: 'bananas',
+  lemon: 'lemons', lime: 'limes', orange: 'oranges', pepper: 'peppers', avocado: 'avocados', shallot: 'shallots', cucumber: 'cucumbers',
+  clove: 'cloves', breast: 'breasts', thigh: 'thighs', drumstick: 'drumsticks', fillet: 'fillets', sausage: 'sausages', tortilla: 'tortillas',
+  bun: 'buns', roll: 'rolls', leaf: 'leaves', chilli: 'chillies', chili: 'chilies', jalapeño: 'jalapeños', jalapeno: 'jalapenos',
+  scallion: 'scallions', mushroom: 'mushrooms', peach: 'peaches', pear: 'pears', date: 'dates', biscuit: 'biscuits', cookie: 'cookies',
+  bagel: 'bagels', bulb: 'bulbs', bunch: 'bunches', pinch: 'pinches', dash: 'dashes', handful: 'handfuls', steak: 'steaks', chop: 'chops', wing: 'wings', leg: 'legs', ear: 'ears', stalk: 'stalks', sprig: 'sprigs',
+};
+const NOUN_SINGULAR: Record<string, string> = Object.fromEntries(Object.entries(NOUNS).map(([a, b]) => [b, a]));
+const NOUN_ALT = [...Object.keys(NOUNS), ...Object.values(NOUNS)].sort((a, b) => b.length - a.length).join('|');
+const NOUN_SKIP = /^(large|medium|small|extra-large|xl|jumbo|ripe|whole|fresh|big|little|free-range|organic|raw|cooked|hard-boiled|soft-boiled|red|green|yellow|white|brown|sweet|russet|roma|plum|cherry|baby|spring|boneless|skinless|bone-in|skin-on|thick|thin|heaped|heaping|level)$/i;
+
+interface Piece {
+  start: number;
+  end: number;
+  text: string;
+}
+
+/** Scale the numbers in `nums`, then fix the unit token shared by the leading cluster. */
+function applyScaling(line: string, nums: Num[], factor: number): string {
+  if (!nums.length) return line;
+  // Unit token: first alphabetic token after the first number ("1-2 tbsp" → "tbsp"; "600 g / 1.2 lb" → "g").
+  const firstEnd = nums[0].end;
+  const unitM = line.slice(firstEnd).match(/^([\s\d\/.,¼½¾⅓⅔⅛⅜⅝⅞\-–—]*?(?:to|or)?\s*)([A-Za-z.]+)/);
+  let unitTok: Piece | null = null;
+  if (unitM) {
+    const start = firstEnd + unitM[1].length;
+    unitTok = { start, end: start + unitM[2].length, text: unitM[2] };
+  }
+  const unitLower = unitTok?.text.toLowerCase().replace(/\.$/, '') ?? '';
+  // Numbers that share that unit token (the leading range), vs. later conversions/dual units.
+  const cluster = unitTok ? nums.filter((n) => n.end <= unitTok!.start) : nums;
+  const clusterMax = Math.max(...cluster.map((n) => n.value * factor));
+
+  let mult = 1;
+  let newUnit: string | null = null;
+  if (/^(tbsps?|tablespoons?|tbs|tbl)$/.test(unitLower) && clusterMax < 1) {
+    mult = 3;
+    newUnit = 'tsp';
+  } else if (/^(cups?|c)$/.test(unitLower) && clusterMax < 0.125) {
+    mult = 16;
+    newUnit = 'tbsp';
+  }
+
+  // First pass: scaled values (the unit token's number depends on the cluster's max).
+  const scaledOf = new Map<Num, number>();
+  let clusterFinalMax = 0;
+  for (const n of nums) {
+    const inCluster = cluster.includes(n);
+    const family = newUnit === 'tsp' && inCluster ? 'volume-small' : newUnit === 'tbsp' && inCluster ? 'volume' : unitAfter(line, n.end);
+    const scaled = roundForCooking(n.value * factor * (inCluster ? mult : 1), family);
+    if (inCluster) clusterFinalMax = Math.max(clusterFinalMax, scaled);
+    scaledOf.set(n, scaled);
+  }
+  let unitText: string | null = null;
+  if (unitTok) {
+    let tok = unitTok.text;
+    if (newUnit) {
+      // Keep the author's style: "tablespoons" → "teaspoon(s)", "tbsp" → "tsp", "cups" → "tbsp".
+      if (newUnit === 'tsp') tok = /^tablespoons?$/i.test(tok) ? (clusterFinalMax > 1 ? 'teaspoons' : 'teaspoon') : 'tsp';
+      else tok = 'tbsp';
+    } else {
+      const pm = tok.match(PLURAL_UNIT);
+      if (pm) {
+        const base = pm[1];
+        const es = /^(inch|bunch|pinch|dash|box)$/i.test(base);
+        tok = clusterFinalMax > 1 ? base + (es ? 'es' : 's') : base;
+        if (unitTok.text[0] === unitTok.text[0].toUpperCase()) tok = tok[0].toUpperCase() + tok.slice(1);
+      }
+    }
+    unitText = tok;
+  }
+
+  // Second pass: splice numbers and the unit token back in positional order.
+  const pieces: { start: number; end: number; text: string }[] = nums.map((n) => ({ start: n.start, end: n.end, text: formatQuantity(scaledOf.get(n)!) }));
+  if (unitTok && unitText != null) pieces.push({ start: unitTok.start, end: unitTok.end, text: unitText });
+  pieces.sort((a, b) => a.start - b.start);
+  let out = '';
+  let last = 0;
+  for (const p of pieces) {
+    if (p.start < last) continue;
+    out += line.slice(last, p.start) + p.text;
+    last = p.end;
+  }
+  out += line.slice(last);
+  return out;
+}
+
+/** Bare count ("2 large eggs", "1 boneless, skinless chicken breast"): make the first whitelisted noun agree. */
+function agreeNoun(line: string, count: number): string {
+  const m = line.match(/^(\s*\S+\s+)(.*)$/);
+  if (!m) return line;
+  const words = m[2].split(/(\s+)/); // keep separators
+  let seen = 0;
+  for (let i = 0; i < words.length && seen < 6; i += 2) {
+    const raw = words[i];
+    if (!raw) continue;
+    seen++;
+    const core = raw.replace(/[,;:.]+$/, '');
+    const punct = raw.slice(core.length);
+    const lower = core.toLowerCase();
+    // "kaffir lime leaves": a listed noun used as an adjective — the real noun is the next word.
+    const nextCore = (words[i + 2] || '').replace(/[,;:.]+$/, '').toLowerCase();
+    if ((NOUNS[lower] || NOUN_SINGULAR[lower]) && (NOUNS[nextCore] || NOUN_SINGULAR[nextCore]) && !punct) continue;
+    let repl: string | null = null;
+    if (count > 1 && NOUNS[lower]) repl = NOUNS[lower];
+    else if (count <= 1 && NOUN_SINGULAR[lower]) repl = NOUN_SINGULAR[lower];
+    else if (NOUNS[lower] || NOUN_SINGULAR[lower]) return line; // already agrees
+    if (repl) {
+      if (core[0] === core[0].toUpperCase()) repl = repl[0].toUpperCase() + repl.slice(1);
+      words[i] = repl + punct;
+      return m[1] + words.join('');
+    }
+    // stop at the first clause break — the noun is in the first clause
+    if (/[,;:]$/.test(raw)) {
+      // keep scanning only if we haven't found a noun yet; "boneless, skinless chicken breast" needs it
+      continue;
+    }
+  }
+  return line;
+}
+
+/**
+ * Quantities inside LATER parentheticals — "(~1½ tbsp)", "(about 2 cups)", "(⅓ cup + 1 tbsp)" —
+ * scaled only when the leading cluster had a real (non-container) unit and the parenthetical
+ * has no size/each/from language.
+ */
+function scaleLaterParens(line: string, from: number, factor: number, skipLeading = false): string {
+  let out = line.slice(0, from);
+  let rest = line.slice(from);
+  const parenRe = /\(([^()]*)\)/g;
+  let m: RegExpExecArray | null;
+  let cursor = 0;
+  while ((m = parenRe.exec(rest))) {
+    const inner = m[1];
+    out += rest.slice(cursor, m.index);
+    cursor = m.index + m[0].length;
+    // "1 (14 oz) can": the paren glued to a bare count is a container size.
+    const leading = skipLeading && !/\S/.test(rest.slice(0, m.index));
+    if (leading || PAREN_FORBIDDEN.test(inner) || !/\d|[¼½¾⅓⅔⅛⅜⅝⅞]/.test(inner)) {
+      out += m[0];
+      continue;
+    }
+    // Scale each "NUMBER [- NUMBER] UNIT" chunk inside.
+    const chunkRe = new RegExp(String.raw`(${NUMBER})(?:${RANGE_SEP}(${NUMBER}))?\s*(?:(?:heaping|heaped|level|scant|generous|rounded|large|medium|small)\s+)?(${MEASURE_UNIT}|${NOUN_ALT})(?![A-Za-z])`, 'gi');
+    let innerOut = '';
+    let ic = 0;
+    let cm: RegExpExecArray | null;
+    let any = false;
+    while ((cm = chunkRe.exec(inner))) {
+      const chunk = cm[0];
+      const nums: Num[] = [];
+      let p = 0;
+      for (const tok of [cm[1], cm[2]].filter(Boolean) as string[]) {
+        const at = chunk.indexOf(tok, p);
+        const v = parseNumber(tok);
+        if (at >= 0 && v != null && v > 0) nums.push({ start: at, end: at + tok.length, value: v, text: tok });
+        p = at + tok.length;
+      }
+      if (!nums.length) continue;
+      any = true;
+      innerOut += inner.slice(ic, cm.index) + applyScaling(chunk, nums, factor);
+      ic = cm.index + chunk.length;
+    }
+    if (!any) {
+      out += m[0];
+      continue;
+    }
+    innerOut += inner.slice(ic);
+    out += '(' + innerOut + ')';
+  }
+  out += rest.slice(cursor);
+  return out;
+}
+
 /** Scale one ingredient line by a factor. Returns the original line unchanged when unsure. */
 export function scaleIngredientLine(line: string, factor: number): string {
   if (!line || !Number.isFinite(factor) || factor <= 0 || Math.abs(factor - 1) < 1e-9) return line;
@@ -169,15 +360,25 @@ export function scaleIngredientLine(line: string, factor: number): string {
   if (!nums.length) return line;
   // "1 tsp salt, or to taste" — scale the leading amount anyway; only skip when the WHOLE line is a "to taste".
   if (NO_SCALE.test(line) && line.trim().split(/\s+/).length <= 4) return line;
-  let out = '';
-  let last = 0;
-  for (const n of nums) {
-    const family = unitAfter(line, n.end);
-    const scaled = roundForCooking(n.value * factor, family);
-    out += line.slice(last, n.start) + formatQuantity(scaled);
-    last = n.end;
+
+  const lastEnd = nums[nums.length - 1].end;
+  const unitM = line.slice(lastEnd).match(/^\s*([A-Za-z.]+)/);
+  const unitWord = unitM ? unitM[1].replace(/\.$/, '') : '';
+  const hasUnit = !!unitWord && new RegExp(String.raw`^${UNIT}$`, 'i').test(unitWord);
+  const isContainer = CONTAINER_UNIT.test(unitWord);
+
+  // Split: head (leading cluster + its unit) gets scaled; tail may contain later parentheticals.
+  const headEnd = unitM ? lastEnd + unitM[0].length : lastEnd;
+  const head = applyScaling(line.slice(0, headEnd), nums, factor);
+  let tail = line.slice(headEnd);
+  if (!isContainer) tail = scaleLaterParens(tail, 0, factor, !hasUnit);
+  let out = head + tail;
+
+  if (!hasUnit || /^(large|medium|small)$/i.test(unitWord)) {
+    // Bare count: fix noun number ("1 onion" → "2 onions").
+    const first = roundForCooking(nums[0].value * factor, 'count');
+    out = agreeNoun(out, first);
   }
-  out += line.slice(last);
   return out;
 }
 

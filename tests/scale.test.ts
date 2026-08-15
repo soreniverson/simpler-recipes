@@ -32,7 +32,7 @@ describe('scaleIngredientLine — the production bugs', () => {
     expect(s('1/8 tsp salt', 2)).toBe('¼ tsp salt');
     expect(s('1/3 cup flour', 2)).toBe('⅔ cup flour');
     expect(s('1/3 cup flour', 3)).toBe('1 cup flour');
-    expect(s('½ cup butter', 3)).toBe('1½ cup butter');
+    expect(s('½ cup butter', 3)).toBe('1½ cups butter');
     expect(s('1 1/2 cups water', 2)).toBe('3 cups water');
     expect(s('2½ cups sugar', 2)).toBe('5 cups sugar');
   });
@@ -64,12 +64,17 @@ describe('scaleIngredientLine — the production bugs', () => {
   it('rounds like a cook', () => {
     expect(s('1 egg', 1.0833)).toBe('1 egg');
     expect(s('2 cloves garlic', 1.0833)).toBe('2 cloves garlic');
-    expect(s('3 eggs', 1.5)).toBe('4½ eggs');
+    expect(s('3 eggs', 1.5)).toBe('5 eggs');
+    expect(s('3 eggs', 0.5)).toBe('2 eggs');
+    expect(s('1 onion', 0.5)).toBe('½ onion');
+    expect(s('1 egg', 2)).toBe('2 eggs');
+    expect(s('2 large eggs', 0.5)).toBe('1 large egg');
+    expect(s('1 onion', 1.75)).toBe('2 onions');
     expect(s('1 tsp cumin', 1.0833)).toBe('1⅛ tsp cumin'); // ⅛ tsp is a real measure
     expect(s('250 g flour', 1.1)).toBe('275 g flour');
     expect(s('333 ml stock', 1)).toBe('333 ml stock');
-    expect(s('1 cup rice', 1.1)).toBe('1⅛ cup rice');
-    expect(s('1 cup rice', 1.3)).toBe('1⅓ cup rice');
+    expect(s('1 cup rice', 1.1)).toBe('1⅛ cups rice');
+    expect(s('1 cup rice', 1.3)).toBe('1⅓ cups rice');
   });
   it('leaves unscalable lines alone', () => {
     expect(s('Salt to taste', 2)).toBe('Salt to taste');
@@ -83,6 +88,34 @@ describe('scaleIngredientLine — the production bugs', () => {
     expect(scaleIngredientLines(['1/2 cup milk'], 4, 4)).toEqual(['1/2 cup milk']);
   });
   it('scaleIngredientLines uses from/to', () => {
-    expect(scaleIngredientLines(['1 cup rice', '2 eggs'], 4, 8)).toEqual(['2 cup rice', '4 eggs']);
+    expect(scaleIngredientLines(['1 cup rice', '2 eggs'], 4, 8)).toEqual(['2 cups rice', '4 eggs']);
+  });
+});
+
+describe('scaleIngredientLine — critique cases (Tikka Masala 4→7 and 4→1)', () => {
+  const s = scaleIngredientLine;
+  it('countables round to whole numbers and later parentheticals scale', () => {
+    expect(s('6 cloves garlic, minced (~1½ tbsp)', 1.75)).toBe('11 cloves garlic, minced (~2⅔ tbsp)');
+    expect(s('1 clove garlic', 2)).toBe('2 cloves garlic');
+  });
+  it('tiny tablespoon amounts become teaspoons; tiny cup amounts become tablespoons', () => {
+    expect(s('1 tbsp fresh ginger (grated)', 0.25)).toBe('¾ tsp fresh ginger (grated)');
+    expect(s('1 tablespoon vegetable oil', 0.25)).toBe('¾ teaspoon vegetable oil');
+    expect(s('1 - 2 tbsp oil', 0.25)).toBe('¾ - 1½ tsp oil');
+    expect(s('¼ cup water', 0.25)).toBe('1 tbsp water');
+    expect(s('1⅓ cups (400ml) tomato passata', 0.25)).toBe('⅓ cup (100 ml) tomato passata'.replace(' ml', 'ml'));
+  });
+  it('units agree in number', () => {
+    expect(s('1 cup flour', 2)).toBe('2 cups flour');
+    expect(s('2 cups flour', 0.5)).toBe('1 cup flour');
+    expect(s('2 tablespoons sugar', 0.5)).toBe('1 tablespoon sugar');
+    expect(s('1 teaspoon salt', 3)).toBe('3 teaspoons salt');
+  });
+  it('sum parentheticals scale each part; container sizes still never scale', () => {
+    expect(s('100 ml (⅓ cup + 1 tbsp) cream', 0.25)).toBe('25 ml (1⅓ tbsp + ¾ tsp) cream');
+    expect(s('2 cans (400 g each) chopped tomatoes', 2)).toBe('4 cans (400 g each) chopped tomatoes');
+    expect(s('1 can (14 oz) black beans', 2)).toBe('2 cans (14 oz) black beans');
+    expect(s('1 (14 oz) can black beans', 2)).toBe('2 (14 oz) can black beans');
+    expect(s('juice of 1 lemon', 2)).toBe('juice of 1 lemon');
   });
 });
