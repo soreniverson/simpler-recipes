@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getSharedRecipe, isKVConfigured } from '../../../utils/kv';
 import { memoryStorage } from './index';
+import { validateRecipe, safeHref } from '../../../lib/recipe/validate';
 
 export const prerender = false;
 
@@ -23,12 +24,19 @@ export const GET: APIRoute = async ({ params }) => {
       if (kvData) {
         data = { recipe: kvData.recipe, sourceUrl: kvData.sourceUrl };
       }
-    } else {
+    } else if (import.meta.env.DEV) {
       // Fallback to in-memory storage for local development
       const memData = memoryStorage.get(id);
       if (memData) {
-        data = { recipe: memData.recipe, sourceUrl: memData.sourceUrl };
+        data = { recipe: memData.recipe, sourceUrl: memData.sourceUrl ?? undefined };
       }
+    }
+
+    // Defence in depth: entries written before validation existed are re-validated on read.
+    if (data) {
+      const v = validateRecipe(data.recipe);
+      if (!v.ok) data = null;
+      else data = { recipe: v.recipe, sourceUrl: safeHref(data.sourceUrl) ?? undefined };
     }
 
     if (!data) {
@@ -48,7 +56,7 @@ export const GET: APIRoute = async ({ params }) => {
       }),
       {
         status: 200,
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Cache-Control': 'private, max-age=300' },
       }
     );
   } catch (error) {

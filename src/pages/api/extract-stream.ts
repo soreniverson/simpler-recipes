@@ -135,7 +135,8 @@ export const GET: APIRoute = async ({ request }) => {
   // Identity for the AI quota (only consulted if we need the AI path).
   const userId = await getUserIdFromRequest(request);
   const isAuthenticated = !!userId;
-  const token = isAuthenticated ? userId : getTokenFromRequest(request);
+  // Quota identity for the AI path: user id → anonymous cookie token → IP (never "unlimited").
+  const token = isAuthenticated ? userId : getTokenFromRequest(request) ?? ip;
 
   const stream = new ReadableStream({
     async start(controller) {

@@ -11,16 +11,7 @@ const EXTRACT_PREFIX = 'extract:';
 const TTL_SECONDS = 365 * 24 * 60 * 60;
 
 export interface SharedRecipe {
-  recipe: {
-    title: string;
-    ingredients: string[];
-    instructions: string[];
-    prepTime?: string;
-    cookTime?: string;
-    totalTime?: string;
-    servings?: string;
-    image?: string;
-  };
+  recipe: Recipe;
   sourceUrl?: string;
   createdAt: number;
 }

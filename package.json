@@ -19,18 +19,19 @@
     "@astrojs/react": "^4.4.2",
     "@astrojs/sitemap": "^3.7.0",
     "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vercel": "^9.0.4",
+    "@astrojs/vercel": "^9.0.5",
     "@supabase/supabase-js": "^2.90.1",
     "@vercel/kv": "^3.0.0",
-    "astro": "^5.16.11",
+    "astro": "^5.18.2",
     "css-select": "^5.2.2",
     "domutils": "^3.2.2",
     "entities": "^6.0.1",
     "fuse.js": "^7.1.0",
     "htmlparser2": "^10.1.0",
-    "nanoid": "^5.0.5",
+    "nanoid": "^6.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
