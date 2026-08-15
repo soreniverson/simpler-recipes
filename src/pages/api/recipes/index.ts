@@ -4,10 +4,16 @@ import { join } from 'path';
 
 export const prerender = false;
 
+// The catalog is static per deployment; parse it once per lambda instance.
+let cache: any = null;
+function loadCatalog() {
+  if (!cache) cache = JSON.parse(readFileSync(join(process.cwd(), 'recipe-data', 'all-recipes.json'), 'utf-8'));
+  return cache;
+}
+
 export const GET: APIRoute = async () => {
   try {
-    const dataPath = join(process.cwd(), 'recipe-data', 'all-recipes.json');
-    const data = JSON.parse(readFileSync(dataPath, 'utf-8'));
+    const data = loadCatalog();
 
     // Return just collections metadata (not full recipes) for the index
     const response = {

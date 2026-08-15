@@ -68,7 +68,7 @@ function getData() {
 function saveData(data) {
   if (typeof window === 'undefined') return;
 
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch { /* private mode / quota — keep in-memory state, still notify listeners */ }
   window.dispatchEvent(new CustomEvent('meal-plan-changed', {
     detail: { plans: data.plans }
   }));

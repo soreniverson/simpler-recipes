@@ -6,6 +6,9 @@ export const prerender = false;
 
 export const GET: APIRoute = async ({ params }) => {
   const { slug } = params;
+  if (!slug || !/^[a-z0-9-]{1,80}$/.test(slug)) {
+    return new Response(JSON.stringify({ error: 'Collection not found' }), { status: 404, headers: { 'Content-Type': 'application/json' } });
+  }
 
   try {
     const dataPath = join(process.cwd(), 'recipe-data', `${slug}.json`);
