@@ -237,7 +237,7 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
   /* ---------- Focus ---------- */
   :focus-visible { @apply outline outline-2 outline-offset-2 outline-sand-700; }
   /* Text fields show focus with a ring, not just a 1px border shade. */
-  input:focus-visible, textarea:focus-visible { @apply outline-none ring-2 ring-sand-700/60 ring-offset-0; }
+  input:focus-visible, textarea:focus-visible { @apply outline-none ring-2 ring-sand-500; }
 
   /* ---------- Print: a one-or-two page recipe card, always light ---------- */
   @media print {
