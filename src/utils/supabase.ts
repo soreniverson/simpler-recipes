@@ -90,20 +90,23 @@ export async function getUserIdFromRequest(request: Request): Promise<string | n
     }
   });
 
-  // Look for Supabase auth token cookie (sb-<project-ref>-auth-token)
-  const authCookieName = Object.keys(cookies).find(
-    (name) => name.startsWith('sb-') && name.endsWith('-auth-token')
-  );
-
-  if (!authCookieName) return null;
+  // Our own bridge cookie (set client-side from the supabase-js session), or a legacy
+  // sb-<ref>-auth-token cookie if a future SSR setup writes one.
+  let accessToken: string | null = cookies['sr_auth'] ? decodeURIComponent(cookies['sr_auth']) : null;
+  if (!accessToken) {
+    const authCookieName = Object.keys(cookies).find((name) => name.startsWith('sb-') && name.endsWith('-auth-token'));
+    if (authCookieName) {
+      try {
+        const parsed = JSON.parse(decodeURIComponent(cookies[authCookieName]));
+        accessToken = parsed?.access_token ?? null;
+      } catch {
+        accessToken = null;
+      }
+    }
+  }
+  if (!accessToken || !/^[A-Za-z0-9_.-]{20,}$/.test(accessToken)) return null;
 
   try {
-    // The cookie value is a base64-encoded JSON with access_token
-    const cookieValue = decodeURIComponent(cookies[authCookieName]);
-    const parsed = JSON.parse(cookieValue);
-    const accessToken = parsed?.access_token;
-
-    if (!accessToken) return null;
 
     // Verify the token by calling Supabase
     const { createClient } = await import('@supabase/supabase-js');

@@ -1,533 +1,434 @@
-import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
-import { createSearchIndex, searchRecipes, getPrimaryMatch } from '../utils/searchIndex';
+import { useState, useEffect, useMemo, useCallback, useRef, lazy, Suspense } from 'react';
+import { createSearchIndex, searchRecipes } from '../utils/searchIndex';
 import { getAnonymousToken } from '../utils/anonymousToken';
-import AuthModal from './AuthModal';
+import { looksLikeUrl, normalizeUrl } from '../lib/url';
+import { rememberRecipe } from '../lib/recentRecipes';
+import { hostnameOf } from '../lib/recipe/validate';
 
-/**
- * Detect if input looks like a URL
- */
-function looksLikeUrl(input) {
-  const trimmed = input.trim();
-  if (!trimmed) return false;
+const AuthModal = lazy(() => import('./AuthModal'));
 
-  // Starts with http:// or https://
-  if (/^https?:\/\//i.test(trimmed)) return true;
+/* ---------- icons (local; tiny) ---------- */
+const SearchIcon = ({ className = 'w-5 h-5' }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="11" cy="11" r="7" />
+    <path d="m20 20-3.5-3.5" />
+  </svg>
+);
+const LinkIcon = ({ className = 'w-5 h-5' }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1.1 1.1" />
+    <path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1.1-1.1" />
+  </svg>
+);
+const ArrowIcon = ({ className = 'w-5 h-5' }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M5 12h14M13 6l6 6-6 6" />
+  </svg>
+);
+const CloseIcon = ({ className = 'w-4 h-4' }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" aria-hidden="true">
+    <path d="M6 6l12 12M18 6L6 18" />
+  </svg>
+);
+const Spinner = ({ className = 'w-5 h-5' }) => (
+  <svg className={`${className} animate-spin`} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeOpacity="0.2" strokeWidth="2.5" />
+    <path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+  </svg>
+);
 
-  // Starts with www.
-  if (/^www\./i.test(trimmed)) return true;
-
-  // Contains a domain-like pattern (word.word)
-  if (/^[a-z0-9-]+\.[a-z]{2,}/i.test(trimmed)) return true;
-
-  return false;
-}
-
-function SearchIcon({ className = "w-5 h-5" }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-    </svg>
-  );
-}
-
-function LinkIcon({ className = "w-5 h-5" }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-    </svg>
-  );
-}
-
-function ClearIcon() {
-  return (
-    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  );
-}
-
-function ClockIcon() {
-  return (
-    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
-    </svg>
-  );
-}
-
-function MatchBadge({ field }) {
-  const labels = { title: 'Title', tags: 'Tag', ingredients: 'Ingredient' };
-  const colors = {
-    title: 'bg-amber-100 text-amber-700',
-    tags: 'bg-emerald-100 text-emerald-700',
-    ingredients: 'bg-sky-100 text-sky-700',
-  };
-  return (
-    <span className={`inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium ${colors[field] || 'bg-sand-100 text-sand-600'}`}>
-      {labels[field] || field}
-    </span>
-  );
-}
-
-function SearchResult({ result, onClick }) {
-  const { recipe, matches } = result;
-  const primaryMatch = getPrimaryMatch(matches);
-
-  return (
-    <a
-      href={`/recipes/${recipe.slug}`}
-      onClick={onClick}
-      className="flex items-center gap-3 px-4 py-3 hover:bg-sand-100 transition-colors min-h-[44px]"
-      role="option"
-    >
-      {recipe.image ? (
-        <div className="flex-shrink-0 w-10 h-10 rounded-lg overflow-hidden bg-sand-200">
-          <img src={recipe.image} alt="" width={40} height={40} className="w-full h-full object-cover" loading="lazy" decoding="async" />
-        </div>
-      ) : (
-        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-sand-200 flex items-center justify-center">
-          <svg className="w-4 h-4 text-sand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-        </div>
-      )}
-      <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2">
-          <span className="text-sand-900 text-sm font-medium truncate">{recipe.title}</span>
-          {primaryMatch && primaryMatch !== 'title' && <MatchBadge field={primaryMatch} />}
-        </div>
-        {recipe.totalTime && (
-          <div className="flex items-center gap-1 text-xs text-sand-500">
-            <ClockIcon />
-            {recipe.totalTime}
-          </div>
-        )}
-      </div>
-    </a>
-  );
-}
-
-function SearchDropdown({ results, query, isSearching, onResultClick, isUrl }) {
-  if (isUrl) {
-    return (
-      <div
-        className="absolute top-full left-0 right-0 mt-2 bg-surface rounded-xl shadow-lg border border-sand-400 overflow-hidden z-50 p-4"
-        role="status"
-        aria-live="polite"
-      >
-        <div className="flex items-center gap-3 text-sand-600">
-          <LinkIcon className="w-5 h-5 text-sand-400" aria-hidden="true" />
-          <span className="text-sm">Press Enter to extract recipe from this URL</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (query.trim().length < 2) return null;
-
-  return (
-    <div
-      className="absolute top-full left-0 right-0 mt-2 bg-surface rounded-xl shadow-lg border border-sand-400 overflow-hidden z-50 max-h-[70vh] overflow-y-auto"
-      role="listbox"
-      aria-label="Search results"
-    >
-      {isSearching ? (
-        <div className="text-center py-8" role="status" aria-live="polite">
-          <div className="inline-block w-5 h-5 border-2 border-sand-300 border-t-sand-600 rounded-full animate-spin" aria-hidden="true"></div>
-          <span className="sr-only">Searching...</span>
-        </div>
-      ) : results.length === 0 ? (
-        <div className="text-center py-8 px-4" role="status" aria-live="polite">
-          <p className="text-sand-500 text-sm">No recipes found for "{query}"</p>
-        </div>
-      ) : (
-        <div>
-          <div className="px-4 py-2 text-xs text-sand-500 border-b border-sand-100" role="status" aria-live="polite">
-            {results.length} {results.length === 1 ? 'recipe' : 'recipes'} found
-          </div>
-          <div className="divide-y divide-sand-100">
-            {results.slice(0, 8).map((result) => (
-              <SearchResult key={result.recipe.slug} result={result} onClick={onResultClick} />
-            ))}
-          </div>
-          {results.length > 8 && (
-            <div className="px-4 py-2 text-xs text-sand-400 border-t border-sand-100 text-center">
-              +{results.length - 8} more results
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
-// Cached search data and Fuse instance (shared across all SmartInput instances)
-let cachedSearchData = null;
-let cachedFuseInstance = null;
-let searchDataPromise = null;
-
-async function loadSearchData() {
-  // Return cached data if available
-  if (cachedSearchData) {
-    return cachedSearchData;
-  }
-
-  // Return pending promise if already loading
-  if (searchDataPromise) {
-    return searchDataPromise;
-  }
-
-  // Load search data on-demand
-  searchDataPromise = fetch('/search-index.json')
-    .then((res) => res.json())
+/* ---------- search index (module-level cache, Fuse loaded with it) ---------- */
+let searchData = null;
+let fuse = null;
+let loading = null;
+function loadSearch() {
+  if (fuse) return Promise.resolve(fuse);
+  if (loading) return loading;
+  loading = fetch('/search-index.json')
+    .then((r) => r.json())
     .then((data) => {
-      cachedSearchData = data;
-      cachedFuseInstance = createSearchIndex(data);
-      return data;
+      searchData = data;
+      fuse = createSearchIndex(data);
+      return fuse;
     })
-    .catch((err) => {
-      console.error('Failed to load search index:', err);
-      searchDataPromise = null;
+    .catch(() => {
+      loading = null;
       return null;
     });
-
-  return searchDataPromise;
+  return loading;
 }
 
-export default function SmartInput({
-  variant = 'default', // 'default' | 'header'
-  placeholder = 'Paste a URL or search recipes...',
-  showKeyboardHint = false,
-  onUrlSubmit,
-  autoFocus = false,
-}) {
+const ERROR_ACTIONS = new Set(['blocked-by-site', 'timeout', 'network-error', 'http-error', 'no-recipe', 'too-large', 'unsupported-content-type']);
+
+/**
+ * The paste-or-search box.
+ *
+ *  - paste a URL → runs immediately (a URL pasted into a "paste a recipe link" box is unambiguous)
+ *  - type/paste anything else → instant local search with ↑/↓/Enter/Esc (ARIA combobox)
+ *  - extraction progress shows inline ("Fetching recipetineats.com…"), Esc/× cancels
+ *  - errors are plain English with the server's hint and a way forward
+ */
+export default function SmartInput({ variant = 'default', placeholder = 'Paste a recipe link, or search', autoFocus = false, id = 'recipe-url', bindShortcut = true }) {
   const [value, setValue] = useState('');
   const [results, setResults] = useState([]);
-  const [isSearching, setIsSearching] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isExtracting, setIsExtracting] = useState(false);
-  const [extractionProgress, setExtractionProgress] = useState('');
-  const [error, setError] = useState(null);
-  const [isDataLoaded, setIsDataLoaded] = useState(!!cachedSearchData);
-  const [limitReached, setLimitReached] = useState(false);
-  const [limitIsAuthenticated, setLimitIsAuthenticated] = useState(false);
-  const [usageInfo, setUsageInfo] = useState(null);
-  const containerRef = useRef(null);
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(-1);
+  const [showAll, setShowAll] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [progress, setProgress] = useState('');
+  const [error, setError] = useState(null); // { code, error, hint, url }
+  const [limit, setLimit] = useState(null); // { message, isAuthenticated, url }
+  const [authOpen, setAuthOpen] = useState(false);
   const inputRef = useRef(null);
+  const boxRef = useRef(null);
+  const esRef = useRef(null);
+  const reqRef = useRef(0);
+  const listId = `${id}-results`;
 
   const isUrl = looksLikeUrl(value);
-
-  // Initialize anonymous token on mount
-  useEffect(() => {
-    getAnonymousToken();
-  }, []);
-
-  // Load search data when input is focused or user starts typing
-  const ensureSearchData = useCallback(async () => {
-    if (!isDataLoaded) {
-      await loadSearchData();
-      setIsDataLoaded(true);
-    }
-  }, [isDataLoaded]);
-
-  // Debounced search (only when not a URL)
-  useEffect(() => {
-    if (isUrl) {
-      setResults([]);
-      return;
-    }
-
-    const trimmedQuery = value.trim();
-    if (trimmedQuery.length < 2) {
-      setResults([]);
-      setIsOpen(false);
-      return;
-    }
-
-    setIsSearching(true);
-    setIsOpen(true);
-
-    const timeoutId = setTimeout(async () => {
-      // Ensure search data is loaded
-      await ensureSearchData();
-
-      if (cachedFuseInstance) {
-        const searchResults = searchRecipes(cachedFuseInstance, trimmedQuery);
-        setResults(searchResults);
-      }
-      setIsSearching(false);
-    }, 150);
-
-    return () => clearTimeout(timeoutId);
-  }, [value, isUrl, ensureSearchData]);
-
-  // Show URL hint when URL detected
-  useEffect(() => {
-    if (isUrl && value.trim().length > 5) {
-      setIsOpen(true);
-    }
-  }, [isUrl, value]);
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (containerRef.current && !containerRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  // Keyboard shortcuts
-  useEffect(() => {
-    function handleKeyDown(event) {
-      if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
-        event.preventDefault();
-        inputRef.current?.focus();
-        // Preload search data when user uses keyboard shortcut
-        ensureSearchData();
-      }
-      if (event.key === 'Escape') {
-        setIsOpen(false);
-        inputRef.current?.blur();
-      }
-    }
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [ensureSearchData]);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!isUrl) return;
-
-    setIsExtracting(true);
-    setExtractionProgress('Starting extraction...');
-    setError(null);
-    setIsOpen(false);
-
-    let urlToFetch = value.trim();
-    if (!/^https?:\/\//i.test(urlToFetch)) {
-      urlToFetch = 'https://' + urlToFetch;
-    }
-
-    // Use SSE endpoint for progress updates
-    const eventSource = new EventSource(`/api/extract-stream?url=${encodeURIComponent(urlToFetch)}`);
-
-    eventSource.addEventListener('progress', (event) => {
-      try {
-        const data = JSON.parse(event.data);
-        setExtractionProgress(data.step || 'Processing...');
-      } catch {
-        // Ignore parse errors
-      }
-    });
-
-    eventSource.addEventListener('limit_reached', (event) => {
-      eventSource.close();
-      try {
-        const data = JSON.parse(event.data);
-        setLimitReached(true);
-        setLimitIsAuthenticated(!!data.isAuthenticated);
-        setUsageInfo({ current: data.current, limit: data.limit });
-      } catch {
-        setLimitReached(true);
-      }
-      setIsExtracting(false);
-      setExtractionProgress('');
-    });
-
-    eventSource.addEventListener('usage', (event) => {
-      try {
-        const data = JSON.parse(event.data);
-        setUsageInfo(data);
-      } catch {
-        // Ignore parse errors
-      }
-    });
-
-    eventSource.addEventListener('complete', (event) => {
-      eventSource.close();
-      try {
-        const data = JSON.parse(event.data);
-
-        // Store extraction with usage info for banner display
-        localStorage.setItem('simpler-recipes-extracted', JSON.stringify({
-          recipe: data.recipe,
-          sourceUrl: urlToFetch,
-          isLastFree: usageInfo?.isLastFree || false,
-          remaining: usageInfo?.remaining ?? null,
-        }));
-
-        if (onUrlSubmit) {
-          onUrlSubmit(data.recipe, urlToFetch);
-        } else {
-          window.location.href = '/recipe';
-        }
-      } catch (err) {
-        setError('Failed to parse recipe data');
-        setIsExtracting(false);
-        setExtractionProgress('');
-      }
-    });
-
-    eventSource.addEventListener('error', (event) => {
-      eventSource.close();
-      try {
-        // Try to get error message from event data
-        if (event.data) {
-          const data = JSON.parse(event.data);
-          setError(data.error || 'Failed to extract recipe');
-        } else {
-          setError('Connection lost during extraction');
-        }
-      } catch {
-        setError('Failed to extract recipe');
-      }
-      setIsExtracting(false);
-      setExtractionProgress('');
-    });
-
-    // Handle connection errors
-    eventSource.onerror = () => {
-      if (eventSource.readyState === EventSource.CLOSED) {
-        // Already handled by error event
-        return;
-      }
-      eventSource.close();
-      setError('Connection failed');
-      setIsExtracting(false);
-      setExtractionProgress('');
-    };
-  };
-
-  const handleClear = useCallback(() => {
-    setValue('');
-    setResults([]);
-    setIsOpen(false);
-    setError(null);
-  }, []);
-
-  const handleResultClick = useCallback(() => {
-    setIsOpen(false);
-    setValue('');
-  }, []);
-
-  // Limit reached - show different UI based on auth status
-  if (limitReached) {
-    // Authenticated users see a simple message, not an auth modal
-    if (limitIsAuthenticated) {
-      return (
-        <div className="fixed inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center px-4 z-50">
-          <div className="bg-surface rounded-2xl shadow-lg border border-sand-200 p-6 max-w-sm w-full text-center">
-            <div className="w-12 h-12 rounded-full bg-sand-100 flex items-center justify-center mx-auto mb-4">
-              <svg className="w-6 h-6 text-sand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold text-sand-900 mb-2">Monthly limit reached</h3>
-            <p className="text-sand-600 text-sm mb-6">
-              You've used all {usageInfo?.limit || 30} of your monthly extractions. Your limit resets at the start of next month.
-            </p>
-            <button
-              onClick={() => setLimitReached(false)}
-              className="w-full px-4 py-2 bg-sand-800 text-white rounded-lg hover:bg-sand-900 transition-colors"
-            >
-              Got it
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    // Anonymous users see auth modal
-    return (
-      <AuthModal
-        isOpen={true}
-        onClose={() => setLimitReached(false)}
-        title="Create a free account"
-        description={`You've used your ${usageInfo?.limit || 3} free extractions. Sign up to get 30 extractions per month.`}
-      />
-    );
-  }
-
-  // Loading state with progress
-  if (isExtracting) {
-    return (
-      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center px-4 z-50">
-        <div className="text-center max-w-sm" role="status" aria-live="polite">
-          <div className="inline-block w-8 h-8 border-2 border-sand-300 border-t-sand-700 rounded-full animate-spin mb-4"></div>
-          <p className="text-sand-600 text-base">{extractionProgress || 'Extracting recipe...'}</p>
-        </div>
-      </div>
-    );
-  }
-
   const isHeader = variant === 'header';
 
+  useEffect(() => {
+    getAnonymousToken();
+    return () => esRef.current?.close();
+  }, []);
+
+  // ---- search ----
+  useEffect(() => {
+    if (isUrl || value.trim().length < 2) {
+      setResults([]);
+      setActive(-1);
+      if (!isUrl) setOpen(false);
+      return;
+    }
+    const q = value.trim();
+    const my = ++reqRef.current;
+    const t = setTimeout(async () => {
+      const f = await loadSearch();
+      if (my !== reqRef.current) return; // stale
+      setResults(f ? searchRecipes(f, q, 24) : []);
+      setActive(-1);
+      setShowAll(false);
+      setOpen(true);
+    }, 120);
+    return () => clearTimeout(t);
+  }, [value, isUrl]);
+
+  // ---- outside click ----
+  useEffect(() => {
+    const onDown = (e) => {
+      if (boxRef.current && !boxRef.current.contains(e.target)) setOpen(false);
+    };
+    document.addEventListener('mousedown', onDown);
+    return () => document.removeEventListener('mousedown', onDown);
+  }, []);
+
+  // ---- ⌘K ----
+  useEffect(() => {
+    if (!bindShortcut) return;
+    const onKey = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        inputRef.current?.focus();
+        inputRef.current?.select();
+        loadSearch();
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [bindShortcut]);
+
+  const cancel = useCallback(() => {
+    esRef.current?.close();
+    esRef.current = null;
+    setBusy(false);
+    setProgress('');
+  }, []);
+
+  const extract = useCallback(
+    (raw) => {
+      const n = normalizeUrl(raw);
+      if (!n.ok) {
+        setError({ code: 'invalid-url', error: "That doesn't look like a web address.", hint: 'Paste the full link to the recipe page, starting with https://.' });
+        return;
+      }
+      const url = n.url;
+      const host = hostnameOf(url) || 'the site';
+      setError(null);
+      setLimit(null);
+      setOpen(false);
+      setBusy(true);
+      setProgress(`Fetching ${host}…`);
+      esRef.current?.close();
+      const es = new EventSource(`/api/extract-stream?url=${encodeURIComponent(url)}`);
+      esRef.current = es;
+      const stop = () => {
+        es.close();
+        if (esRef.current === es) esRef.current = null;
+      };
+      es.addEventListener('progress', (e) => {
+        try {
+          setProgress(JSON.parse(e.data).step || 'Working…');
+        } catch {}
+      });
+      es.addEventListener('limit_reached', (e) => {
+        stop();
+        try {
+          const d = JSON.parse(e.data);
+          setLimit({ message: d.message, isAuthenticated: !!d.isAuthenticated, url });
+        } catch {
+          setLimit({ message: 'You have used your free AI extractions.', isAuthenticated: false, url });
+        }
+        setBusy(false);
+        setProgress('');
+      });
+      es.addEventListener('complete', (e) => {
+        stop();
+        try {
+          const d = JSON.parse(e.data);
+          const rid = rememberRecipe(d.recipe, url);
+          setProgress('Done');
+          window.location.assign(`/recipe?r=${rid}`);
+        } catch {
+          setError({ code: 'server-error', error: 'Something went wrong on our side.', hint: 'Please try again.' });
+          setBusy(false);
+          setProgress('');
+        }
+      });
+      // Server "error" events carry data; the native EventSource error does not.
+      es.addEventListener('error', (e) => {
+        if (esRef.current !== es) return; // already handled
+        stop();
+        let payload = null;
+        try {
+          if (e.data) payload = JSON.parse(e.data);
+        } catch {}
+        setError(payload && payload.error ? payload : { code: 'network-error', error: `We couldn't reach ${host}.`, hint: 'Check your connection and try again.', url });
+        setBusy(false);
+        setProgress('');
+      });
+    },
+    []
+  );
+
+  // Programmatic "run this URL" (homepage examples). Same path as a paste.
+  useEffect(() => {
+    const el = inputRef.current;
+    if (!el) return;
+    const onExtract = (e) => {
+      const url = e.detail?.url;
+      if (!url) return;
+      setValue(url);
+      extract(url);
+    };
+    el.addEventListener('sr:extract', onExtract);
+    return () => el.removeEventListener('sr:extract', onExtract);
+  }, [extract]);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (busy) return;
+    if (isUrl) return extract(value.trim());
+    if (open && active >= 0 && results[active]) {
+      window.location.assign(`/recipes/${results[active].recipe.slug}/`);
+      return;
+    }
+    if (results.length) window.location.assign(`/recipes/${results[0].recipe.slug}/`);
+  };
+
+  const onPaste = (e) => {
+    const text = (e.clipboardData || window.clipboardData)?.getData('text') || '';
+    if (looksLikeUrl(text.trim())) {
+      e.preventDefault();
+      setValue(text.trim());
+      extract(text.trim());
+    }
+  };
+
+  const onKeyDown = (e) => {
+    if (e.key === 'Escape') {
+      if (busy) cancel();
+      else if (open) setOpen(false);
+      else if (value) setValue('');
+      else inputRef.current?.blur();
+      setError(null);
+      return;
+    }
+    if (!open || !results.length) return;
+    const shown = showAll ? results.length : Math.min(results.length, 8);
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActive((a) => (a + 1) % shown);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActive((a) => (a <= 0 ? shown - 1 : a - 1));
+    } else if (e.key === 'Home' && active >= 0) {
+      e.preventDefault();
+      setActive(0);
+    } else if (e.key === 'End' && active >= 0) {
+      e.preventDefault();
+      setActive(shown - 1);
+    }
+  };
+
+  const shownResults = showAll ? results : results.slice(0, 8);
+  const activeId = active >= 0 && shownResults[active] ? `${listId}-opt-${active}` : undefined;
+
+  const inputClass = isHeader
+    ? 'h-10 pl-10 pr-10 rounded-lg text-[14px]'
+    : 'h-14 sm:h-16 pl-12 sm:pl-14 pr-14 rounded-2xl text-[16px] sm:text-[18px]';
+
   return (
-    <div ref={containerRef} className={`relative ${isHeader ? 'flex-1 max-w-md' : 'w-full'}`}>
-      <form onSubmit={handleSubmit}>
+    <div ref={boxRef} className={`relative ${isHeader ? 'w-full max-w-md' : 'w-full'}`}>
+      <form onSubmit={onSubmit} role="search" aria-label={isHeader ? 'Search recipes or paste a link' : 'Paste a recipe link'} noValidate>
         <div className="relative">
-          <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-            {isUrl ? (
-              <LinkIcon className={`${isHeader ? 'w-4 h-4' : 'w-5 h-5'} text-sand-400`} />
-            ) : (
-              <SearchIcon className={`${isHeader ? 'w-4 h-4' : 'w-5 h-5'} text-sand-400`} />
-            )}
+          <div className={`absolute inset-y-0 left-0 flex items-center pointer-events-none text-sand-500 ${isHeader ? 'pl-3' : 'pl-4 sm:pl-5'}`}>
+            {busy ? <Spinner className={isHeader ? 'w-4 h-4' : 'w-5 h-5'} /> : isUrl ? <LinkIcon className={isHeader ? 'w-4 h-4' : 'w-5 h-5'} /> : <SearchIcon className={isHeader ? 'w-4 h-4' : 'w-5 h-5'} />}
           </div>
           <input
             ref={inputRef}
+            id={id}
             type="text"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
+            value={busy ? progress : value}
+            readOnly={busy}
+            onChange={(e) => {
+              setValue(e.target.value);
+              if (error) setError(null);
+              if (limit) setLimit(null);
+            }}
+            onPaste={onPaste}
+            onKeyDown={onKeyDown}
             onFocus={() => {
-              ensureSearchData(); // Preload search data on focus
-              if (value.trim().length >= 2 || isUrl) setIsOpen(true);
+              loadSearch();
+              if (!isUrl && value.trim().length >= 2) setOpen(true);
             }}
             placeholder={placeholder}
             autoFocus={autoFocus}
-            className={`
-              w-full transition-all
-              ${isHeader
-                ? 'pl-10 pr-16 py-2 bg-surface border border-sand-400 rounded-lg text-sand-900 text-sm placeholder:text-sand-500 focus:outline-none focus:ring-2 focus:ring-sand-500 focus:border-sand-500'
-                : 'pl-12 pr-10 py-4 bg-surface border border-sand-400 rounded-xl text-sand-900 text-base placeholder:text-sand-500 focus:outline-none focus:ring-2 focus:ring-sand-500 focus:border-sand-500'
-              }
-            `}
-            aria-label="Paste a URL or search recipes"
+            autoComplete="off"
+            autoCapitalize="none"
+            autoCorrect="off"
+            spellCheck={false}
+            enterKeyHint={isUrl ? 'go' : 'search'}
+            inputMode="search"
+            role="combobox"
+            aria-expanded={open && !isUrl && results.length > 0}
+            aria-controls={listId}
+            aria-activedescendant={activeId}
+            aria-autocomplete="list"
+            aria-busy={busy}
+            aria-describedby={error ? `${id}-error` : undefined}
+            className={`w-full bg-surface border border-sand-300 text-sand-900 placeholder:text-sand-500 focus:border-sand-700 focus:outline-none transition-colors ${busy ? 'text-sand-600' : ''} ${inputClass}`}
           />
-          {value && (
-            <button
-              type="button"
-              onClick={handleClear}
-              className={`absolute inset-y-0 flex items-center justify-center text-sand-400 hover:text-sand-600 transition-colors w-11 ${isHeader ? 'right-6' : 'right-1'}`}
-              aria-label="Clear search"
-            >
-              <ClearIcon />
-            </button>
-          )}
-          {isHeader && showKeyboardHint && !value && (
-            <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
-              <kbd className="hidden lg:inline-flex items-center gap-1 px-1.5 py-0.5 text-[10px] text-sand-400 bg-sand-100 rounded border border-sand-200">
-                <span className="text-xs">⌘</span>K
+          <div className={`absolute inset-y-0 right-0 flex items-center ${isHeader ? 'pr-1' : 'pr-2'}`}>
+            {busy ? (
+              <button type="button" onClick={cancel} className="btn-icon" aria-label="Cancel">
+                <CloseIcon />
+              </button>
+            ) : isUrl ? (
+              <button type="submit" className={`inline-flex items-center justify-center rounded-xl bg-sand-900 text-sand-50 hover:bg-sand-800 ${isHeader ? 'w-8 h-8 rounded-md' : 'w-11 h-11'}`} aria-label="Get recipe">
+                <ArrowIcon className={isHeader ? 'w-4 h-4' : 'w-5 h-5'} />
+              </button>
+            ) : value ? (
+              <button type="button" onClick={() => { setValue(''); setError(null); inputRef.current?.focus(); }} className="btn-icon" aria-label="Clear">
+                <CloseIcon />
+              </button>
+            ) : isHeader ? (
+              <kbd className="hidden lg:inline-flex items-center gap-0.5 mr-2 px-1.5 h-6 text-[11px] text-sand-500 bg-sand-100 rounded border border-sand-200 pointer-events-none" aria-hidden="true">
+                ⌘K
               </kbd>
-            </div>
-          )}
+            ) : null}
+          </div>
         </div>
       </form>
 
-      {error && (
-        <p className="mt-2 text-red-600 text-sm" role="alert">{error}</p>
+      {/* Errors */}
+      {error && !busy && (
+        <div id={`${id}-error`} role="alert" className={`mt-3 rounded-xl border border-sand-300 bg-sand-50 ${isHeader ? 'absolute left-0 right-0 z-50 shadow-md p-3 text-[13px]' : 'p-4 text-[15px]'}`}>
+          <p className="text-sand-900 font-medium">{error.error}</p>
+          {error.hint && <p className="text-sand-600 mt-1">{error.hint}</p>}
+          {ERROR_ACTIONS.has(error.code) && (
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+              {error.url && (
+                <a href={error.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800">
+                  Open the original ↗
+                </a>
+              )}
+              {error.code !== 'no-recipe' && (
+                <button type="button" onClick={() => extract(value)} className="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800">
+                  Try again
+                </button>
+              )}
+            </div>
+          )}
+        </div>
       )}
 
-      {isOpen && (
-        <SearchDropdown
-          results={results}
-          query={value}
-          isSearching={isSearching}
-          onResultClick={handleResultClick}
-          isUrl={isUrl}
-        />
+      {/* AI quota reached */}
+      {limit && !busy && (
+        <div role="status" className={`mt-3 rounded-xl border border-sand-300 bg-sand-50 ${isHeader ? 'absolute left-0 right-0 z-50 shadow-md p-3 text-[13px]' : 'p-4 text-[15px]'}`}>
+          <p className="text-sand-900 font-medium">This page needs our AI reader</p>
+          <p className="text-sand-600 mt-1">{limit.message}</p>
+          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+            {!limit.isAuthenticated && (
+              <button type="button" onClick={() => setAuthOpen(true)} className="btn-primary btn-sm">
+                Create free account
+              </button>
+            )}
+            <a href={limit.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800">
+              Open the original ↗
+            </a>
+          </div>
+        </div>
+      )}
+
+      {/* Search results */}
+      {open && !isUrl && !busy && value.trim().length >= 2 && (
+        <div className={`absolute left-0 right-0 z-50 mt-2 rounded-xl border border-sand-200 bg-surface shadow-md overflow-hidden ${isHeader ? '' : 'sm:rounded-2xl'}`}>
+          {results.length === 0 ? (
+            <div className="px-4 py-5 text-[14px] text-sand-600" role="status">
+              Nothing in our recipes for “{value.trim()}”. Paste a link to get any recipe.
+            </div>
+          ) : (
+            <>
+              <ul id={listId} role="listbox" aria-label="Recipe results" className="max-h-[60vh] overflow-y-auto divide-y divide-sand-100">
+                {shownResults.map((r, i) => (
+                  <li key={r.recipe.slug} role="option" id={`${listId}-opt-${i}`} aria-selected={i === active}>
+                    <a
+                      href={`/recipes/${r.recipe.slug}/`}
+                      className={`flex items-center gap-3 px-3 sm:px-4 py-2.5 min-h-[52px] ${i === active ? 'bg-sand-100' : 'hover:bg-sand-100/70'}`}
+                      onMouseEnter={() => setActive(i)}
+                      tabIndex={-1}
+                    >
+                      {r.recipe.image ? (
+                        <img src={r.recipe.image} alt="" width={40} height={40} loading="lazy" decoding="async" className="w-10 h-10 rounded-lg object-cover bg-sand-100 shrink-0" referrerPolicy="no-referrer" />
+                      ) : (
+                        <span className="w-10 h-10 rounded-lg bg-sand-100 shrink-0" aria-hidden="true" />
+                      )}
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-[15px] text-sand-900 truncate">{r.recipe.title}</span>
+                        {r.recipe.totalTime && <span className="block text-[13px] text-sand-500 tabular">{r.recipe.totalTime}</span>}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              {results.length > 8 && !showAll && (
+                <button type="button" onClick={() => setShowAll(true)} className="w-full text-left px-4 py-2.5 text-[13px] text-sand-600 hover:bg-sand-100 border-t border-sand-100">
+                  Show {results.length - 8} more
+                </button>
+              )}
+              <p className="sr-only" role="status" aria-live="polite">
+                {results.length} results
+              </p>
+            </>
+          )}
+        </div>
+      )}
+
+      {authOpen && (
+        <Suspense fallback={null}>
+          <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} title="Keep going with a free account" description="You've used your free AI reads. A free account gets 30 a month and keeps your favorites on every device." />
+        </Suspense>
       )}
     </div>
   );

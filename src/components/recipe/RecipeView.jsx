@@ -187,10 +187,6 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
             </p>
           )}
 
-          {recipe.description && variant !== 'curated' && (
-            <p className="mt-3 text-[15px] leading-relaxed text-sand-600 max-w-[64ch]">{recipe.description}</p>
-          )}
-
           {/* Actions */}
           <div className="mt-5 flex flex-wrap items-center gap-2 no-print">
             {recipe.instructions.length > 0 && (

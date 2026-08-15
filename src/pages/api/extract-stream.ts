@@ -244,7 +244,7 @@ export const GET: APIRoute = async ({ request }) => {
 
 async function reportUsage(emit: (e: string, d: unknown) => void, token: string | null, isAuthenticated: boolean) {
   if (!token) return;
-  const newCount = await incrementExtraction(token);
+  const newCount = await incrementExtraction(token, isAuthenticated);
   const limit = isAuthenticated ? AUTHENTICATED_EXTRACTION_LIMIT : ANONYMOUS_EXTRACTION_LIMIT;
   const remaining = Math.max(0, limit - newCount);
   emit('usage', { current: newCount, limit, remaining, isLastFree: !isAuthenticated && remaining === 0, isAuthenticated });

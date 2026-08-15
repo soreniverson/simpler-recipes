@@ -17,7 +17,7 @@ export const fuseOptions = {
   minMatchCharLength: 2,
   // Threshold: 0 = exact match, 1 = match anything
   // 0.4 allows for typos while staying relevant
-  threshold: 0.4,
+  threshold: 0.34,
   // Distance: how far to search for a fuzzy match
   distance: 100,
   // Use extended search for better matching
@@ -27,8 +27,8 @@ export const fuseOptions = {
   // Fields to search with weights
   keys: [
     { name: 'title', weight: 1.0 },
-    { name: 'tags', weight: 0.7 },
-    { name: 'ingredients', weight: 0.5 },
+    { name: 'tags', weight: 0.5 },
+    { name: 'ingredients', weight: 0.3 },
   ],
 };
 

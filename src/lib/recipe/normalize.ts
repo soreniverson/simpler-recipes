@@ -30,6 +30,21 @@ export function cleanText(input: unknown): string {
   return s;
 }
 
+/**
+ * Strip cross-references to the source page's notes/video ("(Note 3)", "(see notes)",
+ * "(Note 4, also Video helpful here)") — meaningless once the recipe is on its own.
+ */
+export function stripSourceRefs(s: string): string {
+  return s
+    .replace(/\s*\(\s*(?:see\s+)?notes?\s*\d+(?:\s*(?:,|&|and)\s*\d+)*(?:\s*,\s*[^)]{0,40})?\s*\)/gi, '')
+    .replace(/\s*\(\s*(?:see\s+)?(?:recipe\s+)?notes?\s*\)/gi, '')
+    .replace(/\s*\(\s*(?:see\s+)?video\s*(?:helpful\s+here|above|below)?\s*\)/gi, '')
+    .replace(/\s*\((?:see|refer to)\s+(?:the\s+)?(?:notes?|video)[^)]{0,30}\)/gi, '')
+    .replace(/\s{2,}/g, ' ')
+    .replace(/\s+([,;.!?])/g, '$1')
+    .trim();
+}
+
 /** Remove "1." / "Step 1:" / "1)" numbering prefixes that sites embed in step text. */
 export function stripStepNumbering(step: string): string {
   return step
@@ -336,7 +351,7 @@ function prettifyHeader(h: string): string {
 
 /** Cleanup applied to every ingredient line. */
 export function cleanIngredientLine(raw: unknown): string {
-  let s = cleanText(raw);
+  let s = stripSourceRefs(cleanText(raw));
   if (!s) return '';
   s = s
     .replace(/^[-•*·▢□☐]\s*/, '') // bullets
@@ -433,7 +448,7 @@ export function normalizeInstructions(input: unknown): Section<string>[] {
         return;
       }
     }
-    const t = stripStepNumbering(cleaned);
+    const t = stripSourceRefs(stripStepNumbering(cleaned));
     if (!t) return;
     // Some sites put "Ingredients: …" or a heading as a step — drop pure headers.
     if (t.length < 3) return;

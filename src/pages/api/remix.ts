@@ -220,7 +220,7 @@ Return ONLY valid JSON with this exact structure:
           sendEvent(controller, 'error', { error: 'Generated recipe is incomplete' });
           return;
         }
-        if (quotaToken) await incrementExtraction(quotaToken);
+        if (quotaToken) await incrementExtraction(quotaToken, !!userId);
         sendEvent(controller, 'complete', { recipe: outCheck.recipe });
       } catch (err) {
         console.error('Remix error:', err);

@@ -175,7 +175,7 @@ describe('ingredients', () => {
     expect(groupIngredients(['a', 'b'])).toEqual([{ name: null, items: ['a', 'b'] }]);
   });
   it('cleans ingredient lines', () => {
-    expect(cleanIngredientLine('400 g / 14 oz artichoke hearts in brine ((drained (Note 1)))')).toBe('400 g / 14 oz artichoke hearts in brine, drained (Note 1)');
+    expect(cleanIngredientLine('400 g / 14 oz artichoke hearts in brine ((drained (Note 1)))')).toBe('400 g / 14 oz artichoke hearts in brine (drained)');
     expect(cleanIngredientLine('1 cup ( , chopped)')).toBe('1 cup (chopped)');
     expect(cleanIngredientLine('- 2 eggs')).toBe('2 eggs');
     expect(cleanIngredientLine('▢ 1 tsp salt')).toBe('1 tsp salt');
@@ -247,7 +247,7 @@ import { splitNumberedBlob, cleanTitle } from '../src/lib/recipe/normalize';
 
 describe('round 2 fixes from corpus audit', () => {
   it('cleans WPRM nested parens and price annotations', () => {
-    expect(cleanIngredientLine('500g chicken thigh ((boneless, skinless), cut into 3cm / 2.2" cubes (Note 1))')).toBe('500g chicken thigh (boneless, skinless), cut into 3cm / 2.2" cubes (Note 1)');
+    expect(cleanIngredientLine('500g chicken thigh ((boneless, skinless), cut into 3cm / 2.2" cubes (Note 1))')).toBe('500g chicken thigh (boneless, skinless), cut into 3cm / 2.2" cubes');
     expect(cleanIngredientLine('2 cloves garlic (, minced (~1.5 tbsp))')).toBe('2 cloves garlic, minced (~1.5 tbsp)');
     expect(cleanIngredientLine('1 large onion ((or 2 small onions), sliced)')).toBe('1 large onion (or 2 small onions), sliced');
     expect(cleanIngredientLine('1 lemon (juiced (about 3 tablespoons))')).toBe('1 lemon, juiced (about 3 tablespoons)');
@@ -295,5 +295,16 @@ describe('round 2 fixes from corpus audit', () => {
     expect(cleanTitle('Banana Bread - Simply Recipes', 'Simply Recipes')).toBe('Banana Bread');
     expect(cleanTitle('Salt - Fat - Acid - Heat')).toBe('Salt - Fat - Acid - Heat');
     expect(cleanTitle('Pad Thai')).toBe('Pad Thai');
+  });
+});
+
+import { stripSourceRefs } from '../src/lib/recipe/normalize';
+describe('stripSourceRefs', () => {
+  it('removes note/video references', () => {
+    expect(stripSourceRefs('Remove into bowl. (Note 4, also Video helpful here) Serve.')).toBe('Remove into bowl. Serve.');
+    expect(stripSourceRefs('1 tsp garam masala (Note 2)')).toBe('1 tsp garam masala');
+    expect(stripSourceRefs('2 cups stock (see notes)')).toBe('2 cups stock');
+    expect(stripSourceRefs('Add cream (Notes 2 & 3).')).toBe('Add cream.');
+    expect(stripSourceRefs('Cook until done (about 5 minutes).')).toBe('Cook until done (about 5 minutes).');
   });
 });

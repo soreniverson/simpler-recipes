@@ -14,7 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { cleanIngredientLine, cleanText, durationToMinutes, formatMinutes, stripStepNumbering, cleanTitle } from '../src/lib/recipe/normalize.ts';
+import { cleanIngredientLine, cleanText, durationToMinutes, formatMinutes, stripStepNumbering, cleanTitle, stripSourceRefs as stripNotes } from '../src/lib/recipe/normalize.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '..', 'recipe-data');
@@ -22,17 +22,6 @@ const DRY = process.argv.includes('--dry');
 
 const stats: Record<string, number> = {};
 const bump = (k: string, n = 1) => (stats[k] = (stats[k] || 0) + n);
-
-/** Strip source-site cross references that mean nothing here. */
-function stripNotes(s: string): string {
-  return s
-    .replace(/\s*\(\s*(?:see\s+)?notes?\s*\d+(?:\s*(?:,|&|and)\s*\d+)*(?:\s*,\s*[^)]{0,40})?\s*\)/gi, '')
-    .replace(/\s*\(\s*(?:see\s+)?(?:recipe\s+)?notes?\s*\)/gi, '')
-    .replace(/\s*\(\s*(?:see\s+)?video\s*(?:helpful\s+here)?\s*\)/gi, '')
-    .replace(/\s{2,}/g, ' ')
-    .replace(/\s+([,;.])/g, '$1')
-    .trim();
-}
 
 function fixTime(raw: unknown): string | null {
   if (!raw) return null;

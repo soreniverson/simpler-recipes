@@ -11,6 +11,8 @@ export interface Props {
   noindex?: boolean;
   /** Hide the global header (e.g. focused reading surfaces). */
   hideHeader?: boolean;
+  /** Hide the header search box (the homepage has its own hero input). */
+  headerSearch?: boolean;
 }
 
 const {
@@ -21,6 +23,7 @@ const {
   canonical,
   noindex = false,
   hideHeader = false,
+  headerSearch = true,
 } = Astro.props;
 
 export const SITE_URL = "https://www.simpler.recipes";
@@ -102,7 +105,7 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
     <a href="#main-content" class="skip-link">
       Skip to main content
     </a>
-    {!hideHeader && <Header client:idle />}
+    {!hideHeader && <Header client:idle showSearch={headerSearch} />}
     <slot />
   </body>
 </html>

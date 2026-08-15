@@ -114,18 +114,22 @@ export interface UsageData {
 }
 
 /**
- * Get usage key for a token
+ * Usage key. Anonymous tokens are lifetime (the "3 free" promise); signed-in users get a
+ * per-month key so "30 per month" is actually monthly (the old key was lifetime for everyone).
  */
-function getUsageKey(token: string): string {
-  return `${USAGE_PREFIX}${token}`;
+function getUsageKey(token: string, isAuthenticated = false): string {
+  if (!isAuthenticated) return `${USAGE_PREFIX}${token}`;
+  const d = new Date();
+  const period = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`;
+  return `${USAGE_PREFIX}m:${token}:${period}`;
 }
 
 /**
  * Get current usage for a token
  */
-export async function getUsage(token: string): Promise<UsageData | null> {
+export async function getUsage(token: string, isAuthenticated = false): Promise<UsageData | null> {
   try {
-    return await kv.get<UsageData>(getUsageKey(token));
+    return await kv.get<UsageData>(getUsageKey(token, isAuthenticated));
   } catch {
     return null;
   }
@@ -135,8 +139,8 @@ export async function getUsage(token: string): Promise<UsageData | null> {
  * Increment extraction count for a token
  * Returns the new count
  */
-export async function incrementExtraction(token: string): Promise<number> {
-  const key = getUsageKey(token);
+export async function incrementExtraction(token: string, isAuthenticated = false): Promise<number> {
+  const key = getUsageKey(token, isAuthenticated);
   const now = Date.now();
 
   try {
@@ -148,8 +152,8 @@ export async function incrementExtraction(token: string): Promise<number> {
       lastExtraction: now,
     };
 
-    // No expiry for anonymous usage - we track lifetime
-    await kv.set(key, newData);
+    // Anonymous: ~lifetime (400 days) so keys don't accumulate forever; monthly keys: 40 days.
+    await kv.set(key, newData, { ex: isAuthenticated ? 40 * 24 * 3600 : 400 * 24 * 3600 });
 
     return newData.extractions;
   } catch (err) {
@@ -168,7 +172,7 @@ export async function hasReachedLimit(token: string, isAuthenticated: boolean = 
   remaining: number;
 }> {
   const limit = isAuthenticated ? AUTHENTICATED_EXTRACTION_LIMIT : ANONYMOUS_EXTRACTION_LIMIT;
-  const usage = await getUsage(token);
+  const usage = await getUsage(token, isAuthenticated);
   const current = usage?.extractions || 0;
 
   return {

@@ -1,87 +1,79 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import RecipeExtractor from '../components/RecipeExtractor.jsx';
+import HeroInput from '../components/HeroInput.jsx';
 import fs from 'fs';
 import path from 'path';
 
-// Load collections and recipes at build time
+// Collections at build time. Ordered by usefulness for "what's for dinner", not alphabetically.
 const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
 const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
-const collections = data.collections;
-const recipes = data.recipes;
+const ORDER = [
+  'quick-weeknight-dinners', 'one-pot-meals', 'comfort-food-classics', 'vegetarian-mains', 'soups-stews', 'healthy-lunches',
+  'italian-classics', 'asian-inspired', 'indian-cuisine', 'mexican-favorites', 'mediterranean-mezze', 'grilling-bbq',
+  'breakfast-brunch', 'baking-basics', 'desserts-sweets', 'appetizers-party',
+];
+const collections = [...data.collections].sort((a: any, b: any) => {
+  const ia = ORDER.indexOf(a.slug), ib = ORDER.indexOf(b.slug);
+  return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+});
+const recipeCount = data.recipes.length;
 
-// Icon SVGs for collections
-const collectionIcons: Record<string, string> = {
-  'quick-weeknight-dinners': '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" /></svg>',
-  'baking-basics': '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v4m0 0c-2 0-4 2-4 5s2 5 4 5 4-2 4-5-2-5-4-5zm0 14v4m-3-4h6" /></svg>',
-  'one-pot-meals': '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 10h16v9a2 2 0 01-2 2H6a2 2 0 01-2-2v-9zm0 0V8a2 2 0 012-2h12a2 2 0 012 2v2M8 6V4m8 2V4m-4 2V3" /></svg>',
-  'healthy-lunches': '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 20c0-7 5-13 14-14-1 9-7 14-14 14zm0 0v-4m7-3c-3 0-5 2-7 7" /></svg>',
-  'comfort-food-classics': '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>',
-};
-const defaultIcon = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>';
+const title = 'Simpler Recipes — paste any recipe link, get just the recipe';
+const description = `Paste a recipe link and get the ingredients and steps with nothing else: no ads, no pop-ups, no life story. Or browse ${recipeCount} clean recipes with check-off ingredients, scaling and a hands-free Cook Mode.`;
 
-function getIcon(slug: string): string {
-  return collectionIcons[slug] || defaultIcon;
-}
+const websiteSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Simpler Recipes',
+  url: 'https://www.simpler.recipes/',
+  description,
+});
 ---
 
-<BaseLayout title="Simpler Recipes - Clean, Ad-Free Recipe Extraction">
+<BaseLayout title={title} description={description} headerSearch={false}>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={websiteSchema} />
+  </Fragment>
+
   <main id="main-content" class="min-h-screen">
-    <div class="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
-      <!-- Hero Card -->
-      <section class="bg-sand-50 rounded-2xl p-8 md:p-12 lg:p-14 shadow-sm mb-10">
-        <RecipeExtractor client:load />
+    <div class="max-w-[1080px] mx-auto px-4 sm:px-6">
+      <!-- Hero: one promise, one input -->
+      <section class="pt-10 sm:pt-16 pb-6 sm:pb-10 max-w-2xl" aria-labelledby="hero-heading">
+        <h1 id="hero-heading" class="text-[32px] sm:text-[42px] leading-[1.08] font-semibold tracking-[-0.02em] text-sand-900 [text-wrap:balance]">
+          Just the recipe.
+        </h1>
+        <p class="mt-3 text-[17px] sm:text-[19px] leading-snug text-sand-600 max-w-[36ch]">
+          Paste a recipe link. Get the ingredients and steps — nothing else.
+        </p>
+        <div class="mt-6 sm:mt-8">
+          <HeroInput client:load />
+        </div>
       </section>
 
-      <!-- Recipe Collections -->
-      {collections && collections.length > 0 && (
-        <section aria-labelledby="collections-heading">
-          <header class="mb-6">
-            <h2
-              id="collections-heading"
-              class="text-lg font-medium text-sand-900"
-            >
-              Browse recipes
-            </h2>
-          </header>
+      <!-- Browse -->
+      <section aria-labelledby="collections-heading" class="pt-8 pb-16 border-t border-sand-200">
+        <div class="flex items-baseline justify-between mb-4">
+          <h2 id="collections-heading" class="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500">
+            Or browse {recipeCount} clean recipes
+          </h2>
+        </div>
+        <nav aria-label="Recipe collections">
+          <ul class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-0 sm:gap-y-1">
+            {collections.map((c: any) => (
+              <li class="border-b border-sand-200/80">
+                <a href={`/collection/${c.slug}/`} class="group flex items-baseline justify-between gap-3 py-3 sm:py-2.5 hover:text-sand-900">
+                  <span class="text-[15px] text-sand-800 group-hover:underline underline-offset-[3px] decoration-sand-300 leading-snug">{c.name}</span>
+                  <span class="text-[13px] tabular text-sand-500 shrink-0">{c.recipeCount}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </section>
 
-          <nav aria-label="Recipe collections">
-            <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {collections.map((collection: any) => (
-                <li>
-                  <a
-                    href={`/collection/${collection.slug}`}
-                    class="flex items-start gap-4 h-full bg-sand-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:bg-sand-100/50 transition-all group"
-                  >
-                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-sand-100 flex items-center justify-center text-sand-500 group-hover:bg-sand-200 group-hover:text-sand-700 transition-colors">
-                      <Fragment set:html={getIcon(collection.slug)} />
-                    </div>
-                    <article class="flex-1 min-w-0">
-                      <h3 class="font-medium text-sand-900 group-hover:text-sand-950 mb-1 text-sm">
-                        {collection.name}
-                      </h3>
-                      <p class="text-xs text-sand-500 line-clamp-2">
-                        {collection.description}
-                      </p>
-                      <p class="text-xs text-sand-400 mt-2">
-                        {collection.recipeCount} recipes
-                      </p>
-                    </article>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </section>
-      )}
-
-      <!-- Footer -->
-      <footer class="mt-16 pt-8 border-t border-sand-200 text-center">
-        <p class="text-sand-400 text-xs">
-          <a href="/privacy" class="hover:text-sand-600 transition-colors">
-            Privacy Policy
-          </a>
-        </p>
+      <footer class="pb-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-sand-500">
+        <a href="/privacy" class="hover:text-sand-800">Privacy</a>
+        <span>Recipes stay credited to the sites they came from — every page links back to the original.</span>
       </footer>
     </div>
   </main>
