@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import SmartInput from './SmartInput';
 import RecentRecipes from './RecentRecipes';
 
@@ -13,6 +14,15 @@ const EXAMPLES = [
 ];
 
 export default function HeroInput() {
+  // Web Share Target (installed app) and plain deep links: /?u=<url> runs immediately.
+  useEffect(() => {
+    const u = new URLSearchParams(window.location.search).get('u');
+    if (!u) return;
+    const m = u.match(/https?:\/\/\S+/);
+    if (!m) return;
+    history.replaceState(null, '', '/');
+    setTimeout(() => document.getElementById('hero-input')?.dispatchEvent(new CustomEvent('sr:extract', { detail: { url: m[0] } })), 50);
+  }, []);
   return (
     <div>
       <SmartInput variant="default" placeholder="Paste a recipe link, or search" autoFocus id="hero-input" />

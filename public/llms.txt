@@ -1,126 +1,26 @@
 # Simpler Recipes
 
-> A clean, ad-free recipe extraction and browsing service with meal planning tools.
+> Paste any recipe link and get just the recipe — ingredients and steps, no ads, no life story.
+> Also a small catalog of clean, ad-free recipes with check-off ingredients, scaling and a hands-free Cook Mode.
 
-## What This Site Does
+## What it does
 
-Simpler Recipes extracts recipes from cluttered food blogs and presents them in a clean, readable format. Users can paste any recipe URL to get just the essential information: ingredients, instructions, prep time, cook time, and servings.
+- Extract: paste any recipe URL on https://www.simpler.recipes/ and get a clean version (JSON-LD/microdata first; an AI fallback only for pages without structured data). Extracted recipes stay on the user's device unless shared.
+- Read: /recipes/{slug}/ — one clean recipe page: ingredients (checkable, scalable), instructions, source attribution and a link back to the original.
+- Cook Mode: one step at a time, large type, timers, screen stays awake.
+- Browse: /collection/{slug}/ (16 curated collections) and /browse/{slug}/ (by ingredient, time and occasion, e.g. /browse/chicken/, /browse/30-minute-dinners/, /browse/vegetarian-dinners/).
+- Share: /r/{id} — a shared copy of an extracted recipe (noindex; canonical points to the original source).
 
-## Core Features
+## Attribution
 
-### Recipe Extraction
-Paste any recipe URL to extract a clean, readable version without ads or life stories.
-URL: https://www.simpler.recipes/
+Every recipe page credits and links to the site it came from. Simpler Recipes presents a simplified representation; the original publisher owns the recipe.
 
-### Favorites
-Save recipes to your personal collection. Works with both curated recipes and extracted recipes from any URL.
-URL: https://www.simpler.recipes/favorites
+## Sitemap
 
-### Meal Planning
-Plan your weekly meals by adding recipes to each day. Navigate between weeks and organize by meal type (breakfast, lunch, dinner, snack, dessert).
-URL: https://www.simpler.recipes/plan
+https://www.simpler.recipes/sitemap-index.xml
 
-### Shopping List
-Generate a shopping list from your meal plan. Items are automatically:
-- Merged (same ingredients from multiple recipes combined)
-- Categorized by grocery aisle (Produce, Meat, Dairy, Pantry, etc.)
-- Checked against your pantry (items you already have are marked)
+## Public JSON
 
-### Pantry
-Track what ingredients you have on hand. When generating shopping lists, pantry items are automatically marked so you know what you already have.
-URL: https://www.simpler.recipes/pantry
-
-## Curated Recipe Collections
-
-We maintain curated collections of popular recipes, organized by theme:
-
-### Quick Weeknight Dinners
-Fast, easy meals ready in 30 minutes or less.
-URL: https://www.simpler.recipes/collection/quick-weeknight-dinners
-
-Includes: Chicken Stir Fry, Pad Thai, Chicken Tikka Masala, Fish Tacos, Pasta Carbonara, and more.
-
-### Baking Basics
-Foundational baking recipes everyone should know.
-URL: https://www.simpler.recipes/collection/baking-basics
-
-Includes: Chocolate Chip Cookies, Banana Bread, Brownies, Apple Pie, Blueberry Muffins, Cinnamon Rolls, and more.
-
-### One-Pot Meals
-Complete meals with minimal cleanup.
-URL: https://www.simpler.recipes/collection/one-pot-meals
-
-Includes: Beef Stew, Chili, Chicken Noodle Soup, French Onion Soup, and more.
-
-### Healthy Lunches
-Balanced, nutritious meals perfect for meal prep.
-URL: https://www.simpler.recipes/collection/healthy-lunches
-
-Includes: Lentil Soup, various salads (Chicken, Egg, Pasta, Spinach Strawberry), Guacamole, and more.
-
-### Comfort Food Classics
-Hearty, satisfying recipes that bring warmth.
-URL: https://www.simpler.recipes/collection/comfort-food-classics
-
-Includes: Mac and Cheese, Meatloaf, Lasagna, Chicken Pot Pie, Fried Chicken, Beef Stroganoff, and more.
-
-### Additional Collections
-- Asian Inspired: https://www.simpler.recipes/collection/asian-inspired
-- Italian Classics: https://www.simpler.recipes/collection/italian-classics
-- Indian Cuisine: https://www.simpler.recipes/collection/indian-cuisine
-- Mexican Favorites: https://www.simpler.recipes/collection/mexican-favorites
-- Mediterranean Mezze: https://www.simpler.recipes/collection/mediterranean-mezze
-- Breakfast & Brunch: https://www.simpler.recipes/collection/breakfast-brunch
-- Desserts & Sweets: https://www.simpler.recipes/collection/desserts-sweets
-- Grilling & BBQ: https://www.simpler.recipes/collection/grilling-bbq
-- Soups & Stews: https://www.simpler.recipes/collection/soups-stews
-- Vegetarian Mains: https://www.simpler.recipes/collection/vegetarian-mains
-- Appetizers & Party: https://www.simpler.recipes/collection/appetizers-party
-
-## Individual Recipe URLs
-
-Each recipe has a permanent URL:
-- Pattern: https://www.simpler.recipes/recipes/{recipe-slug}
-- Example: https://www.simpler.recipes/recipes/best-chocolate-chip-cookies
-- Example: https://www.simpler.recipes/recipes/worlds-best-lasagna
-- Example: https://www.simpler.recipes/recipes/pad-thai
-
-## API Endpoints
-
-### List All Collections
-GET https://www.simpler.recipes/api/recipes
-Returns metadata and recipe lists for all collections.
-
-### Get Collection Details
-GET https://www.simpler.recipes/api/recipes/collection/{collection-slug}
-Returns full recipe data for a specific collection.
-
-Example: https://www.simpler.recipes/api/recipes/collection/baking-basics
-
-### Get Individual Recipe
-GET https://www.simpler.recipes/api/recipes/{recipe-slug}
-Returns complete recipe data including ingredients, instructions, times, and source.
-
-Example: https://www.simpler.recipes/api/recipes/best-chocolate-chip-cookies
-
-## Recipe Data Structure
-
-Each recipe includes:
-- title: Recipe name
-- ingredients: Array of ingredient strings with quantities
-- instructions: Array of step-by-step instructions
-- prepTime: Preparation time (e.g., "20 min")
-- cookTime: Cooking time (e.g., "10 min")
-- totalTime: Total time required
-- servings: Number of servings
-- source: Original source with name and URL
-- tags: Categorization tags (e.g., "vegetarian", "pasta", "quick")
-
-## Usage Notes
-
-- All recipes are sourced from popular cooking websites with proper attribution
-- Recipe data is refreshed periodically
-- The site works best with AllRecipes, Food Network, Serious Eats, and most sites using Schema.org recipe markup
-- No account required for basic features
-- All data (favorites, meal plans, pantry) is stored locally in your browser
-- No tracking beyond basic analytics
+- GET https://www.simpler.recipes/api/recipes — catalog summaries
+- GET https://www.simpler.recipes/api/recipes/{slug} — one recipe
+- GET https://www.simpler.recipes/api/recipes/collection/{collection-slug} — a collection

@@ -1,0 +1,20 @@
+{
+  "name": "Simpler Recipes",
+  "short_name": "Recipes",
+  "description": "Paste any recipe link. Get just the recipe.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F6F5F3",
+  "theme_color": "#F6F5F3",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": { "url": "u", "text": "u" }
+  }
+}
