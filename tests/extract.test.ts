@@ -272,3 +272,30 @@ describe('half-empty structured data borrows from the page', () => {
     expect(out.recipe!.instructions).toEqual(['Sear the roast.', 'Braise 3 hours.']);
   });
 });
+
+describe('ingredient sections borrowed from plugin markup', () => {
+  const ld = {
+    '@context': 'https://schema.org',
+    '@type': 'Recipe',
+    name: 'Tikka',
+    recipeIngredient: ['1 kg chicken', '1 cup yoghurt', '2 tsp garam masala', '1 onion', '400 g passata', '1 cup cream'],
+    recipeInstructions: [{ '@type': 'HowToSection', name: 'Chicken:', itemListElement: [{ '@type': 'HowToStep', text: 'Marinate.' }] }, { '@type': 'HowToSection', name: 'Sauce:', itemListElement: [{ '@type': 'HowToStep', text: 'Simmer.' }] }],
+  };
+  const wprm = (counts: number[]) =>
+    `<div class="wprm-recipe-ingredients-container">${counts
+      .map((c, i) => `<div class="wprm-recipe-ingredient-group"><h4 class="wprm-recipe-group-name">${['Marinade:', 'Sauce:'][i]}</h4><ul>${'<li class="wprm-recipe-ingredient">x</li>'.repeat(c)}</ul></div>`)
+      .join('')}</div>`;
+  const page = (body: string) => `<html><head><script type="application/ld+json">${JSON.stringify(ld)}</script></head><body>${body}</body></html>`;
+
+  it('regroups a flat JSON-LD list when section counts add up', () => {
+    const { recipe } = extractRecipeFromHtml(page(wprm([3, 3])), 'https://x.com/r');
+    expect(recipe!.ingredientGroups!.map((g) => [g.name, g.items.length])).toEqual([['Marinade', 3], ['Sauce', 3]]);
+    expect(recipe!.ingredientGroups![1].items[0]).toBe('1 onion');
+    expect(recipe!.instructionGroups!.map((g) => g.name)).toEqual(['Chicken', 'Sauce']);
+  });
+  it('leaves the list flat when counts disagree', () => {
+    const { recipe } = extractRecipeFromHtml(page(wprm([3, 4])), 'https://x.com/r');
+    expect(recipe!.ingredientGroups).toBeUndefined();
+    expect(recipe!.ingredients).toHaveLength(6);
+  });
+});

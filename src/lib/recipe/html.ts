@@ -21,6 +21,7 @@ import {
   normalizeInstructions,
   cleanIngredientLine,
   stripStepNumbering,
+  cleanSectionName,
 } from './normalize';
 
 export interface PageMeta {
@@ -254,4 +255,59 @@ export function extractRecipeFromStructure(doc: ReturnType<typeof parseHtml>, pa
   };
   if (ingredientGroups.some((g) => g.name)) recipe.ingredientGroups = ingredientGroups as RecipeSection[];
   return recipe;
+}
+
+/* ---------------- Ingredient sections from recipe-plugin markup ---------------- */
+
+export interface DomIngredientSection {
+  name: string | null;
+  count: number;
+}
+
+/** Cheap pre-check so callers don't parse the DOM for nothing. */
+export const INGREDIENT_SECTION_HINT = /wprm-recipe-ingredient-group|tasty-recipes-ingredients|mv-create-ingredients|ingredient-group|ingredients-group/i;
+
+/**
+ * schema.org `recipeIngredient` is flat, but the page's own recipe card usually keeps the
+ * sections ("For the sauce"). Read them from the common plugins so a flat JSON-LD list can be
+ * regrouped when the counts line up exactly. Returns [] when there's nothing trustworthy.
+ *
+ * Supported: WP Recipe Maker (`.wprm-recipe-ingredient-group`), Tasty Recipes / Mediavine Create /
+ * generic (heading followed by a list inside an ingredients container).
+ */
+export function extractIngredientSectionsFromDom(doc: ReturnType<typeof parseHtml>): DomIngredientSection[] {
+  const root = doc as unknown as AnyNode;
+  // WPRM
+  const wprmGroups = selectAll('.wprm-recipe-ingredient-group', root) as Element[];
+  if (wprmGroups.length >= 2) {
+    const out = wprmGroups.map((g) => ({
+      name: cleanSectionName(text(selectOne('.wprm-recipe-group-name, .wprm-recipe-ingredient-group-name', g) as Element | null)),
+      count: (selectAll('li.wprm-recipe-ingredient', g) as Element[]).length,
+    }));
+    if (out.every((s) => s.count > 0)) return out;
+  }
+  // Tasty / Mediavine / generic: a container whose class says "ingredients", with headings then lists.
+  const containers = selectAll('.tasty-recipes-ingredients, .tasty-recipes-ingredients-body, .mv-create-ingredients, [class*="ingredients"]', root) as Element[];
+  for (const c of containers) {
+    const kids = (getChildren(c) as AnyNode[]).filter(isTag) as Element[];
+    const sections: DomIngredientSection[] = [];
+    let pendingName: string | null = null;
+    for (const k of kids) {
+      const tag = k.tagName.toLowerCase();
+      if (/^h[2-6]$/.test(tag) || (tag === 'p' && selectOne('strong, b', k))) {
+        const nm = cleanSectionName(text(k));
+        if (nm && nm.length <= 60) pendingName = nm;
+      } else if (tag === 'ul' || tag === 'ol') {
+        const count = (selectAll(':scope > li', k) as Element[]).length || (getChildren(k) as AnyNode[]).filter((n) => isTag(n) && (n as Element).tagName.toLowerCase() === 'li').length;
+        if (count > 0) sections.push({ name: pendingName, count });
+        pendingName = null;
+      } else if (tag === 'div' && kids.length <= 3) {
+        // one wrapper level (Tasty wraps body in a div) — recurse once
+        const inner = extractIngredientSectionsFromDom({ ...doc, children: getChildren(k) } as unknown as ReturnType<typeof parseHtml>);
+        if (inner.length >= 2) return inner;
+      }
+    }
+    if (sections.length >= 2 && sections.some((s) => s.name)) return sections;
+  }
+  return [];
 }

@@ -157,10 +157,18 @@ export function groupIngredients(lines: string[]): Section<string>[] {
 }
 
 function prettifyHeader(h: string): string {
-  let s = h.replace(/:$/, '').trim();
+  let s = h.replace(/\s*:\s*$/, '').trim();
   s = s.replace(/^for\s+(the\s+)?/i, '');
   if (s === s.toUpperCase()) s = s.toLowerCase();
   return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+/** Section names from any source: strip trailing colons / "For the", fix SHOUTING. */
+export function cleanSectionName(h: unknown): string | null {
+  const t = cleanText(h);
+  if (!t) return null;
+  const p = prettifyHeader(t);
+  return p || null;
 }
 
 /** Cleanup applied to every ingredient line. */
@@ -285,7 +293,7 @@ export function normalizeInstructions(input: unknown): Section<string>[] {
       const type = String(o['@type'] ?? '').toLowerCase();
       if (type.includes('howtosection') || (o.itemListElement && !o.text && !type.includes('howtostep'))) {
         flush();
-        current.name = cleanText(o.name) || null;
+        current.name = cleanSectionName(o.name);
         walk(o.itemListElement, depth + 1);
         flush();
         return;

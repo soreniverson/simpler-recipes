@@ -10,6 +10,7 @@
  */
 import type { Recipe, ExtractionOutcome } from './types';
 import { extractRecipeFromJsonLd } from './jsonld';
+import { extractIngredientSectionsFromDom, INGREDIENT_SECTION_HINT } from './html';
 import { parseHtml, extractPageMeta, extractRecipeFromMicrodata, extractRecipeFromStructure } from './html';
 
 export interface ExtractOptions {
@@ -72,6 +73,27 @@ export function extractRecipeFromHtml(html: string, pageUrl?: string, opts: Extr
   }
 
   if (!recipe) return { recipe: null, method: 'unknown', candidates: ld.candidates };
+
+  // Flat ingredient list from structured data, but the page's recipe card has sections
+  // ("Chicken tikka" / "Sauce") — regroup when the section counts add up exactly.
+  if (allowHeuristics && recipe.ingredients.length >= 4 && (!recipe.ingredientGroups || recipe.ingredientGroups.length < 2) && INGREDIENT_SECTION_HINT.test(html)) {
+    try {
+      const doc = parseHtml(html);
+      const sections = extractIngredientSectionsFromDom(doc);
+      const total = sections.reduce((n, s) => n + s.count, 0);
+      if (sections.length >= 2 && total === recipe.ingredients.length) {
+        let i = 0;
+        recipe.ingredientGroups = sections.map((s) => {
+          const items = recipe!.ingredients.slice(i, i + s.count);
+          i += s.count;
+          return { name: s.name, items };
+        });
+      }
+    } catch {
+      /* keep flat */
+    }
+  }
+
   recipe.extractedVia = recipe.extractedVia ?? method;
   if (!recipe.siteName && pageUrl) recipe.siteName = siteNameFromUrl(pageUrl);
   return { recipe: finalize(recipe), method: recipe.extractedVia!, candidates: ld.candidates };
