@@ -202,10 +202,7 @@ export default function CookMode({ recipe, currentStep, onStepChange, checkedIng
         {announce}
       </span>
 
-      {/* Progress */}
-      <div className="shrink-0 mx-4 h-1 rounded-full bg-sand-200 overflow-hidden" role="progressbar" aria-valuemin={1} aria-valuemax={total} aria-valuenow={step + 1} aria-label="Progress">
-        <div className="h-full bg-sand-700 rounded-full transition-[width] duration-200" style={{ width: `${((step + 1) / total) * 100}%` }} />
-      </div>
+      {/* No progress bar: "Step N of M" already says it, and one signal is calmer than two. */}
 
       {/* Running timers */}
       <TimerBar size="lg" />
@@ -220,7 +217,7 @@ export default function CookMode({ recipe, currentStep, onStepChange, checkedIng
           {timers.length > 0 && (
             <div className="mt-6 flex flex-wrap gap-2 no-print">
               {timers.map((t) => (
-                <TimerButton key={t.seconds} timer={t} stepIndex={step} size="lg" />
+                <TimerButton key={t.seconds} timer={t} stepIndex={step} />
               ))}
             </div>
           )}

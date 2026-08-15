@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroInput from '../components/HeroInput.jsx';
 import fs from 'fs';
 import path from 'path';
-import { buildBrowsePages } from '../lib/browse';
 
 // Collections at build time. Ordered by usefulness for "what's for dinner", not alphabetically.
 const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
@@ -18,7 +17,6 @@ const collections = [...data.collections].sort((a: any, b: any) => {
   return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
 });
 const recipeCount = data.recipes.length;
-const browse = buildBrowsePages(data.recipes).map((p) => ({ slug: p.slug, name: p.name, count: p.recipes.length }));
 
 const title = 'Simpler Recipes — paste any recipe link, get just the recipe';
 const description = `Paste a recipe link and get the ingredients and steps with nothing else: no ads, no pop-ups, no life story. Or browse ${recipeCount} clean recipes with check-off ingredients, scaling and a hands-free Cook Mode.`;
@@ -39,47 +37,63 @@ const websiteSchema = JSON.stringify({
 
   <main id="main-content" class="min-h-screen">
     <div class="max-w-[1080px] mx-auto px-4 sm:px-6">
-      <!-- Hero: one promise, one input -->
-      <section class="pt-10 sm:pt-16 pb-6 sm:pb-10 max-w-2xl" aria-labelledby="hero-heading">
-        <h1 id="hero-heading" class="text-[32px] sm:text-[42px] leading-[1.08] font-semibold tracking-[-0.02em] text-sand-900 [text-wrap:balance]">
-          Just the recipe.
-        </h1>
-        <p class="mt-3 text-[17px] sm:text-[19px] leading-snug text-sand-600 max-w-[36ch]">
-          Paste a recipe link. Get the ingredients and steps — nothing else.
-        </p>
-        <div class="mt-6 sm:mt-8">
-          <HeroInput client:load />
+      <!-- Hero: one promise, one input, and the food. The collage is the brand moment; it is
+           desktop-only (it was always `hidden lg:block`) and now ships as a 38KB WebP. -->
+      <section class="pt-6 sm:pt-10 pb-10 sm:pb-14" aria-labelledby="hero-heading">
+        <div class="bg-surface rounded-3xl p-7 sm:p-10 lg:p-14 shadow-sm lg:flex lg:items-center lg:gap-12">
+          <div class="flex-1 lg:max-w-xl min-w-0">
+            <h1 id="hero-heading" class="text-[34px] sm:text-[46px] leading-[1.05] font-medium tracking-[-0.028em] text-sand-900 [text-wrap:balance]">
+              Just the recipe.
+            </h1>
+            <p class="mt-3 text-[17px] sm:text-[19px] leading-snug text-sand-600 max-w-[36ch]">
+              Paste a recipe link. Get the ingredients and steps — nothing else.
+            </p>
+            <div class="mt-6 sm:mt-8">
+              <HeroInput client:load />
+            </div>
+          </div>
+          <div class="hidden lg:block shrink-0 w-[300px] xl:w-[340px]" aria-hidden="true">
+            <img
+              src="/hero-collage-384.webp"
+              srcset="/hero-collage-384.webp 384w, /hero-collage-768.webp 768w"
+              sizes="340px"
+              alt=""
+              width={340}
+              height={340}
+              class="w-full h-auto rounded-2xl"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
         </div>
       </section>
 
       <!-- Browse -->
-      <section aria-labelledby="collections-heading" class="pt-8 pb-16 border-t border-sand-200">
-        <div class="flex items-baseline justify-between mb-4">
-          <h2 id="collections-heading" class="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500">
+      <section aria-labelledby="collections-heading" class="pb-16">
+        <div class="flex items-baseline justify-between gap-4 mb-5">
+          <h2 id="collections-heading" class="text-[15px] font-medium text-sand-900">
             Or browse {recipeCount} recipes
           </h2>
+          <a href="/browse/" class="text-[14px] text-sand-600 hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300 shrink-0">
+            By ingredient &amp; time
+          </a>
         </div>
         <nav aria-label="Recipe collections">
-          <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-0 sm:gap-y-1">
+          <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {collections.map((c: any) => (
-              <li class="border-b border-sand-200/80">
-                <a href={`/collection/${c.slug}/`} class="group flex items-baseline justify-between gap-3 py-3 sm:py-2.5 hover:text-sand-900">
-                  <span class="text-[15px] text-sand-800 group-hover:underline underline-offset-[3px] decoration-sand-300 leading-snug">{c.name}</span>
-                  <span class="text-[13px] tabular text-sand-500 shrink-0">{c.recipeCount}</span>
+              <li>
+                <a href={`/collection/${c.slug}/`} class="group flex h-full flex-col justify-between gap-2 rounded-xl bg-surface p-4 shadow-xs hover:shadow-sm transition-shadow">
+                  <div>
+                    <h3 class="text-[15px] font-medium text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{c.name}</h3>
+                    <p class="mt-1 text-[13px] leading-snug text-sand-500 line-clamp-2">{c.description}</p>
+                  </div>
+                  <p class="text-[12px] tabular text-sand-400">{c.recipeCount} recipes</p>
                 </a>
               </li>
             ))}
           </ul>
         </nav>
-      </section>
-
-      <section aria-labelledby="browse-heading" class="pb-16 -mt-6">
-        <h2 id="browse-heading" class="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500 mb-3">By ingredient, time and occasion</h2>
-        <ul class="flex flex-wrap gap-x-5 gap-y-2 text-[15px]">
-          {browse.map((b) => (
-            <li><a href={`/browse/${b.slug}/`} class="text-sand-800 hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300">{b.name} <span class="text-sand-500 tabular">{b.count}</span></a></li>
-          ))}
-        </ul>
       </section>
 
       <footer class="pb-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-sand-500">

@@ -126,3 +126,13 @@ export const ImagePlaceholderIcon = (p) => (
     <circle cx="16" cy="9" r="1.5" />
   </Icon>
 );
+
+export function MoreIcon({ className = 'w-5 h-5' }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <circle cx="5" cy="12" r="1.6" />
+      <circle cx="12" cy="12" r="1.6" />
+      <circle cx="19" cy="12" r="1.6" />
+    </svg>
+  );
+}

@@ -8,7 +8,7 @@ import { getCookState, toggleIngredient, toggleStep, setCookState, COOK_STATE_EV
 import { metaLine, sourceInfo, recipeAsText, displayTimes, displayServings, servingsCount } from '../../lib/recipe/display';
 import { safeImageSrc } from '../../lib/recipe/href';
 import { isFavorite, toggleFavorite, getExtractedFavorites, addExtractedFavorite, removeExtractedFavorite } from '../../utils/favorites';
-import { PlayIcon, HeartIcon, ShareIcon, PrintIcon, CopyIcon, ExternalIcon, SparklesIcon, ImagePlaceholderIcon } from './Icons';
+import { PlayIcon, HeartIcon, ShareIcon, PrintIcon, CopyIcon, ExternalIcon, SparklesIcon, ImagePlaceholderIcon, MoreIcon } from './Icons';
 
 /**
  * The recipe page. One component for curated (/recipes/slug), extracted (/recipe?r=id) and shared (/r/id).
@@ -175,17 +175,32 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
   const [imgFailed, setImgFailed] = useState(false);
   const cookProgress = state.currentStep > 0 && state.currentStep < recipe.instructions.length - 1;
 
+  // "More" menu (Share / Print / Copy) — available without occupying the page.
+  const [moreOpen, setMoreOpen] = useState(false);
+  const moreRef = useRef(null);
+  useEffect(() => {
+    if (!moreOpen) return;
+    const onDown = (e) => { if (moreRef.current && !moreRef.current.contains(e.target)) setMoreOpen(false); };
+    const onKey = (e) => { if (e.key === 'Escape') setMoreOpen(false); };
+    document.addEventListener('mousedown', onDown);
+    document.addEventListener('keydown', onKey);
+    return () => { document.removeEventListener('mousedown', onDown); document.removeEventListener('keydown', onKey); };
+  }, [moreOpen]);
+
   return (
     <article data-recipe-view className="max-w-[1080px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
+      {/* One grid for the whole page: the dish leads the content column, ingredients sit alongside.
+          On mobile the DOM order stays header → ingredients → instructions (cooking order). */}
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 lg:items-start">
       {/* ---------- Header ---------- */}
-      <header className="mb-7 sm:mb-9 lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 lg:items-start">
+      <header className="mb-7 sm:mb-9 lg:col-start-1 lg:row-start-1 min-w-0">
         {image && !imgFailed && (
-          <div className="-mx-4 sm:mx-0 mb-5 lg:mb-0 lg:order-2 sm:rounded-2xl overflow-hidden bg-sand-100 aspect-[16/10] max-h-[240px] sm:max-h-[360px] lg:max-h-none lg:aspect-[16/10] print:hidden">
+          <div className="-mx-4 sm:mx-0 mb-6 sm:rounded-2xl overflow-hidden bg-sand-100 aspect-[16/9] print:hidden">
             <img
               src={image}
               alt=""
               width={800}
-              height={600}
+              height={450}
               className="w-full h-full object-cover dark:brightness-90"
               loading="eager"
               fetchpriority="high"
@@ -195,8 +210,8 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
             />
           </div>
         )}
-        <div className="lg:order-1 min-w-0">
-          <h1 className="text-[26px] sm:text-[32px] leading-[1.15] font-semibold tracking-[-0.015em] text-sand-900 [text-wrap:balance]">{recipe.title}</h1>
+        <div className="min-w-0">
+          <h1 className="text-[30px] sm:text-[38px] leading-[1.12] font-medium tracking-[-0.022em] text-sand-900 [text-wrap:balance]">{recipe.title}</h1>
 
           {(meta.length > 0 || times.total) && (
             <p data-meta className="mt-2 text-[14px] sm:text-[15px] text-sand-600 tabular flex flex-wrap gap-x-2 gap-y-1">
@@ -224,30 +239,51 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
             </p>
           )}
 
-          {/* Actions */}
-          <div className="mt-5 flex flex-wrap items-center gap-2 no-print">
+          {/* Actions — one clear primary. Everything else is available, not advertised. */}
+          <div className="mt-5 flex items-center gap-1.5 no-print">
             {recipe.instructions.length > 0 && (
-              <button type="button" onClick={openCook} className="btn-primary w-full sm:w-auto">
+              <button type="button" onClick={openCook} className="btn-primary flex-1 sm:flex-none">
                 <PlayIcon className="w-4 h-4" />
                 {hydrated && cookProgress ? `Resume step ${state.currentStep + 1}` : 'Cook Mode'}
               </button>
             )}
-            <button type="button" onClick={onSave} className={`btn-ghost ${saved ? 'text-sand-900' : ''}`} aria-pressed={saved}>
+            <button
+              type="button"
+              onClick={onSave}
+              className={`btn-icon shrink-0 ${saved ? 'text-sand-900' : 'text-sand-500'}`}
+              aria-pressed={saved}
+              aria-label={saved ? 'Saved to favorites' : 'Save recipe'}
+              title={saved ? 'Saved' : 'Save'}
+            >
               <HeartIcon filled={saved} className="w-[18px] h-[18px]" />
-              {saved ? 'Saved' : 'Save'}
             </button>
-            <button type="button" onClick={onShare} className="btn-ghost" disabled={shareState === 'working'} aria-live="polite">
-              <ShareIcon className="w-[18px] h-[18px]" />
-              {shareState === 'copied' ? 'Link copied' : shareState === 'error' ? 'Couldn’t share' : shareState === 'working' ? 'Sharing…' : shareState === 'shown' ? 'Link ready' : 'Share'}
-            </button>
-            <button type="button" onClick={onPrint} className="btn-ghost hidden sm:inline-flex">
-              <PrintIcon className="w-[18px] h-[18px]" />
-              Print
-            </button>
-            <button type="button" onClick={onCopy} className="btn-ghost hidden sm:inline-flex" aria-live="polite">
-              <CopyIcon className="w-[18px] h-[18px]" />
-              {copied ? 'Copied' : 'Copy'}
-            </button>
+            <div className="relative shrink-0" ref={moreRef}>
+              <button
+                type="button"
+                onClick={() => setMoreOpen((o) => !o)}
+                className="btn-icon text-sand-500"
+                aria-haspopup="menu"
+                aria-expanded={moreOpen}
+                aria-label="More actions"
+                title="More"
+              >
+                <MoreIcon className="w-[18px] h-[18px]" />
+              </button>
+              {moreOpen && (
+                <div role="menu" className="absolute left-0 top-full mt-1 z-20 min-w-[168px] rounded-xl border border-sand-200 bg-surface shadow-md py-1">
+                  <button role="menuitem" type="button" onClick={() => { setMoreOpen(false); onShare(); }} className="w-full text-left px-3 py-2 text-[15px] text-sand-800 hover:bg-sand-100 inline-flex items-center gap-2.5">
+                    <ShareIcon className="w-4 h-4 text-sand-500" />
+                    {shareState === 'copied' ? 'Link copied' : shareState === 'error' ? 'Couldn’t share' : shareState === 'working' ? 'Sharing…' : shareState === 'shown' ? 'Link ready' : 'Share'}
+                  </button>
+                  <button role="menuitem" type="button" onClick={() => { setMoreOpen(false); onPrint(); }} className="w-full text-left px-3 py-2 text-[15px] text-sand-800 hover:bg-sand-100 inline-flex items-center gap-2.5">
+                    <PrintIcon className="w-4 h-4 text-sand-500" /> Print
+                  </button>
+                  <button role="menuitem" type="button" onClick={() => { setMoreOpen(false); onCopy(); }} className="w-full text-left px-3 py-2 text-[15px] text-sand-800 hover:bg-sand-100 inline-flex items-center gap-2.5">
+                    <CopyIcon className="w-4 h-4 text-sand-500" /> {copied ? 'Copied' : 'Copy text'}
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
           {shareState === 'shown' && shareUrl && (
             <div className="mt-3 flex items-center gap-2 max-w-md no-print">
@@ -266,10 +302,10 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
       </header>
 
       {/* ---------- Body ---------- */}
-      <div data-body className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 lg:items-start">
+      <div data-body className="contents">
         {/* Sticky only when the list can plausibly fit beside the steps; a long list scrolls with the page
             instead of becoming a nested scroller that looks complete when it isn't. */}
-        <aside className={`lg:col-start-2 lg:row-start-1 mb-8 lg:mb-0 print:mb-4 ${recipe.ingredients.length <= 14 ? 'lg:sticky lg:top-20' : ''}`} aria-labelledby="ingredients-heading">
+        <aside className={`lg:col-start-2 lg:row-start-1 lg:row-span-2 mb-8 lg:mb-0 print:mb-4 ${recipe.ingredients.length <= 14 ? 'lg:sticky lg:top-20' : ''}`} aria-labelledby="ingredients-heading">
           <Ingredients
             recipe={recipe}
             checked={checked}
@@ -280,7 +316,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
           />
         </aside>
 
-        <div className="lg:col-start-1 lg:row-start-1 min-w-0">
+        <div className="lg:col-start-1 lg:row-start-2 min-w-0">
           <Instructions recipe={recipe} done={doneSteps} onToggle={onToggleStep} onCookMode={openCook} />
 
           {/* Secondary: remix (opt-in, AI) + tags */}
@@ -308,6 +344,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
           </div>
           {children}
         </div>
+      </div>
       </div>
 
       {/* Print-only source line */}

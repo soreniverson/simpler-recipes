@@ -55,10 +55,10 @@ export default function Ingredients({
     <div data-ingredients className={compact ? '' : 'lg:bg-sand-50 lg:rounded-2xl lg:border lg:border-sand-200 lg:p-5'}>
       <div className="flex items-baseline justify-between gap-3 mb-3">
         <h2 id="ingredients-heading" className="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500">
-          Ingredients{' '}
-          <span className="tabular text-sand-500 font-normal normal-case tracking-normal">
-            {doneCount > 0 ? `${doneCount}/${total}` : total}
-          </span>
+          Ingredients
+          {doneCount > 0 && (
+            <span className="tabular font-normal normal-case tracking-normal"> {doneCount}/{total}</span>
+          )}
         </h2>
         {doneCount > 0 && (
           <button type="button" onClick={onReset} className="text-[13px] text-sand-500 hover:text-sand-800 underline underline-offset-2 no-print">
@@ -108,14 +108,14 @@ export default function Ingredients({
         {groups.map((g, gi) => (
           <div key={gi}>
             {g.name && <h3 className="text-[14px] font-medium text-sand-800 mt-1 mb-1">{g.name}</h3>}
-            <ul className="divide-y divide-sand-200/70">
+            <ul>
               {g.items.map(() => {
                 const index = flat++;
                 const done = checked.has(index);
                 const text = lines[index] ?? recipe.ingredients[index];
                 return (
                   <li key={index}>
-                    <label className={`group flex items-start gap-3 py-2.5 sm:py-2 cursor-pointer select-none -mx-1 px-1 rounded-md hover:bg-sand-100/60 ${compact ? 'py-3' : ''}`}>
+                    <label className={`group flex items-start gap-3 py-2 cursor-pointer select-none -mx-2 px-2 rounded-lg hover:bg-sand-100/60 ${compact ? 'py-3' : ''}`}>
                       <input
                         type="checkbox"
                         className="sr-only peer"
@@ -123,15 +123,16 @@ export default function Ingredients({
                         onChange={() => onToggle(index)}
                         aria-label={text}
                       />
+                      {/* Quiet affordance: the ingredient is the object, the checkbox supports it. */}
                       <span
                         aria-hidden="true"
-                        className={`mt-[3px] shrink-0 w-[20px] h-[20px] rounded-[6px] border flex items-center justify-center transition-colors peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-sand-700 ${
-                          done ? 'bg-sand-800 border-sand-800 text-sand-50' : 'border-sand-500 bg-sand-50 group-hover:border-sand-700'
+                        className={`mt-[5px] shrink-0 w-[16px] h-[16px] rounded-[4px] border flex items-center justify-center transition-colors peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-sand-700 ${
+                          done ? 'bg-sand-600 border-sand-600 text-sand-50' : 'border-sand-400 group-hover:border-sand-600'
                         }`}
                       >
-                        {done && <CheckIcon className="w-3.5 h-3.5" />}
+                        {done && <CheckIcon className="w-3 h-3" />}
                       </span>
-                      <span className={`text-[17px] leading-[1.45] lg:text-[16px] ${done ? 'text-sand-500 line-through decoration-sand-400/70' : 'text-sand-900'} ${compact ? 'text-[18px]' : ''}`}>
+                      <span className={`text-[17px] leading-[1.55] lg:text-[16px] lg:leading-[1.6] ${done ? 'text-sand-500 line-through decoration-sand-400' : 'text-sand-900'} ${compact ? 'text-[18px]' : ''}`}>
                         {text}
                       </span>
                     </label>

@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import fs from 'fs';
+import path from 'path';
+import { buildBrowsePages } from '../../lib/browse';
+
+/**
+ * Index of the intent-based browse pages. These used to sit on the homepage as a 20-link block,
+ * which crowded the one thing the homepage is for. They live here instead: still one click away,
+ * still crawlable, no longer competing with the paste box.
+ */
+const data = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'recipe-data', 'all-recipes.json'), 'utf-8'));
+const pages = buildBrowsePages(data.recipes).map((p) => ({ slug: p.slug, name: p.name, intro: p.intro, count: p.recipes.length }));
+const collections = data.collections;
+
+const SITE = 'https://www.simpler.recipes';
+const title = 'Browse recipes by ingredient, time and occasion · Simpler Recipes';
+const description = 'Chicken, pasta, 30-minute dinners, vegetarian mains and more — clean, ad-free recipes grouped the way people actually look for them.';
+---
+
+<BaseLayout title={title} description={description} canonical={`${SITE}/browse/`}>
+  <main id="main-content" class="min-h-screen bg-background">
+    <div class="max-w-[1080px] mx-auto px-4 sm:px-6 py-6 md:py-10">
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center gap-2 text-[14px] text-sand-600">
+          <li><a href="/" class="hover:text-sand-900">Home</a></li>
+          <li aria-hidden="true" class="text-sand-400">/</li>
+          <li aria-current="page" class="text-sand-800">Browse</li>
+        </ol>
+      </nav>
+
+      <header class="mb-8 max-w-2xl">
+        <h1 class="text-[28px] sm:text-[36px] leading-[1.1] font-medium tracking-[-0.022em] text-sand-900">Browse recipes</h1>
+        <p class="mt-2 text-[16px] text-sand-600">By ingredient, time and occasion.</p>
+      </header>
+
+      <section aria-label="By ingredient, time and occasion" class="mb-12">
+        <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {pages.map((p) => (
+            <li>
+              <a href={`/browse/${p.slug}/`} class="group flex h-full flex-col justify-between gap-2 rounded-xl bg-surface p-4 shadow-xs hover:shadow-sm transition-shadow">
+                <div>
+                  <h2 class="text-[15px] font-medium text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{p.name}</h2>
+                  <p class="mt-1 text-[13px] leading-snug text-sand-500 line-clamp-2">{p.intro}</p>
+                </div>
+                <p class="text-[12px] tabular text-sand-400">{p.count} recipes</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section aria-labelledby="collections-heading">
+        <h2 id="collections-heading" class="text-[15px] font-medium text-sand-900 mb-4">Collections</h2>
+        <ul class="flex flex-wrap gap-x-5 gap-y-2 text-[15px]">
+          {collections.map((c: any) => (
+            <li>
+              <a href={`/collection/${c.slug}/`} class="text-sand-800 hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300">
+                {c.name} <span class="text-sand-500 tabular">{c.recipeCount}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  </main>
+</BaseLayout>

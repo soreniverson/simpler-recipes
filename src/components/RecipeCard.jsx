@@ -14,7 +14,7 @@ export default function RecipeCard({ recipe, showFavorite = true, matchInfo, eag
     <div className="relative h-full group">
       {showFavorite && (
         <div className="absolute top-2 right-2 z-10">
-          <FavoriteButton slug={recipe.slug} size="small" className="!bg-black/30 !text-white backdrop-blur-sm hover:!bg-black/45 dark:!bg-black/40" />
+          <FavoriteButton slug={recipe.slug} size="small" className="!text-white/85 hover:!text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.55)]" />
         </div>
       )}
       <a href={`/recipes/${recipe.slug}/`} className="block h-full rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sand-700">
@@ -24,10 +24,10 @@ export default function RecipeCard({ recipe, showFavorite = true, matchInfo, eag
               <img
                 src={recipe.image}
                 srcSet={recipe.imageSet || undefined}
-                sizes={recipe.imageSet ? '(min-width: 1024px) 250px, (min-width: 640px) 33vw, 50vw' : undefined}
+                sizes={recipe.imageSet ? '(min-width: 1024px) 340px, 50vw' : undefined}
                 alt=""
-                width={400}
-                height={300}
+                width={520}
+                height={390}
                 className="w-full h-full object-cover dark:brightness-90 group-hover:opacity-95 transition-opacity"
                 loading={eager ? 'eager' : 'lazy'}
                 fetchpriority={eager ? 'high' : undefined}

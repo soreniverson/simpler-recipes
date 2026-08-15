@@ -44,7 +44,7 @@ export default function RecipeGrid({ recipes, showFavorite = true, pageSize = 24
 
   return (
     <>
-      <ul className="grid gap-x-5 gap-y-7 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+      <ul className="grid gap-x-5 gap-y-8 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3">
         {displayRecipes.map((recipe, i) => (
           <li key={recipe.slug} hidden={i >= limit}>
             <RecipeCard
