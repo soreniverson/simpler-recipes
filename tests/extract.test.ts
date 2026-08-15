@@ -299,3 +299,35 @@ describe('ingredient sections borrowed from plugin markup', () => {
     expect(recipe!.ingredients).toHaveLength(6);
   });
 });
+
+describe('hardening (adversarial QA)', () => {
+  it('title from {@value} / arrays; author never equals the recipe', () => {
+    const ld = { '@type': 'Recipe', '@id': '#r', name: { '@value': 'Real Title' }, author: { '@id': '#r' }, recipeIngredient: ['1 cup x', '2 tsp y'], recipeInstructions: 'Mix.' };
+    const { recipe } = extractRecipeFromHtml(`<script type="application/ld+json">${JSON.stringify(ld)}</script>`, 'https://x.com/');
+    expect(recipe!.title).toBe('Real Title');
+    expect(recipe!.author ?? null).toBeNull();
+  });
+  it('rejects negative/absurd durations and yields', () => {
+    const ld = { '@type': 'Recipe', name: 'T', prepTime: 'PT-5M', cookTime: 'PT9999999H', recipeYield: '-3', recipeIngredient: ['1 cup x', '2 tsp y'], recipeInstructions: 'Mix.' };
+    const { recipe } = extractRecipeFromHtml(`<script type="application/ld+json">${JSON.stringify(ld)}</script>`, 'https://x.com/');
+    expect(recipe!.prepMinutes ?? null).toBeNull();
+    expect(recipe!.cookMinutes ?? null).toBeNull();
+    expect(recipe!.servings ?? null).toBeNull();
+    expect(recipe!.yieldCount ?? null).toBeNull();
+  });
+  it('clips absurdly long lines so the result stays shareable', () => {
+    const ld = { '@type': 'Recipe', name: 'T', recipeIngredient: ['1 cup ' + 'x'.repeat(2000), '2 tsp y'], recipeInstructions: 'Mix.' };
+    const { recipe } = extractRecipeFromHtml(`<script type="application/ld+json">${JSON.stringify(ld)}</script>`, 'https://x.com/');
+    expect(recipe!.ingredients[0].length).toBeLessThanOrEqual(500);
+  });
+  it('does not mistake a nav list under an "Ingredients" heading for a recipe', () => {
+    const html = `<h1>Site</h1><h2>Ingredients</h2><ul><li>Home</li><li>Recipes</li><li>About</li></ul><h2>Directions</h2><ol><li>Terms</li><li>Privacy</li></ol>`;
+    expect(extractRecipeFromHtml(html, 'https://x.com/').recipe).toBeNull();
+  });
+  it('survives pathological nesting quickly', () => {
+    const html = '<div>'.repeat(200000) + 'x' + '</div>'.repeat(200000);
+    const t = Date.now();
+    expect(extractRecipeFromHtml(html, 'https://x.com/').recipe).toBeNull();
+    expect(Date.now() - t).toBeLessThan(4000);
+  });
+});

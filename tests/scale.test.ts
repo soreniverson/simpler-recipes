@@ -119,3 +119,15 @@ describe('scaleIngredientLine — critique cases (Tikka Masala 4→7 and 4→1)'
     expect(s('juice of 1 lemon', 2)).toBe('juice of 1 lemon');
   });
 });
+
+describe('scaleIngredientLine — QA cases ("and" fractions, addends)', () => {
+  const s = scaleIngredientLine;
+  it('handles "2 and 3/4 cups (344g)"', () => {
+    expect(s('2 and 3/4 cups (344g)', 2)).toBe('5½ cups (690g)');
+    expect(s('2 and 1/4 cups (281g)', 0.5)).toBe('1⅛ cups (140g)');
+  });
+  it('scales "+" addends', () => {
+    expect(s('1/4 cup + 2 tbsp sugar', 2)).toBe('½ cup + 4 tbsp sugar');
+    expect(s('1 large egg + 1 egg yolk', 2)).toBe('2 large eggs + 2 egg yolk');
+  });
+});

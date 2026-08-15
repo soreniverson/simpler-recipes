@@ -8,7 +8,7 @@
  * The AI fallback (Claude) lives in the API route, not here — this module is pure and
  * fully unit-testable against saved fixtures.
  */
-import type { Recipe, ExtractionOutcome } from './types';
+import type { RecipeSection, Recipe, ExtractionOutcome } from './types';
 import { extractRecipeFromJsonLd } from './jsonld';
 import { extractIngredientSectionsFromDom, INGREDIENT_SECTION_HINT } from './html';
 import { parseHtml, extractPageMeta, extractRecipeFromMicrodata, extractRecipeFromStructure } from './html';
@@ -19,6 +19,16 @@ export interface ExtractOptions {
 }
 
 export function extractRecipeFromHtml(html: string, pageUrl?: string, opts: ExtractOptions = {}): ExtractionOutcome {
+  try {
+    return extractRecipeFromHtmlUnsafe(html, pageUrl, opts);
+  } catch (err) {
+    // Pathological markup (300k nested divs → stack overflow) must read as "no recipe", not 500.
+    console.warn('[extract] parser threw:', err instanceof Error ? err.message : err);
+    return { recipe: null, method: 'unknown', candidates: 0 };
+  }
+}
+
+function extractRecipeFromHtmlUnsafe(html: string, pageUrl?: string, opts: ExtractOptions = {}): ExtractionOutcome {
   const allowHeuristics = opts.allowHeuristics ?? true;
 
   // 1. JSON-LD
@@ -119,9 +129,20 @@ export function siteNameFromUrl(url: string): string | null {
 
 /** Last-mile invariants so downstream code can trust the shape. */
 export function finalize(r: Recipe): Recipe {
-  r.title = (r.title || 'Untitled Recipe').slice(0, 200);
-  r.ingredients = (r.ingredients || []).filter(Boolean).slice(0, 200);
-  r.instructions = (r.instructions || []).filter(Boolean).slice(0, 200);
+  const clip = (s: string, n: number) => (s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s);
+  r.title = clip(r.title || 'Untitled Recipe', 200);
+  r.ingredients = (r.ingredients || []).filter(Boolean).slice(0, 200).map((s) => clip(s, 500));
+  r.instructions = (r.instructions || []).filter(Boolean).slice(0, 200).map((s) => clip(s, 2500));
+  const clipGroups = (gs: RecipeSection[] | undefined, n: number) => gs?.map((g) => ({ name: g.name ? clip(g.name, 120) : null, items: g.items.map((s) => clip(s, n)) }));
+  r.ingredientGroups = clipGroups(r.ingredientGroups, 500);
+  r.instructionGroups = clipGroups(r.instructionGroups, 2500);
+  if (r.description) r.description = clip(r.description, 400);
+  if (r.author) r.author = clip(r.author, 120);
+  for (const k of ['prepMinutes', 'cookMinutes', 'totalMinutes'] as const) {
+    const v = r[k];
+    if (v != null && (!Number.isFinite(v) || v <= 0 || v > 100_000)) r[k] = null;
+  }
+  if (r.yieldCount != null && r.yieldCount > 5000) r.yieldCount = null;
   if (r.ingredientGroups) {
     r.ingredientGroups = r.ingredientGroups.filter((g) => g.items.length);
     if (r.ingredientGroups.length <= 1 && !r.ingredientGroups[0]?.name) delete r.ingredientGroups;

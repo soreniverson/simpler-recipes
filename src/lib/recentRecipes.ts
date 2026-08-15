@@ -49,8 +49,33 @@ function isEntry(x: unknown): x is RecentEntry {
     typeof r === 'object' &&
     typeof r.title === 'string' &&
     Array.isArray(r.ingredients) &&
-    Array.isArray(r.instructions)
+    (r.ingredients as unknown[]).every((x) => typeof x === 'string') &&
+    Array.isArray(r.instructions) &&
+    (r.instructions as unknown[]).every((x) => typeof x === 'string')
   );
+}
+
+/** Per-tab fallback for the rare device where localStorage is full or disabled. */
+const FALLBACK_KEY = 'sr:recent:fallback';
+function readFallback(): RecentEntry | null {
+  try {
+    if (typeof sessionStorage === 'undefined') return null;
+    const raw = sessionStorage.getItem(FALLBACK_KEY);
+    if (!raw) return null;
+    const e = JSON.parse(raw);
+    return isEntry(e) ? e : null;
+  } catch {
+    return null;
+  }
+}
+function writeFallback(e: RecentEntry): boolean {
+  try {
+    if (typeof sessionStorage === 'undefined') return false;
+    sessionStorage.setItem(FALLBACK_KEY, JSON.stringify(e));
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function load(): Store {
@@ -75,16 +100,23 @@ function nextStamp(store: Store): number {
   return Math.max(Date.now(), max + 1);
 }
 
-function save(store: Store): void {
+/** Returns false when nothing could be persisted (quota exhausted / storage disabled). */
+function save(store: Store): boolean {
   // Trim to cap (most recently opened first).
   store.items.sort((a, b) => b.openedAt - a.openedAt);
   store.items = store.items.slice(0, MAX_RECENT);
-  if (!writeJson(RECENT_KEY, store)) {
-    // Quota: drop the oldest half and retry once.
+  let ok = writeJson(RECENT_KEY, store);
+  if (!ok) {
+    // Quota: drop the oldest half and retry, then keep only the newest.
     store.items = store.items.slice(0, Math.max(1, Math.floor(store.items.length / 2)));
-    writeJson(RECENT_KEY, store);
+    ok = writeJson(RECENT_KEY, store);
+    if (!ok) {
+      store.items = store.items.slice(0, 1);
+      ok = writeJson(RECENT_KEY, store);
+    }
   }
   emit(RECENT_EVENT);
+  return ok;
 }
 
 /** Save (or refresh) an extracted recipe. Returns its id. */
@@ -100,13 +132,30 @@ export function rememberRecipe(recipe: Recipe, sourceUrl: string): string {
   } else {
     store.items.push({ id, recipe, sourceUrl, savedAt: now, openedAt: now });
   }
-  save(store);
+  if (!save(store)) {
+    // Last resort so the recipe the user just extracted is not lost on the way to /recipe.
+    const entry = store.items.find((i) => i.id === id);
+    if (entry) writeFallback(entry);
+  }
   return id;
 }
 
 export function getRecentRecipe(id: string): RecentEntry | null {
   const store = load();
-  return store.items.find((i) => i.id === id) ?? null;
+  const found = store.items.find((i) => i.id === id);
+  if (found) return found;
+  const fb = readFallback();
+  return fb && fb.id === id ? fb : null;
+}
+
+/**
+ * Open an extracted recipe from anywhere (favorites, meal plan): make sure it's in Recent under
+ * its stable id, then go to its address. Replaces writing the legacy single slot + `/recipe`.
+ */
+export function openExtractedRecipe(recipe: Recipe, sourceUrl?: string | null): void {
+  const src = sourceUrl || (recipe as any).sourceUrl || `local:${encodeURIComponent(recipe.title || 'recipe')}`;
+  const id = rememberRecipe(recipe, src);
+  window.location.href = `/recipe?r=${id}`;
 }
 
 /** Most recently opened first. */

@@ -1,4 +1,5 @@
 import { MEAL_SECTIONS } from '../utils/mealPlan';
+import { openExtractedRecipe } from '../lib/recentRecipes';
 
 function PlusIcon({ className = "w-4 h-4" }) {
   return (
@@ -37,12 +38,7 @@ function MealItem({ meal, dateKey, section, onRemove }) {
     if (meal.recipeSlug) {
       window.location.href = `/recipes/${meal.recipeSlug}`;
     } else if (meal.extractedRecipe) {
-      localStorage.setItem('simpler-recipes-extracted', JSON.stringify({
-        recipe: meal.extractedRecipe,
-        sourceUrl: meal.extractedRecipe.sourceUrl || '',
-        savedId: meal.id
-      }));
-      window.location.href = '/recipe';
+      openExtractedRecipe(meal.extractedRecipe, meal.extractedRecipe.sourceUrl || '');
     }
   };
 

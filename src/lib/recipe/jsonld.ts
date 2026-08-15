@@ -242,12 +242,38 @@ function ingredientLines(node: any): string[] {
   return [];
 }
 
+/** `{ "@value": "X" }` / `{ "@language": "en", "@value": "X" }` → "X". */
+function textValue(v: unknown): string | null {
+  if (v && typeof v === 'object' && !Array.isArray(v)) {
+    const o = v as any;
+    if (typeof o['@value'] === 'string') return o['@value'];
+    if (typeof o.name === 'string') return o.name;
+  }
+  if (Array.isArray(v)) {
+    for (const x of v) {
+      const t = textValue(x);
+      if (t) return t;
+    }
+  }
+  return null;
+}
+
 function firstString(...vals: unknown[]): string | null {
   for (const v of vals) {
     if (typeof v === 'string' && v.trim()) return v;
     if (Array.isArray(v) && typeof v[0] === 'string' && v[0].trim()) return v[0];
   }
   return null;
+}
+
+/** Author name — but never the recipe itself (some sites point author @id at the Recipe node). */
+function authorOf(node: any, ref: (v: unknown) => unknown): string | null {
+  const a = ref(node.author);
+  const name = normalizeAuthor(a);
+  if (!name) return null;
+  const recipeName = cleanText(firstString(node.name, textValue(node.name)) || '');
+  if (recipeName && name.toLowerCase() === recipeName.toLowerCase()) return null;
+  return name;
 }
 
 /** Convert a Recipe JSON-LD node into our Recipe model. Returns null if unusable. */
@@ -263,7 +289,7 @@ export function recipeFromJsonLd(node: any, pageUrl?: string, byId: Map<string, 
 
   const publisherNode0 = ref(node.publisher) as any;
   const siteName0 = publisherNode0 && typeof publisherNode0 === 'object' ? cleanText(publisherNode0.name) : null;
-  const title = cleanTitle(node.name || node.headline, siteName0) || 'Untitled Recipe';
+  const title = cleanTitle(firstString(node.name, node.headline, textValue(node.name), textValue(node.headline)), siteName0) || 'Untitled Recipe';
   const prepMinutes = durationToMinutes(node.prepTime);
   const cookMinutes = durationToMinutes(node.cookTime);
   let totalMinutes = durationToMinutes(node.totalTime);
@@ -298,7 +324,7 @@ export function recipeFromJsonLd(node: any, pageUrl?: string, byId: Map<string, 
     servings: y.text,
     yieldCount: y.count,
     image,
-    author: normalizeAuthor(ref(node.author)),
+    author: authorOf(node, ref),
     siteName: siteName || null,
     sourceUrl: pageUrl ?? null,
     canonicalUrl: url && pageUrl && stripUrl(url) !== stripUrl(pageUrl) && /^https?:\/\//.test(url) ? url : null,

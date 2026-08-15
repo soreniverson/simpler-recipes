@@ -312,9 +312,10 @@ export function convertIngredient(ingredientString, toMetric) {
   // Pattern for numbers including fractions
   const numberPattern = '(?:\\d+\\s+)?(?:\\d+\\/\\d+|[\\u00BC\\u00BD\\u00BE\\u2153\\u2154\\u215B\\u215C\\u215D\\u215E]|\\d+[\\u00BC\\u00BD\\u00BE\\u2153\\u2154\\u215B\\u215C\\u215D\\u215E]?|\\d+\\.\\d+|\\d+)';
 
-  const regex = new RegExp(`(${numberPattern})\\s*(${unitNames})\\b`, 'gi');
+  // Ranges share one unit: "1 - 2 tbsp" → "15 - 30 ml" (not "1 - 30 ml").
+  const regex = new RegExp(`(${numberPattern})(\\s*(?:-|–|—|to)\\s*(${numberPattern}))?\\s*(${unitNames})\\b`, 'gi');
 
-  return ingredientString.replace(regex, (match, quantity, unit) => {
+  return ingredientString.replace(regex, (match, quantity, rangePart, quantity2, unit) => {
     const value = parseFraction(quantity);
     if (value === null) {
       return match; // Couldn't parse, return original
@@ -327,6 +328,15 @@ export function convertIngredient(ingredientString, toMetric) {
 
     const formattedValue = formatMeasurement(converted.value, converted.unit);
     const displayUnit = getUnitDisplay(converted.unit, converted.value);
+
+    if (rangePart && quantity2) {
+      const value2 = parseFraction(quantity2);
+      const converted2 = value2 === null ? null : convertMeasurement(value2, unit, toMetric);
+      if (converted2 && converted2.unit === converted.unit) {
+        const sep = rangePart.replace(quantity2, '').replace(/\s+/g, ' ');
+        return `${formattedValue}${sep}${formatMeasurement(converted2.value, converted2.unit)} ${getUnitDisplay(converted2.unit, converted2.value)}`;
+      }
+    }
 
     return `${formattedValue} ${displayUnit}`;
   });

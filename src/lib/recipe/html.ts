@@ -33,7 +33,40 @@ export interface PageMeta {
   description: string | null;
 }
 
+/** Real pages nest ~30–60 deep. Anything past this is hostile/broken markup that would make
+ *  DOM walks quadratic or blow the stack, so we refuse to build a DOM for it. */
+export const MAX_NESTING = 1500;
+
+const VOID_TAGS = /^(area|base|br|col|embed|hr|img|input|link|meta|param|source|track|wbr)$/i;
+
+/**
+ * Cheap tag-depth scan (regex, no DOM). htmlparser2's own stack goes quadratic on absurd nesting,
+ * so this runs first and gives up as soon as `limit` is exceeded. Approximate on purpose.
+ */
+export function nestingDepth(html: string, limit = Number.POSITIVE_INFINITY): number {
+  const re = /<\/?([a-zA-Z][\w:-]*)(?:[^>"']|"[^"]*"|'[^']*')*?(\/?)>/g;
+  let depth = 0;
+  let max = 0;
+  let m: RegExpExecArray | null;
+  // Skip script/style bodies so "<" inside them doesn't count.
+  const src = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<!--[\s\S]*?-->/gi, '');
+  while ((m = re.exec(src))) {
+    const closing = m[0][1] === '/';
+    if (closing) {
+      if (depth > 0) depth--;
+    } else if (!m[2] && !VOID_TAGS.test(m[1])) {
+      depth++;
+      if (depth > max) {
+        max = depth;
+        if (max > limit) return max;
+      }
+    }
+  }
+  return max;
+}
+
 export function parseHtml(html: string) {
+  if (nestingDepth(html, MAX_NESTING) > MAX_NESTING) throw new Error(`markup nested deeper than ${MAX_NESTING}`);
   return parseDocument(html, { decodeEntities: true, lowerCaseAttributeNames: true });
 }
 
@@ -212,13 +245,15 @@ function collectAfter(heading: Element, wantList: boolean): string[] {
  * Only succeeds when both are found and reasonably sized.
  */
 export function extractRecipeFromStructure(doc: ReturnType<typeof parseHtml>, pageUrl?: string, meta?: PageMeta, opts?: { allowPartial?: boolean }): Recipe | null {
-  const headings = selectAll('h1, h2, h3, h4, h5, p, strong, b, span, div', doc) as unknown as Element[];
+  const headings = (selectAll('h1, h2, h3, h4, h5, p, strong, b, span, div', doc) as unknown as Element[]).slice(0, 20000);
   let ingHeading: Element | null = null;
   let stepHeading: Element | null = null;
   for (const el of headings) {
-    // Only leaf-ish elements with short text.
+    // Only leaf-ish elements with short text. Generic containers must be leaves — otherwise a
+    // deeply nested div chain makes textContent quadratic.
     const kids = getChildren(el).filter(isTag);
-    if (kids.length > 2) continue;
+    const tag = el.tagName.toLowerCase();
+    if ((tag === 'div' || tag === 'span') ? kids.length > 0 : kids.length > 2) continue;
     const t = text(el);
     if (!t || t.length > 40) continue;
     if (!ingHeading && ING_HEADING.test(t)) ingHeading = el;
@@ -228,8 +263,13 @@ export function extractRecipeFromStructure(doc: ReturnType<typeof parseHtml>, pa
   if (!ingHeading && !stepHeading) return null;
   const ingLines = ingHeading ? collectAfter(ingHeading, true).map(cleanIngredientLine).filter(Boolean) : [];
   const stepLines = stepHeading ? collectAfter(stepHeading, false).map((s) => stripStepNumbering(s)).filter(Boolean) : [];
+  // Plausibility: an ingredient list has quantities/units in a good share of its lines. A nav
+  // <ul> under an "Ingredients" heading (Home / Recipes / About) does not.
+  const QUANTITY = /\d|[¼½¾⅓⅔⅛]|\b(cups?|tbsp|tsp|tablespoons?|teaspoons?|oz|ounces?|lbs?|pounds?|grams?|g|kg|ml|l|litres?|liters?|pinch|dash|cloves?|slices?|cans?|to taste|handful|bunch|sprigs?)\b/i;
+  const quantified = ingLines.filter((l) => QUANTITY.test(l)).length;
+  const plausible = ingLines.length > 0 && quantified >= Math.max(1, Math.ceil(ingLines.length * 0.4));
   // Standalone use requires both halves; the caller may still borrow one half when JSON-LD had the other.
-  const hasIng = ingLines.length >= 2 && ingLines.length <= 80;
+  const hasIng = plausible && ingLines.length >= 2 && ingLines.length <= 80;
   const hasSteps = stepLines.length >= 1 && stepLines.length <= 80;
   if (!hasIng && !hasSteps) return null;
   if (!opts?.allowPartial && !(hasIng && hasSteps)) return null;

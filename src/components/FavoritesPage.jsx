@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import RecipeCard from './RecipeCard';
+import { openExtractedRecipe } from '../lib/recentRecipes';
 import {
   getCuratedFavorites,
   getExtractedFavorites,
@@ -218,14 +219,7 @@ function ExtractedRecipeCard({ item, onRemove, folders, onMove }) {
   const { id, recipe, sourceUrl, folderId } = item;
   const [showMenu, setShowMenu] = useState(false);
 
-  const handleClick = () => {
-    localStorage.setItem('simpler-recipes-extracted', JSON.stringify({
-      recipe,
-      sourceUrl,
-      savedId: id
-    }));
-    window.location.href = '/recipe';
-  };
+  const handleClick = () => openExtractedRecipe(recipe, sourceUrl);
 
   const handleRemove = (e) => {
     e.preventDefault();

@@ -16,7 +16,15 @@ function liteClean(input: unknown): string {
  * ("1 hr 30 min", "90 minutes", "1.5 hours", "45 mins", "2 hours") into total minutes.
  * Returns null when it can't be understood or is zero/negative.
  */
+/** Anything over ~10 weeks is a markup error, not a recipe. */
+const MAX_MINUTES = 100_000;
+
 export function durationToMinutes(input: unknown): number | null {
+  const n = durationToMinutesRaw(input);
+  return n != null && n <= MAX_MINUTES ? n : null;
+}
+
+function durationToMinutesRaw(input: unknown): number | null {
   if (input == null) return null;
   if (typeof input === 'number') return input > 0 && Number.isFinite(input) ? Math.round(input) : null;
   if (Array.isArray(input)) return durationToMinutes(input[0]);
@@ -35,7 +43,7 @@ export function durationToMinutes(input: unknown): number | null {
   }
   if (typeof input !== 'string') return null;
   const s = input.trim();
-  if (!s) return null;
+  if (!s || /(^|[^\d\s])\s*-\s*\d/.test(s)) return null; // negative durations ("PT-5M", "-30 min") are nonsense; "1-2 hours" is a range
 
   // ISO 8601
   const iso = s.match(/^P(?:(\d+(?:[.,]\d+)?)Y)?(?:(\d+(?:[.,]\d+)?)M)?(?:(\d+(?:[.,]\d+)?)W)?(?:(\d+(?:[.,]\d+)?)D)?(?:T(?:(\d+(?:[.,]\d+)?)H)?(?:(\d+(?:[.,]\d+)?)M)?(?:(\d+(?:[.,]\d+)?)S)?)?$/i);
@@ -161,6 +169,8 @@ export function normalizeYield(input: unknown): NormalizedYield {
 
   let s = liteClean(input);
   if (!s) return { text: null, count: null };
+  // "-3", "0 servings", "1/0" are not yields.
+  if (/^\s*-\s*\d/.test(s) || /^\s*0+(?:[.,]0+)?\s*(servings?|serves|people|portions?)?\s*$/i.test(s) || /\/\s*0\b/.test(s)) return { text: null, count: null };
   s = s.replace(/serving\(s\)/gi, 'servings');
 
   // Extract the first number (supports ranges "4-6", "4 to 6", mixed numbers "2 1/2", unicode "2½").
@@ -174,7 +184,8 @@ export function normalizeYield(input: unknown): NormalizedYield {
     const b = numMatch[2] ? parseQuantityToken(numMatch[2].replace(',', '.')) : null;
     // For ranges use the lower bound (a recipe "serves 4–6" scales from 4).
     count = b != null ? Math.min(a, b) : a;
-    if (!Number.isFinite(count) || count <= 0 || count > 1000) count = null;
+    // > 500 is a markup error, not a scaling baseline.
+    if (!Number.isFinite(count) || count <= 0 || count > 500) count = null;
     else if (!Number.isInteger(count)) count = Math.round(count * 100) / 100;
   }
 

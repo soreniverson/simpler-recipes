@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import RecipeView from './RecipeView';
 import RemixButton from '../RemixButton';
+import ErrorBoundary from '../ErrorBoundary';
 import { getRecentRecipe, latestRecentRecipe, touchRecentRecipe, listRecentRecipes } from '../../lib/recentRecipes';
 import { hostnameOf } from '../../lib/recipe/href';
 
@@ -40,8 +41,20 @@ export default function ExtractedRecipePage() {
   const { recipe, sourceUrl, id } = entry;
   return (
     <main id="main-content" className="min-h-screen bg-background">
-      <RecipeView recipe={recipe} recipeId={id} sourceUrl={sourceUrl} variant="extracted" remix={<RemixButton recipe={recipe} variant="link" />} />
+      <ErrorBoundary fallback={<Broken />}>
+        <RecipeView recipe={recipe} recipeId={id} sourceUrl={sourceUrl} variant="extracted" remix={<RemixButton recipe={recipe} variant="link" />} />
+      </ErrorBoundary>
     </main>
+  );
+}
+
+function Broken() {
+  return (
+    <div className="max-w-xl mx-auto px-4 py-16 text-center">
+      <h1 className="text-[22px] font-semibold text-sand-900">This saved recipe can’t be shown</h1>
+      <p className="mt-2 text-[15px] text-sand-600">The copy on this device looks damaged. Paste the original link again to get a fresh one.</p>
+      <a href="/" className="btn-primary mt-6">Simplify a recipe</a>
+    </div>
   );
 }
 

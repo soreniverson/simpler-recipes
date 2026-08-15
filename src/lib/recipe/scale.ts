@@ -19,7 +19,7 @@ const NICE: [number, string][] = [
   [0.125, '⅛'], [0.25, '¼'], [1 / 3, '⅓'], [0.375, '⅜'], [0.5, '½'], [0.625, '⅝'], [2 / 3, '⅔'], [0.75, '¾'], [0.875, '⅞'],
 ];
 
-const NUMBER = String.raw`(?:\d+\s+\d+\/\d+|\d+\/\d+|\d+(?:[.,]\d+)?\s*[¼½¾⅓⅔⅛⅜⅝⅞⅕⅖⅗⅘⅙⅚]|\d+(?:[.,]\d+)?|[¼½¾⅓⅔⅛⅜⅝⅞⅕⅖⅗⅘⅙⅚])`;
+const NUMBER = String.raw`(?:\d+\s+(?:and\s+)?\d+\/\d+|\d+\/\d+|\d+(?:[.,]\d+)?\s*[¼½¾⅓⅔⅛⅜⅝⅞⅕⅖⅗⅘⅙⅚]|\d+(?:[.,]\d+)?|[¼½¾⅓⅔⅛⅜⅝⅞⅕⅖⅗⅘⅙⅚])`;
 const RANGE_SEP = String.raw`(?:\s*(?:-|–|—|to|or)\s*)`;
 const UNIT = String.raw`(?:cups?|c\.|tablespoons?|tbsps?|tbs|tbl|teaspoons?|tsps?|t\b|ounces?|oz\.?|fl\.?\s*oz\.?|pounds?|lbs?\.?|grams?|g\b|kilograms?|kgs?|milliliters?|millilitres?|ml|liters?|litres?|l\b|quarts?|qts?|pints?|pts?|gallons?|gal|sticks?|cloves?|slices?|pieces?|cans?|packages?|pkgs?|packets?|bunch(?:es)?|sprigs?|stalks?|heads?|handfuls?|pinch(?:es)?|dash(?:es)?|drops?|inch(?:es)?|cm|mm|large|medium|small)`;
 
@@ -36,7 +36,7 @@ export function parseNumber(token: string): number | null {
   const t = token.trim().replace(',', '.');
   if (!t) return null;
   if (UNICODE[t] != null) return UNICODE[t];
-  let m = t.match(/^(\d+)\s+(\d+)\/(\d+)$/);
+  let m = t.match(/^(\d+)\s+(?:and\s+)?(\d+)\/(\d+)$/);
   if (m) return parseInt(m[1], 10) + parseInt(m[2], 10) / parseInt(m[3], 10);
   m = t.match(/^(\d+)\/(\d+)$/);
   if (m) return parseInt(m[2], 10) ? parseInt(m[1], 10) / parseInt(m[2], 10) : null;
@@ -66,11 +66,27 @@ export function findScalableNumbers(line: string): Num[] {
   cursor = pushMatch(m[1], cursor);
   if (m[2]) cursor = pushMatch(m[2], cursor);
 
+  // "+ 2 tbsp" / "+ 1 egg yolk" addends after a quantity: scale each one too.
+  const addends = (from: number) => {
+    let c = from;
+    // up to two plain words may sit between the quantity and the "+" ("1 large egg + 1 egg yolk")
+    const re = new RegExp(String.raw`^\s*(?:[A-Za-z-]+\s+){0,2}\+\s*(${NUMBER})(?:\s*${UNIT}\.?)?`, 'i');
+    for (let guard = 0; guard < 4; guard++) {
+      const am = line.slice(c).match(re);
+      if (!am) break;
+      c = pushMatch(am[1], c);
+      // skip past the unit (if any) so the next "+" is found
+      const after = line.slice(c).match(new RegExp(String.raw`^\s*${UNIT}\.?`, 'i'));
+      if (after) c += after[0].length;
+    }
+  };
+
   // What follows the number(s)? A unit, then possibly "(45 ml)" conversion, then possibly "/ 1.2 lb" dual.
   let rest = line.slice(cursor);
   const unitM = rest.match(new RegExp(String.raw`^\s*${UNIT}\.?`, 'i'));
   if (!unitM) {
-    // Bare count ("2 eggs", "1 (14 oz) can", "3-4 chicken thighs") — nothing more to scale.
+    // Bare count ("2 eggs", "1 (14 oz) can", "3-4 chicken thighs"). Only "+ N …" addends may follow.
+    addends(cursor);
     return nums;
   }
   cursor += unitM[0].length;
@@ -93,8 +109,12 @@ export function findScalableNumbers(line: string): Num[] {
   if (dual) {
     let c = cursor;
     c = pushMatch(dual[1], c);
-    if (dual[2]) pushMatch(dual[2], c);
+    if (dual[2]) c = pushMatch(dual[2], c);
+    cursor = c;
+    const u = line.slice(cursor).match(new RegExp(String.raw`^\s*${UNIT}\.?`, 'i'));
+    if (u) cursor += u[0].length;
   }
+  addends(cursor);
   return nums;
 }
 

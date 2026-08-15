@@ -43,8 +43,9 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
     return () => window.removeEventListener(COOK_STATE_EVENT, onChange);
   }, [recipeId]);
 
-  const checked = useMemo(() => new Set(state.ingredients), [state.ingredients]);
-  const doneSteps = useMemo(() => new Set(state.steps), [state.steps]);
+  // Bounds-check stored indices: a re-extracted page may have a different ingredient/step count.
+  const checked = useMemo(() => new Set(state.ingredients.filter((i) => Number.isInteger(i) && i >= 0 && i < recipe.ingredients.length)), [state.ingredients, recipe.ingredients.length]);
+  const doneSteps = useMemo(() => new Set(state.steps.filter((i) => Number.isInteger(i) && i >= 0 && i < recipe.instructions.length)), [state.steps, recipe.instructions.length]);
   const onToggleIngredient = useCallback((i) => setState(toggleIngredient(recipeId, i)), [recipeId]);
   const onToggleStep = useCallback((i) => setState(toggleStep(recipeId, i)), [recipeId]);
   const onResetIngredients = useCallback(() => setState(setCookState(recipeId, { ingredients: [] })), [recipeId]);
