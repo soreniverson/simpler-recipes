@@ -192,7 +192,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
           {/* Actions */}
           <div className="mt-5 flex flex-wrap items-center gap-2 no-print">
             {recipe.instructions.length > 0 && (
-              <button type="button" onClick={openCook} className="btn-primary">
+              <button type="button" onClick={openCook} className="btn-primary w-full sm:w-auto">
                 <PlayIcon className="w-4 h-4" />
                 {hydrated && cookProgress ? `Resume step ${state.currentStep + 1}` : 'Cook Mode'}
               </button>
