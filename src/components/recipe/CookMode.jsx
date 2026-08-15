@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { detectTimers, formatCountdown } from '../../lib/timers';
+import { detectTimers } from '../../lib/timers';
+import { TimerBar, TimerButton } from './Timers';
 import Ingredients from './Ingredients';
-import { CloseIcon, ChevronLeftIcon, ChevronRightIcon, ListIcon, TimerIcon, CheckIcon } from './Icons';
+import { CloseIcon, ChevronLeftIcon, ChevronRightIcon, ListIcon, CheckIcon } from './Icons';
 
 /**
  * Cook Mode — designed for a phone on the counter, three feet away, wet hands.
@@ -182,7 +183,7 @@ export default function CookMode({ recipe, currentStep, onStepChange, checkedIng
             <span className="sr-only">Cook mode: </span>
             {recipe.title}
           </p>
-          <p className="text-[14px] font-medium tabular text-sand-800" aria-hidden="true">
+          <p className="text-[18px] font-semibold tabular text-sand-900 leading-tight" aria-hidden="true">
             Step {step + 1} of {total}
           </p>
         </div>
@@ -200,19 +201,19 @@ export default function CookMode({ recipe, currentStep, onStepChange, checkedIng
       </div>
 
       {/* Running timers */}
-      <TimerBar />
+      <TimerBar size="lg" />
 
       {/* Step */}
       <main className="flex-1 min-h-0 overflow-y-auto px-6 sm:px-10 py-6 flex flex-col">
         {/* my-auto (not items-center) so long steps scroll from the top instead of clipping. */}
         <div className={`w-full mx-auto my-auto ${long ? 'max-w-[34ch] sm:max-w-[40ch]' : 'max-w-[28ch] sm:max-w-[30ch]'}`}>
-          <p key={step} className={`${long ? 'text-[22px] sm:text-[26px] lg:text-[30px] leading-[1.35]' : 'text-[26px] sm:text-[32px] lg:text-[36px] leading-[1.3]'} text-sand-900 [text-wrap:pretty]`}>
+          <p key={step} className={`${long ? 'text-[22px] sm:text-[26px] lg:text-[30px] leading-[1.35]' : 'text-[30px] sm:text-[34px] lg:text-[38px] leading-[1.28]'} text-sand-900 [text-wrap:pretty]`}>
             {text}
           </p>
           {timers.length > 0 && (
             <div className="mt-6 flex flex-wrap gap-2 no-print">
               {timers.map((t) => (
-                <TimerButton key={t.seconds} timer={t} stepIndex={step} />
+                <TimerButton key={t.seconds} timer={t} stepIndex={step} size="lg" />
               ))}
             </div>
           )}
@@ -247,9 +248,9 @@ export default function CookMode({ recipe, currentStep, onStepChange, checkedIng
 
       {/* Ingredients sheet */}
       {showIngredients && (
-        <div className="absolute inset-0 z-10 flex flex-col justify-end" onTouchStart={(e) => e.stopPropagation()} onTouchEnd={(e) => e.stopPropagation()}>
+        <div className="absolute inset-0 z-10 flex flex-col justify-end sm:justify-center sm:items-center sm:p-6" onTouchStart={(e) => e.stopPropagation()} onTouchEnd={(e) => e.stopPropagation()}>
           <button type="button" className="absolute inset-0 bg-sand-950/30" aria-label="Close ingredients" onClick={() => setShowIngredients(false)} />
-          <div id="cook-ingredients" role="dialog" aria-label="Ingredients" className="relative bg-sand-50 rounded-t-2xl shadow-lg max-h-[80vh] flex flex-col" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
+          <div id="cook-ingredients" role="dialog" aria-label="Ingredients" className="relative bg-sand-50 rounded-t-2xl sm:rounded-2xl shadow-lg max-h-[80vh] w-full sm:max-w-xl flex flex-col" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
             <div className="flex items-center justify-between px-5 pt-3 pb-1">
               <span className="w-10 h-1 rounded-full bg-sand-300 absolute left-1/2 -translate-x-1/2 top-2" aria-hidden="true" />
               <span className="text-[13px] text-sand-500 mt-2">Tap to check off</span>
@@ -272,115 +273,5 @@ export default function CookMode({ recipe, currentStep, onStepChange, checkedIng
         </div>
       )}
     </div>
-  );
-}
-
-/* ---------------- Timers ---------------- */
-// Module-level so timers keep running across step changes and re-renders (but not across page loads).
-const timerStore = { list: [], subs: new Set() };
-function emitTimers() {
-  timerStore.subs.forEach((fn) => fn([...timerStore.list]));
-}
-function startTimer(label, seconds, stepIndex) {
-  const id = `${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
-  timerStore.list.push({ id, label, endsAt: Date.now() + seconds * 1000, total: seconds, stepIndex, done: false });
-  emitTimers();
-  return id;
-}
-function stopTimer(id) {
-  timerStore.list = timerStore.list.filter((t) => t.id !== id);
-  emitTimers();
-}
-function useTimers() {
-  const [list, setList] = useState(() => [...timerStore.list]);
-  useEffect(() => {
-    timerStore.subs.add(setList);
-    return () => timerStore.subs.delete(setList);
-  }, []);
-  return list;
-}
-
-function beep() {
-  try {
-    const Ctx = window.AudioContext || window.webkitAudioContext;
-    if (!Ctx) return;
-    const ctx = new Ctx();
-    const now = ctx.currentTime;
-    [0, 0.25, 0.5].forEach((t) => {
-      const o = ctx.createOscillator();
-      const g = ctx.createGain();
-      o.type = 'sine';
-      o.frequency.value = 880;
-      g.gain.setValueAtTime(0.0001, now + t);
-      g.gain.exponentialRampToValueAtTime(0.25, now + t + 0.02);
-      g.gain.exponentialRampToValueAtTime(0.0001, now + t + 0.2);
-      o.connect(g).connect(ctx.destination);
-      o.start(now + t);
-      o.stop(now + t + 0.22);
-    });
-    setTimeout(() => ctx.close().catch(() => {}), 1500);
-  } catch {
-    /* no audio */
-  }
-}
-
-function TimerBar() {
-  const list = useTimers();
-  const [, tick] = useState(0);
-  useEffect(() => {
-    if (!list.length) return;
-    const i = setInterval(() => {
-      const now = Date.now();
-      let changed = false;
-      for (const t of timerStore.list) {
-        if (!t.done && t.endsAt <= now) {
-          t.done = true;
-          changed = true;
-          beep();
-          try {
-            navigator.vibrate?.([200, 100, 200, 100, 400]);
-          } catch {}
-        }
-      }
-      if (changed) emitTimers();
-      tick((n) => n + 1);
-    }, 250);
-    return () => clearInterval(i);
-  }, [list.length]);
-  if (!list.length) return null;
-  return (
-    <div className="shrink-0 px-4 pt-3 flex flex-wrap gap-2 justify-center" role="status" aria-live="polite">
-      {list.map((t) => {
-        const remaining = Math.max(0, Math.round((t.endsAt - Date.now()) / 1000));
-        return (
-          <div key={t.id} className={`inline-flex items-center gap-2 pl-3 pr-1 h-10 rounded-full text-[15px] tabular font-medium ${t.done ? 'bg-sand-900 text-sand-50 animate-pulse' : 'bg-sand-100 text-sand-900'}`}>
-            <TimerIcon className="w-4 h-4" />
-            <span>{t.done ? 'Time’s up' : formatCountdown(remaining)}</span>
-            <span className="text-sand-500 font-normal text-[13px]">step {t.stepIndex + 1}</span>
-            <button type="button" onClick={() => stopTimer(t.id)} className="w-8 h-8 rounded-full inline-flex items-center justify-center hover:bg-sand-200/60" aria-label={t.done ? 'Dismiss timer' : 'Cancel timer'}>
-              <CloseIcon className="w-4 h-4" />
-            </button>
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
-function TimerButton({ timer, stepIndex }) {
-  const list = useTimers();
-  const running = list.find((t) => t.stepIndex === stepIndex && t.total === timer.seconds && !t.done);
-  if (running) {
-    return (
-      <span className="inline-flex items-center gap-2 h-11 px-4 rounded-lg bg-sand-100 text-sand-600 text-[15px]">
-        <TimerIcon className="w-4 h-4" /> Timer running
-      </span>
-    );
-  }
-  return (
-    <button type="button" onClick={() => startTimer(timer.label, timer.seconds, stepIndex)} className="btn-secondary">
-      <TimerIcon className="w-4 h-4" />
-      Start {timer.label} timer
-    </button>
   );
 }

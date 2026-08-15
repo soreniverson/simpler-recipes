@@ -2,7 +2,8 @@ import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import Ingredients from './Ingredients';
 import Instructions from './Instructions';
 import CookMode from './CookMode';
-import { getCookState, toggleIngredient, toggleStep, setCookState, resetCookState, COOK_STATE_EVENT } from '../../lib/cookState';
+import { TimerBar, TimerAlarm } from './Timers';
+import { getCookState, toggleIngredient, toggleStep, setCookState, COOK_STATE_EVENT } from '../../lib/cookState';
 import { metaLine, sourceInfo, recipeAsText, displayTimes, displayServings } from '../../lib/recipe/display';
 import { safeImageSrc } from '../../lib/recipe/href';
 import { isFavorite, toggleFavorite, getExtractedFavorites, addExtractedFavorite, removeExtractedFavorite } from '../../utils/favorites';
@@ -48,17 +49,27 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
   const onToggleStep = useCallback((i) => setState(toggleStep(recipeId, i)), [recipeId]);
   const onResetIngredients = useCallback(() => setState(setCookState(recipeId, { ingredients: [] })), [recipeId]);
   const onServingsChange = useCallback((n) => setState(setCookState(recipeId, { servings: n })), [recipeId]);
-  const onStepChange = useCallback((n) => setState(setCookState(recipeId, { currentStep: n })), [recipeId]);
+  // Moving to step n in Cook Mode means steps before it are done — keep the Instructions list in sync.
+  const onStepChange = useCallback(
+    (n) => {
+      const cur = getCookState(recipeId);
+      const done = new Set(cur.steps);
+      for (let i = 0; i < n; i++) done.add(i);
+      setState(setCookState(recipeId, { currentStep: n, steps: [...done].sort((a, b) => a - b) }));
+    },
+    [recipeId]
+  );
 
   // ---- cook mode ----
   const [cooking, setCooking] = useState(false);
   const openCook = useCallback(() => setCooking(true), []);
   const closeCook = useCallback(() => setCooking(false), []);
   const onCookDone = useCallback(() => {
-    // Finished cooking: clear the step position and checks so next time starts fresh.
-    resetCookState(recipeId);
-    setState(getCookState(recipeId));
-  }, [recipeId]);
+    // Finished cooking: every step is done, position goes back to the start. Ingredient checks and
+    // the servings choice are the cook's — leave them (there's "Clear checks" / "Reset to N" for that).
+    const all = recipe.instructions.map((_, i) => i);
+    setState(setCookState(recipeId, { currentStep: 0, steps: all }));
+  }, [recipeId, recipe.instructions]);
 
   // ---- favorites ----
   const [saved, setSaved] = useState(false);
@@ -266,6 +277,10 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
           Source: {src.name} — {src.url}
         </p>
       )}
+
+      {/* Timers outlive Cook Mode: floating bar on the page, takeover alarm above everything. */}
+      {!cooking && <TimerBar floating />}
+      <TimerAlarm />
 
       {cooking && (
         <CookMode
