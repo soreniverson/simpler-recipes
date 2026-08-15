@@ -48,6 +48,33 @@ export default function RemixButton({ recipe, variant = 'default', className = '
     image: recipe.image || null,
   };
 
+  if (variant === 'link') {
+    return (
+      <>
+        <button
+          onClick={() => setIsOpen(true)}
+          className={`hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300 ${className}`}
+        >
+          Remix with AI
+        </button>
+        {savedMessage && (
+          <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-sand-900 text-sand-50 px-4 py-2 rounded-lg shadow-lg text-sm" role="status">
+            {savedMessage}
+          </div>
+        )}
+        {isOpen && (
+          <RemixModal
+            isOpen={isOpen}
+            onClose={() => setIsOpen(false)}
+            baseRecipe={normalizedRecipe}
+            recipes={recipes}
+            onSave={handleSave}
+          />
+        )}
+      </>
+    );
+  }
+
   if (variant === 'icon') {
     return (
       <>

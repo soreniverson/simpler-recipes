@@ -1,11 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ExtractedRecipeView from '../components/ExtractedRecipeView.jsx';
+import ExtractedRecipePage from '../components/recipe/ExtractedRecipePage.jsx';
+// Client-only: the recipe lives in this browser's localStorage. Never indexable.
 ---
 
-<BaseLayout
-  title="Recipe - Simpler Recipes"
-  description="Clean, ad-free recipe extracted from the web."
->
-  <ExtractedRecipeView client:only="react" />
+<BaseLayout title="Recipe · Simpler Recipes" description="A recipe you simplified, saved on this device." noindex={true}>
+  <ExtractedRecipePage client:only="react" />
 </BaseLayout>

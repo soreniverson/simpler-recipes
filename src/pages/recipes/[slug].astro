@@ -1,186 +1,140 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ScalableIngredients from '../../components/ScalableIngredients.jsx';
-import FavoriteButton from '../../components/FavoriteButton.jsx';
-import RecipeInstructions from '../../components/RecipeInstructions.jsx';
+import RecipeView from '../../components/recipe/RecipeView.jsx';
 import RemixButton from '../../components/RemixButton.jsx';
 import fs from 'fs';
 import path from 'path';
-import { durationToMinutes, minutesToIso } from '../../lib/recipe/normalize';
+import { durationToMinutes, minutesToIso, formatMinutes, normalizeYield } from '../../lib/recipe/normalize';
 
 export async function getStaticPaths() {
   const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
   const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+  const collections = data.collections as { slug: string; name: string; recipes: string[] }[];
+  const bySlug = new Map<string, any>(data.recipes.map((r: any) => [r.slug, r]));
 
-  return data.recipes.map((recipe: any) => ({
-    params: { slug: recipe.slug },
-    props: { recipe },
-  }));
+  return data.recipes.map((recipe: any) => {
+    // Collection this recipe belongs to (first one listing it), for breadcrumb + related.
+    const collection = collections.find((c) => c.recipes.includes(recipe.slug)) || null;
+    const related = collection
+      ? collection.recipes
+          .filter((s, i, a) => s !== recipe.slug && a.indexOf(s) === i)
+          .map((s) => bySlug.get(s))
+          .filter(Boolean)
+          .slice(0, 4)
+          .map((r: any) => ({ slug: r.slug, title: r.title, image: r.image, totalTime: r.totalTime }))
+      : [];
+    return {
+      params: { slug: recipe.slug },
+      props: { recipe, collection: collection ? { slug: collection.slug, name: collection.name } : null, related },
+    };
+  });
 }
 
-const { recipe } = Astro.props;
+interface Props {
+  recipe: any;
+  collection: { slug: string; name: string } | null;
+  related: { slug: string; title: string; image: string | null; totalTime: string | null }[];
+}
+const { recipe, collection, related } = Astro.props as Props;
 
-// Generate schema.org structured data for SEO. Only emit what we actually know —
-// no fabricated fields. Times go through the tested ISO 8601 helpers.
 const SITE = 'https://www.simpler.recipes';
 const pageUrl = `${SITE}/recipes/${recipe.slug}/`;
 const prepMin = durationToMinutes(recipe.prepTime);
 const cookMin = durationToMinutes(recipe.cookTime);
-const totalMin = durationToMinutes(recipe.totalTime) ?? ((prepMin || cookMin) ? (prepMin || 0) + (cookMin || 0) : null);
-const yieldText = recipe.servings ? (/^\d+$/.test(String(recipe.servings)) ? `${recipe.servings} servings` : String(recipe.servings)) : undefined;
-const schemaData: Record<string, unknown> = {
-  "@context": "https://schema.org",
-  "@type": "Recipe",
-  "name": recipe.title,
-  "url": pageUrl,
-  "mainEntityOfPage": pageUrl,
-  "image": recipe.image ? [recipe.image] : undefined,
-  "author": recipe.source?.name ? { "@type": "Organization", "name": recipe.source.name, "url": recipe.source.url } : undefined,
-  "isBasedOn": recipe.source?.url || undefined,
-  "prepTime": minutesToIso(prepMin),
-  "cookTime": minutesToIso(cookMin),
-  "totalTime": minutesToIso(totalMin),
-  "recipeYield": yieldText,
-  "keywords": recipe.tags?.length ? recipe.tags.join(', ') : undefined,
-  "recipeIngredient": recipe.ingredients,
-  "recipeInstructions": recipe.instructions.map((step: string, i: number) => ({
-    "@type": "HowToStep",
-    "position": i + 1,
-    "text": step
-  }))
+let totalMin = durationToMinutes(recipe.totalTime);
+if (totalMin == null && (prepMin || cookMin)) totalMin = (prepMin || 0) + (cookMin || 0);
+if (totalMin != null && prepMin != null && cookMin != null && totalMin < prepMin + cookMin) totalMin = prepMin + cookMin;
+const yieldInfo = normalizeYield(recipe.servings);
+const totalHuman = formatMinutes(totalMin);
+
+// Natural, useful metadata (no robotic templates).
+const title = `${recipe.title}${totalHuman ? ` (${totalHuman})` : ''} · Simpler Recipes`;
+const descBits = [
+  `${recipe.title}: ${recipe.ingredients.length} ingredients, ${recipe.instructions.length} steps`,
+  totalHuman ? `ready in ${totalHuman}` : null,
+  yieldInfo.text ? `makes ${yieldInfo.text}` : null,
+].filter(Boolean);
+const description = `${descBits.join(', ')}. Ad-free, with check-off ingredients, scaling and a hands-free Cook Mode.${recipe.source?.name ? ` From ${recipe.source.name}.` : ''}`;
+
+// schema.org — only what we know; never fabricated ratings/nutrition/publish dates.
+const recipeSchema: Record<string, unknown> = {
+  '@type': 'Recipe',
+  '@id': `${pageUrl}#recipe`,
+  name: recipe.title,
+  url: pageUrl,
+  mainEntityOfPage: pageUrl,
+  image: recipe.image ? [recipe.image] : undefined,
+  author: recipe.source?.name ? { '@type': 'Organization', name: recipe.source.name, url: recipe.source.url } : undefined,
+  isBasedOn: recipe.source?.url || undefined,
+  prepTime: minutesToIso(prepMin),
+  cookTime: minutesToIso(cookMin),
+  totalTime: minutesToIso(totalMin),
+  recipeYield: yieldInfo.text || undefined,
+  keywords: recipe.tags?.length ? recipe.tags.join(', ') : undefined,
+  recipeIngredient: recipe.ingredients,
+  recipeInstructions: recipe.instructions.map((step: string, i: number) => ({ '@type': 'HowToStep', position: i + 1, text: step })),
 };
-for (const k of Object.keys(schemaData)) if (schemaData[k] === undefined) delete schemaData[k];
+for (const k of Object.keys(recipeSchema)) if (recipeSchema[k] === undefined) delete recipeSchema[k];
+
+const breadcrumb = {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Simpler Recipes', item: `${SITE}/` },
+    ...(collection ? [{ '@type': 'ListItem', position: 2, name: collection.name, item: `${SITE}/collection/${collection.slug}/` }] : []),
+    { '@type': 'ListItem', position: collection ? 3 : 2, name: recipe.title, item: pageUrl },
+  ],
+};
+const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': [recipeSchema, breadcrumb] }).replace(/</g, '\\u003c');
 ---
 
-<BaseLayout
-  title={`${recipe.title} - Simpler Recipes`}
-  description={`${recipe.title}. ${recipe.prepTime ? `Prep: ${recipe.prepTime}.` : ''} ${recipe.cookTime ? `Cook: ${recipe.cookTime}.` : ''} ${recipe.servings ? `Serves ${recipe.servings}.` : ''}`}
-  image={recipe.image}
-  type="article"
->
+<BaseLayout title={title} description={description} image={recipe.image} type="article" canonical={pageUrl}>
   <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+    <script type="application/ld+json" is:inline set:html={jsonLd} />
   </Fragment>
 
   <main id="main-content" class="min-h-screen bg-background">
-    <div class="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
-      <!-- Back navigation -->
-      <nav class="mb-6 print:hidden">
-        <a
-          href="/"
-          class="inline-flex items-center text-sand-600 hover:text-sand-900 transition-colors text-sm"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
-          </svg>
-          <span class="ml-1">Back</span>
-        </a>
-      </nav>
+    <nav aria-label="Breadcrumb" class="max-w-[1080px] mx-auto px-4 sm:px-6 pt-5 print:hidden">
+      <ol class="flex items-center gap-2 text-[14px] text-sand-600">
+        <li><a href="/" class="hover:text-sand-900">Home</a></li>
+        {collection && (
+          <>
+            <li aria-hidden="true" class="text-sand-400">/</li>
+            <li><a href={`/collection/${collection.slug}/`} class="hover:text-sand-900">{collection.name}</a></li>
+          </>
+        )}
+      </ol>
+    </nav>
 
-      <!-- Two-column layout for desktop -->
-      <div class="lg:grid lg:grid-cols-[1fr,340px] lg:gap-8 lg:items-start">
-        <!-- Main content card (left) -->
-        <article class="bg-sand-50 rounded-2xl overflow-hidden shadow-sm print:shadow-none print:rounded-none">
-          {recipe.image && (
-            <div class="aspect-[16/9] lg:aspect-[2/1] overflow-hidden bg-sand-200 print:hidden">
-              <img
-                src={recipe.image}
-                alt={recipe.title}
-                width={800}
-                height={400}
-                class="w-full h-full object-cover"
-                loading="eager"
-                decoding="async"
-              />
-            </div>
-          )}
+    <RecipeView client:load recipe={recipe} recipeId={recipe.slug} sourceUrl={recipe.source?.url} variant="curated">
+      <RemixButton client:visible recipe={recipe} variant="link" slot="remix" />
+    </RecipeView>
 
-          <div class="p-6 md:p-8">
-            <header class="mb-8 pb-6 border-b border-sand-200 print:border-sand-300">
-              <div class="flex items-start justify-between gap-4 mb-4">
-                <h1 class="text-2xl md:text-3xl font-medium tracking-tight-headline text-sand-900">
-                  {recipe.title}
-                </h1>
-                <FavoriteButton client:load slug={recipe.slug} size="large" className="flex-shrink-0 print:hidden" />
-              </div>
-
-              <div class="flex flex-wrap items-center gap-2">
-                {recipe.prepTime && (
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sand-200/60 text-sand-700 text-xs">
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
-                    </svg>
-                    Prep: {recipe.prepTime}
-                  </span>
-                )}
-                {recipe.cookTime && (
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sand-200/60 text-sand-700 text-xs">
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
-                    </svg>
-                    Cook: {recipe.cookTime}
-                  </span>
-                )}
-                {recipe.servings && (
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sand-200/60 text-sand-700 text-xs">
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    {recipe.servings} servings
-                  </span>
-                )}
-              </div>
-
-              {recipe.source && (
-                <p class="mt-4 text-xs text-sand-500">
-                  Originally from{' '}
-                  <a
-                    href={recipe.source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-sand-600 hover:text-sand-800 underline underline-offset-2"
-                  >
-                    {recipe.source.name}
-                  </a>
-                </p>
-              )}
-            </header>
-
-            <!-- Instructions -->
-            <RecipeInstructions
-              client:load
-              instructions={recipe.instructions}
-              recipeName={recipe.title}
-            />
-
-            <!-- Actions -->
-            <div class="mt-8 pt-6 border-t border-sand-200 print:hidden">
-              <RemixButton client:load recipe={recipe} />
-            </div>
-
-            {recipe.tags && recipe.tags.length > 0 && (
-              <footer class="mt-4 pt-4 border-t border-sand-200 print:hidden">
-                <div class="flex flex-wrap gap-2">
-                  {recipe.tags.map((tag: string) => (
-                    <span class="px-2 py-0.5 text-xs text-sand-500 bg-sand-100 rounded-full">
-                      {tag}
-                    </span>
-                  ))}
+    {related.length > 0 && (
+      <section aria-labelledby="related-heading" class="max-w-[1080px] mx-auto px-4 sm:px-6 pb-16 print:hidden">
+        <h2 id="related-heading" class="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500 mb-4">
+          More {collection?.name ? `in ${collection.name}` : 'like this'}
+        </h2>
+        <ul class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {related.map((r) => (
+            <li>
+              <a href={`/recipes/${r.slug}/`} class="group block">
+                <div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100 mb-2">
+                  {r.image && (
+                    <img src={r.image} alt="" width={400} height={300} loading="lazy" decoding="async" class="w-full h-full object-cover dark:brightness-90 group-hover:opacity-95" referrerpolicy="no-referrer" />
+                  )}
                 </div>
-              </footer>
-            )}
-          </div>
-        </article>
-
-        <!-- Ingredients sidebar (right) - shown below on mobile, sticky on desktop -->
-        <aside class="mt-6 lg:mt-0 lg:sticky lg:top-8">
-          <ScalableIngredients
-            client:idle
-            ingredients={recipe.ingredients}
-            servings={recipe.servings}
-          />
-        </aside>
-      </div>
-    </div>
+                <p class="text-[15px] font-medium text-sand-900 leading-snug line-clamp-2 group-hover:underline underline-offset-2">{r.title}</p>
+                {r.totalTime && <p class="text-[13px] text-sand-500 mt-0.5">{formatMinutes(durationToMinutes(r.totalTime)) || r.totalTime}</p>}
+              </a>
+            </li>
+          ))}
+        </ul>
+        {collection && (
+          <p class="mt-5 text-[14px]">
+            <a href={`/collection/${collection.slug}/`} class="text-sand-700 hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300">All {collection.name} →</a>
+          </p>
+        )}
+      </section>
+    )}
   </main>
 </BaseLayout>

@@ -207,17 +207,19 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
   }
   .skip-link:focus { @apply top-2; }
 
-  /* ---------- Buttons: one system ---------- */
-  .btn {
-    @apply inline-flex items-center justify-center gap-2 h-11 px-4 rounded-lg text-[15px] font-medium leading-none whitespace-nowrap select-none transition-colors;
+  /* ---------- Buttons: one system (components layer so utilities like `hidden` still win) ---------- */
+  @layer components {
+    .btn {
+      @apply inline-flex items-center justify-center gap-2 h-11 px-4 rounded-lg text-[15px] font-medium leading-none whitespace-nowrap select-none transition-colors;
+    }
+    .btn-sm { @apply h-9 px-3 text-[14px]; }
+    .btn:disabled { @apply opacity-40 cursor-not-allowed; }
+    .btn-primary { @apply btn bg-sand-900 text-sand-50 hover:bg-sand-800; }
+    .btn-secondary { @apply btn bg-sand-100 text-sand-800 hover:bg-sand-200; }
+    .btn-ghost { @apply btn text-sand-700 hover:bg-sand-100 hover:text-sand-900; }
+    .btn-icon { @apply inline-flex items-center justify-center h-11 w-11 rounded-lg text-sand-600 hover:bg-sand-100 hover:text-sand-900 transition-colors; }
+    .btn-lg { @apply h-12 px-5 text-base; }
   }
-  .btn-sm { @apply h-9 px-3 text-[14px]; }
-  .btn:disabled { @apply opacity-40 cursor-not-allowed; }
-  .btn-primary { @apply btn bg-sand-900 text-sand-50 hover:bg-sand-800; }
-  .btn-secondary { @apply btn bg-sand-100 text-sand-800 hover:bg-sand-200; }
-  .btn-ghost { @apply btn text-sand-700 hover:bg-sand-100 hover:text-sand-900; }
-  .btn-icon { @apply inline-flex items-center justify-center h-11 w-11 rounded-lg text-sand-600 hover:bg-sand-100 hover:text-sand-900 transition-colors; }
-  .btn-lg { @apply h-12 px-5 text-base; }
 
   /* ---------- Focus ---------- */
   :focus-visible { @apply outline outline-2 outline-offset-2 outline-sand-700; }

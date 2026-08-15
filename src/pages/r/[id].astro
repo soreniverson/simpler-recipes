@@ -1,16 +1,60 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import SharedRecipeView from '../../components/SharedRecipeView.jsx';
+import RecipeView from '../../components/recipe/RecipeView.jsx';
+import { getSharedRecipe, isKVConfigured } from '../../utils/kv';
+import { memoryStorage } from '../api/share/index';
+import { validateRecipe, safeHref } from '../../lib/recipe/validate';
+import { metaLine } from '../../lib/recipe/display';
 
-// Disable prerendering - this is a dynamic route
+// Dynamic: shared recipes are looked up server-side so the page has a real title/OG and a real 404.
 export const prerender = false;
 
 const { id } = Astro.params;
+let recipe: any = null;
+let sourceUrl: string | null = null;
+
+if (id && /^[A-Za-z0-9_-]{6,32}$/.test(id)) {
+  try {
+    let data: { recipe: any; sourceUrl?: string | null } | null = null;
+    if (isKVConfigured()) {
+      const kvData = await getSharedRecipe(id);
+      if (kvData) data = { recipe: kvData.recipe, sourceUrl: kvData.sourceUrl };
+    } else if (import.meta.env.DEV) {
+      const mem = memoryStorage.get(id);
+      if (mem) data = { recipe: mem.recipe, sourceUrl: mem.sourceUrl };
+    }
+    if (data) {
+      const v = validateRecipe(data.recipe);
+      if (v.ok) {
+        recipe = v.recipe;
+        sourceUrl = safeHref(data.sourceUrl ?? recipe.sourceUrl);
+      }
+    }
+  } catch (err) {
+    console.error('[r/id] lookup failed', err);
+  }
+}
+
+if (!recipe) {
+  Astro.response.status = 404;
+}
+
+const title = recipe ? `${recipe.title} · Simpler Recipes` : 'Recipe not found · Simpler Recipes';
+const description = recipe
+  ? `${recipe.title} — ${metaLine(recipe).join(', ')}. Shared via Simpler Recipes.`
+  : 'This shared recipe link is invalid or has expired.';
 ---
 
-<BaseLayout
-  title="Shared Recipe - Simpler Recipes"
-  description="A recipe shared via Simpler Recipes."
->
-  <SharedRecipeView client:only="react" recipeId={id} />
+<BaseLayout title={title} description={description} image={recipe?.image || undefined} type="article" noindex={true} canonical={recipe && sourceUrl ? sourceUrl : undefined}>
+  <main id="main-content" class="min-h-screen bg-background">
+    {recipe ? (
+      <RecipeView client:load recipe={recipe} recipeId={`share:${id}`} sourceUrl={sourceUrl} variant="shared" shareId={id} />
+    ) : (
+      <div class="max-w-xl mx-auto px-4 py-20 text-center">
+        <h1 class="text-[22px] font-semibold text-sand-900">This shared recipe isn't available</h1>
+        <p class="mt-2 text-[15px] text-sand-600">The link may be incomplete, or the recipe was removed. Shared links stay live for a year.</p>
+        <a href="/" class="btn-primary mt-6">Simplify a recipe</a>
+      </div>
+    )}
+  </main>
 </BaseLayout>
