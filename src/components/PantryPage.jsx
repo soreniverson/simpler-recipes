@@ -64,7 +64,7 @@ function StaplesOnboarding({ onAddStaples, onDismiss }) {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={onAddStaples}
-              className="inline-flex items-center px-3 py-1.5 bg-sand-900 text-white text-xs font-medium rounded-lg hover:bg-sand-800 transition-colors"
+              className="inline-flex items-center px-3 py-1.5 bg-sand-900 text-sand-50 text-xs font-medium rounded-lg hover:bg-sand-800 transition-colors"
             >
               Add staples
             </button>

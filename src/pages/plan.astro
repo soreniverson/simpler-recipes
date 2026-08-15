@@ -1,17 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import MealPlanPage from '../components/MealPlanPage.jsx';
+import fs from 'fs';
+import path from 'path';
 
-// Get all recipes for the recipe picker
-const recipeFiles = import.meta.glob('../content/recipes/*.json', { eager: true });
-const recipes = Object.values(recipeFiles).map(mod => mod.default || mod);
+// Slim projection for the recipe picker (the old import.meta.glob pointed at a folder that
+// doesn't exist, so the picker was always empty). Full recipes are fetched on demand for the
+// shopping list.
+const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
+const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+const recipes = data.recipes.map((r: any) => ({ slug: r.slug, title: r.title, image: r.image, totalTime: r.totalTime, servings: r.servings }));
 
-const description = "Plan your weekly meals with ease. Add recipes to each day, generate shopping lists automatically, and sync with your pantry.";
+const description = "Plan the week's meals and turn them into one shopping list.";
 ---
 
-<BaseLayout title="Meal Plan - Simpler Recipes" description={description}>
+<BaseLayout title="Meal plan · Simpler Recipes" description={description} noindex={true}>
   <main id="main-content" class="min-h-screen bg-background">
-    <div class="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
+    <div class="max-w-[1080px] mx-auto px-4 sm:px-6 py-8 md:py-12">
       <MealPlanPage client:load recipes={recipes} />
     </div>
   </main>

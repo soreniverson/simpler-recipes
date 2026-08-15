@@ -99,7 +99,7 @@ export default function DayCard({ date, dateKey, meals, onAddMeal, onRemoveMeal 
       {/* Day header */}
       <div className="flex items-center justify-between p-4">
         <div className="flex items-center gap-3">
-          <div className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg ${isToday ? 'bg-sand-900 text-white' : 'bg-sand-200 text-sand-700'}`}>
+          <div className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg ${isToday ? 'bg-sand-900 text-sand-50' : 'bg-sand-200 text-sand-700'}`}>
             <span className="text-[10px] font-medium uppercase leading-none">
               {date.toLocaleDateString('en-US', { weekday: 'short' })}
             </span>

@@ -57,7 +57,7 @@ export default function AuthModal({
 
   const handleGoogleSignIn = async () => {
     if (!configured) {
-      alert('Auth not configured yet');
+      setError("Sign-in isn't available right now.");
       return;
     }
     setLoading(true);
@@ -168,7 +168,7 @@ export default function AuthModal({
             <button
               type="submit"
               disabled={loading || !email}
-              className="w-full py-3 px-4 bg-sand-900 text-white rounded-xl font-medium hover:bg-sand-800 transition-colors disabled:opacity-50"
+              className="w-full py-3 px-4 bg-sand-900 text-sand-50 rounded-xl font-medium hover:bg-sand-800 transition-colors disabled:opacity-50"
             >
               {loading ? 'Sending...' : 'Send sign-in link'}
             </button>
@@ -185,14 +185,14 @@ export default function AuthModal({
             <button
               onClick={handleGoogleSignIn}
               disabled={loading}
-              className="w-full flex items-center justify-center gap-3 py-3 px-4 bg-white border border-sand-300 rounded-xl font-medium text-sand-700 hover:bg-sand-50 transition-colors disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-3 py-3 px-4 bg-surface border border-sand-300 rounded-xl font-medium text-sand-700 hover:bg-sand-50 transition-colors disabled:opacity-50"
             >
               <GoogleIcon />
               Continue with Google
             </button>
             <button
               onClick={() => setShowEmailForm(true)}
-              className="w-full flex items-center justify-center gap-3 py-3 px-4 bg-sand-900 text-white rounded-xl font-medium hover:bg-sand-800 transition-colors"
+              className="w-full flex items-center justify-center gap-3 py-3 px-4 bg-sand-900 text-sand-50 rounded-xl font-medium hover:bg-sand-800 transition-colors"
             >
               <EmailIcon />
               Continue with email

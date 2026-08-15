@@ -7,72 +7,88 @@ import path from 'path';
 export async function getStaticPaths() {
   const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
   const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+  const bySlug = new Map<string, any>(data.recipes.map((r: any) => [r.slug, r]));
 
   return data.collections.map((collection: any) => {
-    // Load the full collection data
-    const collectionPath = path.join(process.cwd(), 'recipe-data', `${collection.slug}.json`);
-    const collectionData = JSON.parse(fs.readFileSync(collectionPath, 'utf-8'));
-
+    // Cards only need a slim projection; the master file is the source of truth for recipe data.
+    const recipes = collection.recipes
+      .map((s: string) => bySlug.get(s))
+      .filter(Boolean)
+      .map((r: any) => ({ slug: r.slug, title: r.title, image: r.image, totalTime: r.totalTime, servings: r.servings, ingredients: r.ingredients, tags: r.tags }));
     return {
       params: { slug: collection.slug },
-      props: { collection: collectionData },
+      props: { collection: { slug: collection.slug, name: collection.name, description: collection.description }, recipes },
     };
   });
 }
 
-const { slug } = Astro.params;
-const { collection } = Astro.props;
+interface Props {
+  collection: { slug: string; name: string; description: string };
+  recipes: { slug: string; title: string; image: string | null; totalTime: string | null; servings: string | null; ingredients: string[]; tags: string[] }[];
+}
+const { collection, recipes } = Astro.props as Props;
 
-// Icon SVGs for collections
-const collectionIcons: Record<string, string> = {
-  'quick-weeknight-dinners': '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" /></svg>',
-  'baking-basics': '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v4m0 0c-2 0-4 2-4 5s2 5 4 5 4-2 4-5-2-5-4-5zm0 14v4m-3-4h6" /></svg>',
-  'one-pot-meals': '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 10h16v9a2 2 0 01-2 2H6a2 2 0 01-2-2v-9zm0 0V8a2 2 0 012-2h12a2 2 0 012 2v2M8 6V4m8 2V4m-4 2V3" /></svg>',
-  'healthy-lunches': '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 20c0-7 5-13 14-14-1 9-7 14-14 14zm0 0v-4m7-3c-3 0-5 2-7 7" /></svg>',
-  'comfort-food-classics': '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>',
-};
-const defaultIcon = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>';
+const SITE = 'https://www.simpler.recipes';
+const pageUrl = `${SITE}/collection/${collection.slug}/`;
+const top = recipes.slice(0, 3).map((r) => r.title);
+const title = `${collection.name} — ${recipes.length} recipes · Simpler Recipes`;
+const description = `${collection.description}. ${recipes.length} clean, ad-free recipes including ${top.join(', ')}. Check-off ingredients, scaling and a hands-free Cook Mode on every one.`;
 
-const icon = collectionIcons[slug!] || defaultIcon;
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': pageUrl,
+      url: pageUrl,
+      name: collection.name,
+      description: collection.description,
+      isPartOf: { '@type': 'WebSite', name: 'Simpler Recipes', url: `${SITE}/` },
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: recipes.length,
+        itemListElement: recipes.map((r, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: `${SITE}/recipes/${r.slug}/`,
+          name: r.title,
+          ...(r.image ? { image: r.image } : {}),
+        })),
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Simpler Recipes', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: collection.name, item: pageUrl },
+      ],
+    },
+  ],
+}).replace(/</g, '\\u003c');
 ---
 
-<BaseLayout
-  title={`${collection.theme.name} - Simpler Recipes`}
-  description={collection.theme.description}
->
+<BaseLayout title={title} description={description} canonical={pageUrl}>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={jsonLd} />
+  </Fragment>
+
   <main id="main-content" class="min-h-screen bg-background">
-    <div class="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
-      <nav class="mb-8">
-        <a
-          href="/"
-          class="inline-flex items-center text-sand-600 hover:text-sand-900 transition-colors text-sm"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
-          </svg>
-          <span class="ml-1">Back</span>
-        </a>
+    <div class="max-w-[1080px] mx-auto px-4 sm:px-6 py-6 md:py-10">
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center gap-2 text-[14px] text-sand-600">
+          <li><a href="/" class="hover:text-sand-900">Home</a></li>
+          <li aria-hidden="true" class="text-sand-400">/</li>
+          <li aria-current="page" class="text-sand-800">{collection.name}</li>
+        </ol>
       </nav>
 
-      <header class="flex items-start gap-4 mb-10">
-        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-sand-200/60 flex items-center justify-center text-sand-600">
-          <Fragment set:html={icon} />
-        </div>
-        <div>
-          <h1 class="text-xl md:text-2xl font-medium tracking-tight-headline text-sand-900 mb-1">
-            {collection.theme.name}
-          </h1>
-          <p class="text-sand-600 text-sm">
-            {collection.theme.description}
-          </p>
-          <p class="text-sand-400 text-xs mt-2">
-            {collection.metadata.recipeCount} recipes
-          </p>
-        </div>
+      <header class="mb-8 max-w-2xl">
+        <h1 class="text-[28px] sm:text-[34px] leading-[1.1] font-semibold tracking-[-0.015em] text-sand-900">{collection.name}</h1>
+        <p class="mt-2 text-[16px] text-sand-600">{collection.description}. <span class="text-sand-500 tabular">{recipes.length} recipes</span></p>
       </header>
 
       <section aria-label="Recipes in this collection">
-        <RecipeGrid client:load recipes={collection.recipes} />
+        <RecipeGrid client:visible recipes={recipes} />
       </section>
     </div>
   </main>

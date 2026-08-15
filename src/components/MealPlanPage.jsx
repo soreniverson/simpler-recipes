@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import DayCard from './DayCard';
 import AddMealModal from './AddMealModal';
 import ShoppingListSheet from './ShoppingListSheet';
@@ -119,12 +119,22 @@ export default function MealPlanPage({ recipes = [] }) {
     setModalState({ isOpen: false, dateKey: null, section: null });
   }, []);
 
-  const handleOpenShoppingList = useCallback(() => {
-    // Generate/refresh the shopping list from current week's meals
-    generateShoppingListWithRecipes(weekStart, recipes);
+  const fullRecipesRef = useRef(null);
+  const handleOpenShoppingList = useCallback(async () => {
+    // The page only ships slim recipe cards; ingredients are fetched once, on demand.
+    if (!fullRecipesRef.current) {
+      try {
+        const res = await fetch('/api/recipes/all');
+        const data = res.ok ? await res.json() : { recipes: [] };
+        fullRecipesRef.current = data.recipes || [];
+      } catch {
+        fullRecipesRef.current = [];
+      }
+    }
+    generateShoppingListWithRecipes(weekStart, fullRecipesRef.current);
     setShoppingListStats(getListStats());
     setIsShoppingListOpen(true);
-  }, [weekStart, recipes]);
+  }, [weekStart]);
 
   const handleCloseShoppingList = useCallback(() => {
     setIsShoppingListOpen(false);
@@ -191,7 +201,7 @@ export default function MealPlanPage({ recipes = [] }) {
             >
               <ShoppingListIcon className="w-5 h-5" />
               {shoppingListStats.unchecked > 0 && (
-                <span className="absolute -top-1 -right-1 w-4 h-4 flex items-center justify-center text-[10px] font-medium text-white bg-sand-900 rounded-full">
+                <span className="absolute -top-1 -right-1 w-4 h-4 flex items-center justify-center text-[10px] font-medium text-sand-50 bg-sand-900 rounded-full">
                   {shoppingListStats.unchecked > 9 ? '9+' : shoppingListStats.unchecked}
                 </span>
               )}

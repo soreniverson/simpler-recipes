@@ -5,7 +5,7 @@ import PantryPage from '../components/PantryPage.jsx';
 const description = "Track what ingredients you have on hand. Your pantry syncs with shopping lists so you know what you already have when planning meals.";
 ---
 
-<BaseLayout title="My Pantry - Simpler Recipes" description={description}>
+<BaseLayout title="My Pantry - Simpler Recipes" description={description} noindex={true}>
   <main id="main-content" class="min-h-screen bg-background">
     <div class="max-w-[1080px] mx-auto px-4 py-8 md:py-12">
       <PantryPage client:load />

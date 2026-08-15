@@ -71,7 +71,7 @@ function ShoppingItem({ item, onToggle, onRemove }) {
         onClick={() => onToggle(item.id)}
         className={`flex-shrink-0 w-5 h-5 mt-0.5 rounded border-2 flex items-center justify-center transition-colors ${
           item.checked
-            ? 'bg-sand-700 border-sand-700 text-white'
+            ? 'bg-sand-700 border-sand-700 text-sand-50'
             : 'border-sand-400 hover:border-sand-500'
         }`}
         aria-label={item.checked ? 'Mark as not purchased' : 'Mark as purchased'}
@@ -145,7 +145,7 @@ function Toast({ message, isVisible, onHide }) {
   if (!isVisible) return null;
 
   return (
-    <div className="absolute bottom-20 left-1/2 -translate-x-1/2 px-4 py-2 bg-sand-900 text-white text-sm rounded-lg shadow-lg">
+    <div className="absolute bottom-20 left-1/2 -translate-x-1/2 px-4 py-2 bg-sand-900 text-sand-50 text-sm rounded-lg shadow-lg">
       {message}
     </div>
   );
@@ -389,7 +389,7 @@ export default function ShoppingListSheet({ isOpen, onClose }) {
               <button
                 type="submit"
                 disabled={!newItemText.trim()}
-                className="px-4 py-2 text-sm font-medium text-white bg-sand-800 rounded-lg hover:bg-sand-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="px-4 py-2 text-sm font-medium text-sand-50 bg-sand-800 rounded-lg hover:bg-sand-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 Add
               </button>

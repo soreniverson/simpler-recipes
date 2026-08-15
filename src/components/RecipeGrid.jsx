@@ -35,7 +35,7 @@ export default function RecipeGrid({ recipes, showFavorite = true }) {
   const displayRecipes = isLoaded ? sortedRecipes : recipes.map(r => ({ ...r, matchInfo: null }));
 
   return (
-    <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="grid gap-x-5 gap-y-7 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
       {displayRecipes.map(recipe => (
         <li key={recipe.slug}>
           <RecipeCard

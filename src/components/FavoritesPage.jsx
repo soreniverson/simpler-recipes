@@ -150,7 +150,7 @@ function CreateFolderButton({ onCreate }) {
         {name.trim() && (
           <button
             type="submit"
-            className="w-7 h-7 rounded-md bg-sand-900 text-white flex items-center justify-center hover:bg-sand-800 transition-colors"
+            className="w-7 h-7 rounded-md bg-sand-900 text-sand-50 flex items-center justify-center hover:bg-sand-800 transition-colors"
             aria-label="Create folder"
           >
             <CheckIcon className="w-3.5 h-3.5" />
@@ -187,7 +187,7 @@ function MoveToFolderMenu({ folders, currentFolderId, onMove, onClose }) {
   }, [onClose]);
 
   return (
-    <div ref={menuRef} className="absolute right-0 top-full mt-1 w-44 bg-white rounded-lg shadow-lg border border-sand-200 z-20 overflow-hidden">
+    <div ref={menuRef} className="absolute right-0 top-full mt-1 w-44 bg-surface rounded-lg shadow-lg border border-sand-200 z-20 overflow-hidden">
       <div className="px-3 py-2 border-b border-sand-100">
         <span className="text-xs font-medium text-sand-500">Move to folder</span>
       </div>
@@ -376,10 +376,10 @@ function FolderView({ folder, items, recipes, folders, onBack, onRename, onDelet
                 type="text"
                 value={editName}
                 onChange={(e) => setEditName(e.target.value)}
-                className="flex-1 px-3 py-1.5 text-lg font-medium bg-white border border-sand-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sand-500"
+                className="flex-1 px-3 py-1.5 text-lg font-medium bg-surface border border-sand-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sand-500"
                 autoFocus
               />
-              <button type="submit" className="px-3 py-1.5 text-sm bg-sand-900 text-white rounded-lg">Save</button>
+              <button type="submit" className="px-3 py-1.5 text-sm bg-sand-900 text-sand-50 rounded-lg">Save</button>
               <button type="button" onClick={() => { setIsEditing(false); setEditName(folder.name); }} className="px-3 py-1.5 text-sm text-sand-600">Cancel</button>
             </form>
           ) : (
@@ -558,7 +558,7 @@ export default function FavoritesPage({ recipes }) {
           </p>
           <a
             href="/"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-sand-900 text-white rounded-lg hover:bg-sand-800 transition-colors text-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-sand-900 text-sand-50 rounded-lg hover:bg-sand-800 transition-colors text-sm"
           >
             Browse Recipes
           </a>

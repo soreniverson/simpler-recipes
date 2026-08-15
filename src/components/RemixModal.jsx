@@ -266,8 +266,8 @@ export default function RemixModal({ isOpen, onClose, baseRecipe, recipes = [], 
       });
 
       if (!response.ok) {
-        const data = await response.json();
-        throw new Error(data.error || 'Failed to remix recipe');
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || (response.status === 429 ? "You've used your AI remixes for now." : "Remix isn't available right now."));
       }
 
       // Handle SSE stream
@@ -301,26 +301,29 @@ export default function RemixModal({ isOpen, onClose, baseRecipe, recipes = [], 
           }
 
           if (eventType && eventData) {
+            let data = null;
             try {
-              const data = JSON.parse(eventData);
-
-              if (eventType === 'progress') {
-                setProgressMessage(data.step);
-              } else if (eventType === 'complete') {
-                setResultRecipe(data.recipe);
-                setStep('result');
-              } else if (eventType === 'error') {
-                throw new Error(data.error);
-              }
+              data = JSON.parse(eventData);
             } catch (parseErr) {
               console.error('Failed to parse SSE data:', parseErr);
+              continue;
+            }
+            if (eventType === 'progress') {
+              setProgressMessage(data.step);
+            } else if (eventType === 'complete') {
+              setResultRecipe(data.recipe);
+              setStep('result');
+            } else if (eventType === 'error') {
+              // Server-side failure: surface it (the old code threw inside the parse try/catch,
+              // which swallowed it and left the spinner running forever).
+              throw new Error(data.error || "We couldn't remix this recipe.");
             }
           }
         }
       }
     } catch (err) {
       console.error('Remix error:', err);
-      setError(err.message || 'Failed to remix recipe');
+      setError(err.message || "We couldn't remix this recipe.");
       setStep('input');
     }
   };
