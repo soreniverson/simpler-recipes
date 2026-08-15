@@ -1,223 +1,136 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Plain-language, factually accurate description of what the product actually does.
+// Keep this in sync with: src/pages/api/extract-stream.ts (cache + quotas), src/utils/kv.ts (TTLs),
+// src/utils/supabase.ts + src/hooks/useAuth.js (accounts, sync), src/lib/recentRecipes.ts (on-device store).
+const sections: { title: string; body: string[]; items?: string[] }[] = [
+  {
+    title: 'The short version',
+    body: [
+      'Simpler Recipes takes a recipe link and gives you back just the recipe. You do not need an account. Recipes you extract are kept on your device unless you choose to share them. We do not sell or share personal information.',
+    ],
+  },
+  {
+    title: 'What happens when you paste a link',
+    body: [
+      'The URL you submit is sent to our server, which fetches the page and pulls out the recipe (ingredients, steps, times, source). The cleaned-up recipe is:',
+    ],
+    items: [
+      'Kept in your browser (local storage) so you can reopen it from “Recent”. It is not uploaded to us unless you share it.',
+      'Cached on our server for up to 7 days, keyed by the URL, so the next person who pastes the same link gets an instant result. The cache holds the extracted recipe, not anything about you.',
+    ],
+  },
+  {
+    title: 'When we use AI',
+    body: [
+      'Most sites publish structured recipe data and we read it directly — no AI involved. When a page has no structured data, we send the page’s text (never anything about you) to Anthropic’s Claude API to pull out the recipe. Anthropic’s API does not use that content to train models. This fallback is limited per person, which is what the small quota on the homepage refers to.',
+    ],
+  },
+  {
+    title: 'Cookies and local storage',
+    body: ['We use a few functional cookies and browser storage. None are for advertising or cross-site tracking.'],
+    items: [
+      'A random token cookie used only to count AI-fallback extractions for people without an account.',
+      'If you sign in, a session cookie so the server can recognise you.',
+      'Local storage for your recent recipes, ingredient/step check-offs, saved recipes, meal plan and pantry.',
+      'A theme preference (light/dark).',
+    ],
+  },
+  {
+    title: 'Accounts (optional)',
+    body: [
+      'You can use everything without an account. If you create one (Google sign-in or an email magic link, via Supabase), we store your email address and sync your saved recipes, meal plan and pantry so they follow you across devices. Signed-in users also get a larger monthly allowance of AI extractions. Email us to delete your account and everything synced with it.',
+    ],
+  },
+  {
+    title: 'Sharing',
+    body: [
+      'If you tap Share on an extracted recipe, a copy of that recipe is stored on our server and gets a public link (/r/…). Anyone with the link can view it. Shared recipes are kept for up to one year and are marked so search engines do not index them. Curated recipes on this site are already public.',
+    ],
+  },
+  {
+    title: 'Analytics',
+    body: [
+      'We use Google Analytics for aggregate usage (page views, general location, device type). It loads after the page is idle and can be blocked with any content blocker or the Google Analytics opt-out add-on without affecting the site.',
+    ],
+  },
+  {
+    title: 'What we do not collect',
+    body: [],
+    items: [
+      'Payment information — the service is free.',
+      'Your browsing history — we only see the URLs you choose to paste.',
+      'Advertising or tracking cookies.',
+    ],
+  },
+  {
+    title: 'Browser extension',
+    body: [
+      'The Simpler Recipes browser extension reads recipe data (schema.org markup) from the page you are on, entirely on your device. It only runs when you click its icon and does not send data to us or to anyone else.',
+    ],
+  },
+  {
+    title: 'Third parties we rely on',
+    body: [],
+    items: [
+      'Vercel — hosting and the server-side cache.',
+      'Supabase — accounts and synced data (only if you sign in).',
+      'Anthropic — AI extraction fallback (page text only).',
+      'Google Analytics — aggregate usage statistics.',
+    ],
+  },
+  {
+    title: 'Your rights',
+    body: [
+      'Everything kept in your browser can be removed by clearing site data for simpler.recipes. To delete an account, its synced data, or a shared recipe you created, email us and we will sort it out.',
+    ],
+  },
+  {
+    title: 'Changes to this policy',
+    body: ['We may update this policy from time to time and will note the date of the latest revision at the top of this page.'],
+  },
+];
 ---
 
-<BaseLayout
-  title="Privacy Policy - Simpler Recipes"
-  description="Privacy policy for Simpler Recipes website and browser extension."
->
+<BaseLayout title="Privacy · Simpler Recipes" description="What Simpler Recipes stores, where, and for how long — in plain language." canonical="https://www.simpler.recipes/privacy/">
   <main id="main-content" class="min-h-screen bg-background">
-    <div class="max-w-2xl mx-auto px-4 py-8">
-      <nav class="mb-8">
-        <a
-          href="/"
-          class="inline-flex items-center text-sand-600 hover:text-sand-900 transition-colors text-sm"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
-          </svg>
-          <span class="ml-1">Back</span>
-        </a>
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 py-8 md:py-12">
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center gap-2 text-[14px] text-sand-600">
+          <li><a href="/" class="hover:text-sand-900">Home</a></li>
+          <li aria-hidden="true" class="text-sand-400">/</li>
+          <li aria-current="page" class="text-sand-800">Privacy</li>
+        </ol>
       </nav>
 
-      <article class="bg-sand-50 rounded-2xl shadow-md p-6 md:p-10">
-        <header class="mb-8 pb-6 border-b border-sand-200">
-          <h1 class="text-2xl md:text-3xl font-medium tracking-tight-headline text-sand-900 mb-2">
-            Privacy Policy
-          </h1>
-          <p class="text-sand-500 text-sm">Last updated: January 17, 2025</p>
+      <article>
+        <header class="mb-8">
+          <h1 class="text-[28px] sm:text-[34px] leading-[1.1] font-semibold tracking-[-0.015em] text-sand-900">Privacy</h1>
+          <p class="mt-2 text-[14px] text-sand-500">Last updated: August 15, 2026</p>
         </header>
 
         <div class="space-y-8">
-          <section>
-            <h2 class="text-lg font-medium text-sand-900 mb-3">Introduction</h2>
-            <div class="text-sand-700 text-[15px] leading-relaxed space-y-3">
-              <p>
-                <strong>Simpler Recipes</strong> is committed to respecting your privacy. This policy explains
-                how we handle information when you use our website at simpler.recipes and our browser extension.
-              </p>
-              <p>
-                The short version: <strong>We collect minimal data and don't sell or share your personal information.</strong>
-              </p>
-            </div>
-          </section>
+          {sections.map((s) => (
+            <section>
+              <h2 class="text-[18px] font-semibold text-sand-900 mb-2">{s.title}</h2>
+              <div class="text-sand-700 text-[16px] leading-relaxed space-y-3">
+                {s.body.map((p) => <p>{p}</p>)}
+                {s.items && (
+                  <ul class="list-disc pl-5 space-y-1.5 marker:text-sand-400">
+                    {s.items.map((i) => <li>{i}</li>)}
+                  </ul>
+                )}
+              </div>
+            </section>
+          ))}
 
           <section>
-            <h2 class="text-lg font-medium text-sand-900 mb-3">What we collect</h2>
-            <div class="text-sand-700 text-[15px] leading-relaxed space-y-3">
-              <h3 class="text-sand-800 font-medium text-sm mt-4 mb-2 uppercase tracking-wide">Website (simpler.recipes)</h3>
-              <p>When you use our website, we collect:</p>
-              <ul class="list-none space-y-2">
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span><strong>Recipe URLs you submit</strong> — These are processed on our servers to extract recipe
-                  data. We do not store the URLs or extracted recipes beyond the immediate request.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span><strong>Anonymous analytics</strong> — We use Google Analytics to understand how people use the
-                  site (page views, general location, device type). This data is aggregated and cannot identify you personally.</span>
-                </li>
-              </ul>
-
-              <h3 class="text-sand-800 font-medium text-sm mt-4 mb-2 uppercase tracking-wide">Browser Extension</h3>
-              <p>
-                The Simpler Recipes browser extension processes recipes <strong>entirely on your device</strong>.
-                No data is sent to our servers or any third party. We do not collect, store, or transmit:
-              </p>
-              <ul class="list-none space-y-2">
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span>The pages you visit</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span>The recipes you extract</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span>Any personal information</span>
-                </li>
-              </ul>
-              <p>
-                The extension only activates when you click its icon and only reads recipe data (Schema.org markup)
-                from the current page.
-              </p>
-            </div>
-          </section>
-
-          <section>
-            <h2 class="text-lg font-medium text-sand-900 mb-3">What we don't collect</h2>
-            <div class="text-sand-700 text-[15px] leading-relaxed space-y-3">
-              <p>We do not collect or have access to:</p>
-              <ul class="list-none space-y-2">
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span>Your name, email, or contact information (we don't have accounts)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span>Payment information (our service is free)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span>Browsing history</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span>Cookies for tracking or advertising</span>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section>
-            <h2 class="text-lg font-medium text-sand-900 mb-3">How we use data</h2>
-            <div class="text-sand-700 text-[15px] leading-relaxed space-y-3">
-              <p>The limited data we collect is used only to:</p>
-              <ul class="list-none space-y-2">
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span>Process your recipe extraction requests (website only)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span>Understand aggregate usage patterns to improve the service</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span>Maintain and secure the service</span>
-                </li>
-              </ul>
-              <p>
-                We do not sell, rent, or share your data with third parties for marketing or advertising purposes.
-              </p>
-            </div>
-          </section>
-
-          <section>
-            <h2 class="text-lg font-medium text-sand-900 mb-3">Third-party services</h2>
-            <div class="text-sand-700 text-[15px] leading-relaxed space-y-3">
-              <p>Our website uses:</p>
-              <ul class="list-none space-y-2">
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span>
-                    <strong>Google Analytics</strong> — For anonymous usage statistics. You can opt out using a
-                    browser extension like{' '}
-                    <a
-                      href="https://tools.google.com/dlpage/gaoptout"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-sand-700 underline underline-offset-2 hover:text-sand-900"
-                    >
-                      Google Analytics Opt-out
-                    </a>.
-                  </span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-sand-400 flex-shrink-0">–</span>
-                  <span>
-                    <strong>Vercel</strong> — For hosting. See{' '}
-                    <a
-                      href="https://vercel.com/legal/privacy-policy"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-sand-700 underline underline-offset-2 hover:text-sand-900"
-                    >
-                      Vercel's Privacy Policy
-                    </a>.
-                  </span>
-                </li>
-              </ul>
-              <p>The browser extension does not use any third-party services.</p>
-            </div>
-          </section>
-
-          <section>
-            <h2 class="text-lg font-medium text-sand-900 mb-3">Data retention</h2>
-            <div class="text-sand-700 text-[15px] leading-relaxed space-y-3">
-              <p>
-                Recipe URLs submitted to our website are processed in real-time and not stored. Shared recipe
-                links expire after 7 days. Analytics data is retained according to Google Analytics' standard
-                retention policies.
-              </p>
-            </div>
-          </section>
-
-          <section>
-            <h2 class="text-lg font-medium text-sand-900 mb-3">Your rights</h2>
-            <div class="text-sand-700 text-[15px] leading-relaxed space-y-3">
-              <p>
-                Since we collect minimal data and don't maintain user accounts, there is little personal data
-                to access or delete. If you have questions about your data, contact us and we'll help however we can.
-              </p>
-            </div>
-          </section>
-
-          <section>
-            <h2 class="text-lg font-medium text-sand-900 mb-3">Changes to this policy</h2>
-            <div class="text-sand-700 text-[15px] leading-relaxed space-y-3">
-              <p>
-                We may update this policy from time to time. We'll note the date of the latest revision at the
-                top of this page.
-              </p>
-            </div>
-          </section>
-
-          <section>
-            <h2 class="text-lg font-medium text-sand-900 mb-3">Contact</h2>
-            <div class="text-sand-700 text-[15px] leading-relaxed space-y-3">
-              <p>
-                Questions about this privacy policy? Reach out at{' '}
-                <a
-                  href="mailto:privacy@simpler.recipes"
-                  class="text-sand-700 underline underline-offset-2 hover:text-sand-900"
-                >
-                  privacy@simpler.recipes
-                </a>
-              </p>
-            </div>
+            <h2 class="text-[18px] font-semibold text-sand-900 mb-2">Contact</h2>
+            <p class="text-sand-700 text-[16px] leading-relaxed">
+              Questions about this policy? Email
+              <a href="mailto:privacy@simpler.recipes" class="text-sand-800 underline underline-offset-[3px] decoration-sand-300 hover:text-sand-900">privacy@simpler.recipes</a>.
+            </p>
           </section>
         </div>
       </article>
