@@ -17,7 +17,8 @@ const EXAMPLES = [
 export default function HeroInput() {
   // Web Share Target (installed app) and plain deep links: /?u=<url> runs immediately.
   useEffect(() => {
-    const u = new URLSearchParams(window.location.search).get('u');
+    // Android share sheets may send both `text` and `url` (both mapped to `u`): scan all of them.
+    const u = new URLSearchParams(window.location.search).getAll('u').join(' ');
     if (!u) return;
     const m = u.match(/https?:\/\/\S+/);
     if (!m) return;
