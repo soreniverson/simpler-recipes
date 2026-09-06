@@ -14,7 +14,9 @@ npm test           # vitest (parser, scaling, storage, URL/SSRF, corpus fixtures
 npm run check      # tsc --noEmit + astro check
 ```
 
-Optional env (the app degrades gracefully without them): server store (below), `PUBLIC_SUPABASE_URL`/`PUBLIC_SUPABASE_ANON_KEY`, `ANTHROPIC_API_KEY` (AI fallback + remix), `YOUTUBE_API_KEY`, `SKIP_IMAGE_OPT=1` (skip build-time image optimisation).
+Optional env (the app degrades gracefully without them): server store (below), `PUBLIC_SUPABASE_URL`/`PUBLIC_SUPABASE_ANON_KEY`, `ANTHROPIC_API_KEY` (AI fallback + remix), `SKIP_IMAGE_OPT=1` (skip build-time image optimisation).
+
+AI quotas are reserve-then-spend: an atomic counter increment BEFORE each Anthropic call (refunded only if the call throws), with three layers — 3 lifetime per anonymous token / 30 per month per account, plus a per-IP daily cap (`AI_IP_DAILY_LIMIT`, the layer that holds against rotated cookies). In production the AI paths fail closed when the store is missing or erroring; everything unmetered keeps working.
 
 ## Server store (share links, extraction cache, AI quotas, rate limits)
 
