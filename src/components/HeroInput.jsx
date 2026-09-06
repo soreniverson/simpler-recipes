@@ -48,9 +48,8 @@ export default function HeroInput() {
           </span>
         ))}
       </p>
-      <p className="mt-4 text-[13px] text-sand-500">Works with most recipe sites. Recipes stay on your device. No account needed.</p>
       <ErrorBoundary>
-        <RecentRecipes limit={5} />
+        <RecentRecipes limit={3} />
       </ErrorBoundary>
     </div>
   );

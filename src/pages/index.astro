@@ -12,10 +12,14 @@ const ORDER = [
   'italian-classics', 'asian-inspired', 'indian-cuisine', 'mexican-favorites', 'mediterranean-mezze', 'grilling-bbq',
   'breakfast-brunch', 'baking-basics', 'desserts-sweets', 'appetizers-party',
 ];
-const collections = [...data.collections].sort((a: any, b: any) => {
-  const ia = ORDER.indexOf(a.slug), ib = ORDER.indexOf(b.slug);
-  return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
-});
+const bySlug = new Map(data.recipes.map((r: any) => [r.slug, r]));
+const collections = [...data.collections]
+  .sort((a: any, b: any) => {
+    const ia = ORDER.indexOf(a.slug), ib = ORDER.indexOf(b.slug);
+    return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+  })
+  // Each collection gets a cover: the first of its recipes that has a photo.
+  .map((c: any) => ({ ...c, cover: c.recipes.map((s: string) => (bySlug.get(s) as any)?.image).find(Boolean) || null }));
 const recipeCount = data.recipes.length;
 
 const title = 'Simpler Recipes — paste any recipe link, get just the recipe';
@@ -46,7 +50,7 @@ const websiteSchema = JSON.stringify({
               Just <span class="hl">the recipe.</span><br />Nothing <span class="underline decoration-accent decoration-[3px] underline-offset-[6px]">else</span>.
             </h1>
             <p class="mt-4 text-[16px] sm:text-[17px] leading-relaxed text-sand-600 max-w-[42ch]">
-              Paste a recipe link and get the ingredients and steps — no ads, no pop-ups, no life story.
+              The ingredients and the steps — no ads, no pop-ups, no life story.
             </p>
             <div class="mt-6 sm:mt-8">
               <HeroInput client:load />
@@ -69,23 +73,37 @@ const websiteSchema = JSON.stringify({
         </div>
       </section>
 
-      <!-- Browse -->
+      <!-- Browse: image-led collection grid. One title style (serif), one meta style (mono). -->
       <section aria-labelledby="collections-heading" class="pb-16">
-        <div class="flex items-baseline justify-between gap-4 mb-5">
-          <h2 id="collections-heading" class="text-[15px] font-medium text-sand-900">
-            Or browse {recipeCount} recipes
+        <div class="flex items-baseline justify-between gap-4 mb-6">
+          <h2 id="collections-heading" class="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500">
+            Browse {recipeCount} recipes
           </h2>
           <a href="/browse/" class="text-[14px] text-sand-600 hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300 shrink-0">
             By ingredient &amp; time
           </a>
         </div>
         <nav aria-label="Recipe collections">
-          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-0">
+          <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-8">
             {collections.map((c: any) => (
-              <li class="border-b border-sand-200/70">
-                <a href={`/collection/${c.slug}/`} class="group flex items-baseline justify-between gap-4 py-3">
-                  <span class="text-[16px] text-sand-800 group-hover:text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{c.name}</span>
-                  <span class="font-mono text-[12px] text-sand-400 shrink-0">{c.recipeCount}</span>
+              <li>
+                <a href={`/collection/${c.slug}/`} class="group block">
+                  <div class="aspect-[4/3] overflow-hidden rounded-xl bg-sand-100 mb-2.5">
+                    {c.cover && (
+                      <img
+                        src={c.cover}
+                        alt=""
+                        width={320}
+                        height={240}
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full h-full object-cover dark:brightness-90 group-hover:opacity-95 transition-opacity"
+                        referrerpolicy="no-referrer"
+                      />
+                    )}
+                  </div>
+                  <h3 class="font-serif text-[16px] font-medium leading-snug text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{c.name}</h3>
+                  <p class="mt-0.5 font-mono text-[11px] text-sand-500">{c.recipeCount} recipes</p>
                 </a>
               </li>
             ))}
@@ -93,9 +111,9 @@ const websiteSchema = JSON.stringify({
         </nav>
       </section>
 
-      <footer class="pb-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-sand-500">
-        <a href="/privacy" class="hover:text-sand-800">Privacy</a>
-        <span>Recipes stay credited to the sites they came from — every page links back to the original.</span>
+      <footer class="pb-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-sand-500">
+        <a href="/privacy" class="hover:text-sand-800 underline underline-offset-[3px] decoration-sand-300">Privacy</a>
+        <span>Recipes stay on your device — every page links back to the original site.</span>
       </footer>
     </div>
   </main>
