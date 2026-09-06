@@ -51,7 +51,7 @@ const description = recipe
       <RecipeView client:load recipe={recipe} recipeId={`share:${id}`} sourceUrl={sourceUrl} variant="shared" shareId={id} />
     ) : (
       <div class="max-w-xl mx-auto px-4 py-20 text-center">
-        <h1 class="text-[22px] font-semibold text-sand-900">This shared recipe isn't available</h1>
+        <h1 class="font-serif text-[22px] font-medium text-sand-900">This shared recipe isn't available</h1>
         <p class="mt-2 text-[15px] text-sand-600">The link may be incomplete, or the recipe was removed. Shared links stay live for a year.</p>
         <a href="/" class="btn-primary mt-6">Simplify a recipe</a>
       </div>

@@ -30,7 +30,7 @@ const description = 'Chicken, pasta, 30-minute dinners, vegetarian mains and mor
       </nav>
 
       <header class="mb-8 max-w-2xl">
-        <h1 class="text-[28px] sm:text-[36px] leading-[1.1] font-medium tracking-[-0.022em] text-sand-900">Browse recipes</h1>
+        <h1 class="font-serif text-[28px] sm:text-[34px] leading-[1.2] font-medium tracking-[-0.01em] text-sand-900">Browse recipes</h1>
         <p class="mt-2 text-[16px] text-sand-600">By ingredient, time and occasion.</p>
       </header>
 
@@ -38,12 +38,12 @@ const description = 'Chicken, pasta, 30-minute dinners, vegetarian mains and mor
         <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {pages.map((p) => (
             <li>
-              <a href={`/browse/${p.slug}/`} class="group flex h-full flex-col justify-between gap-2 rounded-xl bg-surface p-4 shadow-xs hover:shadow-sm transition-shadow">
+              <a href={`/browse/${p.slug}/`} class="group flex h-full flex-col justify-between gap-2 rounded-xl border border-sand-200 bg-surface p-4 shadow-xs hover:shadow-sm transition-shadow">
                 <div>
-                  <h2 class="text-[15px] font-medium text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{p.name}</h2>
+                  <h2 class="font-serif text-[16px] font-medium text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{p.name}</h2>
                   <p class="mt-1 text-[13px] leading-snug text-sand-500 line-clamp-2">{p.intro}</p>
                 </div>
-                <p class="text-[12px] tabular text-sand-400">{p.count} recipes</p>
+                <p class="font-mono text-[11px] text-sand-400">{p.count} recipes</p>
               </a>
             </li>
           ))}
@@ -56,7 +56,7 @@ const description = 'Chicken, pasta, 30-minute dinners, vegetarian mains and mor
           {collections.map((c: any) => (
             <li>
               <a href={`/collection/${c.slug}/`} class="text-sand-800 hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300">
-                {c.name} <span class="text-sand-500 tabular">{c.recipeCount}</span>
+                {c.name} <span class="font-mono text-[12px] text-sand-500">{c.recipeCount}</span>
               </a>
             </li>
           ))}

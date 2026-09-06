@@ -78,7 +78,7 @@ const jsonLd = JSON.stringify({
       </nav>
 
       <header class="mb-8 max-w-2xl">
-        <h1 class="text-[28px] sm:text-[36px] leading-[1.1] font-medium tracking-[-0.022em] text-sand-900">{page.name}</h1>
+        <h1 class="font-serif text-[28px] sm:text-[34px] leading-[1.2] font-medium tracking-[-0.01em] text-sand-900">{page.name}</h1>
         <p class="mt-2 text-[16px] text-sand-600">{page.intro} <span class="text-sand-500 tabular">{recipes.length} recipes.</span></p>
       </header>
 
@@ -87,7 +87,7 @@ const jsonLd = JSON.stringify({
       </section>
 
       <nav aria-labelledby="more-browse" class="mt-14 pt-8 border-t border-sand-200">
-        <h2 id="more-browse" class="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500 mb-3">More ways to browse</h2>
+        <h2 id="more-browse" class="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500 mb-3">More ways to browse</h2>
         <ul class="flex flex-wrap gap-x-5 gap-y-2 text-[15px]">
           {others.map((o) => (
             <li><a href={`/browse/${o.slug}/`} class="text-sand-800 hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300">{o.name} <span class="text-sand-500 tabular">{o.count}</span></a></li>

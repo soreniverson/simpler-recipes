@@ -54,7 +54,7 @@ export default function Ingredients({
   return (
     <div data-ingredients className={compact ? '' : 'lg:bg-sand-50 lg:rounded-2xl lg:border lg:border-sand-200 lg:p-5'}>
       <div className="flex items-baseline justify-between gap-3 mb-3">
-        <h2 id="ingredients-heading" className="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500">
+        <h2 id="ingredients-heading" className="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500">
           Ingredients
           {doneCount > 0 && (
             <span className="tabular font-normal normal-case tracking-normal"> {doneCount}/{total}</span>

@@ -13,7 +13,7 @@ export default function Instructions({ recipe, done, onToggle, onCookMode }) {
   return (
     <section data-instructions aria-labelledby="instructions-heading">
       <div className="flex items-center justify-between gap-3 mb-4">
-        <h2 id="instructions-heading" className="text-[13px] font-medium uppercase tracking-[0.06em] text-sand-500">
+        <h2 id="instructions-heading" className="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500">
           Instructions{done.size > 0 && <span className="tabular font-normal normal-case tracking-normal"> {done.size}/{total}</span>}
         </h2>
         {total > 0 && (

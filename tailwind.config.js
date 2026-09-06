@@ -27,9 +27,13 @@ export default {
         },
         surface: 'rgb(var(--surface) / <alpha-value>)',
         background: 'rgb(var(--background) / <alpha-value>)',
+        accent: 'rgb(var(--accent) / <alpha-value>)',
+        highlight: 'rgb(var(--highlight) / <alpha-value>)',
       },
       fontFamily: {
-        sans: ['Geist', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        sans: ['Geist', 'Geist Fallback', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        serif: ['"IBM Plex Serif"', 'Georgia', '"Times New Roman"', 'serif'],
+        mono: ['"SF Mono"', 'SFMono-Regular', 'ui-monospace', 'Menlo', 'Consolas', 'monospace'],
       },
       boxShadow: {
         'xs': '0 1px 2px 0 var(--shadow-color, rgba(58, 56, 50, 0.04))',

@@ -42,11 +42,11 @@ const websiteSchema = JSON.stringify({
       <section class="pt-10 sm:pt-16 pb-10 sm:pb-14" aria-labelledby="hero-heading">
         <div class="lg:flex lg:items-center lg:gap-14">
           <div class="flex-1 lg:max-w-xl min-w-0">
-            <h1 id="hero-heading" class="text-[34px] sm:text-[46px] leading-[1.05] font-medium tracking-[-0.028em] text-sand-900 [text-wrap:balance]">
-              Just the recipe.
+            <h1 id="hero-heading" class="font-serif text-[34px] sm:text-[44px] leading-[1.18] font-medium tracking-[-0.01em] text-sand-900 [text-wrap:balance]">
+              Just <span class="hl">the recipe.</span><br />Nothing <span class="underline decoration-accent decoration-[3px] underline-offset-[6px]">else</span>.
             </h1>
-            <p class="mt-3 text-[17px] sm:text-[19px] leading-snug text-sand-600 max-w-[36ch]">
-              Paste a recipe link. Get the ingredients and steps — nothing else.
+            <p class="mt-4 text-[16px] sm:text-[17px] leading-relaxed text-sand-600 max-w-[42ch]">
+              Paste a recipe link and get the ingredients and steps — no ads, no pop-ups, no life story.
             </p>
             <div class="mt-6 sm:mt-8">
               <HeroInput client:load />
@@ -85,7 +85,7 @@ const websiteSchema = JSON.stringify({
               <li class="border-b border-sand-200/70">
                 <a href={`/collection/${c.slug}/`} class="group flex items-baseline justify-between gap-4 py-3">
                   <span class="text-[16px] text-sand-800 group-hover:text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{c.name}</span>
-                  <span class="text-[13px] tabular text-sand-400 shrink-0">{c.recipeCount}</span>
+                  <span class="font-mono text-[12px] text-sand-400 shrink-0">{c.recipeCount}</span>
                 </a>
               </li>
             ))}

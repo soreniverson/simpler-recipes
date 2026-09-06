@@ -43,8 +43,8 @@ export default function RecipeCard({ recipe, showFavorite = true, matchInfo, eag
               />
             )}
           </div>
-          <h2 className="text-[15px] font-medium leading-snug text-sand-900 line-clamp-2 group-hover:underline underline-offset-[3px] decoration-sand-300">{recipe.title}</h2>
-          {meta && <p className="mt-0.5 text-[13px] text-sand-500 tabular">{meta}</p>}
+          <h2 className="font-serif text-[16px] font-medium leading-snug text-sand-900 line-clamp-2 group-hover:underline underline-offset-[3px] decoration-sand-300">{recipe.title}</h2>
+          {meta && <p className="mt-1 font-mono text-[12px] text-sand-500">{meta}</p>}
         </article>
       </a>
     </div>

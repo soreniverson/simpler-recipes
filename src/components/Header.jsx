@@ -77,7 +77,7 @@ export default function Header({ showSearch = true }) {
     <header data-site-header className="sticky top-0 z-40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/85 border-b border-sand-200 print:hidden">
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="flex items-center h-14 gap-3">
-          <a href="/" className="shrink-0 text-[16px] font-semibold tracking-[-0.01em] text-sand-900 hover:text-sand-700 py-2 -my-2">
+          <a href="/" className="shrink-0 font-serif italic font-medium text-[17px] tracking-[-0.01em] text-accent hover:opacity-80 transition-opacity py-2 -my-2">
             Simpler Recipes
           </a>
 
