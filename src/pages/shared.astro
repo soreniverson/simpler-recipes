@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RecipeView from '../components/recipe/RecipeView.jsx';
+import { unpackRecipe, packedId } from '../lib/recipe/pack';
+import { metaLine } from '../lib/recipe/display';
+
+// Self-contained share links: the whole recipe lives in ?d=, so this page needs no store —
+// it decodes, validates, and renders server-side (real title + OG tags, real 404).
+export const prerender = false;
+
+const payload = Astro.url.searchParams.get('d');
+const result = payload ? await unpackRecipe(payload) : ({ ok: false } as const);
+const recipe = result.ok ? result.recipe : null;
+const sourceUrl = result.ok ? result.sourceUrl : null;
+
+if (!recipe) {
+  Astro.response.status = 404;
+}
+
+const title = recipe ? `${recipe.title} · Simpler Recipes` : 'Recipe not found · Simpler Recipes';
+const description = recipe
+  ? `${recipe.title}${metaLine(recipe).length ? ` — ${metaLine(recipe).join(', ')}` : ''}. Shared via Simpler Recipes.`
+  : 'This shared recipe link is invalid or incomplete.';
+---
+
+<BaseLayout title={title} description={description} image={recipe?.image || undefined} type="article" noindex={true} canonical={recipe && sourceUrl ? sourceUrl : undefined}>
+  <main id="main-content" class="min-h-screen bg-background">
+    {recipe ? (
+      <RecipeView client:load recipe={recipe} recipeId={`packed:${packedId(payload!)}`} sourceUrl={sourceUrl} variant="shared" />
+    ) : (
+      <div class="max-w-xl mx-auto px-4 py-20 text-center">
+        <h1 class="text-[22px] font-serif font-medium text-sand-900">This shared recipe isn't available</h1>
+        <p class="mt-2 text-[15px] text-sand-600">The link looks incomplete — it may have been cut off when it was copied or sent. Ask for the link again, or simplify the original recipe yourself.</p>
+        <a href="/" class="btn-primary mt-6">Simplify a recipe</a>
+      </div>
+    )}
+  </main>
+</BaseLayout>

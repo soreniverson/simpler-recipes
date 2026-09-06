@@ -104,15 +104,24 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
       let url;
       if (variant === 'curated' && recipe.slug) url = `${location.origin}/recipes/${recipe.slug}/`;
       else if (variant === 'shared' && shareId) url = `${location.origin}/r/${shareId}`;
+      else if (variant === 'shared' && location.pathname === '/shared') url = location.href;
       else {
-        const res = await fetch('/api/share', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ recipe, sourceUrl: src.url }),
-        });
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok || !data.id) throw new Error(data.error || 'share failed');
-        url = `${location.origin}/r/${data.id}`;
+        // Short link first; if the store is down, pack the recipe into the URL itself
+        // (self-contained, never expires) instead of failing the share.
+        try {
+          const res = await fetch('/api/share', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ recipe, sourceUrl: src.url }),
+          });
+          const data = await res.json().catch(() => ({}));
+          if (!res.ok || !data.id) throw new Error(data.error || 'share failed');
+          url = `${location.origin}/r/${data.id}`;
+        } catch {
+          const { packRecipe } = await import('../../lib/recipe/pack');
+          const payload = await packRecipe(recipe, src.url);
+          url = `${location.origin}/shared?d=${payload}`;
+        }
       }
       if (navigator.share && /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
         try {
@@ -211,10 +220,10 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
           </div>
         )}
         <div className="min-w-0">
-          <h1 className="text-[30px] sm:text-[38px] leading-[1.12] font-medium tracking-[-0.022em] text-sand-900 [text-wrap:balance]">{recipe.title}</h1>
+          <h1 className="font-serif text-[28px] sm:text-[36px] leading-[1.2] font-medium tracking-[-0.01em] text-sand-900 [text-wrap:balance]">{recipe.title}</h1>
 
           {(meta.length > 0 || times.total) && (
-            <p data-meta className="mt-2 text-[14px] sm:text-[15px] text-sand-600 tabular flex flex-wrap gap-x-2 gap-y-1">
+            <p data-meta className="mt-2.5 font-mono text-[12.5px] sm:text-[13px] text-sand-600 flex flex-wrap gap-x-2 gap-y-1">
               {meta.map((m, i) => (
                 <span key={i} className="inline-flex items-center gap-2">
                   {m}
