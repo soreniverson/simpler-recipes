@@ -41,7 +41,7 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <meta name="theme-color" content="#F6F5F3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#FDFDFC" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)" />
 
     <!-- Primary Meta Tags -->
@@ -64,8 +64,9 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={fullImageUrl} />
 
-    <!-- Fonts: self-hosted Geist (variable), latin subset preloaded -->
+    <!-- Fonts: self-hosted Geist (variable) for body, IBM Plex Serif for display; latin subsets preloaded -->
     <link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/ibm-plex-serif-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Theme initialization (must run before body renders to prevent flash) -->
     <script is:inline>
@@ -150,6 +151,31 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
     descent-override: 24%;
     line-gap-override: 0%;
   }
+  /* Display serif: IBM Plex Serif 500 (+ italic for the wordmark). Georgia is the fallback. */
+  @font-face {
+    font-family: 'IBM Plex Serif';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url(/fonts/ibm-plex-serif-latin-500-normal.woff2) format('woff2');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  @font-face {
+    font-family: 'IBM Plex Serif';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url(/fonts/ibm-plex-serif-latin-ext-500-normal.woff2) format('woff2');
+    unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'IBM Plex Serif';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 500;
+    src: url(/fonts/ibm-plex-serif-latin-500-italic.woff2) format('woff2');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
 
   /* ---------- Design tokens ----------
      Colors are stored as space-separated RGB so Tailwind can apply opacity modifiers
@@ -171,9 +197,12 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
     --sand-950: 15 14 13;
     --primary: 74 73 70;
     --primary-light: 94 93 89;
-    --surface: 252 251 250;
-    --background: 246 245 243;
+    --surface: 255 255 255;
+    --background: 253 253 252;
     --on-primary: 252 251 250;
+    /* Editorial red + lavender highlight (the two accents of the doc-style look). */
+    --accent: 218 50 56;
+    --highlight: 206 207 244;
     --shadow-color: rgba(58, 56, 50, 0.06);
     color-scheme: light;
   }
@@ -198,6 +227,8 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
     --surface: 36 35 33;
     --background: 20 19 17;
     --on-primary: 20 19 17;
+    --accent: 240 118 113;
+    --highlight: 73 74 118;
     --shadow-color: rgba(0, 0, 0, 0.4);
     color-scheme: dark;
   }
@@ -235,6 +266,8 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
     .btn-ghost { @apply btn text-sand-700 hover:bg-sand-100 hover:text-sand-900; }
     .btn-icon { @apply inline-flex items-center justify-center h-11 w-11 rounded-lg text-sand-600 hover:bg-sand-100 hover:text-sand-900 transition-colors; }
     .btn-lg { @apply h-12 px-5 text-base; }
+    /* Lavender text highlight for display headings (marker-style, wraps cleanly). */
+    .hl { @apply bg-highlight/60 box-decoration-clone rounded-[3px] px-[0.12em] -mx-[0.04em]; }
   }
 
   /* ---------- Focus ---------- */
@@ -250,6 +283,7 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
       --sand-25: 255 255 255; --sand-50: 255 255 255; --sand-100: 245 244 241; --sand-200: 229 228 224; --sand-300: 214 213 208;
       --sand-400: 181 180 174; --sand-500: 106 105 101; --sand-600: 85 84 79; --sand-700: 64 63 59; --sand-800: 44 43 39;
       --sand-900: 22 21 18; --sand-950: 0 0 0; --surface: 255 255 255; --background: 255 255 255; --on-primary: 255 255 255;
+      --accent: 22 21 18; --highlight: 255 255 255;
       color-scheme: light;
     }
     html { font-size: 11pt; }

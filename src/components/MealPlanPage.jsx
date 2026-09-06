@@ -165,7 +165,7 @@ export default function MealPlanPage({ recipes = [] }) {
       {/* Header with week navigation */}
       <header className="mb-6">
         <div className="flex items-center justify-between">
-          <h1 className="text-lg font-medium text-sand-900">Meal plan</h1>
+          <h1 className="font-serif text-[19px] font-medium text-sand-900">Meal plan</h1>
           <div className="flex items-center gap-2">
             {!isCurrentWeek && (
               <button

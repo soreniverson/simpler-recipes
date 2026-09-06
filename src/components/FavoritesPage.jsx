@@ -377,7 +377,7 @@ function FolderView({ folder, items, recipes, folders, onBack, onRename, onDelet
               <button type="button" onClick={() => { setIsEditing(false); setEditName(folder.name); }} className="px-3 py-1.5 text-sm text-sand-600">Cancel</button>
             </form>
           ) : (
-            <h1 className="text-lg font-medium text-sand-900 flex items-center gap-2">
+            <h1 className="font-serif text-[19px] font-medium text-sand-900 flex items-center gap-2">
               <FolderIcon className="w-5 h-5 text-sand-500" />
               {folder.name}
               <span className="text-sand-500 font-normal">({items.length})</span>
@@ -529,7 +529,7 @@ export default function FavoritesPage({ recipes }) {
   return (
     <div>
       <header className="mb-6">
-        <h1 className="text-lg font-medium text-sand-900 flex items-center gap-2">
+        <h1 className="font-serif text-[19px] font-medium text-sand-900 flex items-center gap-2">
           Favorites
           {totalCount > 0 && (
             <span className="text-sand-500 font-normal">({totalCount})</span>
