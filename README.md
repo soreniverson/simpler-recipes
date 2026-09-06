@@ -14,7 +14,16 @@ npm test           # vitest (parser, scaling, storage, URL/SSRF, corpus fixtures
 npm run check      # tsc --noEmit + astro check
 ```
 
-Optional env (the app degrades gracefully without them): `KV_REST_API_URL`/`KV_REST_API_TOKEN` (cache, quotas, share), `PUBLIC_SUPABASE_URL`/`PUBLIC_SUPABASE_ANON_KEY`, `ANTHROPIC_API_KEY` (AI fallback + remix), `YOUTUBE_API_KEY`, `SKIP_IMAGE_OPT=1` (skip build-time image optimisation).
+Optional env (the app degrades gracefully without them): server store (below), `PUBLIC_SUPABASE_URL`/`PUBLIC_SUPABASE_ANON_KEY`, `ANTHROPIC_API_KEY` (AI fallback + remix), `YOUTUBE_API_KEY`, `SKIP_IMAGE_OPT=1` (skip build-time image optimisation).
+
+## Server store (share links, extraction cache, AI quotas, rate limits)
+
+`src/lib/serverStore.ts` needs ONE of two backends in production; without one, sharing returns 503, cache/rate-limits are off, and the metered AI paths refuse (fail closed) rather than run unmetered:
+
+- **Redis** — attach a Redis store via Vercel Marketplace (Storage tab); `KV_REST_API_URL`/`KV_REST_API_TOKEN` auto-populate. No code or schema needed. Preferred when configured.
+- **Supabase** — run `supabase-kv-migration.sql` once in the Supabase SQL Editor, then set `SUPABASE_SERVICE_ROLE_KEY` in Vercel (URL comes from `PUBLIC_SUPABASE_URL`). If stale `KV_REST_API_*` vars still exist, either delete them or set `SERVER_STORE=supabase` to override.
+
+Backend failures are logged as one JSON line (`{"event":"store-error",...}` / `"store-unconfigured"`) — grep Vercel logs for `store-` to see if protection is actually running. To verify after a deploy: `POST https://www.simpler.recipes/api/share` with `{"recipe":{...}}` should return `{"id":"..."}`.
 
 ## Where things live
 

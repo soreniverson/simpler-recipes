@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { nanoid } from 'nanoid';
-import { storeSharedRecipe, isKVConfigured } from '../../../utils/kv';
+import { storeSharedRecipe, isStoreConfigured } from '../../../utils/kv';
 import { validateRecipe, safeHref, MAX_SHARE_BYTES } from '../../../lib/recipe/validate';
 import { checkIpRateLimit, getClientIp } from '../../../lib/limits';
 
@@ -47,12 +47,12 @@ export const POST: APIRoute = async ({ request }) => {
 
   const id = nanoid(10);
   try {
-    if (isKVConfigured()) {
+    if (isStoreConfigured()) {
       await storeSharedRecipe(id, { recipe, sourceUrl: sourceUrl ?? undefined });
     } else if (import.meta.env.DEV) {
       memoryStorage.set(id, { recipe, sourceUrl, createdAt: Date.now() });
     } else {
-      // Production without KV: fail loudly instead of handing out links that die on the next cold start.
+      // Production without a store: fail loudly instead of handing out links that die on the next cold start.
       return json({ error: 'Sharing is temporarily unavailable.' }, 503);
     }
     return json({ id });

@@ -1,7 +1,16 @@
-import { kv } from '@vercel/kv';
 import { createHash } from 'crypto';
 import { cacheKeyForUrl } from '../lib/url';
+import {
+  storeGet,
+  storeSet,
+  isStoreConfigured,
+  logStoreError,
+  noteStoreUnavailable,
+} from '../lib/serverStore';
 import type { Recipe } from '../lib/recipe/types';
+
+// Backend selection (Redis vs Supabase) lives in src/lib/serverStore.ts.
+export { isStoreConfigured };
 
 // Prefixes for namespacing
 const SHARE_PREFIX = 'share:';
@@ -17,7 +26,8 @@ export interface SharedRecipe {
 }
 
 /**
- * Store a shared recipe in Vercel KV
+ * Store a shared recipe. Throws on failure — the share endpoint turns that into a 500
+ * instead of handing out a link that resolves to nothing.
  */
 export async function storeSharedRecipe(id: string, data: Omit<SharedRecipe, 'createdAt'>): Promise<void> {
   const key = `${SHARE_PREFIX}${id}`;
@@ -26,22 +36,15 @@ export async function storeSharedRecipe(id: string, data: Omit<SharedRecipe, 'cr
     createdAt: Date.now(),
   };
 
-  await kv.set(key, payload, { ex: TTL_SECONDS });
+  await storeSet(key, payload, TTL_SECONDS);
 }
 
 /**
- * Retrieve a shared recipe from Vercel KV
+ * Retrieve a shared recipe. Throws on backend failure (callers already catch and 404/500).
  */
 export async function getSharedRecipe(id: string): Promise<SharedRecipe | null> {
   const key = `${SHARE_PREFIX}${id}`;
-  return await kv.get<SharedRecipe>(key);
-}
-
-/**
- * Check if KV is properly configured
- */
-export function isKVConfigured(): boolean {
-  return !!(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
+  return await storeGet<SharedRecipe>(key);
 }
 
 // ============ EXTRACTION CACHING ============
@@ -69,32 +72,35 @@ function getExtractKey(url: string): string {
 }
 
 /**
- * Get cached extraction result
+ * Get cached extraction result. Fails open (cache miss), loudly.
  */
 export async function getCachedExtraction(url: string): Promise<CachedExtraction | null> {
+  if (!isStoreConfigured()) {
+    noteStoreUnavailable('cache');
+    return null;
+  }
   try {
-    const key = getExtractKey(url);
-    return await kv.get<CachedExtraction>(key);
-  } catch {
+    return await storeGet<CachedExtraction>(getExtractKey(url));
+  } catch (err) {
+    logStoreError('cache-get', err);
     return null;
   }
 }
 
 /**
- * Cache an extraction result
+ * Cache an extraction result. Fails open, loudly.
  */
 export async function cacheExtraction(url: string, recipe: CachedExtraction['recipe']): Promise<void> {
-  if (!isKVConfigured()) return; // local dev: no cache, no stack trace per extraction
+  if (!isStoreConfigured()) return; // local dev: no cache, no stack trace per extraction
   try {
-    const key = getExtractKey(url);
     const payload: CachedExtraction = {
       recipe,
       extractedAt: Date.now(),
       v: EXTRACT_CACHE_VERSION,
     };
-    await kv.set(key, payload, { ex: EXTRACT_TTL_SECONDS });
+    await storeSet(getExtractKey(url), payload, EXTRACT_TTL_SECONDS);
   } catch (err) {
-    console.error('Failed to cache extraction:', err instanceof Error ? err.message : err);
+    logStoreError('cache-set', err);
   }
 }
 
@@ -126,12 +132,18 @@ function getUsageKey(token: string, isAuthenticated = false): string {
 }
 
 /**
- * Get current usage for a token
+ * Get current usage for a token. A backend failure reads as "no usage" (fails open) but
+ * is logged; a wholly unconfigured store is handled by callers via isStoreConfigured().
  */
 export async function getUsage(token: string, isAuthenticated = false): Promise<UsageData | null> {
+  if (!isStoreConfigured()) {
+    noteStoreUnavailable('quota');
+    return null;
+  }
   try {
-    return await kv.get<UsageData>(getUsageKey(token, isAuthenticated));
-  } catch {
+    return await storeGet<UsageData>(getUsageKey(token, isAuthenticated));
+  } catch (err) {
+    logStoreError('quota-get', err);
     return null;
   }
 }
@@ -141,11 +153,15 @@ export async function getUsage(token: string, isAuthenticated = false): Promise<
  * Returns the new count
  */
 export async function incrementExtraction(token: string, isAuthenticated = false): Promise<number> {
+  if (!isStoreConfigured()) {
+    noteStoreUnavailable('quota');
+    return 0;
+  }
   const key = getUsageKey(token, isAuthenticated);
   const now = Date.now();
 
   try {
-    const current = await kv.get<UsageData>(key);
+    const current = await storeGet<UsageData>(key);
 
     const newData: UsageData = {
       extractions: (current?.extractions || 0) + 1,
@@ -154,11 +170,11 @@ export async function incrementExtraction(token: string, isAuthenticated = false
     };
 
     // Anonymous: ~lifetime (400 days) so keys don't accumulate forever; monthly keys: 40 days.
-    await kv.set(key, newData, { ex: isAuthenticated ? 40 * 24 * 3600 : 400 * 24 * 3600 });
+    await storeSet(key, newData, isAuthenticated ? 40 * 24 * 3600 : 400 * 24 * 3600);
 
     return newData.extractions;
   } catch (err) {
-    console.error('Failed to increment extraction:', err);
+    logStoreError('quota-incr', err);
     return 0;
   }
 }
