@@ -4,7 +4,7 @@ import type { Recipe as ExtractedRecipe } from '../../lib/recipe/types';
 import { AI_MODEL } from '../../lib/recipe/ai';
 import { validateRecipe, MAX_REMIX_BYTES } from '../../lib/recipe/validate';
 import { checkIpRateLimit, getClientIp } from '../../lib/limits';
-import { hasReachedLimit, incrementExtraction } from '../../utils/kv';
+import { hasReachedLimit, incrementExtraction, isStoreConfigured } from '../../utils/kv';
 import { getTokenFromRequest } from '../../utils/anonymousToken';
 import { getUserIdFromRequest } from '../../utils/supabase';
 
@@ -58,6 +58,14 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ error: 'Too many requests. Please slow down.' }), {
       status: 429,
       headers: { 'Content-Type': 'application/json', 'Retry-After': String(rate.retryAfterSeconds) },
+    });
+  }
+  // No quota store in production = unmetered Anthropic spend. Fail CLOSED here (a
+  // configured-but-erroring store fails open inside hasReachedLimit, loudly).
+  if (!isStoreConfigured() && import.meta.env.PROD) {
+    return new Response(JSON.stringify({ error: 'Remix is temporarily unavailable. Please try again later.' }), {
+      status: 503,
+      headers: { 'Content-Type': 'application/json' },
     });
   }
   const userId = await getUserIdFromRequest(request);

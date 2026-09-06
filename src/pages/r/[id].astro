@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RecipeView from '../../components/recipe/RecipeView.jsx';
-import { getSharedRecipe, isKVConfigured } from '../../utils/kv';
+import { getSharedRecipe, isStoreConfigured } from '../../utils/kv';
 import { memoryStorage } from '../api/share/index';
 import { validateRecipe, safeHref } from '../../lib/recipe/validate';
 import { metaLine } from '../../lib/recipe/display';
@@ -16,7 +16,7 @@ let sourceUrl: string | null = null;
 if (id && /^[A-Za-z0-9_-]{6,32}$/.test(id)) {
   try {
     let data: { recipe: any; sourceUrl?: string | null } | null = null;
-    if (isKVConfigured()) {
+    if (isStoreConfigured()) {
       const kvData = await getSharedRecipe(id);
       if (kvData) data = { recipe: kvData.recipe, sourceUrl: kvData.sourceUrl };
     } else if (import.meta.env.DEV) {

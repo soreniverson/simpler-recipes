@@ -7,6 +7,7 @@ import {
   ANONYMOUS_EXTRACTION_LIMIT,
   AUTHENTICATED_EXTRACTION_LIMIT,
 } from '../../utils/kv';
+import { isStoreConfigured } from '../../lib/serverStore';
 import { getTokenFromRequest } from '../../utils/anonymousToken';
 import { getUserIdFromRequest } from '../../utils/supabase';
 import { normalizeUrl } from '../../lib/url';
@@ -204,6 +205,12 @@ export const GET: APIRoute = async ({ request }) => {
         const anthropicApiKey = import.meta.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY;
         if (!anthropicApiKey) {
           fail({ code: 'no-recipe', error: `We couldn't find a recipe on that page.`, hint: 'Make sure the link goes to a specific recipe, not a category or search page.' });
+          return;
+        }
+        // No quota store in production = unmetered Anthropic spend. Fail CLOSED (structured
+        // extraction above still works). A configured-but-erroring store fails open below, loudly.
+        if (!isStoreConfigured() && import.meta.env.PROD) {
+          fail({ code: 'server-error', error: 'AI extraction is temporarily unavailable.', hint: 'Try again in a few minutes, or open the original page.' });
           return;
         }
         const { token, isAuthenticated } = await identity();

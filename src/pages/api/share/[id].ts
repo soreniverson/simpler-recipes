@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { getSharedRecipe, isKVConfigured } from '../../../utils/kv';
+import { getSharedRecipe, isStoreConfigured } from '../../../utils/kv';
 import { memoryStorage } from './index';
 import { validateRecipe, safeHref } from '../../../lib/recipe/validate';
 
@@ -18,8 +18,8 @@ export const GET: APIRoute = async ({ params }) => {
   try {
     let data: { recipe: any; sourceUrl?: string } | null = null;
 
-    if (isKVConfigured()) {
-      // Use Vercel KV for persistent storage
+    if (isStoreConfigured()) {
+      // Use the server store (Redis or Supabase) for persistent storage
       const kvData = await getSharedRecipe(id);
       if (kvData) {
         data = { recipe: kvData.recipe, sourceUrl: kvData.sourceUrl };
