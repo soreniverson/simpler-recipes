@@ -41,34 +41,19 @@ const websiteSchema = JSON.stringify({
 
   <main id="main-content" class="min-h-screen">
     <div class="max-w-[1080px] mx-auto px-4 sm:px-6">
-      <!-- Hero: one promise, one input, and the food. The collage is the brand moment; it is
-           desktop-only (it was always `hidden lg:block`) and now ships as a 38KB WebP. -->
-      <section class="pt-10 sm:pt-16 pb-10 sm:pb-14" aria-labelledby="hero-heading">
-        <div class="lg:flex lg:items-center lg:gap-14">
-          <div class="flex-1 lg:max-w-xl min-w-0">
-            <h1 id="hero-heading" class="font-serif text-[34px] sm:text-[44px] leading-[1.18] font-medium tracking-[-0.01em] text-sand-900 [text-wrap:balance]">
-              Just <span class="hl">the recipe.</span><br />Nothing <span class="underline decoration-accent decoration-[3px] underline-offset-[6px]">else</span>.
-            </h1>
-            <p class="mt-4 text-[16px] sm:text-[17px] leading-relaxed text-sand-600 max-w-[42ch]">
-              The ingredients and the steps — no ads, no pop-ups, no life story.
-            </p>
-            <div class="mt-6 sm:mt-8">
-              <HeroInput client:load />
-            </div>
-          </div>
-          <div class="hidden lg:block shrink-0 w-[300px] xl:w-[340px]" aria-hidden="true">
-            <img
-              src="/hero-collage-384.webp"
-              srcset="/hero-collage-384.webp 384w, /hero-collage-768.webp 768w"
-              sizes="340px"
-              alt=""
-              width={340}
-              height={340}
-              class="w-full h-auto rounded-2xl"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-            />
+      <!-- Hero: one axis, one focal point. Centered column, the input is the hero object,
+           and the food imagery is the (clickable) collection grid below — no decorative collage
+           competing with the headline. -->
+      <section class="pt-12 sm:pt-20 pb-12 sm:pb-16" aria-labelledby="hero-heading">
+        <div class="max-w-[640px] mx-auto text-center">
+          <h1 id="hero-heading" class="font-serif text-[36px] sm:text-[48px] leading-[1.15] font-medium tracking-[-0.01em] text-sand-900 [text-wrap:balance]">
+            Just <span class="hl">the recipe.</span><br />Nothing else.
+          </h1>
+          <p class="mt-4 text-[16px] sm:text-[17px] leading-relaxed text-sand-600">
+            The ingredients and the steps — no ads, no pop-ups, no life story.
+          </p>
+          <div class="mt-7 sm:mt-9 text-left">
+            <HeroInput client:load />
           </div>
         </div>
       </section>

@@ -28,7 +28,7 @@ export default function HeroInput() {
   return (
     <div>
       <SmartInput variant="default" placeholder="Paste a recipe link, or search" autoFocus id="hero-input" />
-      <p className="mt-3 text-[14px] text-sand-600 flex flex-wrap items-center gap-x-4 gap-y-1">
+      <p className="mt-3.5 text-[14px] text-sand-600 flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
         <span>Try:</span>
         {EXAMPLES.map((e, i) => (
           <span key={e.url} className="inline-flex items-center gap-x-2">

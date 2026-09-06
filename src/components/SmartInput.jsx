@@ -280,7 +280,7 @@ export default function SmartInput({ variant = 'default', placeholder = 'Paste a
 
   const inputClass = isHeader
     ? 'h-10 pl-10 pr-10 rounded-lg text-[16px] lg:text-[14px]'
-    : 'h-14 sm:h-16 pl-12 sm:pl-14 pr-14 rounded-2xl text-[16px] sm:text-[18px]';
+    : 'h-14 sm:h-16 pl-12 sm:pl-14 pr-14 rounded-2xl text-[16px] sm:text-[18px] shadow-sm';
 
   return (
     <div ref={boxRef} className={`relative ${isHeader ? 'w-full max-w-md' : 'w-full'}`}>
