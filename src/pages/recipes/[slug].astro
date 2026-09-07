@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RecipeView from '../../components/recipe/RecipeView.jsx';
 import RemixButton from '../../components/RemixButton.jsx';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { jsonLd, breadcrumbLd } from '../../lib/schema';
 import fs from 'fs';
 import path from 'path';
 import { durationToMinutes, minutesToIso, formatMinutes, normalizeYield } from '../../lib/recipe/normalize';
@@ -82,34 +84,22 @@ const recipeSchema: Record<string, unknown> = {
 };
 for (const k of Object.keys(recipeSchema)) if (recipeSchema[k] === undefined) delete recipeSchema[k];
 
-const breadcrumb = {
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Simpler Recipes', item: `${SITE}/` },
-    ...(collection ? [{ '@type': 'ListItem', position: 2, name: collection.name, item: `${SITE}/collection/${collection.slug}/` }] : []),
-    { '@type': 'ListItem', position: collection ? 3 : 2, name: recipe.title, item: pageUrl },
-  ],
-};
-const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': [recipeSchema, breadcrumb] }).replace(/</g, '\\u003c');
+const crumbs = [
+  ...(collection ? [{ name: collection.name, href: `/collection/${collection.slug}/` }] : []),
+  { name: recipe.title },
+];
+const ld = jsonLd(recipeSchema, breadcrumbLd(crumbs, pageUrl));
 ---
 
 <BaseLayout title={title} description={description} image={rawRecipe.image} type="article" canonical={pageUrl}>
   <Fragment slot="head">
-    <script type="application/ld+json" is:inline set:html={jsonLd} />
+    <script type="application/ld+json" is:inline set:html={ld} />
   </Fragment>
 
   <main id="main-content" class="min-h-screen bg-background">
-    <nav aria-label="Breadcrumb" class="max-w-[1080px] mx-auto px-4 sm:px-6 pt-5 print:hidden">
-      <ol class="flex items-center gap-2 text-[14px] text-sand-600">
-        <li><a href="/" class="hover:text-sand-900">Home</a></li>
-        {collection && (
-          <>
-            <li aria-hidden="true" class="text-sand-400">/</li>
-            <li><a href={`/collection/${collection.slug}/`} class="hover:text-sand-900">{collection.name}</a></li>
-          </>
-        )}
-      </ol>
-    </nav>
+    <div class="max-w-[1080px] mx-auto px-4 sm:px-6 pt-5 print:hidden">
+      <Breadcrumbs crumbs={crumbs} class="mb-0" />
+    </div>
 
     <RecipeView client:load recipe={recipe} recipeId={recipe.slug} sourceUrl={recipe.source?.url} variant="curated">
       <RemixButton client:visible recipe={recipe} variant="link" slot="remix" />

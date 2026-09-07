@@ -34,7 +34,7 @@ export default function HeroInput() {
           <span key={e.url} className="inline-flex items-center gap-x-2">
             <button
               type="button"
-              className="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800 py-1"
+              className="text-sand-800 underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800 py-1"
               onClick={() => {
                 const input = document.getElementById('hero-input');
                 if (!input) return;

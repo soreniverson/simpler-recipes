@@ -22,7 +22,7 @@ export default function CleanBox({ id = 'clean-box', examples = false, autoFocus
             <button
               key={e.url}
               type="button"
-              className="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800 py-1"
+              className="text-sand-800 underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800 py-1"
               onClick={() => {
                 const input = document.getElementById(id);
                 // Ask the real input to run this URL, exactly like a paste would.

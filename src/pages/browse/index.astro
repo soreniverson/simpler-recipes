@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageShell from '../../components/PageShell.astro';
+import ListingHeader from '../../components/ListingHeader.astro';
 import fs from 'fs';
 import path from 'path';
 import { buildBrowsePages } from '../../lib/browse';
+import { jsonLd, breadcrumbLd, webPageLd, SITE } from '../../lib/schema';
 
 /**
  * Index of the intent-based browse pages. These used to sit on the homepage as a 20-link block,
@@ -10,45 +13,54 @@ import { buildBrowsePages } from '../../lib/browse';
  * still crawlable, no longer competing with the paste box.
  */
 const data = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'recipe-data', 'all-recipes.json'), 'utf-8'));
-const pages = buildBrowsePages(data.recipes).map((p) => ({ slug: p.slug, name: p.name, intro: p.intro, count: p.recipes.length }));
+const pages = buildBrowsePages(data.recipes).map((p) => ({ slug: p.slug, name: p.name, intro: p.intro, family: p.family, count: p.recipes.length }));
 const collections = data.collections;
 
-const SITE = 'https://www.simpler.recipes';
+// 35 pages as one flat grid is a wall; group them by what the reader is actually holding
+// in their head — an ingredient, a clock, a cuisine, an occasion.
+const FAMILY_ORDER: { key: string; label: string }[] = [
+  { key: 'ingredient', label: 'By main ingredient' },
+  { key: 'dish', label: 'By dish' },
+  { key: 'cuisine', label: 'By cuisine' },
+  { key: 'time', label: 'By time' },
+  { key: 'method', label: 'By method' },
+  { key: 'occasion', label: 'By occasion' },
+  { key: 'combo', label: 'Pairings' },
+];
+const groups = FAMILY_ORDER.map((f) => ({ ...f, pages: pages.filter((p) => p.family === f.key) })).filter((g) => g.pages.length);
+
 const title = 'Browse recipes by ingredient, time and occasion · Simpler Recipes';
 const description = 'Chicken, pasta, 30-minute dinners, vegetarian mains and more — clean, ad-free recipes grouped the way people actually look for them.';
+const pageUrl = `${SITE}/browse/`;
+const crumbs = [{ name: 'Browse' }];
+const ld = jsonLd(webPageLd({ url: pageUrl, name: 'Browse recipes', description }), breadcrumbLd(crumbs, pageUrl));
 ---
 
-<BaseLayout title={title} description={description} canonical={`${SITE}/browse/`}>
-  <main id="main-content" class="min-h-screen bg-background">
-    <div class="max-w-[1080px] mx-auto px-4 sm:px-6 py-6 md:py-10">
-      <nav aria-label="Breadcrumb" class="mb-6">
-        <ol class="flex items-center gap-2 text-[14px] text-sand-600">
-          <li><a href="/" class="hover:text-sand-900">Home</a></li>
-          <li aria-hidden="true" class="text-sand-400">/</li>
-          <li aria-current="page" class="text-sand-800">Browse</li>
-        </ol>
-      </nav>
+<BaseLayout title={title} description={description} canonical={pageUrl}>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={ld} />
+  </Fragment>
+  <PageShell width="wide" crumbs={crumbs}>
+      <ListingHeader title="Browse recipes" intro="By ingredient, time and occasion." />
 
-      <header class="mb-8 max-w-2xl">
-        <h1 class="font-serif text-[28px] sm:text-[34px] leading-[1.2] font-medium tracking-[-0.01em] text-sand-900">Browse recipes</h1>
-        <p class="mt-2 text-[16px] text-sand-600">By ingredient, time and occasion.</p>
-      </header>
-
-      <section aria-label="By ingredient, time and occasion" class="mb-12">
-        <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {pages.map((p) => (
-            <li>
-              <a href={`/browse/${p.slug}/`} class="group flex h-full flex-col justify-between gap-2 rounded-xl border border-sand-200 bg-surface p-4 shadow-xs hover:shadow-sm transition-shadow">
-                <div>
-                  <h2 class="font-serif text-[16px] font-medium text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{p.name}</h2>
-                  <p class="mt-1 text-[13px] leading-snug text-sand-500 line-clamp-2">{p.intro}</p>
-                </div>
-                <p class="font-mono text-[11px] text-sand-400">{p.count} recipes</p>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {groups.map((g) => (
+        <section aria-label={g.label} class="mb-10">
+          <h2 class="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500 mb-3">{g.label}</h2>
+          <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {g.pages.map((p) => (
+              <li>
+                <a href={`/browse/${p.slug}/`} class="group flex h-full flex-col justify-between gap-2 rounded-xl border border-sand-200 bg-surface p-4 shadow-xs hover:shadow-sm transition-shadow">
+                  <div>
+                    <h3 class="font-serif text-[16px] font-medium text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{p.name}</h3>
+                    <p class="mt-1 text-[13px] leading-snug text-sand-500 line-clamp-2">{p.intro}</p>
+                  </div>
+                  <p class="font-mono text-[11px] text-sand-400">{p.count} recipes</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
 
       <section aria-labelledby="collections-heading">
         <h2 id="collections-heading" class="text-[15px] font-medium text-sand-900 mb-4">Collections</h2>
@@ -62,6 +74,5 @@ const description = 'Chicken, pasta, 30-minute dinners, vegetarian mains and mor
           ))}
         </ul>
       </section>
-    </div>
-  </main>
+  </PageShell>
 </BaseLayout>

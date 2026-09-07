@@ -5,10 +5,10 @@ import CookMode from './CookMode';
 import { TimerBar, TimerAlarm } from './Timers';
 import { preparedIngredientLines } from '../../lib/recipe/prepared';
 import { getCookState, toggleIngredient, toggleStep, setCookState, COOK_STATE_EVENT } from '../../lib/cookState';
-import { metaLine, sourceInfo, recipeAsText, displayTimes, displayServings, servingsCount } from '../../lib/recipe/display';
+import { sourceInfo, recipeAsText, displayTimes, displayServings, servingsCount } from '../../lib/recipe/display';
 import { safeImageSrc } from '../../lib/recipe/href';
 import { isFavorite, toggleFavorite, getExtractedFavorites, addExtractedFavorite, removeExtractedFavorite } from '../../utils/favorites';
-import { PlayIcon, HeartIcon, ShareIcon, PrintIcon, CopyIcon, ExternalIcon, SparklesIcon, ImagePlaceholderIcon, MoreIcon } from './Icons';
+import { PlayIcon, HeartIcon, ShareIcon, PrintIcon, CopyIcon, ExternalIcon, SparklesIcon, ImagePlaceholderIcon, MoreIcon, ClockIcon, FlameIcon, UtensilsIcon, UsersIcon } from './Icons';
 
 /**
  * The recipe page. One component for curated (/recipes/slug), extracted (/recipe?r=id) and shared (/r/id).
@@ -28,8 +28,8 @@ import { PlayIcon, HeartIcon, ShareIcon, PrintIcon, CopyIcon, ExternalIcon, Spar
  */
 export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'curated', shareId, remix, children }) {
   const src = useMemo(() => sourceInfo(recipe, sourceUrl), [recipe, sourceUrl]);
-  const meta = useMemo(() => metaLine(recipe), [recipe]);
   const times = useMemo(() => displayTimes(recipe), [recipe]);
+  const servingsText = useMemo(() => displayServings(recipe), [recipe]);
 
   // ---- cook state (checked ingredients/steps, servings, current step) ----
   const [state, setState] = useState(() => ({ ingredients: [], steps: [], currentStep: 0, servings: null }));
@@ -200,56 +200,65 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
     <article data-recipe-view className="max-w-[1080px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
       {/* One grid for the whole page: the dish leads the content column, ingredients sit alongside.
           On mobile the DOM order stays header → ingredients → instructions (cooking order). */}
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 lg:items-start">
-      {/* ---------- Header ---------- */}
-      <header className="mb-7 sm:mb-9 lg:col-start-1 lg:row-start-1 min-w-0">
-        {image && !imgFailed && (
-          <div className="-mx-4 sm:mx-0 mb-6 sm:rounded-2xl overflow-hidden bg-sand-100 aspect-[16/9] lg:aspect-[2/1] print:hidden">
-            <img
-              src={image}
-              alt=""
-              width={800}
-              height={450}
-              className="w-full h-full object-cover dark:brightness-90"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-              referrerPolicy="no-referrer"
-              onError={() => setImgFailed(true)}
-            />
-          </div>
-        )}
-        <div className="min-w-0">
+      {/* Explicit rows: the ingredients aside spans both, and without auto/1fr its
+          excess height gets distributed INTO row 1, opening a void between the
+          header and the instructions card. Row 1 hugs the header; row 2 takes the rest. */}
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:grid-rows-[auto_1fr] lg:gap-6 lg:items-start">
+      {/* ---------- Header: image + facts in one card, matching the two panels ---------- */}
+      {/* One uniform gap between the three cards: mb-6 stacked, lg:gap-6 in the grid.
+          No overflow-hidden on the card — it would clip the ⋯ dropdown; the image
+          rounds its own top corners instead. */}
+      <header className="mb-6 lg:mb-0 lg:col-start-1 lg:row-start-1 min-w-0">
+        <div className="rounded-2xl border border-sand-200 bg-surface print:border-0">
+          {image && !imgFailed && (
+            <div className="bg-sand-100 aspect-[16/9] lg:aspect-[2/1] rounded-t-2xl overflow-hidden print:hidden">
+              <img
+                src={image}
+                alt=""
+                width={800}
+                height={450}
+                className="w-full h-full object-cover dark:brightness-90"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                referrerPolicy="no-referrer"
+                onError={() => setImgFailed(true)}
+              />
+            </div>
+          )}
+          <div className="p-5 sm:p-6 min-w-0">
           <h1 className="font-serif text-[28px] sm:text-[36px] leading-[1.2] font-medium tracking-[-0.01em] text-sand-900 [text-wrap:balance]">{recipe.title}</h1>
 
-          {(meta.length > 0 || times.total) && (
-            <p data-meta className="mt-2.5 font-mono text-[12.5px] sm:text-[13px] text-sand-600 flex flex-wrap gap-x-2 gap-y-1">
-              {meta.map((m, i) => (
-                <span key={i} className="inline-flex items-center gap-2">
-                  {m}
-                  {i < meta.length - 1 && <span className="text-sand-400" aria-hidden="true">·</span>}
+          {/* One row for everything below the title: stats left, actions right.
+              Icons carry the stat labels visually; sr-only text keeps them for screen
+              readers, title= gives sighted users the word on hover. The source moved
+              into the ⋯ menu (and stays visible in print below). */}
+          <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3">
+            <div data-meta className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] sm:text-[15px] text-sand-600 tabular">
+              {times.prep && (
+                <span className="inline-flex items-center gap-1.5" title="Prep time">
+                  <UtensilsIcon className="w-4 h-4 text-sand-500" /><span className="sr-only">Prep time</span>{times.prep}
                 </span>
-              ))}
-            </p>
-          )}
-
-          {(src.name || src.url) && (
-            <p className="mt-2 text-[14px] sm:text-[15px] text-sand-600">
-              {variant === 'shared' ? 'Shared from ' : 'From '}
-              {src.url ? (
-                <a href={src.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800 inline-flex items-center gap-1">
-                  {src.name}
-                  <ExternalIcon className="w-3.5 h-3.5 text-sand-500" />
-                </a>
-              ) : (
-                <span className="text-sand-800">{src.name}</span>
               )}
-              {src.author && <span className="text-sand-500"> · {src.author}</span>}
-            </p>
-          )}
+              {times.cook && (
+                <span className="inline-flex items-center gap-1.5" title="Cook time">
+                  <FlameIcon className="w-4 h-4 text-sand-500" /><span className="sr-only">Cook time</span>{times.cook}
+                </span>
+              )}
+              {times.total && (
+                <span className="inline-flex items-center gap-1.5" title="Total time">
+                  <ClockIcon className="w-4 h-4 text-sand-500" /><span className="sr-only">Total time</span>{times.total}
+                </span>
+              )}
+              {servingsText && (
+                <span className="inline-flex items-center gap-1.5" title="Servings">
+                  <UsersIcon className="w-4 h-4 text-sand-500" /><span className="sr-only">Servings</span>{servingsText}
+                </span>
+              )}
+            </div>
 
-          {/* Actions — one clear primary. Everything else is available, not advertised. */}
-          <div className="mt-5 flex items-center gap-1.5 no-print">
+            {/* Actions — one clear primary. Everything else lives in the ⋯ menu. */}
+            <div className="ml-auto flex items-center gap-1.5 no-print">
             {recipe.instructions.length > 0 && (
               <button type="button" onClick={openCook} className="btn-primary flex-1 sm:flex-none">
                 <PlayIcon className="w-4 h-4" />
@@ -279,7 +288,19 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
                 <MoreIcon className="w-[18px] h-[18px]" />
               </button>
               {moreOpen && (
-                <div role="menu" className="absolute left-0 top-full mt-1 z-20 min-w-[168px] rounded-xl border border-sand-200 bg-surface shadow-md py-1">
+                <div role="menu" className="absolute right-0 top-full mt-1 z-20 min-w-[188px] rounded-xl border border-sand-200 bg-surface shadow-md py-1">
+                  {src.url && (
+                    <a
+                      role="menuitem"
+                      href={src.url}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      onClick={() => setMoreOpen(false)}
+                      className="w-full text-left px-3 py-2 text-[15px] text-sand-800 hover:bg-sand-100 inline-flex items-center gap-2.5"
+                    >
+                      <ExternalIcon className="w-4 h-4 text-sand-500" /> {src.name || 'Original recipe'}
+                    </a>
+                  )}
                   <button role="menuitem" type="button" onClick={() => { setMoreOpen(false); onShare(); }} className="w-full text-left px-3 py-2 text-[15px] text-sand-800 hover:bg-sand-100 inline-flex items-center gap-2.5">
                     <ShareIcon className="w-4 h-4 text-sand-500" />
                     {shareState === 'copied' ? 'Link copied' : shareState === 'error' ? 'Couldn’t share' : shareState === 'working' ? 'Sharing…' : shareState === 'shown' ? 'Link ready' : 'Share'}
@@ -293,7 +314,16 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
                 </div>
               )}
             </div>
+            </div>
           </div>
+
+          {/* Attribution survives on paper, where there is no menu. */}
+          {(src.name || src.url) && (
+            <p className="hidden print:block mt-3 text-[13px] text-sand-600">
+              {variant === 'shared' ? 'Shared from' : 'Source'}: {src.name}{src.url ? ` — ${src.url}` : ''}
+            </p>
+          )}
+
           {shareState === 'shown' && shareUrl && (
             <div className="mt-3 flex items-center gap-2 max-w-md no-print">
               <input
@@ -307,6 +337,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
               <button type="button" className="btn-secondary btn-sm" onClick={() => { setShareUrl(null); setShareState('idle'); }}>Done</button>
             </div>
           )}
+          </div>
         </div>
       </header>
 
@@ -314,7 +345,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
       <div data-body className="contents">
         {/* Sticky only when the list can plausibly fit beside the steps; a long list scrolls with the page
             instead of becoming a nested scroller that looks complete when it isn't. */}
-        <aside className={`lg:col-start-2 lg:row-start-1 lg:row-span-2 mb-8 lg:mb-0 print:mb-4 ${recipe.ingredients.length <= 14 ? 'lg:sticky lg:top-20' : ''}`} aria-labelledby="ingredients-heading">
+        <aside className={`lg:col-start-2 lg:row-start-1 lg:row-span-2 mb-6 lg:mb-0 print:mb-4 ${recipe.ingredients.length <= 14 ? 'lg:sticky lg:top-20' : ''}`} aria-labelledby="ingredients-heading">
           <Ingredients
             recipe={recipe}
             checked={checked}

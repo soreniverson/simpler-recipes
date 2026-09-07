@@ -1,0 +1,30 @@
+---
+/**
+ * The one visible breadcrumb trail. Every public page that emits BreadcrumbList
+ * JSON-LD renders this with the same crumbs, so schema and UI can't drift apart.
+ * Home is implicit; pass the rest. The last crumb (no href) is the current page.
+ */
+import type { Crumb } from '../lib/schema';
+
+interface Props {
+  crumbs: Crumb[];
+  class?: string;
+}
+const { crumbs, class: className = 'mb-8' } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class={className}>
+  <ol class="flex flex-wrap items-center gap-2 text-[14px] text-sand-600">
+    <li><a href="/" class="hover:text-sand-900">Home</a></li>
+    {crumbs.map((c) => (
+      <>
+        <li aria-hidden="true" class="text-sand-400">/</li>
+        {c.href ? (
+          <li><a href={c.href} class="hover:text-sand-900">{c.name}</a></li>
+        ) : (
+          <li aria-current="page" class="text-sand-800">{c.name}</li>
+        )}
+      </>
+    ))}
+  </ol>
+</nav>

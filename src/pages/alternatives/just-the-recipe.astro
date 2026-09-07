@@ -1,12 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import CleanBox from '../../components/CleanBox.jsx';
+import PageShell from '../../components/PageShell.astro';
+import ListingHeader from '../../components/ListingHeader.astro';
+import CleanBoxCard from '../../components/CleanBoxCard.astro';
 
 /**
  * Honest alternative page. Claims about JustTheRecipe come from their own site/help
  * center (sources + access dates in docs/search/sources.md). Unknowns stay unknown.
  */
-const SITE = 'https://www.simpler.recipes';
+import { jsonLd, breadcrumbLd, webPageLd, SITE } from '../../lib/schema';
 const pageUrl = `${SITE}/alternatives/just-the-recipe/`;
 const CHECKED = 'September 6, 2026';
 const title = 'Just the Recipe alternative: Simpler Recipes · free, no account';
@@ -25,41 +27,26 @@ const rows: { label: string; simpler: string; jtr: string }[] = [
   { label: 'Hands-free cook mode & timers', simpler: 'Yes', jtr: 'Not listed on their feature pages' },
 ];
 
-const jsonLd = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@graph': [
-    { '@type': 'WebPage', '@id': pageUrl, url: pageUrl, name: 'Just the Recipe alternative', description, isPartOf: { '@type': 'WebSite', name: 'Simpler Recipes', url: `${SITE}/` } },
-    { '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Simpler Recipes', item: `${SITE}/` },
-      { '@type': 'ListItem', position: 2, name: 'Just the Recipe alternative', item: pageUrl },
-    ] },
-  ],
-}).replace(/</g, '\\u003c');
+const crumbs = [{ name: 'Just the Recipe alternative' }];
+const ld = jsonLd(webPageLd({ url: pageUrl, name: 'Just the Recipe alternative', description }), breadcrumbLd(crumbs, pageUrl));
 ---
 
 <BaseLayout title={title} description={description} canonical={pageUrl}>
   <Fragment slot="head">
-    <script type="application/ld+json" is:inline set:html={jsonLd} />
+    <script type="application/ld+json" is:inline set:html={ld} />
   </Fragment>
 
-  <main id="main-content" class="min-h-screen bg-background">
-    <article class="max-w-[720px] mx-auto px-4 sm:px-6 py-10 md:py-16">
-      <header class="mb-8">
-        <h1 class="font-serif text-[30px] sm:text-[36px] leading-[1.15] font-medium tracking-[-0.01em] text-sand-900">
-          A free alternative to Just the Recipe
-        </h1>
-        <p class="mt-4 text-[17px] leading-relaxed text-sand-700">
-          <a href="https://www.justtherecipe.com/" rel="nofollow" class="underline underline-offset-[3px] decoration-sand-400">Just the Recipe</a>
+  <PageShell width="prose" as="article" crumbs={crumbs}>
+      <ListingHeader title="A free alternative to Just the Recipe">
+        <p class="mt-3 text-[16px] leading-relaxed text-sand-700">
+          <a href="https://www.justtherecipe.com/" rel="nofollow" class="underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800">Just the Recipe</a>
           and Simpler Recipes solve the same problem: recipe pages buried under ads and essays.
           The honest one-line difference — <strong class="text-sand-900">Just the Recipe has native mobile apps and a freemium model;
           Simpler Recipes is entirely free on the web, with scaling, printing, meal planning and a pantry included.</strong>
         </p>
-      </header>
+      </ListingHeader>
 
-      <div class="mb-10">
-        <p class="mb-3 text-[15px] text-sand-600">Try it on any recipe link — no sign-up:</p>
-        <CleanBox client:load id="alt-clean" examples={true} />
-      </div>
+      <CleanBoxCard id="alt-clean" examples={true} title="Try it on any recipe link" text="No sign-up — paste a link and get just the recipe." class="mb-10" />
 
       <section class="mb-10">
         <h2 class="font-serif text-[22px] font-medium text-sand-900 mb-4">Side by side</h2>
@@ -98,6 +85,5 @@ const jsonLd = JSON.stringify({
           If you'd rather not manage another subscription: cleaning, unlimited on-device saving, serving scaling, printing, meal planning, a pantry and hands-free Cook Mode are all free here. No account is needed to clean a recipe; a free account adds cross-device sync and a larger monthly allowance for the AI fallback we use on pages without structured recipe data. Cleaned recipes always keep their quantities verbatim and link back to the original author.
         </p>
       </section>
-    </article>
-  </main>
+  </PageShell>
 </BaseLayout>

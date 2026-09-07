@@ -1,0 +1,26 @@
+---
+/**
+ * The one page-title header: serif H1 at the site's single content-page scale,
+ * plus either a plain-text intro line (with optional recipe count) or a rich
+ * lede via the default slot. Used by listings, tools, articles and comparisons
+ * alike so the site has exactly one H1 voice outside the homepage hero.
+ */
+interface Props {
+  title: string;
+  intro?: string;
+  count?: number;
+}
+const { title, intro, count } = Astro.props;
+---
+
+<header class="mb-8 max-w-2xl">
+  <h1 class="font-serif text-[28px] sm:text-[34px] leading-[1.2] font-medium tracking-[-0.01em] text-sand-900">{title}</h1>
+  <slot>
+    {intro && (
+      <p class="mt-2 text-[16px] text-sand-600">
+        {intro}
+        {count != null && <span class="text-sand-500 tabular"> {count} recipes.</span>}
+      </p>
+    )}
+  </slot>
+</header>

@@ -1,0 +1,29 @@
+---
+/**
+ * The page frame for every standard content page: main landmark, container width,
+ * vertical rhythm, breadcrumbs. Two genres only —
+ *   'wide'  (1080px): listing pages with recipe grids
+ *   'prose' (max-w-2xl): articles, tools, comparisons, policies
+ * If a page seems to need a third width or its own padding, that's a design
+ * conversation, not a one-off class. (Special layouts — homepage hero, recipe
+ * view, app shells, 404 — intentionally don't use this.)
+ */
+import Breadcrumbs from './Breadcrumbs.astro';
+import type { Crumb } from '../lib/schema';
+
+interface Props {
+  width?: 'wide' | 'prose';
+  crumbs?: Crumb[];
+  /** Semantic wrapper inside <main>: 'article' for editorial content. */
+  as?: 'div' | 'article';
+}
+const { width = 'wide', crumbs, as: Wrapper = 'div' } = Astro.props;
+const container = width === 'wide' ? 'max-w-[1080px]' : 'max-w-2xl';
+---
+
+<main id="main-content" class="min-h-screen bg-background">
+  <Wrapper class={`${container} mx-auto px-4 sm:px-6 py-6 md:py-10`}>
+    {crumbs && <Breadcrumbs crumbs={crumbs} />}
+    <slot />
+  </Wrapper>
+</main>

@@ -360,12 +360,12 @@ export default function SmartInput({ variant = 'default', placeholder = 'Paste a
           {ERROR_ACTIONS.has(error.code) && (
             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
               {error.url && (
-                <a href={error.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800">
+                <a href={error.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sand-800 underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800">
                   Open the original ↗
                 </a>
               )}
               {error.code !== 'no-recipe' && (
-                <button type="button" onClick={() => extract(value)} className="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800">
+                <button type="button" onClick={() => extract(value)} className="text-sand-800 underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800">
                   Try again
                 </button>
               )}
@@ -385,7 +385,7 @@ export default function SmartInput({ variant = 'default', placeholder = 'Paste a
                 Create free account
               </button>
             )}
-            <a href={limit.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800">
+            <a href={limit.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sand-800 underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800">
               Open the original ↗
             </a>
           </div>
