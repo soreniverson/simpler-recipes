@@ -6,7 +6,7 @@ import { track, surface } from '../lib/track';
  * Recipe card: photo, title, one quiet meta line. No pills, no zoom, no colored badges.
  * Pantry match (when the user has a pantry) is a plain sentence.
  */
-export default function RecipeCard({ recipe, showFavorite = true, matchInfo, eager = false }) {
+export default function RecipeCard({ recipe, showFavorite = true, matchInfo, eager = false, visible = true }) {
   const [imgFailed, setImgFailed] = useState(false);
   const hasMatch = matchInfo && matchInfo.total > 0;
   const meta = [recipe.totalTime, hasMatch ? `${matchInfo.matched}/${matchInfo.total} in pantry` : null].filter(Boolean).join(' · ');
@@ -31,7 +31,12 @@ export default function RecipeCard({ recipe, showFavorite = true, matchInfo, eag
       >
         <article className="h-full flex flex-col">
           <div className="aspect-[4/3] overflow-hidden rounded-xl bg-sand-100 mb-2.5">
-            {recipe.image && !imgFailed && (
+            {/* Only mount the image while the card is inside the visible window. Cards beyond
+                it live in a hidden <li>, and a lazy <img> that was display:none at parse time
+                does not reliably start loading when it is later revealed — which happens
+                whenever the pantry re-sort promotes a card from further down the list. Mounting
+                on demand guarantees a fresh element that loads immediately. */}
+            {visible && recipe.image && !imgFailed && (
               <img
                 src={recipe.image}
                 srcSet={recipe.imageSet || undefined}
