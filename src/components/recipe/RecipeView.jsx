@@ -200,7 +200,10 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
     <article data-recipe-view className="max-w-[1080px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
       {/* One grid for the whole page: the dish leads the content column, ingredients sit alongside.
           On mobile the DOM order stays header → ingredients → instructions (cooking order). */}
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 lg:items-start">
+      {/* Explicit rows: the ingredients aside spans both, and without auto/1fr its
+          excess height gets distributed INTO row 1, opening a void between the
+          header and the instructions card. Row 1 hugs the header; row 2 takes the rest. */}
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:grid-rows-[auto_1fr] lg:gap-x-10 lg:gap-y-8 lg:items-start">
       {/* ---------- Header ---------- */}
       <header className="mb-7 sm:mb-9 lg:col-start-1 lg:row-start-1 min-w-0">
         {image && !imgFailed && (
