@@ -2,12 +2,10 @@ import type { APIRoute } from 'astro';
 import {
   getCachedExtraction,
   cacheExtraction,
-  hasReachedLimit,
-  incrementExtraction,
-  ANONYMOUS_EXTRACTION_LIMIT,
-  AUTHENTICATED_EXTRACTION_LIMIT,
+  reserveAiUse,
+  refundAiUse,
+  type AiReservation,
 } from '../../utils/kv';
-import { isStoreConfigured } from '../../lib/serverStore';
 import { getTokenFromRequest } from '../../utils/anonymousToken';
 import { getUserIdFromRequest } from '../../utils/supabase';
 import { normalizeUrl } from '../../lib/url';
@@ -16,13 +14,6 @@ import { extractRecipeFromHtml, siteNameFromUrl } from '../../lib/recipe/extract
 import { extractRecipeWithAi } from '../../lib/recipe/ai';
 import type { Recipe, ExtractionMethod } from '../../lib/recipe/types';
 import { checkIpRateLimit, getClientIp } from '../../lib/limits';
-import {
-  getYouTubeVideoId,
-  parseRecipeFromDescription,
-  fetchYouTubeTranscript,
-  fetchYouTubeVideoInfo,
-} from '../../utils/recipeExtractor';
-import { instructionsFromTranscript } from '../../lib/recipe/ai';
 
 export const prerender = false;
 
@@ -49,7 +40,6 @@ type ErrorCode =
   | 'network-error'
   | 'no-recipe'
   | 'rate-limited'
-  | 'youtube-unavailable'
   | 'server-error';
 
 interface UserFacingError {
@@ -153,7 +143,8 @@ export const GET: APIRoute = async ({ request }) => {
       try {
         emit('progress', { step: `Fetching ${hostname}…` });
 
-        // Abuse guard (fails open without KV) + cache, in parallel.
+        // Abuse guard (request-level; fails open without a store) + cache, in parallel.
+        // AI spend is separately protected by the fail-closed reservation below.
         const [rate, cached] = await Promise.all([checkIpRateLimit(ip), getCachedExtraction(url)]);
         if (rate.limited) {
           fail({ code: 'rate-limited', error: 'Too many requests from your network right now.', hint: `Try again in ${Math.ceil(rate.retryAfterSeconds / 60)} min.` });
@@ -164,16 +155,16 @@ export const GET: APIRoute = async ({ request }) => {
           return;
         }
 
-        // Social/video apps serve login walls to servers; say so instead of "no recipe found".
-        if (/(^|\.)(instagram\.com|tiktok\.com|pinterest\.[a-z.]+|facebook\.com|fb\.watch|x\.com|twitter\.com|threads\.net|snapchat\.com)$/i.test(hostname)) {
-          fail({ code: 'blocked-by-site', error: `We can't read recipes from ${hostname} yet.`, hint: 'Look for a recipe link in the post or bio and paste that instead.' });
+        // YouTube support was removed deliberately: it was the one extraction path that
+        // reached the AI unmetered. Point people at the description link instead.
+        if (/(^|\.)(youtube\.com|youtu\.be)$/i.test(hostname)) {
+          fail({ code: 'blocked-by-site', error: "We can't read recipes from YouTube.", hint: 'Look for a recipe link in the video description and paste that instead.' });
           return;
         }
 
-        const videoId = getYouTubeVideoId(url);
-        if (videoId) {
-          const who = await identity();
-          await handleYouTube(url, videoId, { emit, fail, complete, token: who.token, isAuthenticated: who.isAuthenticated });
+        // Social/video apps serve login walls to servers; say so instead of "no recipe found".
+        if (/(^|\.)(instagram\.com|tiktok\.com|pinterest\.[a-z.]+|facebook\.com|fb\.watch|x\.com|twitter\.com|threads\.net|snapchat\.com)$/i.test(hostname)) {
+          fail({ code: 'blocked-by-site', error: `We can't read recipes from ${hostname} yet.`, hint: 'Look for a recipe link in the post or bio and paste that instead.' });
           return;
         }
 
@@ -207,37 +198,46 @@ export const GET: APIRoute = async ({ request }) => {
           fail({ code: 'no-recipe', error: `We couldn't find a recipe on that page.`, hint: 'Make sure the link goes to a specific recipe, not a category or search page.' });
           return;
         }
-        // No quota store in production = unmetered Anthropic spend. Fail CLOSED (structured
-        // extraction above still works). A configured-but-erroring store fails open below, loudly.
-        if (!isStoreConfigured() && import.meta.env.PROD) {
-          fail({ code: 'server-error', error: 'AI extraction is temporarily unavailable.', hint: 'Try again in a few minutes, or open the original page.' });
-          return;
-        }
+        // Reserve the AI slot ATOMICALLY before spending money (no check-then-spend
+        // race). Fails closed in prod when the store is missing or erroring.
         const { token, isAuthenticated } = await identity();
-        if (token) {
-          const status = await hasReachedLimit(token, isAuthenticated);
-          if (status.limited) {
+        const reservation = await reserveAiUse(token, isAuthenticated, ip);
+        if (!reservation.ok) {
+          if (reservation.reason === 'unavailable') {
+            fail({ code: 'server-error', error: 'AI extraction is temporarily unavailable.', hint: 'Try again in a few minutes, or open the original page.' });
+          } else {
             emit('limit_reached', {
-              message: isAuthenticated
-                ? "This page has no recipe data we can read directly, and you've used this month's AI extractions."
-                : "This page has no recipe data we can read directly. You've used your free AI extractions — create a free account for 30 a month.",
-              current: status.current,
-              limit: status.limit,
+              message:
+                reservation.reason === 'ip-quota'
+                  ? "This page has no recipe data we can read directly, and your network has used today's AI extractions. Try again tomorrow."
+                  : isAuthenticated
+                    ? "This page has no recipe data we can read directly, and you've used this month's AI extractions."
+                    : "This page has no recipe data we can read directly. You've used your free AI extractions — create a free account for 30 a month.",
+              current: reservation.current,
+              limit: reservation.limit,
               isAuthenticated,
               url,
             });
-            return;
           }
+          return;
         }
         emit('progress', { step: 'Reading the page more carefully…' });
-        const ai = await extractRecipeWithAi(html, anthropicApiKey, finalUrl);
+        let ai;
+        try {
+          ai = await extractRecipeWithAi(html, anthropicApiKey, finalUrl);
+        } catch (err) {
+          // The Anthropic call never completed — give the reserved slot back.
+          await refundAiUse(token, isAuthenticated, ip);
+          throw err;
+        }
         if (!ai.recipe) {
+          // The call ran and billed us; the slot stays spent.
           fail({ code: 'no-recipe', error: `We couldn't find a recipe on that page.`, hint: 'Make sure the link goes to a specific recipe, not a category or search page.' });
           return;
         }
         if (!ai.recipe.siteName) ai.recipe.siteName = siteNameFromUrl(finalUrl);
         await cacheExtraction(url, ai.recipe);
-        await reportUsage(emit, token, isAuthenticated);
+        reportUsage(emit, reservation, isAuthenticated);
         complete(ai.recipe, 'ai');
       } catch (err) {
         console.error('[extract] unexpected', err);
@@ -262,88 +262,7 @@ export const GET: APIRoute = async ({ request }) => {
   });
 };
 
-async function reportUsage(emit: (e: string, d: unknown) => void, token: string | null, isAuthenticated: boolean) {
-  if (!token) return;
-  const newCount = await incrementExtraction(token, isAuthenticated);
-  const limit = isAuthenticated ? AUTHENTICATED_EXTRACTION_LIMIT : ANONYMOUS_EXTRACTION_LIMIT;
-  const remaining = Math.max(0, limit - newCount);
-  emit('usage', { current: newCount, limit, remaining, isLastFree: !isAuthenticated && remaining === 0, isAuthenticated });
-}
-
-interface Ctx {
-  emit: (e: string, d: unknown) => void;
-  fail: (e: UserFacingError) => void;
-  complete: (recipe: Recipe, method: ExtractionMethod, extra?: Record<string, unknown>) => void;
-  token: string | null;
-  isAuthenticated: boolean;
-}
-
-async function handleYouTube(url: string, videoId: string, ctx: Ctx) {
-  const youtubeApiKey = import.meta.env.YOUTUBE_API_KEY || process.env.YOUTUBE_API_KEY;
-  const anthropicApiKey = import.meta.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY;
-  if (!youtubeApiKey) {
-    ctx.fail({ code: 'youtube-unavailable', error: "YouTube links aren't available right now.", hint: 'Paste the recipe link from the video description instead.' });
-    return;
-  }
-  ctx.emit('progress', { step: 'Fetching video info…' });
-  const info = await fetchYouTubeVideoInfo(videoId, youtubeApiKey);
-  if (!info) {
-    ctx.fail({ code: 'not-found', error: "We couldn't find that video.", hint: 'Check the link and try again.' });
-    return;
-  }
-  ctx.emit('progress', { step: 'Reading the description…' });
-  const { ingredients, instructions, recipeLink } = parseRecipeFromDescription(info.description);
-  let finalIngredients = ingredients;
-  let finalInstructions = instructions;
-  let recipe: Recipe | null = null;
-
-  if (ingredients.length === 0 && recipeLink) {
-    ctx.emit('progress', { step: 'Following the recipe link…' });
-    try {
-      const linked = await safeFetch(recipeLink);
-      const out = extractRecipeFromHtml(linked.body, linked.url);
-      if (out.recipe) recipe = out.recipe;
-      else if (anthropicApiKey) {
-        const ai = await extractRecipeWithAi(linked.body, anthropicApiKey, linked.url);
-        if (ai.recipe) recipe = ai.recipe;
-      }
-    } catch {
-      /* fall through to transcript path */
-    }
-  }
-
-  if (!recipe && finalIngredients.length > 0 && finalInstructions.length === 0 && anthropicApiKey) {
-    ctx.emit('progress', { step: 'Watching the video for steps…' });
-    const transcript = await fetchYouTubeTranscript(videoId);
-    if (transcript) finalInstructions = await instructionsFromTranscript(transcript, info.title, finalIngredients, anthropicApiKey);
-  }
-
-  if (!recipe) {
-    if (!finalIngredients.length && !finalInstructions.length) {
-      ctx.fail({ code: 'no-recipe', error: "We couldn't find a recipe for that video.", hint: 'Look for a recipe link in the video description and paste that instead.' });
-      return;
-    }
-    recipe = {
-      title: info.title,
-      description: null,
-      ingredients: finalIngredients,
-      instructions: finalInstructions,
-      prepTime: null,
-      cookTime: null,
-      totalTime: null,
-      servings: null,
-      yieldCount: null,
-      image: info.thumbnail,
-      sourceUrl: url,
-      siteName: 'YouTube',
-      source: 'youtube',
-      extractedVia: 'youtube',
-    };
-  } else {
-    recipe.image = recipe.image || info.thumbnail;
-    recipe.sourceUrl = recipe.sourceUrl || url;
-  }
-
-  await cacheExtraction(url, recipe);
-  ctx.complete(recipe, recipe.extractedVia ?? 'youtube');
+function reportUsage(emit: (e: string, d: unknown) => void, reservation: Extract<AiReservation, { ok: true }>, isAuthenticated: boolean) {
+  const { current, limit, remaining } = reservation;
+  emit('usage', { current, limit, remaining, isLastFree: !isAuthenticated && remaining === 0, isAuthenticated });
 }

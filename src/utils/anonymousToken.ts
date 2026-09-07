@@ -41,7 +41,12 @@ export function getAnonymousToken(): string {
 }
 
 /**
- * Get token from request cookies (server-side)
+ * Get token from request cookies (server-side).
+ *
+ * The token is client-supplied and unauthenticated, so it is UX state, not a security
+ * boundary — quota enforcement against hostile clients is the per-IP cap in
+ * `reserveAiUse`. Constrain the format anyway so arbitrary cookie junk never becomes
+ * a store key (size, charset).
  */
 export function getTokenFromRequest(request: Request): string | null {
   const cookieHeader = request.headers.get('cookie');
@@ -53,7 +58,9 @@ export function getTokenFromRequest(request: Request): string | null {
     return acc;
   }, {} as Record<string, string>);
 
-  return cookies[COOKIE_NAME] || null;
+  const token = cookies[COOKIE_NAME] || null;
+  if (!token || !/^[A-Za-z0-9_-]{8,64}$/.test(token)) return null;
+  return token;
 }
 
 /**

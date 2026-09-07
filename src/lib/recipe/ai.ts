@@ -122,38 +122,3 @@ export async function extractRecipeWithAi(html: string, apiKey: string, pageUrl?
   return { recipe: finalize(recipe), usage };
 }
 
-/**
- * Turn a YouTube transcript into ordered steps for a known ingredient list.
- */
-export async function instructionsFromTranscript(transcript: string, title: string, ingredients: string[], apiKey: string): Promise<string[]> {
-  if (!apiKey || !transcript) return [];
-  const { default: Anthropic } = await import('@anthropic-ai/sdk');
-  const client = new Anthropic({ apiKey, maxRetries: 1, timeout: 45_000 });
-  const schema = {
-    type: 'object',
-    additionalProperties: false,
-    required: ['steps'],
-    properties: { steps: { type: 'array', items: { type: 'string' } } },
-  } as const;
-  try {
-    const response = await client.messages.create({
-      model: AI_MODEL,
-      max_tokens: 2500,
-      output_config: { effort: 'low', format: { type: 'json_schema', schema: schema as any } },
-      system: 'You turn a cooking video transcript into clear, ordered cooking steps. Each step is one concise imperative sentence. Ignore intros, sponsor reads, and chatter. If no cooking instructions can be recovered, return an empty list.',
-      messages: [
-        {
-          role: 'user',
-          content: `Recipe: "${title}"\nIngredients: ${ingredients.slice(0, 20).join(', ')}\n\nTranscript:\n${transcript.slice(0, 14_000)}`,
-        },
-      ],
-    });
-    if (response.stop_reason === 'refusal') return [];
-    const block = response.content.find((b) => b.type === 'text');
-    if (!block || block.type !== 'text') return [];
-    const parsed = JSON.parse(block.text);
-    return Array.isArray(parsed?.steps) ? parsed.steps.map((s: unknown) => cleanText(s)).filter(Boolean) : [];
-  } catch {
-    return [];
-  }
-}

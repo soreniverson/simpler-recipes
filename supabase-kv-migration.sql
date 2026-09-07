@@ -53,6 +53,29 @@ $$;
 REVOKE EXECUTE ON FUNCTION kv_incr(TEXT, INTEGER) FROM PUBLIC, anon, authenticated;
 GRANT EXECUTE ON FUNCTION kv_incr(TEXT, INTEGER) TO service_role;
 
+-- Refund a reserved quota slot (the metered call never happened). Floors at 0 and
+-- leaves missing/expired keys untouched.
+CREATE OR REPLACE FUNCTION kv_decr(k TEXT)
+RETURNS BIGINT
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+DECLARE
+  n BIGINT;
+BEGIN
+  UPDATE kv_store t
+    SET value = to_jsonb(GREATEST(0, COALESCE((t.value #>> '{}')::BIGINT, 0) - 1)),
+        updated_at = NOW()
+  WHERE t.key = k AND (t.expires_at IS NULL OR t.expires_at > NOW())
+  RETURNING (value #>> '{}')::BIGINT INTO n;
+  RETURN COALESCE(n, 0);
+END;
+$$;
+
+REVOKE EXECUTE ON FUNCTION kv_decr(TEXT) FROM PUBLIC, anon, authenticated;
+GRANT EXECUTE ON FUNCTION kv_decr(TEXT) TO service_role;
+
 -- Expired rows are invisible to the app (reads filter on expires_at) but still take
 -- space. Optional daily vacuum; if the pg_cron extension is enabled (Database >
 -- Extensions), schedule it with:

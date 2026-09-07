@@ -51,6 +51,14 @@ export function isStoreConfigured(): boolean {
 }
 
 /**
+ * True in a production runtime. import.meta.env.PROD for Astro builds; NODE_ENV for
+ * anything else (tests stub NODE_ENV to exercise production-only fail-closed paths).
+ */
+export function isProdRuntime(): boolean {
+  return !!(import.meta as any)?.env?.PROD || process.env.NODE_ENV === 'production';
+}
+
+/**
  * One structured log line per store failure so a dead backend shows up in Vercel logs
  * ("which features are running unprotected, and why") instead of vanishing in a catch {}.
  */
@@ -133,6 +141,14 @@ async function sbIncr(key: string, ttlSeconds: number): Promise<number> {
   return Number(await res.json());
 }
 
+async function sbDecr(key: string): Promise<number> {
+  const res = await sbFetch('/rest/v1/rpc/kv_decr', {
+    method: 'POST',
+    body: JSON.stringify({ k: key }),
+  });
+  return Number(await res.json());
+}
+
 // ---------------------------------------------------------------------------
 // Public operations
 // ---------------------------------------------------------------------------
@@ -174,5 +190,20 @@ export async function storeIncr(key: string, ttlSeconds: number): Promise<number
     return n;
   }
   if (backend === 'supabase') return sbIncr(key, ttlSeconds);
+  throw new Error('No server store configured');
+}
+
+/**
+ * Atomically decrement a counter (floor 0 on the supabase backend; missing keys stay
+ * missing). Used to refund a reserved quota slot when the metered call never happened.
+ * Throws on backend failure.
+ */
+export async function storeDecr(key: string): Promise<number> {
+  const backend = storeBackend();
+  if (backend === 'redis') {
+    const { kv } = await import('@vercel/kv');
+    return await kv.decr(key);
+  }
+  if (backend === 'supabase') return sbDecr(key);
   throw new Error('No server store configured');
 }

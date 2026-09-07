@@ -4,7 +4,7 @@ import type { Recipe as ExtractedRecipe } from '../../lib/recipe/types';
 import { AI_MODEL } from '../../lib/recipe/ai';
 import { validateRecipe, MAX_REMIX_BYTES } from '../../lib/recipe/validate';
 import { checkIpRateLimit, getClientIp } from '../../lib/limits';
-import { hasReachedLimit, incrementExtraction, isStoreConfigured } from '../../utils/kv';
+import { reserveAiUse, refundAiUse } from '../../utils/kv';
 import { getTokenFromRequest } from '../../utils/anonymousToken';
 import { getUserIdFromRequest } from '../../utils/supabase';
 
@@ -53,32 +53,16 @@ export const POST: APIRoute = async ({ request }) => {
   }
 
   // Remix costs real money per call: IP guard + the same per-user AI quota as extraction.
-  const rate = await checkIpRateLimit(getClientIp(request));
+  const ip = getClientIp(request);
+  const rate = await checkIpRateLimit(ip);
   if (rate.limited) {
     return new Response(JSON.stringify({ error: 'Too many requests. Please slow down.' }), {
       status: 429,
       headers: { 'Content-Type': 'application/json', 'Retry-After': String(rate.retryAfterSeconds) },
     });
   }
-  // No quota store in production = unmetered Anthropic spend. Fail CLOSED here (a
-  // configured-but-erroring store fails open inside hasReachedLimit, loudly).
-  if (!isStoreConfigured() && import.meta.env.PROD) {
-    return new Response(JSON.stringify({ error: 'Remix is temporarily unavailable. Please try again later.' }), {
-      status: 503,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
   const userId = await getUserIdFromRequest(request);
-  const quotaToken = userId ?? getTokenFromRequest(request) ?? getClientIp(request);
-  if (quotaToken) {
-    const status = await hasReachedLimit(quotaToken, !!userId);
-    if (status.limited) {
-      return new Response(JSON.stringify({ error: userId ? "You've used this month's AI remixes." : "You've used your free AI remixes. Create a free account for more.", code: 'limit-reached' }), {
-        status: 429,
-        headers: { 'Content-Type': 'application/json' },
-      });
-    }
-  }
+  const quotaToken = userId ?? getTokenFromRequest(request) ?? ip;
 
   let body: RemixRequest;
   try {
@@ -109,6 +93,29 @@ export const POST: APIRoute = async ({ request }) => {
   if (!secondRecipe && !prompt) {
     return new Response(JSON.stringify({ error: 'Either a second recipe or a prompt is required' }), {
       status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
+  // Request is valid — atomically reserve the AI slot BEFORE the Anthropic call.
+  // Fails closed in prod when the store is missing or erroring; refunded below only
+  // if the call itself throws.
+  const reservation = await reserveAiUse(quotaToken, !!userId, ip);
+  if (!reservation.ok) {
+    if (reservation.reason === 'unavailable') {
+      return new Response(JSON.stringify({ error: 'Remix is temporarily unavailable. Please try again later.' }), {
+        status: 503,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+    const message =
+      reservation.reason === 'ip-quota'
+        ? "Your network has used today's AI remixes. Try again tomorrow."
+        : userId
+          ? "You've used this month's AI remixes."
+          : "You've used your free AI remixes. Create a free account for more.";
+    return new Response(JSON.stringify({ error: message, code: 'limit-reached' }), {
+      status: 429,
       headers: { 'Content-Type': 'application/json' },
     });
   }
@@ -180,19 +187,27 @@ Return ONLY valid JSON with this exact structure:
 
         sendEvent(controller, 'progress', { step: 'Generating new recipe...' });
 
-        const message = await client.messages.create({
-          model: AI_MODEL,
-          max_tokens: 4000,
-          output_config: {
-            effort: 'medium',
-            format: { type: 'json_schema', schema: REMIX_SCHEMA as any },
-          },
-          messages: [{
-            role: 'user',
-            content: userPrompt
-          }],
-          system: systemPrompt
-        });
+        let message;
+        try {
+          message = await client.messages.create({
+            model: AI_MODEL,
+            max_tokens: 4000,
+            output_config: {
+              effort: 'medium',
+              format: { type: 'json_schema', schema: REMIX_SCHEMA as any },
+            },
+            messages: [{
+              role: 'user',
+              content: userPrompt
+            }],
+            system: systemPrompt
+          });
+        } catch (err) {
+          // The Anthropic call never completed — give the reserved slot back.
+          // Anything after this point billed us, so the slot stays spent.
+          await refundAiUse(quotaToken, !!userId, ip);
+          throw err;
+        }
 
         if (message.stop_reason === 'refusal') {
           sendEvent(controller, 'error', { error: "We couldn't remix this recipe." });
@@ -230,7 +245,6 @@ Return ONLY valid JSON with this exact structure:
           sendEvent(controller, 'error', { error: 'Generated recipe is incomplete' });
           return;
         }
-        if (quotaToken) await incrementExtraction(quotaToken, !!userId);
         sendEvent(controller, 'complete', { recipe: outCheck.recipe });
       } catch (err) {
         console.error('Remix error:', err);
