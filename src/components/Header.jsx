@@ -31,7 +31,13 @@ export default function Header({ showSearch = true }) {
   const [favCount, setFavCount] = useState(0);
   const [metric, setMetric] = useState(false);
   const [theme, setTheme] = useState('system');
-  const menuRef = useRef(null);
+  // The desktop and mobile panels BOTH render whenever the menu is open (the mobile one is
+  // only hidden with `sm:hidden`), so they need separate refs. Sharing one ref meant React's
+  // last-wins assignment pointed it at the mobile panel, and the outside-click handler then
+  // treated every desktop menu click as "outside": mousedown closed the menu and unmounted the
+  // item before its click could fire, so nothing in the desktop menu did anything.
+  const menuRef = useRef(null); // desktop panel
+  const mobileMenuRef = useRef(null); // mobile panel
   const menuBtnRef = useRef(null); // desktop trigger
   const mobileBtnRef = useRef(null); // phone trigger (separately rendered)
   const { isAuthenticated, loading: authLoading, signOut } = useAuth();
@@ -55,7 +61,9 @@ export default function Header({ showSearch = true }) {
   useEffect(() => {
     if (!menuOpen) return;
     const onDown = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target) && !menuBtnRef.current?.contains(e.target) && !mobileBtnRef.current?.contains(e.target)) setMenuOpen(false);
+      const inside = (r) => !!r.current?.contains(e.target);
+      if (inside(menuRef) || inside(mobileMenuRef) || inside(menuBtnRef) || inside(mobileBtnRef)) return;
+      setMenuOpen(false);
     };
     const onKey = (e) => {
       if (e.key === 'Escape') {
@@ -153,7 +161,7 @@ export default function Header({ showSearch = true }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div ref={menuRef} id="mobile-menu" role="dialog" aria-label="Menu" className="sm:hidden absolute inset-x-0 top-full bg-surface border-b border-sand-200 shadow-lg p-2 z-50">
+        <div ref={mobileMenuRef} id="mobile-menu" role="dialog" aria-label="Menu" className="sm:hidden absolute inset-x-0 top-full bg-surface border-b border-sand-200 shadow-lg p-2 z-50">
           <a href="/favorites" className="flex items-center gap-3 px-3 h-12 rounded-lg text-[15px] text-sand-800 hover:bg-sand-100">
             <HeartIcon className="w-5 h-5 text-sand-500" /> Favorites {favCount > 0 && <span className="text-sand-500 tabular">{favCount}</span>}
           </a>
