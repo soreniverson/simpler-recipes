@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CleanBox from '../../components/CleanBox.jsx';
+
+/**
+ * Honest comparison for one defined use case: "clean up a recipe I found just now"
+ * vs "manage a permanent recipe library". Paprika claims come from paprikaapp.com
+ * (sources + access dates in docs/search/sources.md). Unknowns stay unknown.
+ */
+const SITE = 'https://www.simpler.recipes';
+const pageUrl = `${SITE}/compare/simpler-vs-paprika/`;
+const CHECKED = 'September 6, 2026';
+const title = 'Simpler Recipes vs Paprika: which recipe tool fits you? · Simpler Recipes';
+const description =
+  'Paprika is a paid recipe manager for building a permanent library. Simpler Recipes is a free web tool for getting to the recipe right now. An honest comparison of both.';
+
+const rows: { label: string; simpler: string; paprika: string }[] = [
+  { label: 'What it is', simpler: 'Free web tool: paste a link, cook from a clean page', paprika: 'Paid native recipe manager (iOS, Android, Mac, Windows)' },
+  { label: 'Price', simpler: 'Free', paprika: 'Paid per platform — each version sold separately; free desktop demo limited to 50 recipes' },
+  { label: 'Getting a recipe in', simpler: 'Paste any URL (or use the catalog); works in any browser', paprika: 'Built-in browser downloads recipes into the app' },
+  { label: 'Saving & library', simpler: 'Unlimited saves with folders, on your device; free account syncs devices', paprika: 'Full library with categories; Cloud Sync across its apps' },
+  { label: 'Grocery list', simpler: 'No', paprika: 'Yes — aisle-sorted, combines duplicate items' },
+  { label: 'Meal planning', simpler: 'Yes — weekly plan', paprika: 'Yes — week or month, reusable menus' },
+  { label: 'Pantry', simpler: 'Yes', paprika: 'Yes' },
+  { label: 'Scaling & cook mode', simpler: 'Serving scaling, check-off ingredients, hands-free Cook Mode, timers', paprika: 'Scaling, unit conversion, cross-off, step highlight, timer detection' },
+  { label: 'Works without installing anything', simpler: 'Yes', paprika: 'No — native apps' },
+];
+
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'WebPage', '@id': pageUrl, url: pageUrl, name: 'Simpler Recipes vs Paprika', description, isPartOf: { '@type': 'WebSite', name: 'Simpler Recipes', url: `${SITE}/` } },
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Simpler Recipes', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'Simpler vs Paprika', item: pageUrl },
+    ] },
+  ],
+}).replace(/</g, '\\u003c');
+---
+
+<BaseLayout title={title} description={description} canonical={pageUrl}>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={jsonLd} />
+  </Fragment>
+
+  <main id="main-content" class="min-h-screen bg-background">
+    <article class="max-w-[720px] mx-auto px-4 sm:px-6 py-10 md:py-16">
+      <header class="mb-8">
+        <h1 class="font-serif text-[30px] sm:text-[36px] leading-[1.15] font-medium tracking-[-0.01em] text-sand-900">
+          Simpler Recipes vs Paprika
+        </h1>
+        <p class="mt-4 text-[17px] leading-relaxed text-sand-700">
+          These are different tools that overlap. The honest verdict up front:
+          <strong class="text-sand-900">if you're building a permanent, organized recipe library with grocery lists across devices, buy
+          <a href="https://www.paprikaapp.com/" rel="nofollow" class="underline underline-offset-[3px] decoration-sand-400">Paprika</a> —
+          it's the more complete manager. If you mostly want tonight's recipe without the ads, the essay or an install, Simpler Recipes does that free, right now.</strong>
+        </p>
+      </header>
+
+      <div class="mb-10">
+        <p class="mb-3 text-[15px] text-sand-600">See what a cleaned recipe looks like — paste any link:</p>
+        <CleanBox client:load id="compare-clean" examples={true} />
+      </div>
+
+      <section class="mb-10">
+        <h2 class="font-serif text-[22px] font-medium text-sand-900 mb-4">Side by side</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-[15px] text-left border-collapse">
+            <thead>
+              <tr class="border-b border-sand-300 text-sand-500 font-mono text-[12px] uppercase tracking-[0.08em]">
+                <th class="py-2 pr-4 font-medium"></th>
+                <th class="py-2 pr-4 font-medium">Simpler Recipes</th>
+                <th class="py-2 font-medium">Paprika</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r) => (
+                <tr class="border-b border-sand-200 align-top">
+                  <th scope="row" class="py-2.5 pr-4 font-medium text-sand-900">{r.label}</th>
+                  <td class="py-2.5 pr-4 text-sand-700">{r.simpler}</td>
+                  <td class="py-2.5 text-sand-700">{r.paprika}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-3 text-[13px] text-sand-500">
+          Paprika details from paprikaapp.com, checked {CHECKED}; current prices are on their site and the app stores. Their features and pricing can change. We're not affiliated with Paprika.
+        </p>
+      </section>
+
+      <section class="space-y-4 text-[16px] leading-relaxed text-sand-700">
+        <h2 class="font-serif text-[22px] font-medium text-sand-900">Where Paprika is simply better</h2>
+        <p>
+          Paprika's aisle-sorted grocery list (it combines duplicate ingredients across recipes) has no equivalent here. Its native apps keep your library on the device, and one purchase per platform with no subscription is a fair, old-fashioned deal. Serious meal-preppers and recipe collectors are its home crowd.
+        </p>
+        <h2 class="font-serif text-[22px] font-medium text-sand-900">Where Simpler Recipes is better</h2>
+        <p>
+          There's nothing to buy or install, and nothing to import into: paste a link on any device with a browser and cook from a clean page — check-off ingredients, scaling, hands-free Cook Mode. Recipes keep the author's exact quantities and link back to the original. Saving, folders, a weekly meal plan and a pantry are free; a free account adds cross-device sync.
+        </p>
+        <h2 class="font-serif text-[22px] font-medium text-sand-900">Our real limitations</h2>
+        <p>
+          No grocery list, no native apps, no offline guarantee, no import from other recipe managers. If those are your daily drivers, Paprika earns its price.
+        </p>
+      </section>
+    </article>
+  </main>
+</BaseLayout>

@@ -1,0 +1,12 @@
+CRAWL: 290 pages
+families: {'/404': 1, '/alternatives': 1, '/browse': 36, '/collection': 16, '/compare': 1, '/favorites': 1, '/': 1, '/pantry': 1, '/plan': 1, '/privacy': 1, '/recipe-cleaner': 1, '/recipe': 1, '/recipes': 227, '/why-recipe-sites-have-long-stories': 1}
+
+Search surfaces:
+  /browse/                                      index    -                                   recipes~0
+  /recipe-cleaner/                              index    BreadcrumbList,WebPage              recipes~1
+  /why-recipe-sites-have-long-stories/          index    Article,BreadcrumbList              recipes~1
+
+noindex pages: ['/404', '/favorites/', '/pantry/', '/plan/', '/recipe/']
+empty collections: none
+
+ISSUES (0):

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import FavoriteButton from './FavoriteButton';
+import { track, surface } from '../lib/track';
 
 /**
  * Recipe card: photo, title, one quiet meta line. No pills, no zoom, no colored badges.
@@ -23,7 +24,11 @@ export default function RecipeCard({ recipe, showFavorite = true, matchInfo, eag
           />
         </div>
       )}
-      <a href={`/recipes/${recipe.slug}/`} className="block h-full rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sand-700">
+      <a
+        href={`/recipes/${recipe.slug}/`}
+        onClick={() => track('recipe_card_open', { surface: surface(), slug: recipe.slug })}
+        className="block h-full rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sand-700"
+      >
         <article className="h-full flex flex-col">
           <div className="aspect-[4/3] overflow-hidden rounded-xl bg-sand-100 mb-2.5">
             {recipe.image && !imgFailed && (
