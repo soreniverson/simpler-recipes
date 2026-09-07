@@ -5,8 +5,10 @@ import { sortRecipesByMatch } from '../utils/ingredientMatcher';
 
 /**
  * Grid of recipe cards. Every card is in the server HTML (crawlable links), but only the first
- * `pageSize` are visible; the rest are `hidden` until "Show more". Hidden cards' lazy images are
- * never fetched, so long browse pages (100+ recipes) don't load 100+ images up front.
+ * `pageSize` are visible; the rest are `hidden` until "Show more". Cards outside that window
+ * render no <img> at all, so long browse pages (100+ recipes) don't load 100+ images up front —
+ * and a card promoted into view (by "Show more", or by the pantry re-sort) mounts a fresh image
+ * that loads immediately, rather than reusing a lazy one that never started.
  * When the pantry has items, the whole list is re-sorted by match before paging.
  */
 export default function RecipeGrid({ recipes, showFavorite = true, pageSize = 24 }) {
@@ -51,6 +53,7 @@ export default function RecipeGrid({ recipes, showFavorite = true, pageSize = 24
               recipe={recipe}
               showFavorite={showFavorite}
               matchInfo={recipe.matchInfo}
+              visible={i < limit}
               eager={i < 4}
             />
           </li>

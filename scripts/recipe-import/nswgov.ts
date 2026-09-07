@@ -50,6 +50,10 @@ async function saveImage(url: string, slug: string): Promise<string | null> {
       await sharp(buf).resize({ width: w, height: Math.round((w * 3) / 4), fit: 'cover', position: 'attention' })
         .webp({ quality: 76 }).toFile(path.join(IMG_DIR, `${slug}-${w}.webp`));
     }
+    // Also write the bare <slug>.webp: it is what the catalog stores and what social/schema
+    // metadata resolves to, so it must exist as a real file, not only as width variants.
+    await sharp(buf).resize({ width: 1000, height: 750, fit: 'cover', position: 'attention' })
+      .webp({ quality: 76 }).toFile(path.join(IMG_DIR, `${slug}.webp`)); // base copy
     return `/recipe-images/${slug}.webp`;
   } catch { return null; }
 }

@@ -57,7 +57,8 @@ export function collectionPageLd(opts: {
       '@type': 'ItemList',
       numberOfItems: opts.items.length,
       itemListElement: opts.items.map((r, i) =>
-        compact({ '@type': 'ListItem', position: i + 1, url: abs(r.url), name: r.name, image: r.image || undefined })
+        // Images must be absolute in structured data; self-hosted photos are stored site-relative.
+        compact({ '@type': 'ListItem', position: i + 1, url: abs(r.url), name: r.name, image: r.image ? abs(r.image) : undefined })
       ),
     },
   };
