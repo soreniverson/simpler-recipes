@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ListingHeader from '../../components/ListingHeader.astro';
 import fs from 'fs';
 import path from 'path';
 import { buildBrowsePages } from '../../lib/browse';
+import { jsonLd, breadcrumbLd, webPageLd, SITE } from '../../lib/schema';
 
 /**
  * Index of the intent-based browse pages. These used to sit on the homepage as a 20-link block,
@@ -26,26 +29,21 @@ const FAMILY_ORDER: { key: string; label: string }[] = [
 ];
 const groups = FAMILY_ORDER.map((f) => ({ ...f, pages: pages.filter((p) => p.family === f.key) })).filter((g) => g.pages.length);
 
-const SITE = 'https://www.simpler.recipes';
 const title = 'Browse recipes by ingredient, time and occasion · Simpler Recipes';
 const description = 'Chicken, pasta, 30-minute dinners, vegetarian mains and more — clean, ad-free recipes grouped the way people actually look for them.';
+const pageUrl = `${SITE}/browse/`;
+const crumbs = [{ name: 'Browse' }];
+const ld = jsonLd(webPageLd({ url: pageUrl, name: 'Browse recipes', description }), breadcrumbLd(crumbs, pageUrl));
 ---
 
-<BaseLayout title={title} description={description} canonical={`${SITE}/browse/`}>
+<BaseLayout title={title} description={description} canonical={pageUrl}>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={ld} />
+  </Fragment>
   <main id="main-content" class="min-h-screen bg-background">
     <div class="max-w-[1080px] mx-auto px-4 sm:px-6 py-6 md:py-10">
-      <nav aria-label="Breadcrumb" class="mb-6">
-        <ol class="flex items-center gap-2 text-[14px] text-sand-600">
-          <li><a href="/" class="hover:text-sand-900">Home</a></li>
-          <li aria-hidden="true" class="text-sand-400">/</li>
-          <li aria-current="page" class="text-sand-800">Browse</li>
-        </ol>
-      </nav>
-
-      <header class="mb-8 max-w-2xl">
-        <h1 class="font-serif text-[28px] sm:text-[34px] leading-[1.2] font-medium tracking-[-0.01em] text-sand-900">Browse recipes</h1>
-        <p class="mt-2 text-[16px] text-sand-600">By ingredient, time and occasion.</p>
-      </header>
+      <Breadcrumbs crumbs={crumbs} />
+      <ListingHeader title="Browse recipes" intro="By ingredient, time and occasion." />
 
       {groups.map((g) => (
         <section aria-label={g.label} class="mb-10">

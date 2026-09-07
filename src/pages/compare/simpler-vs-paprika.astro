@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import CleanBox from '../../components/CleanBox.jsx';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CleanBoxCard from '../../components/CleanBoxCard.astro';
 
 /**
  * Honest comparison for one defined use case: "clean up a recipe I found just now"
  * vs "manage a permanent recipe library". Paprika claims come from paprikaapp.com
  * (sources + access dates in docs/search/sources.md). Unknowns stay unknown.
  */
-const SITE = 'https://www.simpler.recipes';
+import { jsonLd, breadcrumbLd, webPageLd, SITE } from '../../lib/schema';
 const pageUrl = `${SITE}/compare/simpler-vs-paprika/`;
 const CHECKED = 'September 6, 2026';
 const title = 'Simpler Recipes vs Paprika: which recipe tool fits you? · Simpler Recipes';
@@ -26,25 +27,18 @@ const rows: { label: string; simpler: string; paprika: string }[] = [
   { label: 'Works without installing anything', simpler: 'Yes', paprika: 'No — native apps' },
 ];
 
-const jsonLd = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@graph': [
-    { '@type': 'WebPage', '@id': pageUrl, url: pageUrl, name: 'Simpler Recipes vs Paprika', description, isPartOf: { '@type': 'WebSite', name: 'Simpler Recipes', url: `${SITE}/` } },
-    { '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Simpler Recipes', item: `${SITE}/` },
-      { '@type': 'ListItem', position: 2, name: 'Simpler vs Paprika', item: pageUrl },
-    ] },
-  ],
-}).replace(/</g, '\\u003c');
+const crumbs = [{ name: 'Simpler vs Paprika' }];
+const ld = jsonLd(webPageLd({ url: pageUrl, name: 'Simpler Recipes vs Paprika', description }), breadcrumbLd(crumbs, pageUrl));
 ---
 
 <BaseLayout title={title} description={description} canonical={pageUrl}>
   <Fragment slot="head">
-    <script type="application/ld+json" is:inline set:html={jsonLd} />
+    <script type="application/ld+json" is:inline set:html={ld} />
   </Fragment>
 
   <main id="main-content" class="min-h-screen bg-background">
-    <article class="max-w-[720px] mx-auto px-4 sm:px-6 py-10 md:py-16">
+    <article class="max-w-[720px] mx-auto px-4 sm:px-6 py-6 md:py-10">
+      <Breadcrumbs crumbs={crumbs} />
       <header class="mb-8">
         <h1 class="font-serif text-[30px] sm:text-[36px] leading-[1.15] font-medium tracking-[-0.01em] text-sand-900">
           Simpler Recipes vs Paprika
@@ -57,10 +51,7 @@ const jsonLd = JSON.stringify({
         </p>
       </header>
 
-      <div class="mb-10">
-        <p class="mb-3 text-[15px] text-sand-600">See what a cleaned recipe looks like — paste any link:</p>
-        <CleanBox client:load id="compare-clean" examples={true} />
-      </div>
+      <CleanBoxCard id="compare-clean" examples={true} title="See a cleaned recipe" text="Paste any recipe link — no install, no account." class="mb-10" />
 
       <section class="mb-10">
         <h2 class="font-serif text-[22px] font-medium text-sand-900 mb-4">Side by side</h2>

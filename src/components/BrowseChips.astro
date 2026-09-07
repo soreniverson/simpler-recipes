@@ -1,0 +1,35 @@
+---
+/**
+ * Cross-navigation between listing pages as quiet chips (counts in muted mono),
+ * capped by the caller, with the full directory one click away. Replaces the
+ * old underlined link runs.
+ */
+interface Props {
+  heading?: string;
+  items: { name: string; href: string; count?: number }[];
+  /** Show a trailing link to /browse/ (default true). */
+  everything?: boolean;
+  class?: string;
+}
+const { heading = 'More ways to browse', items, everything = true, class: className = 'mt-12' } = Astro.props;
+const headingId = `chips-${heading.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+---
+
+<nav aria-labelledby={headingId} class={className}>
+  <h2 id={headingId} class="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500 mb-4">{heading}</h2>
+  <ul class="flex flex-wrap gap-2">
+    {items.map((o) => (
+      <li>
+        <a href={o.href} class="inline-flex items-baseline gap-1.5 rounded-full border border-sand-200 bg-surface px-3.5 py-1.5 text-[14px] text-sand-800 hover:border-sand-400 hover:text-sand-900 transition-colors">
+          {o.name}
+          {o.count != null && <span class="font-mono text-[12px] text-sand-500 tabular">{o.count}</span>}
+        </a>
+      </li>
+    ))}
+    {everything && (
+      <li>
+        <a href="/browse/" class="inline-flex items-center rounded-full px-3.5 py-1.5 text-[14px] text-sand-600 hover:text-sand-900 transition-colors">Everything →</a>
+      </li>
+    )}
+  </ul>
+</nav>

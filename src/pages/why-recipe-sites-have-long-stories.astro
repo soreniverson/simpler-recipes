@@ -1,63 +1,45 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CleanBox from '../components/CleanBox.jsx';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CleanBoxCard from '../components/CleanBoxCard.astro';
 
 /**
  * Editorial companion to /recipe-cleaner/: answers the question, then offers the tool.
  * Factual claims are sourced (see docs/search/sources.md); no invented statistics.
  */
-const SITE = 'https://www.simpler.recipes';
+import { jsonLd, breadcrumbLd, articleLd, SITE } from '../lib/schema';
+import { SEARCH_PAGES } from '../lib/searchPages';
 const pageUrl = `${SITE}/why-recipe-sites-have-long-stories/`;
 const title = 'Why do recipe websites have such long stories? · Simpler Recipes';
 const description =
   'The real reasons every online recipe opens with an essay: advertising economics, search incentives, copyright, and genuine storytelling — plus a way to skip straight to the recipe.';
-
-const jsonLd = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Article',
-      '@id': `${pageUrl}#article`,
-      mainEntityOfPage: pageUrl,
-      headline: 'Why do recipe websites have such long stories?',
-      description,
-      author: { '@type': 'Organization', name: 'Simpler Recipes', url: `${SITE}/` },
-      publisher: { '@type': 'Organization', name: 'Simpler Recipes', url: `${SITE}/` },
-      datePublished: '2026-09-06',
-      dateModified: '2026-09-06',
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Simpler Recipes', item: `${SITE}/` },
-        { '@type': 'ListItem', position: 2, name: 'Why recipe sites have long stories', item: pageUrl },
-      ],
-    },
-  ],
-}).replace(/</g, '\\u003c');
+const reg = SEARCH_PAGES.find((p) => p.path === '/why-recipe-sites-have-long-stories/')!;
+const crumbs = [{ name: 'Why recipe sites have long stories' }];
+const ld = jsonLd(
+  articleLd({ url: pageUrl, headline: 'Why do recipe websites have such long stories?', description, datePublished: reg.published, dateModified: reg.updated }),
+  breadcrumbLd(crumbs, pageUrl)
+);
 ---
 
 <BaseLayout title={title} description={description} type="article" canonical={pageUrl}>
   <Fragment slot="head">
-    <script type="application/ld+json" is:inline set:html={jsonLd} />
+    <script type="application/ld+json" is:inline set:html={ld} />
   </Fragment>
 
   <main id="main-content" class="min-h-screen bg-background">
-    <article class="max-w-[680px] mx-auto px-4 sm:px-6 py-10 md:py-16">
+    <article class="max-w-[680px] mx-auto px-4 sm:px-6 py-6 md:py-10">
+      <Breadcrumbs crumbs={crumbs} />
       <header class="mb-8">
         <h1 class="font-serif text-[30px] sm:text-[36px] leading-[1.15] font-medium tracking-[-0.01em] text-sand-900">
           Why do recipe websites have such long stories?
         </h1>
         <p class="mt-4 text-[17px] leading-relaxed text-sand-700">
           Short answer: because the story pays for the recipe. Ads, search visibility and copyright all reward
-          the essay — and sometimes the writer simply has something to say. If you just want the recipe,
-          paste the link here:
+          the essay — and sometimes the writer simply has something to say.
         </p>
       </header>
 
-      <div class="mb-12">
-        <CleanBox client:load id="story-clean" examples={true} />
-      </div>
+      <CleanBoxCard id="story-clean" examples={true} title="Skip to the recipe" text="Paste any recipe link — you'll get the ingredients and steps, nothing else." class="mb-12" />
 
       <div class="space-y-5 text-[16.5px] leading-relaxed text-sand-700 [&_h2]:font-serif [&_h2]:text-[22px] [&_h2]:font-medium [&_h2]:text-sand-900 [&_h2]:mt-9 [&_a]:text-sand-800 [&_a]:underline [&_a]:underline-offset-[3px] [&_a]:decoration-sand-400 hover:[&_a]:decoration-sand-800">
         <p>

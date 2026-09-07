@@ -1,11 +1,15 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RecipeGrid from '../../components/RecipeGrid.jsx';
-import CleanBox from '../../components/CleanBox.jsx';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ListingHeader from '../../components/ListingHeader.astro';
+import CleanBoxCard from '../../components/CleanBoxCard.astro';
+import BrowseChips from '../../components/BrowseChips.astro';
 import fs from 'fs';
 import path from 'path';
 import { buildBrowsePages } from '../../lib/browse';
 import { cardImage } from '../../lib/images';
+import { jsonLd, breadcrumbLd, collectionPageLd, SITE } from '../../lib/schema';
 
 export async function getStaticPaths() {
   const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
@@ -17,8 +21,7 @@ export async function getStaticPaths() {
     props: {
       page: { slug: page.slug, name: page.name, intro: page.intro },
       recipes: page.recipes.map((r) => ({ slug: r.slug, title: r.title, image: r.image, totalTime: r.totalTime, servings: r.servings, ingredients: r.ingredients, tags: r.tags })),
-      // A wall of 34 links helps nobody: same-family pages first, topped up to 8,
-      // with the full directory one click away at /browse/.
+      // Same-family pages first, topped up to 8; the full directory is one click away.
       others: [...all.filter((p) => p.slug !== page.slug && p.family === page.family), ...all.filter((p) => p.slug !== page.slug && p.family !== page.family)].slice(0, 8),
     },
   }));
@@ -32,86 +35,34 @@ interface Props {
 const { page, recipes: rawRecipes, others } = Astro.props as Props;
 const recipes = await Promise.all(rawRecipes.map(async (r) => { const img = await cardImage(r.image); return { ...r, image: img?.src ?? r.image, imageSet: img?.set ?? null }; }));
 
-const SITE = 'https://www.simpler.recipes';
 const pageUrl = `${SITE}/browse/${page.slug}/`;
 const top = recipes.slice(0, 3).map((r) => r.title);
 const title = `${page.name} — ${recipes.length} recipes, no ads · Simpler Recipes`;
 const description = `${page.intro} ${recipes.length} recipes including ${top.join(', ')}. Ad-free, with check-off ingredients, scaling and Cook Mode.`;
 
-const jsonLd = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'CollectionPage',
-      '@id': pageUrl,
-      url: pageUrl,
-      name: page.name,
-      description: page.intro,
-      isPartOf: { '@type': 'WebSite', name: 'Simpler Recipes', url: `${SITE}/` },
-      mainEntity: {
-        '@type': 'ItemList',
-        numberOfItems: recipes.length,
-        itemListElement: recipes.map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}/recipes/${r.slug}/`, name: r.title, ...(r.image ? { image: r.image } : {}) })),
-      },
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Simpler Recipes', item: `${SITE}/` },
-        { '@type': 'ListItem', position: 2, name: page.name, item: pageUrl },
-      ],
-    },
-  ],
-}).replace(/</g, '\\u003c');
+const crumbs = [{ name: page.name }];
+const ld = jsonLd(
+  collectionPageLd({ url: pageUrl, name: page.name, description: page.intro, items: recipes.map((r) => ({ url: `/recipes/${r.slug}/`, name: r.title, image: r.image })) }),
+  breadcrumbLd(crumbs, pageUrl)
+);
 ---
 
 <BaseLayout title={title} description={description} canonical={pageUrl}>
   <Fragment slot="head">
-    <script type="application/ld+json" is:inline set:html={jsonLd} />
+    <script type="application/ld+json" is:inline set:html={ld} />
   </Fragment>
 
   <main id="main-content" class="min-h-screen bg-background">
     <div class="max-w-[1080px] mx-auto px-4 sm:px-6 py-6 md:py-10">
-      <nav aria-label="Breadcrumb" class="mb-8">
-        <ol class="flex items-center gap-2 text-[14px] text-sand-600">
-          <li><a href="/" class="hover:text-sand-900">Home</a></li>
-          <li aria-hidden="true" class="text-sand-400">/</li>
-          <li aria-current="page" class="text-sand-800">{page.name}</li>
-        </ol>
-      </nav>
-
-      <header class="mb-8 max-w-2xl">
-        <h1 class="font-serif text-[28px] sm:text-[34px] leading-[1.2] font-medium tracking-[-0.01em] text-sand-900">{page.name}</h1>
-        <p class="mt-2 text-[16px] text-sand-600">{page.intro} <span class="text-sand-500 tabular">{recipes.length} recipes.</span></p>
-      </header>
+      <Breadcrumbs crumbs={crumbs} />
+      <ListingHeader title={page.name} intro={page.intro} count={recipes.length} />
 
       <section aria-label={page.name}>
         <RecipeGrid client:visible recipes={recipes} />
       </section>
 
-      <aside aria-labelledby="clean-own" class="mt-12 rounded-2xl border border-sand-200 bg-surface px-5 py-6 sm:px-8 sm:py-7">
-        <div class="max-w-xl">
-          <h2 id="clean-own" class="font-serif text-[20px] font-medium text-sand-900">Found a recipe somewhere else?</h2>
-          <p class="mt-1 mb-5 text-[15px] text-sand-600">Paste the link and get just the recipe — no ads, no life story.</p>
-          <CleanBox client:visible id="browse-clean" />
-        </div>
-      </aside>
-
-      <nav aria-labelledby="more-browse" class="mt-12">
-        <h2 id="more-browse" class="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500 mb-4">More ways to browse</h2>
-        <ul class="flex flex-wrap gap-2">
-          {others.map((o) => (
-            <li>
-              <a href={`/browse/${o.slug}/`} class="inline-flex items-baseline gap-1.5 rounded-full border border-sand-200 bg-surface px-3.5 py-1.5 text-[14px] text-sand-800 hover:border-sand-400 hover:text-sand-900 transition-colors">
-                {o.name} <span class="font-mono text-[12px] text-sand-500 tabular">{o.count}</span>
-              </a>
-            </li>
-          ))}
-          <li>
-            <a href="/browse/" class="inline-flex items-center rounded-full px-3.5 py-1.5 text-[14px] text-sand-600 hover:text-sand-900 transition-colors">Everything →</a>
-          </li>
-        </ul>
-      </nav>
+      <CleanBoxCard id="browse-clean" />
+      <BrowseChips items={others.map((o) => ({ name: o.name, href: `/browse/${o.slug}/`, count: o.count }))} />
     </div>
   </main>
 </BaseLayout>

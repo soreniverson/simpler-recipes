@@ -1,0 +1,31 @@
+---
+/**
+ * The product entry point as a contained module: bordered surface card holding
+ * the paste box. One shape everywhere a page invites "clean your own recipe",
+ * so the invitation reads identically across listings, editorial and comparisons.
+ */
+import CleanBox from './CleanBox.jsx';
+
+interface Props {
+  id: string;
+  title?: string;
+  text?: string;
+  examples?: boolean;
+  class?: string;
+}
+const {
+  id,
+  title = 'Found a recipe somewhere else?',
+  text = 'Paste the link and get just the recipe — no ads, no life story.',
+  examples = false,
+  class: className = 'mt-12',
+} = Astro.props;
+---
+
+<aside aria-label={title} class={`rounded-2xl border border-sand-200 bg-surface px-5 py-6 sm:px-8 sm:py-7 ${className}`}>
+  <div class="max-w-xl">
+    <h2 class="font-serif text-[20px] font-medium text-sand-900">{title}</h2>
+    <p class="mt-1 mb-5 text-[15px] text-sand-600">{text}</p>
+    <CleanBox client:visible id={id} examples={examples} />
+  </div>
+</aside>
