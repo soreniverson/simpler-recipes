@@ -12,7 +12,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "check": "astro check",
-    "typecheck": "tsc --noEmit -p tsconfig.json"
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "search:report": "tsx scripts/search-report.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.1",

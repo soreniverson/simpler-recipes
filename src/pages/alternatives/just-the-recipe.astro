@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CleanBox from '../../components/CleanBox.jsx';
+
+/**
+ * Honest alternative page. Claims about JustTheRecipe come from their own site/help
+ * center (sources + access dates in docs/search/sources.md). Unknowns stay unknown.
+ */
+const SITE = 'https://www.simpler.recipes';
+const pageUrl = `${SITE}/alternatives/just-the-recipe/`;
+const CHECKED = 'September 6, 2026';
+const title = 'Just the Recipe alternative: Simpler Recipes · free, no account';
+const description =
+  'Looking at Just the Recipe vs Simpler Recipes? Both strip recipe pages to the recipe. Here is an honest comparison — including where Just the Recipe is the better pick.';
+
+const rows: { label: string; simpler: string; jtr: string }[] = [
+  { label: 'Clean a recipe URL', simpler: 'Yes — paste a link, in the browser', jtr: 'Yes — website and mobile apps' },
+  { label: 'Price', simpler: 'Free', jtr: 'Free tier; paid Premium subscription (monthly, 6-month or yearly)' },
+  { label: 'Account required', simpler: 'No (optional, for sync and a larger AI allowance)', jtr: 'Account for saving/sync' },
+  { label: 'Saving recipes', simpler: 'Unlimited, stored on your device; sync with a free account', jtr: 'Up to 20 on the free tier; unlimited on Premium' },
+  { label: 'Native mobile apps', simpler: 'No — web app', jtr: 'iOS and Android apps' },
+  { label: 'Adjust servings / scale', simpler: 'Yes, free', jtr: 'Premium feature' },
+  { label: 'Print', simpler: 'Yes, free (print-friendly pages)', jtr: 'Premium feature' },
+  { label: 'Meal planning & pantry', simpler: 'Yes, free', jtr: 'Not listed on their feature pages' },
+  { label: 'Hands-free cook mode & timers', simpler: 'Yes', jtr: 'Not listed on their feature pages' },
+];
+
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'WebPage', '@id': pageUrl, url: pageUrl, name: 'Just the Recipe alternative', description, isPartOf: { '@type': 'WebSite', name: 'Simpler Recipes', url: `${SITE}/` } },
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Simpler Recipes', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'Just the Recipe alternative', item: pageUrl },
+    ] },
+  ],
+}).replace(/</g, '\\u003c');
+---
+
+<BaseLayout title={title} description={description} canonical={pageUrl}>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={jsonLd} />
+  </Fragment>
+
+  <main id="main-content" class="min-h-screen bg-background">
+    <article class="max-w-[720px] mx-auto px-4 sm:px-6 py-10 md:py-16">
+      <header class="mb-8">
+        <h1 class="font-serif text-[30px] sm:text-[36px] leading-[1.15] font-medium tracking-[-0.01em] text-sand-900">
+          A free alternative to Just the Recipe
+        </h1>
+        <p class="mt-4 text-[17px] leading-relaxed text-sand-700">
+          <a href="https://www.justtherecipe.com/" rel="nofollow" class="underline underline-offset-[3px] decoration-sand-400">Just the Recipe</a>
+          and Simpler Recipes solve the same problem: recipe pages buried under ads and essays.
+          The honest one-line difference — <strong class="text-sand-900">Just the Recipe has native mobile apps and a freemium model;
+          Simpler Recipes is entirely free on the web, with scaling, printing, meal planning and a pantry included.</strong>
+        </p>
+      </header>
+
+      <div class="mb-10">
+        <p class="mb-3 text-[15px] text-sand-600">Try it on any recipe link — no sign-up:</p>
+        <CleanBox client:load id="alt-clean" examples={true} />
+      </div>
+
+      <section class="mb-10">
+        <h2 class="font-serif text-[22px] font-medium text-sand-900 mb-4">Side by side</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-[15px] text-left border-collapse">
+            <thead>
+              <tr class="border-b border-sand-300 text-sand-500 font-mono text-[12px] uppercase tracking-[0.08em]">
+                <th class="py-2 pr-4 font-medium"></th>
+                <th class="py-2 pr-4 font-medium">Simpler Recipes</th>
+                <th class="py-2 font-medium">Just the Recipe</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r) => (
+                <tr class="border-b border-sand-200 align-top">
+                  <th scope="row" class="py-2.5 pr-4 font-medium text-sand-900">{r.label}</th>
+                  <td class="py-2.5 pr-4 text-sand-700">{r.simpler}</td>
+                  <td class="py-2.5 text-sand-700">{r.jtr}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-3 text-[13px] text-sand-500">
+          Just the Recipe details from justtherecipe.com and their help center, checked {CHECKED}. Their pricing and features can change — check their site for current terms. We're not affiliated.
+        </p>
+      </section>
+
+      <section class="space-y-4 text-[16px] leading-relaxed text-sand-700">
+        <h2 class="font-serif text-[22px] font-medium text-sand-900">When Just the Recipe is the better choice</h2>
+        <p>
+          If you want a native iPhone or Android app — share a link straight from your browser's share sheet into an installed app — Just the Recipe does that today and Simpler Recipes doesn't (we're a web app; you can install it to your home screen, but it isn't an app-store app). Their free tier is a perfectly good way to declutter pages if 20 saved recipes is enough.
+        </p>
+        <h2 class="font-serif text-[22px] font-medium text-sand-900">When Simpler Recipes fits better</h2>
+        <p>
+          If you'd rather not manage another subscription: cleaning, unlimited on-device saving, serving scaling, printing, meal planning, a pantry and hands-free Cook Mode are all free here. No account is needed to clean a recipe; a free account adds cross-device sync and a larger monthly allowance for the AI fallback we use on pages without structured recipe data. Cleaned recipes always keep their quantities verbatim and link back to the original author.
+        </p>
+      </section>
+    </article>
+  </main>
+</BaseLayout>

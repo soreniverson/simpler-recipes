@@ -4,6 +4,7 @@ import { getAnonymousToken } from '../utils/anonymousToken';
 import { looksLikeUrl, normalizeUrl } from '../lib/url';
 import { rememberRecipe } from '../lib/recentRecipes';
 import { hostnameOf } from '../lib/recipe/href';
+import { track, surface } from '../lib/track';
 
 const AuthModal = lazy(() => import('./AuthModal'));
 
@@ -159,6 +160,8 @@ export default function SmartInput({ variant = 'default', placeholder = 'Paste a
       setOpen(false);
       setBusy(true);
       setProgress(`Fetching ${host}…`);
+      // Funnel events carry the route only — never the pasted URL.
+      track('clean_start', { surface: surface() });
       esRef.current?.close();
       const es = new EventSource(`/api/extract-stream?url=${encodeURIComponent(url)}`);
       esRef.current = es;
@@ -173,6 +176,7 @@ export default function SmartInput({ variant = 'default', placeholder = 'Paste a
       });
       es.addEventListener('limit_reached', (e) => {
         stop();
+        track('clean_error', { surface: surface(), code: 'limit-reached' });
         try {
           const d = JSON.parse(e.data);
           setLimit({ message: d.message, isAuthenticated: !!d.isAuthenticated, url });
@@ -187,6 +191,7 @@ export default function SmartInput({ variant = 'default', placeholder = 'Paste a
         try {
           const d = JSON.parse(e.data);
           const rid = rememberRecipe(d.recipe, url);
+          track('clean_success', { surface: surface(), method: d.method || 'unknown', cached: !!d.cached });
           setProgress('Done');
           window.location.assign(`/recipe?r=${rid}`);
         } catch {
@@ -203,6 +208,7 @@ export default function SmartInput({ variant = 'default', placeholder = 'Paste a
         try {
           if (e.data) payload = JSON.parse(e.data);
         } catch {}
+        track('clean_error', { surface: surface(), code: (payload && payload.code) || 'network-error' });
         setError(payload && payload.error ? payload : { code: 'network-error', error: `We couldn't reach ${host}.`, hint: 'Check your connection and try again.', url });
         setBusy(false);
         setProgress('');

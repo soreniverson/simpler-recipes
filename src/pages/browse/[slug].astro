@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RecipeGrid from '../../components/RecipeGrid.jsx';
+import CleanBox from '../../components/CleanBox.jsx';
 import fs from 'fs';
 import path from 'path';
 import { buildBrowsePages } from '../../lib/browse';
@@ -85,6 +86,12 @@ const jsonLd = JSON.stringify({
       <section aria-label={page.name}>
         <RecipeGrid client:visible recipes={recipes} />
       </section>
+
+      <aside aria-labelledby="clean-own" class="mt-14 pt-8 border-t border-sand-200 max-w-xl">
+        <h2 id="clean-own" class="font-serif text-[20px] font-medium text-sand-900">Found a recipe somewhere else?</h2>
+        <p class="mt-1 mb-4 text-[15px] text-sand-600">Paste the link and get just the recipe — no ads, no life story.</p>
+        <CleanBox client:visible id="browse-clean" />
+      </aside>
 
       <nav aria-labelledby="more-browse" class="mt-14 pt-8 border-t border-sand-200">
         <h2 id="more-browse" class="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500 mb-3">More ways to browse</h2>

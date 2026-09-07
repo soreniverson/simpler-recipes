@@ -1,0 +1,468 @@
+{
+  "generated": "run `npm run search:report` to regenerate",
+  "gate": ">= 8 matching public curated recipes",
+  "collections": [
+    {
+      "url": "/browse/chicken/",
+      "family": "ingredient",
+      "intent": "chicken recipes",
+      "status": "published",
+      "recipes": 48,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/chicken-thighs/",
+      "family": "ingredient",
+      "intent": "chicken thigh recipes",
+      "status": "published",
+      "recipes": 19,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/chicken-breast/",
+      "family": "ingredient",
+      "intent": "chicken breast recipes",
+      "status": "published",
+      "recipes": 24,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/30-minute-dinners/",
+      "family": "time",
+      "intent": "30 minute dinners",
+      "status": "published",
+      "recipes": 69,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/20-minute-recipes/",
+      "family": "time",
+      "intent": "20 minute meals",
+      "status": "published",
+      "recipes": 39,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/vegetarian/",
+      "family": "ingredient",
+      "intent": "vegetarian recipes",
+      "status": "published",
+      "recipes": 48,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/vegetarian-dinners/",
+      "family": "occasion",
+      "intent": "vegetarian dinner ideas",
+      "status": "published",
+      "recipes": 24,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/quick-vegetarian/",
+      "family": "combo",
+      "intent": "quick vegetarian meals",
+      "status": "published",
+      "recipes": 18,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/pasta/",
+      "family": "dish",
+      "intent": "pasta recipes",
+      "status": "published",
+      "recipes": 34,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/soup/",
+      "family": "dish",
+      "intent": "soup recipes",
+      "status": "published",
+      "recipes": 24,
+      "published": "2026-08-14",
+      "seasonal": {
+        "window": "Fall & winter soups",
+        "peakMonth": 1,
+        "refreshBy": "11-15"
+      }
+    },
+    {
+      "url": "/browse/beef/",
+      "family": "ingredient",
+      "intent": "beef recipes",
+      "status": "published",
+      "recipes": 26,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/ground-beef/",
+      "family": "ingredient",
+      "intent": "ground beef recipes",
+      "status": "published",
+      "recipes": 14,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/curry/",
+      "family": "dish",
+      "intent": "curry recipes",
+      "status": "published",
+      "recipes": 19,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/salads/",
+      "family": "dish",
+      "intent": "salad recipes",
+      "status": "published",
+      "recipes": 20,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/seafood/",
+      "family": "ingredient",
+      "intent": "seafood recipes",
+      "status": "published",
+      "recipes": 14,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/desserts/",
+      "family": "dish",
+      "intent": "dessert recipes",
+      "status": "published",
+      "recipes": 15,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/comfort-food/",
+      "family": "occasion",
+      "intent": "comfort food recipes",
+      "status": "published",
+      "recipes": 30,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/for-two/",
+      "family": "occasion",
+      "intent": "dinner for two",
+      "status": "published",
+      "recipes": 24,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/for-a-crowd/",
+      "family": "occasion",
+      "intent": "recipes for a crowd",
+      "status": "published",
+      "recipes": 68,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/dips/",
+      "family": "dish",
+      "intent": "dip recipes",
+      "status": "published",
+      "recipes": 8,
+      "published": "2026-08-14",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/shrimp/",
+      "family": "ingredient",
+      "intent": "shrimp recipes",
+      "status": "published",
+      "recipes": 9,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/rice-dishes/",
+      "family": "dish",
+      "intent": "rice recipes",
+      "status": "published",
+      "recipes": 9,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/one-pot/",
+      "family": "method",
+      "intent": "one pot meals",
+      "status": "published",
+      "recipes": 14,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/breakfast/",
+      "family": "occasion",
+      "intent": "breakfast recipes",
+      "status": "published",
+      "recipes": 15,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/baking/",
+      "family": "dish",
+      "intent": "baking recipes",
+      "status": "published",
+      "recipes": 27,
+      "published": "2026-09-06",
+      "seasonal": {
+        "window": "Holiday baking",
+        "peakMonth": 12,
+        "refreshBy": "10-20"
+      }
+    },
+    {
+      "url": "/browse/party-food/",
+      "family": "occasion",
+      "intent": "party appetizers",
+      "status": "published",
+      "recipes": 12,
+      "published": "2026-09-06",
+      "seasonal": {
+        "window": "Game-day snacks (Super Bowl)",
+        "peakMonth": 2,
+        "refreshBy": "12-20"
+      }
+    },
+    {
+      "url": "/browse/grilling/",
+      "family": "method",
+      "intent": "grilling recipes",
+      "status": "published",
+      "recipes": 16,
+      "published": "2026-09-06",
+      "seasonal": {
+        "window": "Summer grilling",
+        "peakMonth": 7,
+        "refreshBy": "05-15"
+      }
+    },
+    {
+      "url": "/browse/indian/",
+      "family": "cuisine",
+      "intent": "indian recipes",
+      "status": "published",
+      "recipes": 12,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/italian/",
+      "family": "cuisine",
+      "intent": "italian recipes",
+      "status": "published",
+      "recipes": 12,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/asian/",
+      "family": "cuisine",
+      "intent": "asian recipes",
+      "status": "published",
+      "recipes": 18,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/mediterranean/",
+      "family": "cuisine",
+      "intent": "mediterranean recipes",
+      "status": "published",
+      "recipes": 12,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/mexican/",
+      "family": "cuisine",
+      "intent": "mexican food recipes",
+      "status": "published",
+      "recipes": 15,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/chicken-and-rice/",
+      "family": "combo",
+      "intent": "chicken and rice recipes",
+      "status": "published",
+      "recipes": 14,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/potatoes/",
+      "family": "ingredient",
+      "intent": "potato recipes",
+      "status": "published",
+      "recipes": 19,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/pork/",
+      "family": "ingredient",
+      "intent": "pork recipes",
+      "status": "dropped-by-gate",
+      "recipes": 0,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/eggs/",
+      "family": "dish",
+      "intent": "egg recipes",
+      "status": "dropped-by-gate",
+      "recipes": 0,
+      "published": "2026-09-06",
+      "seasonal": null
+    },
+    {
+      "url": "/browse/healthy-dinners/",
+      "family": "occasion",
+      "intent": "healthy dinner ideas",
+      "status": "published",
+      "recipes": 25,
+      "published": "2026-09-06",
+      "seasonal": {
+        "window": "New Year reset",
+        "peakMonth": 1,
+        "refreshBy": "11-20"
+      }
+    }
+  ],
+  "drafts": [
+    {
+      "url": "/browse/pork/",
+      "status": "draft",
+      "slug": "pork",
+      "intent": "pork recipes",
+      "reason": "Only ~6 pork-primary recipes once bacon/ham-incidental dishes are excluded (< gate)"
+    },
+    {
+      "url": "/browse/eggs/",
+      "status": "draft",
+      "slug": "eggs",
+      "intent": "egg recipes",
+      "reason": "Only ~6 true egg dishes once \"eggplant\" title matches are excluded (< gate)"
+    },
+    {
+      "url": "/browse/salmon/",
+      "status": "draft",
+      "slug": "salmon",
+      "intent": "salmon recipes",
+      "reason": "4 recipes (< gate)"
+    },
+    {
+      "url": "/browse/sheet-pan/",
+      "status": "draft",
+      "slug": "sheet-pan",
+      "intent": "sheet pan dinners",
+      "reason": "5 loose matches; method evidence too weak (instruction-text matching caught slow-cooker recipes)"
+    },
+    {
+      "url": "/browse/slow-cooker/",
+      "status": "draft",
+      "slug": "slow-cooker",
+      "intent": "slow cooker recipes",
+      "reason": "6 recipes (< gate)"
+    },
+    {
+      "url": "/browse/cookies/",
+      "status": "draft",
+      "slug": "cookies",
+      "intent": "cookie recipes",
+      "reason": "6 recipes (< gate); blocks a dedicated holiday-cookies page too"
+    },
+    {
+      "url": "/browse/stir-fry/",
+      "status": "draft",
+      "slug": "stir-fry",
+      "intent": "stir fry recipes",
+      "reason": "7 recipes (< gate); catalog also has two identically titled \"Chicken Stir Fry\" entries to reconcile"
+    },
+    {
+      "url": "/browse/lentils-chickpeas/",
+      "status": "draft",
+      "slug": "lentils-chickpeas",
+      "intent": "chickpea recipes",
+      "reason": "7 recipes (< gate)"
+    },
+    {
+      "url": "/browse/sandwiches/",
+      "status": "draft",
+      "slug": "sandwiches",
+      "intent": "sandwich recipes",
+      "reason": "6 recipes (< gate)"
+    },
+    {
+      "url": "/browse/15-minute-meals/",
+      "status": "draft",
+      "slug": "15-minute-meals",
+      "intent": "15 minute meals",
+      "reason": "Consolidated into /browse/20-minute-recipes/ — same experience, near-duplicate intent"
+    },
+    {
+      "url": "/browse/thanksgiving-sides/",
+      "status": "draft",
+      "slug": "thanksgiving-sides",
+      "intent": "thanksgiving side dishes",
+      "reason": "0 matching recipes — no Thanksgiving coverage in the catalog"
+    }
+  ],
+  "pages": [
+    {
+      "url": "/recipe-cleaner/",
+      "family": "tool",
+      "status": "published",
+      "published": "2026-09-06",
+      "updated": "2026-09-06"
+    },
+    {
+      "url": "/why-recipe-sites-have-long-stories/",
+      "family": "editorial",
+      "status": "published",
+      "published": "2026-09-06",
+      "updated": "2026-09-06"
+    },
+    {
+      "url": "/alternatives/just-the-recipe/",
+      "family": "comparison",
+      "status": "published",
+      "published": "2026-09-06",
+      "updated": "2026-09-06"
+    },
+    {
+      "url": "/compare/simpler-vs-paprika/",
+      "family": "comparison",
+      "status": "published",
+      "published": "2026-09-06",
+      "updated": "2026-09-06"
+    }
+  ]
+}
