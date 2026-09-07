@@ -52,7 +52,9 @@ export default function Ingredients({
   let flat = 0;
 
   return (
-    <div data-ingredients className={compact ? '' : 'lg:bg-sand-50 lg:rounded-2xl lg:border lg:border-sand-200 lg:p-5'}>
+    // Card at every width — the ingredients and instructions panels share the site's
+    // one card treatment (see CleanBoxCard, browse cards).
+    <div data-ingredients className={compact ? '' : 'rounded-2xl border border-sand-200 bg-surface p-5'}>
       <div className="flex items-baseline justify-between gap-3 mb-3">
         <h2 id="ingredients-heading" className="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500">
           Ingredients
@@ -132,7 +134,7 @@ export default function Ingredients({
                       >
                         {done && <CheckIcon className="w-3 h-3" />}
                       </span>
-                      <span className={`text-[17px] leading-[1.55] lg:text-[16px] lg:leading-[1.6] ${done ? 'text-sand-500 line-through decoration-sand-300 hover:decoration-sand-800' : 'text-sand-900'} ${compact ? 'text-[18px]' : ''}`}>
+                      <span className={`text-[17px] leading-[1.55] lg:text-[16px] lg:leading-[1.6] ${done ? 'text-sand-500 line-through decoration-sand-400' : 'text-sand-900'} ${compact ? 'text-[18px]' : ''}`}>
                         {text}
                       </span>
                     </label>

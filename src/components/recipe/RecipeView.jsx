@@ -223,7 +223,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
           <h1 className="font-serif text-[28px] sm:text-[36px] leading-[1.2] font-medium tracking-[-0.01em] text-sand-900 [text-wrap:balance]">{recipe.title}</h1>
 
           {(meta.length > 0 || times.total) && (
-            <p data-meta className="mt-2.5 font-mono text-[12.5px] sm:text-[13px] text-sand-600 flex flex-wrap gap-x-2 gap-y-1">
+            <p data-meta className="mt-2 text-[14px] sm:text-[15px] text-sand-600 tabular flex flex-wrap gap-x-2 gap-y-1">
               {meta.map((m, i) => (
                 <span key={i} className="inline-flex items-center gap-2">
                   {m}

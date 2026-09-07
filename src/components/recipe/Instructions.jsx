@@ -11,7 +11,7 @@ export default function Instructions({ recipe, done, onToggle, onCookMode }) {
   let flat = 0;
 
   return (
-    <section data-instructions aria-labelledby="instructions-heading">
+    <section data-instructions aria-labelledby="instructions-heading" className="rounded-2xl border border-sand-200 bg-surface p-5 sm:p-6 print:border-0 print:p-0">
       <div className="flex items-center justify-between gap-3 mb-4">
         <h2 id="instructions-heading" className="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500">
           Instructions{done.size > 0 && <span className="tabular font-normal normal-case tracking-normal"> {done.size}/{total}</span>}
