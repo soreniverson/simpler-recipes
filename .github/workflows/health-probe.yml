@@ -1,0 +1,38 @@
+# Production health probe. Runs every 6 hours; a failed run makes GitHub email the
+# workflow's author, so a dead store / broken share path becomes a notification
+# instead of archaeology. Run it on demand from the Actions tab (workflow_dispatch).
+name: Production health probe
+
+on:
+  schedule:
+    - cron: '17 2,8,14,20 * * *' # every 6h, off the top of the hour
+  workflow_dispatch:
+
+permissions:
+  contents: none
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Health endpoint (store round-trip + AI key)
+        run: |
+          curl -sS --retry 2 --retry-delay 10 --max-time 30 \
+            https://www.simpler.recipes/api/health -o health.json -w 'HTTP %{http_code}\n'
+          cat health.json
+          jq -e '.ok == true and .store == "ok"' health.json > /dev/null \
+            || { echo '::error::Health check failed — see health.json above'; exit 1; }
+
+      - name: Share round-trip (write, read back, page renders)
+        run: |
+          id=$(curl -sS --retry 2 --retry-delay 10 --max-time 30 \
+            -X POST https://www.simpler.recipes/api/share \
+            -H 'Content-Type: application/json' \
+            -d '{"recipe":{"title":"Health probe","description":null,"ingredients":["1 probe"],"instructions":["Verify the store."],"prepTime":null,"cookTime":null,"totalTime":null,"servings":null,"image":null}}' \
+            | jq -re '.id')
+          echo "share id: $id"
+          curl -sS --max-time 30 "https://www.simpler.recipes/api/share/$id" | jq -e '.recipe.title == "Health probe"' > /dev/null
+          code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 30 "https://www.simpler.recipes/r/$id")
+          echo "share page: HTTP $code"
+          test "$code" = "200"
