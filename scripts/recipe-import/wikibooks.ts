@@ -46,15 +46,29 @@ function unwiki(s: string): string {
     .trim();
 }
 
-/** Items under a == Heading == until the next heading. */
+/**
+ * Items under a heading, continuing through deeper sub-headings.
+ *
+ * Indian recipes very often group their ingredients ("=== Marinade ===", "=== Syrup ===").
+ * Exiting at the first sub-heading silently truncated those recipes to nothing, so only a
+ * heading at the SAME level or shallower ends the section. Sub-headings are kept as group
+ * labels ending in a colon, which is how the rest of the catalog represents ingredient groups.
+ */
 function section(wt: string, re: RegExp): string[] {
   const lines = wt.split('\n');
   const out: string[] = [];
-  let inSec = false;
+  let depth = 0; // 0 = not inside the section
   for (const raw of lines) {
-    const h = raw.match(/^\s*={2,}\s*([^=]+?)\s*={2,}\s*$/);
-    if (h) { inSec = re.test(h[1].trim()); continue; }
-    if (!inSec) continue;
+    const h = raw.match(/^\s*(={2,})\s*(.+?)\s*={2,}\s*$/);
+    if (h) {
+      const level = h[1].length;
+      const name = unwiki(h[2]).replace(/:$/, '').trim();
+      if (depth && level <= depth) { depth = 0; continue; }      // section ended
+      if (depth && level > depth) { if (name) out.push(`${name}:`); continue; } // group label
+      if (re.test(name)) depth = level;                          // section started
+      continue;
+    }
+    if (!depth) continue;
     const m = raw.match(/^\s*[*#]\s*(.+)$/);
     if (m) { const t = unwiki(m[1]); if (t) out.push(t); }
   }

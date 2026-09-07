@@ -64,7 +64,7 @@ Public domain under 17 USC §105, which permits commercial use. Of the 16 import
   authorship is USDA's assertion rather than something we independently verified. They are
   listed below so the call can be revisited.
 
-### Wikibooks Cookbook — 25 Indian recipes — CC BY-SA 4.0
+### Wikibooks Cookbook — 38 Indian recipes — CC BY-SA 4.0
 
 Indian was the one category no other openly-licensed source could supply. Every mainstream
 Indian recipe site prohibits republishing ("You are prohibited from publishing, copying,
@@ -82,8 +82,7 @@ Photographs come from Wikimedia Commons, whose licensing policy requires that "C
 use of the work must be allowed" and refuses NC-only media. Commons files are therefore
 commercially safe by policy, but each carries its own licence and usually requires crediting
 a named author, so the importer resolves licence + artist per file from the Commons API,
-stores both, and rejects anything not clearly commercial-friendly. Licences in this set:
-CC BY-SA 4.0 (11), CC BY-SA 3.0 (5), CC BY-SA 2.0 (4), Public domain (2), CC BY-SA 2.5 (1), CC BY 2.0 (1), CC0 (1).
+stores both, and rejects anything not clearly commercial-friendly. Licences in this set: CC BY-SA 4.0 (14), CC BY-SA 3.0 (7), Public domain (6), CC BY-SA 2.0 (4), CC BY-SA 2.5 (2), CC BY 2.0 (2), CC0 (1), CC BY 2.0 de (1), CC BY 2.5 (1).0 (11), CC BY-SA 3.0 (5), CC BY-SA 2.0 (4), Public domain (2), CC BY-SA 2.5 (1), CC BY 2.0 (1), CC0 (1).
 
 *Residual risk:* Wikibooks permits fair-use media in the Cookbook namespace. Every image here
 was resolved through the Commons API (`imagerepository`), so local fair-use uploads are

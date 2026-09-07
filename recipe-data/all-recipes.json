@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "totalRecipes": 339,
+    "totalRecipes": 352,
     "collectionCount": 16,
-    "lastUpdated": "2026-09-07T06:33:19.387Z",
-    "normalizedAt": "2026-09-07T06:33:21.175Z"
+    "lastUpdated": "2026-09-07T06:47:06.791Z",
+    "normalizedAt": "2026-09-07T06:47:08.630Z"
   },
   "collections": [
     {
@@ -246,7 +246,7 @@
       "slug": "indian-cuisine",
       "name": "Indian Cuisine",
       "description": "Curries, biryanis, and aromatic spice-filled dishes",
-      "recipeCount": 42,
+      "recipeCount": 55,
       "recipes": [
         "chicken-tikka-masala",
         "butter-chicken",
@@ -289,7 +289,20 @@
         "hyderabadi-fried-bread-with-syrup-and-nuts",
         "potato-and-cauliflower-curry",
         "chicken-biryani",
-        "south-indian-millet-swallow"
+        "south-indian-millet-swallow",
+        "chicken-tikka",
+        "chicken-curry",
+        "chicken-vindaloo",
+        "ghevar",
+        "matar-paneer",
+        "deep-fried-chiles-stuffed-with-potato",
+        "khandvi",
+        "puri",
+        "gulab-jamun",
+        "thalassery-biryani",
+        "bonda",
+        "jigarthanda-milk",
+        "rasam"
       ]
     },
     {
@@ -15543,6 +15556,850 @@
       "imageLicense": {
         "name": "CC BY-SA 4.0",
         "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "chicken-tikka",
+      "slug": "chicken-tikka",
+      "title": "Chicken Tikka",
+      "image": "/recipe-images/chicken-tikka.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "30 min",
+      "servings": "4 servings",
+      "ingredients": [
+        "675 g (1.5 lb) skinless and boneless chicken breast, diced into cubes",
+        "1 tbsp mustard seed oil",
+        "50 ml (2 fl oz) milk",
+        "150 ml (5 fl oz) natural yoghurt",
+        "2 tbsp lemon juice",
+        "1 tbsp tomato paste",
+        "2 tbsp chopped fresh cilantro (coriander leaves)",
+        "4 large cloves of garlic, finely chopped",
+        "1–4 chopped fresh red chillis (depending on strength of the chillis and the desired strength of the marinade)",
+        "2 tsp paprika",
+        "2 tsp garam masala",
+        "1 tsp cumin powder",
+        "½ tsp turmeric",
+        "1 tsp salt (use rock salt for best results)"
+      ],
+      "instructions": [
+        "Add all of the ingredients except the chicken to a non-metallic mixing bowl, and mix well.",
+        "Add the chicken and mix until fully coated.",
+        "Ideally, the chicken should now be left in a refrigerator to marinate for at least 24 hours. It may not be safe to leave chicken which has previously been frozen for longer than 24 hours, but fresh chicken should be left to marinate for 48 hours for best results. If you do not wish to leave the chicken to marinate, simply continue to the next step.",
+        "For best results, place on skewers and cook in a tandoor or ceramic pot oven. The chicken can also be cooked on skewers under a medium grill for 5–8 minutes on each side or barbecued (cooking times depend on the temperature of the barbecue). Always ensure the chicken is cooked throughout before serving. It should come apart easily when pressed down with the side of a fork.",
+        "Serve with naan, with rice or use in a Chicken Tikka Masala."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AChicken_Tikka"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:44:51.765Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Shubhamcr7",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "chicken-curry",
+      "slug": "chicken-curry",
+      "title": "Chicken Curry",
+      "image": "/recipe-images/chicken-curry.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "1 hr 30 min",
+      "servings": "8 servings",
+      "ingredients": [
+        "Marinade ingredients:",
+        "4 lb chicken",
+        "1½ teaspoon salt",
+        "½ teaspoon red chile powder",
+        "1 pinch of turmeric",
+        "100 ml coconut yogurt",
+        "1½ teaspoon ground coriander",
+        "½ teaspoon garlic paste",
+        "1½ teaspoon ginger paste",
+        "1 teaspoon chile powder",
+        "1 teaspoon garam masala",
+        "1 teaspoon paprika",
+        "1 teaspoon cumin",
+        "1 teaspoon cinnamon",
+        "1 teaspoon fenugreek leaves",
+        "1 teaspoon curry powder",
+        "Juice of ½ lemon",
+        "½ teaspoon mint",
+        "Curry ingredients:",
+        "1 tablespoon coconut oil",
+        "500 g tomatoes, diced",
+        "150 ml coconut yogurt",
+        "200 g potatoes",
+        "2 teaspoons curry powder",
+        "1 medium onion",
+        "1 teaspoon ginger paste",
+        "½ teaspoon garlic paste",
+        "1 teaspoon mustard seeds",
+        "1 teaspoon cumin seeds",
+        "1 teaspoon fennel seeds",
+        "2 teaspoons curry powder"
+      ],
+      "instructions": [
+        "Clean the chicken and cut into small pieces. Combine with all the marinade ingredients and mix well. Set aside for 30 minutes to let flavors seep in.",
+        "Fry cumin, fennel, and mustard seeds on a medium heat in a large pan.",
+        "Add garlic and ginger paste and fry.",
+        "Chop the onions into small pieces and fry in the pan.",
+        "Add the potatoes and fry.",
+        "In a separate pan, sear the chicken in batches and add it to bowl separately.",
+        "After the onions turn golden brown add the marinated chicken.",
+        "Add curry powder, coconut yogurt and turn to a low heat. Leave to cook for 35–40 minutes.",
+        "Finely chop fresh coriander and a dash of lemon juice to the curry.",
+        "Serve with rice or naan bread"
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AChicken_Curry"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:44:49.830Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Guilhem Vellut from Paris, France",
+      "imageLicense": {
+        "name": "CC BY 2.0",
+        "url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "chicken-vindaloo",
+      "slug": "chicken-vindaloo",
+      "title": "Chicken Vindaloo",
+      "image": "/recipe-images/chicken-vindaloo.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "1 hr",
+      "servings": "4 servings",
+      "ingredients": [
+        "3 chicken breast fillets",
+        "2–3 large onions",
+        "2 fresh chile peppers (any color)",
+        "6 cloves of garlic (or 6 tsp minced)",
+        "2 cm cube of fresh ginger",
+        "1 tsp turmeric",
+        "2 tbsp white wine vinegar",
+        "1 tsp dried coriander powder",
+        "1 tsp garam masala",
+        "½ tsp cinnamon powder",
+        "1½ tsp black peppercorns",
+        "1 tsp black mustard seeds",
+        "½ tsp rock salt",
+        "1 tbsp chopped fresh coriander leaves",
+        "½ cup water"
+      ],
+      "instructions": [
+        "Make the onion sauce:",
+        "Take a thick-based frying pan, and pour into it enough vegetable oil to cover the base, with a little excess. Heat on a stovetop.",
+        "Slice the onions into fairly thin slivers. When the oil is very hot, add the onions.",
+        "Turn the stove down to a low heat, so the onions just gently sauté. After around 3 minutes they should be starting to caramelize.",
+        "Gradually turn up the heat and keep stirring the onions. You want them to brown quite heavily without burning.",
+        "Add the white wine vinegar, it will sizzle, and after a while will evaporate. Keep stirring. Fry for several more minutes, until they are very brown, but not burnt.",
+        "Remove the onions from the pan into a bowl, taking care to let as much oil as possible drip back into the pan. You should now have a bowl of nicely crisped fried onions.",
+        "Add the onions to a blender or food processor. Add around 1 tablespoon of oil, and process for around a minute until you have a fairly thick, dark brown sauce. This is the basic onion sauce from which vindaloo is made. It's also the onion sauce that gives the vindaloo the majority of its 'hot' taste, as it builds up as you eat the dish.",
+        "Remove sauce from blender and set aside.",
+        "Make the garlic/chili paste:",
+        "Coarsely chop the garlic cloves (and ginger if you're using it). De-seed the chili peppers and chop in the same way. Add the chopped garlic and chillies to the food processor.",
+        "Blend the garlic and chillies until you have a fairly grainy (but liquid) sauce. For this I used an attachment on my blender which is intended to grind coffee beans. It has a much smaller container and so there's less waste.",
+        "Add the turmeric, coriander powder, garam masala and cinnamon to the sauce. Stir it until it's well mixed, and set aside.",
+        "Gently crush the black peppercorns in a mortar and pestle. Once coarse, add the mustard seed and rock salt. Continue blending until all the spices form a nice coarse powder.",
+        "Cook the paste and meat:",
+        "Pour a little oil into a saucepan. Add the spiced garlic and chili paste to the pan. It needs to be slightly floating on oil, not touching the bottom of the pan.",
+        "When the sauce is quite hot and bubbling, add the chopped meat. Keep stirring so the meat absorbs the spice mix, until it is browned and mostly cooked.",
+        "Add onion sauce and simmer:",
+        "Now add the onion sauce to the pan. After stirring for 1 minute, add a little water and stir for another 2 minutes, then turn the heat to quite low. The sauce at this stage should be quite runny, and orange/tan in color. Remember a lot is going to evaporate off as it cooks.",
+        "At this stage you can add some vegetables. Half a cup of frozen peas works well.",
+        "Place a lid over the pan, and cook for around 30-40 minutes. Keep checking and stirring the pan every 5 or 10 minutes to make sure it doesn't stick or burn.The sauce will darken in color as it cooks.",
+        "Towards the last 15 minutes of cooking time, boil 2 cups of pilau, or basmati rice in a pan.",
+        "To serve- spoon the curry over the top of the rice. Sprinkle the chopped coriander leaves over the curry, and serve immediately."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AChicken_Vindaloo"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:44:53.763Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Carpathia at English Wikibooks",
+      "imageLicense": {
+        "name": "Public domain",
+        "url": ""
+      }
+    },
+    {
+      "id": "ghevar",
+      "slug": "ghevar",
+      "title": "Ghevar",
+      "image": "/recipe-images/ghevar.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "2 hr",
+      "servings": null,
+      "ingredients": [
+        "Sugar syrup:",
+        "1 cup white granulated sugar",
+        "½ cup water",
+        "Ghevar:",
+        "1 ¾ cups (200 grams) plain flour (maida)",
+        "1 tbsp (10 grams) arrowroot starch or cornstarch",
+        "¼ cup melted ghee, cooled",
+        "A few drops kewda essence (extract of Pandanus flower)"
+      ],
+      "instructions": [
+        "Sugar syrup:",
+        "Combine the sugar and water in a saucepan. Simmer until it reaches a 1-string consistency syrup.",
+        "Remove from the heat and keep warm.",
+        "Ghevar:",
+        "Combine the flour, arrowroot, and melted ghee in a bowl.",
+        "Very gradually add 1 cup of water in a thin stream, whisking continuously and taking care to see that an emulsion is formed and the water and ghee do not separate.",
+        "Add 2 more cups of water again in a thin stream while whisking continuously. At no point should the ghee and water separate. The batter should be of a very thin coating consistency, a little thinner than crêpe batter. More water can be added if required to achieve the required consistency. Keep the batter in a cool place away from the heat.",
+        "Add melted ghee to a kadhai or other pot/pan. If desired, place a ghevar mould or other metal ring mould in the pan. The ghee should come up to ¾ of the height of the mould.",
+        "Heat the pan over medium heat, and gradually pour a ladleful of the batter directly into the centre of the mould in a very thin stream. The batter should froth and migrate towards the edges of the mold.",
+        "When the froth subsides, gradually add another spoonful to the centre in a thin stream. If the batter builds up in the center, use a skewer to push it towards the edges and maintain a hole in the center. Repeat seven times, adding the batter to the centre hole each time.",
+        "Increase the heat, and pour a few ladlefuls of hot ghee into the centre to help the ghevar cook.",
+        "When the centre is firm and cooked and the whole thing is golden brown, pull the ghevar out gently by inserting a wooden skewer in the centre and pulling it out of the ghee. Let any excess ghee drip off.",
+        "Immerse ghevar in sugar syrup, drain quickly, and place on a serving plate.",
+        "Repeat the cooking steps, using the remaining batter to make 9 pieces of ghevar."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AGhevar_(Rajasthani_Honeycomb_Fritter)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:45:08.778Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Meghana78",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "matar-paneer",
+      "slug": "matar-paneer",
+      "title": "Matar Paneer",
+      "image": "/recipe-images/matar-paneer.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "40 min",
+      "servings": "3 servings",
+      "ingredients": [
+        "6 tablespoons oil",
+        "8 oz (200 g) paneer, cut in 1” cubes",
+        "1 teaspoon ginger-garlic paste",
+        "1 cup chopped onions",
+        "1 cup puréed tomatoes",
+        "3 green chilies, seeded and finely chopped",
+        "½ teaspoon cumin seeds",
+        "¼ teaspoon turmeric powder",
+        "½ teaspoon red chilli powder",
+        "1 teaspoon coriander powder",
+        "Garam masala",
+        "1 teaspoon salt",
+        "½ cup peas",
+        "¾ cup (200 ml) water",
+        "1 tablespoon chopped coriander"
+      ],
+      "instructions": [
+        "Frying paneer:",
+        "Heat some oil in a deep pan.",
+        "Add paneer cubes in it. Fry on all the sides over medium-low heat until golden brown.",
+        "Remove paneer from the pan, and drain on paper towels.",
+        "Gravy:",
+        "Remove excess oil from the same pan, and add ginger-garlic paste.",
+        "Add chopped onion to it. Cook, stirring, until onion becomes translucent.",
+        "Add chopped tomatoes and mix. Cook well over medium heat.",
+        "Turn off the heat when tomatoes have left all the water. Let cool.",
+        "Transfer mixture to a blender, and add the chiles.",
+        "Blend until smooth.",
+        "Matar paneer:",
+        "Heat oil in a pan.",
+        "Add cumin seeds, and fry until they start to crackle.",
+        "Add turmeric, chilli powder, coriander powder, and garam masala. Mix well over low heat.",
+        "Add the blended purée, and mix well over medium heat.",
+        "Season with salt, then mix in the peas.",
+        "Add some water, cover, and steam until the peas are fully cooked.",
+        "Uncover and add the fried paneer. Mix well, adding more water if required.",
+        "Tadka:",
+        "Heat a small pan/tadka pan.",
+        "Add 1 tsp oil and ½ tsp red chilli powder. Mix well.",
+        "Turn off the gas and add to the matar paneer while serving."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AMatar_Paneer"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:45:34.724Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Sonja Pauen - Stanhopea",
+      "imageLicense": {
+        "name": "CC BY 2.0 de",
+        "url": "https://creativecommons.org/licenses/by/2.0/de/deed.en"
+      }
+    },
+    {
+      "id": "deep-fried-chiles-stuffed-with-potato",
+      "slug": "deep-fried-chiles-stuffed-with-potato",
+      "title": "Deep Fried Chiles Stuffed with Potato",
+      "image": "/recipe-images/deep-fried-chiles-stuffed-with-potato.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": null,
+      "ingredients": [
+        "Large green chiles",
+        "Filling:",
+        "3 large potatoes",
+        "1 tsp red chile powder",
+        "Chaat masala",
+        "½ cup coriander leaves, chopped fine",
+        "Salt to taste",
+        "Batter:",
+        "1 cup gram flour (besan)",
+        "2 pinches turmeric powder",
+        "Salt to taste",
+        "Water as required"
+      ],
+      "instructions": [
+        "Slit the chiles, remove seeds, and set aside.",
+        "Boil potatoes in salted water. Peel and mash them well. Add chili powder, chaat masala, and coriander leaves. Mix well.",
+        "Make a thick batter with the flour, water, turmeric powder and salt.",
+        "Fill the chiles with the potato mix. Dip the filled chiles in the batter so they are completely covered.",
+        "Deep fry the battered chiles in preheated oil until they turn golden brown."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ADeep_Fried_Chiles_Stuffed_with_Potato_(Mirchi_Bada)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:45:02.634Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Mehta.ankit at English Wikipedia",
+      "imageLicense": {
+        "name": "Public domain",
+        "url": ""
+      }
+    },
+    {
+      "id": "khandvi",
+      "slug": "khandvi",
+      "title": "Khandvi",
+      "image": "/recipe-images/khandvi.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": null,
+      "ingredients": [
+        "Batter:",
+        "½ cup besan (gram/chickpea flour)",
+        "1 cup buttermilk (light variety if available, otherwise dilute with a 4 tablespoons of water)",
+        "1 teaspoon ground ginger",
+        "½ teaspoon turmeric",
+        "½ teaspoon red chilli powder",
+        "Salt to taste",
+        "Garnish:",
+        "1 ½ teaspoons mustard seeds",
+        "1 teaspoon sesame seeds",
+        "15–20 curry leaves, slivered",
+        "1 jalapeño, very finely diced",
+        "1–2 tablespoons grated coconut"
+      ],
+      "instructions": [
+        "Combine the batter ingredients to make a smooth batter. Mix well with a whisk to ensure there are no lumps.",
+        "Heat a wok or pan over medium-low heat, and add 2–3 teaspoons of oil.",
+        "Add the batter to the wok. Begin stirring the batter continuously to prevent the formation of lumps during cooking. Continue stirring until the mixture thickens almost to a dough.",
+        "Spread a small amount of the mixture on a greased surface to form a thin layer. Let cool, and try rolling it up. If you can't roll it up, the mixture needs to be cooked more.",
+        "When the mixture is ready, quickly spread it in a very thin layer on a greased sheet. It should be thinner than a crêpe. Let cool.",
+        "Cut the cooled layer into strips, and roll the strips up.",
+        "Garnish with the mustard seeds, sesame seeds, curry leaves, jalapeño, and coconut."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AKhandvi_(Rolled_Chickpea_Noodles)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:45:23.459Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "w:User:Pmahale",
+      "imageLicense": {
+        "name": "Public domain",
+        "url": ""
+      }
+    },
+    {
+      "id": "puri",
+      "slug": "puri",
+      "title": "Puri",
+      "image": "/recipe-images/puri.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": null,
+      "ingredients": [
+        "2 oz (60 g) whole-wheat flour",
+        "2 oz (60 g) plain white flour",
+        "2 oz fine semolina",
+        "¼ tsp salt",
+        "1 tbsp vegetable oil for the dough",
+        "About 500 ml (1 pint) vegetable oil for deep frying",
+        "Water to mix the dough"
+      ],
+      "instructions": [
+        "Dough:",
+        "Put all the dry ingredients into a bowl.",
+        "Add salt and drizzle the 1 tbsp oil over top. Mix well.",
+        "Gradually mix in enough water to get a stiff dough.",
+        "Knead the dough well for a few minutes.",
+        "Cover the dough and leave to rest for about half an hour.",
+        "Frying:",
+        "Pour the oil for deep frying in a wok or other deep pan. Heat the oil.",
+        "Meanwhile, divide the dough into 8 small balls and roll each into a small circle (about 3 in / 7.5 cm in diameter). You can use a bit of hot oil to roll the dough so it will not stick to the surface.",
+        "Check if the oil is hot enough—when you put a tiny piece of dough in the oil it should immediately rise to the surface. When the oil is ready, lay the flattened dough over the oil, press the top slightly with the slotted spoon until it inflates itself, and turn to other side. Adjust the flame as necessary.",
+        "Remove the puri from the oil after it turns golden brown and place on a wire rack or kitchen paper towel for excess oil to drain."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3APuri_(Indian_Fried_Flatbread)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:45:47.215Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Daiju Azuma",
+      "imageLicense": {
+        "name": "CC BY-SA 2.5",
+        "url": "https://creativecommons.org/licenses/by-sa/2.5"
+      }
+    },
+    {
+      "id": "gulab-jamun",
+      "slug": "gulab-jamun",
+      "title": "Gulab Jamun",
+      "image": "/recipe-images/gulab-jamun.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": null,
+      "ingredients": [
+        "Fritters:",
+        "3 cups (720 ml) dry milk powder",
+        "1 cup (240 ml) Bisquick baking mix",
+        "A little over ¾ cup (200 ml) warm milk",
+        "2 Tbsp butter, melted",
+        "Syrup:",
+        "2 cups (480 ml) water",
+        "2 ½ cups (600 ml) white granulated sugar",
+        "4 cardamom pods"
+      ],
+      "instructions": [
+        "Fritters:",
+        "Preheat canola oil 1.5–2 inches (4–5 cm) deep in a small saucepan over medium heat.",
+        "Combine the milk powder, Bisquick, and melted butter in a metal bowl.",
+        "Slowly add the warmed milk, 2 Tbsp at a time. Use a wooden spoon to mix the dry ingredients into a dough ball. Continue adding milk until all dry ingredients have been incorporated. The dough should be firm and moist, but not sticky. If you put too much milk, add a bit more dry mixture (maintaining the ratio of 3 parts milk powder to 1 part bisquick).",
+        "Roll into evenly sized balls (if they are not even, they will not cook at the same rate). Since the balls dry out quickly, do not wait more than a few minutes before frying.",
+        "Drop a few balls into the oil—don't overfill the pan, since they will get larger as they cook. They will sink to the bottom, then float to the top of the oil. Stir regularly to keep them browning evenly.",
+        "When dark brown, remove from the oil and place on paper to absorb any excess.",
+        "Repeat until all the dough is used up.",
+        "Syrup:",
+        "Break cardamom seeds from their pods.",
+        "Separate seeds, and bash them to release flavor.",
+        "Mix water, syrup, and cardamom and heat for 10 minutes—do not overheat or the syrup will caramelize.",
+        "Soak the finished fritters in the syrup overnight.",
+        "Serve hot or cold."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AGulab_Jamun_(Fried_Milk_Balls_in_Syrup)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:45:11.030Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "No machine-readable author provided. Quadell assumed (based on copyright claims)",
+      "imageLicense": {
+        "name": "CC BY-SA 3.0",
+        "url": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "thalassery-biryani",
+      "slug": "thalassery-biryani",
+      "title": "Thalassery Biryani",
+      "image": "/recipe-images/thalassery-biryani.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "1 hr",
+      "servings": "4 servings",
+      "ingredients": [
+        "Rice:",
+        "750 g (3 cups) khaima or jeerakasala rice",
+        "3 tbsp ghee",
+        "1 tsp dalda (vanaspati)",
+        "Cinnamon sticks, as needed",
+        "3–4 whole cloves",
+        "3–4 cardamom pods",
+        "⅔ leaves Malabar leaf (Indian bay leaf)",
+        "¼ tsp kaskas (Indian white poppy seeds)",
+        "¾ pieces star anise (optional)",
+        "Masala:",
+        "⅓ cup coconut oil",
+        "6 ea. (500 g) finely-chopped onion",
+        "¼ cup (~50 g) cashew nuts",
+        "¼ cup (~50 g) kismis (sultana raisins)",
+        "1 pinch yellow/orange artificial food colour",
+        "1 tsp saffron, soaked in milk",
+        "5 ea. medium tomatoes, chopped",
+        "2-inch piece fresh ginger, grated or cut into small pieces",
+        "1–1.5 cloves garlic, or to taste",
+        "6 green chiles, or to taste",
+        "5 shallots, or to taste",
+        "1 tsp fennel seeds",
+        "1 tsp cumin seeds",
+        "½ tsp turmeric powder",
+        "3–4 pieces mace",
+        "1 tsp red chile powder",
+        "1 kg chicken, cut into slightly bigger pieces than usually used for curry, soaked 20 minutes in water and washed",
+        "3 tbsp lime juice",
+        "½ tbsp garam masala powder",
+        "¾–1 cup (~1 bunch) coriander leaves, chopped",
+        "¾–1 cup (~1 bunch) pudina (mint) leaves, chopped",
+        "½ tsp black pepper powder",
+        "Diluted yogurt, to taste",
+        "Table salt to taste",
+        "Assembly:",
+        "1 tbsp edible rose water"
+      ],
+      "instructions": [
+        "Rice:",
+        "Wash the rice in water, and drain completely.",
+        "Heat the ghee and a small amount of dalda in a kadai. Add the drained rice and fry for a few minutes.",
+        "Add water to the rice in a ratio of 1¾:1 water to rice.",
+        "Add cinnamon, cloves, cardamom, bay leaf, Indian white poppy seeds, star anise, and lemon juice. Reduce to a simmer, cover the pan, and cook until all the water is absorbed.",
+        "Masala:",
+        "Heat the coconut oil and a little ghee in a deep kadai. Add chopped onions, cashew nuts, and sultana raisins, then fry until it caramel in colour. Remove from the heat and set aside.",
+        "Heat the chopped tomatoes and a little water in a deep kadai (do not add oil) until the tomatoes are softened.",
+        "Add crushed ginger, garlic, chopped green chili, and chopped shallot. Stir until the raw smell fades.",
+        "Stir in fennel seeds, cumin seeds, turmeric powder, mace, and red chili powder.",
+        "Mix in the chicken. Cover and cook, stirring intermittently to prevent sticking, until almost cooked.",
+        "Add ¼ of the fried onion mixture, lemon juice, garam masala powder, chopped coriander leaves, and pudina (mint) leaves. Reduce to a simmer.",
+        "Add black pepper powder and yogurt, and cook until the chicken and masala mixture blend together.",
+        "Assembly:",
+        "Combine the rice, remaining onion mixture, artificial color, saffron milk, and rosewater.",
+        "Layer the masala and rice in a dish, and cover with the lid, tightly sealing the lid with a maida dough or dishcloth.",
+        "Place hot coals or charcoal on the lid while cooking. The flame need to be in a simmer mode in this stage of preparation.",
+        "Serve."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AThalassery_Biryani"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:46:04.567Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Sheetal",
+      "imageLicense": {
+        "name": "CC BY 2.5",
+        "url": "https://creativecommons.org/licenses/by/2.5"
+      }
+    },
+    {
+      "id": "bonda",
+      "slug": "bonda",
+      "title": "Bonda",
+      "image": "/recipe-images/bonda.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": null,
+      "ingredients": [
+        "Filling:",
+        "2 medium-sized potatoes",
+        "1 medium-sized onions",
+        "3–4 medium-sized green chiles",
+        "2 tbsp, finely-chopped coriander leaves",
+        "1 tsp finely-chopped ginger",
+        "1 tsp finely-chopped Garlic",
+        "Salt to taste",
+        "Batter:",
+        "4 portions gram flour (besan)",
+        "1 portion rice flour",
+        "½ tsp baking soda",
+        "Salt to taste",
+        "Water or beer",
+        "Other:",
+        "Oil for frying"
+      ],
+      "instructions": [
+        "Filling:",
+        "Boil potatoes, remove skin, and mash coarsely.",
+        "Heat 2 tbsp of oil in a pan. When the oil is hot, throw in green chilies and fry for a few seconds.",
+        "Add onions and fry until browned.",
+        "Add ginger and garlic and fry for a minute.",
+        "Add the chopped coriander leaves and mashed potatoes and fold well.",
+        "Allow it to cool and shape into small golf ball-sized balls.",
+        "Batter:",
+        "Mix the gram flour and the rice flour with baking soda. Add salt to taste.",
+        "Add enough water or beer to make a smooth batter. The batter consistency should be slightly thicker than ketchup.",
+        "Assembly:",
+        "Once the batter and filling are ready, heat some oil in a deep pan. The oil should be at least 1½ inch (4 cm) deep for deep-frying.",
+        "Dip the filling balls in the batter, making sure they are completely coated, and drop into the hot oil. Don't overcrowd the pan.",
+        "Fry the bonda until golden, then remove from the oil.",
+        "Serve with ketchup or chutney."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ABonda_(South_Indian_Vegetable_Fritter)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:44:45.172Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "No machine-readable author provided. Pamri assumed (based on copyright claims).",
+      "imageLicense": {
+        "name": "Public domain",
+        "url": ""
+      }
+    },
+    {
+      "id": "jigarthanda-milk",
+      "slug": "jigarthanda-milk",
+      "title": "Jigarthanda Milk",
+      "image": "/recipe-images/jigarthanda-milk.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": null,
+      "ingredients": [
+        "Jelly:",
+        "2 tbsp badam pisin (almond gum)",
+        "1 cup (250 ml) water",
+        "Nannari/sarsaparilla syrup:",
+        "25 g Indian sarsaparilla root",
+        "300 ml water",
+        "150 g sugar",
+        "Jigarthanda ice cream:",
+        "1 ½ L full-fat milk",
+        "¼ cup sugar",
+        "2 tbsp sugar",
+        "3 tbsp khova (milk solids)",
+        "½ cup cream",
+        "Jigarthanda milk:",
+        "1 L full-fat milk",
+        "¼ cup sugar"
+      ],
+      "instructions": [
+        "Jelly:",
+        "Wash and soak almond gum in the water for 3–4 hours or overnight. It should expand in size and form a jelly.",
+        "Keep it in an airtight container in the fridge.",
+        "Nannari syrup:",
+        "Wash and crush the sarsaparilla root.",
+        "Bring the water to a boil in a saucepan, then add the sarsaparilla.",
+        "Reduce the heat, and simmer until the water is reduced by half.",
+        "Add the sugar, and cook until you get a one-string syrup.",
+        "Cool the syrup, then store in air-tight container.",
+        "Jigarthanda ice cream:",
+        "Boil the milk, stirring continuously until it is frothy. Collect the malai (thick cream) that forms.",
+        "Beat the fresh cream, and stir it into the milk. Reduce the heat to medium-low.",
+        "Stir in the ¼ cup sugar until completely dissolved.",
+        "Add the milk solids, and mix well. Let cool slightly.",
+        "Heat the 2 tbsp sugar in a heavy-bottomed saucepan over low heat until it melts and caramelizes.",
+        "Quickly and carefully add the hot milk mixture. It will sizzle. If the caramel seizes, keep heating it and it will melt in slowly.",
+        "Let cool, then pour into an airtight container and cover it with cling wrap. Freeze for 4–5 hours.",
+        "Once it sets, beat it well using a whisk or a blender. Repeat 3–4 times for creamier ice cream.",
+        "Freeze for 5–6 hours.",
+        "Jigarthanda milk:",
+        "Simmer the milk in a heavy-bottomed saucepan until it is thickened and reduced to half its volume. Collect the malai (thick cream) that forms, and reserve it.",
+        "In another pan, gently heat the sugar until it melts and caramelizes.",
+        "Stir the caramel into the milk. Mix it well until it is fully dissolved and the milk turns golden in color.",
+        "Simmer the milk for 10 minutes.",
+        "Let it cool and keep it in fridge.",
+        "Assembly:",
+        "Add 1–2 tbsp soaked almond gum and 1 tbsp sarsaparilla syrup to a tall glass.",
+        "Add enough jigarthanda milk to fill the glass ¾ full.",
+        "Add a scoop of the jigarthanda ice cream.",
+        "Top with the collected malai, and serve immediately."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AJigarthanda_Milk"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:45:18.997Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Safeena Haslyn",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "rasam",
+      "slug": "rasam",
+      "title": "Rasam",
+      "image": "/recipe-images/rasam.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": null,
+      "ingredients": [
+        "Rasam powder:",
+        "2 tsp oil or ghee",
+        "1 tbsp coriander seeds",
+        "3–4 dried red chillies",
+        "1 tsp cumin seeds",
+        "1 small pinch asafoetida",
+        "Dhal:",
+        "14 g (½ oz) toovar dhal (also called red gram dhal)",
+        "1 tsp turmeric",
+        "1 tsp cooking oil",
+        "3 tomatoes",
+        "1–2 tsp tamarind paste",
+        "Salt",
+        "1 tsp sugar (jaggery or palm sugar is good too)",
+        "Water—the amount depends on the amount of rasam required as it is meant to be very watery.",
+        "Mustard seed seasoning:",
+        "1 tbsp ghee (or butter and oil)",
+        "1 tsp black mustard seeds",
+        "1 tsp urad dhal or cumin seeds",
+        "2 dried red chillies",
+        "4 curry leaves",
+        "1 handful of chopped coriander leaves (cilantro)"
+      ],
+      "instructions": [
+        "Rasam powder:",
+        "Fry the all the ingredients together, adding asafoetida last, in a skillet with oil or ghee. Toast until the spices start to brown slightly.",
+        "Grind everything to a powder. Note that coriander seed is very difficult to powder.",
+        "Dhal:",
+        "Wash the toovar dhal thoroughly until the water runs clear.",
+        "Cover with double the quantity of water, turmeric powder and teaspoon of oil. Cook in a microwave for half an hour, a pressure cooker, or slowly on a stove, covered. The dhal should develop a mushy consistency.",
+        "Cut the tomatoes into 4 pieces, put them in a saucepan full of water, and bring to the boil.",
+        "Add tamarind, salt and teaspoon of sugar. The tamarind is usually very bitter, so add only a little at a time. Tamarind can be added later to adjust the flavour.",
+        "When the tomatoes are half cooked add the cooked dal.",
+        "Add enough rasam powder to give the desired taste, usually 4–5 teaspoons. It should be reasonably spicy, and neither the tamarind or sugar should dominate. Stir and keep simmering.",
+        "In a small pan, heat the ghee for the mustard seed seasoning and add the mustard seeds, urad dhal, chillies and curry leaves. The dhal should start to go brown and the mustard seeds will start spitting. Don't burn any of the spices—it's easy to do. Once cooked, pour the seasoning into the rest of the rasam straight away and stir it through.",
+        "Add chopped coriander leaves. Serve with hot and soft plain boiled rice."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ARasam_(Tamarind_and_Tomato_Soup)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:45:49.944Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Rameshng",
+      "imageLicense": {
+        "name": "CC BY-SA 3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0"
       }
     }
   ]

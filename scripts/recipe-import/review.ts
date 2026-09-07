@@ -49,7 +49,10 @@ export function reviewOne(r: StagedRecipe, seen: Map<string, string>, existing: 
     if (BOILERPLATE.test(s)) add('instructions', `boilerplate: "${s.slice(0, 60)}"`);
     if (s.length < 4) add('instructions', `step too short: "${s}"`);
   }
-  if (new Set(r.ingredients).size !== r.ingredients.length) add('ingredients', 'duplicate lines');
+  // Grouped recipes legitimately repeat an ingredient across groups ("Salt to taste" in both
+  // the filling and the batter), so only flag repeats in an ungrouped list.
+  const grouped = r.ingredients.some((i) => /:$/.test(i.trim()));
+  if (!grouped && new Set(r.ingredients).size !== r.ingredients.length) add('ingredients', 'duplicate lines');
 
   // --- times: present values must be internally consistent ---
   const p = durationToMinutes(r.prepTime), c = durationToMinutes(r.cookTime), t = durationToMinutes(r.totalTime);
