@@ -226,10 +226,12 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
           <div className="p-5 sm:p-6 min-w-0">
           <h1 className="font-serif text-[28px] sm:text-[36px] leading-[1.2] font-medium tracking-[-0.01em] text-sand-900 [text-wrap:balance]">{recipe.title}</h1>
 
-          {/* One facts row: icons carry the labels visually, sr-only text keeps them
-              for screen readers, title= gives sighted users the word on hover. */}
-          {(times.prep || times.cook || times.total || servingsText || src.name || src.url) && (
-            <div data-meta className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] sm:text-[15px] text-sand-600 tabular">
+          {/* One row for everything below the title: stats left, actions right.
+              Icons carry the stat labels visually; sr-only text keeps them for screen
+              readers, title= gives sighted users the word on hover. The source moved
+              into the ⋯ menu (and stays visible in print below). */}
+          <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3">
+            <div data-meta className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] sm:text-[15px] text-sand-600 tabular">
               {times.prep && (
                 <span className="inline-flex items-center gap-1.5" title="Prep time">
                   <UtensilsIcon className="w-4 h-4 text-sand-500" /><span className="sr-only">Prep time</span>{times.prep}
@@ -250,25 +252,10 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
                   <UsersIcon className="w-4 h-4 text-sand-500" /><span className="sr-only">Servings</span>{servingsText}
                 </span>
               )}
-              {(src.name || src.url) && (
-                <span className="inline-flex items-center gap-1.5 min-w-0">
-                  <span className="text-sand-500">{variant === 'shared' ? 'Shared from' : 'Source'}</span>
-                  {src.url ? (
-                    <a href={src.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sand-800 underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800 inline-flex items-center gap-1 truncate">
-                      {src.name}
-                      <ExternalIcon className="w-3.5 h-3.5 text-sand-500 shrink-0" />
-                    </a>
-                  ) : (
-                    <span className="text-sand-800 truncate">{src.name}</span>
-                  )}
-                  {src.author && <span className="text-sand-500 truncate">· {src.author}</span>}
-                </span>
-              )}
             </div>
-          )}
 
-          {/* Actions — one clear primary. Everything else is available, not advertised. */}
-          <div className="mt-5 flex items-center gap-1.5 no-print">
+            {/* Actions — one clear primary. Everything else lives in the ⋯ menu. */}
+            <div className="ml-auto flex items-center gap-1.5 no-print">
             {recipe.instructions.length > 0 && (
               <button type="button" onClick={openCook} className="btn-primary flex-1 sm:flex-none">
                 <PlayIcon className="w-4 h-4" />
@@ -298,7 +285,19 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
                 <MoreIcon className="w-[18px] h-[18px]" />
               </button>
               {moreOpen && (
-                <div role="menu" className="absolute left-0 top-full mt-1 z-20 min-w-[168px] rounded-xl border border-sand-200 bg-surface shadow-md py-1">
+                <div role="menu" className="absolute right-0 top-full mt-1 z-20 min-w-[188px] rounded-xl border border-sand-200 bg-surface shadow-md py-1">
+                  {src.url && (
+                    <a
+                      role="menuitem"
+                      href={src.url}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      onClick={() => setMoreOpen(false)}
+                      className="w-full text-left px-3 py-2 text-[15px] text-sand-800 hover:bg-sand-100 inline-flex items-center gap-2.5"
+                    >
+                      <ExternalIcon className="w-4 h-4 text-sand-500" /> {src.name || 'Original recipe'}
+                    </a>
+                  )}
                   <button role="menuitem" type="button" onClick={() => { setMoreOpen(false); onShare(); }} className="w-full text-left px-3 py-2 text-[15px] text-sand-800 hover:bg-sand-100 inline-flex items-center gap-2.5">
                     <ShareIcon className="w-4 h-4 text-sand-500" />
                     {shareState === 'copied' ? 'Link copied' : shareState === 'error' ? 'Couldn’t share' : shareState === 'working' ? 'Sharing…' : shareState === 'shown' ? 'Link ready' : 'Share'}
@@ -312,7 +311,16 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
                 </div>
               )}
             </div>
+            </div>
           </div>
+
+          {/* Attribution survives on paper, where there is no menu. */}
+          {(src.name || src.url) && (
+            <p className="hidden print:block mt-3 text-[13px] text-sand-600">
+              {variant === 'shared' ? 'Shared from' : 'Source'}: {src.name}{src.url ? ` — ${src.url}` : ''}
+            </p>
+          )}
+
           {shareState === 'shown' && shareUrl && (
             <div className="mt-3 flex items-center gap-2 max-w-md no-print">
               <input
