@@ -132,7 +132,7 @@ export default function Ingredients({
                       >
                         {done && <CheckIcon className="w-3 h-3" />}
                       </span>
-                      <span className={`text-[17px] leading-[1.55] lg:text-[16px] lg:leading-[1.6] ${done ? 'text-sand-500 line-through decoration-sand-400' : 'text-sand-900'} ${compact ? 'text-[18px]' : ''}`}>
+                      <span className={`text-[17px] leading-[1.55] lg:text-[16px] lg:leading-[1.6] ${done ? 'text-sand-500 line-through decoration-sand-300 hover:decoration-sand-800' : 'text-sand-900'} ${compact ? 'text-[18px]' : ''}`}>
                         {text}
                       </span>
                     </label>

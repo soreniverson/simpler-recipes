@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RecipeGrid from '../../components/RecipeGrid.jsx';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PageShell from '../../components/PageShell.astro';
 import ListingHeader from '../../components/ListingHeader.astro';
 import CleanBoxCard from '../../components/CleanBoxCard.astro';
 import BrowseChips from '../../components/BrowseChips.astro';
@@ -64,17 +64,14 @@ const ld = jsonLd(
     <script type="application/ld+json" is:inline set:html={ld} />
   </Fragment>
 
-  <main id="main-content" class="min-h-screen bg-background">
-    <div class="max-w-[1080px] mx-auto px-4 sm:px-6 py-6 md:py-10">
-      <Breadcrumbs crumbs={crumbs} />
-      <ListingHeader title={collection.name} intro={`${collection.description}.`} count={recipes.length} />
+  <PageShell width="wide" crumbs={crumbs}>
+    <ListingHeader title={collection.name} intro={`${collection.description}.`} count={recipes.length} />
 
-      <section aria-label="Recipes in this collection">
-        <RecipeGrid client:visible recipes={recipes} />
-      </section>
+    <section aria-label="Recipes in this collection">
+      <RecipeGrid client:visible recipes={recipes} />
+    </section>
 
-      <CleanBoxCard id="collection-clean" />
-      <BrowseChips items={others.map((o) => ({ name: o.name, href: `/browse/${o.slug}/`, count: o.count }))} />
-    </div>
-  </main>
+    <CleanBoxCard id="collection-clean" />
+    <BrowseChips items={others.map((o) => ({ name: o.name, href: `/browse/${o.slug}/`, count: o.count }))} />
+  </PageShell>
 </BaseLayout>

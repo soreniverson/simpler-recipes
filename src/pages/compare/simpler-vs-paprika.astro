@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PageShell from '../../components/PageShell.astro';
+import ListingHeader from '../../components/ListingHeader.astro';
 import CleanBoxCard from '../../components/CleanBoxCard.astro';
 
 /**
@@ -36,20 +37,15 @@ const ld = jsonLd(webPageLd({ url: pageUrl, name: 'Simpler Recipes vs Paprika', 
     <script type="application/ld+json" is:inline set:html={ld} />
   </Fragment>
 
-  <main id="main-content" class="min-h-screen bg-background">
-    <article class="max-w-[720px] mx-auto px-4 sm:px-6 py-6 md:py-10">
-      <Breadcrumbs crumbs={crumbs} />
-      <header class="mb-8">
-        <h1 class="font-serif text-[30px] sm:text-[36px] leading-[1.15] font-medium tracking-[-0.01em] text-sand-900">
-          Simpler Recipes vs Paprika
-        </h1>
-        <p class="mt-4 text-[17px] leading-relaxed text-sand-700">
+  <PageShell width="prose" as="article" crumbs={crumbs}>
+      <ListingHeader title="Simpler Recipes vs Paprika">
+        <p class="mt-3 text-[16px] leading-relaxed text-sand-700">
           These are different tools that overlap. The honest verdict up front:
           <strong class="text-sand-900">if you're building a permanent, organized recipe library with grocery lists across devices, buy
-          <a href="https://www.paprikaapp.com/" rel="nofollow" class="underline underline-offset-[3px] decoration-sand-400">Paprika</a> —
+          <a href="https://www.paprikaapp.com/" rel="nofollow" class="underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800">Paprika</a> —
           it's the more complete manager. If you mostly want tonight's recipe without the ads, the essay or an install, Simpler Recipes does that free, right now.</strong>
         </p>
-      </header>
+      </ListingHeader>
 
       <CleanBoxCard id="compare-clean" examples={true} title="See a cleaned recipe" text="Paste any recipe link — no install, no account." class="mb-10" />
 
@@ -94,6 +90,5 @@ const ld = jsonLd(webPageLd({ url: pageUrl, name: 'Simpler Recipes vs Paprika', 
           No grocery list, no native apps, no offline guarantee, no import from other recipe managers. If those are your daily drivers, Paprika earns its price.
         </p>
       </section>
-    </article>
-  </main>
+  </PageShell>
 </BaseLayout>

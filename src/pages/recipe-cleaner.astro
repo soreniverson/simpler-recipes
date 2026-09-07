@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CleanBox from '../components/CleanBox.jsx';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PageShell from '../components/PageShell.astro';
+import ListingHeader from '../components/ListingHeader.astro';
 
 /**
  * Task-intent landing page: "recipe cleaner". The tool IS the page — paste a URL above
@@ -22,13 +23,8 @@ const ld = jsonLd(webPageLd({ url: pageUrl, name: 'Recipe cleaner', description 
     <script type="application/ld+json" is:inline set:html={ld} />
   </Fragment>
 
-  <main id="main-content" class="min-h-screen bg-background">
-    <div class="max-w-[720px] mx-auto px-4 sm:px-6 py-6 md:py-10">
-      <Breadcrumbs crumbs={crumbs} />
-      <header class="mb-7">
-        <h1 class="font-serif text-[32px] sm:text-[38px] leading-[1.15] font-medium tracking-[-0.01em] text-sand-900">Recipe cleaner</h1>
-        <p class="mt-3 text-[17px] text-sand-700">Paste a recipe link. Get the ingredients and the steps — nothing else.</p>
-      </header>
+  <PageShell width="prose" crumbs={crumbs}>
+      <ListingHeader title="Recipe cleaner" intro="Paste a recipe link. Get the ingredients and the steps — nothing else." />
 
       <CleanBox client:load id="cleaner-input" examples={true} autoFocus={false} />
 
@@ -47,10 +43,9 @@ const ld = jsonLd(webPageLd({ url: pageUrl, name: 'Recipe cleaner', description 
         </p>
         <p class="text-[15px]">
           Want to see the end result first? Here's a cleaned recipe from our catalog:
-          <a href="/recipes/chicken-tikka-masala/" class="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800">Chicken Tikka Masala</a>.
-          Curious why recipe pages got this way? <a href="/why-recipe-sites-have-long-stories/" class="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800">We wrote it up</a>.
+          <a href="/recipes/chicken-tikka-masala/" class="text-sand-800 underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800">Chicken Tikka Masala</a>.
+          Curious why recipe pages got this way? <a href="/why-recipe-sites-have-long-stories/" class="text-sand-800 underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800">We wrote it up</a>.
         </p>
       </section>
-    </div>
-  </main>
+  </PageShell>
 </BaseLayout>

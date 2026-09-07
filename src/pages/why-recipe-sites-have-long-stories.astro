@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PageShell from '../components/PageShell.astro';
+import ListingHeader from '../components/ListingHeader.astro';
 import CleanBoxCard from '../components/CleanBoxCard.astro';
 
 /**
@@ -26,22 +27,17 @@ const ld = jsonLd(
     <script type="application/ld+json" is:inline set:html={ld} />
   </Fragment>
 
-  <main id="main-content" class="min-h-screen bg-background">
-    <article class="max-w-[680px] mx-auto px-4 sm:px-6 py-6 md:py-10">
-      <Breadcrumbs crumbs={crumbs} />
-      <header class="mb-8">
-        <h1 class="font-serif text-[30px] sm:text-[36px] leading-[1.15] font-medium tracking-[-0.01em] text-sand-900">
-          Why do recipe websites have such long stories?
-        </h1>
-        <p class="mt-4 text-[17px] leading-relaxed text-sand-700">
+  <PageShell width="prose" as="article" crumbs={crumbs}>
+      <ListingHeader title="Why do recipe websites have such long stories?">
+        <p class="mt-3 text-[16px] leading-relaxed text-sand-700">
           Short answer: because the story pays for the recipe. Ads, search visibility and copyright all reward
           the essay — and sometimes the writer simply has something to say.
         </p>
-      </header>
+      </ListingHeader>
 
       <CleanBoxCard id="story-clean" examples={true} title="Skip to the recipe" text="Paste any recipe link — you'll get the ingredients and steps, nothing else." class="mb-12" />
 
-      <div class="space-y-5 text-[16.5px] leading-relaxed text-sand-700 [&_h2]:font-serif [&_h2]:text-[22px] [&_h2]:font-medium [&_h2]:text-sand-900 [&_h2]:mt-9 [&_a]:text-sand-800 [&_a]:underline [&_a]:underline-offset-[3px] [&_a]:decoration-sand-400 hover:[&_a]:decoration-sand-800">
+      <div class="space-y-5 text-[16.5px] leading-relaxed text-sand-700 [&_h2]:font-serif [&_h2]:text-[22px] [&_h2]:font-medium [&_h2]:text-sand-900 [&_h2]:mt-9 [&_a]:text-sand-800 [&_a]:underline [&_a]:underline-offset-[3px] [&_a]:decoration-sand-300 hover:decoration-sand-800 hover:[&_a]:decoration-sand-800">
         <p>
           You came for the oven temperature. You met three generations of the family, a road trip through
           Tuscany, and a golden retriever named Biscuit. This isn't an accident, and it isn't vanity — it's
@@ -94,6 +90,5 @@ const ld = jsonLd(
           RecipeTin Eats (credited and linked on the page). Or paste any recipe link in the box above.
         </p>
       </div>
-    </article>
-  </main>
+  </PageShell>
 </BaseLayout>

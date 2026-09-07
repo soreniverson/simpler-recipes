@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PageShell from '../../components/PageShell.astro';
+import ListingHeader from '../../components/ListingHeader.astro';
 import CleanBoxCard from '../../components/CleanBoxCard.astro';
 
 /**
@@ -35,20 +36,15 @@ const ld = jsonLd(webPageLd({ url: pageUrl, name: 'Just the Recipe alternative',
     <script type="application/ld+json" is:inline set:html={ld} />
   </Fragment>
 
-  <main id="main-content" class="min-h-screen bg-background">
-    <article class="max-w-[720px] mx-auto px-4 sm:px-6 py-6 md:py-10">
-      <Breadcrumbs crumbs={crumbs} />
-      <header class="mb-8">
-        <h1 class="font-serif text-[30px] sm:text-[36px] leading-[1.15] font-medium tracking-[-0.01em] text-sand-900">
-          A free alternative to Just the Recipe
-        </h1>
-        <p class="mt-4 text-[17px] leading-relaxed text-sand-700">
-          <a href="https://www.justtherecipe.com/" rel="nofollow" class="underline underline-offset-[3px] decoration-sand-400">Just the Recipe</a>
+  <PageShell width="prose" as="article" crumbs={crumbs}>
+      <ListingHeader title="A free alternative to Just the Recipe">
+        <p class="mt-3 text-[16px] leading-relaxed text-sand-700">
+          <a href="https://www.justtherecipe.com/" rel="nofollow" class="underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800">Just the Recipe</a>
           and Simpler Recipes solve the same problem: recipe pages buried under ads and essays.
           The honest one-line difference — <strong class="text-sand-900">Just the Recipe has native mobile apps and a freemium model;
           Simpler Recipes is entirely free on the web, with scaling, printing, meal planning and a pantry included.</strong>
         </p>
-      </header>
+      </ListingHeader>
 
       <CleanBoxCard id="alt-clean" examples={true} title="Try it on any recipe link" text="No sign-up — paste a link and get just the recipe." class="mb-10" />
 
@@ -89,6 +85,5 @@ const ld = jsonLd(webPageLd({ url: pageUrl, name: 'Just the Recipe alternative',
           If you'd rather not manage another subscription: cleaning, unlimited on-device saving, serving scaling, printing, meal planning, a pantry and hands-free Cook Mode are all free here. No account is needed to clean a recipe; a free account adds cross-device sync and a larger monthly allowance for the AI fallback we use on pages without structured recipe data. Cleaned recipes always keep their quantities verbatim and link back to the original author.
         </p>
       </section>
-    </article>
-  </main>
+  </PageShell>
 </BaseLayout>

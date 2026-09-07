@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PageShell from '../../components/PageShell.astro';
 import ListingHeader from '../../components/ListingHeader.astro';
 import fs from 'fs';
 import path from 'path';
@@ -40,9 +40,7 @@ const ld = jsonLd(webPageLd({ url: pageUrl, name: 'Browse recipes', description 
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={ld} />
   </Fragment>
-  <main id="main-content" class="min-h-screen bg-background">
-    <div class="max-w-[1080px] mx-auto px-4 sm:px-6 py-6 md:py-10">
-      <Breadcrumbs crumbs={crumbs} />
+  <PageShell width="wide" crumbs={crumbs}>
       <ListingHeader title="Browse recipes" intro="By ingredient, time and occasion." />
 
       {groups.map((g) => (
@@ -76,6 +74,5 @@ const ld = jsonLd(webPageLd({ url: pageUrl, name: 'Browse recipes', description 
           ))}
         </ul>
       </section>
-    </div>
-  </main>
+  </PageShell>
 </BaseLayout>

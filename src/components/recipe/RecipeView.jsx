@@ -237,7 +237,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
             <p className="mt-2 text-[14px] sm:text-[15px] text-sand-600">
               {variant === 'shared' ? 'Shared from ' : 'From '}
               {src.url ? (
-                <a href={src.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sand-800 underline underline-offset-[3px] decoration-sand-400 hover:decoration-sand-800 inline-flex items-center gap-1">
+                <a href={src.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sand-800 underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800 inline-flex items-center gap-1">
                   {src.name}
                   <ExternalIcon className="w-3.5 h-3.5 text-sand-500" />
                 </a>
