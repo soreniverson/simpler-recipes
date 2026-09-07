@@ -71,7 +71,8 @@ const recipeSchema: Record<string, unknown> = {
   name: recipe.title,
   url: pageUrl,
   mainEntityOfPage: pageUrl,
-  image: rawRecipe.image ? [rawRecipe.image] : undefined,
+  // schema.org requires absolute URLs; self-hosted photos are stored as site-relative paths.
+  image: rawRecipe.image ? [rawRecipe.image.startsWith('http') ? rawRecipe.image : `${SITE}${rawRecipe.image}`] : undefined,
   author: recipe.source?.name ? { '@type': 'Organization', name: prettySiteName(recipe.source.name), url: recipe.source.url } : undefined,
   isBasedOn: recipe.source?.url || undefined,
   prepTime: minutesToIso(prepMin),

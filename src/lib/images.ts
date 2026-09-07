@@ -56,8 +56,19 @@ function preflight(url: string): Promise<string | null> {
   return resolved.get(url)!;
 }
 
+/** Widths generated at import time for self-hosted photos (public/recipe-images/<slug>-<w>.webp). */
+const LOCAL_WIDTHS = [360, 520, 700, 1000];
+
 export function optimizeRemote(url: string | null | undefined, width: number, height: number, quality = 72): Promise<OptimizedImage | null> {
-  if (!url || !/^https?:\/\//.test(url)) return Promise.resolve(null);
+  if (!url) return Promise.resolve(null);
+  // Openly-licensed photos we host ourselves are already resized and converted at import time,
+  // so there is nothing to fetch — just pick the smallest variant that covers the request.
+  // Without this the whole pipeline returns null for them and the cards render no <img> at all.
+  if (url.startsWith('/recipe-images/')) {
+    const w = LOCAL_WIDTHS.find((x) => x >= width) ?? LOCAL_WIDTHS[LOCAL_WIDTHS.length - 1];
+    return Promise.resolve({ src: url.replace(/\.webp$/, `-${w}.webp`), width, height, remote: false });
+  }
+  if (!/^https?:\/\//.test(url)) return Promise.resolve(null);
   const key = `${url}|${width}x${height}|${quality}`;
   if (!outputs.has(key)) {
     outputs.set(
