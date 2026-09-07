@@ -5,10 +5,10 @@ import CookMode from './CookMode';
 import { TimerBar, TimerAlarm } from './Timers';
 import { preparedIngredientLines } from '../../lib/recipe/prepared';
 import { getCookState, toggleIngredient, toggleStep, setCookState, COOK_STATE_EVENT } from '../../lib/cookState';
-import { metaLine, sourceInfo, recipeAsText, displayTimes, displayServings, servingsCount } from '../../lib/recipe/display';
+import { sourceInfo, recipeAsText, displayTimes, displayServings, servingsCount } from '../../lib/recipe/display';
 import { safeImageSrc } from '../../lib/recipe/href';
 import { isFavorite, toggleFavorite, getExtractedFavorites, addExtractedFavorite, removeExtractedFavorite } from '../../utils/favorites';
-import { PlayIcon, HeartIcon, ShareIcon, PrintIcon, CopyIcon, ExternalIcon, SparklesIcon, ImagePlaceholderIcon, MoreIcon } from './Icons';
+import { PlayIcon, HeartIcon, ShareIcon, PrintIcon, CopyIcon, ExternalIcon, SparklesIcon, ImagePlaceholderIcon, MoreIcon, ClockIcon, FlameIcon, UtensilsIcon, UsersIcon } from './Icons';
 
 /**
  * The recipe page. One component for curated (/recipes/slug), extracted (/recipe?r=id) and shared (/r/id).
@@ -28,8 +28,8 @@ import { PlayIcon, HeartIcon, ShareIcon, PrintIcon, CopyIcon, ExternalIcon, Spar
  */
 export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'curated', shareId, remix, children }) {
   const src = useMemo(() => sourceInfo(recipe, sourceUrl), [recipe, sourceUrl]);
-  const meta = useMemo(() => metaLine(recipe), [recipe]);
   const times = useMemo(() => displayTimes(recipe), [recipe]);
+  const servingsText = useMemo(() => displayServings(recipe), [recipe]);
 
   // ---- cook state (checked ingredients/steps, servings, current step) ----
   const [state, setState] = useState(() => ({ ingredients: [], steps: [], currentStep: 0, servings: null }));
@@ -204,51 +204,67 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
           excess height gets distributed INTO row 1, opening a void between the
           header and the instructions card. Row 1 hugs the header; row 2 takes the rest. */}
       <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:grid-rows-[auto_1fr] lg:gap-x-10 lg:gap-y-8 lg:items-start">
-      {/* ---------- Header ---------- */}
+      {/* ---------- Header: image + facts in one card, matching the two panels ---------- */}
       <header className="mb-7 sm:mb-9 lg:col-start-1 lg:row-start-1 min-w-0">
-        {image && !imgFailed && (
-          <div className="-mx-4 sm:mx-0 mb-6 sm:rounded-2xl overflow-hidden bg-sand-100 aspect-[16/9] lg:aspect-[2/1] print:hidden">
-            <img
-              src={image}
-              alt=""
-              width={800}
-              height={450}
-              className="w-full h-full object-cover dark:brightness-90"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-              referrerPolicy="no-referrer"
-              onError={() => setImgFailed(true)}
-            />
-          </div>
-        )}
-        <div className="min-w-0">
+        <div className="rounded-2xl border border-sand-200 bg-surface overflow-hidden print:border-0">
+          {image && !imgFailed && (
+            <div className="bg-sand-100 aspect-[16/9] lg:aspect-[2/1] print:hidden">
+              <img
+                src={image}
+                alt=""
+                width={800}
+                height={450}
+                className="w-full h-full object-cover dark:brightness-90"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                referrerPolicy="no-referrer"
+                onError={() => setImgFailed(true)}
+              />
+            </div>
+          )}
+          <div className="p-5 sm:p-6 min-w-0">
           <h1 className="font-serif text-[28px] sm:text-[36px] leading-[1.2] font-medium tracking-[-0.01em] text-sand-900 [text-wrap:balance]">{recipe.title}</h1>
 
-          {(meta.length > 0 || times.total) && (
-            <p data-meta className="mt-2 text-[14px] sm:text-[15px] text-sand-600 tabular flex flex-wrap gap-x-2 gap-y-1">
-              {meta.map((m, i) => (
-                <span key={i} className="inline-flex items-center gap-2">
-                  {m}
-                  {i < meta.length - 1 && <span className="text-sand-400" aria-hidden="true">·</span>}
+          {/* One facts row: icons carry the labels visually, sr-only text keeps them
+              for screen readers, title= gives sighted users the word on hover. */}
+          {(times.prep || times.cook || times.total || servingsText || src.name || src.url) && (
+            <div data-meta className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] sm:text-[15px] text-sand-600 tabular">
+              {times.prep && (
+                <span className="inline-flex items-center gap-1.5" title="Prep time">
+                  <UtensilsIcon className="w-4 h-4 text-sand-500" /><span className="sr-only">Prep time</span>{times.prep}
                 </span>
-              ))}
-            </p>
-          )}
-
-          {(src.name || src.url) && (
-            <p className="mt-2 text-[14px] sm:text-[15px] text-sand-600">
-              {variant === 'shared' ? 'Shared from ' : 'From '}
-              {src.url ? (
-                <a href={src.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sand-800 underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800 inline-flex items-center gap-1">
-                  {src.name}
-                  <ExternalIcon className="w-3.5 h-3.5 text-sand-500" />
-                </a>
-              ) : (
-                <span className="text-sand-800">{src.name}</span>
               )}
-              {src.author && <span className="text-sand-500"> · {src.author}</span>}
-            </p>
+              {times.cook && (
+                <span className="inline-flex items-center gap-1.5" title="Cook time">
+                  <FlameIcon className="w-4 h-4 text-sand-500" /><span className="sr-only">Cook time</span>{times.cook}
+                </span>
+              )}
+              {times.total && (
+                <span className="inline-flex items-center gap-1.5" title="Total time">
+                  <ClockIcon className="w-4 h-4 text-sand-500" /><span className="sr-only">Total time</span>{times.total}
+                </span>
+              )}
+              {servingsText && (
+                <span className="inline-flex items-center gap-1.5" title="Servings">
+                  <UsersIcon className="w-4 h-4 text-sand-500" /><span className="sr-only">Servings</span>{servingsText}
+                </span>
+              )}
+              {(src.name || src.url) && (
+                <span className="inline-flex items-center gap-1.5 min-w-0">
+                  <span className="text-sand-500">{variant === 'shared' ? 'Shared from' : 'Source'}</span>
+                  {src.url ? (
+                    <a href={src.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sand-800 underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800 inline-flex items-center gap-1 truncate">
+                      {src.name}
+                      <ExternalIcon className="w-3.5 h-3.5 text-sand-500 shrink-0" />
+                    </a>
+                  ) : (
+                    <span className="text-sand-800 truncate">{src.name}</span>
+                  )}
+                  {src.author && <span className="text-sand-500 truncate">· {src.author}</span>}
+                </span>
+              )}
+            </div>
           )}
 
           {/* Actions — one clear primary. Everything else is available, not advertised. */}
@@ -310,6 +326,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
               <button type="button" className="btn-secondary btn-sm" onClick={() => { setShareUrl(null); setShareState('idle'); }}>Done</button>
             </div>
           )}
+          </div>
         </div>
       </header>
 
