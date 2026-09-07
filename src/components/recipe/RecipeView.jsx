@@ -203,12 +203,15 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
       {/* Explicit rows: the ingredients aside spans both, and without auto/1fr its
           excess height gets distributed INTO row 1, opening a void between the
           header and the instructions card. Row 1 hugs the header; row 2 takes the rest. */}
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:grid-rows-[auto_1fr] lg:gap-x-10 lg:gap-y-8 lg:items-start">
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:grid-rows-[auto_1fr] lg:gap-6 lg:items-start">
       {/* ---------- Header: image + facts in one card, matching the two panels ---------- */}
-      <header className="mb-7 sm:mb-9 lg:col-start-1 lg:row-start-1 min-w-0">
-        <div className="rounded-2xl border border-sand-200 bg-surface overflow-hidden print:border-0">
+      {/* One uniform gap between the three cards: mb-6 stacked, lg:gap-6 in the grid.
+          No overflow-hidden on the card — it would clip the ⋯ dropdown; the image
+          rounds its own top corners instead. */}
+      <header className="mb-6 lg:mb-0 lg:col-start-1 lg:row-start-1 min-w-0">
+        <div className="rounded-2xl border border-sand-200 bg-surface print:border-0">
           {image && !imgFailed && (
-            <div className="bg-sand-100 aspect-[16/9] lg:aspect-[2/1] print:hidden">
+            <div className="bg-sand-100 aspect-[16/9] lg:aspect-[2/1] rounded-t-2xl overflow-hidden print:hidden">
               <img
                 src={image}
                 alt=""
@@ -342,7 +345,7 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
       <div data-body className="contents">
         {/* Sticky only when the list can plausibly fit beside the steps; a long list scrolls with the page
             instead of becoming a nested scroller that looks complete when it isn't. */}
-        <aside className={`lg:col-start-2 lg:row-start-1 lg:row-span-2 mb-8 lg:mb-0 print:mb-4 ${recipe.ingredients.length <= 14 ? 'lg:sticky lg:top-20' : ''}`} aria-labelledby="ingredients-heading">
+        <aside className={`lg:col-start-2 lg:row-start-1 lg:row-span-2 mb-6 lg:mb-0 print:mb-4 ${recipe.ingredients.length <= 14 ? 'lg:sticky lg:top-20' : ''}`} aria-labelledby="ingredients-heading">
           <Ingredients
             recipe={recipe}
             checked={checked}
