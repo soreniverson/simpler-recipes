@@ -89,19 +89,27 @@ const jsonLd = JSON.stringify({
         <RecipeGrid client:visible recipes={recipes} />
       </section>
 
-      <aside aria-labelledby="clean-own" class="mt-14 pt-8 border-t border-sand-200 max-w-xl">
-        <h2 id="clean-own" class="font-serif text-[20px] font-medium text-sand-900">Found a recipe somewhere else?</h2>
-        <p class="mt-1 mb-4 text-[15px] text-sand-600">Paste the link and get just the recipe — no ads, no life story.</p>
-        <CleanBox client:visible id="browse-clean" />
+      <aside aria-labelledby="clean-own" class="mt-12 rounded-2xl border border-sand-200 bg-surface px-5 py-6 sm:px-8 sm:py-7">
+        <div class="max-w-xl">
+          <h2 id="clean-own" class="font-serif text-[20px] font-medium text-sand-900">Found a recipe somewhere else?</h2>
+          <p class="mt-1 mb-5 text-[15px] text-sand-600">Paste the link and get just the recipe — no ads, no life story.</p>
+          <CleanBox client:visible id="browse-clean" />
+        </div>
       </aside>
 
-      <nav aria-labelledby="more-browse" class="mt-14 pt-8 border-t border-sand-200">
-        <h2 id="more-browse" class="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500 mb-3">More ways to browse</h2>
-        <ul class="flex flex-wrap gap-x-5 gap-y-2 text-[15px]">
+      <nav aria-labelledby="more-browse" class="mt-12">
+        <h2 id="more-browse" class="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500 mb-4">More ways to browse</h2>
+        <ul class="flex flex-wrap gap-2">
           {others.map((o) => (
-            <li><a href={`/browse/${o.slug}/`} class="text-sand-800 hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300">{o.name} <span class="text-sand-500 tabular">{o.count}</span></a></li>
+            <li>
+              <a href={`/browse/${o.slug}/`} class="inline-flex items-baseline gap-1.5 rounded-full border border-sand-200 bg-surface px-3.5 py-1.5 text-[14px] text-sand-800 hover:border-sand-400 hover:text-sand-900 transition-colors">
+                {o.name} <span class="font-mono text-[12px] text-sand-500 tabular">{o.count}</span>
+              </a>
+            </li>
           ))}
-          <li><a href="/browse/" class="text-sand-700 hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300">Everything →</a></li>
+          <li>
+            <a href="/browse/" class="inline-flex items-center rounded-full px-3.5 py-1.5 text-[14px] text-sand-600 hover:text-sand-900 transition-colors">Everything →</a>
+          </li>
         </ul>
       </nav>
     </div>
