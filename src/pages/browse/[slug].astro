@@ -11,13 +11,15 @@ export async function getStaticPaths() {
   const dataPath = path.join(process.cwd(), 'recipe-data', 'all-recipes.json');
   const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
   const pages = buildBrowsePages(data.recipes);
-  const all = pages.map((p) => ({ slug: p.slug, name: p.name, count: p.recipes.length }));
+  const all = pages.map((p) => ({ slug: p.slug, name: p.name, family: p.family, count: p.recipes.length }));
   return pages.map((page) => ({
     params: { slug: page.slug },
     props: {
       page: { slug: page.slug, name: page.name, intro: page.intro },
       recipes: page.recipes.map((r) => ({ slug: r.slug, title: r.title, image: r.image, totalTime: r.totalTime, servings: r.servings, ingredients: r.ingredients, tags: r.tags })),
-      others: all.filter((p) => p.slug !== page.slug),
+      // A wall of 34 links helps nobody: same-family pages first, topped up to 8,
+      // with the full directory one click away at /browse/.
+      others: [...all.filter((p) => p.slug !== page.slug && p.family === page.family), ...all.filter((p) => p.slug !== page.slug && p.family !== page.family)].slice(0, 8),
     },
   }));
 }
@@ -99,6 +101,7 @@ const jsonLd = JSON.stringify({
           {others.map((o) => (
             <li><a href={`/browse/${o.slug}/`} class="text-sand-800 hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300">{o.name} <span class="text-sand-500 tabular">{o.count}</span></a></li>
           ))}
+          <li><a href="/browse/" class="text-sand-700 hover:text-sand-900 underline underline-offset-[3px] decoration-sand-300">Everything →</a></li>
         </ul>
       </nav>
     </div>

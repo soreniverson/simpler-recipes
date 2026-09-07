@@ -10,8 +10,21 @@ import { buildBrowsePages } from '../../lib/browse';
  * still crawlable, no longer competing with the paste box.
  */
 const data = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'recipe-data', 'all-recipes.json'), 'utf-8'));
-const pages = buildBrowsePages(data.recipes).map((p) => ({ slug: p.slug, name: p.name, intro: p.intro, count: p.recipes.length }));
+const pages = buildBrowsePages(data.recipes).map((p) => ({ slug: p.slug, name: p.name, intro: p.intro, family: p.family, count: p.recipes.length }));
 const collections = data.collections;
+
+// 35 pages as one flat grid is a wall; group them by what the reader is actually holding
+// in their head — an ingredient, a clock, a cuisine, an occasion.
+const FAMILY_ORDER: { key: string; label: string }[] = [
+  { key: 'ingredient', label: 'By main ingredient' },
+  { key: 'dish', label: 'By dish' },
+  { key: 'cuisine', label: 'By cuisine' },
+  { key: 'time', label: 'By time' },
+  { key: 'method', label: 'By method' },
+  { key: 'occasion', label: 'By occasion' },
+  { key: 'combo', label: 'Pairings' },
+];
+const groups = FAMILY_ORDER.map((f) => ({ ...f, pages: pages.filter((p) => p.family === f.key) })).filter((g) => g.pages.length);
 
 const SITE = 'https://www.simpler.recipes';
 const title = 'Browse recipes by ingredient, time and occasion · Simpler Recipes';
@@ -34,21 +47,24 @@ const description = 'Chicken, pasta, 30-minute dinners, vegetarian mains and mor
         <p class="mt-2 text-[16px] text-sand-600">By ingredient, time and occasion.</p>
       </header>
 
-      <section aria-label="By ingredient, time and occasion" class="mb-12">
-        <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {pages.map((p) => (
-            <li>
-              <a href={`/browse/${p.slug}/`} class="group flex h-full flex-col justify-between gap-2 rounded-xl border border-sand-200 bg-surface p-4 shadow-xs hover:shadow-sm transition-shadow">
-                <div>
-                  <h2 class="font-serif text-[16px] font-medium text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{p.name}</h2>
-                  <p class="mt-1 text-[13px] leading-snug text-sand-500 line-clamp-2">{p.intro}</p>
-                </div>
-                <p class="font-mono text-[11px] text-sand-400">{p.count} recipes</p>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {groups.map((g) => (
+        <section aria-label={g.label} class="mb-10">
+          <h2 class="font-mono text-[12px] uppercase tracking-[0.08em] text-sand-500 mb-3">{g.label}</h2>
+          <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {g.pages.map((p) => (
+              <li>
+                <a href={`/browse/${p.slug}/`} class="group flex h-full flex-col justify-between gap-2 rounded-xl border border-sand-200 bg-surface p-4 shadow-xs hover:shadow-sm transition-shadow">
+                  <div>
+                    <h3 class="font-serif text-[16px] font-medium text-sand-900 group-hover:underline underline-offset-[3px] decoration-sand-300">{p.name}</h3>
+                    <p class="mt-1 text-[13px] leading-snug text-sand-500 line-clamp-2">{p.intro}</p>
+                  </div>
+                  <p class="font-mono text-[11px] text-sand-400">{p.count} recipes</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
 
       <section aria-labelledby="collections-heading">
         <h2 id="collections-heading" class="text-[15px] font-medium text-sand-900 mb-4">Collections</h2>
