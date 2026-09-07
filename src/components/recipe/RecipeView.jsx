@@ -382,6 +382,40 @@ export default function RecipeView({ recipe, recipeId, sourceUrl, variant = 'cur
               </button>
             </span>
           </div>
+          {/* Licence and photo credit. Openly-licensed recipes (CC BY-SA text from Wikibooks,
+              per-file Commons photos) carry attribution and share-alike obligations, so this
+              is shown on the page and in print rather than buried in a menu. */}
+          {(recipe.license || recipe.imageCredit) && (
+            <p className="mt-6 text-[13px] leading-relaxed text-sand-500">
+              {recipe.license && (
+                <>
+                  Recipe text from{' '}
+                  {src.url ? (
+                    <a href={src.url} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800">{src.name}</a>
+                  ) : src.name}
+                  , licensed{' '}
+                  <a href={recipe.license.url} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800">{recipe.license.name}</a>
+                  {'. '}
+                </>
+              )}
+              {recipe.imageCredit && (
+                <>
+                  Photo by {recipe.imageCredit}
+                  {recipe.imageLicense?.name && (
+                    <>
+                      {' ('}
+                      {recipe.imageLicense.url ? (
+                        <a href={recipe.imageLicense.url} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-[3px] decoration-sand-300 hover:decoration-sand-800">{recipe.imageLicense.name}</a>
+                      ) : recipe.imageLicense.name}
+                      {')'}
+                    </>
+                  )}
+                  .
+                </>
+              )}
+            </p>
+          )}
+
           {children}
         </div>
       </div>

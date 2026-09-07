@@ -11,6 +11,7 @@
  * Candidates that don't clear the gate live in docs/search/launch-manifest.json as drafts.
  */
 import { durationToMinutes } from './recipe/units';
+import { checkPantry } from './recipe/pantry';
 
 export interface CatalogRecipe {
   slug: string;
@@ -393,6 +394,19 @@ export const BROWSE_PAGES: BrowsePage[] = [
     published: '2026-09-06',
     intro: 'Scrambled, poached, baked and devilled — recipes where eggs are the dish, not just a binder.',
     match: (r) => t(r, /\beggs?\b|omelet|frittata|shakshuka|benedict/i),
+  },
+  {
+    slug: 'empty-fridge',
+    name: 'Empty-Fridge Cooking',
+    intent: 'recipes with no fresh ingredients',
+    family: 'method',
+    published: '2026-09-07',
+    intro:
+      'Every ingredient is shelf-stable, frozen, or a long-keeper you probably already have — no shopping trip. Each recipe is checked ingredient by ingredient; anything calling for fresh meat, fresh herbs or salad leaves is left out.',
+    // Evidence, not vibes: the shared pantry rule reads the actual ingredient list and fails
+    // closed on anything it cannot place, so the page can never quietly include a recipe that
+    // needs a shop. See tests/pantry.test.ts.
+    match: (r) => checkPantry(r.ingredients).ok,
   },
   {
     slug: 'healthy-dinners',
