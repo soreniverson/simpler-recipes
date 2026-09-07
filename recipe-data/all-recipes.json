@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "totalRecipes": 314,
+    "totalRecipes": 339,
     "collectionCount": 16,
-    "lastUpdated": "2026-09-07T06:20:56.486Z",
-    "normalizedAt": "2026-09-07T06:21:08.811Z"
+    "lastUpdated": "2026-09-07T06:33:19.387Z",
+    "normalizedAt": "2026-09-07T06:33:21.175Z"
   },
   "collections": [
     {
@@ -246,7 +246,7 @@
       "slug": "indian-cuisine",
       "name": "Indian Cuisine",
       "description": "Curries, biryanis, and aromatic spice-filled dishes",
-      "recipeCount": 17,
+      "recipeCount": 42,
       "recipes": [
         "chicken-tikka-masala",
         "butter-chicken",
@@ -264,7 +264,32 @@
         "curried-chicken-wraps",
         "family-friendly-vegetable-curry",
         "potato-pea-and-paneer-wraps",
-        "thai-curry-with-rice"
+        "thai-curry-with-rice",
+        "basic-indian-tomato-gravy",
+        "indian-hard-tack",
+        "kedgeree",
+        "mukimo",
+        "naan",
+        "pohe",
+        "potato-curry",
+        "sylheti-biryani",
+        "baingan-bartha-south-indian-eggplant-with-coconut-and-chili",
+        "cholley",
+        "lemon-pickle-i",
+        "mango-chutney",
+        "samosa",
+        "chapati",
+        "bhuna-khichuri",
+        "dal-makhani",
+        "indian-butter-chicken-i",
+        "pigeon-pea-and-fenugreek-curry",
+        "raita",
+        "gajjar-halwa",
+        "green-mango-and-cumin-drink",
+        "hyderabadi-fried-bread-with-syrup-and-nuts",
+        "potato-and-cauliflower-curry",
+        "chicken-biryani",
+        "south-indian-millet-swallow"
       ]
     },
     {
@@ -14229,6 +14254,1296 @@
       "theme": "Baking Basics",
       "difficulty": "Easy",
       "addedDate": "2026-09-07T06:12:55.347Z"
+    },
+    {
+      "id": "basic-indian-tomato-gravy",
+      "slug": "basic-indian-tomato-gravy",
+      "title": "Basic Indian Tomato Gravy",
+      "image": "/recipe-images/basic-indian-tomato-gravy.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "20 min",
+      "servings": "4 servings",
+      "ingredients": [
+        "5 tomatoes, diced large",
+        "1 onion, diced small",
+        "1 tablespoon ghee",
+        "½ teaspoon ginger paste",
+        "5 cloves garlic, pounded",
+        "1 teaspoon chile powder",
+        "½ teaspoon coriander powder",
+        "½ teaspoon cumin powder",
+        "¼ teaspoon turmeric powder",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Fry the onions in hot ghee until they start to brown.",
+        "Add the ginger and garlic and stir, then add the powdered spices. Blend well.",
+        "Throw in the tomatoes and salt to taste.",
+        "Turn the flame down to medium and cover for ten minutes. This will form a spicy gravy to which you can add any mixture of vegetables or boiled eggs or fried fish or chicken or lamb/goat."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ABasic_Indian_Tomato_Gravy"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:29:40.000Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Shashimangu",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "indian-hard-tack",
+      "slug": "indian-hard-tack",
+      "title": "Indian Hard Tack",
+      "image": "/recipe-images/indian-hard-tack.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "20 min",
+      "servings": "4 servings",
+      "ingredients": [
+        "1 pound (450 g) wheat flour",
+        "½ teaspoon salt",
+        "3 tablespoons oil",
+        "Water",
+        "1 ½ teaspoons ghee (for serving)"
+      ],
+      "instructions": [
+        "Mix the flour and salt.",
+        "Put about 1 cup of flour mixture in a small bowl and add a little oil, mixing it in well and breaking up any lumps.",
+        "Add water about 1 tablespoon at a time and keep kneading with your hands. You only need 3–4 tablespoons, but you must knead the dough very hard to make it stick together in a ball. The more compact the dough, the better and denser the baati will be.",
+        "Let the balls sit for 5 minutes.",
+        "Flatten out each ball with first your hands and then a rolling pin until they are smooth discs 4 inches (10 cm) across and ½ inch (1.25 cm) thick.",
+        "Cook in a dry metal pan on a low flame. Flip once when the bottom begins to harden, then pinch all over with two fingers so the dough is not too thick and has a bumpy texture on one side.",
+        "Check the bottom until it browns in spots, then remove the baati and place it upside-down on a grate or pan with holes in it. This will blacken the top a little, especially on the tops of the pinched bumps.",
+        "To serve, drizzle liberally with ghee and accompany with a dhal or vegetable."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AIndian_Hard_Tack_(Baati)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:10.399Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "No machine-readable author provided. Deeptrivia assumed (based on copyright clai",
+      "imageLicense": {
+        "name": "CC BY-SA 3.0",
+        "url": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "kedgeree",
+      "slug": "kedgeree",
+      "title": "Kedgeree",
+      "image": "/recipe-images/kedgeree.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "40 min",
+      "servings": "3 servings",
+      "ingredients": [
+        "1–2 cups Basmati or long-grain white rice",
+        "2–4 cups decent quality low-sodium chicken stock",
+        "1 bay leaf",
+        "500 g (1 lb) smoked haddock",
+        "3 medium shallots or 1 medium onion, chopped fairly fine",
+        "Liberal amounts of unsalted butter",
+        "As much garlic as you can handle, minced or put through a garlic press",
+        "6 hard boiled eggs, chopped fairly fine",
+        "At least 3 tsp of prepared English mustard (1½ tsp of dry mustard)",
+        "Enough finely-chopped parsley or cilantro to add interest and colour",
+        "Fresh-ground pepper",
+        "Curry powder (optional)",
+        "Heavy cream",
+        "Salt"
+      ],
+      "instructions": [
+        "Cook the rice in one and a half the amount of chicken stock with the bay leaf. When it is done and keeping warm, discard the bay leaf, fluff the rice with chopsticks, and place the raw smoked haddock slab on top. Close the lid and let the haddock steam on warm for 15 minutes.",
+        "Remove the haddock, and flake with forks to get rid of every last trace of bone. Place the haddock back with the rice.",
+        "Sauté the shallots in excess butter until light brown. Add the garlic, and cook for 1 minute more, making sure to not brown it. Transfer mixture to the rice.",
+        "Add the eggs, mustard, parsley, pepper, curry powder, and enough cream to make everything just slightly creamy. Mix it all up, gently and thoroughly (chopsticks are perfect for this). Season with salt to taste.",
+        "Serve immediately or later—it keeps well."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AKedgeree_(Rice_and_Smoked_Fish)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:16.140Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "User:Justinc",
+      "imageLicense": {
+        "name": "CC BY-SA 2.0",
+        "url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "mukimo",
+      "slug": "mukimo",
+      "title": "Mukimo",
+      "image": "/recipe-images/mukimo.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "1 hr",
+      "servings": "6 servings",
+      "ingredients": [
+        "1 kg potatoes, peeled and chopped",
+        "2 cups maize kernels (fresh or frozen)",
+        "1 cup green peas",
+        "2 cups pumpkin leaves, spinach, or kale, chopped",
+        "1 teaspoon salt",
+        "Water, as needed"
+      ],
+      "instructions": [
+        "Place the potatoes, maize, and peas in a large pot and cover with water.",
+        "Bring to a boil and cook until the potatoes are tender.",
+        "Add the chopped vegetables and continue cooking for 5–10 minutes.",
+        "Drain excess water if necessary.",
+        "Mash all the ingredients together until well combined.",
+        "Season with salt to taste.",
+        "Serve hot with beef stew, chicken stew, or grilled meat."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AMukimo"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:31.616Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Anitah Pezz",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "naan",
+      "slug": "naan",
+      "title": "Naan",
+      "image": "/recipe-images/naan.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "2 hr",
+      "servings": "4 servings",
+      "ingredients": [
+        "3 cups (450 g) plain flour",
+        "1 cup (240 ml) yogurt",
+        "1 teaspoon baking soda",
+        "2 teaspoons salt",
+        "¾ cup (180 ml) water"
+      ],
+      "instructions": [
+        "Make the dough by kneading together all the ingredients and sufficient water (this will be approximately ¾ cup but some judgement is required).",
+        "Wrap the dough in a damp muslin cloth and leave it to rise for 2–3 hours.",
+        "Divide the dough into small balls.",
+        "Roll out the balls in oblong or round shapes with a rolling pin or by slapping and stretching with your hands.",
+        "Smear the surface with water and bake in a tandoor or preheated oven (as hot as your oven will go).",
+        "The naans should puff up a little, and be ready to remove from the oven in 4–5 minutes.",
+        "Brush the naan with butter. Serve hot."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ANaan"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:33.555Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "OpenCage",
+      "imageLicense": {
+        "name": "CC BY-SA 2.5",
+        "url": "https://creativecommons.org/licenses/by-sa/2.5"
+      }
+    },
+    {
+      "id": "pohe",
+      "slug": "pohe",
+      "title": "Pohe",
+      "image": "/recipe-images/pohe.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "15 min",
+      "servings": "1 servings",
+      "ingredients": [
+        "200 g thick pohe (flattened rice)",
+        "2 tbsp oil",
+        "1 tsp rai (mustard seeds)",
+        "¼ tsp haldi (turmeric powder)",
+        "1 pinch asafoetida powder",
+        "2 Indian green chiles, finely chopped",
+        "½ medium-size onion, finely chopped",
+        "2 sprigs of cilantro (coriander)",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Moisten the pohe with cold water by putting in a bowl and holding under a slow running tap. Mix by hand, then drain excess water and set aside (take care not to soak too long or the pohe would turn pasty).",
+        "Heat the oil in a frying pan until medium hot. Add the mustard seeds and let them crackle for a few seconds",
+        "Add the turmeric powder and asafoetida and fry for a few seconds (take care not to burn the turmeric).",
+        "Add the green chillies and fry for a few seconds.",
+        "Add the chopped onion and lower the heat. Cover and cook for 2 minutes. The onions should turn soft but not brown.",
+        "The pohe that was kept aside should have absorbed the excess moisture by now.",
+        "Mix the pohe by hand so that the flakes do not stick together and add to the frying pan.",
+        "Add salt to taste and stir the contents of the fry pay so that the yellow color of the turmeric is spread evenly through the pohe.",
+        "Cover and cook for 5 minutes on low heat. Do not uncover during this time, as the pohe must cook in the steam.",
+        "Stir and cook for another 1 minute uncovered.",
+        "Serve in a bowl garnished with chopped coriander leaves."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3APohe_(Spiced_Flattened_Rice)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:39.026Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Nizil Shah",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "potato-curry",
+      "slug": "potato-curry",
+      "title": "Potato Curry",
+      "image": "/recipe-images/potato-curry.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "20 min",
+      "servings": "4-6 servings",
+      "ingredients": [
+        "1 tablespoon oil",
+        "½ teaspoon mustard seed",
+        "½ tablespoon chana dhal (optional)",
+        "5 curry leaves",
+        "1 medium onion, chopped thin",
+        "4-5 split green chillies",
+        "4 large potatoes, cubed and par-boiled",
+        "1 pinch of turmeric powder",
+        "½ teaspoon salt"
+      ],
+      "instructions": [
+        "Heat oil.",
+        "Sautée the mustard seed first, then add chana dhal, curry leaves, onion and chillies.",
+        "Fry until the onions begin to change color.",
+        "Add potatoes.",
+        "Sprinkle the turmeric evenly and stir well to mix all the ingredients",
+        "Cover and cook on a medium flame for about 5 minutes, stirring well, until the potatoes become very soft and somewhat mashed.",
+        "Season with salt to taste."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3APotato_Curry_(Aloo_Masala)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:29:37.030Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Thamizhpparithi Maari",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "sylheti-biryani",
+      "slug": "sylheti-biryani",
+      "title": "Sylheti Biryani",
+      "image": "/recipe-images/sylheti-biryani.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "1 hr",
+      "servings": "4 servings",
+      "ingredients": [
+        "2 cups Basmati rice",
+        "1 onion, thinly sliced",
+        "1 tablespoon ghee",
+        "¼ teaspoon whole cumin seeds",
+        "½ tablespoon ginger-garlic paste",
+        "4 green cardamom pods",
+        "1-inch cinnamon stick, broken into pieces",
+        "2 bay leaves",
+        "5 cloves",
+        "6 black peppercorns",
+        "Salt to taste",
+        "4–5 green chiles",
+        "1 teaspoon Kewra water (pandan flower extract)",
+        "1 teaspoon rose water",
+        "Your choice of meat (e.g. chicken, lamb, or beef)"
+      ],
+      "instructions": [
+        "Rinse the Basmati rice thoroughly and soak it in water for about 30 minutes. Drain the rice and set it aside.",
+        "In a large, heavy-bottomed pan or pot, heat the ghee over medium heat.",
+        "Add the whole cumin seeds, ginger-garlic paste, sliced onion, green cardamom, cinnamon pieces, bay leaves, cloves, and black peppercorns. Sauté until the onions turn golden brown and aromatic.",
+        "Add your meat to the pan and cook until it's no longer pink.",
+        "Add the drained rice to the pan and stir well, ensuring it's coated with the flavorful mixture.",
+        "Pour in enough water to cover the rice (typically about 4 cups of water for 2 cups of rice). Season with salt according to your taste.",
+        "Bring the mixture to a boil, then reduce the heat to low, cover the pot, and let it simmer for about 15–20 minutes or until the rice is cooked and the water is absorbed.",
+        "While the rice is cooking, make shallow cuts (slits) on the green chilies to release their flavor.",
+        "Once the rice is done, remove it from heat and let it sit, covered, for a few more minutes to allow the flavors to meld.",
+        "Serve the aromatic Sylheti biryani hot, garnished with the slitted green chilies, a dash of Kewra water, and a sprinkle of rose water for a delightful touch."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ASylheti_Biryani"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:57.629Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "AbuSayeed",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "baingan-bartha-south-indian-eggplant-with-coconut-and-chili",
+      "slug": "baingan-bartha-south-indian-eggplant-with-coconut-and-chili",
+      "title": "Baingan Bartha (South Indian Eggplant with Coconut and Chili) I",
+      "image": "/recipe-images/baingan-bartha-south-indian-eggplant-with-coconut-and-chili.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "40 min",
+      "servings": "4 servings",
+      "ingredients": [
+        "1 ea. (1 pound / 450 kg) eggplant (aubergine)",
+        "2–6 green chillies, as desired",
+        "1 cup fresh ground coconut",
+        "1 cup chopped fresh coriander leaves (cilantro)",
+        "2 cups paneer or yoghurt (optional)",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Roast the eggplant directly over a low flame. Don't be afraid to set it right on the gas burner, turning it regularly until the skin becomes blackened and brittle and the flesh soft (about 15–20 minutes).",
+        "Set aside to cool.",
+        "Grind the chillies, coconut, and coriander together in a food processor to form a paste.",
+        "Peel the eggplant skin off and mash the flesh to a uniform pulp by hand.",
+        "Mix in the coconut paste and paneer/yogurt, along with salt to taste.",
+        "Serve with chapatis, dosa or rice."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ABaingan_Bartha_(South_Indian_Eggplant_with_Coconut_and_Chili)_I"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Easy",
+      "addedDate": "2026-09-07T06:29:38.604Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Mike130012",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "cholley",
+      "slug": "cholley",
+      "title": "Cholley",
+      "image": "/recipe-images/cholley.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "12 hr 45 min",
+      "servings": null,
+      "ingredients": [
+        "250 g dried chickpeas",
+        "500 ml water for cooking",
+        "Salt (to taste)",
+        "1 tbsp oil",
+        "1 tsp coriander seeds",
+        "1 tsp cumin seeds (optional)",
+        "1 tsp nigella seeds (optional)",
+        "1 onion, sliced",
+        "1 clove garlic, minced",
+        "1 tbsp garam masala",
+        "2 medium tomatoes, chopped",
+        "2 tsp turmeric",
+        "Fresh coriander leaves (as a garnish)"
+      ],
+      "instructions": [
+        "Wash the chickpeas, then soak overnight in water, allowing them to soften somewhat. Make sure that the chickpeas are well-immersed with at least a few inches of water above them, as they will expand significantly while soaking.",
+        "The next day, drain the water and place the chickpeas in a pressure cooker or large cooking pot. Add the 500 ml fresh water and salt to taste, then cook until the chickpeas are tender (10 minutes at 15 psi in a pressure cooker; if using a regular pot, place the chickpeas in hot water to boil, and then reduce to a simmer for 60–90 minutes).",
+        "Heat the oil in a thick-bottomed pan. Add the coriander seeds, cumin seeds, and nigella seeds, cooking them briefly until they crackle. Quickly add the onions and garlic, reduce the heat to medium, and sauté until the onions are transparent.",
+        "Add garam masala, tomato, turmeric, and salt and cook for 1 minute.",
+        "Add the boiled chickpeas, reduce the heat, and allow the cholley to simmer for around 15 minutes. Check that the gravy has thickened before removing from the heat.",
+        "Once done, place the cholley in a serving bowl, add your coriander garnish, and serve with rice or bread."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ACholley_(Chickpea_Curry)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:29:50.511Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Simon Law (sfllaw) from Montréal , QC , Canada",
+      "imageLicense": {
+        "name": "CC BY-SA 2.0",
+        "url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "lemon-pickle-i",
+      "slug": "lemon-pickle-i",
+      "title": "Lemon Pickle I",
+      "image": "/recipe-images/lemon-pickle-i.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "20 min",
+      "servings": null,
+      "ingredients": [
+        "12 small or 6 large lemons (thin skins preferred)",
+        "1 large or 2 small lemons, juiced",
+        "½ cup salt",
+        "¼ cup red chile powder",
+        "½ cup sugar",
+        "3 tsp turmeric powder",
+        "1 tsp fenugreek seed",
+        "1 tsp black mustard seed",
+        "¼ tsp asafoetida powder (omit for gluten-free version)"
+      ],
+      "instructions": [
+        "Wash the lemons and dry them well, leaving no water on the lemons. Trim off the stalk and any odd bits.",
+        "Cut the lemons in to small pieces about 2 cm (¾ inch) on each side, and place in a bowl.",
+        "Dry-roast the fenugreek, black mustard, and asafoetida together in a pan on a medium heat for about 5 minutes. Don't burn them!",
+        "Grind the roasted spices in a grinder or a mortar and pestle.",
+        "Add the ground spices, turmeric powder, salt, sugar and chili powder to the bowl and mix together well.",
+        "Pack the mixture into a 2 litre (2 quart) jar, or use a couple of smaller jars. Don't fill quite to the top—allow at least 1 cm space."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ALemon_Pickle_I"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:21.875Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Webaware",
+      "imageLicense": {
+        "name": "Public domain",
+        "url": ""
+      }
+    },
+    {
+      "id": "mango-chutney",
+      "slug": "mango-chutney",
+      "title": "Mango Chutney",
+      "image": "/recipe-images/mango-chutney.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "1 hr",
+      "servings": null,
+      "ingredients": [
+        "6 firm under-ripe mangoes, cubed",
+        "75 g raisins",
+        "250 ml (1 cup) cider vinegar",
+        "200 g (1 cup) packed light brown sugar",
+        "2 tbsp garlic, finely chopped",
+        "1 ea. (½ cup) finely-chopped medium onion",
+        "1½ tbsp fresh ginger, scraped and minced",
+        "2 tsp salt",
+        "¼ tsp cayenne pepper",
+        "¼ tsp freshly ground black pepper"
+      ],
+      "instructions": [
+        "Dissolve the sugar and salt in the vinegar and boil for 15 minutes.",
+        "Add mangoes, raisins, and onion and bring to the boil again.",
+        "Reduce the heat to low, and simmer for 15 minutes, stirring constantly to prevent sticking.",
+        "Add the garlic, ginger and seasoning and simmer for 5 minutes.",
+        "Remove from heat and allow to cool before serving.",
+        "Due to the high sugar and acid content, this chutney may be refrigerated safely for 6 months."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AMango_Chutney_(Chunky)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:28.157Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Simon Law from Montréal, QC, Canada, modified by User:Mike Hayes 2008.09.05",
+      "imageLicense": {
+        "name": "CC BY-SA 2.0",
+        "url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "samosa",
+      "slug": "samosa",
+      "title": "Samosa",
+      "image": "/recipe-images/samosa.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "1 hr",
+      "servings": null,
+      "ingredients": [
+        "¼ kg potatoes",
+        "Green peas combined",
+        "2 onions, sliced",
+        "2 green chiles, chopped",
+        "Spices (optional)",
+        "2 mint leaves",
+        "2 sprigs of cilantro (coriander)",
+        "Maida (all-purpose flour)",
+        "Water",
+        "Olive oil or vegetable oil",
+        "Salt",
+        "Vegetable oil, for deep frying"
+      ],
+      "instructions": [
+        "Steam the potatoes and peas separately. Cut the potatoes into small pieces.",
+        "Heat a dash of olive oil in a frying pan. Add onions and chilis, and sauté until the onions turn transparent.",
+        "Add the potatoes, peas, and spices. Sauté them while stirring until they are completely cooked.",
+        "Add mint leaves, and coriander leaves.",
+        "Mix the flour with enough water to make a stiff dough. Knead in 1 tablespoon of oil and a pinch of table salt. Knead it well.",
+        "Roll dough into even-sized balls (about 3.5 cm in diameter) and roll them out into circles using a rolling pin.",
+        "Cut each circle in half to make semi-circles.",
+        "Place a spoonful of the vegetable mixture onto the dough semi-circles, and fold on three sides to make each one into a pyramid shape.",
+        "Deep fry the samosas until golden and crispy."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ASamosa"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:51.430Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Zantastik",
+      "imageLicense": {
+        "name": "CC BY-SA 3.0",
+        "url": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "chapati",
+      "slug": "chapati",
+      "title": "Chapati",
+      "image": "/recipe-images/chapati.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "1 hr",
+      "servings": "8 servings",
+      "ingredients": [
+        "3 cups whole wheat flour",
+        "Salt to taste (about 1 teaspoon)",
+        "Warm water as required (about 1 ½ cups)",
+        "Ghee (clarified butter; optional)"
+      ],
+      "instructions": [
+        "Knead together the flour and water, starting with only a slight dribble of water and adding more as you go until the dough becomes smooth but not too sticky.",
+        "Cover dough, and let rest for at least 5 minutes.",
+        "Divide dough into balls and roll out into disks, slightly thicker than denim material; sprinkle with flour as you roll.",
+        "Place a non-oiled pan over moderately high heat and test its surface temperature by holding your hand over it.",
+        "When very hot, put a chapati on the pan and press it flat with a spatula or dry cloth to make it rise up.",
+        "Flip and repeat so it becomes lightly browned on both sides.",
+        "If desired, brush with ghee."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AChapati"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:29:43.707Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Claude Renault",
+      "imageLicense": {
+        "name": "CC BY 2.0",
+        "url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "bhuna-khichuri",
+      "slug": "bhuna-khichuri",
+      "title": "Bhuna Khichuri",
+      "image": "/recipe-images/bhuna-khichuri.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "50 min",
+      "servings": "2 servings",
+      "ingredients": [
+        "1 cup white fragrant rice (e.g Basmati rice or short-grained pilau rice)",
+        "1 cup green gram or red split lentils",
+        "½ cup split dried chickpeas (preferably Bengal variety; optional)",
+        "½ cup garden peas (optional)",
+        "2 tablespoons butter (preferably ghee)",
+        "½ teaspoon turmeric powder",
+        "2 whole green chiles, slit in the middle and optionally de-seeded",
+        "Salt to taste",
+        "4 cups water for boiling",
+        "2 bay leaves",
+        "4 green cardamom pods",
+        "4 whole cloves",
+        "2 sticks of cinnamon 1 inch long",
+        "¼ teaspoon cumin seeds",
+        "2 cm piece of ginger, finely chopped",
+        "1 medium or 2 small onions, thinly sliced",
+        "2 tablespoons butter preferably ghee",
+        "1 bunch coarsely chopped fresh coriander leaves"
+      ],
+      "instructions": [
+        "Rinse rice, lentils, and chickpeas separately in cold water.",
+        "Dry rice in a colander or on a flat surface.",
+        "Leave lentils and chickpeas to soak in water for 30 minutes.",
+        "Drain lentils and chickpeas, then roast them briefly until they emit an aroma; set aside to cool.",
+        "Heat water in a kettle to use later. Keep warm but not boiling.",
+        "Semi-crush cardamom, cinnamon, and cloves."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ABhuna_Khichuri_(Bengali_Rice_and_Lentils)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:19.532Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Drriad",
+      "imageLicense": {
+        "name": "CC BY-SA 3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "dal-makhani",
+      "slug": "dal-makhani",
+      "title": "Dal Makhani",
+      "image": "/recipe-images/dal-makhani.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "20 min",
+      "servings": "4 servings",
+      "ingredients": [
+        "1 cup whole dried urad dal (skinless black gram)",
+        "⅓ cup dried kidney beans (rajma)",
+        "5–6 cups water (to cook dal)",
+        "Salt",
+        "Red chile powder (according to taste)",
+        "1 tsp turmeric powder",
+        "1 tbsp grated ginger",
+        "3–4 tbsp ghee or oil",
+        "1 large pinch of hing powder (asafoetida)",
+        "2 bay leaves",
+        "½ cinnamon stick",
+        "3 cloves",
+        "1 medium onion (optional), finely chopped",
+        "1 tbsp ginger garlic paste",
+        "2–3 medium tomatoes, finely chopped",
+        "2 tsp coriander powder",
+        "½ cup fresh cream",
+        "1 tbsp clarified butter",
+        "2 tbsp chopped coriander leaves (optional)",
+        "Salt, to taste"
+      ],
+      "instructions": [
+        "Wash and soak black urad dal and red kidney beans overnight in an adequate amount of lukewarm water.",
+        "Cook the soaked dal, kidney beans, and chickpeas in 5–6 cups of water with the salt, red chili powder, turmeric, and grated ginger until soft.",
+        "Keep the cooked dal aside.",
+        "Heat oil or butter in a thick bottomed pan. Add hing, bay leaves, cinnamon stick, cloves, and chopped onions and cook until light golden brown in color. When the onion turns brown, add ginger garlic paste, and sauté.",
+        "Add chopped tomatoes. Sauté and add coriander powder. Sauté until tomatoes are well mashed.",
+        "Add cooked dal and water as needed.",
+        "Mix it well and simmer for 15–20 minutes.",
+        "Add fresh cream and clarified butter, and let it simmer for 5 minutes. Remove from the heat. Garnish with coriander leaves before serving.",
+        "Serve hot with naan, paratha or rice."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ADal_Makhani_(Black_Gram_with_Cream)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:29:55.827Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Radhikamprabhu82",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "indian-butter-chicken-i",
+      "slug": "indian-butter-chicken-i",
+      "title": "Indian Butter Chicken I",
+      "image": "/recipe-images/indian-butter-chicken-i.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": "4 servings",
+      "ingredients": [
+        "400–500 g of skinless, boneless chicken thighs or breasts (with the bone, this will probably be 800 g)",
+        "50 g tandoori masala powder",
+        "½ cup of unsweetened yoghurt",
+        "1 small lemon or lime, juiced",
+        "2 tablespoons of butter",
+        "1 large onion, sliced finely",
+        "¼ teaspoon of cinnamon (optional)",
+        "2–3 cloves of crushed garlic",
+        "2 teaspoons of grated ginger",
+        "1 teaspoon of ground turmeric",
+        "1 tablespoon of ground coriander",
+        "2–3 teaspoons of chile powder",
+        "100–200 g tomato paste",
+        "100 g full cream"
+      ],
+      "instructions": [
+        "Trim and cut the chicken into small cubes. If you prefer chicken on the bone, cut long thin slices laterally into the chicken.",
+        "In a big bowl combine the tandoori powder, yogurt, lemon juice, and chicken. Massage this well with your hands so that all the chicken is evenly covered in the Tandoori powder. Cover and put aside for at least ½ an hour.",
+        "Heat a large saucepan or frying pan until evenly hot.",
+        "In the pan melt 2 tablespoons of butter until it is frothy. Add the onions and the cinnamon to the pan and fry lightly. When the onions are soft and starting to brown, stir in the crushed garlic and ginger. Then add the turmeric, chili, and coriander, and sauté over a medium heat.",
+        "Add the chicken and sauté, stirring constantly until the chicken has turned white. This doesn't take long, so make sure you don't overcook the chicken.",
+        "Mix in the tomato paste. Add the cream and heat through. After adding the cream and stirring, you may add additional tandoori masala. About 3–5 tablespoons is generally sufficient.",
+        "Cover and simmer for just over 10 minutes."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AIndian_Butter_Chicken_I"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:08.598Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Hubie",
+      "imageLicense": {
+        "name": "CC BY-SA 3.0",
+        "url": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "pigeon-pea-and-fenugreek-curry",
+      "slug": "pigeon-pea-and-fenugreek-curry",
+      "title": "Pigeon Pea and Fenugreek Curry",
+      "image": "/recipe-images/pigeon-pea-and-fenugreek-curry.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "15 min",
+      "servings": "4 servings",
+      "ingredients": [
+        "½ cup toor dal",
+        "2 cups water",
+        "2 handfuls of methi leaves (only the leaves without the tender stem)",
+        "3 tomatoes",
+        "1 big onion",
+        "1 pinch of turmeric powder",
+        "1–2 green chillis, sliced",
+        "10 whole black peppercorns",
+        "1 small dollop of butter",
+        "1 small piece of ginger (optional)",
+        "2 spoonfuls ghee",
+        "½ small spoon of mustard seeds",
+        "½ small spoon of zheera (cumin)",
+        "2 garlic cloves, sliced",
+        "2 red chillis",
+        "6–8 curry leaves",
+        "1 small tomato, finely chopped",
+        "Salt",
+        "Chilli powder",
+        "Ground coriander",
+        "Lemon juice"
+      ],
+      "instructions": [
+        "Mix all above and put them in an Indian cooker (pressure cooker). Wait until the dal is cooked (4 whistles).",
+        "Heat the ghee in a pan, and add the mustard seeds, zheera, garlic, red chillis, and curry leaves. Fry until the garlic is golden.",
+        "Add the chopped tomato, salt, chilli powder, and coriander to taste.",
+        "Add the cooked dal mixture to the fried mixture, and let it simmer. You can add water if you like it to be more like gravy.",
+        "Add two drops of lemon juice for added taste.",
+        "Serve with hot rice, and an optional touch of Gongura pickle."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3APigeon_Pea_and_Fenugreek_Curry_(Methi_Tadka_Dal)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:37.655Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Monali.mishra",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "raita",
+      "slug": "raita",
+      "title": "Raita",
+      "image": "/recipe-images/raita.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": "5 servings",
+      "ingredients": [
+        "⅛ cup grated cucumber (about 1 inch of cucumber)",
+        "½ cup plain yogurt",
+        "2–3 mint leaves, chopped",
+        "2 cilantro leaves, chopped",
+        "1–2 tbsp finely chopped or minced onions (optional)",
+        "Salt (coarse salt preferred)",
+        "Chile powder",
+        "Ground cumin"
+      ],
+      "instructions": [
+        "Squeeze the grated cucumber to remove and discard excess liquid.",
+        "Stir the cucumber into the yogurt.",
+        "Add chopped mint, cilantro, and onion.",
+        "Add salt to taste.",
+        "Sprinkle a little ground cumin on top.",
+        "Sprinkle with chili powder if desired.",
+        "Refrigerate and serve cold."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ARaita"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:44.625Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Miansari66",
+      "imageLicense": {
+        "name": "Public domain",
+        "url": ""
+      }
+    },
+    {
+      "id": "gajjar-halwa",
+      "slug": "gajjar-halwa",
+      "title": "Gajjar Halwa",
+      "image": "/recipe-images/gajjar-halwa.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": null,
+      "ingredients": [
+        "2–3 large carrots",
+        "½ cup (120 g) cashew nuts, broken",
+        "½ cup (120 g) raisins, washed",
+        "1 pinch salt",
+        "2–3 teaspoons sugar",
+        "4 pods cardamom",
+        "1 pinch cinnamon powder",
+        "1 tablespoon butter",
+        "1 cup (240 ml) milk"
+      ],
+      "instructions": [
+        "Cut off the blemished ends of the carrots, wash them, and then peel them.",
+        "Grate the carrots, and transfer the grated carrots into a saucepan.",
+        "Add the cashews, raisins, salt, sugar, cardamom, cinnamon, butter, and milk.",
+        "Heat the saucepan and bring the contents to a boil, while mixing.",
+        "Cook until the milk has mostly evaporated.",
+        "Serve with a sprinkling of cinnamon powder on top."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AGajjar_Halwa_(Carrot_Pudding)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:03.644Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Prerna Jaddwani",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "green-mango-and-cumin-drink",
+      "slug": "green-mango-and-cumin-drink",
+      "title": "Green Mango and Cumin Drink",
+      "image": "/recipe-images/green-mango-and-cumin-drink.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": null,
+      "ingredients": [
+        "4 medium-sized green mangoes",
+        "½ cup (120 ml) sugar",
+        "2 level tablespoons (30 ml) rock salt",
+        "1 level teaspoon (5 ml) roasted cumin seeds",
+        "1 roasted chile (optional)",
+        "1 handful of fresh mint leaves"
+      ],
+      "instructions": [
+        "Cut mangoes into 3 slices each—2 from either side of the seed and 1 with the seed in it.",
+        "Pressure cook mangoes with one small cup of water. Turn off heat as soon as the pressure cooker whistles once.",
+        "Open cooker after 5–7 minutes and leave to cool.",
+        "Grind sugar and roasted cumin seeds using a food processor. If using chilli, grind that too.",
+        "Mince mint leaves in a food processor.",
+        "When cool, squeeze pulp of mangoes into a blender using hands. Discard skin and seeds.",
+        "Purée mango pulp until smooth.",
+        "Add ground sugar, rock salt, roasted cumin seeds, chilli powder, and minced mint leaves. Blend well.",
+        "Store in clean plastic or glass bottle. Refrigerate.",
+        "To serve, add 4–5 teaspoons of the mango mixture to a glass of water. Enjoy!"
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AGreen_Mango_and_Cumin_Drink_(Aam_Panna)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:05.350Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Miansari66",
+      "imageLicense": {
+        "name": "CC0",
+        "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "hyderabadi-fried-bread-with-syrup-and-nuts",
+      "slug": "hyderabadi-fried-bread-with-syrup-and-nuts",
+      "title": "Hyderabadi Fried Bread with Syrup and Nuts",
+      "image": "/recipe-images/hyderabadi-fried-bread-with-syrup-and-nuts.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": null,
+      "ingredients": [
+        "1 loaf bread",
+        "1 litre milk",
+        "250 grams khoa (concentrated milk solids)",
+        "500 grams sugar",
+        "100 grams almond s",
+        "100 grams cashews",
+        "100 grams pistachios",
+        "100 grams raisins",
+        "250 grams ghee",
+        "10 grams cardamom",
+        "500 ml water"
+      ],
+      "instructions": [
+        "Trim the edges of the bread slices and cut each slice into four.",
+        "Fry them in ghee till golden brown.",
+        "Make a sugar syrup by adding half a litre of water to the sugar. Add the milk to the sugar syrup. Boil until the syrup starts thickening.",
+        "Grind the cardamom seeds to a powder.",
+        "Add the powdered cardamom seeds and khoa to the thickened milk. Stir the mixture well.",
+        "Arrange the fried bread pieces on a flat tray. Pour the syrup over the bread pieces while they are still hot. Garnish with the raisins and nuts.",
+        "Refrigerate and serve."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AHyderabadi_Fried_Bread_with_Syrup_and_Nuts_(Double_ka_meetha)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:00.881Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Randhirreddy at English Wikipedia",
+      "imageLicense": {
+        "name": "CC BY-SA 3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "potato-and-cauliflower-curry",
+      "slug": "potato-and-cauliflower-curry",
+      "title": "Potato and Cauliflower Curry",
+      "image": "/recipe-images/potato-and-cauliflower-curry.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": null,
+      "ingredients": [
+        "800 g (6.5 ea.) medium tomatoes, diced or puréed",
+        "2 big cauliflower cut into chunks",
+        "4–5 potatoes, peeled and cut into cubes",
+        "1 lemon, juiced",
+        "3–5 tablespoons of ghee or vegetable oil",
+        "1 teaspoon cumin seeds (jeera)",
+        "5 tablespoons salt",
+        "1 tablespoon ground curcuma (turmeric)",
+        "2 tablespoons ground coriander",
+        "1–2 tablespoons ground chilli",
+        "2–4 tablespoons garam masala",
+        "5 sprigs of mint"
+      ],
+      "instructions": [
+        "Heat the ghee/oil in frying pan, wok, or karahi (an Indian utensil specially used for frying purposes)",
+        "Add cumin seeds and wait until they turn a light brown color.",
+        "Add the spices (except for garam masala) and the tomatoes.",
+        "When the mixture turns oily, add the vegetables.",
+        "Roast the cauliflower and the potatoes until they turn soft. Stir occasionally.",
+        "Add the garam masala, mint, and lemon juice."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3APotato_and_Cauliflower_Curry_(Aloo_Gobi)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:30:40.776Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Wikimedia Commons contributor",
+      "imageLicense": {
+        "name": "CC BY-SA 2.0",
+        "url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "chicken-biryani",
+      "slug": "chicken-biryani",
+      "title": "Chicken Biryani",
+      "image": "/recipe-images/chicken-biryani.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": "2 servings",
+      "ingredients": [
+        "2 cups rice (preferably Basmati)",
+        "500 g (1 lb) chicken",
+        "6 tablespoons oil",
+        "300 ml (10 oz) yoghurt",
+        "3 cloves of garlic, crushed and chopped",
+        "1.5 cm ginger, peeled and sliced",
+        "5 large onions, chopped",
+        "½ cup tomatoes, puréed",
+        "2 chiles, chopped",
+        "1 teaspoon turmeric powder",
+        "5–6 strands saffron",
+        "8 cloves",
+        "10 cm (4 inches) cinnamon stick",
+        "5 black pepper corns",
+        "8 cardamom pods",
+        "1 teaspoon cumin",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Cook soaked and washed rice.",
+        "Marinate the chicken in lemon juice, yoghurt, ginger, garlic, salt, turmeric powder, cumin powder, cloves, chillis, chopped tomatoes, and tomato purée.",
+        "Heat oil in a pan, add onions, and cook until onions turn golden brown. Add these to the chicken.",
+        "Grease a heavy-bottomed deep and wide mouthed pan. Add a layer of rice. Put in the chicken mixture, top with the rest of the rice, and put the saffron on top.",
+        "Bake in the oven for 1–1½ hours at 150°C (300°F); cut into a piece of chicken to see if it is cooked.",
+        "Serve the biryani with yoghurt on the side."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3AChicken_Biryani"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Medium",
+      "addedDate": "2026-09-07T06:29:44.814Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Ranjith Kumar",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "south-indian-millet-swallow",
+      "slug": "south-indian-millet-swallow",
+      "title": "South Indian Millet Swallow",
+      "image": "/recipe-images/south-indian-millet-swallow.webp",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": null,
+      "servings": null,
+      "ingredients": [
+        "2 ½ cups ragi (finger millet) flour",
+        "5 cups water",
+        "Ghee"
+      ],
+      "instructions": [
+        "Boil the water in a pot, add a little of the flour to make a paste, then add the rest of the flour.",
+        "Stir once with the handle of a wooden spoon and leave it in the pot.",
+        "Keep on low heat for about 10 minutes until it smells cooked.",
+        "Stir until the mixture turns dark reddish-brown. Once it begins to leave the sides of the pot, remove the pot from the fire and stir vigorously for 5–10 minutes—it's hard work, but the longer you keep at it, the lighter it will be.",
+        "Pull the mixture out and form into balls of about fist size."
+      ],
+      "tags": [
+        "indian",
+        "cc-by-sa"
+      ],
+      "source": {
+        "name": "Wikibooks Cookbook",
+        "url": "https://en.wikibooks.org/wiki/Cookbook%3ASouth_Indian_Millet_Swallow_(Mudde)"
+      },
+      "theme": "Indian Cuisine",
+      "difficulty": "Easy",
+      "addedDate": "2026-09-07T06:30:54.704Z",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "imageCredit": "Chandan.kempegowda",
+      "imageLicense": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
     }
   ]
 }

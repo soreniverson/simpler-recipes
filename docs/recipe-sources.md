@@ -64,6 +64,31 @@ Public domain under 17 USC §105, which permits commercial use. Of the 16 import
   authorship is USDA's assertion rather than something we independently verified. They are
   listed below so the call can be revisited.
 
+### Wikibooks Cookbook — 25 Indian recipes — CC BY-SA 4.0
+
+Indian was the one category no other openly-licensed source could supply. Every mainstream
+Indian recipe site prohibits republishing ("You are prohibited from publishing, copying,
+redistributing..."), and India's government recipe books (FSSAI, ICMR-NIN, ICAR-IIMR) are
+either non-commercial or all-rights-reserved. The Wikibooks Cookbook is the exception.
+
+> "Text is available under the Creative Commons Attribution-ShareAlike License"
+> — https://en.wikibooks.org/wiki/Wikibooks:Copyrights
+
+**CC BY-SA 4.0 is copyleft.** Reproducing the ingredients and method makes our page a
+derivative, so each of these recipes displays its licence and links back to the Wikibooks
+page. That notice is a licence obligation, not decoration — do not remove it.
+
+Photographs come from Wikimedia Commons, whose licensing policy requires that "Commercial
+use of the work must be allowed" and refuses NC-only media. Commons files are therefore
+commercially safe by policy, but each carries its own licence and usually requires crediting
+a named author, so the importer resolves licence + artist per file from the Commons API,
+stores both, and rejects anything not clearly commercial-friendly. Licences in this set:
+CC BY-SA 4.0 (11), CC BY-SA 3.0 (5), CC BY-SA 2.0 (4), Public domain (2), CC BY-SA 2.5 (1), CC BY 2.0 (1), CC0 (1).
+
+*Residual risk:* Wikibooks permits fair-use media in the Cookbook namespace. Every image here
+was resolved through the Commons API (`imagerepository`), so local fair-use uploads are
+excluded by construction.
+
 ## Per-recipe provenance (Nutrition.gov)
 
 | Recipe | Stated creator | Source |
@@ -96,4 +121,4 @@ Public domain under 17 USC §105, which permits commercial use. Of the 16 import
 | Foodista | CC BY 4.0 terms, but user uploads visibly relicense other people's recipes and photos. |
 | Cookipedia | ~36% of its image pool is non-commercial, copyrighted-by-permission, or unlicensed. |
 | Mealie / Tandoor fixtures | Repo licences cover code; the recipe fixtures are verbatim third-party content (Bon Appétit, A Spicy Perspective). |
-| Wikibooks Cookbook | CC BY-SA is usable, but share-alike would attach to our recipe pages and images need per-file attribution. Kept as a future option, not used here. |
+

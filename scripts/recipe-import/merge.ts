@@ -61,6 +61,9 @@ function isGrilled(r: StagedRecipe): boolean {
 }
 
 function themeFor(r: StagedRecipe): string | null {
+  // These were taken from Wikibooks' own "Indian recipes" category, so the source category is
+  // the evidence — better than re-deriving it from keywords, which files Chapati under Baking.
+  if (r.source?.name === 'Wikibooks Cookbook') return 'Indian Cuisine';
   if (isGrilled(r)) return 'Grilling & BBQ';
   const hay = `${r.title} ${r.ingredients.join(' ')}`;
   for (const [theme, re] of RULES) if (re.test(r.title)) return theme;
@@ -71,7 +74,7 @@ function themeFor(r: StagedRecipe): string | null {
 function main() {
   const dry = process.argv.includes('--dry');
   const cat = JSON.parse(fs.readFileSync(CATALOG, 'utf8'));
-  const batches = ['recipe-data/.staging/nutritiongov.json', 'recipe-data/.staging/nsw.json']
+  const batches = ['recipe-data/.staging/nutritiongov.json', 'recipe-data/.staging/nsw.json', 'recipe-data/.staging/wikibooks.json']
     .filter((p) => fs.existsSync(p))
     .flatMap((p) => JSON.parse(fs.readFileSync(p, 'utf8')) as StagedRecipe[]);
 
@@ -90,7 +93,10 @@ function main() {
   const chosen = new Map<string, any>();
   const byTheme: Record<string, number> = {};
   for (const [theme, list] of grouped) {
-    for (const r of [...list].sort((a, b) => score(b) - score(a) || a.title.localeCompare(b.title)).slice(0, PER_THEME)) {
+    // Indian was the one category no other openly-licensed source could supply at all, so the
+    // Wikibooks set is taken whole rather than capped — closing the gap is the point.
+    const cap = theme === 'Indian Cuisine' ? list.length : PER_THEME;
+    for (const r of [...list].sort((a, b) => score(b) - score(a) || a.title.localeCompare(b.title)).slice(0, cap)) {
       const { creator, ...rest } = r as any;
       chosen.set(r.slug, { ...rest, theme });
     }

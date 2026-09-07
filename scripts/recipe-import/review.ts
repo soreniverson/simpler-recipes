@@ -17,8 +17,12 @@ export interface Finding { slug: string; check: string; detail: string }
 
 /** Text that means the extractor grabbed page furniture instead of a recipe. */
 const BOILERPLATE = /(get the full recipe|click here to|read more at|subscribe|sign up|advertisement|cookie (policy|consent|settings)|privacy policy|print recipe|jump to recipe)/i;
-/** An ingredient line that is only a quantity — the food name was lost in extraction. */
-const QUANTITY_ONLY = /^[\d\s¼½¾⅓⅔⅛\/.,-]*(cups?|tbsp|tablespoons?|tsp|teaspoons?|g|kg|ml|l|oz|ounces?|pounds?|lbs?|large|medium|small|cans?|pinch|cloves?|units?)?\.?$/i;
+/**
+ * An ingredient line that is only a quantity — the food name was lost in extraction.
+ * "cloves" is deliberately NOT in this list: whole cloves are a spice and a complete
+ * ingredient on their own ("8 cloves"), and garlic lines always name the garlic.
+ */
+const QUANTITY_ONLY = /^[\d\s¼½¾⅓⅔⅛\/.,-]*(cups?|tbsp|tablespoons?|tsp|teaspoons?|g|kg|ml|l|oz|ounces?|pounds?|lbs?|large|medium|small|cans?|pinch|units?)?\.?$/i;
 
 export function reviewOne(r: StagedRecipe, seen: Map<string, string>, existing: Set<string>, existingTitles: Set<string>): Finding[] {
   const f: Finding[] = [];
